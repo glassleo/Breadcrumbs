@@ -525,6 +525,9 @@ Data.Quests = {
 		-- Mark of the Demon
 		[38656] = "Mark of the Demon|10+|56.8 55|{133791} [Demonic Emblem]||Drops from Gravax the Desecrator",
 
+		-- Sylvan Falls
+		[41094] = "Hatchlings of the Talon|10+|76.08 31.39|Aviana",
+
 		-- Engineering
 		[40861] = "In My Sights|10+ engineering 40860|59.83 62.26|Fargo Flintlocke|engineering",
 		[40862] = "All Charged Up|10+ engineering 40860|59.83 62.26|Fargo Flintlocke|engineering",
