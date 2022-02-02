@@ -2,7 +2,6 @@ local _, Data = ...
 Breadcrumbs = LibStub("AceAddon-3.0"):NewAddon("Breadcrumbs", "AceConsole-3.0", "AceEvent-3.0")
 local HBD = LibStub("HereBeDragons-2.0")
 local Pins = LibStub("HereBeDragons-Pins-2.0")
-local Pool = CreateFramePool("Frame", nil, nil)
 
 
 -- User settings (GUI NYI)
@@ -15,6 +14,52 @@ local setting_questframelevel = nil -- set to "PIN_FRAME_LEVEL_GROUP_MEMBER" to 
 local setting_objectiveframelevel = nil -- set to "PIN_FRAME_LEVEL_GROUP_MEMBER" to display above the player arrow
 local setting_vignetteframelevel = "PIN_FRAME_LEVEL_VIGNETTE" -- set to "PIN_FRAME_LEVEL_GROUP_MEMBER" to display above the player arrow
 local setting_showbroken = false
+
+
+-- Frame recycling pool
+local Pool = {}
+local PoolCount = 0
+
+local function RecyclePin(pin)
+	pin.arrow:Hide()
+	pin:Hide()
+	Pool[pin] = true
+end
+
+local function RecycleAllPins()
+	if PoolCount > 0 then
+		for i = 1, PoolCount do
+			local pin = _G["BreadcrumbsPin"..i]
+			RecyclePin(pin)
+		end
+	end
+end
+
+local function NewPin()
+	local pin = next(Pool)
+
+	if pin then
+		Pool[pin] = nil -- remove it from the pool
+		pin:SetParent(WorldMapFrame)
+		return pin
+	end
+
+	-- Create a new pin frame
+	PoolCount = PoolCount + 1
+
+	pin = CreateFrame("Frame", "BreadcrumbsPin"..PoolCount, WorldMapFrame)
+
+	local icon = pin:CreateTexture(nil, "OVERLAY")
+	pin.icon = icon
+	icon:SetAllPoints(pin)
+
+	local arrow = pin:CreateTexture(nil, "OVERLAY")
+	pin.arrow = arrow
+	arrow:SetAllPoints(pin)
+	arrow:Hide()
+
+	return pin
+end
 
 
 
@@ -137,8 +182,7 @@ function Breadcrumbs:UpdateMap(event, ...)
 	-- Clean up
 	Pins:RemoveAllWorldMapIcons("Breadcrumbs")
 	Pins:RemoveAllMinimapIcons("Breadcrumbs")
-	--for widget in Pool:EnumerateActive() do widget:Hide() end
-	--Pool:ReleaseAll()
+	RecycleAllPins()
 
 	-- Current Map ID
 	local map = HBD:GetPlayerZone()
@@ -189,12 +233,9 @@ function Breadcrumbs:UpdateMap(event, ...)
 							if flags["info"] then size = size*3.5 end
 
 							-- Create quest marker pin
-							local pin = Pool:Acquire()
+							local pin = NewPin()
 							pin:SetSize(flags["elsewhere"] and size*0.7647 or size, size)
 
-							local icon, arrow = pin:GetRegions()
-
-							pin.icon = icon or pin:CreateTexture(nil, "BACKGROUND")
 							if flags["icon"] and flag_icon then
 								pin.icon:SetTexture(flag_icon)
 							elseif flags["red"] then
@@ -202,17 +243,15 @@ function Breadcrumbs:UpdateMap(event, ...)
 							else
 								pin.icon:SetAtlas(flags["info"] and "autoquest-badge-campaign" or flags["elsewhere"] and "poi-traveldirections-arrow" or flags["warboard"] and "warboard" or flags["artifact"] and "questartifact" or flags["legendary"] and "questlegendary" or flags["campaign"] and "quest-campaign-available" or flags["dailycampaign"] and "quest-dailycampaign-available" or flags["daily"] and "questdaily" or "questnormal")
 							end
-							pin.icon:SetAllPoints(pin)
 
 							if flags["down"] or flags["up"] then
 								pin.icon:SetDesaturated(true)
-								pin.arrow = arrow or pin:CreateTexture(nil, "BACKGROUND") -- Create the position arrow
 								pin.arrow:SetAtlas(flags["up"] and "minimap-positionarrowup" or "minimap-positionarrowdown")
 								pin.arrow:SetSize(size*1.5, size*1.5)
 								pin.arrow:SetPoint("CENTER", pin)
+								pin.arrow:Show()
 							else
 								pin.icon:SetDesaturated(false) -- Needs to be set in case the frame was reused
-								if arrow then arrow:Hide() end -- Hide the arrow texture if it exists
 							end
 
 							pin:SetScript("OnEnter", function(self, motion)
@@ -297,14 +336,12 @@ function Breadcrumbs:UpdateMap(event, ...)
 
 							if xx and yy then
 								-- Create alternate quest marker pin
-								local pin = Pool:Acquire()
+								local pin = NewPin()
 								size = setting_objectivesize
 								pin:SetSize(size, size)
 
-								pin.icon = pin:GetRegions() or pin:CreateTexture(nil, "BACKGROUND")
 								pin.icon:SetAtlas(flags["down"] and "poi-door-down" or flags["up"] and "poi-door-up" or flags["inside"] and "poi-door-left" or flags["outside"] and "poi-door-right" or "questobjective")
-								pin.icon:SetAllPoints(pin)
-
+								
 								pin:SetScript("OnEnter", function(self, motion)
 									GameTooltip:Hide()
 									GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
@@ -354,16 +391,14 @@ function Breadcrumbs:UpdateMap(event, ...)
 							if icon == "questturnin" then size = setting_pinsize end
 
 							-- Create map pin
-							local pin = Pool:Acquire()
+							local pin = NewPin()
 							pin:SetSize(size, size)
 
-							pin.icon = pin:GetRegions() or pin:CreateTexture(nil, "BACKGROUND")
 							if string.match(icon, "[%w%p]+") then
 								pin.icon:SetAtlas(icon)
 							else
 								pin.icon:SetTexture(icon)
 							end
-							pin.icon:SetAllPoints(pin)
 
 							if title then
 								pin:SetScript("OnEnter", function(self, motion)
@@ -388,16 +423,15 @@ function Breadcrumbs:UpdateMap(event, ...)
 							-- Create minimap pin
 							local size = setting_minimapsize
 
-							local pin = Pool:Acquire()
+							local pin = NewPin()
 							pin:SetSize(size, size)
 
-							pin.icon = pin:GetRegions() or pin:CreateTexture(nil, "BACKGROUND")
 							if string.match(icon, "[%w%p]+") then
 								pin.icon:SetAtlas(icon)
 							else
 								pin.icon:SetTexture(icon)
 							end
-							pin.icon:SetAllPoints(pin)
+							pin.icon:Show()
 
 							if title then
 								pin:SetScript("OnEnter", function(self, motion)
@@ -437,6 +471,7 @@ Breadcrumbs:RegisterEvent("QUEST_COMPLETE", "UpdateMap")
 Breadcrumbs:RegisterEvent("QUEST_REMOVED", "UpdateMap")
 Breadcrumbs:RegisterEvent("QUEST_TURNED_IN", "UpdateMap")
 Breadcrumbs:RegisterEvent("QUEST_ACCEPT_CONFIRM", "UpdateMap")
+Breadcrumbs:RegisterEvent("PLAYER_LEVEL_UP", "UpdateMap")
 
 
 function Breadcrumbs:CheckQuest(map, quest, datastring)
