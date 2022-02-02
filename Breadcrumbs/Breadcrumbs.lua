@@ -41,6 +41,7 @@ local function NewPin()
 	if pin then
 		Pool[pin] = nil -- remove it from the pool
 		pin:SetParent(WorldMapFrame)
+		pin:ClearAllPoints()
 		return pin
 	end
 
@@ -125,7 +126,7 @@ function Breadcrumbs:OnEnable()
 end
 
 function Breadcrumbs:FixBonusObjectives()
-	-- Fix the Blizzard map bug preventing Legion leveling bonus objectives from hiding properly at level 50+
+	-- Attempt to fix the Blizzard map bug preventing Legion leveling bonus objectives from hiding properly at level 50+
 	if not WorldMapFrame then return end
 
 	-- If the player is below level 50 then do nothing
