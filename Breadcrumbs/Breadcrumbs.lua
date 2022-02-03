@@ -56,7 +56,7 @@ local function NewPin()
 
 	local arrow = pin:CreateTexture(nil, "OVERLAY")
 	pin.arrow = arrow
-	arrow:SetAllPoints(pin)
+	arrow:SetPoint("CENTER", pin)
 	arrow:Hide()
 
 	return pin
@@ -81,17 +81,17 @@ local variables = {
 		["WARRIOR"] = "Skyhold",
 	},
 	["order_hall_map_id"] = {
-		["DEATHKNIGHT"] = 648,
-		["DEMONHUNTER"] = 879,
+		["DEATHKNIGHT"] = 648, -- need to check
+		["DEMONHUNTER"] = 720,
 		["DRUID"] = 747,
-		["HUNTER"] = 739,
-		["MAGE"] = 734, -- might be 735
+		["HUNTER"] = 739, -- need to check
+		["MAGE"] = 734, -- need to check
 		["MONK"] = 709,
 		["PALADIN"] = 24,
 		["PRIEST"] = 702,
-		["ROGUE"] = 626,
-		["SHAMAN"] = 725, -- might be 726
-		["WARLOCK"] = 717, -- might be 718
+		["ROGUE"] = 626, -- need to check
+		["SHAMAN"] = 725, -- need to check
+		["WARLOCK"] = 717, -- need to check
 		["WARRIOR"] = 695,
 	},
 	["scouting_map_in_order_hall"] = {
@@ -179,6 +179,10 @@ function Breadcrumbs:UpdateMap(event, ...)
 		C_Timer.After(1, function() Breadcrumbs:UpdateMap() end)
 		return
 	end
+	if event and ZA and ZA.DebugMode then
+		-- Debug
+		print(event, ...)
+	end
 
 	-- Clean up
 	Pins:RemoveAllWorldMapIcons("Breadcrumbs")
@@ -249,7 +253,6 @@ function Breadcrumbs:UpdateMap(event, ...)
 								pin.icon:SetDesaturated(true)
 								pin.arrow:SetAtlas(flags["up"] and "minimap-positionarrowup" or "minimap-positionarrowdown")
 								pin.arrow:SetSize(size*1.5, size*1.5)
-								pin.arrow:SetPoint("CENTER", pin)
 								pin.arrow:Show()
 							else
 								pin.icon:SetDesaturated(false) -- Needs to be set in case the frame was reused
