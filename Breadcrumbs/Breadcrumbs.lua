@@ -246,7 +246,7 @@ function Breadcrumbs:UpdateMap(event, ...)
 							elseif flags["red"] then
 								pin.icon:SetTexture("Interface/AddOns/Breadcrumbs/Textures/questred")
 							else
-								pin.icon:SetAtlas(flags["info"] and "autoquest-badge-campaign" or flags["elsewhere"] and "poi-traveldirections-arrow" or flags["warboard"] and "warboard" or flags["artifact"] and "questartifact" or flags["legendary"] and "questlegendary" or flags["campaign"] and "quest-campaign-available" or flags["dailycampaign"] and "quest-dailycampaign-available" or flags["daily"] and "questdaily" or "questnormal")
+								pin.icon:SetAtlas(flags["info"] and "autoquest-badge-campaign" or flags["elsewhere"] and "poi-traveldirections-arrow" or flags["warboard"] and "warboard" or flags["campaign"] and "quest-campaign-available" or flags["dailycampaign"] and "quest-dailycampaign-available" or flags["up"] and "questnormal" or flags["down"] and "questnormal" or flags["artifact"] and "questartifact" or flags["legendary"] and "questlegendary" or flags["daily"] and "questdaily" or "questnormal")
 							end
 
 							if flags["down"] or flags["up"] then

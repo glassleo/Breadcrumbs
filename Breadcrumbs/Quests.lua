@@ -86,7 +86,53 @@ Data.Quests = {
 
 	--[[ Dalaran, Broken Isles ]]--
 
+	-- In the Blink of an Eye: 44184,44663
+
+	-- Following requires Order Hall established: A Call to Action, Titanic Innovation, A Falling Star, Assault on Violet Hold
+	-- Hidden Founded Order Hall: 38894
+	-- Demon Hunter zone picked: 41099,41069
+
+	-- Dalaran
 	[627] = {
+		-- Demon Hunter - The Illidari
+		-- Altruis Chsoen: 40375
+		-- Kayn Chosen: 40374
+		[39047] = "Call of the Illidari|10+ demonhunter 44184,44663 40375|57.88 45.65|Kor'vas Bloodthorn|artifact", -- Altruis
+		[39261] = "Call of the Illidari|10+ demonhunter 44184,44663 40374|57.88 45.65|Kor'vas Bloodthorn|artifact", -- Kayn
+			[40816] = "The Power to Survive|10+ demonhunter 39047,39261 40375|74.98 49.02|Altruis the Sufferer|artifact", -- Altruis
+			[40814] = "The Power to Survive|10+ demonhunter 39047,39261 40374|74.98 49.02|Kayn Sunfury|artifact", -- Kayn
+			-- Havoc - Twinblades of the Deceiver Chosen: 40817,44381
+			-- Vengeance - Aldrachi Warblades Chosen: 40818
+				[42869] = "Eternal Vigil|10+ demonhunter 41119,39247,41863,40249|73.85 46.05|Kor'vas Bloodthorn|artifact",
+					[42872] = "Securing the Way|10+ demonhunter 42869|95.15 65.99|Jace Darkweaver|artifact",
+						[41033] = "Return to Mardum|10+ demonhunter 42872 40375|94.92 66.52|Matron Mother Malevolence|artifact", -- Altruis
+						[41221] = "Return to Mardum|10+ demonhunter 42872 40374|94.92 66.52|Matron Mother Malevolence|artifact", -- Kayn
+						-- 43467 Boarding the Fel Hammer
+						-- 41045 Matron Moves
+							[41060] = "Unbridled Power|10+ demonhunter 41033,41221 40375|77.68 45.5|Altruis the Sufferer|artifact elsewhere link:720", -- Altruis
+							[41037] = "Unbridled Power|10+ demonhunter 41033,41221 40374|77.68 45.5|Kayn Sunfury|artifact elsewhere link:720", -- Kayn
+								[41070] = "Spoils of Victory|10+ demonhunter 41060,41037 40375|77.68 45.5|Altruis the Sufferer|artifact elsewhere link:720", -- Altruis
+								[41062] = "Spoils of Victory|10+ demonhunter 41060,41037 40374|77.68 45.5|Kayn Sunfury|artifact elsewhere link:720", -- Altruis
+									[41066] = "The Hunter's Gaze|10+ demonhunter 41070,41062|77.68 45.5|Allari the Souleater|artifact elsewhere link:721",
+									-- 47661 DNT
+									-- 47699 DNT
+										[41096] = "Time is of the Essence|10+ demonhunter 41066 40375|77.68 45.5|Allari the Souleater|artifact elsewhere link:721", -- Altruis
+										[41067] = "Time is of the Essence|10+ demonhunter 41066 40374|77.68 45.5|Allari the Souleater|artifact elsewhere link:721", -- Kayn
+											[41099] = "Direct Our Wrath|10+ demonhunter 41096,41067 40375|77.68 45.5|Altruis the Sufferer|artifact elsewhere link:720", -- Altruis
+											[41069] = "Direct Our Wrath|10+ demonhunter 41096,41067 40374|77.68 45.5|Kayn Sunfury|artifact elsewhere link:720", -- Kayn
+												[44379] = "In Pursuit of Power|10+ demonhunter 41099,41069 40375|77.68 45.5|Altruis the Sufferer|artifact elsewhere link:720", -- Altruis
+												[44383] = "In Pursuit of Power|10+ demonhunter 41099,41069 40374|77.68 45.5|Kayn Sunfury|artifact elsewhere link:720", -- Kayn
+
+		-- Demon Hunter - Twinblades of the Deceiver
+		[41120] = "Making Arrangements|10+ demonhunter 40817,44381 40375|74.98 49.02|Altruis the Sufferer|artifact", -- Altruis
+		[40819] = "Making Arrangements|10+ demonhunter 40817,44381 40374|74.98 49.02|Kayn Sunfury|artifact", -- Kayn
+			[41121] = "By Any Means|10+ demonhunter 41120,40819 40375|65.63 67.27|Altruis the Sufferer|artifact", -- Altruis
+			[39051] = "By Any Means|10+ demonhunter 41120,40819 40374|65.63 67.27|Kayn Sunfury|artifact", -- Kayn
+				[41119] = "The Hunt|10+ demonhunter 41121,39051 40375|62.75 64.93|Altruis the Sufferer|artifact", -- Altruis
+				[39247] = "The Hunt|10+ demonhunter 41121,39051 40374|62.75 64.93|Kayn Sunfury|artifact", -- Kayn
+
+		-- Demon Hunter - Aldrachi Warblades
+
 		-- Hunter - The Unseen Path
 		[40953] = "On Eagle's Wings|10+ hunter|60.04 53.46|Emmarel Shadewarden|artifact",
 			[40954] = "The Unseen Path|10+ hunter 40953|15 20|Emmarel Shadewarden|info artifact link:739|Visit {!}Emmarel Shadewarden in Trueshot Lodge to continue the Hunter Campaign",
@@ -181,8 +227,62 @@ Data.Quests = {
 		[40854] = "Endless Possibilities|10+ engineering 40545|65.96 52.87|Filgo Scrapbottom|engineering",
 	},
 
+	-- Dungeon: The Violet Hold
+	[723] = {
+		-- Demon Hunter - Twinblades of the Deceiver
+		[41119] = "The Hunt|10+ demonhunter 41121,39051 40375|50.31 71.1|Altruis the Sufferer|artifact", -- Altruis
+		[39247] = "The Hunt|10+ demonhunter 41121,39051 40374|50.31 71.1|Kayn Sunfury|artifact", -- Kayn
+	},
+
 
 	--[[ Legion Order Halls ]]--
+
+	-- Demon Hunter - The Fel Hammer - Upper Command Center
+	[720] = {
+		-- The Illidari
+		[41060] = "Unbridled Power|10+ demonhunter 41033,41221 40375|57.69 67.39|Altruis the Sufferer|artifact", -- Altruis
+		[41037] = "Unbridled Power|10+ demonhunter 41033,41221 40374|57.69 67.39|Kayn Sunfury|artifact", -- Kayn
+			[41070] = "Spoils of Victory|10+ demonhunter 41060,41037 40375|58.61 57.87|Altruis the Sufferer|artifact", -- Altruis
+			[41062] = "Spoils of Victory|10+ demonhunter 41060,41037 40374|58.61 57.87|Kayn Sunfury|artifact", -- Altruis
+				[41066] = "The Hunter's Gaze|10+ demonhunter 41070,41062|59.4 51.33|Allari the Souleater|artifact down link:721",
+					[41096] = "Time is of the Essence|10+ demonhunter 41066 40375|59.4 51.33|Allari the Souleater|artifact down link:721", -- Altruis
+					[41067] = "Time is of the Essence|10+ demonhunter 41066 40374|59.4 51.33|Allari the Souleater|artifact down link:721", -- Kayn
+						[41099] = "Direct Our Wrath|10+ demonhunter 41096,41067 40375|58.62 57.78|Altruis the Sufferer|artifact", -- Altruis
+						[41069] = "Direct Our Wrath|10+ demonhunter 41096,41067 40374|58.62 57.78|Kayn Sunfury|artifact", -- Kayn
+							[44379] = "In Pursuit of Power|10+ demonhunter 41099,41069 40375|58.62 57.78|Altruis the Sufferer|artifact", -- Altruis
+							[44383] = "In Pursuit of Power|10+ demonhunter 41099,41069 40374|58.62 57.78|Kayn Sunfury|artifact", -- Kayn
+		
+		-- Destiny of the Illidari
+		[42670] = "Rise, Champions|10+ demonhunter 41099,41069 40375|56.18 54.27|Battlelord Gaardoun|artifact", -- Altruis
+		[42671] = "Rise, Champions|10+ demonhunter 41099,41069 40374|56.18 54.27|Battlelord Gaardoun|artifact", -- Kayn
+			[42677] = "Things Gaardoun Needs|10+ demonhunter 42670,42671|59.33 57.67|Kor'vas Bloodthorn|artifact",
+
+		-- Battlegear of the Shattered Abyss
+		[44213] = "You Will Be Prepared!|45+ demonhunter 41066|57.8 43.44|Falara Nightsong",
+	},
+
+	-- Demon Hunter - The Fel Hammer - Lower Command Center
+	[721] = {
+		-- The Illidari
+		[41060] = "Unbridled Power|10+ demonhunter 41033,41221 40375|57.69 67.39|Altruis the Sufferer|artifact up link:720", -- Altruis
+		[41037] = "Unbridled Power|10+ demonhunter 41033,41221 40374|57.69 67.39|Kayn Sunfury|artifact up link:720", -- Kayn
+			[41070] = "Spoils of Victory|10+ demonhunter 41060,41037 40375|58.61 57.87|Altruis the Sufferer|artifact up link:720", -- Altruis
+			[41062] = "Spoils of Victory|10+ demonhunter 41060,41037 40374|58.61 57.87|Kayn Sunfury|artifact up link:720", -- Altruis
+				[41066] = "The Hunter's Gaze|10+ demonhunter 41070,41062|59.4 51.33|Allari the Souleater|artifact",
+					[41096] = "Time is of the Essence|10+ demonhunter 41066 40375|59.4 51.33|Allari the Souleater|artifact", -- Altruis
+					[41067] = "Time is of the Essence|10+ demonhunter 41066 40374|59.4 51.33|Allari the Souleater|artifact", -- Kayn
+						[41099] = "Direct Our Wrath|10+ demonhunter 41096,41067 40375|58.62 57.78|Altruis the Sufferer|artifact up link:720", -- Altruis
+						[41069] = "Direct Our Wrath|10+ demonhunter 41096,41067 40374|58.62 57.78|Kayn Sunfury|artifact up link:720", -- Kayn
+							[44379] = "In Pursuit of Power|10+ demonhunter 41099,41069 40375|58.62 57.78|Altruis the Sufferer|artifact up link:720", -- Altruis
+							[44383] = "In Pursuit of Power|10+ demonhunter 41099,41069 40374|58.62 57.78|Kayn Sunfury|artifact up link:720", -- Kayn
+		
+		-- Destiny of the Illidari
+		[42670] = "Rise, Champions|10+ demonhunter 41099,41069 40375|56.18 54.27|Battlelord Gaardoun|artifact up link:720", -- Altruis
+		[42671] = "Rise, Champions|10+ demonhunter 41099,41069 40374|56.18 54.27|Battlelord Gaardoun|artifact up link:720", -- Kayn
+
+		-- Battlegear of the Shattered Abyss
+		[44213] = "You Will Be Prepared!|45+ demonhunter 41066|57.8 43.44|Falara Nightsong|up link:720",
+	},
 
 	-- Druid - The Dreamgrove
 	[747] = {
@@ -194,7 +294,7 @@ Data.Quests = {
 		[39735] = "Stormheim|10+ druid -44700 alliance|52.52 50.85|Scouting Map|warboard", -- Alliance
 		[39864] = "Stormheim|10+ druid -44701 horde|52.52 50.85|Scouting Map|warboard", -- Horde
 
-		-- Amurra Thistledew
+		-- Dreamgrove Raiment
 		[44232] = "The Grove Provides|45+ druid|40.03 17.76|Amurra Thistledew",
 	},
 
@@ -224,7 +324,7 @@ Data.Quests = {
 		[39735] = "Stormheim|10+ hunter +40959 -44700 alliance|42.48 46.65|Scouting Map|warboard", -- Alliance
 		[39864] = "Stormheim|10+ hunter +40959 -44701 horde|42.48 46.65|Scouting Map|warboard", -- Horde
 
-		-- Outfitter Reynolds
+		-- Guise of the Unseen Path
 		[44233] = "Walk This Way|45+ hunter 40954|44.57 48.87|Outfitter Reynolds",
 	},
 
@@ -238,7 +338,7 @@ Data.Quests = {
 		[39735] = "Stormheim|10+ monk -44700 alliance|52.91 60.2|Scouting Map|warboard", -- Alliance
 		[39864] = "Stormheim|10+ monk -44701 horde|52.91 60.2|Scouting Map|warboard", -- Horde
 
-		-- Caydori Brightstar
+		-- Grandmaster's Finery
 		[44249] = "Inner Sanctuary|45+ monk|50.33 59.13|Caydori Brightstar",
 	},
 
@@ -252,14 +352,20 @@ Data.Quests = {
 		[39735] = "Stormheim|10+ paladin -44700 alliance|53.43 78.64|Scouting Map|warboard", -- Alliance
 		[39864] = "Stormheim|10+ paladin -44701 horde|53.43 78.64|Scouting Map|warboard", -- Horde
 
-		-- Eadric the Pure
+		-- Battleplate of the Silver Hand
 		[44250] = "Champion of the Light|45+ paladin|41.35 61.09|Eadric the Pure",
 	},
 
 	-- Priest - Netherlight Temple
 	[702] = {
-		-- Meridelle Lightspark
+		-- Regalia of the High Priest
 		[44251] = "Power Word: Armor|45+ priest|38.65 23.81|Meridelle Lightspark",
+	},
+
+	-- Warrior - Skyhold
+	[695] = {
+		-- Battlelord's Plate
+		[44255] = "Axe and You Shall Receive|45+ warrior|56.22 27.06|Quartermaster Durnolf",
 	},
 
 
@@ -523,7 +629,7 @@ Data.Quests = {
 		[42857] = "Moist Around the Hedges|10+|66.8 75.7|Moist Grizzlecomb",
 
 		-- Mark of the Demon
-		[38656] = "Mark of the Demon|10+|56.8 55|{133791} [Demonic Emblem]||Drops from Gravax the Desecrator",
+		[38656] = "Mark of the Demon|10+|56.77 54.33|{133791} [Demonic Emblem]||Drops from Gravax the Desecrator",
 
 		-- Sylvan Falls
 		[41094] = "Hatchlings of the Talon|10+|76.08 31.39|Aviana",
