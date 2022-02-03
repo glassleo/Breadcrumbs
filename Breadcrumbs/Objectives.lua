@@ -4,7 +4,7 @@ local _, Data = ...
 
 --[[
 	[MapID] = {
-		[QuestID] = { [1] = "Icon|Coordinates|Title|Description|Description|...", }, -- Quest Name
+		[QuestID] = "Icon|Coordinates|Title|Description|Description|...", -- Quest Name
 	},
 
 	Icon: Texture or Atlas to use as the pin's icon (use "questobjective" for a yellow dot)
