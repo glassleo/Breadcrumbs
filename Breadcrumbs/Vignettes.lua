@@ -1,8 +1,10 @@
 local _, Data = ...
 
--- Quest Objectives
+-- Vignettes
 
 --[[
+	Data Structure
+	
 	[MapID] = {
 		[QuestID] = "Icon|Coordinates|Title|Description|Description|...", -- Quest Name
 	},
