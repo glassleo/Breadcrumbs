@@ -55,7 +55,6 @@ local _, Data = ...
 		red				Quest is started by killing a mob, changes the pin icon to a red bang
 		warboard		Quest is obtained from a Warboard, changes the pin icon to a warboard
 		elsewhere		Quest is obtained in a different location, changes the pin icon to an arrow - a link flag should always be provided with this flag
-		info			Information pin (for example directions for where to go to start a zone storyline), changes the pin icon and makes it larger - a link flag should always be provided with this flag
 
 		dungeon			Dungeon quest
 		raid			Raid quest
@@ -140,10 +139,10 @@ Data.Quests = {
 
 		-- Hunter - The Unseen Path
 		[40953] = "On Eagle's Wings|10+ hunter|60.04 53.46|Emmarel Shadewarden|artifact",
-		[40954] = "The Unseen Path|10+ hunter 40953|15 20|Emmarel Shadewarden|info artifact link:739|Visit {!}Emmarel Shadewarden in Trueshot Lodge to continue the Hunter Campaign",
-		[40955] = "Oath of Service|10+ hunter 40954|15 20|Emmarel Shadewarden|info artifact link:739|Visit {!}Emmarel Shadewarden in Trueshot Lodge to continue the Hunter Campaign",
-		[40958] = "Tactical Matters|10+ hunter 40955|15 20|Emmarel Shadewarden|info artifact link:739|Visit {!}Emmarel Shadewarden in Trueshot Lodge to continue the Hunter Campaign",
-		[40959] = "The Campaign Begins|10+ hunter 40958|15 20|Tactician Tinderfell|info artifact link:739|Visit {!}Tactician Tinderfell in Trueshot Lodge to continue the Hunter Campaign",
+		[40954] = "The Unseen Path|10+ hunter 40953|15 20|Emmarel Shadewarden|artifact elsewhere link:739|Visit {!}Emmarel Shadewarden in Trueshot Lodge to continue the Hunter Campaign",
+		[40955] = "Oath of Service|10+ hunter 40954|15 20|Emmarel Shadewarden|artifact elsewhere link:739|Visit {!}Emmarel Shadewarden in Trueshot Lodge to continue the Hunter Campaign",
+		[40958] = "Tactical Matters|10+ hunter 40955|15 20|Emmarel Shadewarden|artifact elsewhere link:739|Visit {!}Emmarel Shadewarden in Trueshot Lodge to continue the Hunter Campaign",
+		[40959] = "The Campaign Begins|10+ hunter 40958|15 20|Tactician Tinderfell|artifact elsewhere link:739|Visit {!}Tactician Tinderfell in Trueshot Lodge to continue the Hunter Campaign",
 
 		-- Azsuna - Behind Legion Lines
 		[41220] = "Down to Azsuna|10+ 39718 -38834 -44137|72.5 45.63|Archmage Khadgar",

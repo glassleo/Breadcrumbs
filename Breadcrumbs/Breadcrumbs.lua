@@ -235,7 +235,6 @@ function Breadcrumbs:UpdateMap(event, ...)
 
 							-- Pin size
 							local size = setting_pinsize
-							if flags["info"] then size = size*3.5 end
 
 							-- Create quest marker pin
 							local pin = NewPin()
@@ -246,7 +245,7 @@ function Breadcrumbs:UpdateMap(event, ...)
 							elseif flags["red"] then
 								pin.icon:SetTexture("Interface/AddOns/Breadcrumbs/Textures/questred")
 							else
-								pin.icon:SetAtlas(flags["info"] and "autoquest-badge-campaign" or flags["elsewhere"] and "poi-traveldirections-arrow" or flags["warboard"] and "warboard" or flags["campaign"] and "quest-campaign-available" or flags["dailycampaign"] and "quest-dailycampaign-available" or flags["up"] and "questnormal" or flags["down"] and "questnormal" or flags["artifact"] and "questartifact" or flags["legendary"] and "questlegendary" or flags["daily"] and "questdaily" or "questnormal")
+								pin.icon:SetAtlas(flags["elsewhere"] and "poi-traveldirections-arrow" or flags["warboard"] and "warboard" or flags["campaign"] and "quest-campaign-available" or flags["dailycampaign"] and "quest-dailycampaign-available" or flags["up"] and "questnormal" or flags["down"] and "questnormal" or flags["artifact"] and "questartifact" or flags["legendary"] and "questlegendary" or flags["daily"] and "questdaily" or "questnormal")
 							end
 
 							if flags["down"] or flags["up"] then
@@ -260,8 +259,7 @@ function Breadcrumbs:UpdateMap(event, ...)
 
 							pin:SetScript("OnEnter", function(self, motion)
 								GameTooltip:Hide()
-								GameTooltip:SetOwner(self, flags["info"] and "ANCHOR_NONE" or "ANCHOR_RIGHT")
-								if flags["info"] then GameTooltip:SetPoint("TOPLEFT", self, "TOPRIGHT") end -- Different anchor for large icons
+								GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
 								--local title = title or C_QuestLog.GetTitleForQuestID(id) or " "
 								if flags["up"] or flags["down"] then -- Position arrow and grey text color
 									GameTooltip:AddLine((flags["up"] and "|TInterface/MINIMAP/Minimap-PositionArrows:12:12:-2:0:16:32:0:16:0:16|t" or "|TInterface/MINIMAP/Minimap-PositionArrows:12:12:-2:0:16:32:0:16:16:32|t") .. title, 0.65, 0.65, 0.65)
