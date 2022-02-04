@@ -16,6 +16,7 @@ The following zones are more or less done:
 Work has begun on:
 
 - Legion Class Campaigns
+	- Demon Hunter
 	- Druid
 	- Hunter
 	- Monk
