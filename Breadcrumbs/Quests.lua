@@ -86,25 +86,47 @@ local _, Data = ...
 
 	Notes
 
-	Demon Hunter
-		40375 - Altruis the Sufferer Chosen
-		40374 - Kayn Sunfury Chosen
-		40817,44381 - Twinblades of the Deceiver Chosen (Havoc)
-		40818 - Aldrachi Warblades Chosen (Vengeance)
+	Death Knight Artifact Choice
+		40722 - Maw of the Damned (Blood)
+		40723 - Blades of the Fallen Prince (Frost)
+		40724 - Apocalypse (Unholy)
+
+		39017 - Rise to the Occasion
+
+	Demon Hunter Story Choice
+		40375 - Altruis the Sufferer
+		40374 - Kayn Sunfury
+	Demon Hunter Artifact Choice
+		40817,44381 - Twinblades of the Deceiver (Havoc)
+		40818 - Aldrachi Warblades (Vengeance)
 
 	Legion Order Halls
 		38894 - Founded Order Hall
-		41099,41069 - Demon Hunter, Frist Zone Picked
+		41099,41069 - Demon Hunter, frist zone picked
+		39799 - Death Knight, first zone picked
 ]]--
 
 Data.Quests = {
 
 	--[[ Dalaran, Broken Isles ]]--
 
-	-- In the Blink of an Eye: 44184,44663
+	-- 44184,44663 - In the Blink of an Eye
+	-- 44659 - Skipped intro
 
 	-- Dalaran
 	[627] = {
+		-- Death Knight - The Ebon Blade
+		[40714] = "The Call To War|10+ deathknight 44184,44663|73.08 46.89|[Auto Accept]|artifact", -- Auto Accept
+		[40715] = "A Pact of Necessity|10+ deathknight 40714|73.08 46.89|Duke Lankral|artifact",
+
+		-- Death Knight - Apocalypse
+		[40930] = "Apocalypse|10+ deathknight 40724|73.08 46.89|[Auto Accept]|artifact", -- Auto Accept
+		[40931] = "Following the Curse|10+ deathknight 40930|73.08 46.89|Revil Kost|artifact elsewhere link:47",
+		[40932] = "Disturbing the Past|10+ deathknight 40931|73.08 46.89|Revil Kost|artifact elsewhere link:42",
+		[40933] = "A Grisly Task|10+ deathknight 40932|73.08 46.89|Revil Kost|artifact elsewhere link:42",
+		[40934] = "The Dark Riders|10+ deathknight 40933 -40986|73.08 46.89|Revil Kost|artifact elsewhere link:42", -- 40986 is used if 2nd/3rd artifact
+		[40935] = "The Call of Vengeance|10+ deathknight 40934,40986 -40987|73.08 46.89|Revil Kost|artifact elsewhere link:42", -- 40987 is used if 2nd/3rd artifact
+
 		-- Demon Hunter - The Illidari
 		[39047] = "Call of the Illidari|10+ demonhunter 44184,44663 40375|57.88 45.65|Kor'vas Bloodthorn|artifact", -- Altruis
 		[39261] = "Call of the Illidari|10+ demonhunter 44184,44663 40374|57.88 45.65|Kor'vas Bloodthorn|artifact", -- Kayn
@@ -229,6 +251,26 @@ Data.Quests = {
 
 		-- Herbalism
 		[40014] = "Spayed by the Spade|10+ herbalism 40013|43 33.36|Kuhuine Tenderstride|herbalism",
+
+		-- Mining
+		[38777] = "Leystone Deposit Sample|10+ mining|1 1394960|{1394960} [Leystone Deposit Sample]|mining discovery link:619|Obtained from mining Leystone Deposits on the Broken Isles",
+		[38784] = "Leystone Seam Sample|10+ mining|2 1394960|{1394960} [Leystone Seam Sample]|mining discovery link:619|Obtained from mining Leystone Seams on the Broken Isles",
+		[38785] = "Living Leystone Sample|10+ mining|3 1394960|{1394960} [Living Leystone Sample]|mining discovery link:619|Obtained from mining Leystone creatures on the Broken Isles",
+		[38888] = "The Highmountain Tauren|10+ mining 38777 38784 38785|46.09 26.66|Mama Diggs|mining", -- Available after completing all rank 1 Leystone quests
+		[38786] = "Where Respect is Due|10+ mining 38888|47.7 26.66|Ronos Ironhorn|mining elsewhere link:650",
+		[38787] = "The Legend of Rethu Ironhorn|10+ mining 38786|47.7 26.66|Ronos Ironhorn|mining elsewhere link:650",
+		[38789] = "Rethu's Journal|10+ mining 38787|1 1394960|{237388} [Torn Journal Page]|mining discovery link:619|Obtained from mining Leystone Deposits on the Broken Isles",
+		[38792] = "Rethu's Lesson|10+ mining 38789|1 1394960|[Auto Accept]|mining discovery link:619|Obtained from mining Leystone Deposits on the Broken Isles",
+		[38790] = "Rethu's Pick|10+ mining 38787|1 1394960|{1060565} [Battered Mining Pick]|mining discovery link:619|Obtained from mining Leystone Seams on the Broken Isles",
+		[38793] = "Rethu's Experience|10+ mining 38790|1 1394960|[Auto Accept]|mining discovery link:619|Obtained from mining Leystone Seams on the Broken Isles",
+		[38791] = "Rethu's Horn|10+ mining 38787|1 1394960|{237403} [Chunk of Horn]|mining discovery link:619|Obtained from mining Leystone creatures on the Broken Isles",
+		[38794] = "Rethu's Sacrifice|10+ mining 38791|1 1394960|[Auto Accept]|mining discovery link:619|Obtained from mining Leystone creatures on the Broken Isles",
+		[38795] = "Felslate Deposit Sample|10+ mining|4 1394961|{1394961} [Felslate Deposit Sample]|mining discovery link:619|Obtained from mining Felslate Deposits on the Broken Isles",
+		[38796] = "Felslate Seam Sample|10+ mining|5 1394961|{1394961} [Felslate Seam Sample]|mining discovery link:619|Obtained from mining Felslate Seams on the Broken Isles",
+		[38797] = "Living Felslate Sample|10+ mining|6 1394961|{1394961} [Living Felslate Sample]|mining discovery link:619|Obtained from mining Felslate creatures on the Broken Isles",
+		[38901] = "The Felsmiths|10+ mining 38795 38796 38797|46.09 26.66|Mama Diggs|mining", -- Available after completing all rank 1 Felslate quests
+		[38798] = "A Shred of Your Humanity|10+ mining 38901|47.7 26.66|Felsmith Nal'ryssa|mining elsewhere link:680",
+		[38799] = "Darkheart Thicket: Nal'ryssa's Sisters|10+ mining 38798|47.7 26.66|Felsmith Nal'ryssa|mining dungeon elsewhere link:680",
 	},
 
 	-- The Underbelly
@@ -246,6 +288,70 @@ Data.Quests = {
 
 
 	--[[ Legion Order Halls ]]--
+
+	-- Death Knight - Acherus: The Ebon Hold - The Heart of Acherus
+	[647] = {
+		-- The Ebon Blade
+		[39832] = "Plans and Preparations|10+ deathknight 39017|50.94 50.68|Highlord Darion Mograine|artifact down link:648", -- 39017 artifact quest done
+		[39799] = "Our Next Move|10+ deathknight 39832|49.65 51.27|Siouxsie the Banshee|artifact down link:648",
+		[43962] = "Blades of Destiny|10+ deathknight 39799|57.78 60.3|Duke Lankral|artifact",
+
+		-- The Four Horsemen
+		[42449] = "Return of the Four Horsemen|10+ deathknight 39799|50.94 50.68|Highlord Darion Mograine|artifact down link:648",
+		[42484] = "The Firstborn Rises|10+ deathknight 42449|33.37 35.71|Thassarian|artifact elsewhere link:1",
+		[43264] = "Rise, Champions|10+ deathknight 42484|50.94 50.68|Highlord Darion Mograine|artifact down link:648",
+		[43265] = "Spread the Word|10+ deathknight 43264|49.65 51.27|Siouxsie the Banshee|artifact down link:648",
+		[43266] = "Recruiting the Troops|10+ deathknight 43265|49.65 51.27|Siouxsie the Banshee|artifact down link:648",
+		[43267] = "Troops in the Field|10+ deathknight 43266|49.65 51.27|Siouxsie the Banshee|artifact down link:648",
+		[43268] = "Tech It Up A Notch|10+ deathknight 43267|49.65 51.27|Siouxsie the Banshee|artifact down link:648",
+		[43539] = "Salanar the Horseman|10+ deathknight 43268|49.65 51.27|Siouxsie the Banshee|artifact down link:648",
+		[42533] = "The Ruined Kingdom|10+ deathknight 43539|50.94 50.68|Highlord Darion Mograine|artifact down link:648",
+		[42534] = "Our Oldest Enemies|10+ deathknight 42533|33.37 35.71|Prince Galen Trollbane|artifact elsewhere link:14",
+		[42535] = "Death... and Decay|10+ deathknight 42533|33.37 35.71|Prince Galen Trollbane|artifact elsewhere link:14",
+		[42536] = "Regicide|10+ deathknight 42534 42535|33.37 35.71|Thassarian|artifact elsewhere link:14",
+		[42537] = "The King Rises|10+ deathknight 42536|33.37 35.71|Thassarian|artifact elsewhere link:14",
+		[44243] = "Champion: Thoras Trollbane|10+ deathknight 42537|59.68 34.03|King Thoras Trollbane|artifact down link:648",
+		[42708] = "A Personal Request|10+ deathknight 42537|56.03 30.61|Thassarian|artifact down link:648",
+		[44244] = "Champion: Koltira Deathweaver|10+ deathknight 42708|66.34 64.6|Koltira Deathweaver|artifact down link:648",
+		[44082] = "Knights of the Ebon Blade|10+ deathknight 42708|49.65 51.27|Siouxsie the Banshee|artifact down link:648",
+		[43899] = "Steeds of the Damned|10+ deathknight 42708|49.65 51.27|Siouxsie the Banshee|artifact down link:648",
+		[43571] = "Neltharion's Lair: Braid of the Underking|10+ deathknight 42708|36.28 56.02|Salanar the Horseman|artifact dungeon",
+
+		-- Deathlord's Battleplate
+		[44217] = "Armor Fit For A Deathlord|45+ deathknight|43.94 37.63|Quartermaster Ozorg",
+	},
+
+	-- Death Knight - Acherus: The Ebon Hold - Hall of Command
+	[648] = {
+		-- The Ebon Blade
+		[39832] = "Plans and Preparations|10+ deathknight 39017|50.94 50.68|Highlord Darion Mograine|artifact", -- 39017 artifact quest done
+		[39799] = "Our Next Move|10+ deathknight 39832|49.65 51.27|Siouxsie the Banshee|artifact",
+		[43962] = "Blades of Destiny|10+ deathknight 39799|57.78 60.3|Duke Lankral|artifact up link:647",
+
+		-- The Four Horsemen
+		[42449] = "Return of the Four Horsemen|10+ deathknight 39799|50.94 50.68|Highlord Darion Mograine|artifact",
+		[42484] = "The Firstborn Rises|10+ deathknight 42449|24.78 33.69|Thassarian|artifact elsewhere link:1",
+		[43264] = "Rise, Champions|10+ deathknight 42484|50.94 50.68|Highlord Darion Mograine|artifact",
+		[43265] = "Spread the Word|10+ deathknight 43264|49.65 51.27|Siouxsie the Banshee|artifact",
+		[43266] = "Recruiting the Troops|10+ deathknight 43265|49.65 51.27|Siouxsie the Banshee|artifact",
+		[43267] = "Troops in the Field|10+ deathknight 43266|49.65 51.27|Siouxsie the Banshee|artifact",
+		[43268] = "Tech It Up A Notch|10+ deathknight 43267|49.65 51.27|Siouxsie the Banshee|artifact",
+		[43539] = "Salanar the Horseman|10+ deathknight 43267|49.65 51.27|Siouxsie the Banshee|artifact",
+		[42533] = "The Ruined Kingdom|10+ deathknight 43539|50.94 50.68|Highlord Darion Mograine|artifact",
+		[42534] = "Our Oldest Enemies|10+ deathknight 42533|24.78 33.69|Prince Galen Trollbane|artifact elsewhere link:14",
+		[42535] = "Death... and Decay|10+ deathknight 42533|24.78 33.69|Prince Galen Trollbane|artifact elsewhere link:14",
+		[42536] = "Regicide|10+ deathknight 42534 42535|24.78 33.69|Thassarian|artifact elsewhere link:14",
+		[42537] = "The King Rises|10+ deathknight 42536|24.78 33.69|Thassarian|artifact elsewhere link:14",
+		[44243] = "Champion: Thoras Trollbane|10+ deathknight 42537|59.68 34.03|King Thoras Trollbane|artifact",
+		[42708] = "A Personal Request|10+ deathknight 42537|56.03 30.61|Thassarian|artifact",
+		[44244] = "Champion: Koltira Deathweaver|10+ deathknight 42708|66.34 64.6|Koltira Deathweaver|artifact",
+		[44082] = "Knights of the Ebon Blade|10+ deathknight 42708|49.65 51.27|Siouxsie the Banshee|artifact",
+		[43899] = "Steeds of the Damned|10+ deathknight 42708|49.65 51.27|Siouxsie the Banshee|artifact",
+		[43571] = "Neltharion's Lair: Braid of the Underking|10+ deathknight 42708|36.28 56.02|Salanar the Horseman|artifact dungeon up link:647",
+
+		-- Deathlord's Battleplate
+		[44217] = "Armor Fit For A Deathlord|45+ deathknight|43.94 37.63|Quartermaster Ozorg|up link:647",
+	},
 
 	-- Demon Hunter - The Fel Hammer - Upper Command Center
 	[720] = {
@@ -281,8 +387,10 @@ Data.Quests = {
 		[39741] = "Into Our Ranks|10+ demonhunter 42634,42921 40375|58.6 57.89|Altruis the Sufferer|artifact", -- Altruis
 		[42665] = "Into Our Ranks|10+ demonhunter 42634,42921 40374|58.6 57.89|Kayn Sunfury|artifact", -- Kayn
 		[42131] = "Unexpected Visitors|10+ demonhunter 39741,42665|60.07 48.87|Matron Mother Malevolence|artifact",
-			[42802] = "Securing Mardum|10+ demonhunter 39741,42665|60.07 48.87|Matron Mother Malevolence|artifact",
-			[42731] = "Working With the Wardens|10+ demonhunter 42131|57.57 52.24|Belath Dawnblade|artifact",
+		[42802] = "Securing Mardum|10+ demonhunter 39741,42665|60.07 48.87|Matron Mother Malevolence|artifact",
+		[42808] = "Green Adepts|10+ demonhunter 42802|57.57 52.24|Belath Dawnblade|artifact",
+		[42731] = "Working With the Wardens|10+ demonhunter 42131|57.57 52.24|Belath Dawnblade|artifact",
+		[42787] = "Deal With It Personally|10+ demonhunter 42802 42731|57.57 52.24|Belath Dawnblade|artifact",
 
 		-- Battlegear of the Shattered Abyss
 		[44213] = "You Will Be Prepared!|45+ demonhunter 41066|57.8 43.44|Falara Nightsong",
@@ -322,8 +430,10 @@ Data.Quests = {
 		[39741] = "Into Our Ranks|10+ demonhunter 42634,42921 40375|58.6 57.89|Altruis the Sufferer|artifact up link:720", -- Altruis
 		[42665] = "Into Our Ranks|10+ demonhunter 42634,42921 40374|58.6 57.89|Kayn Sunfury|artifact up link:720", -- Kayn
 		[42131] = "Unexpected Visitors|10+ demonhunter 39741,42665|60.07 48.87|Matron Mother Malevolence|artifact up link:720",
-			[42802] = "Securing Mardum|10+ demonhunter 39741,42665|60.07 48.87|Matron Mother Malevolence|artifact up link:720",
-			[42731] = "Working With the Wardens|10+ demonhunter 42131|57.57 52.24|Belath Dawnblade|artifact up link:720",
+		[42802] = "Securing Mardum|10+ demonhunter 39741,42665|60.07 48.87|Matron Mother Malevolence|artifact up link:720",
+		[42808] = "Green Adepts|10+ demonhunter 42802|57.57 52.24|Belath Dawnblade|artifact up link:720",
+		[42731] = "Working With the Wardens|10+ demonhunter 42131|57.57 52.24|Belath Dawnblade|artifact up link:720",
+		[42787] = "Deal With It Personally|10+ demonhunter 42802 42731|57.57 52.24|Belath Dawnblade|artifact up link:720",
 
 		-- Battlegear of the Shattered Abyss
 		[44213] = "You Will Be Prepared!|45+ demonhunter 41066|57.8 43.44|Falara Nightsong|up link:720",
@@ -547,7 +657,7 @@ Data.Quests = {
 		[38922] = "Littlefur|10+ 38142|48.4 84.65|Elder Sookh",
 		[38246] = "Totemic Call|10+ 38922|46.26 84.55|Littlefur",
 		[38146] = "The Chieftain's Beads|10+ 38922|48.78 88.45|{133306} [Chieftain's Beads]||Drops from Chieftain Graw",
-		[38143] = "Awakening the Archdruid|10+ 38142 38922|49.08 82.35|Rylissa Bearsong",
+		[38143] = "Awakening the Archdruid|10+ 38455 38246|49.08 82.35|Rylissa Bearsong",
 		[38144] = "The Demons Below|10+ 38143|50.03 85.67|Koda Steelclaw|down link:643",
 		[38145] = "Out of the Dream|10+ 38143|50.03 85.67|Koda Steelclaw|down link:643",
 		[38147] = "Entangled Dreams|10+ 38144 38145|50.03 85.67|Koda Steelclaw|down link:643",
@@ -798,9 +908,9 @@ Data.Quests = {
 		[40000] = "A True Hunter|10+|57.59 56.41|Lorna Stoutfoot",
 
 		-- Shipwreck Cove
-		[40045] = "Nature vs. Nurture|10+ 40244|42.73 10.93|King Mrgl-Mrgl",
-		[40047] = "I'll Huff, I'll Puff...|10+ 40244|42.73 10.93|King Mrgl-Mrgl",
-		[40049] = "Slime Time|10+ 40244|42.73 10.93|King Mrgl-Mrgl",
+		[40045] = "Nature vs. Nurture|10+ ~40244|42.73 10.93|King Mrgl-Mrgl",
+		[40047] = "I'll Huff, I'll Puff...|10+ ~40244|42.73 10.93|King Mrgl-Mrgl",
+		[40049] = "Slime Time|10+ ~40244|42.73 10.93|King Mrgl-Mrgl",
 		[40102] = "Murlocs: The Next Generation|10+ 40045 40047 40049|42.73 10.93|King Mrgl-Mrgl",
 		[40230] = "Oh, the Clawdacity!|10+ 40045 40047 40049|42.73 10.93|King Mrgl-Mrgl",
 
@@ -1175,6 +1285,22 @@ Data.Quests = {
 
 		-- An Ancient Gift
 		[40008] = "The Only Way Out is Through|45+ 39987|34.65 53.4|Frist Archanist Thalyssra",
+
+		-- Mining
+		[38777] = "Leystone Deposit Sample|10+ mining|1 1394960|{1394960} [Leystone Deposit Sample]|mining discovery|Obtained from mining Leystone Deposits on the Broken Isles",
+		[38784] = "Leystone Seam Sample|10+ mining|2 1394960|{1394960} [Leystone Seam Sample]|mining discovery|Obtained from mining Leystone Seams on the Broken Isles",
+		[38785] = "Living Leystone Sample|10+ mining|3 1394960|{1394960} [Living Leystone Sample]|mining discovery|Obtained from mining Leystone creatures on the Broken Isles",
+		[38789] = "Rethu's Journal|10+ mining 38787|1 1394960|{237388} [Torn Journal Page]|mining discovery|Obtained from mining Leystone Deposits on the Broken Isles",
+		[38792] = "Rethu's Lesson|10+ mining 38789|1 1394960|[Auto Accept]|mining discovery|Obtained from mining Leystone Deposits on the Broken Isles",
+		[38790] = "Rethu's Pick|10+ mining 38787|1 1394960|{1060565} [Battered Mining Pick]|mining discovery|Obtained from mining Leystone Seams on the Broken Isles",
+		[38793] = "Rethu's Experience|10+ mining 38790|1 1394960|[Auto Accept]|mining discovery|Obtained from mining Leystone Seams on the Broken Isles",
+		[38791] = "Rethu's Horn|10+ mining 38787|1 1394960|{237403} [Chunk of Horn]|mining discovery|Obtained from mining Leystone creatures on the Broken Isles",
+		[38794] = "Rethu's Sacrifice|10+ mining 38791|1 1394960|[Auto Accept]|mining discovery|Obtained from mining Leystone creatures on the Broken Isles",
+		[38795] = "Felslate Deposit Sample|10+ mining|4 1394961|{1394961} [Felslate Deposit Sample]|mining discovery|Obtained from mining Felslate Deposits on the Broken Isles",
+		[38796] = "Felslate Seam Sample|10+ mining|5 1394961|{1394961} [Felslate Seam Sample]|mining discovery|Obtained from mining Felslate Seams on the Broken Isles",
+		[38797] = "Living Felslate Sample|10+ mining|6 1394961|{1394961} [Living Felslate Sample]|mining discovery|Obtained from mining Felslate creatures on the Broken Isles",
+		[38798] = "A Shred of Your Humanity|10+ mining 38901|29.93 53.32|Felsmith Nal'ryssa|mining",
+		[38799] = "Darkheart Thicket: Nal'ryssa's Sisters|10+ mining 38798|29.93 53.32|Felsmith Nal'ryssa|mining dungeon",
 	},
 
 
@@ -1362,11 +1488,44 @@ Data.Quests = {
 	},
 
 
+	--[[ Duskwood ]]--
+
+	[47] = {
+		-- Death Knight - Apocalypse
+		[40931] = "Following the Curse|10+ deathknight 40930|77.42 36.32|Revil Kost|artifact",
+	},
+
+
+	--[[ Deadwind Pass ]]--
+	
+	[42] = {
+		-- Death Knight - Apocalypse
+		[40932] = "Disturbing the Past|10+ deathknight 40931|52.42 34.41|Revil Kost|artifact",
+		[40933] = "A Grisly Task|10+ deathknight 40932|52.42 34.41|Revil Kost|artifact",
+		[40934] = "The Dark Riders|10+ deathknight 40933 -40986|49.46 74.73|Revil Kost|artifact", -- 40986 is used if 2nd/3rd artifact
+		[40935] = "The Call of Vengeance|10+ deathknight 40934,40986 -40987|46.91 69.48|Revil Kost|artifact", -- 40987 is used if 2nd/3rd artifact
+	},
+
+
+	--[[ Arathi Highlands ]]--
+
+	[14] = {
+		-- Death Knight - The Four Horsemen
+		[42534] = "Our Oldest Enemies|10+ deathknight 42533|19.45 67.31|Prince Galen Trollbane|artifact",
+		[42535] = "Death... and Decay|10+ deathknight 42533|19.45 67.31|Prince Galen Trollbane|artifact",
+		[42536] = "Regicide|10+ deathknight 42534 42535|19.52 67.09|Thassarian|artifact",
+		[42537] = "The King Rises|10+ deathknight 42536|23.39 61.4|Thassarian|artifact",
+	},
+
+
 	--[[ Durotar ]]--
 
 	[1] = {
 		-- Stormheim - Greymane's Gambit
 		[39698] = "Making the Rounds|10+ 38307 horde|61.37 8.86|Lady Sylvanas Windrunner",
 		[39801] = "The Splintered Fleet|10+ 39698 horde|61.49 8.77|Lady Sylvanas Windrunner",
+
+		-- Death Knight - The Four Horsemen
+		[42484] = "The Firstborn Rises|10+ deathknight 42449|47.32 17.67|Thassarian|artifact",
 	},
 }
