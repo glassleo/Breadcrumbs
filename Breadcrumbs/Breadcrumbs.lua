@@ -91,7 +91,7 @@ local variables = {
 		["PALADIN"] = 24,
 		["PRIEST"] = 702,
 		["ROGUE"] = 626, -- need to check
-		["SHAMAN"] = 725, -- need to check
+		["SHAMAN"] = 726,
 		["WARLOCK"] = 717, -- need to check
 		["WARRIOR"] = 695,
 	},
@@ -420,15 +420,15 @@ function Breadcrumbs:UpdateMap(event, ...)
 				local data = DisoveryQuests[zone][k]
 
 				-- Pin size
-				local size = 31
+				local size = setting_pinsize*1.5
 
 				-- Create quest marker pin
 				local pin = NewPin()
 				pin:SetSize(size, size)
 
 				-- Coordinates
-				local x = 2.7 + ((i-1) * 4.7)
-				local y = 96.3
+				local x = size/10
+				local y = 7 + ((size/5)*0.5) + ((i-1) * (size/4.5))
 
 				-- Data
 				local title = data["title"]
@@ -519,7 +519,7 @@ function Breadcrumbs:UpdateMap(event, ...)
 			end
 		end
 	end
-	
+
 	-- Create Objective Pins
 	if Data.Objectives then
 		for zone in pairs(Data.Objectives) do
