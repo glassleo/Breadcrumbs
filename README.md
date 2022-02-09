@@ -17,8 +17,7 @@ Work has begun on:
 
 - Legion Class Campaigns
 	- Demon Hunter
-	- Druid
-	- Hunter
-	- Monk
+	- Death Knight
 - Legion Profession Questlines
 	- Engineering
+	- Mining
