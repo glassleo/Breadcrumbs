@@ -43,6 +43,7 @@ local function NewPin()
 		Pool[pin] = nil -- remove it from the pool
 		pin:SetParent(WorldMapFrame)
 		pin:ClearAllPoints()
+		pin.icon:SetTexCoord(0, 1, 0, 1)
 		return pin
 	end
 
@@ -420,7 +421,7 @@ function Breadcrumbs:UpdateMap(event, ...)
 				local data = DisoveryQuests[zone][k]
 
 				-- Pin size
-				local size = setting_pinsize*1.5
+				local size = setting_pinsize*1.8
 
 				-- Create quest marker pin
 				local pin = NewPin()
@@ -438,7 +439,8 @@ function Breadcrumbs:UpdateMap(event, ...)
 				local link = data["link"]
 
 				-- Icon
-				pin.icon:SetTexture(data["icon"] or 134400)
+				pin.icon:SetTexture(data["icon"] and "Interface/AddOns/Breadcrumbs/Textures/Discovery/" .. data["icon"] or 134400)
+				pin.icon:SetTexCoord(0, 0.75, 0, 0.75) -- Crop 64x64 to 48x48
 				pin.icon:SetDesaturated(false) -- Needs to be set in case the frame was reused
 
 				pin:SetScript("OnEnter", function(self, motion)
@@ -720,5 +722,5 @@ function Breadcrumbs:CheckQuest(map, quest, datastring)
 	end
 
 	-- eligible, title, x, y, xx, yy, source, flags, help
-	return pass, title, tonumber(x), tonumber(y), tonumber(xx), tonumber(yy), source, flags, help
+	return pass, title, tonumber(x), y, tonumber(xx), tonumber(yy), source, flags, help
 end
