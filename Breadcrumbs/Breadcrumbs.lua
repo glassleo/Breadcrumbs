@@ -195,7 +195,7 @@ end
 
 -- Update Map
 function Breadcrumbs:UpdateMap(event, ...)
-	if event and (event == "QUEST_TURNED_IN" or event == "QUEST_AUTOCOMPLETE" or event == "QUEST_COMPLETE") then
+	if event and (event == "PLAYER_LEVEL_UP" or event == "QUEST_TURNED_IN" or event == "QUEST_AUTOCOMPLETE" or event == "QUEST_COMPLETE") then
 		-- Delay by 1 seconds to make sure quest status has updated
 		C_Timer.After(1, function() Breadcrumbs:UpdateMap() end)
 		return
