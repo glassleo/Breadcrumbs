@@ -58,6 +58,10 @@ local function NewPin(type)
 			pin:SetParent(WorldMapFrame)
 		end
 		pin:ClearAllPoints()
+		pin.icon:SetDesaturated(false)
+		pin.icon:SetTexture(nil)
+		pin.arrow:SetDesaturated(false)
+		pin.arrow:SetTexture(nil)
 		pin.icon:SetTexCoord(0, 1, 0, 1)
 		return pin
 	end
@@ -306,8 +310,6 @@ function Breadcrumbs:UpdateMap(event, ...)
 									pin.arrow:SetAtlas(flags["up"] and "minimap-positionarrowup" or "minimap-positionarrowdown")
 									pin.arrow:SetSize(size*1.5, size*1.5)
 									pin.arrow:Show()
-								else
-									pin.icon:SetDesaturated(false) -- Needs to be set in case the frame was reused
 								end
 
 								pin:SetScript("OnEnter", function(self, motion)
@@ -460,7 +462,6 @@ function Breadcrumbs:UpdateMap(event, ...)
 				-- Icon
 				pin.icon:SetTexture(data["icon"] and "Interface/AddOns/Breadcrumbs/Textures/Discovery/" .. data["icon"] or 134400)
 				pin.icon:SetTexCoord(0, 0.75, 0, 0.75) -- Crop 64x64 to 48x48
-				pin.icon:SetDesaturated(false) -- Needs to be set in case the frame was reused
 
 				pin:SetScript("OnEnter", function(self, motion)
 					GameTooltip:Hide()
