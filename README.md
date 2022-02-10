@@ -11,6 +11,7 @@ The following zones are more or less done:
 - Highmountain
 - Stormheim
 - Dalaran, Broken Isles (missing profession and artifact quests)
+- Broken Shore
 - Azuremyst Isle
 
 Work has begun on:
