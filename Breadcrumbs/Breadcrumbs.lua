@@ -644,7 +644,6 @@ Breadcrumbs:RegisterEvent("QUEST_TURNED_IN", "UpdateMap")
 Breadcrumbs:RegisterEvent("QUEST_ACCEPT_CONFIRM", "UpdateMap")
 Breadcrumbs:RegisterEvent("QUEST_WATCH_UPDATE", "UpdateMap")
 Breadcrumbs:RegisterEvent("PLAYER_LEVEL_UP", "UpdateMap")
-Breadcrumbs:RegisterEvent("ZONE_CHANGED_NEW_AREA", "UpdateMap")
 
 
 function Breadcrumbs:CheckQuest(map, quest, datastring)
