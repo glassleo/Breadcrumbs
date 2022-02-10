@@ -4,7 +4,7 @@ local _, Data = ...
 
 --[[
 	Data Structure
-	
+
 	[MapID] = {
 		[QuestID] = "Icon|Coordinates|Title|Description|Description|...", -- Quest Name
 	},
@@ -51,11 +51,16 @@ Data.Objectives = {
 			"questobjective|28.22 52.93|Pins and Needles|[7th Legion Dragoon]",
 			"questobjective|28.54 55.38|Pins and Needles|[7th Legion Dragoon]",
 		},
+	},
 
-		-- Plight of the Blackfeather
-		[42444] = "poi-door-left|50.69 31.06|Cave Entrance", -- Plight of the Blackfeather
-		[42446] = "poi-door-left|50.69 31.06|Cave Entrance", -- Singed Feathers
-		[42445] = "poi-door-left|50.69 31.06|Cave Entrance", -- Nithogg's Tributem
+	-- Broken Shore
+	[646] = {
+		-- Excavations
+		[46499] = "questobjective|43.33 31.39|Spiders, Huh?|[Spider-Covered Treasure Chest]",
+		[46501] = "questobjective|49.7 46.7|Grave Robbin'|[Dusty Treasure Chest]",
+		[46509] = "questobjective|67.61 16.16|Tomb Raidering|[Grandiose Treasure Chest]",
+		[46510] = "questobjective|54.69 77.89|Ship Graveyard|[Sunken Treasure Chest]",
+		[46511] = "questobjective|75.75 21.7|We're Treasure Hunters|[Sandy Treasure Chest]",
 	},
 
 	-- Stormscale Cavern, Stormheim

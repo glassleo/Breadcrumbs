@@ -4,10 +4,25 @@ local _, Data = ...
 
 --[[
 	Data Structure
-
+	
+	-- Quest
 	[MapID] = {
 		[QuestID] = "Name|Requirements|Coordinates|Source|Flags|Help", -- Comments
 	},
+
+	-- Quest with multiple markers
+	[MapID] = {
+		[QuestID] = {
+			"Name|Requirements|Coordinates|Source|Flags|Help", -- First marker
+			"Name|Requirements|Coordinates|Source|Flags|Help", -- Second marker
+		},
+	},
+
+	-- Disovery Quest
+	[MapID] = {
+		[QuestID] = "Name|Requirements|Priority Texture|Source|Flags|Help", -- Comments
+	},
+
 
 	Separate multiple sets with a space (for example: "10+ gnome mage" would match only a level 10+ Gnome Mage)
 	Multiple possible values are separated with a comma (for example: "warlock,mage" would match either a Warlock or a Mage)
@@ -41,6 +56,12 @@ local _, Data = ...
 		X Y				Coordinates for the map pin indicating where to pick up the quest
 		XX YY			Coordinates for an optional map pin indicating where an entrance or exit is; should only provided if you also provide a positional flag (up, down, inside, outside)
 
+	Priority: Priority number used for sorting Discovery Quests
+		X				Priority, number between 1-99; the lowest number appears on top of the list
+
+	Texture: Texture used as pin icon for Discovery Quests
+		texture			File name for a texture in the Breadcrumbs/Textures/Discovery folder
+
 	Source: Name of the item, NPC or object that starts the quest - please follow the following format:
 		NPC or Object	Name							Use the full name of the NPC or object that starts the quest as displayed in-game
 		Item			{Icon} [quality]Item Name]		Icon should be the texture ID for the item's icon. For common (white) quality items, the quality can be omitted like so: [Item Name]
@@ -68,7 +89,10 @@ local _, Data = ...
 		inside			Quest is inside on the same map, also changes the XX YY pin to an entrance marker if provided
 		outside			Quest is outside on the same map, also changes the XX YY pin to an exit marker if provided
 
-		chromiesync		Quest can only be picked up during Chromie Time or in Party Sync; adds a dynamic help tip depending on level and Chromie Time status
+		discovery		Quest can be discovered from a non-fixed location in the zone, for example by mining a node; places the pin in the Discovery Quest list (top left corner of the map) sorted by other flags and priority number
+	
+		chromietime		Quest can only be picked up during a Timewalking Campaign (Chromie Time); adds a dynamic help tip depending on level and Chromie Time status
+		chromiesync		Quest can only be picked up during a Timewalking Campaign (Chromie Time) or in Party Sync; adds a dynamic help tip depending on level and Chromie Time status
 
 	Help: Tooltip help text
 		{!}				Quest bang
@@ -200,10 +224,11 @@ Data.Quests = {
 		-- Violet Hold
 		[44400] = "Assault on Violet Hold: Purple Pain|10+|66.31 67.93|Lieutenant Sinclari|dungeon",
 
-		-- Mysterious Lightbound Object
+		-- The Light's Heart
 		-- Need to check prereqs for each class (Paladin done)
 		[44009] = "A Falling Star|10+ -paladin|28.49 48.34|Archmage Khadgar",
 		[44257] = "A Falling Star|10+ 42866 paladin|28.49 48.34|Archmage Khadgar", -- Paladin
+		[44004] = "Bringer of the Light|10+ 44009,44257|49.3 47.2|Archmage Khadgar|down link:629",
 
 		-- Uniting the Isles (Always use both 45727,43341)
 		[45727] = "Uniting the Isles|45+ -43341|28.49 48.34|Archmage Khadgar", -- First time on account is 43341
@@ -211,6 +236,35 @@ Data.Quests = {
 		-- Armies of Legionfall
 		[46730] = "Armies of Legionfall|45+ 45727,43341|66.22 41.99|Archmage Khadgar",
 		[46734] = "Assault on Broken Shore|45+ 46730|69.35 43.88|Archmage Khadgar",
+
+		-- The Council's Challenge
+		[44782] = "Away From Prying Eyes|45+ 47000,44781|28.49 48.34|Archmage Khadgar|artifact",
+		[44821] = "In Dire Need|45+ 44782|22.21 39.05 24.21 48.01|Archmage Modera|artifact inside",
+
+		-- The Highlord's Return (Death Knight, Demon Hunter, Druid, Monk, Paladin, Warrior)
+		[47025] = "Blood: Aid of the Illidari|45+ deathknight 44821|28.45 49.49|Archmage Ansirem Runeweaver|artifact", -- Death Knight
+		[46314] = "Vengeance: Seeking Kor'vas|45+ demonhunter 44821|28.45 49.49|Archmage Ansirem Runeweaver|artifact", -- Demon Hunter
+		[47023] = "Guardian: Aid of the Illidari|45+ druid 44821|28.45 49.49|Archmage Ansirem Runeweaver|artifact", -- Druid
+		[47024] = "Brewmaster: Aid of the Illidari|45+ monk 44821|28.45 49.49|Archmage Ansirem Runeweaver|artifact", -- Monk
+		[47022] = "Protection: Aid of the Illidari|45+ paladin 44821|28.45 49.49|Archmage Ansirem Runeweaver|artifact", -- Paladin
+		[45412] = "Protection: Aid of the Illidari|45+ warrior 44821|28.45 49.49|Archmage Ansirem Runeweaver|artifact", -- Warrior
+
+		-- The Black Rook Threat (Druid, Monk, Paladin, Priest, Shaman)
+		[47004] = "Restoration: The Bradensbrook Investigation|45+ druid 44821|28.45 48.92|Archmage Modera|artifact", -- Druid
+		[47005] = "Mistweaver: The Bradensbrook Investigation|45+ monk 44821|28.45 48.92|Archmage Modera|artifact", -- Monk
+		[47006] = "Holy: The Bradensbrook Investigation|45+ paladin 44821|28.45 48.92|Archmage Modera|artifact", -- Paladin
+		[46078] = "Holy: The Bradensbrook Investigation|45+ priest 44821|28.45 48.92|Archmage Modera|artifact", -- Priest
+		[47003] = "Restoration: The Bradensbrook Investigation|45+ shaman 44821|28.45 48.92|Archmage Modera|artifact", -- Shaman
+
+		-- God-Queen's Challenge (Mage, Paladin, Rogue, Shaman, Warlock)
+		[47004] = "Arcane: Fate of the Tideskorn|45+ mage 44821|28.49 48.34|Archmage Khadgar|artifact", -- Mage
+		[47052] = "Retribution: Fate of the Tideskorn|45+ paladin 44821|28.49 48.34|Archmage Khadgar|artifact", -- Paladin
+		[47051] = "Assassination: Fate of the Tideskorn|45+ rogue 44821|28.49 48.34|Archmage Khadgar|artifact", -- Rogue
+		[47050] = "Enhancement: Fate of the Tideskorn|45+ shaman 44821|28.49 48.34|Archmage Khadgar|artifact", -- Shaman
+		[47049] = "Demonology: Fate of the Tideskorn|45+ warlock 44821|28.49 48.34|Archmage Khadgar|artifact", -- Warlock
+
+		-- The Deaths of Chromie
+		[48021] = "Chromie|45+ -47543|26.37 44.54|Image of Chromie",
 
 		-- Whispers of a Frightened World
 		[47330] = "Whispers of a Frightened World|45+ 46734 -46206|28.49 48.34|Archmage Khadgar", -- Auto-Accept version is 46206
@@ -290,12 +344,26 @@ Data.Quests = {
 		[39763] = "For Whom the Fel Tolls|10+ mining 39790|47.7 26.66|Matthew Rabis|mining elsewhere link:628",
 		[39817] = "The Brimstone's Secret|10+ mining 39763|47.7 26.66|Matthew Rabis|mining elsewhere link:628",
 		[39830] = "Hellfire Citadel: Hellfire and Brimstone|10+ mining 39817|46.09 26.66|Mama Diggs|mining raid",
+
+		-- Mining - Empyrium
+		[48034] = "Empyrium Deposit Chunk|45+ mining|8 EmpyriumDeposit|{962048} [Empyrium Deposit Chunk]|mining discovery link:905|Mined from Empyrium Deposits",
+		[48035] = "Angling For a Better Strike|45+ mining 48034|8 EmpyriumDeposit|{237286} [Empyrium Dust]|mining discovery link:905|Mined from Empyrium Deposits",
+		[48036] = "Precision Perfected|45+ mining 48035|8 EmpyriumDeposit|{1097742} [Unusable Empyrium Core]|mining discovery link:905|Mined from Empyrium Deposits",
+		[48037] = "Empyrium Seam Chunk|45+ mining|9 EmpyriumSeam|{962048} [Empyrium Seam Chunk]|mining discovery link:905|Mined from Empyrium Seams",
+		[48038] = "Don't Just Pick At It|45+ mining 48037|9 EmpyriumSeam|{667492} [Embedded Empyrium Ore]|mining discovery link:905|Mined from Empyrium Seams",
+		[48039] = "Balancing the Break|45+ mining 48038|9 EmpyriumSeam|{961620} [Empyrium Bits]|mining discovery link:905|Mined from Empyrium Seams",
 	},
 
 	-- The Underbelly
 	[628] = {
 		-- Engineering
 		[40854] = "Endless Possibilities|10+ engineering 40545|65.96 52.87|Filgo Scrapbottom|engineering",
+	},
+
+	-- Aegwynn's Galleru
+	[629] = {
+		-- The Light's Heart
+		[44004] = "Bringer of the Light|10+ 44009,44257|26.8 34.97|Archmage Khadgar",
 	},
 
 	-- Dungeon: The Violet Hold
@@ -1074,6 +1142,10 @@ Data.Quests = {
 		-- The Rivermane Tribe
 		[42590] = "Moozy's Reunion|10+ 39572|45.89 54.92 49.74 53.59|Sella Waterwise|inside",
 		[38911] = "The Rivermane Tribe|10+ 38907|44.5 50.71|Mayla Highmountain|down link:652",
+		[39491] = "Ormgul the Pestilent|10+ 38911|21.05 41.74|Jale Rivermane",
+		[39272] = "Poisoned Crops|10+ 38911|21.42 41.68|Farmer Maya",
+		[39490] = "Infestation|10+ 38911|21.42 41.68|Farmer Maya",
+		[39496] = "The Flow of the River|10+ 39491 39272 39490|21.05 41.74|Jale Rivermane",
 
 		-- The Skyhorn Tribe
 		[38913] = "The Skyhorn Tribe|10+ 38909|44.5 50.71|Mayla Highmountain|down link:652",
@@ -1485,21 +1557,51 @@ Data.Quests = {
 	},
 
 
-	-- [[ Broken Shore ]]
+	--[[ Broken Shore ]]--
 
 	[646] = {
 		-- Armies of Legionfall
 		[45727] = "Uniting the Isles|45+ -43341|7.22 32.9|Archmage Khadgar|link:627|Visit {!}Archmage Khadgar in the Violet Citadel to start the Broken Shore campaign",
-		[46730] = "Armies of Legionfall|45+ 45727|7.22 32.9|Archmage Khadgar|link:627|Visit {!}Archmage Khadgar in Krasus' Landing to start the Broken Shore campaign",
+		[46730] = "Armies of Legionfall|45+ 45727|18.5 33.1|Archmage Khadgar|link:627|Visit {!}Archmage Khadgar in Krasus' Landing to start the Broken Shore campaign",
 		
 		-- Assault on Broken Shore
-		[46734] = "Assault on Broken Shore|45+ 46730|7.22 32.9|Archmage Khadgar|link:627|Visit {!}Archmage Khadgar in Krasus' Landing to continue the Broken Shore campaign",
+		[46734] = "Assault on Broken Shore|45+ 46730|18.5 33.1|Archmage Khadgar|link:627|Visit {!}Archmage Khadgar in Krasus' Landing to continue the Broken Shore campaign",
 		
 		-- Begin Construction
 		[46286] = "Legionfall Supplies|45+ 46734|44.54 63.15|Commander Chambers",
+		[46245] = "Begin Construction|45+ 46286|44.54 63.15|Commander Chambers",
 
 		-- Aalgen Point
 		[46832] = "Aalgen Point|45+ 46734|44.54 63.15|Commander Chambers",
+
+		-- Vengeance Point
+		[46845] = "Vengeance Point|45+ 46832|70.76 47.61|Heidirk the Scalekeeper",
+
+		-- Defending Broken Isles
+		[46247] = "Defending Broken Isles|45+ 46286|44.54 63.52|Maiev Shadowsong",
+
+		-- The Council's Challenge
+		[46765] = "The Broken Shore: Investigating the Legion|45+ 46734|44.73 63.27|Archmage Khadgar|artifact",
+		[47000] = "The Council's Call|45+ 46765 -44781|44.73 63.27|Archmage Khadgar|artifact", -- 44781 is the Auto Accept version offered in Dalaran if you do not pick this up
+
+		-- Excavations
+		[46499] = "Spiders, Huh?|45+ 46845|39.54 71.68|Excavator Karla",
+		[46501] = "Grave Robbin'|45+ 46499|39.54 71.68|Excavator Karla",
+		[46509] = "Tomb Raidering|45+ 46501|39.54 71.68|Excavator Karla",
+		[46510] = "Ship Graveyard|45+ 46509|39.54 71.68|Excavator Karla",
+		[46511] = "We're Treasure Hunters|45+ 46510|39.54 71.68|Excavator Karla",
+		[46666] = "The Motherlode|45+ 46511|39.54 71.68|Excavator Karla||Available the following day after completing We're Treasure Hunters",
+
+		-- Cathedral of Eternal Night
+		[46253] = "Pillars of Creation|45+|44.73 63.27|Archmage Khadgar|dungeon",
+		[46244] = "Cathedral of Eternal Night: Altar of the Aegis|45+ 46286|44.73 63.27|Archmage Khadgar|dungeon",
+
+		-- Tomb of Sargeras
+		[46805] = "The Deceiver's Downfall|45+|44.56 63.39|Prophet Velen|raid",
+
+		-- The King's Path (Alliance)
+		[46268] = "A Found Memento|45+ alliance|53.34 80.45|Battered Trinket",
+		[46272] = "Summons to the Keep|45+ alliance 46268|41.6 59.6|Captain Shwayder||Available the following day after completing A Found Memento",
 
 		-- Mining
 		[38777] = "Leystone Deposit Sample|10+ mining|1 LeystoneDeposit|{1394960} [Leystone Deposit Sample]|mining discovery|Mined from Leystone Deposits",
@@ -1520,6 +1622,45 @@ Data.Quests = {
 		[38804] = "Lyrelle|10+ mining 38801|5 FelslateSeam|Lyrelle|mining discovery|Lyrelle has a chance to spawn after mining Felslate Seams",
 		[38802] = "Ondri's Still-Beating Heart|10+ mining 38799|6 LivingFelslate|{134339} [Ore-Choked Heart]|mining discovery|Mined from Felslate creatures",
 		[38805] = "Ondri|10+ mining 38802|6 LivingFelslate|Ondri|mining discovery|Ondri has a chance to spawn after mining Felslate creatures",
+	},
+
+
+	--[[ Krokuun ]]--
+
+	[830] = {
+		-- Mining - Empyrium
+		[48034] = "Empyrium Deposit Chunk|45+ mining|8 EmpyriumDeposit|{962048} [Empyrium Deposit Chunk]|mining discovery|Mined from Empyrium Deposits",
+		[48035] = "Angling For a Better Strike|45+ mining 48034|8 EmpyriumDeposit|{237286} [Empyrium Dust]|mining discovery|Mined from Empyrium Deposits",
+		[48036] = "Precision Perfected|45+ mining 48035|8 EmpyriumDeposit|{1097742} [Unusable Empyrium Core]|mining discovery|Mined from Empyrium Deposits",
+		[48037] = "Empyrium Seam Chunk|45+ mining|9 EmpyriumSeam|{962048} [Empyrium Seam Chunk]|mining discovery|Mined from Empyrium Seams",
+		[48038] = "Don't Just Pick At It|45+ mining 48037|9 EmpyriumSeam|{667492} [Embedded Empyrium Ore]|mining discovery|Mined from Empyrium Seams",
+		[48039] = "Balancing the Break|45+ mining 48038|9 EmpyriumSeam|{961620} [Empyrium Bits]|mining discovery|Mined from Empyrium Seams",
+	},
+
+
+	--[[ Antoran Wastes ]]--
+
+	[885] = {
+		-- Mining - Empyrium
+		[48034] = "Empyrium Deposit Chunk|45+ mining|8 EmpyriumDeposit|{962048} [Empyrium Deposit Chunk]|mining discovery|Mined from Empyrium Deposits",
+		[48035] = "Angling For a Better Strike|45+ mining 48034|8 EmpyriumDeposit|{237286} [Empyrium Dust]|mining discovery|Mined from Empyrium Deposits",
+		[48036] = "Precision Perfected|45+ mining 48035|8 EmpyriumDeposit|{1097742} [Unusable Empyrium Core]|mining discovery|Mined from Empyrium Deposits",
+		[48037] = "Empyrium Seam Chunk|45+ mining|9 EmpyriumSeam|{962048} [Empyrium Seam Chunk]|mining discovery|Mined from Empyrium Seams",
+		[48038] = "Don't Just Pick At It|45+ mining 48037|9 EmpyriumSeam|{667492} [Embedded Empyrium Ore]|mining discovery|Mined from Empyrium Seams",
+		[48039] = "Balancing the Break|45+ mining 48038|9 EmpyriumSeam|{961620} [Empyrium Bits]|mining discovery|Mined from Empyrium Seams",
+	},
+
+
+	--[[ Eredath ]]--
+
+	[882] = {
+		-- Mining - Empyrium
+		[48034] = "Empyrium Deposit Chunk|45+ mining|8 EmpyriumDeposit|{962048} [Empyrium Deposit Chunk]|mining discovery|Mined from Empyrium Deposits",
+		[48035] = "Angling For a Better Strike|45+ mining 48034|8 EmpyriumDeposit|{237286} [Empyrium Dust]|mining discovery|Mined from Empyrium Deposits",
+		[48036] = "Precision Perfected|45+ mining 48035|8 EmpyriumDeposit|{1097742} [Unusable Empyrium Core]|mining discovery|Mined from Empyrium Deposits",
+		[48037] = "Empyrium Seam Chunk|45+ mining|9 EmpyriumSeam|{962048} [Empyrium Seam Chunk]|mining discovery|Mined from Empyrium Seams",
+		[48038] = "Don't Just Pick At It|45+ mining 48037|9 EmpyriumSeam|{667492} [Embedded Empyrium Ore]|mining discovery|Mined from Empyrium Seams",
+		[48039] = "Balancing the Break|45+ mining 48038|9 EmpyriumSeam|{961620} [Empyrium Bits]|mining discovery|Mined from Empyrium Seams",
 	},
 
 
