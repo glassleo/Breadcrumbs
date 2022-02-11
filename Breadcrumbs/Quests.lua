@@ -632,6 +632,12 @@ Data.Quests = {
 		[44251] = "Power Word: Armor|45+ priest|38.65 23.81|Meridelle Lightspark",
 	},
 
+	-- Rogue - The Hall of Shadows
+	[626] = {
+		-- Battlegear of the Uncrowned
+		[44252] = "A Sheath For Every Blade|45+ rogue|26.92 36.82|Kelsey Steelspark",
+	},
+
 	-- Shaman - The Heart of Azeroth
 	[726] = {
 		-- Raiment of the Farseer
@@ -689,7 +695,6 @@ Data.Quests = {
 		[37728] = "Presentation is Everything|10+ 37733|47.1 41.4|Magister Garuhod",
 		[37492] = "A Rather Long Walk|10+ 37733|47.05 41.48|Lady Irisse",
 		[37257] = "Our Very Bones|10+ 37733|47 41.36|Prince Farondis",
-		-- Check if 37727 37728 37492 are preeqs
 		[37497] = "Trailing the Tidestone|10+ 37257|47 41.36|Prince Farondis",
 		[37486] = "Nar'thalas Still Suffers|10+ 37497|51.78 44.29|Prince Farondis",
 		[37467] = "The Walk of Shame|10+ 37486|51.78 44.29|Prince Farondis",
