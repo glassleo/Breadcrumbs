@@ -114,7 +114,7 @@ local variables = {
 		["MONK"] = 709,
 		["PALADIN"] = 24,
 		["PRIEST"] = 702,
-		["ROGUE"] = 626, -- need to check
+		["ROGUE"] = 626,
 		["SHAMAN"] = 726,
 		["WARLOCK"] = 717, -- need to check
 		["WARRIOR"] = 695,
@@ -460,8 +460,8 @@ function Breadcrumbs:UpdateMap(event, ...)
 				local link = data["link"]
 
 				-- Icon
-				pin.icon:SetTexture(data["icon"] and "Interface/AddOns/Breadcrumbs/Textures/Discovery/" .. data["icon"] or 134400)
-				pin.icon:SetTexCoord(0, 0.75, 0, 0.75) -- Crop 64x64 to 48x48
+				pin.icon:SetTexture("Interface/AddOns/Breadcrumbs/Textures/Discovery/" .. (data["icon"] or "Questionmark"))
+				pin.icon:SetTexCoord(0, 0.75, 0, 0.75) -- Crop 64×64 to 48×48
 
 				pin:SetScript("OnEnter", function(self, motion)
 					GameTooltip:Hide()
