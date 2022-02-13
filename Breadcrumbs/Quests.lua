@@ -49,6 +49,9 @@ local _, Data = ...
 		covenant		Must belong to any of the following covenants (kyrian, venthyr, nightfae, necrolord)
 		-x				Must not be class/have profession/be race/be Alliance/be Horde/belong to covenant
 
+		garrison		Must have unlocked their WoD Garrison
+		garrison:n		Must have a WoD Garrison at level n
+
 		broken			Quest is broken and cannot be completed, it will be hidden unless the user has decided to display broken quests
 		broken:n		Quest is broken if you are level n or higher and cannot be completed, it will be hidden unless the user has decided to display broken quests
 
@@ -614,6 +617,8 @@ Data.Quests = {
 		[44233] = "Walk This Way|45+ hunter 40954|44.57 48.87|Outfitter Reynolds",
 	},
 
+	-- Mage
+
 	-- Monk - Wandering Isle
 	[709] = {
 		-- Grandmaster's Finery
@@ -642,6 +647,12 @@ Data.Quests = {
 	[726] = {
 		-- Raiment of the Farseer
 		[44253] = "A Vision of Triumph|45+ shaman|30.33 60.68|Flamesmith Lanying",
+	},
+
+	-- Warlock - Dreadscar Rift
+	[717] = {
+		-- Vestments of the Black Harvest
+		[44254] = "Gazing Into Oblivion|45+ warlock|58.75 32.67|Gigi Gigavoid",
 	},
 
 	-- Warrior - Skyhold
@@ -1666,6 +1677,76 @@ Data.Quests = {
 		[48037] = "Empyrium Seam Chunk|45+ mining|9 EmpyriumSeam|{962048} [Empyrium Seam Chunk]|mining discovery|Mined from Empyrium Seams",
 		[48038] = "Don't Just Pick At It|45+ mining 48037|9 EmpyriumSeam|{667492} [Embedded Empyrium Ore]|mining discovery|Mined from Empyrium Seams",
 		[48039] = "Balancing the Break|45+ mining 48038|9 EmpyriumSeam|{961620} [Empyrium Bits]|mining discovery|Mined from Empyrium Seams",
+	},
+
+
+	-- [[ Frostfire Ridge ]]--
+
+	-- Frostfire Ridge
+	[525] = {
+		-- Foothold in a Savage Land
+		[33815] = "A Song of Frost and Fire|10+ horde|40.79 67.08|Farseer Drek'Thar",
+		[34402] = "Of Wolves and Warriors|10+ horde 33815|41.81 69.65|Durotan",
+		[34364] = "For the Horde!|10+ horde 34402|48.74 65.32|Thrall|link:590",
+		[34375] = "Back to Work|10+ horde 34364|48.74 64.9|Gazlowe|link:590",
+		[34592] = "A Gronnling Problem|10+ horde 34364|48.74 64.9|Gazlowe|link:590",
+		[34765] = "The Den of Skog|10+ horde 34375 34592|48.74 64.9|Gazlowe|link:590",
+		[34378] = "Establish Your Garrison|10+ horde 34765|48.74 64.9|Gazlowe|link:590",
+	},
+
+	-- Frostwall
+	[590] = {
+		-- Foothold in a Savage Land
+		[34364] = "For the Horde!|10+ horde 34402|51.19 43.23|Thrall",
+		[34375] = "Back to Work|10+ horde 34364|51.22 39.57|Gazlowe",
+		[34592] = "A Gronnling Problem|10+ horde 34364|51.22 39.57|Gazlowe",
+		[34765] = "The Den of Skog|10+ horde 34375 34592|51.22 39.57|Gazlowe",
+		[34378] = "Establish Your Garrison|10+ horde 34765|51.22 39.57|Gazlowe",
+		[34824] = "What We Got|10+ horde 34378|52.3 53.1|Gazlowe",
+		[34822] = "What We Need|10+ horde 34378|52.3 53.1|Gazlowe",
+		[34823] = "The Ogron Live?|10+ horde 34378|51.1 51.2|Rokhan",
+		[34461] = "Build Your Barracks|10+ horde 34824 34822 34823|52.3 53.1|Gazlowe",
+		[34861] = "We Need An Army|10+ horde 34461|52.3 53.1|Gazlowe",
+		[34462] = "Winds of Change|10+ horde 34461|53.7 54.8|Warmaster Zog",
+		[34775] = "Mission Probable|10+ horde 34462|53.7 54.8|Warmaster Zog",
+		[36567] = "Bigger is Better|10+ horde 34775 garrison:1|52.3 53.1|Gazlowe",
+		[36614] = "My Very Own Fortress|40+ horde garrison:2|42 55.4|Gazlowe",
+		[36706] = {"Ashran Appearance|10+ horde 34775 garrison:1|52.3 53.1|Gazlowe", "Ashran Appearance|10+ horde 34775 garrison:2|42 55.4|Gazlowe", "Ashran Appearance|10+ horde 34775 garrison:3|37.5 50.5|Gazlowe",},
+
+		-- Siege of Bladespire Citadel
+		[34379] = {"Den of Wolves|10+ horde 34775 garrison:1|49.6 49.3|Farseer Drek'Thar", "Den of Wolves|10+ horde 34775 garrison:2|49.5 49.4|Farseer Drek'Thar", "Den of Wolves|10+ horde 34775 garrison:3|49.5 49.4|Farseer Drek'Thar",},
+
+		-- On the Shadow's Trail
+		[34209] = "Vouchsafe Our Arrival|10+ horde garrison|49.4 36.4|Cordana Felsong",
+
+		-- Pinchwhistle Gearworks
+		[36862] = {"Pinchwhistle Gearworks|30+ horde garrison:1|50.5 50.5|Murla Longeye", "Pinchwhistle Gearworks|30+ horde garrison:2|46.8 45.8|Murla Longeye", "Pinchwhistle Gearworks|30+ horde garrison:3|46.8 45.8|Murla Longeye",},
+	},
+
+
+	--[[ Ashran ]]--
+
+	-- Ashran
+	[588] = {
+		-- Ashran Appearance
+		[36707] = "Warspear Welcome|10+ horde 36706|41.02 10.57|Stomphoof|link:624",
+		[36708] = "Inspiring Ashran|10+ horde 36707|40.66 13.35|Lieutenant Kragil|link:624",
+		[36709] = "Burning Beauty|10+ horde 36708|40.66 13.35|Lieutenant Kragil|link:624",
+		[35243] = "The Dark Lady's Gift|10+ horde 36709|45.27 7.6|Vivianne|link:624",
+	},
+
+	-- Stormshield
+	[622] = {
+		-- Ashran Appearance
+	},
+
+	-- Warspear
+	[624] = {
+		-- Ashran Appearance
+		[36707] = "Warspear Welcome|10+ horde 36706|45.57 34.61|Stomphoof",
+		[36708] = "Inspiring Ashran|10+ horde 36707|44.16 45.46|Lieutenant Kragil",
+		[36709] = "Burning Beauty|10+ horde 36708|44.16 45.46|Lieutenant Kragil",
+		[35243] = "The Dark Lady's Gift|10+ horde 36709|62.13 23|Vivianne",
 	},
 
 

@@ -109,14 +109,14 @@ local variables = {
 		["DEATHKNIGHT"] = 648,
 		["DEMONHUNTER"] = 720,
 		["DRUID"] = 747,
-		["HUNTER"] = 739, -- need to check
+		["HUNTER"] = 739,
 		["MAGE"] = 734, -- need to check
 		["MONK"] = 709,
 		["PALADIN"] = 24,
 		["PRIEST"] = 702,
 		["ROGUE"] = 626,
 		["SHAMAN"] = 726,
-		["WARLOCK"] = 717, -- need to check
+		["WARLOCK"] = 717,
 		["WARRIOR"] = 695,
 	},
 	["scouting_map_in_order_hall"] = {
@@ -159,8 +159,8 @@ function Breadcrumbs:FixBonusObjectives()
 
 	-- We don't want to unregister the entire Data Provider so instead we'll just hide all the BonusObjectivePinTemplate pins for specific zones
 	local map = WorldMapFrame:GetMapID() or 0
-	if map == 630 or map == 641 or map == 650 or map == 634 then
-		-- Azsuna, Val'sharah, Highmountain, Stormheim
+	if map == 630 or map == 641 or map == 650 or map == 657 or map == 634 then
+		-- Azsuna, Val'sharah, Highmountain, Neltharion's Vault, Stormheim
 		WorldMapFrame:RemoveAllPinsByTemplate("BonusObjectivePinTemplate")
 	end
 end
@@ -643,7 +643,7 @@ Breadcrumbs:RegisterEvent("QUEST_COMPLETE", "UpdateMap")
 Breadcrumbs:RegisterEvent("QUEST_REMOVED", "UpdateMap")
 Breadcrumbs:RegisterEvent("QUEST_TURNED_IN", "UpdateMap")
 Breadcrumbs:RegisterEvent("QUEST_ACCEPT_CONFIRM", "UpdateMap")
-Breadcrumbs:RegisterEvent("QUEST_WATCH_UPDATE", "UpdateMap")
+--Breadcrumbs:RegisterEvent("QUEST_WATCH_UPDATE", "UpdateMap") - needs to be throttled
 Breadcrumbs:RegisterEvent("PLAYER_LEVEL_UP", "UpdateMap")
 
 
@@ -667,6 +667,7 @@ function Breadcrumbs:CheckQuest(map, quest, datastring)
 	local race = strlower(select(2, UnitRace("player")))
 	local faction = strlower(UnitFactionGroup("player"))
 	local level = UnitLevel("player") or 1
+	local garrison = C_Garrison and C_Garrison.GetGarrisonInfo(Enum.GarrisonType.Type_6_0) or 0
 	local covenant = C_Covenants and C_Covenants.GetActiveCovenantID() or 0
 	if covenant == 1 then covenant = "kyrian" end
 	if covenant == 2 then covenant = "venthyr" end
@@ -703,6 +704,10 @@ function Breadcrumbs:CheckQuest(map, quest, datastring)
 
 					-- Must match...
 					if v == class or v == faction or v == covenant or v == prof1 or v == prof2 or v == race then pass = true end
+					if v == "garrison" and garrison >= 1 then pass = true end
+					if v == "garrison:1" and garrison == 1 then pass = true end
+					if v == "garrison:2" and garrison == 2 then pass = true end
+					if v == "garrison:3" and garrison == 3 then pass = true end
 					if archaeology and v == "archaeology" then pass = true end
 					if fishing and v == "fishing" then pass = true end
 					if cooking and v == "cooking" then pass = true end
