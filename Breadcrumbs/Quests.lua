@@ -49,8 +49,8 @@ local _, Data = ...
 		covenant		Must belong to any of the following covenants (kyrian, venthyr, nightfae, necrolord)
 		-x				Must not be class/have profession/be race/be Alliance/be Horde/belong to covenant
 
-		garrison		Must have unlocked their WoD Garrison
-		garrison:n		Must have a WoD Garrison at level n
+		garrison		Must have unlocked WoD Garrison (any tier)
+		garrison:n		Must have a WoD Garrison at tier n
 
 		broken			Quest is broken and cannot be completed, it will be hidden unless the user has decided to display broken quests
 		broken:n		Quest is broken if you are level n or higher and cannot be completed, it will be hidden unless the user has decided to display broken quests
@@ -1719,8 +1719,59 @@ Data.Quests = {
 		-- On the Shadow's Trail
 		[34209] = "Vouchsafe Our Arrival|10+ horde garrison|49.4 36.4|Cordana Felsong",
 
-		-- Pinchwhistle Gearworks
+		-- Spires of Arak - Pinchwhistle Gearworks
 		[36862] = {"Pinchwhistle Gearworks|30+ horde garrison:1|50.5 50.5|Murla Longeye", "Pinchwhistle Gearworks|30+ horde garrison:2|46.8 45.8|Murla Longeye", "Pinchwhistle Gearworks|30+ horde garrison:3|46.8 45.8|Murla Longeye",},
+	},
+
+
+	--[[ Shadowmoon Valley ]]--
+
+	-- Shadowmoon Valley
+	[539] = {
+		-- Establishing a Foothold
+		[34582] = "Finding a Foothold|10+ alliance|26.97 8.11|Prophet Velen",
+		[34583] = "For the Alliance!|10+ alliance 34582|28.79 16.24|Vindicator Maraad|link:582",
+		[34584] = "Looking for Lumber|10+ alliance 34583|29.05 16.21|Baros Alexston|link:582",
+		[34616] = "Ravenous Ravens|10+ alliance 34583|29.05 16.21|Baros Alexston|link:582",
+		[34585] = "Quakefist|10+ alliance 34584 34616|28.92 16.4|Yrel|link:582",
+		[34586] = "Establish Your Garrison|10+ alliance 34585|29.05 16.21|Baros Alexston|link:582",
+
+		-- On the Shadow's Trail
+		[33062] = "Catching His Eye|10+ alliance garrison|29.21 25.73|Archmage Khadgar",
+		[33113] = "Shadowmoonwell|10+ alliance garrison|29.48 24.53|Delas Moonfang",
+	},
+
+	-- Lunarfall
+	[582] = {
+		-- Establishing a Foothold
+		[34583] = "For the Alliance!|10+ alliance 34582|30.18 34.29|Vindicator Maraad",
+		[34584] = "Looking for Lumber|10+ alliance 34583|32.69 34.05|Baros Alexston",
+		[34616] = "Ravenous Ravens|10+ alliance 34583|32.69 34.05|Baros Alexston",
+		[34585] = "Quakefist|10+ alliance 34584 34616|31.38 35.85|Yrel",
+		[34586] = "Establish Your Garrison|10+ alliance 34585|32.69 34.05|Baros Alexston",
+		[35176] = "Keeping it Together|10+ alliance 34586|41.2 49.2|Baros Alexston",
+		[35166] = "Ship Salvage|10+ alliance 34586|41.2 49.2|Baros Alexston",
+		[35174] = "Pale Moonlight|10+ alliance 34586|44 53.3|Vindicator Maraad",
+		[34587] = "Build Your Barracks|10+ alliance 35176 35166 35174|41.2 49.2|Baros Alexston",
+		[34646] = "Qiana Moonshadow|10+ alliance 34587|44 53.3|Vindicator Maraad",
+		[34692] = "Delegating on Draenor|10+ alliance 34646|40.3 53.6|Lieutenant Thorn",
+		[36592] = "Bigger is Better|10+ alliance 34692 garrison:1|41.2 49.2|Baros Alexston",
+		[36624] = {"Ashran Appearance|10+ alliance 34692 garrison:1|40.3 53.6|Lieutenant Thorn",},
+
+		-- Shadows Awaken
+		[33075] = {"A Hero's Welcome|10+ alliance 34692 garrison:1|46.7 51|Yrel",},
+
+		-- The Exarch Council
+		[34778] = {"Migrant Workers|10+ alliance 34692 garrison:1|44 53.3|Vindicator Maraad",},
+
+		-- On the Shadow's Trail
+		[33359] = {"Meet Us at Starfall Outpost|10+ alliance -33062 garrison:1|43.7 44.2|Cordana Felsong",},
+
+		-- Gorgrond - We Need An Outpost
+		[35556] = {"The Secrets of Gorgrond|15+ alliance garrison:1 -33533 -36632|31.4 32.9|Bodrick Grey",},
+
+		-- Spires of Arak - Pinchwhistle Gearworks
+		[36861] = {"Pinchwhistle Gearworks|30+ alliance -35619 -35077 garrison:1|45.7 46|Watchman Tilnia",},
 	},
 
 
@@ -1729,15 +1780,23 @@ Data.Quests = {
 	-- Ashran
 	[588] = {
 		-- Ashran Appearance
-		[36707] = "Warspear Welcome|10+ horde 36706|41.02 10.57|Stomphoof|link:624",
-		[36708] = "Inspiring Ashran|10+ horde 36707|40.66 13.35|Lieutenant Kragil|link:624",
-		[36709] = "Burning Beauty|10+ horde 36708|40.66 13.35|Lieutenant Kragil|link:624",
-		[35243] = "The Dark Lady's Gift|10+ horde 36709|45.27 7.6|Vivianne|link:624",
+		[36626] = "Host Howell|10+ alliance 36624|37.54 91.18|Private Tristan|link:622", -- Alliance
+		[36629] = "Inspiring Ashran|10+ alliance 36626|38.31 96.88|Lieutenant Howell|link:622", -- Alliance
+		[36630] = "A Surly Dwarf|10+ alliance 36629|38.31 96.88|Lieutenant Howell|link:622", -- Alliance
+		[36633] = "Delvar Ironfist|10+ alliance 36630|41.05 86.92|Delvar Ironfist|link:622", -- Alliance
+		[36707] = "Warspear Welcome|10+ horde 36706|41.02 10.57|Stomphoof|link:624",-- Horde
+		[36708] = "Inspiring Ashran|10+ horde 36707|40.66 13.35|Lieutenant Kragil|link:624", -- Horde
+		[36709] = "Burning Beauty|10+ horde 36708|40.66 13.35|Lieutenant Kragil|link:624", -- Horde
+		[35243] = "The Dark Lady's Gift|10+ horde 36709|45.27 7.6|Vivianne|link:624", -- Horde
 	},
 
 	-- Stormshield
 	[622] = {
 		-- Ashran Appearance
+		[36626] = "Host Howell|10+ alliance 36624|32.02 49.96|Private Tristan",
+		[36629] = "Inspiring Ashran|10+ alliance 36626|35.53 75.85|Lieutenant Howell",
+		[36630] = "A Surly Dwarf|10+ alliance 36629|35.53 75.85|Lieutenant Howell",
+		[36633] = "Delvar Ironfist|10+ alliance 36630|47.99 30.61|Delvar Ironfist",
 	},
 
 	-- Warspear
