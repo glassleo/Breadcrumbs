@@ -10,6 +10,7 @@ All data has been verified and tested manually multiple times to make sure that 
 
 - Show available quests on the world map with accurate source locations depending on what your character is able to pick, including all side quests
 - Show available one-time treasures and vignettes on the world map with helpful tooltips
+- Add objective locations during some specific quests to the map and minimap where it is missing in the default UI
 - Customization options are available for scale the pins and choosing exactly which features you want (GUI NYI)
 - Fixes a Blizzard bug that leaves Legion bonus objectives stuck on your map after leveling past 50
 
