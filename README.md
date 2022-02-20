@@ -43,8 +43,7 @@ Questlines:
 
 ### Currently Working On
 
-- Azsuna treasures
-- Val'sharah treasures
+- Legion treasures
 - Bastion
 - Death Knight campaign
 - Demon Hunter campaign
