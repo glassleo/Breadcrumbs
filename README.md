@@ -6,8 +6,6 @@ A great deal of care has been taken to make sure that the addon is not too obstr
 
 All data has been verified and tested manually multiple times to make sure that it's as accurate as possible.
 
-![Map Pins](https://i.imgur.com/k3zVLC9.png)
-
 ## Features
 
 - Show available quests on the world map with accurate source locations depending on what your character is able to pick, including all side quests
@@ -15,7 +13,9 @@ All data has been verified and tested manually multiple times to make sure that 
 - Customization options are available for scale the pins and choosing exactly which features you want (GUI NYI)
 - Fixes a Blizzard bug that leaves Legion bonus objectives stuck on your map after leveling past 50
 
----
+## Screenshots
+
+![Map Pins](https://i.imgur.com/k3zVLC9.png)
 
 ![Treasures](https://i.imgur.com/qahmcqj.png)
 
