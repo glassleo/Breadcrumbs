@@ -8,6 +8,7 @@ local Pins = LibStub("HereBeDragons-Pins-2.0")
 local setting_hidestorylines = true
 local setting_pinsize = 20
 local setting_objectivesize = 15
+local setting_vignettesize = 15
 local setting_minimapsize = 15
 local setting_showhelp = true
 local setting_questframelevel = nil -- set to "PIN_FRAME_LEVEL_GROUP_MEMBER" to display above the player arrow
@@ -15,6 +16,11 @@ local setting_objectiveframelevel = nil -- set to "PIN_FRAME_LEVEL_GROUP_MEMBER"
 local setting_vignetteframelevel = "PIN_FRAME_LEVEL_VIGNETTE" -- set to "PIN_FRAME_LEVEL_GROUP_MEMBER" to display above the player arrow
 local setting_showbroken = false
 local setting_showdiscovery = true
+local setting_showitemtooltip = true
+local setting_showitemtooltipcurrency = true
+local setting_itemtooltipposition = "right" -- can be "bottom" or "right"
+local setting_showtreasures = true
+local setting_showvignettes = true
 
 
 -- Frame recycling pool
@@ -85,6 +91,13 @@ local function NewPin(type)
 	arrow:Hide()
 
 	return pin
+end
+
+
+-- Item Tooltip
+local ItemTooltip = _G["BreadcrumbsItemTooltip"]
+if not ItemTooltip then
+    ItemTooltip = CreateFrame("GameTooltip", "BreadcrumbsItemTooltip", GameTooltip, "GameTooltipTemplate")
 end
 
 
@@ -179,7 +192,7 @@ function Breadcrumbs:FormatTooltip(text, flags)
 	text = string.gsub(text, "%[friendly%]", "|cff00ff00") -- friendly green
 	text = string.gsub(text, "%[neutral%]", "|cffff0000") -- neutral yellow
 	text = string.gsub(text, "%[hostile%]", "|cffff0000") -- hostile red
-	text = string.gsub(text, "%[poor%]", "|cffd9d9d9") -- poor grey
+	text = string.gsub(text, "%[poor%]", "|cff9d9d9d") -- poor grey
 	text = string.gsub(text, "%[uncommon%]", "|cff1eff00") -- uncommon green
 	text = string.gsub(text, "%[rare%]", "|cff0070dd") -- rare blue
 	text = string.gsub(text, "%[epic%]", "|cffa335ee") -- epic purple
@@ -631,6 +644,146 @@ function Breadcrumbs:UpdateMap(event, ...)
 		end
 	end
 
+
+	-- Create Vignette Pins
+	if (setting_showtreasures or setting_showvignettes) and Data.Vignettes then
+		for zone in pairs(Data.Vignettes) do
+			for id in pairs(Data.Vignettes[zone]) do
+				if type(id) == "number" then -- Quest
+					-- Quest must not be completed
+					if not C_QuestLog.IsQuestFlaggedCompleted(id) then
+						for i = 1, type(Data.Vignettes[zone][id]) == "string" and 1 or #Data.Vignettes[zone][id] do
+							local datastring = type(Data.Vignettes[zone][id]) == "string" and Data.Vignettes[zone][id] or Data.Vignettes[zone][id][i]
+							-- Check if we meet the quest requirements
+							local eligible, title, x, y, xx, yy, flags, tip1, tip2, tip3, tip4, tip5, tip6, tip7, tip8, tip9, tip10 = Breadcrumbs:CheckQuest(zone, id, datastring)
+
+							if eligible and x and y then
+								-- Build the flags table
+								local link, flag_icon, hyperlink = nil, nil, nil
+								flags = flags and { strsplit(" ", flags) } or {}
+								for _, v in ipairs(flags) do
+									if string.match(v, "link:([%d]+)") then
+										link = tonumber(string.match(v, "link:([%d]+)"))
+										flags["link"] = true
+									elseif string.match(v, "icon:([%d]+)") then
+										flag_icon = tonumber(string.match(v, "icon:([%d]+)"))
+										flags["icon"] = true
+									elseif string.match(v, "item:([%d]+)") or string.match(v, "spell:([%d]+)") then
+										hyperlink = v
+									elseif setting_showitemtooltipcurrency and string.match(v, "currency:([%d]+)") then
+										hyperlink = v
+									else
+										flags[v] = true
+									end
+								end
+
+								if (flags["treasure"] and setting_showtreasures) or ((flags["event"] or flags["rare"]) and setting_showvignettes) then
+									-- Pin size
+									local size = setting_vignettesize
+
+									-- Create quest marker pin
+									local pin = NewPin()
+									pin:SetSize(flags["elsewhere"] and size*0.7647 or size, size)
+
+									if flags["icon"] and flag_icon then
+										pin.icon:SetTexture(flag_icon)
+									else
+										pin.icon:SetAtlas(flags["elsewhere"] and "poi-traveldirections-arrow" or (flags["elite"] and flags["event"]) and "vignetteeventelite" or (flags["elite"] and flags["treasure"]) and "vignettelootelite" or flags["treasure"] and "vignetteloot" or flags["elite"] and "vignettekillelite" or "vignettekill")
+									end
+
+									if flags["down"] or flags["up"] then
+										pin.icon:SetDesaturated(true)
+										pin.arrow:SetAtlas(flags["up"] and "minimap-positionarrowup" or "minimap-positionarrowdown")
+										pin.arrow:SetSize(size*1.5, size*1.5)
+										pin.arrow:Show()
+									end
+
+									pin:SetScript("OnEnter", function(self, motion)
+										GameTooltip:Hide()
+										ItemTooltip:Hide()
+										GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
+										--local title = title or C_QuestLog.GetTitleForQuestID(id) or " "
+										if flags["up"] or flags["down"] then -- Position arrow and grey text color
+											GameTooltip:AddLine((flags["up"] and "|TInterface/MINIMAP/Minimap-PositionArrows:12:12:-2:0:16:32:0:16:0:16|t" or "|TInterface/MINIMAP/Minimap-PositionArrows:12:12:-2:0:16:32:0:16:16:32|t") .. title, 0.65, 0.65, 0.65)
+										elseif flags["legendary"] or flags["artifact"] then -- Legendary text color
+											GameTooltip:AddLine(title, 1, 0.5, 0)
+										else -- Normal quest
+											GameTooltip:AddLine(title)
+										end
+										if flags["dungeon"] then GameTooltip:AddLine(CreateAtlasMarkup("dungeon") .. " Dungeon") end
+										if flags["raid"] then GameTooltip:AddLine(CreateAtlasMarkup("raid") .. " Raid") end
+										if flags["alchemy"] then GameTooltip:AddLine(CreateAtlasMarkup("worldquest-icon-alchemy") .. " Alchemy") end
+										if flags["blacksmithing"] then GameTooltip:AddLine(CreateAtlasMarkup("worldquest-icon-blacksmithing") .. " Blacksmithing") end
+										if flags["enchanting"] then GameTooltip:AddLine(CreateAtlasMarkup("worldquest-icon-enchanting") .. " Enchanting") end
+										if flags["engineering"] then GameTooltip:AddLine(CreateAtlasMarkup("worldquest-icon-engineering") .. " Engineering") end
+										if flags["herbalism"] then GameTooltip:AddLine(CreateAtlasMarkup("worldquest-icon-herbalism") .. " Herbalism") end
+										if flags["inscription"] then GameTooltip:AddLine(CreateAtlasMarkup("worldquest-icon-inscription") .. " Inscription") end
+										if flags["jewelcrafting"] then GameTooltip:AddLine(CreateAtlasMarkup("worldquest-icon-jewelcrafting") .. " Jewelcrafting") end
+										if flags["leatherworking"] then GameTooltip:AddLine(CreateAtlasMarkup("worldquest-icon-leatherworking") .. " Leatherworking") end
+										if flags["mining"] then GameTooltip:AddLine(CreateAtlasMarkup("worldquest-icon-mining") .. " Mining") end
+										if flags["skinning"] then GameTooltip:AddLine(CreateAtlasMarkup("worldquest-icon-skinning") .. " Skinning") end
+										if flags["tailoring"] then GameTooltip:AddLine(CreateAtlasMarkup("worldquest-icon-tailoring") .. " Tailoring") end
+										if flags["cooking"] then GameTooltip:AddLine(CreateAtlasMarkup("worldquest-icon-cooking") .. " Cooking") end
+										if flags["fishing"] then GameTooltip:AddLine(CreateAtlasMarkup("worldquest-icon-fishing") .. " Fishing") end
+										if flags["archaeology"] then GameTooltip:AddLine(CreateAtlasMarkup("worldquest-icon-archaeology") .. " Archaeology") end
+										if flags["petbattle"] then GameTooltip:AddLine(CreateAtlasMarkup("worldquest-icon-petbattle") .. " Archaeology") end
+										if flags["link"] and link then -- The pin is a link, indicate where it takes us
+											local mapinfo = C_Map.GetMapInfo(link)
+											GameTooltip:AddLine(Breadcrumbs:FormatTooltip("{newplayertutorial-icon-mouse-leftbutton} ") .. (mapinfo.name or link), 1, 1, 1)
+										end
+										if setting_showhelp then -- Help tip
+											if tip1 then if strlen(tip1) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip1, flags)) else GameTooltip:AddLine(" ") end end
+											if tip2 then if strlen(tip2) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip2, flags)) else GameTooltip:AddLine(" ") end end
+											if tip3 then if strlen(tip3) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip3, flags)) else GameTooltip:AddLine(" ") end end
+											if tip4 then if strlen(tip4) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip4, flags)) else GameTooltip:AddLine(" ") end end
+											if tip5 then if strlen(tip5) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip5, flags)) else GameTooltip:AddLine(" ") end end
+											if tip6 then if strlen(tip6) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip6, flags)) else GameTooltip:AddLine(" ") end end
+											if tip7 then if strlen(tip7) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip7, flags)) else GameTooltip:AddLine(" ") end end
+											if tip8 then if strlen(tip8) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip8, flags)) else GameTooltip:AddLine(" ") end end
+											if tip9 then if strlen(tip9) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip9, flags)) else GameTooltip:AddLine(" ") end end
+											if tip10 then if strlen(tip10) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip10, flags)) else GameTooltip:AddLine(" ") end end
+										end
+										GameTooltip:Show()
+
+										if setting_showitemtooltip and hyperlink then
+											ItemTooltip:SetOwner(GameTooltip, "ANCHOR_NONE")
+											if setting_itemtooltipposition == "bottom" then
+												ItemTooltip:SetPoint("TOPLEFT", GameTooltip, "BOTTOMLEFT", 0, -2)
+											else
+												ItemTooltip:SetPoint("TOPLEFT", GameTooltip, "TOPRIGHT")
+											end
+											ItemTooltip:SetHyperlink(hyperlink)
+											ItemTooltip:Show()
+										end
+									end)
+
+									pin:SetScript("OnLeave", function(self, motion)
+										GameTooltip:Hide()
+										ItemTooltip:Hide()
+									end)
+
+									if flags["link"] then
+										pin:SetScript("OnMouseUp", function(self, button)
+											if button == "LeftButton" then
+												WorldMapFrame:SetMapID(link)
+											end
+										end)
+									end
+
+									Pins:AddWorldMapIconMap("Breadcrumbs", pin, zone, x/100, y/100, nil, setting_questframelevel or "PIN_FRAME_LEVEL_STORY_LINE")
+									pin:Show()
+								end
+							end
+						end
+					end
+				elseif type(id) == "string" then
+					-- NYI
+					-- https://wowpedia.fandom.com/wiki/API_C_Garrison.GetFollowers
+				end
+			end
+		end
+	end
+
 	-- This is not pretty but it works
 	C_Timer.After(0.2, function() Breadcrumbs:FixBonusObjectives() end)
 	C_Timer.After(0.4, function() Breadcrumbs:FixBonusObjectives() end)
@@ -648,9 +801,6 @@ Breadcrumbs:RegisterEvent("PLAYER_LEVEL_UP", "UpdateMap")
 
 
 function Breadcrumbs:CheckQuest(map, quest, datastring)
-	-- Doesn't exist, shut it down
-	if not Data.Quests or not Data.Quests[map] or not Data.Quests[map][quest] or not datastring then return false end
-
 	-- Variables
 	--local raw = Data.Quests[map][quest] or ""
 	local class = select(2, UnitClass("player"))
@@ -659,7 +809,7 @@ function Breadcrumbs:CheckQuest(map, quest, datastring)
 	datastring = string.gsub(datastring, "(%$scouting_map_in_order_hall)", variables["scouting_map_in_order_hall"][class])
 
 	-- Check requirements
-	local title, requirements, coordinates, source, flags, help = strsplit("|", datastring)
+	local title, requirements, coordinates, source, flags, help, help2, help3, help4, help5, help6, help7, help8, help9 = strsplit("|", datastring)
 	local data = { strsplit(" ", strlower(requirements)) }
 	local x, y, xx, yy = strsplit(" ", coordinates or "")
 
@@ -701,6 +851,9 @@ function Breadcrumbs:CheckQuest(map, quest, datastring)
 
 					-- Must not have completed or picked up quest (-n)
 					if string.match(v, "%-(%d+)") and not C_QuestLog.IsQuestFlaggedCompleted(tonumber(string.match(v, "%-(%d+)") or 0)) and not C_QuestLog.IsOnQuest(tonumber(string.match(v, "%-(%d+)") or 0)) then pass = true end
+
+					-- Must have picked up quest but not completed it (§n)
+					if string.match(v, "§(%d+)") and not (C_QuestLog.IsQuestFlaggedCompleted(tonumber(string.match(v, "§(%d+)") or 0)) and C_QuestLog.IsOnQuest(tonumber(string.match(v, "§(%d+)") or 0))) then pass = true end
 
 					-- Must match...
 					if v == class or v == faction or v == covenant or v == prof1 or v == prof2 or v == race then pass = true end
@@ -750,5 +903,5 @@ function Breadcrumbs:CheckQuest(map, quest, datastring)
 	end
 
 	-- eligible, title, x, y, xx, yy, source, flags, help
-	return pass, title, tonumber(x), y, tonumber(xx), tonumber(yy), source, flags, help
+	return pass, title, tonumber(x), y, tonumber(xx), tonumber(yy), source, flags, help, help2, help3, help4, help5, help6, help7, help8, help9
 end

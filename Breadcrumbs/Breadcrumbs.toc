@@ -17,6 +17,7 @@ Libs\HereBeDragons\HereBeDragons-Pins-2.0.lua
 # Data
 Quests.lua
 Objectives.lua
+Vignettes.lua
 
 # Core
 Breadcrumbs.lua

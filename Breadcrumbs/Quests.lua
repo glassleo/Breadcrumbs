@@ -40,6 +40,7 @@ local _, Data = ...
 		+n				Must have either completed or picked up quest ID n
 		-n				Must not have completed or picked up quest ID n
 		~n				Must not have picked up quest ID n
+		§n				Must have picked up quest ID n but not completed it
 
 		class			Must be any of following classes (deathknight demonhunter druid hunter mage monk paladin, priest, rogue, shaman, warlock, warrior)
 		profession		Must have any of the following professions learned (alchemy, blacksmithing, enchanting, engineering, herbalism, inscription, jewelcrafting, leatherworking, mining, skinning, tailoring, archaeology, cooking, fishing)
