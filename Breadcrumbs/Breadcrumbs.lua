@@ -770,7 +770,7 @@ function Breadcrumbs:UpdateMap(event, ...)
 										end)
 									end
 
-									Pins:AddWorldMapIconMap("Breadcrumbs", pin, zone, x/100, y/100, nil, setting_questframelevel or "PIN_FRAME_LEVEL_STORY_LINE")
+									Pins:AddWorldMapIconMap("Breadcrumbs", pin, zone, x/100, y/100, nil, setting_vignetteframelevel or "PIN_FRAME_LEVEL_STORY_LINE")
 									pin:Show()
 								end
 							end
