@@ -21,7 +21,7 @@ All data has been verified and tested manually multiple times to make sure that 
 
 ![Discovery Quests](https://i.imgur.com/DiOxFIm.png)
 
-*Discovery quests with no fixed location are displayed in the top left corner of the map*
+*Discovery quests with no fixed location are displayed in the corner of the map*
 
 ## Work In Progress
 
@@ -39,7 +39,7 @@ Zones:
 Questlines:
 - Legion Mining
 
-### Work in Progress
+### Coming Soon
 
 - Azsuna treasures
 - Bastion
