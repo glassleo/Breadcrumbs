@@ -6,12 +6,21 @@ A great deal of care has been taken to make sure that the addon is not too obstr
 
 All data has been verified and tested manually multiple times to make sure that it's as accurate as possible.
 
+![Map Pins](https://i.imgur.com/k3zVLC9.png)
+*Available quests on the World Map*
+
 ## Features
 
 - Show available quests on the world map with accurate source locations depending on what your character is able to pick, including all side quests
 - Show available one-time treasures and vignettes on the world map with helpful tooltips
-- Customization options are available for scaling the pins and choosing exactly which features you want
+- Customization options are available for scale the pins and choosing exactly which features you want (GUI NYI)
 - Fixes a Blizzard bug that leaves Legion bonus objectives stuck on your map after leveling past 50
+
+![Treasures](https://i.imgur.com/qahmcqj.png)
+*Treasures*
+
+![Discovery Quests](https://i.imgur.com/DiOxFIm.png)
+*Discovery quests with no fixed location are displayed in the top left corner of the map*
 
 ## Work In Progress
 
