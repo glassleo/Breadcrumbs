@@ -41,9 +41,10 @@ Zones:
 Questlines:
 - Legion Mining
 
-### Coming Soon
+### Currently Working On
 
 - Azsuna treasures
+- Val'sharah treasures
 - Bastion
 - Death Knight campaign
 - Demon Hunter campaign
