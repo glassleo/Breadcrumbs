@@ -105,11 +105,6 @@ local _, Data = ...
 		[text]			White text
 		[color]text]	Colored text where color is either a hex (like ff0800) or a named color (spell, friendly, neutral, hostile, daily, poor, uncommon, rare, epic, legendary, artifact, heirloom)
 
-	These predefined variables can be used anywhere in the string to provide text replacements:
-		$order_hall_name				Name of the player's Order Hall depending on class
-		$order_hall_map_id				Map ID for the player's Order Hall depending on class
-		$scouting_map_in_order_hall		Description text for the location of the Legion Scouting Map depending on class
-
 	--------------------------------------------------
 
 	Notes

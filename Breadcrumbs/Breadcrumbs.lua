@@ -101,53 +101,7 @@ if not ItemTooltip then
 end
 
 
-
--- Variables
-local variables = {
-	["order_hall_name"] = {
-		["DEATHKNIGHT"] = "Acherus: The Ebon Hold",
-		["DEMONHUNTER"] = "The Fel Hammer",
-		["DRUID"] = "The Dreamgrove",
-		["HUNTER"] = "Trueshot Lodge",
-		["MAGE"] = "Hall of the Guardian",
-		["MONK"] = "The Wandering Isle",
-		["PALADIN"] = "Sanctum of Light",
-		["PRIEST"] = "Netherlight Temple",
-		["ROGUE"] = "The Hall of Shadows",
-		["SHAMAN"] = "The Maelstrom",
-		["WARLOCK"] = "Dreadscar Rift",
-		["WARRIOR"] = "Skyhold",
-	},
-	["order_hall_map_id"] = {
-		["DEATHKNIGHT"] = 648,
-		["DEMONHUNTER"] = 720,
-		["DRUID"] = 747,
-		["HUNTER"] = 739,
-		["MAGE"] = 734, -- need to check
-		["MONK"] = 709,
-		["PALADIN"] = 24,
-		["PRIEST"] = 702,
-		["ROGUE"] = 626,
-		["SHAMAN"] = 726,
-		["WARLOCK"] = 717,
-		["WARRIOR"] = 695,
-	},
-	["scouting_map_in_order_hall"] = {
-		["DEATHKNIGHT"] = "Scouting Map in Acherus",
-		["DEMONHUNTER"] = "Scouting Map in the Fel Hammer",
-		["DRUID"] = "Scouting Map in the Dreamgrove",
-		["HUNTER"] = "Scouting Map in Trueshot Lodge",
-		["MAGE"] = "Scouting Map in the Hall of the Guardian",
-		["MONK"] = "Scouting Map on the Wandering Isle",
-		["PALADIN"] = "Scouting Map in the Sanctum of Light",
-		["PRIEST"] = "Scouting Map in Netherlight Temple",
-		["ROGUE"] = "Scouting Map in the Hall of Shadows",
-		["SHAMAN"] = "Scouting Map in the Heart of Azeroth",
-		["WARLOCK"] = "Scouting Map in Dreadscar Rift",
-		["WARRIOR"] = "Scouting Map in Skyhold",
-	},
-}
-
+-- Initialization
 function Breadcrumbs:OnInitialize()
 	if setting_hidestorylines then
 		-- Remove StorylineQuestDataProvider
@@ -163,6 +117,8 @@ function Breadcrumbs:OnEnable()
 	Breadcrumbs:UpdateMap()
 end
 
+
+-- Fix Bonus Objectives
 function Breadcrumbs:FixBonusObjectives()
 	-- Attempt to fix the Blizzard map bug preventing Legion leveling bonus objectives from hiding properly at level 50+
 	if not WorldMapFrame then return end
@@ -178,6 +134,7 @@ function Breadcrumbs:FixBonusObjectives()
 	end
 end
 Breadcrumbs:RegisterEvent("QUEST_LOG_UPDATE", "FixBonusObjectives")
+
 
 -- Format Tooltip Text
 function Breadcrumbs:FormatTooltip(text, flags)
@@ -206,9 +163,6 @@ function Breadcrumbs:FormatTooltip(text, flags)
 	return text
 end
 
-function Breadcrumbs:GetMapID()
-	return (HBD:GetPlayerZone())
-end
 
 -- Update Map
 function Breadcrumbs:UpdateMap(event, ...)
@@ -801,18 +755,12 @@ Breadcrumbs:RegisterEvent("PLAYER_LEVEL_UP", "UpdateMap")
 
 
 function Breadcrumbs:CheckQuest(map, quest, datastring)
-	-- Variables
-	--local raw = Data.Quests[map][quest] or ""
-	local class = select(2, UnitClass("player"))
-	datastring = string.gsub(datastring, "(%$order_hall_map_id)", variables["order_hall_map_id"][class])
-	datastring = string.gsub(datastring, "(%$order_hall_name)", variables["order_hall_name"][class])
-	datastring = string.gsub(datastring, "(%$scouting_map_in_order_hall)", variables["scouting_map_in_order_hall"][class])
-
 	-- Check requirements
 	local title, requirements, coordinates, source, flags, help, help2, help3, help4, help5, help6, help7, help8, help9 = strsplit("|", datastring)
 	local data = { strsplit(" ", strlower(requirements)) }
 	local x, y, xx, yy = strsplit(" ", coordinates or "")
 
+	local class = select(2, UnitClass("player"))
 	class = strlower(class)
 	local race = strlower(select(2, UnitRace("player")))
 	local faction = strlower(UnitFactionGroup("player"))
