@@ -1,24 +1,37 @@
 # Breadcrumbs
 
-Breadcrumbs is an addon that adds pins to your world map depending on which quests are available to pick up. The addon is heavily inspired by Wholly and Grail, but built completely from scratch.
+Breadcrumbs is an addon that adds dynamic pins to your world map. It is meant to help you quickly see which quests, treasures and vignettes are available to pick up in any given zone without having to check any external resources.
 
-While the addon itself is mostly feature complete, only a tiny fraction of all required quest data has been compiled so far.
+A great deal of care has been taken to make sure that the addon is not too obstructive and integrates seamlessly with the map interface.
 
-The following zones are more or less done:
+All data has been verified and tested manually multiple times to make sure that it's as accurate as possible.
 
-- Azsuna
-- Val'sharah
-- Highmountain
-- Stormheim
-- Dalaran, Broken Isles (missing profession and artifact quests)
-- Broken Shore
-- Azuremyst Isle
+## Features
 
-Work has begun on:
+- Show available quests on the world map with accurate source locations depending on what your character is able to pick, including all side quests
+- Show available one-time treasures and vignettes on the world map with helpful tooltips
+- Customization options are available for scaling the pins and choosing exactly which features you want
+- Fixes a Blizzard bug that leaves Legion bonus objectives stuck on your map after leveling past 50
 
-- Legion Class Campaigns
-	- Demon Hunter
-	- Death Knight
-- Legion Profession Questlines
-	- Engineering
-	- Mining
+## Work In Progress
+
+While the addon itself is feature complete, only a tiny fraction of all required data has been compiled so far.
+
+### Completed
+
+Zones:
+- Azsuna (quests)
+- Val'sharah (quests)
+- Highmountain (quests)
+- Stormheim (quests)
+- Azuremyst Isle (including Ammen Vale)
+
+Questlines:
+- Legion Mining
+
+### Work in Progress
+
+- Azsuna treasures
+- Bastion
+- Death Knight campaign
+- Demon Hunter campaign
