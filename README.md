@@ -39,7 +39,7 @@ Zones:
 Questlines:
 - Legion Mining
 
-### Work in Progress
+### Coming Soon
 
 - Azsuna treasures
 - Bastion
