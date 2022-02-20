@@ -31,10 +31,11 @@ While the addon itself is feature complete, only a tiny fraction of all required
 ### Completed
 
 Zones:
-- Azsuna (quests)
-- Val'sharah (quests)
-- Highmountain (quests)
-- Stormheim (quests)
+- Azsuna (quests only)
+- Val'sharah (quests only)
+- Highmountain (quests only)
+- Stormheim (quests only)
+- Broken Shore (quests only)
 - Azuremyst Isle (including Ammen Vale)
 
 Questlines:
