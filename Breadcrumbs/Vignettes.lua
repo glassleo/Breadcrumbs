@@ -42,10 +42,19 @@ Data.Vignettes = {
 
 	--[[ Val'sharah ]]--
 
+	-- Val'sharah
 	[641] = {
 		[38366] = "Small Treasure Chest|10+|48.68 73.79|treasure currency:1220||Contains:|{1397630} [Order Resources]||Inside a tree trunk",
 		[39080] = "Small Treasure Chest|10+ §38644|38.4 65.32|treasure currency:1220||Contains:|{1397630} [Order Resources]||Inside Heathrow Cellar", -- approx coords -- Door can only be opened while doing quest 38644
 		[38369] = "Small Treasure Chest|10+|39.95 54.6|treasure currency:1220||Contains:|{1397630} [Order Resources]||Might not be visible due to phasing", -- has phasing issues with some quests
+
+		-- Darkpens
+		[39085] = "Small Treasure Chest|10+|40.51 44.69|treasure currency:1220 down link:642||Contains:|{1397630} [Order Resources]",
+	},
+
+	-- Darkpens
+	[642] = {
+		[39085] = "Small Treasure Chest|10+|41.94 88.35|treasure currency:1220||Contains:|{1397630} [Order Resources]",
 	},
 
 
