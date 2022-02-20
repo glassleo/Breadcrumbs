@@ -8,8 +8,6 @@ All data has been verified and tested manually multiple times to make sure that 
 
 ![Map Pins](https://i.imgur.com/k3zVLC9.png)
 
-*Available quests are displayed on the World Map*
-
 ## Features
 
 - Show available quests on the world map with accurate source locations depending on what your character is able to pick, including all side quests
@@ -18,8 +16,6 @@ All data has been verified and tested manually multiple times to make sure that 
 - Fixes a Blizzard bug that leaves Legion bonus objectives stuck on your map after leveling past 50
 
 ![Treasures](https://i.imgur.com/qahmcqj.png)
-
-*Treasures*
 
 ![Discovery Quests](https://i.imgur.com/DiOxFIm.png)
 
