@@ -2,6 +2,7 @@ local _, Data = ...
 Breadcrumbs = LibStub("AceAddon-3.0"):NewAddon("Breadcrumbs", "AceConsole-3.0", "AceEvent-3.0")
 local HBD = LibStub("HereBeDragons-2.0")
 local Pins = LibStub("HereBeDragons-Pins-2.0")
+local Throttle = {}
 
 
 -- User settings (GUI NYI)
@@ -166,13 +167,23 @@ end
 
 -- Update Map
 function Breadcrumbs:UpdateMap(event, ...)
-	if event and (event == "PLAYER_LEVEL_UP" or event == "QUEST_TURNED_IN" or event == "QUEST_AUTOCOMPLETE" or event == "QUEST_COMPLETE") then
-		-- Delay by 1 seconds to make sure quest status has updated
-		C_Timer.After(1, function() Breadcrumbs:UpdateMap() end)
-		return
-	end
-	if event and ZA and ZA.DebugMode then
-		print(event, ...) -- Debug output
+	if event then
+		if ZA and ZA.DebugMode then
+			print(event, ...) -- Debug output
+		end
+
+		if Throttle[event] then
+			return
+		else
+			Throttle[event] = true
+			C_Timer.After(0.5, function() Throttle[event] = false end)
+		end
+
+		if event == "PLAYER_LEVEL_UP" or event == "QUEST_TURNED_IN" or event == "QUEST_AUTOCOMPLETE" or event == "QUEST_COMPLETE" or event == "QUEST_COMPLETE" or event == "BAG_UPDATE" then
+			-- Delay by 1 seconds to make sure quest status has updated
+			C_Timer.After(1, function() Breadcrumbs:UpdateMap() end)
+			return
+		end
 	end
 
 	-- Clean up
@@ -608,7 +619,7 @@ function Breadcrumbs:UpdateMap(event, ...)
 						for i = 1, type(Data.Vignettes[zone][id]) == "string" and 1 or #Data.Vignettes[zone][id] do
 							local datastring = type(Data.Vignettes[zone][id]) == "string" and Data.Vignettes[zone][id] or Data.Vignettes[zone][id][i]
 							-- Check if we meet the quest requirements
-							local eligible, title, x, y, xx, yy, flags, tip1, tip2, tip3, tip4, tip5, tip6, tip7, tip8, tip9, tip10 = Breadcrumbs:CheckQuest(zone, id, datastring)
+							local eligible, title, x, y, xx, yy, source, flags, tip1, tip2, tip3, tip4, tip5, tip6, tip7, tip8, tip9 = Breadcrumbs:CheckQuest(zone, id, datastring)
 
 							if eligible and x and y then
 								-- Build the flags table
@@ -680,11 +691,14 @@ function Breadcrumbs:UpdateMap(event, ...)
 										if flags["fishing"] then GameTooltip:AddLine(CreateAtlasMarkup("worldquest-icon-fishing") .. " Fishing") end
 										if flags["archaeology"] then GameTooltip:AddLine(CreateAtlasMarkup("worldquest-icon-archaeology") .. " Archaeology") end
 										if flags["petbattle"] then GameTooltip:AddLine(CreateAtlasMarkup("worldquest-icon-petbattle") .. " Archaeology") end
-										if flags["link"] and link then -- The pin is a link, indicate where it takes us
+										if flags["link"] and link then -- The pin is a link, indicate where it takes us, replacing source
 											local mapinfo = C_Map.GetMapInfo(link)
 											GameTooltip:AddLine(Breadcrumbs:FormatTooltip("{newplayertutorial-icon-mouse-leftbutton} ") .. (mapinfo.name or link), 1, 1, 1)
+										elseif source then
+											GameTooltip:AddLine(Breadcrumbs:FormatTooltip(source))
 										end
-										if setting_showhelp then -- Help tip
+										if setting_showhelp and tip1 then -- Help tip
+											GameTooltip:AddLine(" ")
 											if tip1 then if strlen(tip1) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip1, flags)) else GameTooltip:AddLine(" ") end end
 											if tip2 then if strlen(tip2) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip2, flags)) else GameTooltip:AddLine(" ") end end
 											if tip3 then if strlen(tip3) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip3, flags)) else GameTooltip:AddLine(" ") end end
@@ -694,7 +708,6 @@ function Breadcrumbs:UpdateMap(event, ...)
 											if tip7 then if strlen(tip7) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip7, flags)) else GameTooltip:AddLine(" ") end end
 											if tip8 then if strlen(tip8) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip8, flags)) else GameTooltip:AddLine(" ") end end
 											if tip9 then if strlen(tip9) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip9, flags)) else GameTooltip:AddLine(" ") end end
-											if tip10 then if strlen(tip10) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip10, flags)) else GameTooltip:AddLine(" ") end end
 										end
 										GameTooltip:Show()
 
@@ -749,8 +762,9 @@ Breadcrumbs:RegisterEvent("QUEST_COMPLETE", "UpdateMap")
 Breadcrumbs:RegisterEvent("QUEST_REMOVED", "UpdateMap")
 Breadcrumbs:RegisterEvent("QUEST_TURNED_IN", "UpdateMap")
 Breadcrumbs:RegisterEvent("QUEST_ACCEPT_CONFIRM", "UpdateMap")
---Breadcrumbs:RegisterEvent("QUEST_WATCH_UPDATE", "UpdateMap") - needs to be throttled
+--Breadcrumbs:RegisterEvent("QUEST_WATCH_UPDATE", "UpdateMap")
 Breadcrumbs:RegisterEvent("PLAYER_LEVEL_UP", "UpdateMap")
+Breadcrumbs:RegisterEvent("BAG_UPDATE", "UpdateMap")
 
 
 function Breadcrumbs:CheckQuest(map, quest, datastring)
