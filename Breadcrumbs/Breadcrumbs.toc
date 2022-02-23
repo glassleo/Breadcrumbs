@@ -1,8 +1,8 @@
-## Interface: 90105
+## Interface: 90200
 ## Title: Breadcrumbs
-## Version: 9.1.5
-## Notes: Quest Mapping
-## Author: Leo Bolin
+## Version: 9.2.0
+## Notes: Adds pins to your World Map for Quests, Treasures and Vignettes
+## Author: Leo
 
 # Libraries
 Libs\LibStub\LibStub.lua
