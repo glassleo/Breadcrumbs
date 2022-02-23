@@ -172,8 +172,7 @@ function Breadcrumbs:UpdateMap(event, ...)
 		return
 	end
 	if event and ZA and ZA.DebugMode then
-		-- Debug
-		print(event, ...)
+		print(event, ...) -- Debug output
 	end
 
 	-- Clean up
@@ -850,6 +849,6 @@ function Breadcrumbs:CheckQuest(map, quest, datastring)
 		end
 	end
 
-	-- eligible, title, x, y, xx, yy, source, flags, help
+	-- eligible, title, x, y, xx, yy, source, flags, help, ...
 	return pass, title, tonumber(x), y, tonumber(xx), tonumber(yy), source, flags, help, help2, help3, help4, help5, help6, help7, help8, help9
 end
