@@ -6,7 +6,7 @@ local _, Data = ...
 	Data Structure
 
 	[MapID] = {
-		[QuestID|"follower:id"] = "Title|Requirements|Coordinates|Flags|Tooltip|Tooltip|Tooltip|...", -- Comments
+		[QuestID|"follower:id"] = "Name|Requirements|Coordinates|Flags|Tooltip|Tooltip|Tooltip|...", -- Comments
 	},
 ]]--
 
