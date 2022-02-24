@@ -17,7 +17,7 @@ Data.POI = {
 	-- Boralus
 	[1161] = {
 		-- Portal
-		-- To do: Add check for Nazjatar portal
+		-- To do: Add Nazjatar portal
 		{"mageportalalliance|Sanctum of the Sages|10+ 49- alliance 47186|70.52 17.28||Portals to:|{mageportalalliance} [Stormwind]|{mageportalalliance} [The Exodar]|{mageportalalliance} [Ironforge]", "mageportalalliance|Sanctum of the Sages|50+ alliance 47186|70.52 17.28||Portals to:|{mageportalalliance} [Stormwind]|{mageportalalliance} [The Exodar]|{mageportalalliance} [Ironforge]|{mageportalalliance} [Silithus]",},
 
 		-- Scrapper
@@ -62,17 +62,18 @@ Data.POI = {
 		{"POI/Leatherworking|Legendary Leathers|10+ leatherworking skinning|35.41 29.02|[Leatherworking and Skinning]", "POI/Leatherworking|Legendary Leathers|leatherworking -skinning|35.41 29.02|[Leatherworking]", "POI/Skinning|Kondal Huntsworn|skinning -leatherworking|36.05 27.97|[Skinning Trainer]",},
 		"POI/Mining|Mama Diggs|10+ mining|46.45 26.35|[Mining Trainer]",
 		"POI/Tailoring|Talismanic Textiles|10+ tailoring|36.04 33.51|[Tailoring]",
-		"POI/Cooking|Catherine Lee|10+ alliance|39.7 66.5|[Cooking Trainer]",
+		{"POI/Cooking|A Hero's Welcome|10+ alliance|40.07 65.98|[Cooking]", "POI/Cooking|The Filthy Animal|10+ horde|69.77 38.77|[Cooking]",},
 		"POI/Fishing|Marcia Chase|10+|52.81 65.59|[Fishing Trainer]",
-		"POI/Archaeology|Things of the Past|10+|41.26 25.36|[Archaeology]",
+		"POI/Archaeology|Things of the Past|10+|41.26 25.36|[Archaeology]",		
 	},
 
 
-	-- [[ Legion Order Halls ]]--
+	--[[ Legion Order Halls ]]--
 
+	-- Death Knight - Acherus: The Ebon Hold - The Heart of Acherus
 	[647] = {
 		-- Work Order
-		"POI/EbonKnights|Korgaz Deadaxe|10+ deathknight 44082|53.36 68.55|[Ebon Soldier Recruiter]",
+		"poi-workorders|Korgaz Deadaxe|10+ deathknight 44082|53.36 68.55|[Ebon Soldier Recruiter]",
 	},
 
 	-- Death Knight - Acherus: The Ebon Hold - Hall of Command
@@ -80,16 +81,135 @@ Data.POI = {
 		-- Portal
 		{"mageportalalliance|Portal to Dalaran|deathknight alliance|24.73 33.7", "mageportalhorde|Portal to Dalaran|deathknight horde|24.73 33.7",},
 
-		-- Flight Master
+		-- Taxi
 		"taxinode_neutral|Grimwing|deathknight|25.49 28.81|[Flight Master]",
 
 		-- Class Hall
 		"ShipMissionIcon-Bonus-MapBadge|Scouting Map|deathknight|50.3 50.8",
-		"class|Archivist Zubashi|deathknight|47.76 53.77|[Class Hall Upgrades]",
+		"class|Archivist Zubashi|10+ deathknight +43268|47.76 53.77|[Class Hall Upgrades]",
 
 		-- Work Order
-		"POI/PackOfGhouls|Dark Summoner Marogh|10+ deathknight|41.05 74.02|[Risen Horde Recruiter]",
+		"poi-workorders|Dark Summoner Marogh|10+ deathknight +43266|41.05 74.02|[Risen Horde Recruiter]",
 	},
+
+	-- Demon Hunter - The Fel Hammer - Upper Command Center
+	[720] = {},
+
+	-- Demon Hunter - The Fel Hammer - Lower Command Center
+	[721] = {},
+
+	-- Druid - The Dreamgrove
+	[747] = {
+		-- Portal
+		"taxinode_continent_neutral|Emerald Dreamway|druid|55.5 22.24",
+		{"mageportalalliance|Portal to Dalaran|druid alliance|56.5 43.1", "mageportalhorde|Portal to Dalaran|druid horde|56.5 43.1",},
+
+		-- Taxi
+		"taxinode_neutral|Danise Satargazer|druid|61.74 33.99|[Flight Master]",
+
+		-- Class Hall
+		"ShipMissionIcon-Bonus-MapBadge|Scouting Map|druid|52.52 50.85",
+		"class|Leafbeard the Storied|10+ druid +42588|32.77 29.34|[Ancient of Lore]",
+
+		-- Work Order
+		"poi-workorders|Sister Lillith|10+ druid +42585|36.31 25.35|[Recruiter]",
+	},
+
+	-- Hunter - Trueshot Lodge
+	[739] = {},
+
+	-- Mage - Hall of the Guardian - The Guardian's Library
+	[735] = {},
+
+	-- Mage - Hall of the Guardian
+	[734] = {
+		-- Portal
+		{"mageportalalliance|Portal to Dalaran|mage alliance|57.33 90.54", "mageportalhorde|Portal to Dalaran|mage horde|57.33 90.54",},
+
+		-- Transportation Nexus
+		"mageportalalliance|Transportation Nexus: Azsuna|mage research:386|55.04 39.54",
+		"mageportalalliance|Transportation Nexus: Val'sharah|mage research:386|66.77 46.73",
+		"mageportalalliance|Transportation Nexus: Highmountain|mage research:386|54.64 44.59",
+		"mageportalalliance|Transportation Nexus: Stormheim|mage research:386|67.18 41.58",
+		"mageportalalliance|Transportation Nexus: Suramar|mage research:386|60.22 51.99",
+
+		-- Class Hall
+		"ShipMissionIcon-Bonus-MapBadge|Scouting Map|mage|81.7 61.4",
+		"class|Chronicler Elrianne|10+ mage +42696|74.91 28.91|[Class Hall Upgrades]",
+
+		-- Work Order
+		"poi-workorders|Archmage Omniara|10+ mage +42127|87.88 47.43|[Recruiter]",
+		"poi-workorders|Grand Conjurer Mimic|10+ mage +44098|47.78 32.15|[Mage Recruiter Extraordinaire]",
+	},
+
+	-- Monk - Wandering Isle
+	[709] = {
+		-- Class Hall
+		{"ShipMissionIcon-Bonus-MapBadge|Scouting Map|monk -41946 -42191|52.9 60.3", "ShipMissionIcon-Bonus-MapBadge|Scouting Map|monk +41946 -42191|52.9 60.3||Tianji|[Ox Troop Trainer]", "ShipMissionIcon-Bonus-MapBadge|Scouting Map|monk 41946 +42191|52.9 60.3||Number Nine Jia|[Class Hall Upgrades]||Tianji|[Ox Troop Trainer]",},
+
+		-- Work Order
+		"poi-workorders|Gin Lai|10+ monk 43319|54.44 57.16|[Tiger Troop Trainer]",
+	},
+
+	-- Paladin - Sanctum of Light
+	[24] = {},
+
+	-- Priest - Netherlight Temple
+	[702] = {},
+
+	-- Rogue - The Hall of Shadows
+	[626] = {},
+
+	-- Shaman - The Heart of Azeroth
+	[726] = {},
+
+	-- Warlock - Dreadscar Rift
+	[717] = {
+		-- Class Hall
+		"ShipMissionIcon-Bonus-MapBadge|Dreadscar Battle Plan|warlock|66.4 47.6",
+		"class|Archivist Melinda|10+ warlock +42601|55.35 41.03|[Class Hall Upgrades]",
+
+		-- Work Order
+		"poi-workorders|Imp Mother Dyala|10+ warlock +41797|66.6 31.1|[Recruiter]",
+		"poi-workorders|Jared|10+ warlock +41798|61.47 51.8|[Recruiter]",
+	},
+
+	-- Warrior - Skyhold
+	[695] = {
+		-- Taxi
+		"taxinode_neutral|Aerylia|warrior|58.35 24.93|[Stormflight Master]",
+
+		-- Class Hall
+		-- To Do: Add prereqs
+		"ShipMissionIcon-Bonus-MapBadge|Eye of Odyn|warrior|59.2 12.8",
+		"class|Einar the Runecaster|10+ warrior +42611|46.53 28.9|[Class Hall Upgrades]",
+
+		-- Work Order
+		"poi-workorders|Captain Hjalmar Stahlstrom|10+ warrior +42609|62.34 15.09|[Recruiter]",
+		"poi-workorders|Savyn Valorborn|10+ warrior +43975|55.96 15.01|[Recruiter]",
+	},
+
+
+	--[[ Azsuna ]]--
+
+	-- Azsuna
+	[630] = {
+		-- Portal
+		"mageportalalliance|Portal to Stormwind|alliance|46.66 41.42",
+		"mageportalhorde|Portal to Orgrimmar|horde|46.67 41.3",
+	},
+
+
+	--[[ Stormheim ]]--
+
+	-- Stormheim
+	[634] = {},
+
+
+	--[[ Suramar ]]--
+
+	-- Suramar
+	[680] = {},
 
 
 	--[[ Teldrassil ]]--
