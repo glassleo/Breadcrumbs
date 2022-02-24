@@ -41,7 +41,8 @@ Data.Vignettes = {
 		[42290] = "Small Treasure Chest|10+ ~37538|50.2 50.29|Oceanus Cove|treasure currency:1220|Contains:|{1397630} [Order Resources]",
 		[37829] = "Small Treasure Chest|10+|53.17 64.46|A|treasure currency:1220|Contains:|{1397630} [Order Resources]",
 		[42273] = "Small Treasure Chest|10+|62.38 58.4|The Ruined Sanctum|treasure currency:1220|Contains:|{1397630} [Order Resources]",
-		[42293] = "Small Treasure Chest|10+|63.64 39.17|Hatecoil Warcamp|treasure currency:1220|Contains:|{1397630} [Order Resources]",
+		[42293] = "Small Treasure Chest|10+|63.64 39.17|Hatecoil Warcamp|treasure currency:1220|Contains:|{1397630} [Order Resources]", -- Glittering Memento
+		[37831] = "Small Treasure Chest|10+|49.64 34.47|El'dranil Shallows|treasure currency:1220|Contains:|{1397630} [Order Resources]", -- Crude Statuette
 
 		-- Oceanus Cove
 		[37649] = "? Treasure Chest|10+|50.41 54.38|Oceanus Cove|treasure currency:1220 down link:632|Contains:|{1397630} [Order Resources]",
@@ -70,6 +71,16 @@ Data.Vignettes = {
 	-- Darkpens
 	[642] = {
 		[39085] = "Small Treasure Chest|10+|41.94 88.35|Darkpens|treasure currency:1220|Contains:|{1397630} [Order Resources]",
+	},
+
+
+	--[[ Stormheim ]]--
+
+	-- Stormheim
+	[634] = {
+		[42628] = "Small Treasure Chest|10+|72.13 54.89|Dreyrgrot|treasure currency:1220|Contains:|{1397630} [Order Resources]",
+		[42632] = "Small Treasure Chest|10+|73.96 52.23|Citrine Bay by Dreyrgrot|treasure currency:1220|Contains:|{1397630} [Order Resources]",
+		[42629] = "Small Treasure Chest|10+|75.15 49.47|Citrine Bay|treasure currency:1220|Contains:|{1397630} [Order Resources]",
 	},
 
 
