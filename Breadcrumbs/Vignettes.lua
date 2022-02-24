@@ -19,6 +19,20 @@ Data.Vignettes = {
 	},
 
 
+	--[[ Tiragarde Sound ]]--
+
+	-- Boralus
+	[1161] = {
+		[52870] = "Scrimshaw Cache|10+|63.21 6.5|Boralus|treasure currency:1560|Contains:|{2032600} [War Resources]",
+		[53407] = "Jay's Songbook|10+|53.15 17.67|Hops, Lines & Sinker Brewing|treasure item:163716|Contains:|{1500866} [poor]Forbidden Sea Shanty of Inebriation]",
+	},
+
+	-- Tiragarde Sound
+	[895] = {
+		[52870] = "Scrimshaw Cache|10+|72.65 21.34|Boralus|treasure currency:1560|Contains:|{2032600} [War Resources]",
+	},
+
+
 	--[[ Azsuna ]]--
 
 	-- Azsuna
@@ -26,7 +40,7 @@ Data.Vignettes = {
 		[42278] = "Small Treasure Chest|10+|62.99 54.18|Gloombound Barrow|treasure currency:1220|Contains:|{1397630} [Order Resources]",
 		[42290] = "Small Treasure Chest|10+ ~37538|50.2 50.29|Oceanus Cove|treasure currency:1220|Contains:|{1397630} [Order Resources]",
 		[37829] = "Small Treasure Chest|10+|53.17 64.46|A|treasure currency:1220|Contains:|{1397630} [Order Resources]",
-		[42273] = "Small Treasure Chest|10+|62.38 58.4|B|treasure currency:1220|Contains:|{1397630} [Order Resources]",
+		[42273] = "Small Treasure Chest|10+|62.38 58.4|The Ruined Sanctum|treasure currency:1220|Contains:|{1397630} [Order Resources]",
 		[42293] = "Small Treasure Chest|10+|63.64 39.17|Hatecoil Warcamp|treasure currency:1220|Contains:|{1397630} [Order Resources]",
 
 		-- Oceanus Cove

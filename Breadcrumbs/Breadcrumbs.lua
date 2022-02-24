@@ -10,11 +10,13 @@ local setting_hidestorylines = true
 local setting_pinsize = 20
 local setting_objectivesize = 15
 local setting_vignettesize = 15
+local setting_poisize = 20
 local setting_minimapsize = 15
 local setting_showhelp = true
 local setting_questframelevel = nil -- set to "PIN_FRAME_LEVEL_GROUP_MEMBER" to display above the player arrow
 local setting_objectiveframelevel = nil -- set to "PIN_FRAME_LEVEL_GROUP_MEMBER" to display above the player arrow
 local setting_vignetteframelevel = "PIN_FRAME_LEVEL_VIGNETTE" -- set to "PIN_FRAME_LEVEL_GROUP_MEMBER" to display above the player arrow
+local setting_poiframelevel = "PIN_FRAME_LEVEL_AREA_POI" -- set to "PIN_FRAME_LEVEL_GROUP_MEMBER" to display above the player arrow
 local setting_showbroken = false
 local setting_showdiscovery = true
 local setting_showitemtooltip = true
@@ -22,6 +24,7 @@ local setting_showitemtooltipcurrency = true
 local setting_itemtooltipposition = "right" -- can be "bottom" or "right"
 local setting_showtreasures = true
 local setting_showvignettes = true
+local setting_showpoi = true
 
 
 -- Frame recycling pool
@@ -608,7 +611,6 @@ function Breadcrumbs:UpdateMap(event, ...)
 		end
 	end
 
-
 	-- Create Vignette Pins
 	if (setting_showtreasures or setting_showvignettes) and Data.Vignettes then
 		for zone in pairs(Data.Vignettes) do
@@ -736,7 +738,7 @@ function Breadcrumbs:UpdateMap(event, ...)
 										end)
 									end
 
-									Pins:AddWorldMapIconMap("Breadcrumbs", pin, zone, x/100, y/100, nil, setting_vignetteframelevel or "PIN_FRAME_LEVEL_STORY_LINE")
+									Pins:AddWorldMapIconMap("Breadcrumbs", pin, zone, x/100, y/100, nil, setting_vignetteframelevel or "PIN_FRAME_LEVEL_VIGNETTE")
 									pin:Show()
 								end
 							end
@@ -745,6 +747,65 @@ function Breadcrumbs:UpdateMap(event, ...)
 				elseif type(id) == "string" then
 					-- NYI
 					-- https://wowpedia.fandom.com/wiki/API_C_Garrison.GetFollowers
+				end
+			end
+		end
+	end
+
+	-- Create Point of Interest Pins
+	if setting_showpoi and Data.POI then
+		for zone in pairs(Data.POI) do
+			for id, data in ipairs(Data.POI[zone]) do
+				for i = 1, type(data) == "string" and 1 or #data do
+					local datastring = type(data) == "string" and data or data[i]
+					-- Check if we meet the quest requirements
+					local eligible, texture, title, x, y, tip1, tip2, tip3, tip4, tip5, tip6, tip7, tip8, tip9 = Breadcrumbs:CheckPOI(datastring)
+
+					if eligible and x and y then
+						-- Pin size
+						local size = setting_poisize
+
+						-- Create quest marker pin
+						local pin = NewPin()
+
+						if string.match(texture, "Discovery/[%w]+") then
+							pin.icon:SetTexture("Interface/AddOns/Breadcrumbs/Textures/" .. texture)
+							pin.icon:SetTexCoord(0, 0.75, 0, 0.75) -- Crop 64×64 to 48×48
+						elseif string.match(texture, "POI/[%w]+") then
+							pin.icon:SetTexture("Interface/AddOns/Breadcrumbs/Textures/" .. texture)
+						elseif string.match(texture, "[%w%p]+") then
+							pin.icon:SetAtlas(texture)
+						else
+							pin.icon:SetTexture(texture)
+						end
+
+						pin:SetSize(size, size)
+
+						pin:SetScript("OnEnter", function(self, motion)
+							GameTooltip:Hide()
+							GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
+							GameTooltip:AddLine(title)
+							if tip1 then
+								if tip1 then if strlen(tip1) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip1, flags)) else GameTooltip:AddLine(" ") end end
+								if tip2 then if strlen(tip2) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip2, flags)) else GameTooltip:AddLine(" ") end end
+								if tip3 then if strlen(tip3) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip3, flags)) else GameTooltip:AddLine(" ") end end
+								if tip4 then if strlen(tip4) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip4, flags)) else GameTooltip:AddLine(" ") end end
+								if tip5 then if strlen(tip5) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip5, flags)) else GameTooltip:AddLine(" ") end end
+								if tip6 then if strlen(tip6) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip6, flags)) else GameTooltip:AddLine(" ") end end
+								if tip7 then if strlen(tip7) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip7, flags)) else GameTooltip:AddLine(" ") end end
+								if tip8 then if strlen(tip8) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip8, flags)) else GameTooltip:AddLine(" ") end end
+								if tip9 then if strlen(tip9) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip9, flags)) else GameTooltip:AddLine(" ") end end
+							end
+							GameTooltip:Show()
+						end)
+
+						pin:SetScript("OnLeave", function(self, motion)
+							GameTooltip:Hide()
+						end)
+
+						Pins:AddWorldMapIconMap("Breadcrumbs", pin, zone, x/100, y/100, nil, setting_poiframelevel or "PIN_FRAME_LEVEL_AREA_POI")
+						pin:Show()
+					end
 				end
 			end
 		end
@@ -865,4 +926,104 @@ function Breadcrumbs:CheckQuest(map, quest, datastring)
 
 	-- eligible, title, x, y, xx, yy, source, flags, help, ...
 	return pass, title, tonumber(x), y, tonumber(xx), tonumber(yy), source, flags, help, help2, help3, help4, help5, help6, help7, help8, help9
+end
+
+function Breadcrumbs:CheckPOI(datastring)
+	-- Check requirements
+	local texture, title, requirements, coordinates, help, help2, help3, help4, help5, help6, help7, help8, help9 = strsplit("|", datastring)
+	local data = { strsplit(" ", strlower(requirements)) }
+	local x, y = strsplit(" ", coordinates or "")
+
+	local class = select(2, UnitClass("player"))
+	class = strlower(class)
+	local race = strlower(select(2, UnitRace("player")))
+	local faction = strlower(UnitFactionGroup("player"))
+	local level = UnitLevel("player") or 1
+	local garrison = C_Garrison and C_Garrison.GetGarrisonInfo(Enum.GarrisonType.Type_6_0) or 0
+	local covenant = C_Covenants and C_Covenants.GetActiveCovenantID() or 0
+	if covenant == 1 then covenant = "kyrian" end
+	if covenant == 2 then covenant = "venthyr" end
+	if covenant == 3 then covenant = "nightfae" end
+	if covenant == 4 then covenant = "necrolord" end
+	prof1, prof2, archaeology, fishing, cooking = GetProfessions()
+	if prof1 then prof1 = strlower(GetProfessionInfo(prof1)) end -- This won't work on non-English clients
+	if prof2 then prof2 = strlower(GetProfessionInfo(prof2)) end
+
+	local pass = true
+	for _, v in ipairs(data) do
+		if pass then
+			pass = false
+
+			if string.match(v, "(%d+)%+") and tonumber(string.match(v, "(%d+)%+") or 0) <= level then
+				pass = true -- Minimum level
+			elseif tonumber(string.match(v, "(%d+)%-") or 0) >= level then
+				pass = true -- Maximum level
+			else
+				local data = { strsplit(",", v) }
+
+				for _, v in ipairs(data) do
+					-- Must have completed quest (n)
+					if C_QuestLog.IsQuestFlaggedCompleted(tonumber(v) or 0) then pass = true end
+
+					-- Must have completed or picked up quest (+n)
+					if string.match(v, "%+(%d+)") and (C_QuestLog.IsQuestFlaggedCompleted(tonumber(string.match(v, "%+(%d+)") or 0)) or C_QuestLog.IsOnQuest(tonumber(string.match(v, "%+(%d+)") or 0))) then pass = true end
+
+					-- Must not have picked up quest (~n)
+					if string.match(v, "~(%d+)") and not C_QuestLog.IsOnQuest(tonumber(string.match(v, "~(%d+)") or 0)) then pass = true end
+
+					-- Must not have completed or picked up quest (-n)
+					if string.match(v, "%-(%d+)") and not C_QuestLog.IsQuestFlaggedCompleted(tonumber(string.match(v, "%-(%d+)") or 0)) and not C_QuestLog.IsOnQuest(tonumber(string.match(v, "%-(%d+)") or 0)) then pass = true end
+
+					-- Must have picked up quest but not completed it (§n)
+					if string.match(v, "§(%d+)") and not (C_QuestLog.IsQuestFlaggedCompleted(tonumber(string.match(v, "§(%d+)") or 0)) and C_QuestLog.IsOnQuest(tonumber(string.match(v, "§(%d+)") or 0))) then pass = true end
+
+					-- Must match...
+					if v == class or v == faction or v == covenant or v == prof1 or v == prof2 or v == race then pass = true end
+					if v == "garrison" and garrison >= 1 then pass = true end
+					if v == "garrison:1" and garrison == 1 then pass = true end
+					if v == "garrison:2" and garrison == 2 then pass = true end
+					if v == "garrison:3" and garrison == 3 then pass = true end
+					if archaeology and v == "archaeology" then pass = true end
+					if fishing and v == "fishing" then pass = true end
+					if cooking and v == "cooking" then pass = true end
+					if race == "scourge" and (v == "undead" or v == "forsaken") then pass = true end
+					if race == "highmountaintauren" and v == "highmountain" then pass = true end
+					if race == "darkirondwarf" and v == "darkiron" then pass = true end
+					if race == "magharorc" and v == "maghar" then pass = true end
+					if race == "lightforgeddraenei" and v == "lightforged" then pass = true end
+					if race == "kultiran" and v == "kultiranhuman" then pass = true end
+					if race == "zandalaritroll" and v == "zandalari" then pass = true end
+
+					-- Must not match...
+					if string.match(v, "%-(%a+)") then
+						pass = true -- We invert our logic
+						local w = string.gsub(v, "%-(%a+)", "%1")
+
+						if w == class or w == faction or w == covenant or w == prof1 or w == prof2 or w == race then pass = false end
+						if archaeology and w == "archaeology" then pass = false end
+						if fishing and w == "fishing" then pass = false end
+						if cooking and w == "cooking" then pass = false end
+						if race == "scourge" and (w == "undead" or w == "forsaken") then pass = false end
+						if race == "highmountaintauren" and w == "highmountain" then pass = false end
+						if race == "darkirondwarf" and w == "darkiron" then pass = false end
+						if race == "magharorc" and w == "maghar" then pass = false end
+						if race == "lightforgeddraenei" and w == "lightforged" then pass = false end
+						if race == "kultiran" and w == "kultiranhuman" then pass = false end
+						if race == "zandalaritroll" and w == "zandalari" then pass = false end
+					end
+
+					-- Broken
+					if v == "broken" and setting_showbroken then pass = true end
+
+					if string.match(v, "broken:(%d+)") then
+						local brokenlevel = tonumber((string.gsub(v, "broken:(%d+)", "%1"))) or 0
+						if level < brokenlevel or setting_showbroken then pass = true end
+					end
+				end
+			end
+		end
+	end
+
+	-- eligible, texture, title, x, y, help, ...
+	return pass, texture, title, tonumber(x), tonumber(y), help, help2, help3, help4, help5, help6, help7, help8, help9
 end

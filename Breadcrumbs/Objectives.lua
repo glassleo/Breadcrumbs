@@ -81,4 +81,11 @@ Data.Objectives = {
 		[9573] = "questobjective|38.49 52.89|Chieftain Oomooroo|[Chieftain Oomooroo]",
 		[9565] = "questturnin|65.18 30.89|Search Stillpine Hold",
 	},
+
+	-- Stormwind
+	[84] = {
+		-- The Nation of Kul Tiras
+		[46728] = "questobjective|22.8 24.7|The Nation of Kul Tiras|[Jaina Proudmoore]",
+		[59641] = "questobjective|22.8 24.7|The Nation of Kul Tiras|[Jaina Proudmoore]",
+	},
 }
