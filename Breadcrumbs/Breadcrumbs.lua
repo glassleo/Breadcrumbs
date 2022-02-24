@@ -69,6 +69,7 @@ local function NewPin(type)
 		end
 		pin:ClearAllPoints()
 		pin.icon:SetDesaturated(false)
+		pin.icon:SetVertexColor(1, 1, 1)
 		pin.icon:SetTexture(nil)
 		pin.arrow:SetDesaturated(false)
 		pin.arrow:SetTexture(nil)
