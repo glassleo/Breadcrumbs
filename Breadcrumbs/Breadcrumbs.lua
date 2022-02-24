@@ -878,6 +878,12 @@ function Breadcrumbs:CheckQuest(map, quest, datastring)
 					-- Must have picked up quest but not completed it (§n)
 					if string.match(v, "§(%d+)") and not (C_QuestLog.IsQuestFlaggedCompleted(tonumber(string.match(v, "§(%d+)") or 0)) and C_QuestLog.IsOnQuest(tonumber(string.match(v, "§(%d+)") or 0))) then pass = true end
 
+					-- Must have researched Garrison talent (research:n)
+					if string.match(v, "research:(%d+)") and C_Garrison.GetTalentInfo(tonumber(string.match(v, "research:(%d+)") or 0)).researched then pass = true end
+
+					-- Must not have researched Garrison talent (-research:n)
+					if string.match(v, "%-research:(%d+)") and not C_Garrison.GetTalentInfo(tonumber(string.match(v, "research:(%d+)") or 0)).researched then pass = true end
+
 					-- Must match...
 					if v == class or v == faction or v == covenant or v == prof1 or v == prof2 or v == race then pass = true end
 					if v == "garrison" and garrison >= 1 then pass = true end
@@ -977,6 +983,12 @@ function Breadcrumbs:CheckPOI(datastring)
 
 					-- Must have picked up quest but not completed it (§n)
 					if string.match(v, "§(%d+)") and not (C_QuestLog.IsQuestFlaggedCompleted(tonumber(string.match(v, "§(%d+)") or 0)) and C_QuestLog.IsOnQuest(tonumber(string.match(v, "§(%d+)") or 0))) then pass = true end
+
+					-- Must have researched Garrison talent (research:n)
+					if string.match(v, "research:(%d+)") and C_Garrison.GetTalentInfo(tonumber(string.match(v, "research:(%d+)") or 0)).researched then pass = true end
+
+					-- Must not have researched Garrison talent (-research:n)
+					if string.match(v, "%-research:(%d+)") and not C_Garrison.GetTalentInfo(tonumber(string.match(v, "research:(%d+)") or 0)).researched then pass = true end
 
 					-- Must match...
 					if v == class or v == faction or v == covenant or v == prof1 or v == prof2 or v == race then pass = true end
