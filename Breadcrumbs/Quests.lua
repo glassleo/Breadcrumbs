@@ -48,10 +48,13 @@ local _, Data = ...
 		alliance		Must be Alliance
 		horde			Must be Horde
 		covenant		Must belong to any of the following covenants (kyrian, venthyr, nightfae, necrolord)
-		-x				Must not be class/have profession/be race/be Alliance/be Horde/belong to covenant
+		-x				Must not be class/have profession/be race/belong to faction/belong to covenant
 
 		garrison		Must have unlocked WoD Garrison (any tier)
 		garrison:n		Must have a WoD Garrison at tier n
+
+		research:n		Must have researched Garrison talent ID n (see https://wow.tools/dbc/?dbc=garrtalent)
+		-research:n		Must not have researched Garrison talent ID n
 
 		broken			Quest is broken and cannot be completed, it will be hidden unless the user has decided to display broken quests
 		broken:n		Quest is broken if you are level n or higher and cannot be completed, it will be hidden unless the user has decided to display broken quests
@@ -653,7 +656,11 @@ Data.Quests = {
 		[44233] = "Walk This Way|45+ hunter 40954|44.57 48.87|Outfitter Reynolds",
 	},
 
-	-- Mage
+	-- Mage - Hall of the Guardian - The Guardian's Library
+	[735] = {},
+
+	-- Mage - Hall of the Guardian
+	[734] = {},
 
 	-- Monk - Wandering Isle
 	[709] = {
@@ -665,6 +672,8 @@ Data.Quests = {
 	[24] = {
 		-- Battleplate of the Silver Hand
 		[44250] = "Champion of the Light|45+ paladin|41.35 61.09|Eadric the Pure",
+
+		-- Chose Balnazzar: 42136
 	},
 
 	-- Priest - Netherlight Temple
@@ -864,6 +873,7 @@ Data.Quests = {
 
 	--[[ Val'sharah ]]--
 
+	-- Val'sharah
 	[641] = {
 		-- Nature's Call
 		[40122] = "Cenarius, Keeper of the Grove|10+|54.69 72.84|Malfurion Stormrage",
@@ -1020,6 +1030,7 @@ Data.Quests = {
 
 	--[[ Highmountain ]]--
 
+	-- Highmountain
 	[650] = {
 		-- The Rivermane Tribe
 		[38907] = {"Keepers of the Hammer|10+ -38911|35.96 65.74|Warbrave Oro", "Keepers of the Hammer|10+ -38911|59.01 65.47|Warbrave Oro",},
@@ -1312,6 +1323,7 @@ Data.Quests = {
 
 	--[[ Stormheim ]]--
 
+	-- Stormheim
 	[634] = {
 		-- Stormforged Grapple Launcher
 		[39775] = {
@@ -1573,6 +1585,7 @@ Data.Quests = {
 
 	--[[ Suramar ]]--
 
+	-- Suramar
 	[680] = {
 		-- Magic Message
 		[39985] = "Khadgar's Discovery|45+ -39986 -44555|35.9 47.7|Archmage Khadgar|elsewhere link:627|Visit {!}Archmage Khadgar in the Violet Citadel to start the Suramar campaign", -- There are two versions of this quest that get marked as completed at the same time
