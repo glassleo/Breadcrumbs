@@ -109,6 +109,10 @@ local _, Data = ...
 
 	Notes
 
+	Exile's Reach - Use the first quest, Warming Up, to check if a player started in Exile's Reach
+		56775 - Warming Up (Alliance)
+		59926 - Warming Up (Horde)
+
 	World Quests
 		45727,43341 - Legion World Quests unlocked
 
@@ -133,6 +137,42 @@ local _, Data = ...
 ]]--
 
 Data.Quests = {
+
+	--[[ Tiragarde Sound ]]--
+
+	-- Boralus
+	[1161] = {
+		-- A Nation Divided
+		[47099] = "Get Your Bearings|10+ alliance 47098|75.73 23.58|Taelia",
+		[46729] = "The Old Knight|10+ alliance 47099|67.57 15.24|Taelia",
+		[52128] = "Ferry Pass|10+ alliance 46729|67.99 21.91|Cyrus Crestfall",
+		[47186] = "Sanctum of the Sages|10+ alliance 46729|68.15 21.09|Taelia",
+		[47189] = "A Nation Divided|10+ alliance 47186|68.15 21.09|Taelia",
+
+		-- Mission from the King
+		[52654] = "The War Campaign|35+ alliance 47186|68.05 22.18|Genn Greymane",
+
+		-- Kul Tiras
+		-- After picking Tiragarde Sound, the Scouting Map becomes available again once 47485 is complete
+		[47960] = {"Tiragarde Sound|10+ alliance 47189 -47961 -47962|68.38 22.08|Scouting Map",},
+		[47961] = {"Drustvar|20+ alliance 47189 -47960 -47962|68.38 22.08|Scouting Map", "Drustvar|20+ alliance 47189 47960 47485 -47962|68.38 22.08|Scouting Map",},
+		[47962] = {"Stormsong Valley|30+ alliance 47189 -47960 -47961|68.38 22.08|Scouting Map", "Stormsong Valley|30+ alliance 47189 47960 47485 -47961|68.38 22.08|Scouting Map",},
+
+		-- Tiragarde Sound - The Ashvane Trading Company
+		[47181] = "The Smoking Gun|10+ alliance 47960|67.58 22.21|Flynn Fairwind",
+		[47485] = "The Ashvane Trading Company|10+ alliance 47181|67.99 21.91|Cyrus Crestfall",
+
+		-- Scrap-O-Matic 1000
+		[52462] = "A Load of Scrap|10+ alliance|77.17 16.46|Crenzo Sparkshatter",
+	},
+
+	-- Tiragarde Sound
+	[895] = {
+		[47486] = "Suspicious Shipments|10+ alliance 47485|76.84 43.43|Cagney",
+		[47487] = "Labor Dispute|10+ alliance 47485|76.84 43.43|Cagney",
+		[47488] = "Small Haulers|10+ alliance 47485|76.84 43.43|Olive",
+	},
+
 
 	--[[ Dalaran, Broken Isles ]]--
 
@@ -1805,6 +1845,15 @@ Data.Quests = {
 	},
 
 
+	--[[ Teldrassil ]]--
+
+	-- Darnassus
+	[89] = {
+		-- Battle for Azeroth - A Nation Divided
+		[46727] = "Tides of War|10+ alliance -58983 -56775|45.1 50.13|Hero's Herald", -- 58983 is Exile's Reach version - 56775 don't show for Exile's Reach players
+	},
+
+
 	--[[ Azuremyst Isle ]]--
 
 	-- Ammen Vale
@@ -1962,12 +2011,20 @@ Data.Quests = {
 	},
 
 
-	--[[ Stormwind City ]]--
+	--[[ Elwynn Forest ]]--
 
+	-- Stormwind City
 	[84] = {
+		-- Alliance Balloon
+		[29412] = "Blown Away|10+ alliance|58.89 52.74|Vin",
+
 		-- Stormheim - Greymane's Gambit
 		[38206] = "Making the Rounds|10+ 38035 alliance|18.92 42.78|Sky Admiral Rogers",
 		[39800] = "Greymane's Gambit|10+ 38206 alliance|18.66 51.1|Genn Greymane",
+
+		-- Battle for Azeroth - A Nation Divided
+		[46727] = {"Tides of War|10+ alliance -58983 -56775|62.82 71.75|Hero's Herald", "Tides of War|10+ alliance -58983 -56775|62.17 30.14|Hero's Herald",}, -- 58983 is Exile's Reach version - 56775 don't show for Exile's Reach players
+		[46728] = "The Nation of Kul Tiras|10+ alliance 46727 -59641 -56775|80.26 33.13|Anduin Wrynn", -- 59641 is Exile's Reach version
 	},
 
 
