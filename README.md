@@ -11,8 +11,9 @@ All data has been verified and tested manually multiple times to make sure that 
 - Show available quests on the world map with accurate source locations depending on what your character is able to pick, including all side quests
 - Show available one-time treasures and vignettes on the world map with helpful tooltips
 - Add missing quest objectives for a few specific quests to the world map and minimap
-- Customization options are available for scale the pins and choosing exactly which features you want (GUI NYI)
+- Add additional points of interest to the world map, for example portals and profession trainers
 - Fixes a Blizzard bug that leaves Legion bonus objectives stuck on your map after leveling past 50
+- Options are available where you can choose which features you want to use
 
 ## Screenshots
 
@@ -41,9 +42,9 @@ Zones:
 Questlines:
 - Legion Mining
 
-### Currently Working On
+### Currently Working On...
 
-- Legion treasures
+- Treasures and POIs
 - Bastion
 - Death Knight campaign
 - Demon Hunter campaign
