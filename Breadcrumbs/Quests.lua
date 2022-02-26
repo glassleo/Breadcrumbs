@@ -327,7 +327,8 @@ Data.Quests = {
 		-- Alchemy
 		[39325] = "Get Your Mix On|10+ alchemy|41.33 33.39|Deucus Valdera|alchemy",
 		[39326] = "Missing Shipments|10+ alchemy 39325|41.33 33.39|Deucus Valdera|alchemy",
-		[39390] = "A Mysterious Text|10+ alchemy 39325|41.33 33.39|Alchemy Book|alchemy elsewhere link:630",
+		[39566] = "The Search for Knowledge|10+ alchemy 39326 -39390|41.33 33.39|Deucus Valdera|alchemy",
+		[39390] = "A Mysterious Text|10+ alchemy 39566|41.33 33.39|Alchemy Book|alchemy elsewhere link:630",
 		[39327] = "There's a Scribe for That|10+ alchemy 39390|41.33 33.39|Deucus Valdera|alchemy",
 
 		-- Blacksmithing
@@ -348,8 +349,15 @@ Data.Quests = {
 		[40864] = "Modular Modifications|10+ engineering 40863|38.97 25.42|Didi the Wrench|engineering",
 		[40865] = "It's Not Rocket Science|10+ engineering 40861 40862 40864|38.36 25.57|Hobart Grapplehammer|engineering",
 
-		-- Herbalism
+		-- Herbalism - Aethril
+		[40013] = "Aethril Sample|10+ herbalism|1 Aethril|{1395063} [Aethril Sample]|herbalism discovery link:630|Gathered from Aethril",
 		[40014] = "Spayed by the Spade|10+ herbalism 40013|43 33.36|Kuhuine Tenderstride|herbalism",
+		[40015] = "Ragged Strips of Silk|10+ herbalism 40014|1 Aethril|{463527} [Ragged Strips of Silk]|herbalism discovery link:630|Gathered from Aethril",
+		[40016] = "Desperation Breeds Ingenuity|10+ herbalism 40015|43 33.36|Kuhuine Tenderstride|herbalism",
+		[40017] = "A Slip of the Hand|10+ herbalism 40016|1 Aethril|[Auto Accept]|herbalism discovery link:630|Has a chance to be obtained after gathering Aethril",
+
+		-- Herbalism - Felwort
+		[40040] = "Felwort Sample|45+ herbalism 45727,43341|6 Felwort|{1387614} [Felwort Sample]|herbalism discovery link:619|Gathered from Felwort",
 
 		-- Mining - Leystone
 		[38777] = "Leystone Deposit Sample|10+ mining|1 LeystoneDeposit|{1394960} [Leystone Deposit Sample]|mining discovery link:619|Mined from Leystone Deposits",
@@ -417,7 +425,7 @@ Data.Quests = {
 
 	-- Broken Isles
 	[619] = {
-		-- Mining
+		-- Mining - Leystone
 		[38777] = "Leystone Deposit Sample|10+ mining|1 LeystoneDeposit|{1394960} [Leystone Deposit Sample]|mining discovery|Mined from Leystone Deposits",
 		[38784] = "Leystone Seam Sample|10+ mining|2 LeystoneSeam|{1394960} [Leystone Seam Sample]|mining discovery|Mined from Leystone Seams",
 		[38785] = "Living Leystone Sample|10+ mining|3 LivingLeystone|{1394960} [Living Leystone Sample]|mining discovery|Mined from Leystone creatures",
@@ -427,6 +435,8 @@ Data.Quests = {
 		[38793] = "Rethu's Experience|10+ mining 38790|2 LeystoneSeam|[Auto Accept]|mining discovery|Has a chance to appear after mining Leystone Seams",
 		[38791] = "Rethu's Horn|10+ mining 38787|3 LivingLeystone|{237403} [Chunk of Horn]|mining discovery|Mined from Leystone creatures",
 		[38794] = "Rethu's Sacrifice|10+ mining 38791|3 LivingLeystone|[Auto Accept]|mining discovery|Has a chance to appear after mining Leystone creatures",
+
+		-- Mining - Felslate
 		[38795] = "Felslate Deposit Sample|10+ mining|4 FelslateDeposit|{1394961} [Felslate Deposit Sample]|mining discovery|Mined from Felslate Deposits",
 		[38796] = "Felslate Seam Sample|10+ mining|5 FelslateSeam|{1394961} [Felslate Seam Sample]|mining discovery|Mined from Felslate Seams",
 		[38797] = "Living Felslate Sample|10+ mining|6 LivingFelslate|{1394961} [Living Felslate Sample]|mining discovery|Mined from Felslate creatures",
@@ -436,6 +446,8 @@ Data.Quests = {
 		[38804] = "Lyrelle|10+ mining 38801|5 FelslateSeam|Lyrelle|mining discovery|Lyrelle has a chance to appear after mining Felslate Seams",
 		[38802] = "Ondri's Still-Beating Heart|10+ mining 38799|6 LivingFelslate|{134339} [Ore-Choked Heart]|mining discovery|Mined from Felslate creatures",
 		[38805] = "Ondri|10+ mining 38802|6 LivingFelslate|Ondri|mining discovery|Ondri has a chance to appear after mining Felslate creatures",
+
+		-- Mining - Infernal Brimstone
 		[38806] = "Infernal Brimstone Sample|45+ mining 45727,43341|7 InfernalBrimstone|{1394959} [Infernal Brimstone Sample]|mining discovery|Mined from Brimstone Destroyer Core",
 	},
 
@@ -453,6 +465,8 @@ Data.Quests = {
 		[42449] = "Return of the Four Horsemen|10+ deathknight 39799|50.94 50.68|Highlord Darion Mograine|artifact down link:648",
 		[42484] = "The Firstborn Rises|10+ deathknight 42449|33.37 35.71|Thassarian|artifact elsewhere link:1",
 		[43264] = "Rise, Champions|10+ deathknight 42484|50.94 50.68|Highlord Darion Mograine|artifact down link:648",
+		[39816] = "Champion: Thassarian|10+ deathknight +43264|56.01 30.72|Thassarian|artifact down link:648",
+		[39818] = "Champion: Nazgrim|10+ deathknight +43264|39.48 68.26|Nazgrim|artifact down link:648",
 		[43265] = "Spread the Word|10+ deathknight 43264|49.65 51.27|Siouxsie the Banshee|artifact down link:648",
 		[43266] = "Recruiting the Troops|10+ deathknight 43265|49.65 51.27|Siouxsie the Banshee|artifact down link:648",
 		[43267] = "Troops in the Field|10+ deathknight 43266|49.65 51.27|Siouxsie the Banshee|artifact down link:648",
@@ -497,6 +511,8 @@ Data.Quests = {
 		[42449] = "Return of the Four Horsemen|10+ deathknight 39799|50.94 50.68|Highlord Darion Mograine|artifact",
 		[42484] = "The Firstborn Rises|10+ deathknight 42449|24.78 33.69|Thassarian|artifact elsewhere link:1",
 		[43264] = "Rise, Champions|10+ deathknight 42484|50.94 50.68|Highlord Darion Mograine|artifact",
+		[39816] = "Champion: Thassarian|10+ deathknight +43264|56.01 30.72|Thassarian|artifact",
+		[39818] = "Champion: Nazgrim|10+ deathknight +43264|39.48 68.26|Nazgrim|artifact",
 		[43265] = "Spread the Word|10+ deathknight 43264|49.65 51.27|Siouxsie the Banshee|artifact",
 		[43266] = "Recruiting the Troops|10+ deathknight 43265|49.65 51.27|Siouxsie the Banshee|artifact",
 		[43267] = "Troops in the Field|10+ deathknight 43266|49.65 51.27|Siouxsie the Banshee|artifact",
@@ -819,7 +835,15 @@ Data.Quests = {
 		[40859] = "The Latest Fashion: Headguns!|10+ engineering 40855|65.21 24.91|Fargo Flintlocke|engineering",
 		[40858] = "The Missing Pieces|10+ engineering 40856|65.21 24.91|Fargo Flintlocke|engineering",
 
-		-- Mining
+		-- Herbalism - Aethril
+		[40013] = "Aethril Sample|10+ herbalism|1 Aethril|{1395063} [Aethril Sample]|herbalism discovery|Gathered from Aethril",
+		[40015] = "Ragged Strips of Silk|10+ herbalism 40014|1 Aethril|{463527} [Ragged Strips of Silk]|herbalism discovery|Gathered from Aethril",
+		[40017] = "A Slip of the Hand|10+ herbalism 40016|1 Aethril|[Auto Accept]|herbalism discovery|Has a chance to be obtained after gathering Aethril",
+
+		-- Herbalism - Felwort
+		[40040] = "Felwort Sample|45+ herbalism 45727,43341|6 Felwort|{1387614} [Felwort Sample]|herbalism discovery|Gathered from Felwort",
+
+		-- Mining - Leystone
 		[38777] = "Leystone Deposit Sample|10+ mining|1 LeystoneDeposit|{1394960} [Leystone Deposit Sample]|mining discovery|Mined from Leystone Deposits",
 		[38784] = "Leystone Seam Sample|10+ mining|2 LeystoneSeam|{1394960} [Leystone Seam Sample]|mining discovery|Mined from Leystone Seams",
 		[38785] = "Living Leystone Sample|10+ mining|3 LivingLeystone|{1394960} [Living Leystone Sample]|mining discovery|Mined from Leystone creatures",
@@ -829,6 +853,8 @@ Data.Quests = {
 		[38793] = "Rethu's Experience|10+ mining 38790|2 LeystoneSeam|[Auto Accept]|mining discovery|Has a chance to appear after mining Leystone Seams",
 		[38791] = "Rethu's Horn|10+ mining 38787|3 LivingLeystone|{237403} [Chunk of Horn]|mining discovery|Mined from Leystone creatures",
 		[38794] = "Rethu's Sacrifice|10+ mining 38791|3 LivingLeystone|[Auto Accept]|mining discovery|Has a chance to appear after mining Leystone creatures",
+		
+		-- Mining - Felslate
 		[38795] = "Felslate Deposit Sample|10+ mining|4 FelslateDeposit|{1394961} [Felslate Deposit Sample]|mining discovery|Mined from Felslate Deposits",
 		[38796] = "Felslate Seam Sample|10+ mining|5 FelslateSeam|{1394961} [Felslate Seam Sample]|mining discovery|Mined from Felslate Seams",
 		[38797] = "Living Felslate Sample|10+ mining|6 LivingFelslate|{1394961} [Living Felslate Sample]|mining discovery|Mined from Felslate creatures",
@@ -838,6 +864,8 @@ Data.Quests = {
 		[38804] = "Lyrelle|10+ mining 38801|5 FelslateSeam|Lyrelle|mining discovery|Lyrelle has a chance to appear after mining Felslate Seams",
 		[38802] = "Ondri's Still-Beating Heart|10+ mining 38799|6 LivingFelslate|{134339} [Ore-Choked Heart]|mining discovery|Mined from Felslate creatures",
 		[38805] = "Ondri|10+ mining 38802|6 LivingFelslate|Ondri|mining discovery|Ondri has a chance to appear after mining Felslate creatures",
+
+		-- Mining - Infernal Brimstone
 		[38806] = "Infernal Brimstone Sample|45+ mining 45727,43341|7 InfernalBrimstone|{1394959} [Infernal Brimstone Sample]|mining discovery|Mined from Brimstone Destroyer Core",
 	},
 
@@ -987,7 +1015,7 @@ Data.Quests = {
 		[40861] = "In My Sights|10+ engineering 40860|59.83 62.26|Fargo Flintlocke|engineering",
 		[40862] = "All Charged Up|10+ engineering 40860|59.83 62.26|Fargo Flintlocke|engineering",
 
-		-- Mining
+		-- Mining - Leystone
 		[38777] = "Leystone Deposit Sample|10+ mining|1 LeystoneDeposit|{1394960} [Leystone Deposit Sample]|mining discovery|Mined from Leystone Deposits",
 		[38784] = "Leystone Seam Sample|10+ mining|2 LeystoneSeam|{1394960} [Leystone Seam Sample]|mining discovery|Mined from Leystone Seams",
 		[38785] = "Living Leystone Sample|10+ mining|3 LivingLeystone|{1394960} [Living Leystone Sample]|mining discovery|Mined from Leystone creatures",
@@ -997,6 +1025,8 @@ Data.Quests = {
 		[38793] = "Rethu's Experience|10+ mining 38790|2 LeystoneSeam|[Auto Accept]|mining discovery|Has a chance to appear after mining Leystone Seams",
 		[38791] = "Rethu's Horn|10+ mining 38787|3 LivingLeystone|{237403} [Chunk of Horn]|mining discovery|Mined from Leystone creatures",
 		[38794] = "Rethu's Sacrifice|10+ mining 38791|3 LivingLeystone|[Auto Accept]|mining discovery|Has a chance to appear after mining Leystone creatures",
+		
+		-- Mining - Felslate
 		[38795] = "Felslate Deposit Sample|10+ mining|4 FelslateDeposit|{1394961} [Felslate Deposit Sample]|mining discovery|Mined from Felslate Deposits",
 		[38796] = "Felslate Seam Sample|10+ mining|5 FelslateSeam|{1394961} [Felslate Seam Sample]|mining discovery|Mined from Felslate Seams",
 		[38797] = "Living Felslate Sample|10+ mining|6 LivingFelslate|{1394961} [Living Felslate Sample]|mining discovery|Mined from Felslate creatures",
@@ -1006,6 +1036,8 @@ Data.Quests = {
 		[38804] = "Lyrelle|10+ mining 38801|5 FelslateSeam|Lyrelle|mining discovery|Lyrelle has a chance to appear after mining Felslate Seams",
 		[38802] = "Ondri's Still-Beating Heart|10+ mining 38799|6 LivingFelslate|{134339} [Ore-Choked Heart]|mining discovery|Mined from Felslate creatures",
 		[38805] = "Ondri|10+ mining 38802|6 LivingFelslate|Ondri|mining discovery|Ondri has a chance to appear after mining Felslate creatures",
+
+		-- Mining - Infernal Brimstone
 		[38806] = "Infernal Brimstone Sample|45+ mining 45727,43341|7 InfernalBrimstone|{1394959} [Infernal Brimstone Sample]|mining discovery|Mined from Brimstone Destroyer Core",
 	},
 
@@ -1175,7 +1207,7 @@ Data.Quests = {
 		-- Felbane Camp
 		[44055] = "They Have A Pitlord|45+|29.74 40.15|Marius Felbane",
 
-		-- Mining
+		-- Mining - Leystone
 		[38777] = "Leystone Deposit Sample|10+ mining|1 LeystoneDeposit|{1394960} [Leystone Deposit Sample]|mining discovery|Mined from Leystone Deposits",
 		[38784] = "Leystone Seam Sample|10+ mining|2 LeystoneSeam|{1394960} [Leystone Seam Sample]|mining discovery|Mined from Leystone Seams",
 		[38785] = "Living Leystone Sample|10+ mining|3 LivingLeystone|{1394960} [Living Leystone Sample]|mining discovery|Mined from Leystone creatures",
@@ -1188,6 +1220,8 @@ Data.Quests = {
 		[38793] = "Rethu's Experience|10+ mining 38790|2 LeystoneSeam|[Auto Accept]|mining discovery|Has a chance to appear after mining Leystone Seams",
 		[38791] = "Rethu's Horn|10+ mining 38787|3 LivingLeystone|{237403} [Chunk of Horn]|mining discovery|Mined from Leystone creatures",
 		[38794] = "Rethu's Sacrifice|10+ mining 38791|3 LivingLeystone|[Auto Accept]|mining discovery|Has a chance to appear after mining Leystone creatures",
+		
+		-- Mining - Felslate
 		[38795] = "Felslate Deposit Sample|10+ mining|4 FelslateDeposit|{1394961} [Felslate Deposit Sample]|mining discovery|Mined from Felslate Deposits",
 		[38796] = "Felslate Seam Sample|10+ mining|5 FelslateSeam|{1394961} [Felslate Seam Sample]|mining discovery|Mined from Felslate Seams",
 		[38797] = "Living Felslate Sample|10+ mining|6 LivingFelslate|{1394961} [Living Felslate Sample]|mining discovery|Mined from Felslate creatures",
@@ -1197,6 +1231,8 @@ Data.Quests = {
 		[38804] = "Lyrelle|10+ mining 38801|5 FelslateSeam|Lyrelle|mining discovery|Lyrelle has a chance to appear after mining Felslate Seams",
 		[38802] = "Ondri's Still-Beating Heart|10+ mining 38799|6 LivingFelslate|{134339} [Ore-Choked Heart]|mining discovery|Mined from Felslate creatures",
 		[38805] = "Ondri|10+ mining 38802|6 LivingFelslate|Ondri|mining discovery|Ondri has a chance to appear after mining Felslate creatures",
+
+		-- Mining - Infernal Brimstone
 		[38806] = "Infernal Brimstone Sample|45+ mining 45727,43341|7 InfernalBrimstone|{1394959} [Infernal Brimstone Sample]|mining discovery|Mined from Brimstone Destroyer Core",
 	},
 
@@ -1505,7 +1541,7 @@ Data.Quests = {
 		[44868] = "Trial of Valor: Odyn's Judgment|45+ 44729|69.5 72.82|Odyn|raid link:807|Available after defeating Odyn in Trial of Valor",
 		[45088] = "Trial of Valor: The Lost Army|45+ 44721|69.5 72.82|Odyn|raid link:807|Available after defeating Odyn in Trial of Valor",
 
-		-- Mining
+		-- Mining - Leystone
 		[38777] = "Leystone Deposit Sample|10+ mining|1 LeystoneDeposit|{1394960} [Leystone Deposit Sample]|mining discovery|Mined from Leystone Deposits",
 		[38784] = "Leystone Seam Sample|10+ mining|2 LeystoneSeam|{1394960} [Leystone Seam Sample]|mining discovery|Mined from Leystone Seams",
 		[38785] = "Living Leystone Sample|10+ mining|3 LivingLeystone|{1394960} [Living Leystone Sample]|mining discovery|Mined from Leystone creatures",
@@ -1515,6 +1551,8 @@ Data.Quests = {
 		[38793] = "Rethu's Experience|10+ mining 38790|2 LeystoneSeam|[Auto Accept]|mining discovery|Has a chance to appear after mining Leystone Seams",
 		[38791] = "Rethu's Horn|10+ mining 38787|3 LivingLeystone|{237403} [Chunk of Horn]|mining discovery|Mined from Leystone creatures",
 		[38794] = "Rethu's Sacrifice|10+ mining 38791|3 LivingLeystone|[Auto Accept]|mining discovery|Has a chance to appear after mining Leystone creatures",
+
+		-- Mining - Felslate
 		[38795] = "Felslate Deposit Sample|10+ mining|4 FelslateDeposit|{1394961} [Felslate Deposit Sample]|mining discovery|Mined from Felslate Deposits",
 		[38796] = "Felslate Seam Sample|10+ mining|5 FelslateSeam|{1394961} [Felslate Seam Sample]|mining discovery|Mined from Felslate Seams",
 		[38797] = "Living Felslate Sample|10+ mining|6 LivingFelslate|{1394961} [Living Felslate Sample]|mining discovery|Mined from Felslate creatures",
@@ -1524,6 +1562,8 @@ Data.Quests = {
 		[38804] = "Lyrelle|10+ mining 38801|5 FelslateSeam|Lyrelle|mining discovery|Lyrelle has a chance to appear after mining Felslate Seams",
 		[38802] = "Ondri's Still-Beating Heart|10+ mining 38799|6 LivingFelslate|{134339} [Ore-Choked Heart]|mining discovery|Mined from Felslate creatures",
 		[38805] = "Ondri|10+ mining 38802|6 LivingFelslate|Ondri|mining discovery|Ondri has a chance to appear after mining Felslate creatures",
+
+		-- Mining - Infernal Brimstone
 		[38806] = "Infernal Brimstone Sample|45+ mining 45727,43341|7 InfernalBrimstone|{1394959} [Infernal Brimstone Sample]|mining discovery|Mined from Brimstone Destroyer Core",
 	},
 
@@ -1595,7 +1635,7 @@ Data.Quests = {
 		-- An Ancient Gift
 		[40008] = "The Only Way Out is Through|45+ 39987|34.65 53.4|Frist Archanist Thalyssra",
 
-		-- Mining
+		-- Mining - Leystone
 		[38777] = "Leystone Deposit Sample|10+ mining|1 LeystoneDeposit|{1394960} [Leystone Deposit Sample]|mining discovery|Mined from Leystone Deposits",
 		[38784] = "Leystone Seam Sample|10+ mining|2 LeystoneSeam|{1394960} [Leystone Seam Sample]|mining discovery|Mined from Leystone Seams",
 		[38785] = "Living Leystone Sample|10+ mining|3 LivingLeystone|{1394960} [Living Leystone Sample]|mining discovery|Mined from Leystone creatures",
@@ -1605,6 +1645,8 @@ Data.Quests = {
 		[38793] = "Rethu's Experience|10+ mining 38790|2 LeystoneSeam|[Auto Accept]|mining discovery|Has a chance to appear after mining Leystone Seams",
 		[38791] = "Rethu's Horn|10+ mining 38787|3 LivingLeystone|{237403} [Chunk of Horn]|mining discovery|Mined from Leystone creatures",
 		[38794] = "Rethu's Sacrifice|10+ mining 38791|3 LivingLeystone|[Auto Accept]|mining discovery|Has a chance to appear after mining Leystone creatures",
+
+		-- Mining - Felslate
 		[38795] = "Felslate Deposit Sample|10+ mining|4 FelslateDeposit|{1394961} [Felslate Deposit Sample]|mining discovery|Mined from Felslate Deposits",
 		[38796] = "Felslate Seam Sample|10+ mining|5 FelslateSeam|{1394961} [Felslate Seam Sample]|mining discovery|Mined from Felslate Seams",
 		[38797] = "Living Felslate Sample|10+ mining|6 LivingFelslate|{1394961} [Living Felslate Sample]|mining discovery|Mined from Felslate creatures",
@@ -1617,6 +1659,8 @@ Data.Quests = {
 		[38804] = "Lyrelle|10+ mining 38801|5 FelslateSeam|Lyrelle|mining discovery|Lyrelle has a chance to appear after mining Felslate Seams",
 		[38802] = "Ondri's Still-Beating Heart|10+ mining 38799|6 LivingFelslate|{134339} [Ore-Choked Heart]|mining discovery|Mined from Felslate creatures",
 		[38805] = "Ondri|10+ mining 38802|6 LivingFelslate|Ondri|mining discovery|Ondri has a chance to appear after mining Felslate creatures",
+
+		-- Mining - Infernal Brimstone
 		[38806] = "Infernal Brimstone Sample|45+ mining 45727,43341|7 InfernalBrimstone|{1394959} [Infernal Brimstone Sample]|mining discovery|Mined from Brimstone Destroyer Core",
 		
 	},
@@ -1668,7 +1712,7 @@ Data.Quests = {
 		[46268] = "A Found Memento|45+ alliance|53.34 80.45|Battered Trinket",
 		[46272] = "Summons to the Keep|45+ alliance 46268|41.6 59.6|Captain Shwayder||Available the following day after completing A Found Memento",
 
-		-- Mining
+		-- Mining - Leystone
 		[38777] = "Leystone Deposit Sample|10+ mining|1 LeystoneDeposit|{1394960} [Leystone Deposit Sample]|mining discovery|Mined from Leystone Deposits",
 		[38784] = "Leystone Seam Sample|10+ mining|2 LeystoneSeam|{1394960} [Leystone Seam Sample]|mining discovery|Mined from Leystone Seams",
 		[38785] = "Living Leystone Sample|10+ mining|3 LivingLeystone|{1394960} [Living Leystone Sample]|mining discovery|Mined from Leystone creatures",
@@ -1678,6 +1722,8 @@ Data.Quests = {
 		[38793] = "Rethu's Experience|10+ mining 38790|2 LeystoneSeam|[Auto Accept]|mining discovery|Has a chance to appear after mining Leystone Seams",
 		[38791] = "Rethu's Horn|10+ mining 38787|3 LivingLeystone|{237403} [Chunk of Horn]|mining discovery|Mined from Leystone creatures",
 		[38794] = "Rethu's Sacrifice|10+ mining 38791|3 LivingLeystone|[Auto Accept]|mining discovery|Has a chance to appear after mining Leystone creatures",
+
+		-- Mining - Felslate
 		[38795] = "Felslate Deposit Sample|10+ mining|4 FelslateDeposit|{1394961} [Felslate Deposit Sample]|mining discovery|Mined from Felslate Deposits",
 		[38796] = "Felslate Seam Sample|10+ mining|5 FelslateSeam|{1394961} [Felslate Seam Sample]|mining discovery|Mined from Felslate Seams",
 		[38797] = "Living Felslate Sample|10+ mining|6 LivingFelslate|{1394961} [Living Felslate Sample]|mining discovery|Mined from Felslate creatures",
