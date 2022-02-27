@@ -86,7 +86,7 @@ Data.Vignettes = {
 	-- Dazar'alor
 	[1165] = {
 		[48938] = "Offerings of the Chosen|10+|38.28 7.14||treasure|Contains:|{2032600} [War Resources]",
-		[51338] = "Cache of Secrets|10+|44.47 26.91|\"In a cave behind the waterfall\"|treasure down|Contains:|{2032600} [War Resources]",
+		[51338] = "Cache of Secrets|10+|44.47 26.91|\"Inside the cave behind the waterfall\"|treasure down|Contains:|{2032600} [War Resources]",
 	},
 
 	-- Zuldazar
@@ -98,9 +98,9 @@ Data.Vignettes = {
 		[50259] = "Witch Doctor's Hoard|10+|64.71 21.67||treasure|Contains:|{2032600} [War Resources]",
 		[50582] = "Gift of the Brokenhearted|10+|51.43 26.61||treasure|Contains:|{2032600} [War Resources]",
 		[50707] = "Dazar's Forgotten Chest|10+|38.79 34.44||treasure item:153702|Contains:|{2003614} [uncommon]Kubiline]|{2032600} [War Resources]",
-		[50949] = "The Exile's Lament|10+|71.9 16.8|The Exile's Hideaway|treasure|Contains:|{2004597} [Polished Pet Charm] (5)|{2032600} [War Resources]", -- check exact coords
-		[51338] = "Cache of Secrets|10+|56.14 38.05|\"In a cave behind the waterfall\"|treasure link:1165|Contains:|{2032600} [War Resources]", -- Dazar'alor
-		[51624] = "Riches of Tor'nowa|10+|38.79 34.44||treasure|Contains:|{2032600} [War Resources]",
+		[50949] = "The Exile's Lament|10+|71.9 16.8|The Exile's Hideaway|treasure down|Contains:|{2004597} [Polished Pet Charm] (5)|{2032600} [War Resources]", -- check exact coords
+		[51338] = "Cache of Secrets|10+|56.14 38.05|\"Inside the cave behind the waterfall\"|treasure link:1165|Contains:|{2032600} [War Resources]", -- Dazar'alor
+		--[51624] = "Riches of Tor'nowa|10+|38.79 34.44||treasure|Contains:|{2032600} [War Resources]",
 	},
 
 	-- Breath of Pa'ku - Upper Deck
@@ -126,7 +126,7 @@ Data.Vignettes = {
 		[49867] = "Lucky Horace's Lucky Chest|10+|77.68 36.15||treasure|Contains:|{2032600} [War Resources]",
 		[49885] = "\"Cleverly\" Disguised Chest|10+|35.64 85.61||treasure|Contains:|{2032600} [War Resources]",
 		[49889] = "Venomous Seal|10+|46.23 82.95||treasure|Contains:|{2032600} [War Resources]",
-		[49891] = "Lost Nazmani Treasure|10+|62.1 34.86|\"In an underwater cave\"|treasure down|Contains:|{2032600} [War Resources]",
+		[49891] = "Lost Nazmani Treasure|10+|62.1 34.86|\"Inside an underwater cave\"|treasure down|Contains:|{2032600} [War Resources]",
 		[49979] = "Cursed Nazmani Chest|10+|43.06 50.79||treasure down|Contains:|{2032600} [War Resources]",
 		[50045] = "Swallowed Chest|10+|76.88 62.15||treasure|Contains:|{2032600} [War Resources]",
 		[50061] = "Partially-Digested Treasure|10+|77.9 46.36||treasure|Contains:|{2032600} [War Resources]",
@@ -138,7 +138,7 @@ Data.Vignettes = {
 	[864] = {
 		-- Treasure
 		[50237] = {"Ashvane Spoils|10+ -47326|46.59 88.01|Mine Cart|treasure|Contains:|{2032600} [War Resources]", "Ashvane Spoils|10+ 47326|44.33 92.22||treasure|Contains:|{2032600} [War Resources]",}, -- 47326 tracks the Mine Cart
-		[51093] = "Grayal's Last Offering|10+|49.78 79.39|Ancient Altar|treasure down|Contains:|{2032600} [War Resources]",
+		--[51093] = "Grayal's Last Offering|10+|49.78 79.39|Atul'Aman\nAncient Altar|treasure down|Contains:|{2032600} [War Resources]",
 		[51132] = "Lost Explorer's Bounty|10+|49.78 79.39||treasure|Contains:|{2032600} [War Resources]",
 		[51133] = "Sandfury Reserve|10+|47.19 58.46||treasure|Contains:|{2032600} [War Resources]",
 		[51135] = "Stranded Cache|10+|44.51 26.15||treasure|Contains:|{2032600} [War Resources]",
