@@ -67,9 +67,9 @@ Data.POI = {
 		"POI/Archaeology|Things of the Past|10+|41.26 25.36|[Archaeology]",
 
 		-- Order Hall
-		"groupfinder-icon-class-demonhunter|[The Fel Hammer]|10+ demonhunter 42872|97.5 68.73 minimap|Gateway to the Fel Hammer in Mardum,\nHome of the Illidari",
-		"groupfinder-icon-class-hunter|[Trueshot Lodge]|10+ hunter 40953|72.85 41.21 minimap|Eagle to Trueshot Lodge, Home of the\nUnseen Path",
-		"groupfinder-icon-class-rogue|[Hall of Shadows]|10+ rogue 40832|46.8 25.4 minimap|Home of the Uncrowned",
+		"groupfinder-icon-class-demonhunter|[The Fel Hammer]|10+ demonhunter 42872|97.5 68.73|Gateway to the Fel Hammer in Mardum,\nHome of the Illidari",
+		"groupfinder-icon-class-hunter|[Trueshot Lodge]|10+ hunter 40953|72.85 41.21|Eagle to Trueshot Lodge, Home of the\nUnseen Path",
+		"groupfinder-icon-class-rogue|[Hall of Shadows]|10+ rogue 40832|46.8 25.4|Home of the Uncrowned",
 	},
 
 

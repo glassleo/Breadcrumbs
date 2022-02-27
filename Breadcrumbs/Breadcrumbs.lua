@@ -12,7 +12,6 @@ local setting_objectivesize = 15
 local setting_vignettesize = 15
 local setting_poisize = 25
 local setting_poisizesmall = 20
-local setting_minimapsize = 15
 local setting_showhelp = true
 local setting_questframelevel = nil -- set to "PIN_FRAME_LEVEL_GROUP_MEMBER" to display above the player arrow
 local setting_objectiveframelevel = nil -- set to "PIN_FRAME_LEVEL_GROUP_MEMBER" to display above the player arrow
@@ -31,8 +30,6 @@ local setting_showpoi = true
 -- Frame recycling pool
 local MapPool = {}
 local MapPoolCount = 0
-local MinimapPool = {}
-local MinimapPoolCount = 0
 
 local function RecycleAllPins()
 	if MapPoolCount > 0 then
@@ -44,30 +41,14 @@ local function RecycleAllPins()
 			MapPool[pin] = true
 		end
 	end
-
-	if MinimapPoolCount > 0 then
-		for i = 1, MinimapPoolCount do
-			local pin = _G["BreadcrumbsMinimapPin"..i]
-			
-			pin.arrow:Hide()
-			pin:Hide()
-			MinimapPool[pin] = true
-		end
-	end
 end
 
-local function NewPin(type)
-	local type = type or "map"
-	local pin = next(type == "minimap" and MinimapPool or MapPool)
+local function NewPin()
+	local pin = next(MapPool)
 
 	if pin then
-		if type == "minimap" then
-			MinimapPool[pin] = nil -- remove it from the pool
-			pin:SetParent(Minimap)
-		else
-			MapPool[pin] = nil -- remove it from the pool
-			pin:SetParent(WorldMapFrame)
-		end
+		MapPool[pin] = nil -- remove it from the pool
+		pin:SetParent(WorldMapFrame)
 		pin:ClearAllPoints()
 		pin.icon:SetDesaturated(false)
 		pin.icon:SetVertexColor(1, 1, 1)
@@ -79,18 +60,13 @@ local function NewPin(type)
 	end
 
 	-- Create a new pin frame
-	if type == "minimap" then
-		MinimapPoolCount = MinimapPoolCount + 1
-		pin = CreateFrame("Frame", "BreadcrumbsMinimapPin"..MinimapPoolCount, Minimap)
-	else
-		MapPoolCount = MapPoolCount + 1
-		pin = CreateFrame("Frame", "BreadcrumbsMapPin"..MapPoolCount, WorldMapFrame)
-	end
+	MapPoolCount = MapPoolCount + 1
+	pin = CreateFrame("Frame", "BreadcrumbsMapPin"..MapPoolCount, WorldMapFrame)
 
 	local icon = pin:CreateTexture(nil, "OVERLAY")
 	pin.icon = icon
 	icon:SetAllPoints(pin)
-
+	
 	local arrow = pin:CreateTexture(nil, "OVERLAY")
 	pin.arrow = arrow
 	arrow:SetPoint("CENTER", pin)
@@ -193,7 +169,6 @@ function Breadcrumbs:UpdateMap(event, ...)
 
 	-- Clean up
 	Pins:RemoveAllWorldMapIcons("Breadcrumbs")
-	Pins:RemoveAllMinimapIcons("Breadcrumbs")
 	RecycleAllPins()
 
 	-- Current Map ID
@@ -533,10 +508,9 @@ function Breadcrumbs:UpdateMap(event, ...)
 						local datastring = type(Data.Objectives[zone][id]) == "string" and Data.Objectives[zone][id] or Data.Objectives[zone][id][i]
 						-- Get data
 						local icon, coordinates, title, line1, line2, line3, line4, line5, line6, line7, line8, line9 = strsplit("|", datastring)
-						local x, y, minimap = strsplit(" ", coordinates or "")
+						local x, y = strsplit(" ", coordinates or "")
 						x = tonumber(x) or nil
 						y = tonumber(y) or nil
-						if minimap == "minimap" then minimap = true else minimap = false end
 
 						if icon and x and y then
 							if not (icon == "questobjective" and (C_QuestLog.IsQuestFlaggedCompleted(id) or C_QuestLog.ReadyForTurnIn(id))) then -- Don't show the pin if the quest is complete
@@ -578,46 +552,6 @@ function Breadcrumbs:UpdateMap(event, ...)
 
 								Pins:AddWorldMapIconMap("Breadcrumbs", pin, zone, x/100, y/100)
 								pin:Show()
-
-								-- Create minimap pin
-								if minimap then
-									local size = setting_minimapsize
-
-									local pin = NewPin("minimap")
-									pin:SetSize(size, size)
-
-									if string.match(icon, "[%w%p]+") then
-										pin.icon:SetAtlas(icon)
-									else
-										pin.icon:SetTexture(icon)
-									end
-									pin.icon:Show()
-
-									if title then
-										pin:SetScript("OnEnter", function(self, motion)
-											GameTooltip:Hide()
-											GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
-											GameTooltip:AddLine(Breadcrumbs:FormatTooltip(title))
-											if line1 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(line1)) end
-											if line2 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(line2)) end
-											if line3 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(line3)) end
-											if line4 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(line4)) end
-											if line5 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(line5)) end
-											if line6 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(line6)) end
-											if line7 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(line7)) end
-											if line8 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(line8)) end
-											if line9 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(line9)) end
-											GameTooltip:Show()
-										end)
-
-										pin:SetScript("OnLeave", function(self, motion)
-											GameTooltip:Hide()
-										end)
-									end
-
-									Pins:AddMinimapIconMap("Breadcrumbs", pin, zone, x/100, y/100, false, nil, setting_objectiveframelevel or "PIN_FRAME_LEVEL_AREA_POI")
-									pin:Show()
-								end
 							end
 						end
 					end
@@ -636,9 +570,8 @@ function Breadcrumbs:UpdateMap(event, ...)
 						for i = 1, type(Data.Vignettes[zone][id]) == "string" and 1 or #Data.Vignettes[zone][id] do
 							local datastring = type(Data.Vignettes[zone][id]) == "string" and Data.Vignettes[zone][id] or Data.Vignettes[zone][id][i]
 							-- Check if we meet the quest requirements
-							local eligible, title, x, y, minimap, _, source, flags, tip1, tip2, tip3, tip4, tip5, tip6, tip7, tip8, tip9 = Breadcrumbs:CheckQuest(zone, id, datastring)
-							if minimap == "minimap" then minimap = true else minimap = false end
-
+							local eligible, title, x, y, xx, yy, source, flags, tip1, tip2, tip3, tip4, tip5, tip6, tip7, tip8, tip9 = Breadcrumbs:CheckQuest(zone, id, datastring)
+							
 							if eligible and x and y then
 								-- Build the flags table
 								local link, flag_icon, hyperlink = nil, nil, nil
@@ -756,71 +689,6 @@ function Breadcrumbs:UpdateMap(event, ...)
 
 									Pins:AddWorldMapIconMap("Breadcrumbs", pin, zone, x/100, y/100, nil, setting_vignetteframelevel or "PIN_FRAME_LEVEL_VIGNETTE")
 									pin:Show()
-
-									-- Create minimap pin
-									if minimap then
-										local size = setting_minimapsize
-
-										local pin = NewPin("minimap")
-										pin:SetSize(size, size)
-
-										if flags["icon"] and flag_icon then
-											pin.icon:SetTexture(flag_icon)
-										else
-											pin.icon:SetAtlas(flags["elsewhere"] and "poi-traveldirections-arrow" or (flags["elite"] and flags["event"]) and "vignetteeventelite" or (flags["elite"] and flags["treasure"]) and "vignettelootelite" or flags["treasure"] and "vignetteloot" or flags["elite"] and "vignettekillelite" or "vignettekill")
-										end
-										pin.icon:Show()
-
-										pin:SetScript("OnEnter", function(self, motion)
-											GameTooltip:Hide()
-											GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
-											--local title = title or C_QuestLog.GetTitleForQuestID(id) or " "
-											if flags["legendary"] or flags["artifact"] then -- Legendary text color
-												GameTooltip:AddLine(Breadcrumbs:FormatTooltip(title, flags), 1, 0.5, 0)
-											else -- Normal quest
-												GameTooltip:AddLine(Breadcrumbs:FormatTooltip(title, flags))
-											end
-											if flags["dungeon"] then GameTooltip:AddLine(CreateAtlasMarkup("dungeon") .. " Dungeon") end
-											if flags["raid"] then GameTooltip:AddLine(CreateAtlasMarkup("raid") .. " Raid") end
-											if flags["alchemy"] then GameTooltip:AddLine(CreateAtlasMarkup("worldquest-icon-alchemy") .. " Alchemy") end
-											if flags["blacksmithing"] then GameTooltip:AddLine(CreateAtlasMarkup("worldquest-icon-blacksmithing") .. " Blacksmithing") end
-											if flags["enchanting"] then GameTooltip:AddLine(CreateAtlasMarkup("worldquest-icon-enchanting") .. " Enchanting") end
-											if flags["engineering"] then GameTooltip:AddLine(CreateAtlasMarkup("worldquest-icon-engineering") .. " Engineering") end
-											if flags["herbalism"] then GameTooltip:AddLine(CreateAtlasMarkup("worldquest-icon-herbalism") .. " Herbalism") end
-											if flags["inscription"] then GameTooltip:AddLine(CreateAtlasMarkup("worldquest-icon-inscription") .. " Inscription") end
-											if flags["jewelcrafting"] then GameTooltip:AddLine(CreateAtlasMarkup("worldquest-icon-jewelcrafting") .. " Jewelcrafting") end
-											if flags["leatherworking"] then GameTooltip:AddLine(CreateAtlasMarkup("worldquest-icon-leatherworking") .. " Leatherworking") end
-											if flags["mining"] then GameTooltip:AddLine(CreateAtlasMarkup("worldquest-icon-mining") .. " Mining") end
-											if flags["skinning"] then GameTooltip:AddLine(CreateAtlasMarkup("worldquest-icon-skinning") .. " Skinning") end
-											if flags["tailoring"] then GameTooltip:AddLine(CreateAtlasMarkup("worldquest-icon-tailoring") .. " Tailoring") end
-											if flags["cooking"] then GameTooltip:AddLine(CreateAtlasMarkup("worldquest-icon-cooking") .. " Cooking") end
-											if flags["fishing"] then GameTooltip:AddLine(CreateAtlasMarkup("worldquest-icon-fishing") .. " Fishing") end
-											if flags["archaeology"] then GameTooltip:AddLine(CreateAtlasMarkup("worldquest-icon-archaeology") .. " Archaeology") end
-											if flags["petbattle"] then GameTooltip:AddLine(CreateAtlasMarkup("worldquest-icon-petbattle") .. " Archaeology") end
-											if flags["link"] and link then -- The pin is a link, indicate where it takes us, replacing source
-												local mapinfo = C_Map.GetMapInfo(link)
-												GameTooltip:AddLine(Breadcrumbs:FormatTooltip("{newplayertutorial-icon-mouse-leftbutton} ") .. (mapinfo.name or link), 1, 1, 1)
-											elseif source then
-												GameTooltip:AddLine(Breadcrumbs:FormatTooltip(source))
-											end
-											if setting_showhelp and tip1 then -- Help tip
-												GameTooltip:AddLine(" ")
-												if tip1 then if strlen(tip1) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip1, flags)) else GameTooltip:AddLine(" ") end end
-												if tip2 then if strlen(tip2) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip2, flags)) else GameTooltip:AddLine(" ") end end
-												if tip3 then if strlen(tip3) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip3, flags)) else GameTooltip:AddLine(" ") end end
-												if tip4 then if strlen(tip4) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip4, flags)) else GameTooltip:AddLine(" ") end end
-												if tip5 then if strlen(tip5) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip5, flags)) else GameTooltip:AddLine(" ") end end
-												if tip6 then if strlen(tip6) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip6, flags)) else GameTooltip:AddLine(" ") end end
-												if tip7 then if strlen(tip7) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip7, flags)) else GameTooltip:AddLine(" ") end end
-												if tip8 then if strlen(tip8) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip8, flags)) else GameTooltip:AddLine(" ") end end
-												if tip9 then if strlen(tip9) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip9, flags)) else GameTooltip:AddLine(" ") end end
-											end
-											GameTooltip:Show()
-										end)
-
-										Pins:AddMinimapIconMap("Breadcrumbs", pin, zone, x/100, y/100, false, nil, setting_vignetteframelevel or "PIN_FRAME_LEVEL_VIGNETTE")
-										pin:Show()
-									end
 								end
 							end
 						end
@@ -840,7 +708,7 @@ function Breadcrumbs:UpdateMap(event, ...)
 				for i = 1, type(data) == "string" and 1 or #data do
 					local datastring = type(data) == "string" and data or data[i]
 					-- Check if we meet the quest requirements
-					local eligible, texture, title, x, y, minimap, tip1, tip2, tip3, tip4, tip5, tip6, tip7, tip8, tip9 = Breadcrumbs:CheckPOI(datastring)
+					local eligible, texture, title, x, y, tip1, tip2, tip3, tip4, tip5, tip6, tip7, tip8, tip9 = Breadcrumbs:CheckPOI(datastring)
 
 					if eligible and x and y then
 						-- Pin size
@@ -887,51 +755,6 @@ function Breadcrumbs:UpdateMap(event, ...)
 
 						Pins:AddWorldMapIconMap("Breadcrumbs", pin, zone, x/100, y/100, nil, setting_poiframelevel or "PIN_FRAME_LEVEL_AREA_POI")
 						pin:Show()
-
-						-- Create minimap pin
-						if minimap then
-							local size = setting_minimapsize
-
-							local pin = NewPin("minimap")
-							pin:SetSize(size, size)
-
-							if string.match(texture, "Discovery/[%w]+") then
-								pin.icon:SetTexture("Interface/AddOns/Breadcrumbs/Textures/" .. texture)
-								pin.icon:SetTexCoord(0, 0.75, 0, 0.75) -- Crop 64×64 to 48×48
-							elseif string.match(texture, "POI/[%w]+") then
-								pin.icon:SetTexture("Interface/AddOns/Breadcrumbs/Textures/" .. texture)
-							elseif string.match(texture, "[%w%p]+") then
-								pin.icon:SetAtlas(texture)
-							else
-								pin.icon:SetTexture(texture)
-							end
-							pin.icon:Show()
-
-							pin:SetScript("OnEnter", function(self, motion)
-								GameTooltip:Hide()
-								GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
-								GameTooltip:AddLine(Breadcrumbs:FormatTooltip(title))
-								if tip1 then
-									if tip1 then if strlen(tip1) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip1)) else GameTooltip:AddLine(" ") end end
-									if tip2 then if strlen(tip2) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip2)) else GameTooltip:AddLine(" ") end end
-									if tip3 then if strlen(tip3) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip3)) else GameTooltip:AddLine(" ") end end
-									if tip4 then if strlen(tip4) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip4)) else GameTooltip:AddLine(" ") end end
-									if tip5 then if strlen(tip5) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip5)) else GameTooltip:AddLine(" ") end end
-									if tip6 then if strlen(tip6) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip6)) else GameTooltip:AddLine(" ") end end
-									if tip7 then if strlen(tip7) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip7)) else GameTooltip:AddLine(" ") end end
-									if tip8 then if strlen(tip8) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip8)) else GameTooltip:AddLine(" ") end end
-									if tip9 then if strlen(tip9) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip9)) else GameTooltip:AddLine(" ") end end
-								end
-								GameTooltip:Show()
-							end)
-
-							pin:SetScript("OnLeave", function(self, motion)
-								GameTooltip:Hide()
-							end)
-
-							Pins:AddMinimapIconMap("Breadcrumbs", pin, zone, x/100, y/100, false, nil, setting_poiframelevel or "PIN_FRAME_LEVEL_AREA_POI")
-							pin:Show()
-						end
 					end
 				end
 			end
@@ -1065,8 +888,7 @@ function Breadcrumbs:CheckPOI(datastring)
 	-- Check requirements
 	local texture, title, requirements, coordinates, help, help2, help3, help4, help5, help6, help7, help8, help9 = strsplit("|", datastring)
 	local data = { strsplit(" ", strlower(requirements)) }
-	local x, y, minimap = strsplit(" ", coordinates or "")
-	if minimap == "minimap" then minimap = true else minimap = false end
+	local x, y = strsplit(" ", coordinates or "")
 
 	local class = select(2, UnitClass("player"))
 	class = strlower(class)
@@ -1165,5 +987,5 @@ function Breadcrumbs:CheckPOI(datastring)
 	end
 
 	-- eligible, texture, title, x, y, help, ...
-	return pass, texture, title, tonumber(x), tonumber(y), minimap, help, help2, help3, help4, help5, help6, help7, help8, help9
+	return pass, texture, title, tonumber(x), tonumber(y), help, help2, help3, help4, help5, help6, help7, help8, help9
 end

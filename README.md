@@ -10,8 +10,8 @@ All data has been verified and tested manually multiple times to make sure that 
 
 - Show available quests on the world map with accurate source locations depending on what your character is able to pick, including all side quests
 - Show available one-time treasures and vignettes on the world map with helpful tooltips
-- Add missing quest objectives for a few specific quests to the world map and minimap
-- Add additional points of interest to the world map, for example portals and profession trainers
+- Add missing quest objectives for a few specific quests to the world map
+- Add additional points of interest like portals and profession trainers to the world map
 - Fixes a Blizzard bug that leaves Legion bonus objectives stuck on your map after leveling past 50
 - Options are available where you can choose which features you want to use
 
@@ -22,8 +22,6 @@ All data has been verified and tested manually multiple times to make sure that 
 ![Treasures](https://i.imgur.com/qahmcqj.png)
 
 ![Discovery Quests](https://i.imgur.com/DiOxFIm.png)
-
-*Discovery quests with no fixed location are displayed in the corner of the map*
 
 ## Work In Progress
 

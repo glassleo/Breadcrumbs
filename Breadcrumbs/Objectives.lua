@@ -19,7 +19,7 @@ local _, Data = ...
 		questturnin		Quest turn-in question mark (?)
 
 	Coordinates: Coordinates for the map pin
-		X Y minimap		Coordinates for the map pin, option to display on the minimap
+		X Y				Coordinates for the map pin
 
 	Title: Tooltip text
 		{!}				Quest bang
@@ -40,38 +40,38 @@ Data.Objectives = {
 	-- Val'sharah
 	[641] = {
 		-- Jarod's Mission
-		[38691] = "poi-door-left|38.88 53.05 minimap|Entrance to Ravencrest Mausoleum",
+		[38691] = "poi-door-left|38.88 53.05|Entrance to Ravencrest Mausoleum",
 	},
 
 	-- Stormheim
 	[634] = {
 		-- Pins and Needles
 		[38059] = {
-			"questobjective|30.26 53 minimap|Pins and Needles|[7th Legion Dragoon]",
-			"questobjective|28.22 52.93 minimap|Pins and Needles|[7th Legion Dragoon]",
-			"questobjective|28.54 55.38 minimap|Pins and Needles|[7th Legion Dragoon]",
+			"questobjective|30.26 53|Pins and Needles|[7th Legion Dragoon]",
+			"questobjective|28.22 52.93|Pins and Needles|[7th Legion Dragoon]",
+			"questobjective|28.54 55.38|Pins and Needles|[7th Legion Dragoon]",
 		},
 	},
 
 	-- Broken Shore
 	[646] = {
 		-- Excavations
-		[46499] = "questobjective|43.33 31.39 minimap|Spiders, Huh?|[Spider-Covered Treasure Chest]",
-		[46501] = "questobjective|49.7 46.7 minimap|Grave Robbin'|[Dusty Treasure Chest]",
-		[46509] = "questobjective|67.61 16.16 minimap|Tomb Raidering|[Grandiose Treasure Chest]",
-		[46510] = "questobjective|54.69 77.89 minimap|Ship Graveyard|[Sunken Treasure Chest]",
-		[46511] = "questobjective|75.75 21.7 minimap|We're Treasure Hunters|[Sandy Treasure Chest]",
+		[46499] = "questobjective|43.33 31.39|Spiders, Huh?|[Spider-Covered Treasure Chest]",
+		[46501] = "questobjective|49.7 46.7|Grave Robbin'|[Dusty Treasure Chest]",
+		[46509] = "questobjective|67.61 16.16|Tomb Raidering|[Grandiose Treasure Chest]",
+		[46510] = "questobjective|54.69 77.89|Ship Graveyard|[Sunken Treasure Chest]",
+		[46511] = "questobjective|75.75 21.7|We're Treasure Hunters|[Sandy Treasure Chest]",
 	},
 
 	-- Stormscale Cavern, Stormheim
 	[636] = {
 		-- Pins and Needles
 		[38059] = {
-			"questobjective|69.6 65.77 minimap|Pins and Needles|[7th Legion Dragoon]",
-			"questobjective|45.19 66.93 minimap|Pins and Needles|[7th Legion Dragoon]",
-			"questobjective|26.71 65.56 minimap|Pins and Needles|[7th Legion Dragoon]",
-			"questobjective|25.55 47.37 minimap|Pins and Needles|[7th Legion Dragoon]",
-			"questobjective|54.21 31.96 minimap|Pins and Needles|[7th Legion Dragoon]",
+			"questobjective|69.6 65.77|Pins and Needles|[7th Legion Dragoon]",
+			"questobjective|45.19 66.93|Pins and Needles|[7th Legion Dragoon]",
+			"questobjective|26.71 65.56|Pins and Needles|[7th Legion Dragoon]",
+			"questobjective|25.55 47.37|Pins and Needles|[7th Legion Dragoon]",
+			"questobjective|54.21 31.96|Pins and Needles|[7th Legion Dragoon]",
 		},
 	},
 
