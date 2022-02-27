@@ -167,13 +167,74 @@ Data.Quests = {
 
 		-- Scrap-O-Matic 1000
 		[52462] = "A Load of Scrap|10+ alliance|77.17 16.46|Crenzo Sparkshatter",
+
+		-- The Great Sea Scrolls
+		[53476] = "The Great Sea Scrolls|10+|1 Scrollcase|{454060} [Ancient Pilgrimage Scrollcasing]|discovery|Has a chance to drop from any Treasure Chest in Kul Tiras or Zandalar",
 	},
 
 	-- Tiragarde Sound
 	[895] = {
+		-- The Ashvane Trading Company
 		[47486] = "Suspicious Shipments|10+ alliance 47485|76.84 43.43|Cagney",
 		[47487] = "Labor Dispute|10+ alliance 47485|76.84 43.43|Cagney",
 		[47488] = "Small Haulers|10+ alliance 47485|76.84 43.43|Olive",
+
+		-- The Great Sea Scrolls
+		[53476] = "The Great Sea Scrolls|10+|1 Scrollcase|{454060} [Ancient Pilgrimage Scrollcasing]|discovery|Has a chance to drop from any Treasure Chest in Kul Tiras or Zandalar",
+	},
+
+
+	--[[ Drustvar ]]--
+
+	[896] = {
+		-- The Great Sea Scrolls
+		[53476] = "The Great Sea Scrolls|10+|1 Scrollcase|{454060} [Ancient Pilgrimage Scrollcasing]|discovery|Has a chance to drop from any Treasure Chest in Kul Tiras or Zandalar",
+	},
+
+
+	--[[ Stormsong Valley ]]--
+
+	-- Stormsong Valley
+	[942] = {
+		-- The Great Sea Scrolls
+		[53476] = "The Great Sea Scrolls|10+|1 Scrollcase|{454060} [Ancient Pilgrimage Scrollcasing]|discovery|Has a chance to drop from any Treasure Chest in Kul Tiras or Zandalar",
+	},
+
+	-- Thornheart
+	[1183] = {
+		-- The Great Sea Scrolls
+		[53476] = "The Great Sea Scrolls|10+|1 Scrollcase|{454060} [Ancient Pilgrimage Scrollcasing]|discovery|Has a chance to drop from any Treasure Chest in Kul Tiras or Zandalar",
+	},
+
+
+	--[[ Zuldazar ]]--
+
+	-- Dazar'alor
+	[1165] = {
+		-- The Great Sea Scrolls
+		[53476] = "The Great Sea Scrolls|10+|1 Scrollcase|{454060} [Ancient Pilgrimage Scrollcasing]|discovery|Has a chance to drop from any Treasure Chest in Kul Tiras or Zandalar",
+	},
+
+	-- Zuldazar
+	[862] = {
+		-- The Great Sea Scrolls
+		[53476] = "The Great Sea Scrolls|10+|1 Scrollcase|{454060} [Ancient Pilgrimage Scrollcasing]|discovery|Has a chance to drop from any Treasure Chest in Kul Tiras or Zandalar",
+	},
+
+
+	--[[ Nazmir ]]--
+
+	[863] = {
+		-- The Great Sea Scrolls
+		[53476] = "The Great Sea Scrolls|10+|1 Scrollcase|{454060} [Ancient Pilgrimage Scrollcasing]|discovery|Has a chance to drop from any Treasure Chest in Kul Tiras or Zandalar",
+	},
+
+
+	--[[ Vol'dun ]]--
+
+	[864] = {
+		-- The Great Sea Scrolls
+		[53476] = "The Great Sea Scrolls|10+|1 Scrollcase|{454060} [Ancient Pilgrimage Scrollcasing]|discovery|Has a chance to drop from any Treasure Chest in Kul Tiras or Zandalar",
 	},
 
 
