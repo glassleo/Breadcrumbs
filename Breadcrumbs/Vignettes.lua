@@ -159,11 +159,14 @@ Data.Vignettes = {
 		[37649] = "Glimmering Treasure Chest|10+|50.41 54.38||treasure down link:632|Contains:|{1397630} [Order Resources]", -- Oceanus Cove
 		[37829] = "Small Treasure Chest|10+|53.17 64.46||treasure|Contains:|{1397630} [Order Resources]",
 		[37831] = "Small Treasure Chest|10+|49.64 34.47||treasure|Contains:|{1397630} [Order Resources]",
+		[38367] = "Glimmering Treasure Chest|10+|42.63 8.08||treasure|Contains:|{1397630} [Order Resources]",
+		[40711] = "Small Treasure Chest|10+|55.62 18.53||treasure|Contains:|{1397630} [Order Resources]",
 		[42273] = "Small Treasure Chest|10+|62.38 58.4||treasure|Contains:|{1397630} [Order Resources]",
 		[42278] = "Small Treasure Chest|10+|62.99 54.18|Gloombound Barrow|treasure|Contains:|{1397630} [Order Resources]",
 		[42290] = "Small Treasure Chest|10+ ~37538|50.2 50.29||treasure|Contains:|{1397630} [Order Resources]",
 		[42291] = "Small Treasure Chest|10+|48.01 56.24||treasure down link:632|Contains:|{1397630} [Order Resources]", -- Oceanus Cove
 		[42293] = "Small Treasure Chest|10+|63.64 39.17||treasure|Contains:|{1397630} [Order Resources]",
+		[44104] = "Small Treasure Chest|10+|53.61 18.14||treasure down|Contains:|{1397630} [Order Resources]",
 	},
 
 	-- Oceanus Cove
