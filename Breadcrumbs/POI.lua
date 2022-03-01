@@ -169,12 +169,12 @@ Data.POI = {
 		-- Portal
 		"mageportalalliance|Portal to Dalaran|mage|57.4 90.3",
 
-		-- Transportation Nexus
-		"mageportalalliance|Transportation Nexus: Azsuna|mage research:386|55.04 39.54",
-		"mageportalalliance|Transportation Nexus: Val'sharah|mage research:386|66.77 46.73",
-		"mageportalalliance|Transportation Nexus: Highmountain|mage research:386|54.64 44.59",
-		"mageportalalliance|Transportation Nexus: Stormheim|mage research:386|67.18 41.58",
-		"mageportalalliance|Transportation Nexus: Suramar|mage research:386|60.4 50.6",
+		-- Teleportation Nexus
+		"mageportalalliance|Teleportation Nexus: Azsuna|mage research:386|55.04 39.54",
+		"mageportalalliance|Teleportation Nexus: Val'sharah|mage research:386|66.77 46.73",
+		"mageportalalliance|Teleportation Nexus: Highmountain|mage research:386|54.64 44.59",
+		"mageportalalliance|Teleportation Nexus: Stormheim|mage research:386|67.18 41.58",
+		"mageportalalliance|Teleportation Nexus: Suramar|mage research:386|60.4 50.6",
 
 		-- Scouting Map
 		"ShipMissionIcon-Bonus-MapBadge|Scouting Map|mage|81.7 61.4",
@@ -299,6 +299,7 @@ Data.POI = {
 		"mageportalalliance|Portal to Orgrimmar|horde|46.67 41.3",
 
 		-- Order Hall
+		"teleportationnetwork-32x32 small|Teleportation Nexus|mage research:386|57.95 15.15",
 		"groupfinder-icon-class-warrior small|[Skyhold]|10+ warrior 40585|47.58 28.09|Entrance to Skyhold, Home of the Valarjar",
 	},
 
@@ -306,7 +307,11 @@ Data.POI = {
 	--[[ Val'sharah ]]--
 
 	-- Val'sharah
-	[641] = {},
+	[641] = {
+		-- Order Hall
+		"teleportationnetwork-32x32 small|Teleportation Nexus|mage research:386|51.25 56.11",
+		"teleportationnetwork-32x32 small|Teleportation Nexus|mage research:386|75.09 27.48",
+	},
 
 
 	--[[ Highmountain ]]--
@@ -314,6 +319,7 @@ Data.POI = {
 	-- Highmountain
 	[650] = {
 		-- Order Hall
+		"teleportationnetwork-32x32 small|Teleportation Nexus|mage research:386|31.41 63.81",
 		"groupfinder-icon-class-warrior small|[Skyhold]|10+ warrior 40585|46.11 59.95|Entrance to Skyhold, Home of the Valarjar",
 	},
 
@@ -335,7 +341,11 @@ Data.POI = {
 
 	-- Stormheim
 	[634] = {
+		-- Portal
+		"mageportalalliance|Portal to Dalaran|1+|30.08 40.7",
+
 		-- Order Hall
+		"teleportationnetwork-32x32 small|Teleportation Nexus|mage research:386|31.34 60.51",
 		"groupfinder-icon-class-warrior small|[Skyhold]|10+ warrior 40585|60.17 52.23|Entrance to Skyhold, Home of the Valarjar",
 	},
 
@@ -343,7 +353,10 @@ Data.POI = {
 	--[[ Suramar ]]--
 
 	-- Suramar
-	[680] = {},
+	[680] = {
+		-- Order Hall
+		"teleportationnetwork-32x32 small|Teleportation Nexus|mage research:386|33.42 50.41",
+	},
 
 
 	--[[ Frostfire Ridge ]]--
