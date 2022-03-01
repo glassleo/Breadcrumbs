@@ -67,8 +67,8 @@ Data.POI = {
 		"POI/Archaeology|Things of the Past|10+|41.26 25.36|[Archaeology]",
 
 		-- Order Hall
-		"groupfinder-icon-class-demonhunter|[The Fel Hammer]|10+ demonhunter 42872|97.5 68.73|Gateway to the Fel Hammer in Mardum,\nHome of the Illidari",
-		"groupfinder-icon-class-hunter|[Trueshot Lodge]|10+ hunter 40953|72.85 41.21|Eagle to Trueshot Lodge, Home of the\nUnseen Path",
+		"groupfinder-icon-class-demonhunter|[The Fel Hammer]|10+ demonhunter 42872|97.5 68.73|Gateway to the Fel Hammer in Mardum, Home of the Illidari",
+		"groupfinder-icon-class-hunter|[Trueshot Lodge]|10+ hunter 40953|72.85 41.21|Eagle to Trueshot Lodge, Home of the Unseen Path",
 		"groupfinder-icon-class-rogue|[Hall of Shadows]|10+ rogue 40832|46.8 25.4|Home of the Uncrowned",
 	},
 
@@ -299,7 +299,7 @@ Data.POI = {
 		"mageportalalliance|Portal to Orgrimmar|horde|46.67 41.3",
 
 		-- Order Hall
-		"groupfinder-icon-class-warrior small|[Skyhold]|10+ warrior 40585|47.58 28.09|Entrance to Skyhold, Home of the\nValarjar",
+		"groupfinder-icon-class-warrior small|[Skyhold]|10+ warrior 40585|47.58 28.09|Entrance to Skyhold, Home of the Valarjar",
 	},
 
 
@@ -314,13 +314,17 @@ Data.POI = {
 	-- Highmountain
 	[650] = {
 		-- Order Hall
-		"groupfinder-icon-class-warrior small|[Skyhold]|10+ warrior 40585|46.11 59.95|Entrance to Skyhold, Home of the\nValarjar",
+		"groupfinder-icon-class-warrior small|[Skyhold]|10+ warrior 40585|46.11 59.95|Entrance to Skyhold, Home of the Valarjar",
 	},
 
 	-- Thunder Totem
 	[750] = {
+		-- Flight Master
+		"taxinode_neutral small|Windtamer Nalt|1+|44.74 38.55|[Flight Master]",
+
 		-- Order Hall
-		"groupfinder-icon-class-warrior|[Skyhold]|10+ warrior 40585|39.83 41.97|Entrance to Skyhold, Home of the\nValarjar",
+		"groupfinder-icon-class-warrior|[Skyhold]|10+ warrior 40585 41359|39.83 41.97|Entrance to Skyhold, Home of the Valarjar",
+		"groupfinder-icon-class-warrior|[Skyhold]|10+ warrior 40585 -41359|39.83 41.97|Entrance to Skyhold, Home of the Valarjar||\"Speak to {flightmaster} Windtamer Nalt if you cannot see the Gaze of Odyn\"",
 	},
 
 	-- Hall of Chieftains, Thunder Totem
@@ -332,7 +336,7 @@ Data.POI = {
 	-- Stormheim
 	[634] = {
 		-- Order Hall
-		"groupfinder-icon-class-warrior small|[Skyhold]|10+ warrior 40585|60.17 52.23|Entrance to Skyhold, Home of the\nValarjar",
+		"groupfinder-icon-class-warrior small|[Skyhold]|10+ warrior 40585|60.17 52.23|Entrance to Skyhold, Home of the Valarjar",
 	},
 
 
