@@ -13,7 +13,7 @@ All data has been verified and tested manually multiple times to make sure that 
 - Add missing quest objectives for a few specific quests to the world map
 - Add additional points of interest like portals and profession trainers to the world map
 - Fixes a Blizzard bug that leaves Legion bonus objectives stuck on your map after leveling past 50
-- Options are available where you can choose which features you want to use
+- Options to choose which features you want to enable
 
 ## Screenshots
 
