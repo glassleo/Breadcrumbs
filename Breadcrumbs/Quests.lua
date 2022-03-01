@@ -463,6 +463,16 @@ Data.Quests = {
 		[48037] = "Empyrium Seam Chunk|45+ mining|9 EmpyriumSeam|{962048} [Empyrium Seam Chunk]|mining discovery link:905|Mined from Empyrium Seams",
 		[48038] = "Don't Just Pick At It|45+ mining 48037|9 EmpyriumSeam|{667492} [Embedded Empyrium Ore]|mining discovery link:905|Mined from Empyrium Seams",
 		[48039] = "Balancing the Break|45+ mining 48038|9 EmpyriumSeam|{961620} [Empyrium Bits]|mining discovery link:905|Mined from Empyrium Seams",
+
+		-- Skinning - Stonehide Leather
+		[40131] = "Stonehide Leather Sample|10+ skinning|1 StonehideLeather|{1377086} [Stonehide Leather Sample]|skinning discovery link:619|Skinned from Stonehide Leather",
+		[40132] = "In One Piece|10+ skinning 40131|36.05 27.98|Kondal Huntsworn|skinning",
+		[40133] = "Scrap of Pants|10+ skinning 40132|1 StonehideLeather|{237278} [Scrap of Pants]|skinning discovery link:619|Skinned from Stonehide Leather",
+
+		-- Skinning - Stormscale
+		[40141] = "Stormscale Sample|10+ skinning|2 Stormscale|{1377087} [Stormscale Sample]|skinning discovery link:619|Skinned from Stormscale",
+		[40142] = "The Core of the Stormscale|10+ skinning 40141|36.05 27.98|Kondal Huntsworn|skinning",
+		[40143] = "Unfinished Treatise on the Properties of Stormscale|10+ skinning 40142|2 Stormscale|{134937} [Unfinished Treatise on the Properties of Stormscale]|skinning discovery link:619|Skinned from Stormscale",
 	},
 
 	-- The Underbelly
@@ -728,6 +738,14 @@ Data.Quests = {
 		[42525] = "Troops in the Field|10+ hunter 42524|42.78 46.94|Tactician Tinderfell|artifact",
 		[42526] = "Tech It Up A Notch|10+ hunter 42525|42.78 46.94|Tactician Tinderfell|artifact",
 		[42384] = "Scouting Reports|10+ hunter 42526|42.78 46.94|Tactician Tinderfell|artifact",
+		-- ...
+		[42389] = "Calling Hilaire Home|10+ hunter 42388|43.39 26.32|Emmarel Shadewarden|artifact",
+		[42390] = "Recruiting Rexxar|10+ hunter 42388|43.39 26.32|Emmarel Shadewarden|artifact",
+		[42395] = "Signaling Trouble|10+ hunter 42393|43.39 26.32|Emmarel Shadewarden|artifact",
+		[42134] = "Recruiting More Troops|10+ hunter 42395|42.78 46.94|Tactician Tinderfell|artifact",
+		[42394] = {"Unseen Protection|10+ hunter 42395|43.39 26.32|Emmarel Shadewarden|artifact", "Unseen Protection|10+ hunter 42395|41.59 74.72|Emmarel Shadewarden|artifact",},
+		[42436] = {"Aiding Our Allies|10+ hunter +42394|43.39 26.32|Emmarel Shadewarden|artifact", "Aiding Our Allies|10+ hunter +42394|41.59 74.72|Emmarel Shadewarden|artifact",},
+
 
 		-- Guise of the Unseen Path
 		[44233] = "Walk This Way|45+ hunter 40954|44.57 48.87|Outfitter Reynolds",
@@ -1268,6 +1286,11 @@ Data.Quests = {
 		-- Felbane Camp
 		[44055] = "They Have A Pitlord|45+|29.74 40.15|Marius Felbane",
 
+		-- Hunter - Watchers in the Wild
+		[43335] = "Survival Skills|10+ hunter 42390|36.73 35.4|Rexxar|artifact",
+		[42392] = "Survive the Night|10+ hunter 43335|36.73 35.4|Rexxar|artifact",
+		[42410] = "Champion: Rexxar|10+ hunter 42392|36.73 35.4|Rexxar|artifact",
+
 		-- Mining - Leystone
 		[38777] = "Leystone Deposit Sample|10+ mining|1 LeystoneDeposit|{1394960} [Leystone Deposit Sample]|mining discovery|Mined from Leystone Deposits",
 		[38784] = "Leystone Seam Sample|10+ mining|2 LeystoneSeam|{1394960} [Leystone Seam Sample]|mining discovery|Mined from Leystone Seams",
@@ -1601,6 +1624,11 @@ Data.Quests = {
 		[44729] = "Trial of Valor: Odyn's Favor|45+ 44721|60.14 50.74|Havi|raid",
 		[44868] = "Trial of Valor: Odyn's Judgment|45+ 44729|69.5 72.82|Odyn|raid link:807|Available after defeating Odyn in Trial of Valor",
 		[45088] = "Trial of Valor: The Lost Army|45+ 44721|69.5 72.82|Odyn|raid link:807|Available after defeating Odyn in Trial of Valor",
+
+		-- Hunter - Watchers in the Wild
+		[42391] = "Bite of the Beast|10+ hunter 42389|34.73 41.59|Beastmaster Hilaire|artifact",
+		[42411] = "Champion: Beastmaster Hilaire|10+ hunter 42391|34.73 41.59|Beastmaster Hilaire|artifact",
+		[42393] = "Homecoming|10+ hunter 42411|34.73 41.59|Beastmaster Hilaire|artifact",
 
 		-- Mining - Leystone
 		[38777] = "Leystone Deposit Sample|10+ mining|1 LeystoneDeposit|{1394960} [Leystone Deposit Sample]|mining discovery|Mined from Leystone Deposits",
