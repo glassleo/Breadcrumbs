@@ -21,6 +21,8 @@ All data has been verified and tested manually multiple times to make sure that 
 
 While the addon itself is more or less feature complete, only a tiny fraction of all required data has been compiled and tested so far.
 
+If you'd like to help, please [get in touch](mailto:hello@leo.glass)!
+
 ### Complete
 
 Quests:
