@@ -4,7 +4,7 @@ Breadcrumbs is an addon ***currently in developtment*** that adds dynamic pins t
 
 A great deal of care has been taken to make sure that the addon integrates with the map interface seamlessly without being obstructing.
 
-All data has alos been verified and tested manually multiple times to make sure that it's as accurate and useful as possible.
+All data has been verified and tested manually multiple times to make sure that it's as accurate and useful as possible.
 
 ## Features
 
