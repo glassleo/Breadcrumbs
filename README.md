@@ -50,5 +50,6 @@ POIs:
 
 - Tiragarde Sound Treasures
 - Legion Treasures
+- Legion Profession Questlines
 - Bastion Quests
 - Legion Order Halls
