@@ -17,11 +17,11 @@ All data has been verified and tested manually multiple times to make sure that 
 - Fix a Blizzard bug that leaves Legion Bonus Objectives stuck on your World Map after leveling past level 49
 - Options to choose which features you want to enable
 
-## Work In Progress
+## Current Status
 
-While the addon itself is more or less feature complete, only a tiny fraction of all required data has been compiled so far.
+While the addon itself is more or less feature complete, only a tiny fraction of all required data has been compiled and tested so far.
 
-### Completed
+### Complete
 
 Quests:
 - Azsuna
@@ -46,7 +46,7 @@ POIs:
 - Legion Order Halls
 - Legion zones
 
-### Currently Working On...
+### In Progress
 
 - Tiragarde Sound Treasures
 - Legion Treasures
