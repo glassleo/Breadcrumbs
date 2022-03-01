@@ -10,11 +10,11 @@ All data has been verified and tested manually multiple times to make sure that 
 
 ![Map Pins](https://i.imgur.com/k3zVLC9.png)
 
-- Show currently available quests on the World Map with accurate source locations
-- Show currently available treasures and vignettes on the World Map with helpful tooltips
-- Add missing quest objectives for a few specific quests to the World Map
-- Add additional points of interest such as Portals, Profession Trainers and missing Flight Masters to the World Map
-- Fix a Blizzard bug that leaves Legion bonus objectives stuck on your World Map after leveling past 50
+- Show currently available Quests on the World Map with accurate source locations
+- Show currently available Treasures and Vignettes on the World Map with helpful tooltips
+- Add missing Quest Objectives for a few specific Quests to the World Map
+- Add additional Points of Interest such as Portals, Profession Trainers and missing Flight Masters to the World Map
+- Fix a Blizzard bug that leaves Legion Bonus Objectives stuck on your World Map after leveling past level 49
 - Options to choose which features you want to enable
 
 ## Work In Progress
