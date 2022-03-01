@@ -8,41 +8,47 @@ All data has been verified and tested manually multiple times to make sure that 
 
 ## Features
 
-- Show available quests on the world map with accurate source locations depending on what your character is able to pick, including all side quests
-- Show available one-time treasures and vignettes on the world map with helpful tooltips
-- Add missing quest objectives for a few specific quests to the world map
-- Add additional points of interest like portals and profession trainers to the world map
-- Fixes a Blizzard bug that leaves Legion bonus objectives stuck on your map after leveling past 50
-- Options to choose which features you want to enable
-
-## Screenshots
-
 ![Map Pins](https://i.imgur.com/k3zVLC9.png)
 
-![Treasures](https://i.imgur.com/qahmcqj.png)
-
-![Discovery Quests](https://i.imgur.com/DiOxFIm.png)
+- Show currently available quests on the World Map with accurate source locations
+- Show currently available treasures and vignettes on the World Map with helpful tooltips
+- Add missing quest objectives for a few specific quests to the World Map
+- Add additional points of interest such as Portals, Profession Trainers and missing Flight Masters to the World Map
+- Fix a Blizzard bug that leaves Legion bonus objectives stuck on your World Map after leveling past 50
+- Options to choose which features you want to enable
 
 ## Work In Progress
 
-While the addon itself is feature complete, only a tiny fraction of all required data has been compiled so far.
+While the addon itself is more or less feature complete, only a tiny fraction of all required data has been compiled so far.
 
 ### Completed
 
-Zones:
-- Azsuna (quests only)
-- Val'sharah (quests only)
-- Highmountain (quests only)
-- Stormheim (quests only)
-- Broken Shore (quests only)
-- Azuremyst Isle (including Ammen Vale)
+Quests:
+- Azsuna
+- Val'sharah
+- Highmountain
+- Stormheim
+- Broken Shore
+- Azuremyst Isle
 
 Questlines:
 - Legion Mining
 
+Treasures:
+- Drustvar
+- Stormsong Valley
+- Zuldazar
+- Nazmir
+- Vol'dun
+
+POIs:
+- Dalaran (Broken Isles)
+- Legion Order Halls
+- Legion zones
+
 ### Currently Working On...
 
-- Treasures and POIs
-- Bastion
-- Death Knight campaign
-- Demon Hunter campaign
+- Tiragarde Sound Treasures
+- Legion Treasures
+- Bastion Quests
+- Legion Order Halls
