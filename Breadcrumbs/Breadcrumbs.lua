@@ -62,6 +62,7 @@ local function NewPin()
 		pin:SetHighlightTexture(nil)
 		pin.arrow:SetDesaturated(false)
 		pin.arrow:SetTexture(nil)
+		pin:SetScript("OnMouseUp", nil)
 		return pin
 	end
 
@@ -750,15 +751,15 @@ function Breadcrumbs:UpdateMap(event, ...)
 							GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
 							GameTooltip:AddLine(Breadcrumbs:FormatTooltip(title))
 							if tip1 then
-								if tip1 then if strlen(tip1) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip1)) else GameTooltip:AddLine(" ") end end
-								if tip2 then if strlen(tip2) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip2)) else GameTooltip:AddLine(" ") end end
-								if tip3 then if strlen(tip3) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip3)) else GameTooltip:AddLine(" ") end end
-								if tip4 then if strlen(tip4) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip4)) else GameTooltip:AddLine(" ") end end
-								if tip5 then if strlen(tip5) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip5)) else GameTooltip:AddLine(" ") end end
-								if tip6 then if strlen(tip6) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip6)) else GameTooltip:AddLine(" ") end end
-								if tip7 then if strlen(tip7) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip7)) else GameTooltip:AddLine(" ") end end
-								if tip8 then if strlen(tip8) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip8)) else GameTooltip:AddLine(" ") end end
-								if tip9 then if strlen(tip9) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip9)) else GameTooltip:AddLine(" ") end end
+								if tip1 then if strlen(tip1) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip1), nil, nil, nil, true) else GameTooltip:AddLine(" ") end end
+								if tip2 then if strlen(tip2) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip2), nil, nil, nil, true) else GameTooltip:AddLine(" ") end end
+								if tip3 then if strlen(tip3) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip3), nil, nil, nil, true) else GameTooltip:AddLine(" ") end end
+								if tip4 then if strlen(tip4) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip4), nil, nil, nil, true) else GameTooltip:AddLine(" ") end end
+								if tip5 then if strlen(tip5) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip5), nil, nil, nil, true) else GameTooltip:AddLine(" ") end end
+								if tip6 then if strlen(tip6) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip6), nil, nil, nil, true) else GameTooltip:AddLine(" ") end end
+								if tip7 then if strlen(tip7) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip7), nil, nil, nil, true) else GameTooltip:AddLine(" ") end end
+								if tip8 then if strlen(tip8) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip8), nil, nil, nil, true) else GameTooltip:AddLine(" ") end end
+								if tip9 then if strlen(tip9) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip9), nil, nil, nil, true) else GameTooltip:AddLine(" ") end end
 							end
 							GameTooltip:Show()
 						end)
