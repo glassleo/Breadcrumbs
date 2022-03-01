@@ -50,23 +50,25 @@ local function NewPin()
 		MapPool[pin] = nil -- remove it from the pool
 		pin:SetParent(WorldMapFrame)
 		pin:ClearAllPoints()
-		pin.icon:SetDesaturated(false)
-		pin.icon:SetVertexColor(1, 1, 1)
-		pin.icon:SetTexture(nil)
+		pin:GetNormalTexture():SetDesaturated(false)
+		pin:GetNormalTexture():SetVertexColor(1, 1, 1)
+		pin:GetNormalTexture():SetTexCoord(0, 1, 0, 1)
+		pin:SetNormalTexture(nil)
+		if pin:GetHighlightTexture() then
+			pin:GetHighlightTexture():SetDesaturated(false)
+			pin:GetHighlightTexture():SetVertexColor(1, 1, 1)
+			pin:GetHighlightTexture():SetTexCoord(0, 1, 0, 1)
+		end
+		pin:SetHighlightTexture(nil)
 		pin.arrow:SetDesaturated(false)
 		pin.arrow:SetTexture(nil)
-		pin.icon:SetTexCoord(0, 1, 0, 1)
 		return pin
 	end
 
 	-- Create a new pin frame
 	MapPoolCount = MapPoolCount + 1
-	pin = CreateFrame("Frame", "BreadcrumbsMapPin"..MapPoolCount, WorldMapFrame)
+	pin = CreateFrame("Button", "BreadcrumbsMapPin"..MapPoolCount, WorldMapFrame)
 
-	local icon = pin:CreateTexture(nil, "OVERLAY")
-	pin.icon = icon
-	icon:SetAllPoints(pin)
-	
 	local arrow = pin:CreateTexture(nil, "OVERLAY")
 	pin.arrow = arrow
 	arrow:SetPoint("CENTER", pin)
@@ -255,15 +257,15 @@ function Breadcrumbs:UpdateMap(event, ...)
 								pin:SetSize(flags["elsewhere"] and size*0.7647 or size, size)
 
 								if flags["icon"] and flag_icon then
-									pin.icon:SetTexture(flag_icon)
+									pin:SetNormalTexture(flag_icon)
 								elseif flags["red"] then
-									pin.icon:SetTexture("Interface/AddOns/Breadcrumbs/Textures/questred")
+									pin:SetNormalTexture("Interface/AddOns/Breadcrumbs/Textures/questred")
 								else
-									pin.icon:SetAtlas(flags["elsewhere"] and "poi-traveldirections-arrow" or flags["warboard"] and "warboard" or flags["campaign"] and "quest-campaign-available" or flags["dailycampaign"] and "quest-dailycampaign-available" or flags["up"] and "questnormal" or flags["down"] and "questnormal" or flags["artifact"] and "questartifact" or flags["legendary"] and "questlegendary" or flags["daily"] and "questdaily" or "questnormal")
+									pin:SetNormalAtlas(flags["elsewhere"] and "poi-traveldirections-arrow" or flags["warboard"] and "warboard" or flags["campaign"] and "quest-campaign-available" or flags["dailycampaign"] and "quest-dailycampaign-available" or flags["up"] and "questnormal" or flags["down"] and "questnormal" or flags["artifact"] and "questartifact" or flags["legendary"] and "questlegendary" or flags["daily"] and "questdaily" or "questnormal")
 								end
 
 								if flags["down"] or flags["up"] then
-									pin.icon:SetDesaturated(true)
+									pin:GetNormalTexture():SetDesaturated(true)
 									pin.arrow:SetAtlas(flags["up"] and "minimap-positionarrowup" or "minimap-positionarrowdown")
 									pin.arrow:SetSize(size*1.5, size*1.5)
 									pin.arrow:Show()
@@ -354,7 +356,7 @@ function Breadcrumbs:UpdateMap(event, ...)
 									size = setting_objectivesize
 									pin:SetSize(size, size)
 
-									pin.icon:SetAtlas(flags["down"] and "poi-door-down" or flags["up"] and "poi-door-up" or flags["inside"] and "poi-door-left" or flags["outside"] and "poi-door-right" or "questobjective")
+									pin:SetNormalAtlas(flags["down"] and "poi-door-down" or flags["up"] and "poi-door-up" or flags["inside"] and "poi-door-left" or flags["outside"] and "poi-door-right" or "questobjective")
 									
 									pin:SetScript("OnEnter", function(self, motion)
 										GameTooltip:Hide()
@@ -417,8 +419,8 @@ function Breadcrumbs:UpdateMap(event, ...)
 				local link = data["link"]
 
 				-- Icon
-				pin.icon:SetTexture("Interface/AddOns/Breadcrumbs/Textures/Discovery/" .. (data["icon"] or "Questionmark"))
-				pin.icon:SetTexCoord(0, 0.75, 0, 0.75) -- Crop 64×64 to 48×48
+				pin:SetNormalTexture("Interface/AddOns/Breadcrumbs/Textures/Discovery/" .. (data["icon"] or "Questionmark"))
+				pin:GetNormalTexture():SetTexCoord(0, 0.75, 0, 0.75) -- Crop 64×64 to 48×48
 
 				pin:SetScript("OnEnter", function(self, motion)
 					GameTooltip:Hide()
@@ -523,9 +525,9 @@ function Breadcrumbs:UpdateMap(event, ...)
 								pin:SetSize(size, size)
 
 								if string.match(icon, "[%w%p]+") then
-									pin.icon:SetAtlas(icon)
+									pin:SetNormalAtlas(icon)
 								else
-									pin.icon:SetTexture(icon)
+									pin:SetNormalTexture(icon)
 								end
 
 								if title then
@@ -601,13 +603,18 @@ function Breadcrumbs:UpdateMap(event, ...)
 									pin:SetSize(flags["elsewhere"] and size*0.7647 or size, size)
 
 									if flags["icon"] and flag_icon then
-										pin.icon:SetTexture(flag_icon)
+										pin:SetNormalTexture(flag_icon)
+										pin:SetHighlightTexture(flag_icon)
 									else
-										pin.icon:SetAtlas(flags["elsewhere"] and "poi-traveldirections-arrow" or (flags["elite"] and flags["event"]) and "vignetteeventelite" or (flags["elite"] and flags["treasure"]) and "vignettelootelite" or flags["treasure"] and "vignetteloot" or flags["elite"] and "vignettekillelite" or "vignettekill")
+										pin:SetNormalAtlas(flags["elsewhere"] and "poi-traveldirections-arrow" or (flags["elite"] and flags["event"]) and "vignetteeventelite" or (flags["elite"] and flags["treasure"]) and "vignettelootelite" or flags["treasure"] and "vignetteloot" or flags["elite"] and "vignettekillelite" or "vignettekill")
+										pin:SetHighlightAtlas(flags["elsewhere"] and "poi-traveldirections-arrow" or (flags["elite"] and flags["event"]) and "vignetteeventelite" or (flags["elite"] and flags["treasure"]) and "vignettelootelite" or flags["treasure"] and "vignetteloot" or flags["elite"] and "vignettekillelite" or "vignettekill")
 									end
 
+									pin:GetHighlightTexture():SetAlpha(0.5)
+
 									if flags["down"] or flags["up"] then
-										pin.icon:SetDesaturated(true)
+										pin:GetNormalTexture():SetDesaturated(true)
+										pin:GetHighlightTexture():SetDesaturated(true)
 										pin.arrow:SetAtlas(flags["up"] and "minimap-positionarrowup" or "minimap-positionarrowdown")
 										pin.arrow:SetSize(size*1.5, size*1.5)
 										pin.arrow:Show()
@@ -719,15 +726,22 @@ function Breadcrumbs:UpdateMap(event, ...)
 						local pin = NewPin()
 
 						if string.match(texture, "Discovery/[%w]+") then
-							pin.icon:SetTexture("Interface/AddOns/Breadcrumbs/Textures/" .. texture)
-							pin.icon:SetTexCoord(0, 0.75, 0, 0.75) -- Crop 64×64 to 48×48
+							pin:SetNormalTexture("Interface/AddOns/Breadcrumbs/Textures/" .. texture)
+							pin:SetHighlightTexture("Interface/AddOns/Breadcrumbs/Textures/" .. texture)
+							pin:GetNormalTexture():SetTexCoord(0, 0.75, 0, 0.75) -- Crop 64×64 to 48×48
+							pin:GetHighlightTexture():SetTexCoord(0, 0.75, 0, 0.75) -- Crop 64×64 to 48×48
 						elseif string.match(texture, "POI/[%w]+") then
-							pin.icon:SetTexture("Interface/AddOns/Breadcrumbs/Textures/" .. texture)
+							pin:SetNormalTexture("Interface/AddOns/Breadcrumbs/Textures/" .. texture)
+							pin:SetHighlightTexture("Interface/AddOns/Breadcrumbs/Textures/" .. texture)
 						elseif string.match(texture, "[%w%p]+") then
-							pin.icon:SetAtlas(texture)
+							pin:SetNormalAtlas(texture)
+							pin:SetHighlightAtlas(texture)
 						else
-							pin.icon:SetTexture(texture)
+							pin:SetNormalTexture(texture)
+							pin:SetHighlightTexture(texture)
 						end
+
+						pin:GetHighlightTexture():SetAlpha(0.5)
 
 						pin:SetSize(size, size)
 
