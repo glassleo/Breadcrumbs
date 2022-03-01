@@ -25,7 +25,7 @@ Data.Vignettes = {
 	-- Boralus
 	[1161] = {
 		-- Treasure
-		[52870] = "Scrimshaw Cache|10+|63.21 6.5|\"Inside a cave\"|treasure|Contains:|{2032600} [War Resources]",
+		[52870] = "Scrimshaw Cache|10+|63.21 6.5|\"Inside a cave\"|treasure down|Contains:|{2032600} [War Resources]",
 
 		-- Vignette
 		[51877] = {"Sawtooth|10+ -paladin -shaman -monk|\"Swims around the area\"|vignette", "Sawtooth|10+ paladin,shaman,monk|\"Swims around the area\"|vignette item:155273|Drops:|{1698637} [rare]Sharktooth Hatchet]",},
