@@ -230,7 +230,8 @@ Data.POI = {
 	-- Rogue - The Hall of Shadows
 	[626] = {
 		-- Knocker
-		"poi-door-up small|Knocker|rogue|29.58 21.84|[Secret Exit to Dalaran]",
+		"poi-door-up small|Knocker|rogue|29.58 21.84|[Exit to Tanks for Everything]",
+		"poi-door-up small|Knocker|rogue|39.61 21.42|[Exit to One More Glass]",
 
 		-- Scouting Map
 		"ShipMissionIcon-Bonus-MapBadge|Scouting Map|rogue|36.71 45.54",
@@ -296,6 +297,9 @@ Data.POI = {
 		-- Portal
 		"mageportalalliance|Portal to Stormwind|alliance|46.66 41.42",
 		"mageportalalliance|Portal to Orgrimmar|horde|46.67 41.3",
+
+		-- Order Hall
+		"groupfinder-icon-class-warrior small|[Skyhold]|10+ warrior 40585|47.58 28.09|Entrance to Skyhold, Home of the\nValarjar",
 	},
 
 
@@ -310,13 +314,13 @@ Data.POI = {
 	-- Highmountain
 	[650] = {
 		-- Order Hall
-		"groupfinder-icon-class-warrior small|[Skyhold]|10+ warrior|46.11 59.95|Entrance to Skyhold, Home of the\nValarjar",
+		"groupfinder-icon-class-warrior small|[Skyhold]|10+ warrior 40585|46.11 59.95|Entrance to Skyhold, Home of the\nValarjar",
 	},
 
 	-- Thunder Totem
 	[750] = {
 		-- Order Hall
-		"groupfinder-icon-class-warrior|[Skyhold]|10+ warrior|39.83 41.97|Entrance to Skyhold, Home of the\nValarjar",
+		"groupfinder-icon-class-warrior|[Skyhold]|10+ warrior 40585|39.83 41.97|Entrance to Skyhold, Home of the\nValarjar",
 	},
 
 	-- Hall of Chieftains, Thunder Totem
@@ -328,7 +332,7 @@ Data.POI = {
 	-- Stormheim
 	[634] = {
 		-- Order Hall
-		"groupfinder-icon-class-warrior small|[Skyhold]|10+ warrior|60.17 52.23|Entrance to Skyhold, Home of the\nValarjar",
+		"groupfinder-icon-class-warrior small|[Skyhold]|10+ warrior 40585|60.17 52.23|Entrance to Skyhold, Home of the\nValarjar",
 	},
 
 
