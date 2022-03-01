@@ -6,9 +6,9 @@ A great deal of care has been taken to make sure that the addon integrates with 
 
 All data has been verified and tested manually multiple times to make sure that it's as accurate and useful as possible.
 
-## Features
+![Screenshot](https://i.imgur.com/k3zVLC9.png)
 
-![Map Pins](https://i.imgur.com/k3zVLC9.png)
+## Features
 
 - Show currently available Quests on the World Map with accurate source locations
 - Show currently available Treasures and Vignettes on the World Map with helpful tooltips
