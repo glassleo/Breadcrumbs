@@ -333,6 +333,10 @@ function Breadcrumbs:UpdateMap(event, ...)
 											end
 										end
 									end
+									if ZA and ZA.DebugMode then -- Debug
+										GameTooltip:AddLine(" ")
+										GameTooltip:AddLine("|cff3ba5ffQuest ID:|r |cffffffff" .. (id or "unknown") .. "|r")
+									end
 									GameTooltip:Show()
 								end)
 
@@ -413,6 +417,7 @@ function Breadcrumbs:UpdateMap(event, ...)
 				local y = 7 + ((size/5)*0.5) + ((i-1) * (size/4.5))
 
 				-- Data
+				local id = data["id"]
 				local title = data["title"]
 				local source = data["source"]
 				local help = data["help"]
@@ -422,6 +427,9 @@ function Breadcrumbs:UpdateMap(event, ...)
 				-- Icon
 				pin:SetNormalTexture("Interface/AddOns/Breadcrumbs/Textures/Discovery/" .. (data["icon"] or "Questionmark"))
 				pin:GetNormalTexture():SetTexCoord(0, 0.75, 0, 0.75) -- Crop 64×64 to 48×48
+				pin:SetHighlightTexture("Interface/AddOns/Breadcrumbs/Textures/Discovery/" .. (data["icon"] or "Questionmark"))
+				pin:GetHighlightTexture():SetTexCoord(0, 0.75, 0, 0.75) -- Crop 64×64 to 48×48
+				pin:GetHighlightTexture():SetAlpha(0.5)
 
 				pin:SetScript("OnEnter", function(self, motion)
 					GameTooltip:Hide()
@@ -480,6 +488,10 @@ function Breadcrumbs:UpdateMap(event, ...)
 								GameTooltip:AddLine(CreateAtlasMarkup("chromietime-32x32") .. " |cffff0000You must activate a Timewalking Campaign to be able to obtain this quest|r")
 							end
 						end
+					end
+					if ZA and ZA.DebugMode then -- Debug
+						GameTooltip:AddLine(" ")
+						GameTooltip:AddLine("|cff3ba5ffQuest ID:|r |cffffffff" .. (id or "unknown") .. "|r")
 					end
 					GameTooltip:Show()
 				end)
@@ -545,6 +557,12 @@ function Breadcrumbs:UpdateMap(event, ...)
 										if line7 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(line7)) end
 										if line8 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(line8)) end
 										if line9 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(line9)) end
+
+										if ZA and ZA.DebugMode then -- Debug
+											GameTooltip:AddLine(" ")
+											GameTooltip:AddLine("|cff3ba5ffQuest ID:|r |cffffffff" .. (id or "unknown") .. "|r")
+										end
+
 										GameTooltip:Show()
 									end)
 
@@ -667,6 +685,10 @@ function Breadcrumbs:UpdateMap(event, ...)
 											if tip7 then if strlen(tip7) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip7, flags)) else GameTooltip:AddLine(" ") end end
 											if tip8 then if strlen(tip8) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip8, flags)) else GameTooltip:AddLine(" ") end end
 											if tip9 then if strlen(tip9) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip9, flags)) else GameTooltip:AddLine(" ") end end
+										end
+										if ZA and ZA.DebugMode then -- Debug
+											GameTooltip:AddLine(" ")
+											GameTooltip:AddLine("|cff3ba5ffQuest ID:|r |cffffffff" .. (id or "unknown") .. "|r")
 										end
 										GameTooltip:Show()
 
