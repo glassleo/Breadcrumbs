@@ -163,7 +163,7 @@ Data.Vignettes = {
 		[40711] = "Small Treasure Chest|10+|55.62 18.53||treasure|Contains:|{1397630} [Order Resources]",
 		[42273] = "Small Treasure Chest|10+|62.38 58.4||treasure|Contains:|{1397630} [Order Resources]",
 		[42278] = "Small Treasure Chest|10+|62.99 54.18|Gloombound Barrow|treasure|Contains:|{1397630} [Order Resources]",
-		[42290] = "Small Treasure Chest|10+ ~37538|50.2 50.29||treasure|Contains:|{1397630} [Order Resources]",
+		[42290] = {"Small Treasure Chest|10+ -37536|50.2 50.29|\"Inside the Shipwreck Arena cave\"|treasure down|Contains:|{1397630} [Order Resources]", "Small Treasure Chest|10+ 37538|50.2 50.29|\"Inside the Shipwreck Arena cave\"|treasure down|Contains:|{1397630} [Order Resources]",}, -- Phased out once 37536 completes and comes back after 37538 is turned in
 		[42291] = "Small Treasure Chest|10+|48.01 56.24||treasure down link:632|Contains:|{1397630} [Order Resources]", -- Oceanus Cove
 		[42293] = "Small Treasure Chest|10+|63.64 39.17||treasure|Contains:|{1397630} [Order Resources]",
 		[44104] = "Small Treasure Chest|10+|53.61 18.14||treasure down|Contains:|{1397630} [Order Resources]",
@@ -184,7 +184,9 @@ Data.Vignettes = {
 		-- Treasure
 		[38366] = "Small Treasure Chest|10+|48.68 73.79||treasure|Contains:|{1397630} [Order Resources]",
 		[38369] = "Small Treasure Chest|10+|39.95 54.6||treasure|Contains:|{1397630} [Order Resources]||Might not be visible due to phasing", -- has phasing issues with some quests
-		[39080] = "Small Treasure Chest|10+ §38644|38.4 65.32|Heathrow Cellar|treasure|Contains:|{1397630} [Order Resources]", -- approx coords -- Door can only be opened while doing quest 38644
+		[39079] = "Small Treasure Chest|10+|38.64 67.18||treasure|Contains:|{1397630} [Order Resources]",
+		[39080] = {"Small Treasure Chest|10+ §38644|38.4 65.32|Heathrow Cellar|treasure|Contains:|{1397630} [Order Resources]", "Small Treasure Chest|10+ 38644|38.4 65.32|Heathrow Cellar|treasure hardcore|Contains:|{1397630} [Order Resources]||[ff0000]To get inside Heathrow Cellar you will have to die near the door and resurrect on the other side]",}, -- approx coords -- Door can only be opened while doing quest 38644
+		[39084] = "Small Treasure Chest|10+|43.22 54.88||treasure|Contains:|{1397630} [Order Resources]",
 		[39085] = "Small Treasure Chest|10+|40.51 44.69||treasure down link:642|Contains:|{1397630} [Order Resources]", -- Darkpens
 	},
 
