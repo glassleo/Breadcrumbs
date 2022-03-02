@@ -18,7 +18,8 @@ Data.POI = {
 	[1161] = {
 		-- Portal
 		-- To do: Add Nazjatar portal
-		{"mageportalalliance|Sanctum of the Sages|10+ 49- alliance 47186|70.52 17.28||Portals to:|{mageportalalliance} [Stormwind]|{mageportalalliance} [The Exodar]|{mageportalalliance} [Ironforge]", "mageportalalliance|Sanctum of the Sages|50+ alliance 47186|70.52 17.28||Portals to:|{mageportalalliance} [Stormwind]|{mageportalalliance} [The Exodar]|{mageportalalliance} [Ironforge]|{mageportalalliance} [Silithus]",},
+		"POI/Portal|Sanctum of the Sages|10+ alliance -kultiran 47186|70.52 17.28",
+		"POI/Portal|Sanctum of the Sages|10+ alliance kultiran|70.52 17.28",
 
 		-- Scrapper
 		"poi-scrapper|Scrap-O-Matic 1000|alliance|77.13 16.31",
@@ -46,11 +47,14 @@ Data.POI = {
 	-- Dalaran
 	[627] = {
 		-- Portal
-		"mageportalalliance|Portal to Stormwind|alliance|39.55 63.19",
-		"mageportalalliance|Portal to Orgrimmar|horde|55.31 24.02",
+		"POI/Portal|Portal to Stormwind|alliance|39.55 63.19",
+		"POI/Portal|Portal to Orgrimmar|horde|55.31 24.02",
+		"groupfinder-icon-class-demonhunter|[The Fel Hammer]|10+ demonhunter 42872|97.5 68.73|Gateway to the Fel Hammer in Mardum, Home of the Illidari",
+		"groupfinder-icon-class-rogue|[Hall of Shadows]|10+ rogue 40832|46.8 25.4|Home of the Uncrowned",
 
 		-- Flight Master
 		"taxinode_neutral small|Aludane Whitecloud|1+|69.84 51.13|[Flight Master]",
+		"groupfinder-icon-class-hunter|[Trueshot Lodge]|10+ hunter 40953|72.85 41.21|Eagle to Trueshot Lodge, Home of the Unseen Path",
 
 		-- Profession Trainer
 		"POI/Alchemy|The Agronomical Apothecary|10+ alchemy|41.44 31.75|[Alchemy]",
@@ -65,11 +69,6 @@ Data.POI = {
 		{"POI/Cooking|A Hero's Welcome|10+ alliance|40.07 65.98|[Cooking]", "POI/Cooking|The Filthy Animal|10+ horde|69.77 38.77|[Cooking]",},
 		"POI/Fishing|Marcia Chase|10+|52.81 65.59|[Fishing Trainer]",
 		"POI/Archaeology|Things of the Past|10+|41.26 25.36|[Archaeology]",
-
-		-- Order Hall
-		"groupfinder-icon-class-demonhunter|[The Fel Hammer]|10+ demonhunter 42872|97.5 68.73|Gateway to the Fel Hammer in Mardum, Home of the Illidari",
-		"groupfinder-icon-class-hunter|[Trueshot Lodge]|10+ hunter 40953|72.85 41.21|Eagle to Trueshot Lodge, Home of the Unseen Path",
-		"groupfinder-icon-class-rogue|[Hall of Shadows]|10+ rogue 40832|46.8 25.4|Home of the Uncrowned",
 	},
 
 
@@ -88,7 +87,7 @@ Data.POI = {
 	-- Death Knight - Acherus: The Ebon Hold - Hall of Command
 	[648] = {
 		-- Portal
-		"mageportalalliance|Portal to Dalaran|deathknight|24.73 33.7",
+		"POI/Portal|Portal to Dalaran|deathknight|24.73 33.7",
 
 		-- Flight Master
 		"taxinode_neutral small|Grimwing|deathknight|25.49 28.81|[Flight Master]",
@@ -125,8 +124,8 @@ Data.POI = {
 	-- Druid - The Dreamgrove
 	[747] = {
 		-- Portal
-		"taxinode_continent_neutral|Emerald Dreamway|druid|55.5 22.24",
-		"mageportalalliance|Portal to Dalaran|druid|56.5 43.1",
+		"POI/DreamwayPortal|Emerald Dreamway|10+ druid 40645|55.4 22.06",
+		"POI/Portal|Portal to Dalaran|druid|56.5 43.1",
 
 		-- Flight Master
 		"taxinode_neutral small|Danise Satargazer|druid|61.74 33.99|[Flight Master]",
@@ -145,7 +144,7 @@ Data.POI = {
 	-- Hunter - Trueshot Lodge
 	[739] = {
 		-- Portal
-		"mageportalalliance|Portal to Dalaran|hunter|48.63 43.49",
+		"POI/Portal|Portal to Dalaran|hunter|48.63 43.49",
 
 		-- Flight Master
 		"taxinode_neutral small|Odan Battlebow|hunter|35.82 27.61|[Flight Master]",
@@ -167,14 +166,14 @@ Data.POI = {
 	-- Mage - Hall of the Guardian
 	[734] = {
 		-- Portal
-		"mageportalalliance|Portal to Dalaran|mage|57.4 90.3",
+		"POI/Portal|Portal to Dalaran|mage|57.4 90.3",
 
 		-- Teleportation Nexus
-		"mageportalalliance|Teleportation Nexus: Azsuna|mage research:386|55.04 39.54",
-		"mageportalalliance|Teleportation Nexus: Val'sharah|mage research:386|66.77 46.73",
-		"mageportalalliance|Teleportation Nexus: Highmountain|mage research:386|54.64 44.59",
-		"mageportalalliance|Teleportation Nexus: Stormheim|mage research:386|67.18 41.58",
-		"mageportalalliance|Teleportation Nexus: Suramar|mage research:386|60.4 50.6",
+		"POI/Portal|Teleportation Nexus: Azsuna|mage research:386|55.04 39.54",
+		"POI/Portal|Teleportation Nexus: Val'sharah|mage research:386|66.77 46.73",
+		"POI/Portal|Teleportation Nexus: Highmountain|mage research:386|54.64 44.59",
+		"POI/Portal|Teleportation Nexus: Stormheim|mage research:386|67.18 41.58",
+		"POI/Portal|Teleportation Nexus: Suramar|mage research:386|60.4 50.6",
 
 		-- Scouting Map
 		"ShipMissionIcon-Bonus-MapBadge|Scouting Map|mage|81.7 61.4",
@@ -199,7 +198,7 @@ Data.POI = {
 	-- Paladin - Sanctum of Light
 	[24] = {
 		-- Portal
-		"mageportalalliance|Portal to Dalaran|paladin|37.59 64.09",
+		"POI/Portal|Portal to Dalaran|paladin|37.59 64.09",
 
 		-- Scouting Map
 		"ShipMissionIcon-Bonus-MapBadge|Scouting Map|paladin|53.5 78.7",
@@ -215,7 +214,7 @@ Data.POI = {
 	-- Priest - Netherlight Temple
 	[702] = {
 		-- Portal
-		"mageportalalliance|Portal to Dalaran|1+|49.8 80.7",
+		"POI/Portal|Portal to Dalaran|1+|49.8 80.7",
 
 		-- Scouting Map
 		"ShipMissionIcon-Bonus-MapBadge|Scouting Map|priest|49.84 47.37",
@@ -247,7 +246,7 @@ Data.POI = {
 	-- Shaman - The Heart of Azeroth
 	[726] = {
 		-- Portal
-		"mageportalalliance|Portal to Dalaran|shaman|29.8 51.95",
+		"POI/Portal|Portal to Dalaran|shaman|29.8 51.95",
 
 		-- Scouting Map
 		"ShipMissionIcon-Bonus-MapBadge|Scouting Map|shaman|33.93 59.55",
@@ -295,10 +294,8 @@ Data.POI = {
 	-- Azsuna
 	[630] = {
 		-- Portal
-		"mageportalalliance|Portal to Stormwind|alliance|46.66 41.42",
-		"mageportalalliance|Portal to Orgrimmar|horde|46.67 41.3",
-
-		-- Order Hall
+		"POI/Portal|Portal to Stormwind|alliance|46.66 41.42",
+		"POI/Portal|Portal to Orgrimmar|horde|46.67 41.3",
 		"teleportationnetwork-32x32 small|Teleportation Nexus|mage research:386|57.95 15.15",
 		"groupfinder-icon-class-warrior small|[Skyhold]|10+ warrior 40585|47.58 28.09|Entrance to Skyhold, Home of the Valarjar",
 	},
@@ -308,7 +305,7 @@ Data.POI = {
 
 	-- Val'sharah
 	[641] = {
-		-- Order Hall
+		-- Portal
 		"teleportationnetwork-32x32 small|Teleportation Nexus|mage research:386|51.25 56.11",
 		"teleportationnetwork-32x32 small|Teleportation Nexus|mage research:386|75.09 27.48",
 	},
@@ -318,7 +315,7 @@ Data.POI = {
 
 	-- Highmountain
 	[650] = {
-		-- Order Hall
+		-- Portal
 		"teleportationnetwork-32x32 small|Teleportation Nexus|mage research:386|31.41 63.81",
 		"groupfinder-icon-class-warrior small|[Skyhold]|10+ warrior 40585|46.11 59.95|Entrance to Skyhold, Home of the Valarjar",
 	},
@@ -328,7 +325,7 @@ Data.POI = {
 		-- Flight Master
 		"taxinode_neutral small|Windtamer Nalt|1+|44.74 38.55|[Flight Master]",
 
-		-- Order Hall
+		-- Portal
 		"groupfinder-icon-class-warrior|[Skyhold]|10+ warrior 40585 41359|39.83 41.97|Entrance to Skyhold, Home of the Valarjar",
 		"groupfinder-icon-class-warrior|[Skyhold]|10+ warrior 40585 -41359|39.83 41.97|Entrance to Skyhold, Home of the Valarjar||\"Speak to {flightmaster} Windtamer Nalt if you cannot see the Gaze of Odyn\"",
 	},
@@ -342,9 +339,7 @@ Data.POI = {
 	-- Stormheim
 	[634] = {
 		-- Portal
-		"mageportalalliance|Portal to Dalaran|1+|30.08 40.7",
-
-		-- Order Hall
+		"POI/Portal|Portal to Dalaran|1+|30.08 40.7",
 		"teleportationnetwork-32x32 small|Teleportation Nexus|mage research:386|31.34 60.51",
 		"groupfinder-icon-class-warrior small|[Skyhold]|10+ warrior 40585|60.17 52.23|Entrance to Skyhold, Home of the Valarjar",
 	},
@@ -354,7 +349,7 @@ Data.POI = {
 
 	-- Suramar
 	[680] = {
-		-- Order Hall
+		-- Portal
 		"teleportationnetwork-32x32 small|Teleportation Nexus|mage research:386|33.42 50.41",
 	},
 
@@ -364,7 +359,14 @@ Data.POI = {
 	-- Frostwall
 	[590] = {
 		-- Portal
-		"mageportalalliance|Portal to Ashran|45+ horde garrison:3|75.2 48.4",
+		"POI/Portal|Portal to Ashran|45+ horde garrison:3|75.2 48.4",
+	},
+
+
+	--[[ Grizzly Hills ]]--
+	[116] = {
+		-- Portal
+		"POI/DreamwayPortal|Emerald Dreamway|10+ druid 40645|50.32 29.2",
 	},
 
 
@@ -373,14 +375,14 @@ Data.POI = {
 	-- Teldrassil
 	[57] = {
 		-- Portal
-		"mageportalalliance|Portal to Stormwind|alliance|55.03 93.71",
-		"mageportalalliance|Portal to Exodar|alliance|52.27 89.47",
+		"POI/Portal|Portal to Stormwind|alliance|55.03 93.71",
+		"POI/Portal|Portal to Exodar|alliance|52.27 89.47",
 	},
 
 	-- Darnassus
 	[89] = {
 		-- Portal
-		"mageportalalliance|Temple of the Moon|alliance|43 74||Portals to:|{mageportalalliance} [The Exodar]|{mageportalalliance} [Hellfire Peninsula]",
+		"POI/Portal|Temple of the Moon|alliance|43 74",
 
 		-- Profession
 		"POI/Alchemy|Ainethil|alliance alchemy|53.91 38.52|[Alchemy Trainer]",
@@ -394,13 +396,34 @@ Data.POI = {
 	-- Azuremyst Isle
 	[97] = {
 		-- Portal
-		"mageportalalliance|Portal to Darnassus|alliance|20.4 54.18",
+		"POI/Portal|Portal to Darnassus|alliance|20.4 54.18",
 	},
 
 	-- The Exodar
 	[103] = {
 		-- Portal
-		"mageportalalliance|Portal to Stormwind|alliance|48.34 62.93",
+		"POI/Portal|Portal to Stormwind|alliance|48.34 62.93",
+	},
+
+
+	--[[ Moonglade ]]--
+	[80] = {
+		-- Portal
+		"POI/DreamwayPortal|Emerald Dreamway|10+ druid 40645|68.11 60.28",
+	},
+
+
+	--[[ Feralas ]]--
+	[69] = {
+		-- Portal
+		"POI/DreamwayPortal|Emerald Dreamway|10+ druid 40645|51.34 10.6",
+	},
+
+
+	--[[ Mount Hyjal ]]--
+	[198] = {
+		-- Portal
+		"POI/DreamwayPortal|Emerald Dreamway|10+ druid 40645|59 26.24",
 	},
 
 
@@ -409,8 +432,22 @@ Data.POI = {
 	-- Stormwind
 	[84] = {
 		-- Portal
-		"mageportalalliance|The Eastern Earthshrine|30+ alliance|74.85 17.65",
-		{"mageportalalliance|Portal to Darnassus|49- alliance|23.86 56.09", "mageportalalliance|Portal to Darkshore|50+ alliance|23.86 56.09",},
+		"POI/Portal|The Eastern Earthshrine|30+ alliance|74.85 17.65",
+		{"POI/Portal|Portal to Darnassus|49- alliance|23.86 56.09", "POI/Portal|Portal to Darkshore|50+ alliance|23.86 56.09",},
+	},
+
+
+	--[[ Duskwood ]]--
+	[47] = {
+		-- Portal
+		"POI/DreamwayPortal|Emerald Dreamway|10+ druid 40645|46.57 35.63",
+	},
+
+
+	--[[ The Hinterlands ]]--
+	[26] = {
+		-- Portal
+		"POI/DreamwayPortal|Emerald Dreamway|10+ druid 40645|62.28 22.67",
 	},
 
 }
