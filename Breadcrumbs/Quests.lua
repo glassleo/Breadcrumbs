@@ -417,8 +417,39 @@ Data.Quests = {
 		[40016] = "Desperation Breeds Ingenuity|10+ herbalism 40015|43 33.36|Kuhuine Tenderstride|herbalism",
 		[40017] = "A Slip of the Hand|10+ herbalism 40016|1 Aethril|[Auto Accept]|herbalism discovery link:630|Has a chance to be obtained after gathering Aethril",
 
+		-- Herbalism - Dreamleaf
+		[40018] = "Dreamleaf Sample|10+ herbalism|2 Dreamleaf|{1387613} [Dreamleaf Sample]|herbalism discovery link:641|Gathered from Dreamleaf",
+		[40019] = "An Empathetic Herb|10+ herbalism 40018|43 33.36|Kuhuine Tenderstride|herbalism",
+		[40020] = "Twisted to Death|10+ herbalism 40019|2 Dreamleaf|{1387617} [Blight-Twisted Herb]|herbalism discovery link:641|Gathered from Dreamleaf",
+		[40021] = "One Dead Plant is One Too Many|10+ herbalism 40020|43 33.36|Wildcrafter Osme|herbalism elsewhere link:641",
+		[40022] = "Choked by Nightmare|10+ herbalism 40021|2 Dreamleaf|{1387617} [Blight-Choked Herb]|herbalism discovery link:641|Gathered from Dreamleaf",
+		[40023] = "The Last Straw|10+ herbalism 40022|43 33.36|Wildcrafter Osme|herbalism elsewhere link:641",
+
+		-- Herbalism - Foxflower
+		[40024] = "Foxflower Sample|10+ herbalism|3 Foxflower|{1387616} [Foxflower Sample]|herbalism discovery link:650|Gathered from Foxflower",
+		[40025] = "Teeny Bite Marks|10+ herbalism 40024|3 Foxflower|{960686} [Nibbled Foxflower Stem]|herbalism discovery link:650|Gathered from Foxflower",
+		[40026] = "Chase the Culprit|10+ herbalism 40025|43 33.36|Kuhuine Tenderstride|herbalism",
+		[40028] = "The Pied Picker|10+ herbalism 40026|3 Foxflower|{656439} [Foxflower Scent Gland]|herbalism discovery link:650|Gathered from Foxflower",
+
+		-- Herbalism - Fjarnskaggl
+		[40029] = "Fjarnskaggl Sample|10+ herbalism|4 Fjarnskaggl|{1387615} [Fjarnskaggl Sample]|herbalism discovery link:634|Gathered from Fjarnskaggl",
+		[40030] = "Ram's-Horn Trowel|10+ herbalism 40029|4 Fjarnskaggl|{134436} [Ram's-Horn Trowel]|herbalism discovery link:634|Gathered from Fjarnskaggl",
+		[40031] = "Vrykul Herblore|10+ herbalism 40030|43 33.36|Kuhuine Tenderstride|herbalism",
+		[40032] = "The Missing Page|10+ herbalism 40031|4 Fjarnskaggl|{134938} [Runed Journal Page]|herbalism discovery link:634|Gathered from Fjarnskaggl",
+		[40033] = "Fjarnskaggl|10+ herbalism 40032|43 33.36|Kuhuine Tenderstride|herbalism",
+
+		-- Herbalism - Starlight Rose
+		[40034] = "Starlight Rosedust|10+ herbalism|5 StarlightRose|{1387618} [Starlight Rosedust]|herbalism discovery link:680|Gathered from Starlight Rose",
+		[40035] = "The Gentlest Touch|10+ herbalism 40034|43 33.36|Kuhuine Tenderstride|herbalism",
+		[40036] = "Jeweled Spade Handle|10+ herbalism 40035|5 StarlightRose|{305163} [Jeweled Spade Handle]|herbalism discovery link:680|Gathered from Starlight Rose",
+		[40037] = "The Spade's Blade|10+ herbalism 40036|43 33.36|Kuhuine Tenderstride|herbalism",
+		[40038] = "Insane Ramblings|10+ herbalism 40037|5 StarlightRose|{134943} [Scribbled Ramblings]|herbalism discovery link:680|Gathered from Starlight Rose",
+		[40039] = "Tharillon's Fall|10+ herbalism 40038|43 33.36|Kuhuine Tenderstride|herbalism",
+
 		-- Herbalism - Felwort
-		[40040] = "Felwort Sample|45+ herbalism 45727,43341|6 Felwort|{1387614} [Felwort Sample]|herbalism discovery link:619|Gathered from Felwort",
+		[40040] = "Felwort Sample|10+ herbalism 45727,43341|6 Felwort|{1387614} [Felwort Sample]|herbalism discovery link:619|Gathered from Felwort", -- Available after unlocking World Quests
+		[40041] = "Felwort Analysis|10+ herbalism 40040 40014 40019 40024 40029 40035|43 33.36|Kuhuine Tenderstride|herbalism", -- Available after getting rank 1 of all other Broken Isles herbs
+		[40041] = "The Emerald Nightmare: Felwort Mastery|10+ herbalism 40041 40016 40021 40026 40031 40037|43 33.36|Kuhuine Tenderstride|herbalism raid", -- Available after getting rank 2 of all other Broken Isles herbs
 
 		-- Mining - Leystone
 		[38777] = "Leystone Deposit Sample|10+ mining|1 LeystoneDeposit|{1394960} [Leystone Deposit Sample]|mining discovery link:619|Mined from Leystone Deposits",
@@ -457,12 +488,12 @@ Data.Quests = {
 		[39830] = "Hellfire Citadel: Hellfire and Brimstone|10+ mining 39817|46.09 26.66|Mama Diggs|mining raid",
 
 		-- Mining - Empyrium
-		[48034] = "Empyrium Deposit Chunk|45+ mining|8 EmpyriumDeposit|{962048} [Empyrium Deposit Chunk]|mining discovery link:905|Mined from Empyrium Deposits",
-		[48035] = "Angling For a Better Strike|45+ mining 48034|8 EmpyriumDeposit|{237286} [Empyrium Dust]|mining discovery link:905|Mined from Empyrium Deposits",
-		[48036] = "Precision Perfected|45+ mining 48035|8 EmpyriumDeposit|{1097742} [Unusable Empyrium Core]|mining discovery link:905|Mined from Empyrium Deposits",
-		[48037] = "Empyrium Seam Chunk|45+ mining|9 EmpyriumSeam|{962048} [Empyrium Seam Chunk]|mining discovery link:905|Mined from Empyrium Seams",
-		[48038] = "Don't Just Pick At It|45+ mining 48037|9 EmpyriumSeam|{667492} [Embedded Empyrium Ore]|mining discovery link:905|Mined from Empyrium Seams",
-		[48039] = "Balancing the Break|45+ mining 48038|9 EmpyriumSeam|{961620} [Empyrium Bits]|mining discovery link:905|Mined from Empyrium Seams",
+		--[48034] = "Empyrium Deposit Chunk|45+ mining|8 EmpyriumDeposit|{962048} [Empyrium Deposit Chunk]|mining discovery link:905|Mined from Empyrium Deposits",
+		--[48035] = "Angling For a Better Strike|45+ mining 48034|8 EmpyriumDeposit|{237286} [Empyrium Dust]|mining discovery link:905|Mined from Empyrium Deposits",
+		--[48036] = "Precision Perfected|45+ mining 48035|8 EmpyriumDeposit|{1097742} [Unusable Empyrium Core]|mining discovery link:905|Mined from Empyrium Deposits",
+		--[48037] = "Empyrium Seam Chunk|45+ mining|9 EmpyriumSeam|{962048} [Empyrium Seam Chunk]|mining discovery link:905|Mined from Empyrium Seams",
+		--[48038] = "Don't Just Pick At It|45+ mining 48037|9 EmpyriumSeam|{667492} [Embedded Empyrium Ore]|mining discovery link:905|Mined from Empyrium Seams",
+		--[48039] = "Balancing the Break|45+ mining 48038|9 EmpyriumSeam|{961620} [Empyrium Bits]|mining discovery link:905|Mined from Empyrium Seams",
 
 		-- Skinning - Stonehide Leather
 		[40131] = "Stonehide Leather Sample|10+ skinning|1 StonehideLeather|{1377086} [Stonehide Leather Sample]|skinning discovery link:619|Skinned from Stonehide Leather",
@@ -496,6 +527,34 @@ Data.Quests = {
 
 	-- Broken Isles
 	[619] = {
+		-- Herbalism - Aethril
+		[40013] = "Aethril Sample|10+ herbalism|1 Aethril|{1395063} [Aethril Sample]|herbalism discovery link:630|Gathered from Aethril",
+		[40015] = "Ragged Strips of Silk|10+ herbalism 40014|1 Aethril|{463527} [Ragged Strips of Silk]|herbalism discovery link:630|Gathered from Aethril",
+		[40017] = "A Slip of the Hand|10+ herbalism 40016|1 Aethril|[Auto Accept]|herbalism discovery link:630|Has a chance to be obtained after gathering Aethril",
+
+		-- Herbalism - Dreamleaf
+		[40018] = "Dreamleaf Sample|10+ herbalism|2 Dreamleaf|{1387613} [Dreamleaf Sample]|herbalism discovery link:641|Gathered from Dreamleaf",
+		[40020] = "Twisted to Death|10+ herbalism 40019|2 Dreamleaf|{1387617} [Blight-Twisted Herb]|herbalism discovery link:641|Gathered from Dreamleaf",
+		[40022] = "Choked by Nightmare|10+ herbalism 40021|2 Dreamleaf|{1387617} [Blight-Choked Herb]|herbalism discovery link:641|Gathered from Dreamleaf",
+
+		-- Herbalism - Foxflower
+		[40024] = "Foxflower Sample|10+ herbalism|3 Foxflower|{1387616} [Foxflower Sample]|herbalism discovery link:650|Gathered from Foxflower",
+		[40025] = "Teeny Bite Marks|10+ herbalism 40024|3 Foxflower|{960686} [Nibbled Foxflower Stem]|herbalism discovery link:650|Gathered from Foxflower",
+		[40028] = "The Pied Picker|10+ herbalism 40026|3 Foxflower|{656439} [Foxflower Scent Gland]|herbalism discovery link:650|Gathered from Foxflower",
+
+		-- Herbalism - Fjarnskaggl
+		[40029] = "Fjarnskaggl Sample|10+ herbalism|4 Fjarnskaggl|{1387615} [Fjarnskaggl Sample]|herbalism discovery link:634|Gathered from Fjarnskaggl",
+		[40030] = "Ram's-Horn Trowel|10+ herbalism 40029|4 Fjarnskaggl|{134436} [Ram's-Horn Trowel]|herbalism discovery link:634|Gathered from Fjarnskaggl",
+		[40032] = "The Missing Page|10+ herbalism 40031|4 Fjarnskaggl|{134938} [Runed Journal Page]|herbalism discovery link:634|Gathered from Fjarnskaggl",
+
+		-- Herbalism - Starlight Rose
+		[40034] = "Starlight Rosedust|10+ herbalism|5 StarlightRose|{1387618} [Starlight Rosedust]|herbalism discovery link:680|Gathered from Starlight Rose",
+		[40036] = "Jeweled Spade Handle|10+ herbalism 40035|5 StarlightRose|{305163} [Jeweled Spade Handle]|herbalism discovery link:680|Gathered from Starlight Rose",
+		[40038] = "Insane Ramblings|10+ herbalism 40037|5 StarlightRose|{134943} [Scribbled Ramblings]|herbalism discovery link:680|Gathered from Starlight Rose",
+
+		-- Herbalism - Felwort
+		[40040] = "Felwort Sample|10+ herbalism 45727,43341|6 Felwort|{1387614} [Felwort Sample]|herbalism discovery link:619|Gathered from Felwort", -- Available after unlocking World Quests
+
 		-- Mining - Leystone
 		[38777] = "Leystone Deposit Sample|10+ mining|1 LeystoneDeposit|{1394960} [Leystone Deposit Sample]|mining discovery|Mined from Leystone Deposits",
 		[38784] = "Leystone Seam Sample|10+ mining|2 LeystoneSeam|{1394960} [Leystone Seam Sample]|mining discovery|Mined from Leystone Seams",
@@ -739,8 +798,8 @@ Data.Quests = {
 		[42526] = "Tech It Up A Notch|10+ hunter 42525|42.78 46.94|Tactician Tinderfell|artifact",
 		[42384] = "Scouting Reports|10+ hunter 42526|42.78 46.94|Tactician Tinderfell|artifact",
 		-- ...
-		[42389] = "Calling Hilaire Home|10+ hunter 42388|43.39 26.32|Emmarel Shadewarden|artifact",
-		[42390] = "Recruiting Rexxar|10+ hunter 42388|43.39 26.32|Emmarel Shadewarden|artifact",
+		[42389] = "Calling Hilaire Home|10+ hunter +42388|43.39 26.32|Emmarel Shadewarden|artifact",
+		[42390] = "Recruiting Rexxar|10+ hunter +42388|43.39 26.32|Emmarel Shadewarden|artifact",
 		[42395] = "Signaling Trouble|10+ hunter 42393|43.39 26.32|Emmarel Shadewarden|artifact",
 		[42134] = "Recruiting More Troops|10+ hunter 42395|42.78 46.94|Tactician Tinderfell|artifact",
 		[42394] = {"Unseen Protection|10+ hunter 42395|43.39 26.32|Emmarel Shadewarden|artifact", "Unseen Protection|10+ hunter 42395|41.59 74.72|Emmarel Shadewarden|artifact",},
@@ -920,7 +979,7 @@ Data.Quests = {
 		[40017] = "A Slip of the Hand|10+ herbalism 40016|1 Aethril|[Auto Accept]|herbalism discovery|Has a chance to be obtained after gathering Aethril",
 
 		-- Herbalism - Felwort
-		[40040] = "Felwort Sample|45+ herbalism 45727,43341|6 Felwort|{1387614} [Felwort Sample]|herbalism discovery|Gathered from Felwort",
+		[40040] = "Felwort Sample|10+ herbalism 45727,43341|6 Felwort|{1387614} [Felwort Sample]|herbalism discovery|Gathered from Felwort", -- Available after unlocking World Quests
 
 		-- Mining - Leystone
 		[38777] = "Leystone Deposit Sample|10+ mining|1 LeystoneDeposit|{1394960} [Leystone Deposit Sample]|mining discovery|Mined from Leystone Deposits",
@@ -992,7 +1051,6 @@ Data.Quests = {
 		[44106] = "Archdruid of Lore|10+ 38384 druid|54.38 73.57|Aranelle", -- Druid
 		[38235] = "Solid as a Rock|10+ 38381,44106|48.86 70.2|Elothir",
 		[38225] = "Death to the Witchmother|10+ 38381,44106|48.86 70.2|Elothir",
-
 
 		-- Archdruid of the Claw
 		[38142] = "Archdruid of the Claw|10+ 38384|54.38 73.57|Aranelle",
@@ -1090,9 +1148,24 @@ Data.Quests = {
 		-- Sylvan Falls
 		[41094] = "Hatchlings of the Talon|10+|76.08 31.39|Aviana",
 
+		-- Hunter - Watchers in the Wild
+		[42386] = "Rising Troubles|10+ hunter 42385|41.7 60|Hudson Crawford|artifact",
+		[42387] = "Assassin Entrapment|10+ hunter 42385|41.7 60|Hudson Crawford|artifact",
+		[42388] = "Urgent Summons|10+ hunter 42386 42387|41.67 59.95|Snowfeather|artifact",
+
 		-- Engineering
 		[40861] = "In My Sights|10+ engineering 40860|59.83 62.26|Fargo Flintlocke|engineering",
 		[40862] = "All Charged Up|10+ engineering 40860|59.83 62.26|Fargo Flintlocke|engineering",
+
+		-- Herbalism - Dreamleaf
+		[40018] = "Dreamleaf Sample|10+ herbalism|2 Dreamleaf|{1387613} [Dreamleaf Sample]|herbalism discovery|Gathered from Dreamleaf",
+		[40020] = "Twisted to Death|10+ herbalism 40019|2 Dreamleaf|{1387617} [Blight-Twisted Herb]|herbalism discovery|Gathered from Dreamleaf",
+		[40021] = "One Dead Plant is One Too Many|10+ herbalism 40020|54.81 71.71|Wildcrafter Osme|herbalism",
+		[40022] = "Choked by Nightmare|10+ herbalism 40021|2 Dreamleaf|{1387617} [Blight-Choked Herb]|herbalism discovery|Gathered from Dreamleaf",
+		[40023] = "The Last Straw|10+ herbalism 40022|54.81 71.71|Wildcrafter Osme|herbalism",
+
+		-- Herbalism - Felwort
+		[40040] = "Felwort Sample|10+ herbalism 45727,43341|6 Felwort|{1387614} [Felwort Sample]|herbalism discovery|Gathered from Felwort", -- Available after unlocking World Quests
 
 		-- Mining - Leystone
 		[38777] = "Leystone Deposit Sample|10+ mining|1 LeystoneDeposit|{1394960} [Leystone Deposit Sample]|mining discovery|Mined from Leystone Deposits",
@@ -1290,6 +1363,14 @@ Data.Quests = {
 		[43335] = "Survival Skills|10+ hunter 42390|36.73 35.4|Rexxar|artifact",
 		[42392] = "Survive the Night|10+ hunter 43335|36.73 35.4|Rexxar|artifact",
 		[42410] = "Champion: Rexxar|10+ hunter 42392|36.73 35.4|Rexxar|artifact",
+
+		-- Herbalism - Foxflower
+		[40024] = "Foxflower Sample|10+ herbalism|3 Foxflower|{1387616} [Foxflower Sample]|herbalism discovery|Gathered from Foxflower",
+		[40025] = "Teeny Bite Marks|10+ herbalism 40024|3 Foxflower|{960686} [Nibbled Foxflower Stem]|herbalism discovery|Gathered from Foxflower",
+		[40028] = "The Pied Picker|10+ herbalism 40026|3 Foxflower|{656439} [Foxflower Scent Gland]|herbalism discovery|Gathered from Foxflower",
+
+		-- Herbalism - Felwort
+		[40040] = "Felwort Sample|10+ herbalism 45727,43341|6 Felwort|{1387614} [Felwort Sample]|herbalism discovery|Gathered from Felwort", -- Available after unlocking World Quests
 
 		-- Mining - Leystone
 		[38777] = "Leystone Deposit Sample|10+ mining|1 LeystoneDeposit|{1394960} [Leystone Deposit Sample]|mining discovery|Mined from Leystone Deposits",
@@ -1630,6 +1711,14 @@ Data.Quests = {
 		[42411] = "Champion: Beastmaster Hilaire|10+ hunter 42391|34.73 41.59|Beastmaster Hilaire|artifact",
 		[42393] = "Homecoming|10+ hunter 42411|34.73 41.59|Beastmaster Hilaire|artifact",
 
+		-- Herbalism - Fjarnskaggl
+		[40029] = "Fjarnskaggl Sample|10+ herbalism|4 Fjarnskaggl|{1387615} [Fjarnskaggl Sample]|herbalism discovery|Gathered from Fjarnskaggl",
+		[40030] = "Ram's-Horn Trowel|10+ herbalism 40029|4 Fjarnskaggl|{134436} [Ram's-Horn Trowel]|herbalism discovery|Gathered from Fjarnskaggl",
+		[40032] = "The Missing Page|10+ herbalism 40031|4 Fjarnskaggl|{134938} [Runed Journal Page]|herbalism discovery|Gathered from Fjarnskaggl",
+
+		-- Herbalism - Felwort
+		[40040] = "Felwort Sample|10+ herbalism 45727,43341|6 Felwort|{1387614} [Felwort Sample]|herbalism discovery|Gathered from Felwort", -- Available after unlocking World Quests
+
 		-- Mining - Leystone
 		[38777] = "Leystone Deposit Sample|10+ mining|1 LeystoneDeposit|{1394960} [Leystone Deposit Sample]|mining discovery|Mined from Leystone Deposits",
 		[38784] = "Leystone Seam Sample|10+ mining|2 LeystoneSeam|{1394960} [Leystone Seam Sample]|mining discovery|Mined from Leystone Seams",
@@ -1723,6 +1812,14 @@ Data.Quests = {
 
 		-- An Ancient Gift
 		[40008] = "The Only Way Out is Through|45+ 39987|34.65 53.4|Frist Archanist Thalyssra",
+
+		-- Herbalism - Starlight Rose
+		[40034] = "Starlight Rosedust|10+ herbalism|5 StarlightRose|{1387618} [Starlight Rosedust]|herbalism discovery|Gathered from Starlight Rose",
+		[40036] = "Jeweled Spade Handle|10+ herbalism 40035|5 StarlightRose|{305163} [Jeweled Spade Handle]|herbalism discovery|Gathered from Starlight Rose",
+		[40038] = "Insane Ramblings|10+ herbalism 40037|5 StarlightRose|{134943} [Scribbled Ramblings]|herbalism discovery|Gathered from Starlight Rose",
+
+		-- Herbalism - Felwort
+		[40040] = "Felwort Sample|10+ herbalism 45727,43341|6 Felwort|{1387614} [Felwort Sample]|herbalism discovery|Gathered from Felwort", -- Available after unlocking World Quests
 
 		-- Mining - Leystone
 		[38777] = "Leystone Deposit Sample|10+ mining|1 LeystoneDeposit|{1394960} [Leystone Deposit Sample]|mining discovery|Mined from Leystone Deposits",
@@ -2159,6 +2256,54 @@ Data.Quests = {
 	},
 
 
+	--[[ Durotar ]]--
+
+	[1] = {
+		-- Stormheim - Greymane's Gambit
+		[39698] = "Making the Rounds|10+ 38307 horde|61.37 8.86|Lady Sylvanas Windrunner",
+		[39801] = "The Splintered Fleet|10+ 39698 horde|61.49 8.77|Lady Sylvanas Windrunner",
+
+		-- Death Knight - The Four Horsemen
+		[42484] = "The Firstborn Rises|10+ deathknight 42449|47.32 17.67|Thassarian|artifact",
+	},
+
+
+	--[[ Tanaris ]]--
+
+	-- Tanaris
+	[71] = {
+		-- OOX-17/TN
+		[351] = "Find OOX-17/TN!|15+|1 OOXDistressBeacon|{132836} [uncommon]OOX-17/TN Distress Beacon]|discovery|Zone Drop",
+	},
+
+	-- The Noxious Lair
+	[72] = {
+		-- OOX-17/TN
+		[351] = "Find OOX-17/TN!|15+|1 OOXDistressBeacon|{132836} [uncommon]OOX-17/TN Distress Beacon]|discovery|Zone Drop",
+	},
+
+	-- The Gaping Chasm
+	[73] = {
+		-- OOX-17/TN
+		[351] = "Find OOX-17/TN!|15+|1 OOXDistressBeacon|{132836} [uncommon]OOX-17/TN Distress Beacon]|discovery|Zone Drop",
+	},
+
+	-- Dungeon: Zul'Farrak
+	[219] = {
+		-- OOX-17/TN
+		[351] = "Find OOX-17/TN!|15+|1 OOXDistressBeacon|{132836} [uncommon]OOX-17/TN Distress Beacon]|discovery|Zone Drop",
+	},
+
+
+	--[[ Feralas ]]--
+
+	-- Feralas
+	[69] = {
+		-- OOX-17/FE
+		[25475] = "Find OOX-22/FE!|15+|1 OOXDistressBeacon|{132836} [uncommon]OOX-17/FE Distress Beacon]|discovery|Zone Drop",
+	},
+
+
 	--[[ Elwynn Forest ]]--
 
 	-- Stormwind City
@@ -2206,14 +2351,10 @@ Data.Quests = {
 	},
 
 
-	--[[ Durotar ]]--
+	--[[ The Hinterlands ]]--
 
-	[1] = {
-		-- Stormheim - Greymane's Gambit
-		[39698] = "Making the Rounds|10+ 38307 horde|61.37 8.86|Lady Sylvanas Windrunner",
-		[39801] = "The Splintered Fleet|10+ 39698 horde|61.49 8.77|Lady Sylvanas Windrunner",
-
-		-- Death Knight - The Four Horsemen
-		[42484] = "The Firstborn Rises|10+ deathknight 42449|47.32 17.67|Thassarian|artifact",
+	[26] = {
+		-- OOX-17/HL
+		[485] = "Find OOX-22/HL!|10+|1 OOXDistressBeacon|{132836} [uncommon]OOX-17/HL Distress Beacon]|discovery|Zone Drop",
 	},
 }
