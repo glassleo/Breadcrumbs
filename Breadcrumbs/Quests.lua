@@ -53,8 +53,11 @@ local _, Data = ...
 		garrison		Must have unlocked WoD Garrison (any tier)
 		garrison:n		Must have a WoD Garrison at tier n
 
-		research:n		Must have researched Garrison talent ID n (see https://wow.tools/dbc/?dbc=garrtalent)
-		-research:n		Must not have researched Garrison talent ID n
+		research:n		Must have researched GarrTalent ID n (see https://wow.tools/dbc/?dbc=garrtalent)
+		-research:n		Must not have researched GarrTalent ID n
+
+		phase:n			Map must have UiMapArt ID n (see https://wow.tools/dbc/?dbc=uimapart) - used to determine which version of the map the player is currently on
+		-phase:n		Map must not have UiMapArt ID n
 
 		broken			Quest is broken and cannot be completed, it will be hidden unless the user has decided to display broken quests
 		broken:n		Quest is broken if you are level n or higher and cannot be completed, it will be hidden unless the user has decided to display broken quests
@@ -2343,11 +2346,13 @@ Data.Quests = {
 	--[[ Arathi Highlands ]]--
 
 	[14] = {
+		-- Phases: 15 (before BfA), 1137 (BfA)
+
 		-- Death Knight - The Four Horsemen
-		[42534] = "Our Oldest Enemies|10+ deathknight 42533|19.45 67.31|Prince Galen Trollbane|artifact",
-		[42535] = "Death... and Decay|10+ deathknight 42533|19.45 67.31|Prince Galen Trollbane|artifact",
-		[42536] = "Regicide|10+ deathknight 42534 42535|19.52 67.09|Thassarian|artifact",
-		[42537] = "The King Rises|10+ deathknight 42536|23.39 61.4|Thassarian|artifact",
+		[42534] = "Our Oldest Enemies|10+ phase:15 deathknight 42533|19.45 67.31|Prince Galen Trollbane|artifact",
+		[42535] = "Death... and Decay|10+ phase:15 deathknight 42533|19.45 67.31|Prince Galen Trollbane|artifact",
+		[42536] = "Regicide|10+ phase:15 deathknight 42534 42535|19.52 67.09|Thassarian|artifact",
+		[42537] = "The King Rises|10+ phase:15 deathknight 42536|23.39 61.4|Thassarian|artifact",
 	},
 
 
