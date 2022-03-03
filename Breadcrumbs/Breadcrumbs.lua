@@ -53,15 +53,15 @@ local function NewPin()
 		pin:GetNormalTexture():SetDesaturated(false)
 		pin:GetNormalTexture():SetVertexColor(1, 1, 1)
 		pin:GetNormalTexture():SetTexCoord(0, 1, 0, 1)
-		pin:SetNormalTexture(nil)
+		pin:SetNormalTexture("")
 		if pin:GetHighlightTexture() then
 			pin:GetHighlightTexture():SetDesaturated(false)
 			pin:GetHighlightTexture():SetVertexColor(1, 1, 1)
 			pin:GetHighlightTexture():SetTexCoord(0, 1, 0, 1)
 		end
-		pin:SetHighlightTexture(nil)
+		pin:SetHighlightTexture("")
 		pin.arrow:SetDesaturated(false)
-		pin.arrow:SetTexture(nil)
+		pin.arrow:SetTexture("")
 		pin:SetScript("OnMouseUp", nil)
 		return pin
 	end
@@ -738,33 +738,47 @@ function Breadcrumbs:UpdateMap(event, ...)
 				for i = 1, type(data) == "string" and 1 or #data do
 					local datastring = type(data) == "string" and data or data[i]
 					-- Check if we meet the quest requirements
-					local eligible, texture, title, x, y, tip1, tip2, tip3, tip4, tip5, tip6, tip7, tip8, tip9 = Breadcrumbs:CheckPOI(datastring)
+					local eligible, texture, title, x, y, tip1, tip2, tip3, tip4, tip5, tip6, tip7, tip8, tip9 = Breadcrumbs:CheckPOI(zone, datastring)
 
 					if eligible and x and y then
 						-- Pin size
-						local texture, texturesize = strsplit(" ", texture or "")
-						local size = (texturesize == "objective") and setting_objectivesize or (texturesize == "small") and setting_poisizesmall or setting_poisize
+						local texture, flag1, flag2 = strsplit(" ", texture or "")
+						local link = nil
+						local size = (flag1 == "objective") and setting_objectivesize or (flag1 == "small") and setting_poisizesmall or (flag1 == "large") and (setting_poisize*1.5) or setting_poisize
+
+						-- Link
+						if flag1 and string.match(flag1, "link:([%d]+)") then
+							link = tonumber(string.match(flag1, "link:([%d]+)"))
+						elseif flag2 and string.match(flag2, "link:([%d]+)") then
+							link = tonumber(string.match(flag2, "link:([%d]+)"))
+						end
 
 						-- Create quest marker pin
 						local pin = NewPin()
 
-						if string.match(texture, "Discovery/[%w]+") then
+						if texture == "-" then
+							pin:SetNormalTexture("")
+							pin:SetHighlightAtlas("BonusChest-CircleGlow")
+							pin:GetHighlightTexture():SetAlpha(0.3)
+						elseif string.match(texture, "Discovery/[%w]+") then
 							pin:SetNormalTexture("Interface/AddOns/Breadcrumbs/Textures/" .. texture)
 							pin:SetHighlightTexture("Interface/AddOns/Breadcrumbs/Textures/" .. texture)
 							pin:GetNormalTexture():SetTexCoord(0, 0.75, 0, 0.75) -- Crop 64×64 to 48×48
 							pin:GetHighlightTexture():SetTexCoord(0, 0.75, 0, 0.75) -- Crop 64×64 to 48×48
+							pin:GetHighlightTexture():SetAlpha(0.5)
 						elseif string.match(texture, "POI/[%w]+") then
 							pin:SetNormalTexture("Interface/AddOns/Breadcrumbs/Textures/" .. texture)
 							pin:SetHighlightTexture("Interface/AddOns/Breadcrumbs/Textures/" .. texture)
+							pin:GetHighlightTexture():SetAlpha(0.5)
 						elseif string.match(texture, "[%w%p]+") then
 							pin:SetNormalAtlas(texture)
 							pin:SetHighlightAtlas(texture)
+							pin:GetHighlightTexture():SetAlpha(0.5)
 						else
 							pin:SetNormalTexture(texture)
 							pin:SetHighlightTexture(texture)
+							pin:GetHighlightTexture():SetAlpha(0.5)
 						end
-
-						pin:GetHighlightTexture():SetAlpha(0.5)
 
 						pin:SetSize(size, size)
 
@@ -789,6 +803,14 @@ function Breadcrumbs:UpdateMap(event, ...)
 						pin:SetScript("OnLeave", function(self, motion)
 							GameTooltip:Hide()
 						end)
+
+						if link then
+							pin:SetScript("OnMouseUp", function(self, button)
+								if button == "LeftButton" then
+									WorldMapFrame:SetMapID(link)
+								end
+							end)
+						end
 
 						Pins:AddWorldMapIconMap("Breadcrumbs", pin, zone, x/100, y/100, nil, setting_poiframelevel or "PIN_FRAME_LEVEL_AREA_POI")
 						pin:Show()
@@ -870,6 +892,12 @@ function Breadcrumbs:CheckQuest(map, quest, datastring)
 					-- Must not have researched Garrison talent (-research:n)
 					if string.match(v, "%-research:(%d+)") and not C_Garrison.GetTalentInfo(tonumber(string.match(v, "research:(%d+)") or 0)).researched then pass = true end
 
+					-- Map must have Art ID (phase:n)
+					if string.match(v, "phase:(%d+)") and (C_Map.GetMapArtID(map) == tonumber(string.match(v, "phase:(%d+)") or 0)) then pass = true end
+
+					-- Map must not have Art ID (-phase:n)
+					if string.match(v, "%-phase:(%d+)") and (C_Map.GetMapArtID(map) ~= tonumber(string.match(v, "%-phase:(%d+)") or 0)) then pass = true end
+
 					-- Must match...
 					if v == class or v == faction or v == covenant or v == prof1 or v == prof2 or v == race then pass = true end
 					if v == "garrison" and garrison >= 1 then pass = true end
@@ -921,7 +949,7 @@ function Breadcrumbs:CheckQuest(map, quest, datastring)
 	return pass, title, x, y, xx, yy, source, flags, help, help2, help3, help4, help5, help6, help7, help8, help9
 end
 
-function Breadcrumbs:CheckPOI(datastring)
+function Breadcrumbs:CheckPOI(map, datastring)
 	-- Check requirements
 	local texture, title, requirements, coordinates, help, help2, help3, help4, help5, help6, help7, help8, help9 = strsplit("|", datastring)
 	local data = { strsplit(" ", strlower(requirements)) }
@@ -975,6 +1003,12 @@ function Breadcrumbs:CheckPOI(datastring)
 
 					-- Must not have researched Garrison talent (-research:n)
 					if string.match(v, "%-research:(%d+)") and not C_Garrison.GetTalentInfo(tonumber(string.match(v, "research:(%d+)") or 0)).researched then pass = true end
+
+					-- Map must have Art ID (phase:n)
+					if string.match(v, "phase:(%d+)") and (C_Map.GetMapArtID(map) == tonumber(string.match(v, "phase:(%d+)") or 0)) then pass = true end
+
+					-- Map must not have Art ID (-phase:n)
+					if string.match(v, "%-phase:(%d+)") and (C_Map.GetMapArtID(map) ~= tonumber(string.match(v, "%-phase:(%d+)") or 0)) then pass = true end
 
 					-- Must match...
 					if v == class or v == faction or v == covenant or v == prof1 or v == prof2 or v == race then pass = true end
