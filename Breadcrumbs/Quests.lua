@@ -2063,15 +2063,17 @@ Data.Quests = {
 
 	-- Ashran
 	[588] = {
-		-- Ashran Appearance
-		[36626] = "Host Howell|10+ alliance 36624|37.54 91.18|Private Tristan|link:622", -- Alliance
-		[36629] = "Inspiring Ashran|10+ alliance 36626|38.31 96.88|Lieutenant Howell|link:622", -- Alliance
-		[36630] = "A Surly Dwarf|10+ alliance 36629|38.31 96.88|Lieutenant Howell|link:622", -- Alliance
-		[36633] = "Delvar Ironfist|10+ alliance 36630|41.05 86.92|Delvar Ironfist|link:622", -- Alliance
-		[36707] = "Warspear Welcome|10+ horde 36706|41.02 10.57|Stomphoof|link:624",-- Horde
-		[36708] = "Inspiring Ashran|10+ horde 36707|40.66 13.35|Lieutenant Kragil|link:624", -- Horde
-		[36709] = "Burning Beauty|10+ horde 36708|40.66 13.35|Lieutenant Kragil|link:624", -- Horde
-		[35243] = "The Dark Lady's Gift|10+ horde 36709|45.27 7.6|Vivianne|link:624", -- Horde
+		-- Alliance - Ashran Appearance
+		[36626] = "Host Howell|10+ alliance 36624|37.54 91.18|Private Tristan|link:622",
+		[36629] = "Inspiring Ashran|10+ alliance 36626|38.31 96.88|Lieutenant Howell|link:622",
+		[36630] = "A Surly Dwarf|10+ alliance 36629|38.31 96.88|Lieutenant Howell|link:622",
+		[36633] = "Delvar Ironfist|10+ alliance 36630|41.05 86.92|Delvar Ironfist|link:622",
+
+		-- Horde - Ashran Appearance
+		[36707] = "Warspear Welcome|10+ horde 36706|41.02 10.57|Stomphoof|link:624",
+		[36708] = "Inspiring Ashran|10+ horde 36707|40.66 13.35|Lieutenant Kragil|link:624",
+		[36709] = "Burning Beauty|10+ horde 36708|40.66 13.35|Lieutenant Kragil|link:624",
+		[35243] = "The Dark Lady's Gift|10+ horde 36709|45.27 7.6|Vivianne|link:624",
 	},
 
 	-- Stormshield
