@@ -739,19 +739,23 @@ function Breadcrumbs:UpdateMap(event, ...)
 				for i = 1, type(data) == "string" and 1 or #data do
 					local datastring = type(data) == "string" and data or data[i]
 					-- Check if we meet the quest requirements
-					local eligible, texture, title, x, y, tip1, tip2, tip3, tip4, tip5, tip6, tip7, tip8, tip9 = Breadcrumbs:CheckPOI(zone, datastring)
+					local eligible, texture, title, x, y, flags, tip1, tip2, tip3, tip4, tip5, tip6, tip7, tip8, tip9 = Breadcrumbs:CheckPOI(zone, datastring)
 
 					if eligible and x and y then
 						-- Pin size
-						local texture, flag1, flag2 = strsplit(" ", texture or "")
-						local link = nil
-						local size = (flag1 == "objective") and setting_objectivesize or (flag1 == "small") and setting_poisizesmall or (flag1 == "large") and (setting_poisize*1.5) or setting_poisize
+						local texture, texturesize = strsplit(":", texture or "")
+						local size = (texturesize == "objective") and setting_objectivesize or (texturesize == "small") and setting_poisizesmall or (texturesize == "large") and (setting_poisize*1.5) or setting_poisize
 
-						-- Link
-						if flag1 and string.match(flag1, "link:([%d]+)") then
-							link = tonumber(string.match(flag1, "link:([%d]+)"))
-						elseif flag2 and string.match(flag2, "link:([%d]+)") then
-							link = tonumber(string.match(flag2, "link:([%d]+)"))
+						-- Build the flags table
+						local link = nil
+						flags = flags and { strsplit(" ", flags) } or {}
+						for _, v in ipairs(flags) do
+							if string.match(v, "link:([%d]+)") then
+								link = tonumber(string.match(v, "link:([%d]+)"))
+								flags["link"] = true
+							else
+								flags[v] = true
+							end
 						end
 
 						-- Create quest marker pin
@@ -785,24 +789,34 @@ function Breadcrumbs:UpdateMap(event, ...)
 
 						pin:SetScript("OnEnter", function(self, motion)
 							GameTooltip:Hide()
-							GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
-							GameTooltip:AddLine(Breadcrumbs:FormatTooltip(title))
-							if tip1 then
-								if tip1 then if strlen(tip1) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip1), nil, nil, nil, true) else GameTooltip:AddLine(" ") end end
-								if tip2 then if strlen(tip2) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip2), nil, nil, nil, true) else GameTooltip:AddLine(" ") end end
-								if tip3 then if strlen(tip3) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip3), nil, nil, nil, true) else GameTooltip:AddLine(" ") end end
-								if tip4 then if strlen(tip4) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip4), nil, nil, nil, true) else GameTooltip:AddLine(" ") end end
-								if tip5 then if strlen(tip5) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip5), nil, nil, nil, true) else GameTooltip:AddLine(" ") end end
-								if tip6 then if strlen(tip6) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip6), nil, nil, nil, true) else GameTooltip:AddLine(" ") end end
-								if tip7 then if strlen(tip7) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip7), nil, nil, nil, true) else GameTooltip:AddLine(" ") end end
-								if tip8 then if strlen(tip8) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip8), nil, nil, nil, true) else GameTooltip:AddLine(" ") end end
-								if tip9 then if strlen(tip9) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip9), nil, nil, nil, true) else GameTooltip:AddLine(" ") end end
+
+							if flags["tooltip"] or flags["combo"] then
+								GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
+								GameTooltip:AddLine(Breadcrumbs:FormatTooltip(flags["combo"] and tip2 or title))
+								if tip1 or flags["combo"] then
+									if tip1 and not flags["combo"] then if strlen(tip1) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip1), nil, nil, nil, true) elseif not flags["combo"] then GameTooltip:AddLine(" ") end end
+									if tip2 and not flags["combo"] then if strlen(tip2) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip2), nil, nil, nil, true) elseif not flags["combo"] then GameTooltip:AddLine(" ") end end
+									if tip3 then if strlen(tip3) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip3), nil, nil, nil, true) else GameTooltip:AddLine(" ") end end
+									if tip4 then if strlen(tip4) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip4), nil, nil, nil, true) else GameTooltip:AddLine(" ") end end
+									if tip5 then if strlen(tip5) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip5), nil, nil, nil, true) else GameTooltip:AddLine(" ") end end
+									if tip6 then if strlen(tip6) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip6), nil, nil, nil, true) else GameTooltip:AddLine(" ") end end
+									if tip7 then if strlen(tip7) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip7), nil, nil, nil, true) else GameTooltip:AddLine(" ") end end
+									if tip8 then if strlen(tip8) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip8), nil, nil, nil, true) else GameTooltip:AddLine(" ") end end
+									if tip9 then if strlen(tip9) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip9), nil, nil, nil, true) else GameTooltip:AddLine(" ") end end
+								end
+								GameTooltip:Show()
+							else
+								WorldMapFrame:TriggerEvent("SetAreaLabel", 4, Breadcrumbs:FormatTooltip(title), Breadcrumbs:FormatTooltip(tip1))
 							end
-							GameTooltip:Show()
 						end)
 
 						pin:SetScript("OnLeave", function(self, motion)
-							GameTooltip:Hide()
+							if flags["tooltip"] or flags["combo"] then
+								GameTooltip:Hide()
+							end
+							if not flags["tooltip"] then
+								WorldMapFrame:TriggerEvent("ClearAreaLabel", 4)
+							end
 						end)
 
 						if link then
@@ -952,7 +966,7 @@ end
 
 function Breadcrumbs:CheckPOI(map, datastring)
 	-- Check requirements
-	local texture, title, requirements, coordinates, help, help2, help3, help4, help5, help6, help7, help8, help9 = strsplit("|", datastring)
+	local texture, title, requirements, coordinates, flags, help, help2, help3, help4, help5, help6, help7, help8, help9 = strsplit("|", datastring)
 	local data = { strsplit(" ", strlower(requirements)) }
 	local x, y = strsplit(" ", coordinates or "")
 
@@ -1062,5 +1076,5 @@ function Breadcrumbs:CheckPOI(map, datastring)
 	end
 
 	-- eligible, texture, title, x, y, help, ...
-	return pass, texture, title, tonumber(x), tonumber(y), help, help2, help3, help4, help5, help6, help7, help8, help9
+	return pass, texture, title, tonumber(x), tonumber(y), flags, help, help2, help3, help4, help5, help6, help7, help8, help9
 end
