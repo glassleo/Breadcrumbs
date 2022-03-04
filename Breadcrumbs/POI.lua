@@ -57,6 +57,10 @@ Data.POI = {
 
 	-- Ring of Fates
 	[1670] = {
+		-- Portal
+		"POI/Portal|Portal to Orgrimmar|horde 60151|20.85 54.83",
+		"POI/Portal|Portal to Stormwind|alliance 60151|20.89 45.69",
+
 		-- Teleport Pad
 		"teleportationnetwork-32x32:small|Ring of Transference|1+|52.07 57.9|link:1671",
 		"teleportationnetwork-32x32:small|Ring of Transference|1+|57.14 50.36|link:1671",
