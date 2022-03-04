@@ -963,13 +963,13 @@ Data.Quests = {
 
 		-- Daglop
 		[42238] = "Missing Demon|10+ -38460|50.41 30.79|Tehd Shoemaker",
-		[38460] = "Let's Make A Deal|10+ 42238|61.24 50.74|Daglop",
+		[38460] = "Let's Make A Deal|10+ ~42238|61.24 50.74|Daglop",
 		[38232] = "Minion! Kill Them!|10+ 38460|61.24 50.74|Daglop",
 		[38237] = "This IS In My Contract.|10+ 38232|62.46 51.42|Daglop",
 
 		-- Felblaze Ingress
 		[42372] = "Felblaze Ingress|10+ -42375|50.46 30.73|Marius Felbane",
-		[42375] = "Eye See You|10+ 42372|63.85 29.94|Tehd Shoemaker",
+		[42375] = "Eye See You|10+ ~42372|63.85 29.94|Tehd Shoemaker",
 		[42369] = "They're Doing it Wrong|10+ 42375|63.85 29.94|Tehd Shoemaker",
 		[42368] = "Quantity Over Quality|10+ 42375|63.88 28.88|Marius Felbane",
 		[42367] = "Arkethrax|10+ 42375|63.88 28.88|Marius Felbane",
