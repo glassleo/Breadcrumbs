@@ -205,6 +205,8 @@ Data.Vignettes = {
 		[42628] = "Small Treasure Chest|10+|72.13 54.89||treasure|Contains:|{1397630} [Order Resources]",
 		[42629] = "Small Treasure Chest|10+|75.15 49.47||treasure|Contains:|{1397630} [Order Resources]",
 		[42632] = "Small Treasure Chest|10+|73.96 52.23||treasure|Contains:|{1397630} [Order Resources]",
+		[43237] = "Small Treasure Chest|10+|73.98 58.58||treasure|Contains:|{1397630} [Order Resources]",
+		[43307] = "Small Treasure Chest|10+|78.42 71.39||treasure|Contains:|{1397630} [Order Resources]",
 	},
 
 
@@ -221,7 +223,7 @@ Data.Vignettes = {
 
 	[37] = {
 		-- Treasure
-		--[] = "Waterlogged Chest|1+|32.2 63.5||treasure item:3678|Contains:|{135274} [Pitted Defias Shortsword]|{134939} [Recipe: Crocolisk Steak]|{133694} [poor]Red Defias Mask]|{133994} [Stormwind Brie]",
+		[54131] = "Waterlogged Chest|1+|32.2 63.5||treasure item:3678|Contains:|{135274} [Pitted Defias Shortsword]|{134939} [Recipe: Crocolisk Steak]|{133694} [poor]Red Defias Mask]|{133994} [Stormwind Brie]",
 	},
 
 }
