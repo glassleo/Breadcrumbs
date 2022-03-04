@@ -25,6 +25,7 @@ local setting_itemtooltipposition = "right" -- can be "bottom" or "right"
 local setting_showtreasures = true
 local setting_showvignettes = true
 local setting_showpoi = true
+local setting_showmailboxes = true
 
 
 -- Frame recycling pool
@@ -1009,6 +1010,9 @@ function Breadcrumbs:CheckPOI(map, datastring)
 
 					-- Map must not have Art ID (-phase:n)
 					if string.match(v, "%-phase:(%d+)") and (C_Map.GetMapArtID(map) ~= tonumber(string.match(v, "%-phase:(%d+)") or 0)) then pass = true end
+
+					-- Mailbox
+					if v == "mailbox" and setting_showmailboxes then pass = true end
 
 					-- Must match...
 					if v == class or v == faction or v == covenant or v == prof1 or v == prof2 or v == race then pass = true end
