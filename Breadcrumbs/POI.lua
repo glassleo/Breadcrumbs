@@ -12,6 +12,49 @@ local _, Data = ...
 
 Data.POI = {
 
+	--[[ Oribos ]]--
+
+	-- Ring of Transference
+	[1671] = {
+		-- Teleport Pad
+		"teleportationnetwork-32x32 small link:1670|[Ring of Fates]|1+|49.52 60.92",
+		"teleportationnetwork-32x32 small link:1670|[Ring of Fates]|1+|55.66 51.62",
+		"teleportationnetwork-32x32 small link:1670|[Ring of Fates]|1+|49.55 42.33",
+		"teleportationnetwork-32x32 small link:1670|[Ring of Fates]|1+|43.4 51.59",
+	},
+
+	-- Ring of Fates
+	[1670] = {
+		-- Teleport Pad
+		"teleportationnetwork-32x32 small link:1671|[Ring of Transference]|1+|52.07 57.9",
+		"teleportationnetwork-32x32 small link:1671|[Ring of Transference]|1+|57.14 50.36",
+		"teleportationnetwork-32x32 small link:1671|[Ring of Transference]|1+|52.09 42.81",
+		"teleportationnetwork-32x32 small link:1671|[Ring of Transference]|1+|47.04 50.32",
+
+		-- Mailbox
+		"mailbox objective|Mailbox|mailbox|58.16 36.08",
+		"mailbox objective|Mailbox|mailbox|62.92 51.74",
+		"mailbox objective|Mailbox|mailbox|30.63 52.24",
+		"mailbox objective|Mailbox|mailbox|73.74 49.11",
+
+		-- Profession Trainer
+		"POI/Alchemy|[Alchemy Trainer]|48+ alchemy|39.23 40.38|Elixirist Au'pyr",
+		"POI/Blacksmithing|[Blacksmithing Trainer]|48+ blacksmithing|40.48 31.5|Smith Au'berk",
+		"POI/Enchanting|[Enchanting Trainer]|48+ enchanting|48.41 29.44|Imbuer Au'vresh",
+		"POI/Engineering|[Engineering Trainer]|48+ engineering|38.06 44.66|Machinist Au'gur",
+		"POI/Herbalism|[Herbalism Trainer]|48+ herbalism|40.23 38.26|Selector Au'mar",
+		"POI/Inscription|[Inscription Trainer]|48+ inscription|36.52 36.7|Scribe Au'tehshi",
+		"POI/Jewelcrafting|[Jewelcrafting Trainer]|48+ jewelcrafting|35.2 41.35|Appraiser Au'vesk",
+		"POI/Leatherworking|[Leatherworking Trainer]|48+ leatherworking -skinning|42.27 26.58|Tanner Au'qil",
+		"POI/Leatherworking|[Leatherworking and Skinning Trainers]|48+ leatherworking skinning|42.14 27.31|Tanner Au'qil|Flayer Au'khem",
+		"POI/Mining|[Mining Trainer]|48+ mining|39.3 32.94|Excavationist Au'fer",
+		"POI/Skinning|[Skinning Trainer]|48+ skinning -leatherworking|42.13 28.08|Flayer Au'khem",
+		"POI/Tailoring|[Tailoring Trainer]|48+ tailoring|45.47 31.76|Stitcher Au'phes",
+		"POI/Cooking|[Cooking Trainer]|48+|46.82 22.66|Chef Au'krut",
+		"POI/Fishing|[Fishing Trainer]|48+|46.14 26.35|Retriever Au'prin",
+	},
+
+
 	--[[ Tiragarde Sound ]]--
 
 	-- Boralus
@@ -141,6 +184,9 @@ Data.POI = {
 		-- Flight Master
 		"taxinode_neutral small|[Flight Master]|druid|61.74 33.99|Danise Satargazer",
 
+		-- Mailbox
+		"mailbox objective|Mailbox|druid mailbox|40.44 26.03",
+
 		-- Scouting Map
 		"ShipMissionIcon-Bonus-MapBadge|Scouting Map|druid|52.48 50.82",
 
@@ -223,7 +269,7 @@ Data.POI = {
 	-- Paladin - Sanctum of Light
 	[24] = {
 		-- Portal
-		"POI/Portal|Portal to Dalaran|paladin|37.59 64.09",
+		"POI/Portal|Portal to Dalaran|paladin|37.62 64.08",
 
 		-- Scouting Map
 		"ShipMissionIcon-Bonus-MapBadge|Scouting Map|paladin|53.5 78.7",
