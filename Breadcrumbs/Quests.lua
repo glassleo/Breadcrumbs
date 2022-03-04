@@ -841,6 +841,11 @@ Data.Quests = {
 
 	-- Rogue - The Hall of Shadows
 	[626] = {
+		-- Saga of the Shadowblade
+		-- ...
+		[44183] = "Champion: Lord Jorach Ravenholdt|10+ rogue 44177|41.39 78.1|Lord Jorach Ravenholdt|artifact",
+		[43841] = "Convincin' Old Yancey|10+ rogue 44177|41.19 74.36|Fleet Admiral Tethys|artifact",
+
 		-- Battlegear of the Uncrowned
 		[44252] = "A Sheath For Every Blade|45+ rogue|26.92 36.82|Kelsey Steelspark",
 	},
@@ -887,9 +892,10 @@ Data.Quests = {
 		[42271] = "Their Dying Breaths|10+ 37991|48.9 26.4|Agapanthus",
 		[37690] = "Those Who Remember|10+ 42271|47.84 26.68|Senegos",
 		[37855] = "The Last of the Last|10+ 42271|47.84 26.68|Senegos",
-		[37856] = "Runas the Shamed|10+ 37855|48.62 16.51|Agapanthus",
+		[37856] = "The Withered|10+ 37855|48.62 16.51|Agapanthus",
 		[37859] = "The Consumed|10+ 37855|49.39 15.54|Mana-Drained Whelpling",
-		[37957] = "Runas the Shamed|10+ 37855|46.62 15.82|Stellagosa",
+		[37858] = "Stellagosa|10+ 37856 37859 -37957|49.18 16.6|Projection of Senegos",
+		[37957] = "Runas the Shamed|10+ 37855 ~37858|46.62 15.82|Stellagosa",
 		[37857] = "Runas Knows the Way|10+ 37856 37859 37957|49.22 16.09|Runas the Shamed",
 		[37959] = "The Hunger Returns|10+ 37857|53.79 16.81|Runas the Shamed",
 		[37960] = "Leyline Abuse|10+ 37857|53.36 16.26|Projection of Senegos",
@@ -1667,15 +1673,13 @@ Data.Quests = {
 		[40072] = "Halls of Valor: Securing the Aegis|10+ 40005|70.26 69.25|Havi|dungeon",
 		[43349] = "The Aegis of Aggramar|10+ 40072|71.4 70.4|The Aegis of Aggramar|dungeon link:705|Available after defeating Odyn in Halls of Valor",
 
-		-- What a Ripoff!
+		-- Lock, Stock and Two Smoking Goblins
 		[39789] = "Eating Into Our Business|10+|51.46 56.95|Ootasa Galehoof",
 		[39793] = "Only the Finest|10+ 39789|51.46 57.06|Rax Sixtrigger",
 		[39787] = "Rigging the Wager|10+ 39789|51.27 57.2|Snaggle Sixtrigger",
 		[39792] = "A Stack of Racks|10+ 39793 39787|51.37 57.28|Rax Sixtrigger",
 		[39786] = "A Stone Cold Gamble|10+ 39793 39787|51.32 56.99|Snaggle Sixtrigger",
 		[42483] = "Put It All on Red|10+ 39792 39786|51.38 57.32|Snaggle Sixtrigger",
-		
-		-- Lock, Stock and Two Smoking Goblins
 		[43331] = "Time to Collect|45+ 42483|51.38 57.19|Gazrix Gearlock|elsewhere link:627|Visit {!}Gazrix Gearlock in Dalaran to get revenge on the Sixtrigger brothers",
 
 		-- Plight of the Blackfeather
@@ -1709,10 +1713,15 @@ Data.Quests = {
 		[44868] = "Trial of Valor: Odyn's Judgment|45+ 44729|69.5 72.82|Odyn|raid link:807|Available after defeating Odyn in Trial of Valor",
 		[45088] = "Trial of Valor: The Lost Army|45+ 44721|69.5 72.82|Odyn|raid link:807|Available after defeating Odyn in Trial of Valor",
 
-		-- Hunter - Watchers in the Wild
+		-- Hunter - Beastmaster Hilaire
 		[42391] = "Bite of the Beast|10+ hunter 42389|34.73 41.59|Beastmaster Hilaire|artifact",
 		[42411] = "Champion: Beastmaster Hilaire|10+ hunter 42391|34.73 41.59|Beastmaster Hilaire|artifact",
 		[42393] = "Homecoming|10+ hunter 42411|34.73 41.59|Beastmaster Hilaire|artifact",
+
+		-- Rogue - Mystery at Citrine Bay
+		[44155] = "Searching For Clues|10+ rogue 44116|77.27 55.02|Fleet Admiral Tethys|artifact",
+		[44117] = "Time Flies When Yer Havin' Rum!|10+ rogue 44116|77.27 55.02|Fleet Admiral Tethys|artifact",
+		[44177] = "Dark Secrets and Shady Deals|10+ rogue 44155 44117|77.25 55.07|Fleet Admiral Tethys|artifact",
 
 		-- Herbalism - Fjarnskaggl
 		[40029] = "Fjarnskaggl Sample|10+ herbalism|4 Fjarnskaggl|{1387615} [Fjarnskaggl Sample]|herbalism discovery|Gathered from Fjarnskaggl",
