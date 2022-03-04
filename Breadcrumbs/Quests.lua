@@ -1119,6 +1119,8 @@ Data.Quests = {
 		[38646] = "A Sight For Sore Eyes|10+ 38643,39149|38.8 61.4|Granny Marl",
 		[38647] = "For the Corn!|10+ 38643,39149|38.8 61.4|Granny Marl",
 		[39117] = "Shriek No More|10+ 38643,39149|37 58.4|Cecily Radcliffe",
+		[38711] = "The Warden's Signet|10+ 38643,39149|39.12 64.5|{1025252} [Warden's Signet]||Drops from Lelyn Swiftshadow",
+		[39015] = "Grumpy|10+|38.64 65.64|Grumpy||Available after walking through the fire to the top floor of Heathrow Manor",
 
 		-- Black Rook Hold
 		-- Todo: check which quests can be picked up at the same time, and check 38721 coordinates
@@ -1160,7 +1162,7 @@ Data.Quests = {
 		-- Hunter - Watchers in the Wild
 		[42386] = "Rising Troubles|10+ hunter 42385|41.7 60|Hudson Crawford|artifact",
 		[42387] = "Assassin Entrapment|10+ hunter 42385|41.7 60|Hudson Crawford|artifact",
-		[42388] = "Urgent Summons|10+ hunter 42386 42387|41.67 59.95|Snowfeather|artifact",
+		[42388] = "Urgent Summons|10+ hunter 42386 42387 -42389|41.67 59.95|Snowfeather|artifact",
 
 		-- Engineering
 		[40861] = "In My Sights|10+ engineering 40860|59.83 62.26|Fargo Flintlocke|engineering",
