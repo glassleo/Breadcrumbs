@@ -92,6 +92,7 @@ Data.Vignettes = {
 	-- Zuldazar
 	[862] = {
 		-- Treasure
+		--[51624] = "Riches of Tor'nowa|10+|38.79 34.44||treasure|Contains:|{2032600} [War Resources]",
 		[48938] = "Offerings of the Chosen|10+|54.08 31.48||treasure link:1165|Contains:|{2032600} [War Resources]", -- Dazar'alor
 		[49257] = "Warlord's Cache|10+|49.5 65.26||treasure|Contains:|{2032600} [War Resources]",
 		[49936] = "Spoils of Pandaria|10+|51.71 86.88|Breath of Pa'ku|treasure down link:1177|Contains:|{2032600} [War Resources]", -- Breath of Pa'ku
@@ -100,7 +101,6 @@ Data.Vignettes = {
 		[50707] = "Dazar's Forgotten Chest|10+|38.79 34.44||treasure item:153702|Contains:|{2003614} [uncommon]Kubiline]|{2032600} [War Resources]",
 		[50949] = "The Exile's Lament|10+|71.9 16.8|The Exile's Hideaway|treasure down|Contains:|{2004597} [Polished Pet Charm] (5)|{2032600} [War Resources]", -- check exact coords
 		[51338] = "Cache of Secrets|10+|56.14 38.05|\"Inside the cave behind the waterfall\"|treasure link:1165|Contains:|{2032600} [War Resources]", -- Dazar'alor
-		--[51624] = "Riches of Tor'nowa|10+|38.79 34.44||treasure|Contains:|{2032600} [War Resources]",
 	},
 
 	-- Breath of Pa'ku - Upper Deck
@@ -137,8 +137,8 @@ Data.Vignettes = {
 
 	[864] = {
 		-- Treasure
-		[50237] = {"Ashvane Spoils|10+ -47326|46.59 88.01|Mine Cart|treasure|Contains:|{2032600} [War Resources]", "Ashvane Spoils|10+ 47326|44.33 92.22||treasure|Contains:|{2032600} [War Resources]",}, -- 47326 tracks the Mine Cart
 		--[51093] = "Grayal's Last Offering|10+|49.78 79.39|Atul'Aman\nAncient Altar|treasure down|Contains:|{2032600} [War Resources]",
+		[50237] = {"Ashvane Spoils|10+ -47326|46.59 88.01|Mine Cart|treasure|Contains:|{2032600} [War Resources]", "Ashvane Spoils|10+ 47326|44.33 92.22||treasure|Contains:|{2032600} [War Resources]",}, -- 47326 tracks the Mine Cart
 		[51132] = "Lost Explorer's Bounty|10+|49.78 79.39||treasure|Contains:|{2032600} [War Resources]",
 		[51133] = "Sandfury Reserve|10+|47.19 58.46||treasure|Contains:|{2032600} [War Resources]",
 		[51135] = "Stranded Cache|10+|44.51 26.15||treasure|Contains:|{2032600} [War Resources]",
@@ -160,13 +160,22 @@ Data.Vignettes = {
 		[37829] = "Small Treasure Chest|10+|53.17 64.46||treasure|Contains:|{1397630} [Order Resources]",
 		[37831] = "Small Treasure Chest|10+|49.64 34.47||treasure|Contains:|{1397630} [Order Resources]",
 		[38367] = "Glimmering Treasure Chest|10+|42.63 8.08||treasure|Contains:|{1397630} [Order Resources]",
-		[40711] = "Small Treasure Chest|10+|55.62 18.53||treasure|Contains:|{1397630} [Order Resources]",
+		[40711] = {"Small Treasure Chest|10+ -flying|55.62 18.53|\"Take the Ley Portal inside the tower\"|treasure|Contains:|{1397630} [Order Resources]", "Small Treasure Chest|10+ flying|55.62 18.53|\"On top of the tower\"|treasure|Contains:|{1397630} [Order Resources]",},
 		[42273] = "Small Treasure Chest|10+|62.38 58.4||treasure|Contains:|{1397630} [Order Resources]",
 		[42278] = "Small Treasure Chest|10+|62.99 54.18|Gloombound Barrow|treasure|Contains:|{1397630} [Order Resources]",
+		[42284] = "Small Treasure Chest|10+|62.02 83.77||treasure down link:631|Contains:|{1397630} [Order Resources]", -- Nar'thalas Academy
+		[42285] = "Small Treasure Chest|10+|71.73 21.62||treasure down link:631|Contains:|{1397630} [Order Resources]", -- Nar'thalas Academy
 		[42290] = {"Small Treasure Chest|10+ -37536|50.2 50.29|\"Inside the Shipwreck Arena cave\"|treasure down|Contains:|{1397630} [Order Resources]", "Small Treasure Chest|10+ 37538|50.2 50.29|\"Inside the Shipwreck Arena cave\"|treasure down|Contains:|{1397630} [Order Resources]",}, -- Phased out once 37536 completes and comes back after 37538 is turned in
 		[42291] = "Small Treasure Chest|10+|48.01 56.24||treasure down link:632|Contains:|{1397630} [Order Resources]", -- Oceanus Cove
 		[42293] = "Small Treasure Chest|10+|63.64 39.17||treasure|Contains:|{1397630} [Order Resources]",
 		[44104] = "Small Treasure Chest|10+|53.61 18.14||treasure down|Contains:|{1397630} [Order Resources]",
+	},
+
+	-- Nar'thalas Academy
+	[631] = {
+		-- Treasure
+		[42284] = "Small Treasure Chest|10+|62.02 83.77||treasure|Contains:|{1397630} [Order Resources]",
+		[42285] = "Small Treasure Chest|10+|71.73 21.62||treasure|Contains:|{1397630} [Order Resources]",
 	},
 
 	-- Oceanus Cove
