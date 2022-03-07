@@ -336,8 +336,8 @@ Data.POI = {
 	-- Rogue - The Hall of Shadows
 	[626] = {
 		-- Knocker
-		"poi-door-up:small|Tanks for Everything|rogue|29.58 21.84|Knocker",
-		"poi-door-up:small|One More Glass|rogue|39.61 21.42|Knocker",
+		"poi-door-up:small|Tanks for Everything|rogue|29.58 21.84||Secret Exit",
+		"poi-door-up:small|One More Glass|rogue|39.61 21.42||Secret Exit",
 
 		-- Scouting Map
 		"ShipMissionIcon-Bonus-MapBadge|Scouting Map|rogue|36.71 45.54",
