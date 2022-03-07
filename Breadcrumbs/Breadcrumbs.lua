@@ -37,7 +37,23 @@ local function RecycleAllPins()
 		for i = 1, MapPoolCount do
 			local pin = _G["BreadcrumbsMapPin"..i]
 			
+			pin.arrow:SetDesaturated(false)
+			pin.arrow:SetTexture("")
 			pin.arrow:Hide()
+			pin:GetNormalTexture():SetDesaturated(false)
+			pin:GetNormalTexture():SetVertexColor(1, 1, 1)
+			pin:GetNormalTexture():SetTexCoord(0, 1, 0, 1)
+			pin:SetNormalTexture("")
+			if pin:GetHighlightTexture() then
+				pin:GetHighlightTexture():SetDesaturated(false)
+				pin:GetHighlightTexture():SetVertexColor(1, 1, 1)
+				pin:GetHighlightTexture():SetTexCoord(0, 1, 0, 1)
+			end
+			pin:SetHighlightTexture("")
+			pin:UnregisterAllEvents()
+			pin:SetScript("OnEnter", nil)
+			pin:SetScript("OnLeave", nil)
+			pin:SetScript("OnMouseUp", nil)
 			pin:Hide()
 			MapPool[pin] = true
 		end
@@ -51,19 +67,6 @@ local function NewPin()
 		MapPool[pin] = nil -- remove it from the pool
 		pin:SetParent(WorldMapFrame)
 		pin:ClearAllPoints()
-		pin:GetNormalTexture():SetDesaturated(false)
-		pin:GetNormalTexture():SetVertexColor(1, 1, 1)
-		pin:GetNormalTexture():SetTexCoord(0, 1, 0, 1)
-		pin:SetNormalTexture("")
-		if pin:GetHighlightTexture() then
-			pin:GetHighlightTexture():SetDesaturated(false)
-			pin:GetHighlightTexture():SetVertexColor(1, 1, 1)
-			pin:GetHighlightTexture():SetTexCoord(0, 1, 0, 1)
-		end
-		pin:SetHighlightTexture("")
-		pin.arrow:SetDesaturated(false)
-		pin.arrow:SetTexture("")
-		pin:SetScript("OnMouseUp", nil)
 		return pin
 	end
 
@@ -872,6 +875,7 @@ function Breadcrumbs:CheckQuest(map, quest, datastring)
 	prof1, prof2, archaeology, fishing, cooking = GetProfessions()
 	if prof1 then prof1 = strlower(GetProfessionInfo(prof1)) end -- This won't work on non-English clients
 	if prof2 then prof2 = strlower(GetProfessionInfo(prof2)) end
+	local flying = IsSpellKnown(34090) or IsSpellKnown(34091) or IsSpellKnown(90265) and true or false
 
 	local pass = true
 	for _, v in ipairs(data) do
@@ -913,12 +917,15 @@ function Breadcrumbs:CheckQuest(map, quest, datastring)
 					-- Map must not have Art ID (-phase:n)
 					if string.match(v, "%-phase:(%d+)") and (C_Map.GetMapArtID(map) ~= tonumber(string.match(v, "%-phase:(%d+)") or 0)) then pass = true end
 
+					-- Must have flying
+
 					-- Must match...
 					if v == class or v == faction or v == covenant or v == prof1 or v == prof2 or v == race then pass = true end
 					if v == "garrison" and garrison >= 1 then pass = true end
 					if v == "garrison:1" and garrison == 1 then pass = true end
 					if v == "garrison:2" and garrison == 2 then pass = true end
 					if v == "garrison:3" and garrison == 3 then pass = true end
+					if v == "flying" and flying then pass = true end
 					if archaeology and v == "archaeology" then pass = true end
 					if fishing and v == "fishing" then pass = true end
 					if cooking and v == "cooking" then pass = true end
@@ -936,6 +943,11 @@ function Breadcrumbs:CheckQuest(map, quest, datastring)
 						local w = string.gsub(v, "%-(%a+)", "%1")
 
 						if w == class or w == faction or w == covenant or w == prof1 or w == prof2 or w == race then pass = false end
+						if w == "garrison" and garrison >= 1 then pass = false end
+						if w == "garrison:1" and garrison == 1 then pass = false end
+						if w == "garrison:2" and garrison == 2 then pass = false end
+						if w == "garrison:3" and garrison == 3 then pass = false end
+						if flying and w == "flying" then pass = false end
 						if archaeology and w == "archaeology" then pass = false end
 						if fishing and w == "fishing" then pass = false end
 						if cooking and w == "cooking" then pass = false end
