@@ -160,11 +160,11 @@ Data.Vignettes = {
 		[37829] = "Small Treasure Chest|10+|53.17 64.46||treasure|Contains:|{1397630} [Order Resources]",
 		[37831] = "Small Treasure Chest|10+|49.64 34.47||treasure|Contains:|{1397630} [Order Resources]",
 		[38367] = "Glimmering Treasure Chest|10+|42.63 8.08||treasure|Contains:|{1397630} [Order Resources]",
-		[40711] = {"Small Treasure Chest|10+ -flying|55.62 18.53|\"Take the Ley Portal inside the tower\"|treasure|Contains:|{1397630} [Order Resources]", "Small Treasure Chest|10+ flying|55.62 18.53|\"On top of the tower\"|treasure|Contains:|{1397630} [Order Resources]",},
+		[40711] = {"Small Treasure Chest|10+ -flying|55.62 18.53|\"Take the Ley Portal inside the tower\"|treasure up|Contains:|{1397630} [Order Resources]", "Small Treasure Chest|10+ flying|55.62 18.53|\"On top of the tower\"|treasure|Contains:|{1397630} [Order Resources]",},
 		[42273] = "Small Treasure Chest|10+|62.38 58.4||treasure|Contains:|{1397630} [Order Resources]",
-		[42278] = "Small Treasure Chest|10+|62.99 54.18|Gloombound Barrow|treasure|Contains:|{1397630} [Order Resources]",
-		[42284] = "Small Treasure Chest|10+|62.02 83.77||treasure down link:631|Contains:|{1397630} [Order Resources]", -- Nar'thalas Academy
-		[42285] = "Small Treasure Chest|10+|71.73 21.62||treasure down link:631|Contains:|{1397630} [Order Resources]", -- Nar'thalas Academy
+		[42278] = "Small Treasure Chest|10+|62.99 54.18|Gloombound Barrow|treasure down|Contains:|{1397630} [Order Resources]",
+		[42284] = "Small Treasure Chest|10+|53.64 39.82||treasure down link:631|Contains:|{1397630} [Order Resources]", -- Nar'thalas Academy
+		[42285] = "Small Treasure Chest|10+ +37469|54.3 39||treasure down link:631|Contains:|{1397630} [Order Resources]", -- Nar'thalas Academy
 		[42290] = {"Small Treasure Chest|10+ -37536|50.2 50.29|\"Inside the Shipwreck Arena cave\"|treasure down|Contains:|{1397630} [Order Resources]", "Small Treasure Chest|10+ 37538|50.2 50.29|\"Inside the Shipwreck Arena cave\"|treasure down|Contains:|{1397630} [Order Resources]",}, -- Phased out once 37536 completes and comes back after 37538 is turned in
 		[42291] = "Small Treasure Chest|10+|48.01 56.24||treasure down link:632|Contains:|{1397630} [Order Resources]", -- Oceanus Cove
 		[42293] = "Small Treasure Chest|10+|63.64 39.17||treasure|Contains:|{1397630} [Order Resources]",
@@ -175,7 +175,7 @@ Data.Vignettes = {
 	[631] = {
 		-- Treasure
 		[42284] = "Small Treasure Chest|10+|62.02 83.77||treasure|Contains:|{1397630} [Order Resources]",
-		[42285] = "Small Treasure Chest|10+|71.73 21.62||treasure|Contains:|{1397630} [Order Resources]",
+		[42285] = "Small Treasure Chest|10+ +37469|71.73 21.62||treasure|Contains:|{1397630} [Order Resources]",
 	},
 
 	-- Oceanus Cove
