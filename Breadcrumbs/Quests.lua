@@ -50,8 +50,13 @@ local _, Data = ...
 		covenant		Must belong to any of the following covenants (kyrian, venthyr, nightfae, necrolord)
 		-x				Must not be class/have profession/be race/belong to faction/belong to covenant
 
+		flying			Must have learned flying
+		-flying			Must not have learned flying
+
 		garrison		Must have unlocked WoD Garrison (any tier)
+		-garrison		Must not have unlocked WoD Garrison
 		garrison:n		Must have a WoD Garrison at tier n
+		-garrison:n		Must not have WoD Garrison at tier n
 
 		research:n		Must have researched GarrTalent ID n (see https://wow.tools/dbc/?dbc=garrtalent)
 		-research:n		Must not have researched GarrTalent ID n
@@ -845,6 +850,12 @@ Data.Quests = {
 		-- ...
 		[44183] = "Champion: Lord Jorach Ravenholdt|10+ rogue 44177|41.39 78.1|Lord Jorach Ravenholdt|artifact",
 		[43841] = "Convincin' Old Yancey|10+ rogue 44177|41.19 74.36|Fleet Admiral Tethys|artifact",
+		[43852] = "Fancy Lads and Buccaneers|10+ rogue 43841|41.19 74.36|Fleet Admiral Tethys|artifact",
+		[44181] = "Champion: Fleet Admiral Tethys|10+ rogue 43852|41.19 74.36|Fleet Admiral Tethys|artifact",
+		[42684] = "Throwing SI:7 Off the Trail|10+ rogue 44181|40.89 75.36|Valeera Sanguinar|artifact",
+		[43468] = "Blood for the Wolfe|10+ rogue 44181|40.89 75.36|Valeera Sanguinar|artifact",
+		[42730] = "Noggenfogger's Reasonable Request|10+ rogue 44181|40.89 75.36|Valeera Sanguinar|artifact",
+		[44178] = "A Particularly Potent Potion|10+ rogue 42730|30.47 70.4|Marin Noggenfogger|artifact",
 
 		-- Battlegear of the Uncrowned
 		[44252] = "A Sheath For Every Blade|45+ rogue|26.92 36.82|Kelsey Steelspark",
