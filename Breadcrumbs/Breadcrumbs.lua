@@ -155,7 +155,7 @@ end
 
 -- Update Map
 function Breadcrumbs:UpdateMap(event, ...)
-	if event then
+	if event and not event == "QUEST_ACCEPTED" then
 		if ZA and ZA.DebugMode then
 			print(event, ...) -- Debug output
 		end
@@ -167,7 +167,7 @@ function Breadcrumbs:UpdateMap(event, ...)
 			C_Timer.After(0.5, function() Throttle[event] = false end)
 		end
 
-		if event == "PLAYER_LEVEL_UP" or event == "QUEST_TURNED_IN" or event == "QUEST_AUTOCOMPLETE" or event == "QUEST_COMPLETE" or event == "QUEST_COMPLETE" or event == "BAG_UPDATE" then
+		if event == "PLAYER_LEVEL_UP" or event == "QUEST_TURNED_IN" or event == "QUEST_AUTOCOMPLETE" or event == "QUEST_COMPLETE" or event == "BAG_UPDATE" then
 			-- Delay by 1 seconds to make sure quest status has updated
 			C_Timer.After(1, function() Breadcrumbs:UpdateMap() end)
 			return
@@ -808,7 +808,8 @@ function Breadcrumbs:UpdateMap(event, ...)
 									if tip9 then if strlen(tip9) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip9), nil, nil, nil, true) else GameTooltip:AddLine(" ") end end
 								end
 								GameTooltip:Show()
-							else
+							end
+							if not flags["tooltip"] then
 								WorldMapFrame:TriggerEvent("SetAreaLabel", 4, Breadcrumbs:FormatTooltip(title), Breadcrumbs:FormatTooltip(tip1))
 							end
 						end)
