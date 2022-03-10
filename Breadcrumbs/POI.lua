@@ -296,7 +296,7 @@ Data.POI = {
 		-- Scouting Map
 		"ShipMissionIcon-Bonus-MapBadge|Scouting Map|monk -41946 -42191|52.9 60.3",
 		"ShipMissionIcon-Bonus-MapBadge|Scouting Map|monk +41946 -42191|52.9 60.3|combo||[Recruiter]|Tianji",
-		"ShipMissionIcon-Bonus-MapBadge|Scouting Map|monk 41946 +42191|52.9 60.3|combo||[Class Hall Upgrades]Number Nine Jia||[Recruiter]|Tianji",
+		"ShipMissionIcon-Bonus-MapBadge|Scouting Map|monk 41946 +42191|52.9 60.3|combo||[Class Hall Upgrades]|Number Nine Jia||[Recruiter]|Tianji",
 
 		-- Recruiter
 		"poi-workorders:small|[Recruiter]|10+ monk 43319|54.44 57.16|tooltip|Gin Lai",
@@ -404,7 +404,8 @@ Data.POI = {
 		"POI/Portal|Portal to Stormwind|alliance|46.66 41.42",
 		"POI/Portal|Portal to Orgrimmar|horde|46.67 41.3",
 		"teleportationnetwork-32x32:small|Teleportation Nexus|mage research:386|57.95 15.15",
-		"groupfinder-icon-class-warrior:small|[Skyhold]|10+ warrior 40585|47.58 28.09|tooltip|Entrance to Skyhold, Home of the Valarjar",
+		"groupfinder-icon-class-warrior:small|[Skyhold]|10+ warrior 40585 44060|47.45 28.22|tooltip|Entrance to Skyhold, Home of the Valarjar",
+		"groupfinder-icon-class-warrior:small|[Skyhold]|10+ warrior 40585 -44060|47.45 28.22|tooltip|Entrance to Skyhold, Home of the Valarjar||\"Speak to {flightmaster} Dagrona if you cannot see the Gaze of Odyn\"",
 	},
 
 
