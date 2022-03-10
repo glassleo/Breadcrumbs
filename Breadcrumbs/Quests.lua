@@ -826,6 +826,23 @@ Data.Quests = {
 
 	-- Monk - Wandering Isle
 	[709] = {
+		-- The Defense of Tian Monastery
+		[41728] = "The Defense of Tian Monastery|10+ monk 41905|51.41 48.39|Iron-Body Ponshu|artifact",
+		[41729] = "Slowing the Spread|10+ monk 41728|47.16 47.75|Instructor Myang|artifact elsewhere link:371|Speak to Tak-Tak to travel to Tian Monastery",
+		[41731] = "Storm, Earth, and Fire|10+ monk 41728|47.16 47.75|Taran Zhu|artifact elsewhere link:371|Speak to Tak-Tak to travel to Tian Monastery",
+		[41730] = "Desperate Strike|10+ monk 41728|47.16 47.75|Taran Zhu|artifact elsewhere link:371|Speak to Tak-Tak to travel to Tian Monastery",
+		[41732] = "The Hand of Keletress|10+ monk 41729 41731 41730|47.16 47.75|The Monkey King|artifact elsewhere link:371|Speak to Tak-Tak to travel to Tian Monastery",
+		[41733] = "Rebuilding the Order|10+ monk 41732|47.16 47.75|High Elder Cloudfall|artifact elsewhere link:371|Speak to Tak-Tak to travel to Tian Monastery",
+
+		-- Rebuilding the Order
+		[43319] = "The Way of the Tiger|10+ monk 41733|51.41 48.39|Iron-Body Ponshu|artifact",
+		[41734] = "Champion: Taran Zhu|10+ monk 43901,+43319|51.14 49.65|Taran Zhu|artifact", -- 43901 Tracking Quest: All - Troop B Enabled
+		[41735] = "Champion: The Monkey King|10+ monk 43901,+43319|51.14 49.65|The Monkey King|artifact", -- 43901 Tracking Quest: All - Troop B Enabled
+		[43062] = "Further Training|10+ monk 41733|52.53 57.82|High Elder Cloudfall|artifact",
+		[41907] = "Appropriations|10+ monk 41733|52.53 57.82|High Elder Cloudfall|artifact",
+		[43054] = "An Ample Stockpile|10+ monk 41907|48.89 58.36|Lao Shu|artifact",
+		[41909] = "Tracking the Tideskorn|10+ monk 41733|52.53 57.82|High Elder Cloudfall|artifact",
+
 		-- Grandmaster's Finery
 		[44249] = "Inner Sanctuary|45+ monk|50.33 59.13|Caydori Brightstar",
 	},
@@ -2114,6 +2131,20 @@ Data.Quests = {
 		[36708] = "Inspiring Ashran|10+ horde 36707|44.16 45.46|Lieutenant Kragil",
 		[36709] = "Burning Beauty|10+ horde 36708|44.16 45.46|Lieutenant Kragil",
 		[35243] = "The Dark Lady's Gift|10+ horde 36709|62.13 23|Vivianne",
+	},
+
+
+	--[[ The Jade Forest ]]--
+
+	[371] = {
+		-- Phase out Tian Monastery quests: -41728,41733
+
+		-- Monk - The Defense of Tian Monastery
+		[41729] = "Slowing the Spread|10+ monk +41728|38.92 25.04|Instructor Myang|artifact",
+		[41731] = "Storm, Earth, and Fire|10+ monk 41728|39 24.95|Taran Zhu|artifact",
+		[41730] = "Desperate Strike|10+ monk 41728|39 24.95|Taran Zhu|artifact",
+		[41732] = "The Hand of Keletress|10+ monk 41729 41731 41730|42.06 25.48|The Monkey King|artifact",
+		[41733] = "Rebuilding the Order|10+ monk 41732|45.49 25.06|High Elder Cloudfall|artifact",
 	},
 
 
