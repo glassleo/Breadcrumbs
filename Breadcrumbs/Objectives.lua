@@ -37,6 +37,11 @@ local _, Data = ...
 ]]--
 
 Data.Objectives = {
+	-- Monk - Wandering Isle
+	[709] = {
+		[41728] = "questobjective|47.16 47.75|The Defense of Tian Monastery|[Tak-Tak]",
+	},
+
 	-- Val'sharah
 	[641] = {
 		-- Jarod's Mission
@@ -72,6 +77,16 @@ Data.Objectives = {
 			"questobjective|26.71 65.56|Pins and Needles|[7th Legion Dragoon]",
 			"questobjective|25.55 47.37|Pins and Needles|[7th Legion Dragoon]",
 			"questobjective|54.21 31.96|Pins and Needles|[7th Legion Dragoon]",
+		},
+	},
+
+	-- The Jade Forest
+	[371] = {
+		-- Slowing the Spread
+		[41729] = {
+			"questobjective|38.99 23.24|Slowing the Spread|[Fel Spreader]",
+			"questobjective|41.62 23.75|Slowing the Spread|[Fel Spreader]",
+			"questobjective|41.39 27.36|Slowing the Spread|[Fel Spreader]",
 		},
 	},
 
