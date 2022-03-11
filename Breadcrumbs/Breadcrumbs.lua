@@ -315,27 +315,27 @@ function Breadcrumbs:UpdateMap(event, ...)
 									if setting_showhelp then -- Help tip
 										if help and strlen(help) > 0 then
 											GameTooltip:AddLine(" ")
-											GameTooltip:AddLine(Breadcrumbs:FormatTooltip(help, flags))
+											GameTooltip:AddLine(Breadcrumbs:FormatTooltip(help, flags), nil, nil, nil, true)
 										end
 										if flags["chromiesync"] then
 											GameTooltip:AddLine(" ")
 
 											if playerlevel >= 50 then
-												GameTooltip:AddLine(CreateAtlasMarkup("chromietime-32x32") .. " |cffff0000You must Party Sync with a low level character to be able to obtain this quest|r")
+												GameTooltip:AddLine(CreateAtlasMarkup("chromietime-32x32") .. " You must Party Sync with a low level character to be able to obtain this quest", 1, 0, 0, true)
 											elseif chromietime then
-												GameTooltip:AddLine(CreateAtlasMarkup("chromietime-32x32") .. " |cff00ff00You have a Timewalking Campaign active and should be able to obtain this quest|r")
+												GameTooltip:AddLine(CreateAtlasMarkup("chromietime-32x32") .. " You have a Timewalking Campaign active and should be able to obtain this quest", 0, 1, 0, true)
 											else
-												GameTooltip:AddLine(CreateAtlasMarkup("chromietime-32x32") .. " |cffff0000You must activate a Timewalking Campaign to be able to obtain this quest|r")
+												GameTooltip:AddLine(CreateAtlasMarkup("chromietime-32x32") .. " You must activate a Timewalking Campaign to be able to obtain this quest", 1, 0, 0, true)
 											end
 										elseif flags["chromietime"] then
 											GameTooltip:AddLine(" ")
 
 											if playerlevel >= 50 then
-												GameTooltip:AddLine(CreateAtlasMarkup("chromietime-32x32") .. " |cffff0000You cannot complete this quest because your level is too high|r")
+												GameTooltip:AddLine(CreateAtlasMarkup("chromietime-32x32") .. " You cannot complete this quest because your level is too high", 1, 0, 0, true)
 											elseif chromietime then
-												GameTooltip:AddLine(CreateAtlasMarkup("chromietime-32x32") .. " |cff00ff00You have a Timewalking Campaign active and should be able to obtain this quest|r")
+												GameTooltip:AddLine(CreateAtlasMarkup("chromietime-32x32") .. " You have a Timewalking Campaign active and should be able to obtain this quest", 0, 1, 0, true)
 											else
-												GameTooltip:AddLine(CreateAtlasMarkup("chromietime-32x32") .. " |cffff0000You must activate a Timewalking Campaign to be able to obtain this quest|r")
+												GameTooltip:AddLine(CreateAtlasMarkup("chromietime-32x32") .. " You must activate a Timewalking Campaign to be able to obtain this quest", 1, 0, 0, true)
 											end
 										end
 									end
@@ -379,7 +379,7 @@ function Breadcrumbs:UpdateMap(event, ...)
 											GameTooltip:AddDoubleLine(AVAILABLE_QUEST, Breadcrumbs:FormatTooltip(source and "{!} " .. source or "", flags) or "", 1, 1, 1)
 											if setting_showhelp and help and strlen(help) > 0 then
 												GameTooltip:AddLine(" ")
-												GameTooltip:AddLine(Breadcrumbs:FormatTooltip(help, flags))
+												GameTooltip:AddLine(Breadcrumbs:FormatTooltip(help, flags), nil, nil, nil, true)
 											end
 										end
 										GameTooltip:Show()
