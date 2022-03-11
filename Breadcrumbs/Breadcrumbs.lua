@@ -37,6 +37,8 @@ local function RecycleAllPins()
 		for i = 1, MapPoolCount do
 			local pin = _G["BreadcrumbsMapPin"..i]
 			
+			pin:SetParent(WorldMapFrame)
+			pin:SetPoint("CENTER", WorldMapFrame)
 			pin.arrow:SetDesaturated(false)
 			pin.arrow:SetTexture("")
 			pin.arrow:Hide()
