@@ -164,13 +164,20 @@ function Breadcrumbs:UpdateMap(event, ...)
 
 		if Throttle[event] then
 			return
+		elseif event == "PLAYER_LEVEL_UP" or event == "BAG_UPDATE" then
+			Throttle[event] = true
+			C_Timer.After(1.8, function() Throttle[event] = false end)
 		else
 			Throttle[event] = true
-			C_Timer.After(0.5, function() Throttle[event] = false end)
+			C_Timer.After(0.8, function() Throttle[event] = false end)
 		end
 
-		if event == "PLAYER_LEVEL_UP" or event == "QUEST_TURNED_IN" or event == "QUEST_AUTOCOMPLETE" or event == "QUEST_COMPLETE" or event == "BAG_UPDATE" then
-			-- Delay by 1 seconds to make sure quest status has updated
+		if event == "PLAYER_LEVEL_UP" or event == "BAG_UPDATE" then
+			-- Delay by 2 seconds
+			C_Timer.After(2, function() Breadcrumbs:UpdateMap() end)
+			return
+		elseif event == "QUEST_TURNED_IN" or event == "QUEST_AUTOCOMPLETE" or event == "QUEST_COMPLETE" then
+			-- Delay by 1 second to make sure quest status has updated
 			C_Timer.After(1, function() Breadcrumbs:UpdateMap() end)
 			return
 		end
