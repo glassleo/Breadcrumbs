@@ -219,6 +219,14 @@ Data.Vignettes = {
 	},
 
 
+	--[[ Frostfire Ridge ]]--
+
+	-- Frostfire Ridge
+	[525] = {
+		[33942] = "Supply Dump|10+|16.12 49.72||treasure|Contains|{1005027} [Garrison Resources]",
+	},
+
+
 	--[[ Shadowmoon Valley ]]--
 
 	-- Lunarfall
