@@ -6,7 +6,7 @@ local Throttle = {}
 
 
 -- User settings (GUI NYI)
-local setting_hidestorylines = true
+local setting_hidestorylines = false
 local setting_pinsize = 20
 local setting_objectivesize = 15
 local setting_vignettesize = 15
