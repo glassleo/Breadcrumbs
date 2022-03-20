@@ -91,6 +91,14 @@ Data.POI = {
 	},
 
 
+	--[[ Zereth Mortis ]]--
+
+	[1970] = {
+		-- Protoform Synthesis
+		"creationcatalyst-32x32|[Protoform Synthesis]|60+ 65419|60.53 59.39|tooltip",
+	},
+
+
 	--[[ Tiragarde Sound ]]--
 
 	-- Boralus
@@ -101,7 +109,7 @@ Data.POI = {
 		"POI/Portal|Sanctum of the Sages|10+ alliance kultiran|70.52 17.28",
 
 		-- Scrapper
-		"poi-scrapper|Scrap-O-Matic 1000|alliance|77.13 16.31",
+		"poi-scrapper|[Scrap-O-Matic 1000]|alliance|77.13 16.31",
 
 		-- Profession Trainer
 		"POI/Alchemy|[Alchemy Trainer]|alliance alchemy|74.2 6.54|tooltip|Elric Whalgrene",
