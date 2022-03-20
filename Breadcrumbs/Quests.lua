@@ -149,6 +149,19 @@ local _, Data = ...
 
 Data.Quests = {
 
+	--[[ Oribos ]]--
+
+	-- Ring of Transference
+	[1671] = {
+	},
+
+	-- Ring of Fates
+	[1670] = {
+		-- Zereth Mortis - Secrets of the First Ones
+		--[64942] = "Call of the Primus|60+ ???|38.9 69.99|[Auto Accept]|campaign", -- Requires chapter 2 of Chains of Domination
+	},
+
+
 	--[[ Tiragarde Sound ]]--
 
 	-- Boralus
