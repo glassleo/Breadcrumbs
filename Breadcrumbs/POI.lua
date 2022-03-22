@@ -479,7 +479,16 @@ Data.POI = {
 	},
 
 
+	--[[ The Jade Forest ]]--
+
+	[371] = {
+		-- Profession Trainer
+		"POI/Enchanting|[Enchanting Trainer]|10+ enchanting|46.85 42.94|tooltip|Lai the Spellpaw",
+	},
+
+
 	--[[ Grizzly Hills ]]--
+
 	[116] = {
 		-- Portal
 		"POI/DreamwayPortal|Emerald Dreamway|10+ druid 40645|50.32 29.2",
