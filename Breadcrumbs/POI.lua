@@ -53,6 +53,9 @@ Data.POI = {
 		"teleportationnetwork-32x32:small|Ring of Fates|1+|55.66 51.62|link:1670",
 		"teleportationnetwork-32x32:small|Ring of Fates|1+|49.55 42.33|link:1670",
 		"teleportationnetwork-32x32:small|Ring of Fates|1+|43.4 51.59|link:1670",
+
+		-- Heirloom Vendor
+		"timewalkingvendor-32x32|[Heirloom Vendor]|1+|59.97 72|tooltip|Au'Dara",
 	},
 
 	-- Ring of Fates
@@ -72,6 +75,9 @@ Data.POI = {
 		"mailbox:objective|Mailbox|mailbox|62.92 51.74",
 		"mailbox:objective|Mailbox|mailbox|30.63 52.24",
 		"mailbox:objective|Mailbox|mailbox|73.74 49.11",
+
+		-- Item Upgrades
+		"upgradeitem-32x32|[Item Upgrades]|60+|34.56 56.52|tooltip|Aggressor Zo'dash",
 
 		-- Profession Trainer
 		"POI/Alchemy|[Alchemy Trainer]|48+ alchemy|39.23 40.38|tooltip|Elixirist Au'pyr",
