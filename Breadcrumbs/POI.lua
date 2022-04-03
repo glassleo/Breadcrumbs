@@ -493,6 +493,14 @@ Data.POI = {
 	},
 
 
+	--[[ Kun-Lai Summit ]]--
+
+	[379] = {
+		-- Profession Trainer
+		"POI/Leatherworking|[Leatherworking Trainer]|10+ leatherworking|64.66 60.86|tooltip|Clean Pelt",
+	},
+
+
 	--[[ Grizzly Hills ]]--
 
 	[116] = {
