@@ -42,9 +42,11 @@ local function RecycleAllPins()
 			pin.arrow:SetDesaturated(false)
 			pin.arrow:SetTexture("")
 			pin.arrow:Hide()
-			pin:GetNormalTexture():SetDesaturated(false)
-			pin:GetNormalTexture():SetVertexColor(1, 1, 1)
-			pin:GetNormalTexture():SetTexCoord(0, 1, 0, 1)
+			if pin:GetNormalTexture() then
+				pin:GetNormalTexture():SetDesaturated(false)
+				pin:GetNormalTexture():SetVertexColor(1, 1, 1)
+				pin:GetNormalTexture():SetTexCoord(0, 1, 0, 1)
+			end
 			pin:SetNormalTexture("")
 			if pin:GetHighlightTexture() then
 				pin:GetHighlightTexture():SetDesaturated(false)
@@ -685,19 +687,19 @@ function Breadcrumbs:UpdateMap(event, ...)
 											local mapinfo = C_Map.GetMapInfo(link)
 											GameTooltip:AddLine(Breadcrumbs:FormatTooltip("{newplayertutorial-icon-mouse-leftbutton} ") .. (mapinfo.name or link), 1, 1, 1)
 										elseif source then
-											GameTooltip:AddLine(Breadcrumbs:FormatTooltip(source))
+											GameTooltip:AddLine(Breadcrumbs:FormatTooltip(source), nil, nil, nil, true)
 										end
 										if setting_showhelp and tip1 then -- Help tip
 											GameTooltip:AddLine(" ")
-											if tip1 then if strlen(tip1) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip1, flags)) else GameTooltip:AddLine(" ") end end
-											if tip2 then if strlen(tip2) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip2, flags)) else GameTooltip:AddLine(" ") end end
-											if tip3 then if strlen(tip3) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip3, flags)) else GameTooltip:AddLine(" ") end end
-											if tip4 then if strlen(tip4) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip4, flags)) else GameTooltip:AddLine(" ") end end
-											if tip5 then if strlen(tip5) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip5, flags)) else GameTooltip:AddLine(" ") end end
-											if tip6 then if strlen(tip6) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip6, flags)) else GameTooltip:AddLine(" ") end end
-											if tip7 then if strlen(tip7) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip7, flags)) else GameTooltip:AddLine(" ") end end
-											if tip8 then if strlen(tip8) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip8, flags)) else GameTooltip:AddLine(" ") end end
-											if tip9 then if strlen(tip9) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip9, flags)) else GameTooltip:AddLine(" ") end end
+											if tip1 then if strlen(tip1) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip1, flags), nil, nil, nil, true) else GameTooltip:AddLine(" ") end end
+											if tip2 then if strlen(tip2) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip2, flags), nil, nil, nil, true) else GameTooltip:AddLine(" ") end end
+											if tip3 then if strlen(tip3) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip3, flags), nil, nil, nil, true) else GameTooltip:AddLine(" ") end end
+											if tip4 then if strlen(tip4) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip4, flags), nil, nil, nil, true) else GameTooltip:AddLine(" ") end end
+											if tip5 then if strlen(tip5) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip5, flags), nil, nil, nil, true) else GameTooltip:AddLine(" ") end end
+											if tip6 then if strlen(tip6) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip6, flags), nil, nil, nil, true) else GameTooltip:AddLine(" ") end end
+											if tip7 then if strlen(tip7) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip7, flags), nil, nil, nil, true) else GameTooltip:AddLine(" ") end end
+											if tip8 then if strlen(tip8) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip8, flags), nil, nil, nil, true) else GameTooltip:AddLine(" ") end end
+											if tip9 then if strlen(tip9) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip9, flags), nil, nil, nil, true) else GameTooltip:AddLine(" ") end end
 										end
 										if ZA and ZA.DebugMode then -- Debug
 											GameTooltip:AddLine(" ")
@@ -777,6 +779,10 @@ function Breadcrumbs:UpdateMap(event, ...)
 							pin:SetNormalTexture("")
 							pin:SetHighlightAtlas("BonusChest-CircleGlow")
 							pin:GetHighlightTexture():SetAlpha(0.3)
+						elseif (tonumber(texture or 0) or 0) > 0 then
+							pin:SetNormalTexture(texture)
+							pin:SetHighlightTexture(texture)
+							pin:GetHighlightTexture():SetAlpha(0.5)
 						elseif string.match(texture, "Discovery/[%w]+") then
 							pin:SetNormalTexture("Interface/AddOns/Breadcrumbs/Textures/" .. texture)
 							pin:SetHighlightTexture("Interface/AddOns/Breadcrumbs/Textures/" .. texture)
