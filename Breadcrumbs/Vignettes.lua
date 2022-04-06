@@ -34,6 +34,8 @@ Data.Vignettes = {
 	-- Tiragarde Sound
 	[895] = {
 		-- Treasure
+		[49963] = "Hay Covered Chest|10+ 49983|67.36 51.64||treasure item:155571|Contains|{1726328} [rare]Garyl's Riding Blanket]", -- Boralus
+		[49983] = {"Guardian of the Spring|10+|61.37 51.28|\"Bring him to Roan Berthold for a reward\"|event", "Roan Berthold|10+|67.4 51.66|\"Bring Guardian of the Spring to Roan for a reward\"|treasure item:155571|Hay Covered Chest|{1726328} [rare]Garyl's Riding Blanket]",},
 		[52866] = "Cutwater Treasure Chest|10+|72.49 58.14|\"Inside a cave\"|treasure down item:155381|Contains|{1048292} [rare]Cutwater-Captain's Sapphire Ring]",
 		[52866] = "Precarious Noble Cache|10+|56.03 33.19||treasure|Contains|{2004597} [Polished Pet Charm] (5)|{2032600} [War Resources]",
 		[52867] = "Forgotten Smuggler's Stash|10+|61.78 62.75|\"Inside a cave\"|treasure down|Contains|{2032600} [War Resources]",
@@ -46,10 +48,10 @@ Data.Vignettes = {
 	[896] = {
 		-- Treasure
 		[53356] = "Web-Covered Chest|10+|33.71 30.08||treasure|Contains|{2032600} [War Resources]",
-		[53357] = "Merchant's Chest|10+|25.75 19.94|\"Kill nearby Gorging Ravens for the {136058} [Merchant's Key]\"|treasure|Contains|{2004597} [Polished Pet Charm] (5)|{2032600} [War Resources]",
-		[53385] = "Runebound Cache|10+|63.3 65.85|\"Left, Bottom, Top, Right\"|treasure item:163743|Contains|{896907} [rare]Drust Soulcatcher]|{2032600} [War Resources]",
-		[53386] = "Runebound Chest|10+|44.22 27.7|\"Left, Right, Bottom, Top\"|treasure item:163742|Contains|{2101967} [rare]Heartsbane Grimoire]|{2032600} [War Resources]",
-		[53387] = "Runebound Coffer|10+|33.69 71.73|\"Right, Top, Left, Bottom\"|treasure item:163740|Contains|{940537} [rare]Drust Ritual Knife]|{2032600} [War Resources]",
+		[53357] = "Merchant's Chest|10+|25.75 19.94|\"Kill nearby Gorging Ravens for the key\"|treasure|Contains|{2004597} [Polished Pet Charm] (5)|{2032600} [War Resources]",
+		[53385] = "Runebound Cache|10+|63.3 65.85||treasure item:163743|Unlock Sequence|{1323038} Left|{1323037} Bottom|{1323039} Top|{1323035} Right||Contains|{896907} [rare]Drust Soulcatcher]|{2032600} [War Resources]",
+		[53386] = "Runebound Chest|10+|44.22 27.7||treasure item:163742|Unlock Sequence|{1323038} Left|{1323035} Right|{1323037} Bottom|{1323039} Top||Contains|{2101967} [rare]Heartsbane Grimoire]|{2032600} [War Resources]",
+		[53387] = "Runebound Coffer|10+|33.69 71.73||treasure item:163740|Unlock Sequence|{1323035} Right|{1323039} Top|{1323038} Left|{1323037} Bottom||Contains|{940537} [rare]Drust Ritual Knife]|{2032600} [War Resources]",
 		[53471] = "Hexed Chest|10+|18.53 51.32||treasure item:163789|Contains|{135437} [uncommon]Bundle of Wicker Sticks]|{2032600} [War Resources]",
 		[53472] = "Bespelled Chest|10+|55.59 51.83||treasure item:163790|Contains|{134937} [uncommon]Spooky Incantation]|{2032600} [War Resources]",
 		[53473] = "Ensorcelled Chest|10+|67.77 73.67||treasure item:163791|Contains|{1516565} [uncommon]Miniature Stag Skull]|{2032600} [War Resources]",
@@ -66,12 +68,13 @@ Data.Vignettes = {
 		[49811] = "Smuggler's Stash|10+|58.6 83.88|\"Underneath the docks\"|treasure|Contains|{2032600} [War Resources]",
 		[50089] = "Old Ironbound Chest|10+|42.86 47.23|\"Inside a cave\"|treasure down|Contains|{2032600} [War Resources]",
 		[50526] = "Frosty Treasure Chest|10+|48.97 84.1||treasure|Contains|{2032600} [War Resources]",
-		[50734] = "Sunken Strongbox|10+|67.21 43.21|\"Underneath the ship's hull\"|treasure|Contains|{2004597} [Polished Pet Charm] (5)|{2032600} [War Resources]",
+		[50734] = "Sunken Strongbox|10+|67.21 43.21|\"In the water underneath the ship\"|treasure|Contains|{2004597} [Polished Pet Charm] (5)|{2032600} [War Resources]",
 		[50937] = "Hidden Scholar's Chest|10+|59.91 39.06||treasure|Contains|{2032600} [War Resources]",
 		[51449] = "Weathered Treasure Chest|10+|66.93 12.06|\"Inside a cave\"|treasure down|Contains|{2032600} [War Resources]",
 		[52429] = "Carved Wooden Chest|10+|44.44 73.53|\"Inside a cave on top of a platform\"|treasure down item:162000|Contains|{2114667} [uncommon]Pig Nose]|{2032600} [War Resources]",
 		[52976] = "Venture Co. Supply Chest|10+|36.69 23.23||treasure|Contains|{2032600} [War Resources]",
 		[52980] = "Forgotten Chest|10+|46 30.69||treasure|Contains|{2032600} [War Resources]",
+		-- Discarded Lunchbox
 	},
 
 	-- Thornheart
@@ -86,21 +89,24 @@ Data.Vignettes = {
 	-- Dazar'alor
 	[1165] = {
 		[48938] = "Offerings of the Chosen|10+|38.28 7.14||treasure|Contains|{2032600} [War Resources]",
-		[51338] = "Cache of Secrets|10+|44.47 26.91|\"Inside the cave behind the waterfall\"|treasure down|Contains|{2032600} [War Resources]",
+		[50947] = "Da White Shark's Bounty|10+|59.31 88.66|\"Revealed after killing Da White Shark\"|treasure|Contains|{2032600} [War Resources]",
+		[51338] = "Cache of Secrets|10+|44.47 26.91|\"Inside a cave behind a waterfall\"|treasure down|Contains|{2032600} [War Resources]",
+		[51624] = "Riches of Tor'nowa|10+|34.93 54.4||treasure|Contains|{2032600} [War Resources]",
 	},
 
 	-- Zuldazar
 	[862] = {
 		-- Treasure
-		--[51624] = "Riches of Tor'nowa|10+|38.79 34.44||treasure|Contains|{2032600} [War Resources]",
 		[48938] = "Offerings of the Chosen|10+|54.08 31.48||treasure link:1165|Contains|{2032600} [War Resources]", -- Dazar'alor
 		[49257] = "Warlord's Cache|10+|49.5 65.26||treasure|Contains|{2032600} [War Resources]",
 		[49936] = "Spoils of Pandaria|10+|51.71 86.88|Breath of Pa'ku|treasure down link:1177|Contains|{2032600} [War Resources]", -- Breath of Pa'ku
 		[50259] = "Witch Doctor's Hoard|10+|64.71 21.67||treasure|Contains|{2032600} [War Resources]",
-		[50582] = "Gift of the Brokenhearted|10+|51.43 26.61||treasure|Contains|{2032600} [War Resources]",
+		[50582] = "Gift of the Brokenhearted|10+|51.43 26.61|Incense|treasure|Contains|{2032600} [War Resources]",
 		[50707] = "Dazar's Forgotten Chest|10+|38.79 34.44||treasure item:153702|Contains|{2003614} [uncommon]Kubiline]|{2032600} [War Resources]",
+		[50947] = "Da White Shark's Bounty|10+|61.07 58.6|Da White Shark|treasure link:1165|Contains|{2032600} [War Resources]",
 		[50949] = "The Exile's Lament|10+|71.9 16.8|The Exile's Hideaway|treasure down|Contains|{2004597} [Polished Pet Charm] (5)|{2032600} [War Resources]", -- check exact coords
-		[51338] = "Cache of Secrets|10+|56.14 38.05|\"Inside the cave behind the waterfall\"|treasure link:1165|Contains|{2032600} [War Resources]", -- Dazar'alor
+		[51338] = "Cache of Secrets|10+|56.14 38.05|\"Inside a cave behind a waterfall\"|treasure link:1165|Contains|{2032600} [War Resources]", -- Dazar'alor
+		[51624] = "Riches of Tor'nowa|10+|52.96 47.2||treasure|Contains|{2032600} [War Resources]",
 	},
 
 	-- Breath of Pa'ku - Upper Deck
@@ -137,7 +143,7 @@ Data.Vignettes = {
 
 	[864] = {
 		-- Treasure
-		--[51093] = "Grayal's Last Offering|10+|49.78 79.39|Atul'Aman\nAncient Altar|treasure down|Contains|{2032600} [War Resources]",
+		[51093] = "Grayal's Last Offering|10+|48.17 64.7|Ancient Altar\nAtul'Aman|treasure down|Contains|{2032600} [War Resources]",
 		[50237] = {"Ashvane Spoils|10+ -47326|46.59 88.01|Mine Cart|treasure|Contains|{2032600} [War Resources]", "Ashvane Spoils|10+ 47326|44.33 92.22||treasure|Contains|{2032600} [War Resources]",}, -- 47326 tracks the Mine Cart
 		[51132] = "Lost Explorer's Bounty|10+|49.78 79.39||treasure|Contains|{2032600} [War Resources]",
 		[51133] = "Sandfury Reserve|10+|47.19 58.46||treasure|Contains|{2032600} [War Resources]",
