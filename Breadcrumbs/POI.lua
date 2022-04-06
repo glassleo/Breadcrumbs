@@ -44,6 +44,24 @@ local _, Data = ...
 
 Data.POI = {
 
+	--[[ Tazavesih, the Veiled Market ]]--
+
+	-- The Veiled Market
+	[1989] = {
+		-- Myza's Oasis Merchants
+		"134062:objective|[Fine Cuisine]|1+|48.8 39.3|tooltip|Xy'tadir||Wants|{237358} [Kleia's Special Cake]|{3562479} [Plate of Ripe Purians]|{134051} [Stale Bread]",
+		"133731:objective|[Fossil Collector]|1+|45.3 39.3|tooltip|Xy'zaro||Wants|{1325308} [Bones of Mortanis]|{970584} [Demon Skull]|{133731} [Dusty Skull]",
+		"463479:objective|[Fancy Instruments]|1+|42.2 36.7|tooltip|Xy'har||Wants|{133841} [Common Drum]|{463479} [Harp of Marasmius]|{1928595} [Vulpera Flute]",
+		"132913:objective|[Expert Tailor]|1+|44.6 27.8|tooltip|Xy'aqida||Wants|{1686583} [Bolt of Kyrian Brightweave]|{132906} [Bolt of Silk]|{132913} [Threadbare Cloth]",
+		"975743:objective|[Magical Weapons]|1+|51.7 27.2|tooltip|Xy'jahid||Wants|{3308248} [Balanced Sword]|{133046} [Cracked Warhammer]|{3486356} [Perfect Replica of Remornia]",
+		"463519:objective|[Precious Gemstones]|1+|51.9 32.8|tooltip|Xy'ghana||Wants|{237201} [Chunk of Jade]|{1990978} [Dull Opal]|{1995542} [Eye of Valinor]",
+		"136240:objective|[Alchemist]|1+|46.2 35.7|tooltip|Xy'mal||Wants|{132380} [Damaged Flask]|{132378} [Potion of Invisibility]|{1385244} [Vial of Nurgash's Blood]",
+		"133210:objective|[Exotic Spices]|1+|44.5 33.1|tooltip|Xy'nara||Wants|{1392949} [Aromatic Spices]|{2178530} [Cheap Spices]|{2178533} [Myza's Special Spice]",
+		"134332:objective|[Rare Texts]|1+|45.7 30.7|tooltip|Xy'kitab||Wants|{133739} [A History of Maldraxxus]|{442732} [Denathrius' Private Diary]|{133740} [Worn Journal]",
+		--"236572:objective|[Overpriced Art]|1+|36.6 32.9|tooltip|Xy'aro",
+	},
+
+
 	--[[ Oribos ]]--
 
 	-- Ring of Transference
@@ -101,7 +119,8 @@ Data.POI = {
 
 	[1970] = {
 		-- Protoform Synthesis
-		"creationcatalyst-32x32|[Protoform Synthesis]|60+ 65419|60.53 59.39|tooltip",
+		"POI/ProtoformSynthesis|[Protoform Synthesis (Battle Pet)]|60+ 65419|60.53 59.39|tooltip|Allows you to gather schematics and craft battle pets with components found across Zereth Mortis.",
+		"POI/ProtoformSynthesis|[Protoform Synthesis (Mount)]|60+ 65427|70.21 28.56|tooltip|Allows you to gather schematics and craft mounts with components found across Zereth Mortis.",
 	},
 
 
