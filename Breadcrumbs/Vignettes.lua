@@ -12,6 +12,14 @@ local _, Data = ...
 
 Data.Vignettes = {
 
+	--[[ Ardenweald ]]--
+
+	[1565] = {
+		-- Treasure
+		[61073] = "Faerie Trove|48+|49.71 55.89||treasure item:182673|Contains|{3749005} [uncommon]Shimmerbough Hoarder]",
+	},
+
+
 	--[[ Bastion ]]--
 
 	[1533] = {
@@ -48,10 +56,10 @@ Data.Vignettes = {
 	[896] = {
 		-- Treasure
 		[53356] = "Web-Covered Chest|10+|33.71 30.08||treasure|Contains|{2032600} [War Resources]",
-		[53357] = "Merchant's Chest|10+|25.75 19.94|\"Kill nearby Gorging Ravens for the key\"|treasure|Contains|{2004597} [Polished Pet Charm] (5)|{2032600} [War Resources]",
-		[53385] = "Runebound Cache|10+|63.3 65.85||treasure item:163743|Unlock Sequence|{1323038} Left|{1323037} Bottom|{1323039} Top|{1323035} Right||Contains|{896907} [rare]Drust Soulcatcher]|{2032600} [War Resources]",
-		[53386] = "Runebound Chest|10+|44.22 27.7||treasure item:163742|Unlock Sequence|{1323038} Left|{1323035} Right|{1323037} Bottom|{1323039} Top||Contains|{2101967} [rare]Heartsbane Grimoire]|{2032600} [War Resources]",
-		[53387] = "Runebound Coffer|10+|33.69 71.73||treasure item:163740|Unlock Sequence|{1323035} Right|{1323039} Top|{1323038} Left|{1323037} Bottom||Contains|{940537} [rare]Drust Ritual Knife]|{2032600} [War Resources]",
+		[53357] = "Merchant's Chest|10+|25.75 19.94|\"Nearby Gorging Ravens have a chance to drop the [Merchant's Key]\"|treasure|Contains|{2004597} [Polished Pet Charm] (5)|{2032600} [War Resources]",
+		[53385] = "Runebound Cache|10+|63.3 65.85||treasure item:163743|Unlock Sequence|{1323037} [spell]Left]|{1323035} [spell]Bottom]|{1323038} [spell]Top]|{1323039} [spell]Right]||Contains|{896907} [rare]Drust Soulcatcher]|{2032600} [War Resources]",
+		[53386] = "Runebound Chest|10+|44.22 27.7||treasure item:163742|Unlock Sequence|{1323038} [spell]Left]|{1323037} [spell]Right]|{1323035} [spell]Bottom]|{1323039} [spell]Top]||Contains|{2101967} [rare]Heartsbane Grimoire]|{2032600} [War Resources]",
+		[53387] = "Runebound Coffer|10+|33.69 71.73||treasure item:163740|Unlock Sequence|{1323035} [spell]Right]|{1323039} [spell]Top]|{1323038} [spell]Left]|{1323037} [spell]Bottom]||Contains|{940537} [rare]Drust Ritual Knife]|{2032600} [War Resources]",
 		[53471] = "Hexed Chest|10+|18.53 51.32||treasure item:163789|Contains|{135437} [uncommon]Bundle of Wicker Sticks]|{2032600} [War Resources]",
 		[53472] = "Bespelled Chest|10+|55.59 51.83||treasure item:163790|Contains|{134937} [uncommon]Spooky Incantation]|{2032600} [War Resources]",
 		[53473] = "Ensorcelled Chest|10+|67.77 73.67||treasure item:163791|Contains|{1516565} [uncommon]Miniature Stag Skull]|{2032600} [War Resources]",
@@ -197,18 +205,42 @@ Data.Vignettes = {
 	-- Val'sharah
 	[641] = {
 		-- Treasure
-		[38366] = "Small Treasure Chest|10+|48.68 73.79||treasure|Contains|{1397630} [Order Resources]",
-		[38369] = "Small Treasure Chest|10+|39.95 54.6||treasure|Contains|{1397630} [Order Resources]", -- has phasing issues with some quests
+		[38366] = "Small Treasure Chest|10+|48.68 73.79|\"Inside a tree trunk\"|treasure|Contains|{1397630} [Order Resources]",
+		[38369] = "Small Treasure Chest|10+|39.95 54.6||treasure|Contains|{1397630} [Order Resources]", -- has phasing issues with the healer Broken Shore quest line
 		[39079] = "Small Treasure Chest|10+|38.64 67.18||treasure|Contains|{1397630} [Order Resources]",
 		[39080] = {"Small Treasure Chest|10+ §38644|38.4 65.32|Heathrow Cellar|treasure|Contains|{1397630} [Order Resources]", "Small Treasure Chest|10+ 38644|38.4 65.32|Heathrow Cellar|treasure hardcore|Contains|{1397630} [Order Resources]||[ff0000]To get inside Heathrow Cellar you will have to die near the door and resurrect on the other side]",}, -- approx coords -- Door can only be opened while doing quest 38644
 		[39084] = "Small Treasure Chest|10+|43.22 54.88||treasure|Contains|{1397630} [Order Resources]",
 		[39085] = "Small Treasure Chest|10+|40.51 44.69||treasure down link:642|Contains|{1397630} [Order Resources]", -- Darkpens
+		[38355] = "Small Treasure Chest|10+|64.7 51.26||treasure|Contains|{1397630} [Order Resources]",
+		[38386] = "Small Treasure Chest|10+|67.39 53.41||treasure|Contains|{1397630} [Order Resources]",
+		[44139] = "Small Treasure Chest|10+|63.91 45.57||treasure|Contains|{1397630} [Order Resources]",
 	},
 
 	-- Darkpens
 	[642] = {
 		-- Treasure
 		[39085] = "Small Treasure Chest|10+|41.94 88.35||treasure|Contains|{1397630} [Order Resources]",
+	},
+
+
+	--[[ Highmountain ]]--
+
+	-- Thunder Totem
+	[750] = {
+		-- Treasure
+		[40475] = "Small Treasure Chest|10+|32.36 41.72||treasure|Contains|{1397630} [Order Resources]",
+	},
+
+	-- Hall of Chieftains, Thunder Totem
+	[652] = {
+		-- Treasure
+		--[40475] = "Small Treasure Chest|10+|32.36 41.72||treasure|Contains|{1397630} [Order Resources]",
+	},
+
+	-- Highmountain
+	[650] = {
+		-- Treasure
+		[40475] = "Small Treasure Chest|10+|45.13 59.92||treasure link:750|Contains|{1397630} [Order Resources]",
 	},
 
 
