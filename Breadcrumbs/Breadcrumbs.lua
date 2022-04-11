@@ -26,6 +26,8 @@ local setting_showtreasures = true
 local setting_showvignettes = true
 local setting_showpoi = true
 local setting_showmailboxes = true
+local setting_showquests = true
+local setting_showobjectives = true
 
 
 -- Frame recycling pool
@@ -212,7 +214,7 @@ function Breadcrumbs:UpdateMap(event, ...)
 	local DisoveryQuests = {}
 
 	-- Create Quest Pins
-	if Data.Quests and Data.Quests[map] then
+	if setting_showquests and Data.Quests and Data.Quests[map] then
 		for id in pairs(Data.Quests[map]) do
 			-- Quest must not be in the quest log and also not completed
 			if not C_QuestLog.IsOnQuest(id) and not C_QuestLog.IsQuestFlaggedCompleted(id) then
@@ -408,7 +410,7 @@ function Breadcrumbs:UpdateMap(event, ...)
 	end
 
 	-- Create Discovery Quest Pins
-	if setting_showdiscovery then
+	if setting_showquests and setting_showdiscovery then
 		-- Sort the table
 		local sorted = {}
 		for k in pairs(DisoveryQuests) do sorted[#sorted+1] = k end
@@ -526,7 +528,7 @@ function Breadcrumbs:UpdateMap(event, ...)
 	end
 
 	-- Create Objective Pins
-	if Data.Objectives and Data.Objectives[map] then
+	if setting_showobjectives and Data.Objectives and Data.Objectives[map] then
 		for id in pairs(Data.Objectives[map]) do
 			if C_QuestLog.IsOnQuest(id or 0) then
 				for i = 1, type(Data.Objectives[map][id]) == "string" and 1 or #Data.Objectives[map][id] do
