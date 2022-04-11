@@ -1416,6 +1416,10 @@ Data.Quests = {
 		[42392] = "Survive the Night|10+ hunter 43335|36.73 35.4|Rexxar|artifact",
 		[42410] = "Champion: Rexxar|10+ hunter 42392|36.73 35.4|Rexxar|artifact",
 
+		-- Enchanting
+		[39879] = "Strong Like the Earth|10+ enchanting 39878|46.73 60.42|Guron Twaintail|enchanting link:750",
+		[39880] = "Waste Not|10+ enchanting 39878|46.73 60.42|Guron Twaintail|enchanting link:750",
+
 		-- Herbalism - Foxflower
 		[40024] = "Foxflower Sample|10+ herbalism|3 Foxflower|{1387616} [Foxflower Sample]|herbalism discovery|Gathered from Foxflower",
 		[40025] = "Teeny Bite Marks|10+ herbalism 40024|3 Foxflower|{960686} [Nibbled Foxflower Stem]|herbalism discovery|Gathered from Foxflower",
@@ -1495,6 +1499,10 @@ Data.Quests = {
 		-- Crystal Fissure
 		[39134] = "Wrathshard|10+ 38909|61.94 6.41|Warbrave Nava",
 		[39133] = "No Time to talk|10+ 38909|61.94 6.41|Warbrave Nava",
+
+		-- Enchanting
+		[39879] = "Strong Like the Earth|10+ enchanting 39878|44.49 45.54|Guron Twaintail|enchanting",
+		[39880] = "Waste Not|10+ enchanting 39878|44.49 45.54|Guron Twaintail|enchanting",
 	},
 
 	-- Hall of Chieftains, Thunder Totem
@@ -1530,6 +1538,10 @@ Data.Quests = {
 		[42630] = "Bolas Bastion|10+ 39387|50.4 29.98|Bolas Skyfeather|up link:750",
 		[40217] = "An Offering of Ammo|10+ 39387,39456 ~39417 -39859 -40170|48.46 52.46|Shale Greyfeather|up link:750",
 		[42622] = "Ceremonial Drums|10+ 39992|54.86 77.92|Torv Dubstomp",
+
+		-- Enchanting
+		[39879] = "Strong Like the Earth|10+ enchanting 39878|44.49 45.54|Guron Twaintail|enchanting up link:750",
+		[39880] = "Waste Not|10+ enchanting 39878|44.49 45.54|Guron Twaintail|enchanting up link:750",
 	},
 
 	-- Bitestone Enclave
