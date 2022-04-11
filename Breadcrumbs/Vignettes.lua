@@ -176,7 +176,7 @@ Data.Vignettes = {
 		[38367] = "Glimmering Treasure Chest|10+|42.63 8.08||treasure|Contains|{1397630} [Order Resources]",
 		[40711] = {"Small Treasure Chest|10+ -flying|55.62 18.53|\"Take the Ley Portal inside the tower\"|treasure up|Contains|{1397630} [Order Resources]", "Small Treasure Chest|10+ flying|55.62 18.53|\"On top of the tower\"|treasure|Contains|{1397630} [Order Resources]",},
 		[42273] = "Small Treasure Chest|10+|62.38 58.4||treasure|Contains|{1397630} [Order Resources]",
-		[42278] = "Small Treasure Chest|10+|62.99 54.18|Gloombound Barrow|treasure down|Contains|{1397630} [Order Resources]",
+		[42278] = "Small Treasure Chest|10+|62.99 54.18|\"Inside Gloombound Barrow\"|treasure down|Contains|{1397630} [Order Resources]",
 		[42284] = "Small Treasure Chest|10+|53.64 39.82||treasure down link:631|Contains|{1397630} [Order Resources]", -- Nar'thalas Academy
 		[42285] = "Small Treasure Chest|10+ 37730|54.3 39||treasure down link:631|Contains|{1397630} [Order Resources]", -- Nar'thalas Academy - door is open after completing 37730
 		[42290] = {"Small Treasure Chest|10+ -37536|50.2 50.29|\"Inside the Shipwreck Arena cave\"|treasure down|Contains|{1397630} [Order Resources]", "Small Treasure Chest|10+ 37538|50.2 50.29|\"Inside the Shipwreck Arena cave\"|treasure down|Contains|{1397630} [Order Resources]",}, -- Phased out once 37536 completes and comes back after 37538 is turned in
@@ -225,25 +225,38 @@ Data.Vignettes = {
 
 	--[[ Highmountain ]]--
 
+	-- Highmountain
+	[650] = {
+		-- Treasure
+		[39531] = "A Steamy Jewelry Box|10+|63.49 59.32||treasure link:750|Contains|{454054} [Shiny Silver Necklace]", -- Thunder Totem
+		[40471] = "Treasure Chest|10+ 38909|47.1 61.32||treasure link:652|Contains|{1397630} [Order Resources]", -- double check prereq 38909 -- Hall of Chieftains
+		[40475] = "Highmountain Clan Chest|10+|45.13 59.92||treasure link:750|Contains|{1397630} [Order Resources]", -- Thunder Totem
+		[40475] = "Small Treasure Chest|10+|45.13 59.92||treasure link:750|Contains|{1397630} [Order Resources]", -- Thunder Totem
+		[40476] = "Glimmering Treasure Chest|10+|38.3 61.01||treasure down link:655|Contains|{1397630} [Order Resources]", -- Lifespring Cavern
+		[40484] = "Small Treasure Chest|10+|53.04 52.23|\"Inside Candle Rock\"|treasure down|Contains|{1397630} [Order Resources]", -- Candle Rock
+		[40489] = "Treasure Chest|10+|85.23 37.96||treasure down link:651|Contains|{1397630} [Order Resources]", -- Bitestone Enclave
+		[40493] = "Small Treasure Chest|10+|53.04 52.23|\"On the furthest ledge inside Crystal Fissure\"|treasure down|Contains|{1397630} [Order Resources]", -- Crystal Fissure
+		[40506] = "Small Treasure Chest|10+|50.81 35.04||treasure|Contains|{1397630} [Order Resources]",
+
+		-- Vignette
+		[39606] = "Treasures of Deathwing|10+|49.66 71.17|Highmountain Brazier|vignette down link:657|Glimmering Treasure Chest|{1397630} [Order Resources]", -- Neltharion's Vault
+
+		-- Rare
+		[48381] = "Obsidian Deathwarder|10+|49.08 83.35||rare down link:658|Drops|{634013} [poor]Curio of Neltharion]", -- Path of Huln
+	},
+
 	-- Thunder Totem
 	[750] = {
 		-- Treasure
 		[40475] = "Small Treasure Chest|10+|32.36 41.72||treasure|Contains|{1397630} [Order Resources]",
+		[40471] = "Treasure Chest|10+ 38909|47.34 52.34||treasure down link:652|Contains|{1397630} [Order Resources]", -- double check prereq 38909 -- Hall of Chieftains
+		[39531] = "A Steamy Jewelry Box|10+|63.49 59.32||treasure|Contains|{454054} [Shiny Silver Necklace]",
 	},
 
 	-- Hall of Chieftains, Thunder Totem
 	[652] = {
 		-- Treasure
-		--[40475] = "Small Treasure Chest|10+|32.36 41.72||treasure|Contains|{1397630} [Order Resources]",
-	},
-
-	-- Highmountain
-	[650] = {
-		-- Treasure
-		[40475] = "Highmountain Clan Chest|10+|45.13 59.92||treasure link:750|Contains|{1397630} [Order Resources]",
-		[40475] = "Small Treasure Chest|10+|45.13 59.92||treasure link:750|Contains|{1397630} [Order Resources]",
-		[40476] = "Glimmering Treasure Chest|10+|38.3 61.01||treasure down link:655|Contains|{1397630} [Order Resources]", -- Lifespring Cavern
-		[40489] = "Treasure Chest|10+|85.23 37.96||treasure down link:651|Contains|{1397630} [Order Resources]", -- Bitestone Enclave
+		[40471] = "Treasure Chest|10+ 38909|62.95 67.85||treasure|Contains|{1397630} [Order Resources]", -- double check prereq 38909
 	},
 
 	-- Lifespring Lower Cavern
@@ -262,6 +275,18 @@ Data.Vignettes = {
 	[651] = {
 		-- Treasure
 		[40489] = "Treasure Chest|10+|85.23 37.96||treasure|Contains|{1397630} [Order Resources]",
+	},
+
+	-- Neltharion's Vault
+	[657] = {
+		-- Vignette
+		[39606] = "Treasures of Deathwing|10+|63.78 37.51|Highmountain Brazier|vignette|Glimmering Treasure Chest|{1397630} [Order Resources]",
+	},
+
+	-- Path of Huln
+	[658] = {
+		-- Rare
+		[48381] = "Obsidian Deathwarder|10+|54.67 84.03||rare|Drops|{634013} [poor]Curio of Neltharion]",
 	},
 
 
