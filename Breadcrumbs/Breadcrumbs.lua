@@ -26,6 +26,8 @@ local setting_showtreasures = true
 local setting_showvignettes = true
 local setting_showpoi = true
 local setting_showmailboxes = true
+local setting_showmailboxesdense = false
+--local setting_mailboxtoggle = true
 local setting_showquests = true
 local setting_showobjectives = true
 
@@ -591,10 +593,10 @@ function Breadcrumbs:UpdateMap(event, ...)
 								end
 							end
 
-							if (flags["treasure"] and setting_showtreasures) or ((flags["event"] or flags["rare"]) and setting_showvignettes) then
+							if (flags["treasure"] and setting_showtreasures) or (flags["vignette"] and setting_showvignettes) then
 								-- Pin size
 								local size = setting_vignettesize
-								if flags["event"] or flags["rare"] and not flags["elsewhere"] and not flags["icon"] then
+								if flags["vignette"] and not flags["elsewhere"] and not flags["icon"] then
 									size = size * 1.25
 								end
 
@@ -606,8 +608,8 @@ function Breadcrumbs:UpdateMap(event, ...)
 									pin:SetNormalTexture(flag_icon)
 									pin:SetHighlightTexture(flag_icon)
 								else
-									pin:SetNormalAtlas(flags["elsewhere"] and "poi-traveldirections-arrow" or (flags["elite"] and flags["event"]) and "vignetteeventelite" or (flags["elite"] and flags["treasure"]) and "vignettelootelite" or flags["treasure"] and "vignetteloot" or flags["elite"] and "vignettekillelite" or "vignettekill")
-									pin:SetHighlightAtlas(flags["elsewhere"] and "poi-traveldirections-arrow" or (flags["elite"] and flags["event"]) and "vignetteeventelite" or (flags["elite"] and flags["treasure"]) and "vignettelootelite" or flags["treasure"] and "vignetteloot" or flags["elite"] and "vignettekillelite" or "vignettekill")
+									pin:SetNormalAtlas(flags["elsewhere"] and "poi-traveldirections-arrow" or (flags["elite"] and flags["vignette"]) and "vignetteeventelite" or (flags["elite"] and flags["treasure"]) and "vignettelootelite" or flags["treasure"] and "vignetteloot" or flags["elite"] and "vignettekillelite" or "vignettekill")
+									pin:SetHighlightAtlas(flags["elsewhere"] and "poi-traveldirections-arrow" or (flags["elite"] and flags["vignette"]) and "vignetteeventelite" or (flags["elite"] and flags["treasure"]) and "vignettelootelite" or flags["treasure"] and "vignetteloot" or flags["elite"] and "vignettekillelite" or "vignettekill")
 								end
 
 								pin:GetHighlightTexture():SetAlpha(0.5)
@@ -1038,6 +1040,7 @@ function Breadcrumbs:CheckPOI(map, datastring)
 
 					-- Mailbox
 					if v == "mailbox" and setting_showmailboxes then pass = true end
+					if v == "mailboxdense" and setting_showmailboxes and setting_showmailboxesdense then pass = true end
 
 					-- Must match...
 					if v == class or v == faction or v == covenant or v == prof1 or v == prof2 or v == race then pass = true end
