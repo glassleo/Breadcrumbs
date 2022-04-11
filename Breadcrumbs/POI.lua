@@ -78,7 +78,7 @@ Data.POI = {
 		"mailbox:objective|Mailbox|mailbox|73.74 49.11",
 
 		-- Item Upgrades
-		"upgradeitem-32x32|[Item Upgrades]|60+|34.56 56.52|tooltip|Aggressor Zo'dash",
+		"upgradeitem-32x32|[Item Upgrades]|60+|34.56 56.52",
 
 		-- Profession Trainer
 		"POI/Alchemy|[Alchemy Trainer]|48+ alchemy|39.23 40.38|tooltip|Elixirist Au'pyr",
@@ -122,6 +122,54 @@ Data.POI = {
 		"133210:objective|[Exotic Spices]|1+|44.5 33.1|tooltip|Xy'nara||Wants|{1392949} [Aromatic Spices]|{2178530} [Cheap Spices]|{2178533} [Myza's Special Spice]",
 		"134332:objective|[Rare Texts]|1+|45.7 30.7|tooltip|Xy'kitab||Wants|{133739} [A History of Maldraxxus]|{442732} [Denathrius' Private Diary]|{133740} [Worn Journal]",
 		--"236572:objective|[Overpriced Art]|1+|36.6 32.9|tooltip|Xy'aro",
+	},
+
+
+	--[[ Ardenweald ]]--
+
+	-- Heart of the Forest
+	[1701] = {
+		-- Mailbox
+		"mailbox:objective|Mailbox|mailbox|52.42 56.33",
+	},
+
+
+	--[[ Revendreth ]]--
+
+	-- Sinfall - Sinfall Reaches
+	[1699] = {
+		-- Mirror
+		"teleportationnetwork-revendreth-32x32:small|Sinfall Depths|1+|36.2 48.2|link:1700",
+
+		-- Sinfall Surface Flyer
+		"taxinode_neutral:small|Sinfall Surface Flyer|1+|41.92 48.49",
+
+		-- Mailbox
+		"mailbox:objective|Mailbox|mailbox|60.04 28.75",
+	},
+
+	-- Sinfall - Sinfall Depths
+	[1700] = {
+		-- Mirror
+		"teleportationnetwork-revendreth-32x32:small|Sinfall Reaches|1+|70.9 38.1|link:1699",
+
+		-- Sinfall Surface Flyer
+		"taxinode_neutral|Sinfall Surface Flyer|1+|67.18 47.39",
+
+		-- Item Upgrades
+		"upgradeitem-32x32|[Item Upgrades]|60+|73.45 24.83",
+	},
+
+
+	--[[ Maldraxxus ]]--
+
+	-- Seat of the Primus
+	[1698] = {
+		-- Mailbox
+		"mailbox:objective|Mailbox|mailbox|48.33 28.16",
+
+		-- Item Upgrades
+		"upgradeitem-32x32|[Item Upgrades]|60+|56.26 48.1",
 	},
 
 
@@ -175,6 +223,9 @@ Data.POI = {
 		"groupfinder-icon-class-demonhunter|[The Fel Hammer]|10+ demonhunter 42872|97.5 68.73|tooltip|Gateway to the Fel Hammer in Mardum, Home of the Illidari",
 		"groupfinder-icon-class-rogue|[Hall of Shadows]|10+ rogue 40832|46.8 25.4|tooltip|Home of the Uncrowned",
 
+		-- Teleport Pad
+		"teleportationnetwork-32x32:small|Aegwynn's Gallery|1+|49.4 47.6|link:629",
+
 		-- Flight Master
 		"taxinode_neutral:small|Dalaran|1+|69.84 51.13",
 		"groupfinder-icon-class-hunter|[Trueshot Lodge]|10+ hunter 40953|72.85 41.21|tooltip|Eagle to Trueshot Lodge, Home of the Unseen Path",
@@ -197,6 +248,12 @@ Data.POI = {
 		"POI/Cooking|[Cooking]|10+ horde|69.77 38.77|tooltip|The Filthy Animal",
 		"POI/Fishing|[Fishing Trainer]|10+|52.81 65.59|tooltip|Marcia Chase",
 		"POI/Archaeology|[Archaeology]|10+|41.26 25.36|tooltip|Things of the Past",
+	},
+
+	-- Aegwynn's Gallery
+	[629] = {
+		-- Teleport Pad
+		"teleportationnetwork-32x32:small|Dalaran|1+|65 21.2|link:627",
 	},
 
 
