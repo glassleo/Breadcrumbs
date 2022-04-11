@@ -48,7 +48,7 @@ local _, Data = ...
 		alliance		Must be Alliance
 		horde			Must be Horde
 		covenant		Must belong to any of the following covenants (kyrian, venthyr, nightfae, necrolord)
-		-x				Must not be class/have profession/be race/belong to faction/belong to covenant
+		-x				Inverse of above
 
 		flying			Must have learned flying
 		-flying			Must not have learned flying
@@ -61,8 +61,11 @@ local _, Data = ...
 		research:n		Must have researched GarrTalent ID n (see https://wow.tools/dbc/?dbc=garrtalent)
 		-research:n		Must not have researched GarrTalent ID n
 
-		phase:n			Map must have UiMapArt ID n (see https://wow.tools/dbc/?dbc=uimapart) - used to determine which version of the map the player is currently on
-		-phase:n		Map must not have UiMapArt ID n
+		renown:n		Must have attained renown level n with their current covenant
+		-renown:n		Must not have attained renown level n with their current covenant
+
+		art:n			Map must currently have UiMapArt ID n (see https://wow.tools/dbc/?dbc=uimapart) - used to determine which phase of the map the player is currently on
+		-art:n			Map must not currently have UiMapArt ID n
 
 		broken			Quest is broken and cannot be completed, it will be hidden unless the user has decided to display broken quests
 		broken:n		Quest is broken if you are level n or higher and cannot be completed, it will be hidden unless the user has decided to display broken quests
@@ -154,6 +157,21 @@ Data.Quests = {
 
 	-- Ring of Fates
 	[1670] = {
+		-- The Threads of Fate
+		[62716] = "Re-Introductions|50+ 62704|20.74 50.29|Fatescribe Roh-Tahl|campaign",
+		[62000] = "Choosing Your Purpose|50+ 62716|38.89 70|Tal-Inara|campaign",
+		[62159] = "Aiding the Shadowlands|50+ 62716|38.89 70|Tal-Inara|campaign",
+
+		-- Threads of Fate: Bastion
+		-- 62151 Chose Bastion HTQ - Also given breadcrumb 62275 which is optional
+		[63034] = "The Elysian Fields|50+ 62151 ~62275 kyrian|38.89 70|Tal-Inara", -- Kyrian
+		[62707] = "The Elysian Fields|50+ 62151 ~62275 -kyrian|38.89 70|Tal-Inara", -- Not Kyrian
+
+		-- Threads of Fate: Maldraxxus
+		-- Threads of Fate: Ardenweald
+		-- Threads of Fate: Revendreth
+		-- Threads of Fate: Torghast
+
 		-- Zereth Mortis - Secrets of the First Ones
 		--[64942] = "Call of the Primus|60+ ???|38.9 69.99|[Auto Accept]|campaign", -- Requires chapter 2 of Chains of Domination
 	},
@@ -427,6 +445,17 @@ Data.Quests = {
 		[40863] = "Always the Last Thing|10+ engineering 40858|38.97 25.42|Didi the Wrench|engineering",
 		[40864] = "Modular Modifications|10+ engineering 40863|38.97 25.42|Didi the Wrench|engineering",
 		[40865] = "It's Not Rocket Science|10+ engineering 40861 40862 40864|38.36 25.57|Hobart Grapplehammer|engineering",
+
+		-- Enchanting
+		-- ...
+		[39879] = "Strong Like the Earth|10+ enchanting 39878|38.31 40.37|Guron Twaintail|enchanting elsewhere link:750",
+		[39880] = "Waste Not|10+ enchanting 39878|38.31 40.37|Guron Twaintail|enchanting elsewhere link:750",
+		[39883] = "Cloaked in Tradition|10+ enchanting 39879 39880|38.31 40.37|Guron Twaintail|enchanting elsewhere link:750",
+		[39881] = "Fey Enchantments|10+ enchanting 39883|38.31 40.37|Enchanter Nalthanis|enchanting",
+		[39884] = "No Longer Worthy|10+ enchanting 39881|38.31 40.37|Nalamya|enchanting elsewhere link:641",
+		[39889] = "Led Astray|10+ enchanting 39881|38.31 40.37|Nalamya|enchanting elsewhere link:641",
+		[39882] = "Darkheart Thicket: The Glamour Has Faded|10+ enchanting 39884 39889|38.31 40.37|Nalamya|enchanting dungeon elsewhere link:641",
+		[39903] = "An Enchanting Home|10+ enchanting 39883|38.31 40.37|Enchanter Nalthanis|enchanting",
 
 		-- Herbalism - Aethril
 		[40013] = "Aethril Sample|10+ herbalism|1 Aethril|{1395063} [Aethril Sample]|herbalism discovery link:630|Gathered from Aethril",
@@ -1206,6 +1235,11 @@ Data.Quests = {
 		[40861] = "In My Sights|10+ engineering 40860|59.83 62.26|Fargo Flintlocke|engineering",
 		[40862] = "All Charged Up|10+ engineering 40860|59.83 62.26|Fargo Flintlocke|engineering",
 
+		-- Enchanting
+		[39884] = "No Longer Worthy|10+ enchanting 39881|54.4 57.71|Nalamya|enchanting",
+		[39889] = "Led Astray|10+ enchanting 39881|54.4 57.71|Nalamya|enchanting",
+		[39882] = "Darkheart Thicket: The Glamour Has Faded|10+ enchanting 39884 39889|54.4 57.71|Nalamya|enchanting dungeon",
+
 		-- Herbalism - Dreamleaf
 		[40018] = "Dreamleaf Sample|10+ herbalism|2 Dreamleaf|{1387613} [Dreamleaf Sample]|herbalism discovery|Gathered from Dreamleaf",
 		[40020] = "Twisted to Death|10+ herbalism 40019|2 Dreamleaf|{1387617} [Blight-Twisted Herb]|herbalism discovery|Gathered from Dreamleaf",
@@ -1416,6 +1450,7 @@ Data.Quests = {
 		-- Enchanting
 		[39879] = "Strong Like the Earth|10+ enchanting 39878|46.73 60.42|Guron Twaintail|enchanting link:750",
 		[39880] = "Waste Not|10+ enchanting 39878|46.73 60.42|Guron Twaintail|enchanting link:750",
+		[39883] = "Cloaked in Tradition|10+ enchanting 39879 39880|46.73 60.42|Guron Twaintail|enchanting link:750",
 
 		-- Herbalism - Foxflower
 		[40024] = "Foxflower Sample|10+ herbalism|3 Foxflower|{1387616} [Foxflower Sample]|herbalism discovery|Gathered from Foxflower",
@@ -1500,6 +1535,7 @@ Data.Quests = {
 		-- Enchanting
 		[39879] = "Strong Like the Earth|10+ enchanting 39878|44.49 45.54|Guron Twaintail|enchanting",
 		[39880] = "Waste Not|10+ enchanting 39878|44.49 45.54|Guron Twaintail|enchanting",
+		[39883] = "Cloaked in Tradition|10+ enchanting 39879 39880|44.49 45.54|Guron Twaintail|enchanting",
 	},
 
 	-- Hall of Chieftains, Thunder Totem
@@ -1537,8 +1573,9 @@ Data.Quests = {
 		[42622] = "Ceremonial Drums|10+ 39992|54.86 77.92|Torv Dubstomp",
 
 		-- Enchanting
-		[39879] = "Strong Like the Earth|10+ enchanting 39878|44.49 45.54|Guron Twaintail|enchanting up link:750",
-		[39880] = "Waste Not|10+ enchanting 39878|44.49 45.54|Guron Twaintail|enchanting up link:750",
+		[39879] = "Strong Like the Earth|10+ enchanting 39878|54.9 48.34|Guron Twaintail|enchanting up link:750",
+		[39880] = "Waste Not|10+ enchanting 39878|54.9 48.34|Guron Twaintail|enchanting up link:750",
+		[39883] = "Cloaked in Tradition|10+ enchanting 39879 39880|54.9 48.34|Guron Twaintail|enchanting up link:750",
 	},
 
 	-- Bitestone Enclave
@@ -2423,13 +2460,13 @@ Data.Quests = {
 	--[[ Arathi Highlands ]]--
 
 	[14] = {
-		-- Phases: 15 (before BfA), 1137 (BfA)
+		-- Art: 15 (Cataclysm), 1137 (BfA)
 
 		-- Death Knight - The Four Horsemen
-		[42534] = "Our Oldest Enemies|10+ phase:15 deathknight 42533|19.45 67.31|Prince Galen Trollbane|artifact",
-		[42535] = "Death... and Decay|10+ phase:15 deathknight 42533|19.45 67.31|Prince Galen Trollbane|artifact",
-		[42536] = "Regicide|10+ phase:15 deathknight 42534 42535|19.52 67.09|Thassarian|artifact",
-		[42537] = "The King Rises|10+ phase:15 deathknight 42536|23.39 61.4|Thassarian|artifact",
+		[42534] = "Our Oldest Enemies|10+ art:15 deathknight 42533|19.45 67.31|Prince Galen Trollbane|artifact",
+		[42535] = "Death... and Decay|10+ art:15 deathknight 42533|19.45 67.31|Prince Galen Trollbane|artifact",
+		[42536] = "Regicide|10+ art:15 deathknight 42534 42535|19.52 67.09|Thassarian|artifact",
+		[42537] = "The King Rises|10+ art:15 deathknight 42536|23.39 61.4|Thassarian|artifact",
 	},
 
 
