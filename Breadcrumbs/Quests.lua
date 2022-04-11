@@ -163,7 +163,7 @@ Data.Quests = {
 		[62159] = "Aiding the Shadowlands|50+ 62716|38.89 70|Tal-Inara|campaign",
 
 		-- Threads of Fate: Bastion
-		-- 62151 Chose Bastion HTQ - Also given breadcrumb 62275 which is optional
+		-- 62151 Chose Bastion HTQ - Also given breadcrumb 62275 (Bastion) which is optional
 		[63034] = "The Elysian Fields|50+ 62151 ~62275 kyrian|38.89 70|Tal-Inara", -- Kyrian
 		[62707] = "The Elysian Fields|50+ 62151 ~62275 -kyrian|38.89 70|Tal-Inara", -- Not Kyrian
 
