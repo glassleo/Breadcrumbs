@@ -594,6 +594,9 @@ function Breadcrumbs:UpdateMap(event, ...)
 							if (flags["treasure"] and setting_showtreasures) or ((flags["event"] or flags["rare"]) and setting_showvignettes) then
 								-- Pin size
 								local size = setting_vignettesize
+								if flags["event"] or flags["rare"] and not flags["elsewhere"] and not flags["icon"] then
+									size = size * 1.25
+								end
 
 								-- Create quest marker pin
 								local pin = NewPin()
@@ -831,6 +834,8 @@ Breadcrumbs:RegisterEvent("ZONE_CHANGED_INDOORS", "UpdateMap")
 Breadcrumbs:RegisterEvent("ZONE_CHANGED_NEW_AREA", "UpdateMap")
 Breadcrumbs:RegisterEvent("WORLD_MAP_OPEN", "UpdateMap")
 Breadcrumbs:RegisterEvent("QUEST_LOG_UPDATE", "UpdateMap")
+Breadcrumbs:RegisterEvent("COVENANT_CHOSEN", "UpdateMap")
+Breadcrumbs:RegisterEvent("COVENANT_SANCTUM_RENOWN_LEVEL_CHANGED", "UpdateMap")
 
 Breadcrumbs:RegisterEvent("QUEST_WATCH_LIST_CHANGED", "FixBonusObjectivesDelayed")
 
@@ -846,6 +851,7 @@ function Breadcrumbs:CheckQuest(map, quest, datastring)
 	local race = strlower(select(2, UnitRace("player")))
 	local faction = strlower(UnitFactionGroup("player"))
 	local level = UnitLevel("player") or 1
+	local renown = C_CovenantSanctumUI.GetRenownLevel() or 1
 	local garrison = C_Garrison and C_Garrison.GetGarrisonInfo(Enum.GarrisonType.Type_6_0) or 0
 	local covenant = C_Covenants and C_Covenants.GetActiveCovenantID() or 0
 	if covenant == 1 then covenant = "kyrian" end
@@ -891,11 +897,17 @@ function Breadcrumbs:CheckQuest(map, quest, datastring)
 					-- Must not have researched Garrison talent (-research:n)
 					if string.match(v, "%-research:(%d+)") and not C_Garrison.GetTalentInfo(tonumber(string.match(v, "research:(%d+)") or 0)).researched then pass = true end
 
-					-- Map must have Art ID (phase:n)
-					if string.match(v, "phase:(%d+)") and (C_Map.GetMapArtID(map) == tonumber(string.match(v, "phase:(%d+)") or 0)) then pass = true end
+					-- Map must have Art ID (art:n)
+					if string.match(v, "art:(%d+)") and (C_Map.GetMapArtID(map) == tonumber(string.match(v, "art:(%d+)") or 0)) then pass = true end
 
-					-- Map must not have Art ID (-phase:n)
-					if string.match(v, "%-phase:(%d+)") and (C_Map.GetMapArtID(map) ~= tonumber(string.match(v, "%-phase:(%d+)") or 0)) then pass = true end
+					-- Map must not have Art ID (-art:n)
+					if string.match(v, "%-art:(%d+)") and (C_Map.GetMapArtID(map) ~= tonumber(string.match(v, "%-art:(%d+)") or 0)) then pass = true end
+
+					-- Map must have attained renown level (renown:n)
+					if string.match(v, "renown:(%d+)") and (C_Map.GetMapArtID(map) == tonumber(string.match(v, "renown:(%d+)") or 0)) then pass = true end
+
+					-- Map must not have attained renown level (-renown:n)
+					if string.match(v, "%-renown:(%d+)") and (C_Map.GetMapArtID(map) ~= tonumber(string.match(v, "%-renown:(%d+)") or 0)) then pass = true end
 
 					-- Must have flying
 
@@ -967,6 +979,7 @@ function Breadcrumbs:CheckPOI(map, datastring)
 	local race = strlower(select(2, UnitRace("player")))
 	local faction = strlower(UnitFactionGroup("player"))
 	local level = UnitLevel("player") or 1
+	local renown = C_CovenantSanctumUI.GetRenownLevel() or 1
 	local garrison = C_Garrison and C_Garrison.GetGarrisonInfo(Enum.GarrisonType.Type_6_0) or 0
 	local covenant = C_Covenants and C_Covenants.GetActiveCovenantID() or 0
 	if covenant == 1 then covenant = "kyrian" end
@@ -1011,11 +1024,17 @@ function Breadcrumbs:CheckPOI(map, datastring)
 					-- Must not have researched Garrison talent (-research:n)
 					if string.match(v, "%-research:(%d+)") and not C_Garrison.GetTalentInfo(tonumber(string.match(v, "research:(%d+)") or 0)).researched then pass = true end
 
-					-- Map must have Art ID (phase:n)
-					if string.match(v, "phase:(%d+)") and (C_Map.GetMapArtID(map) == tonumber(string.match(v, "phase:(%d+)") or 0)) then pass = true end
+					-- Map must have Art ID (art:n)
+					if string.match(v, "art:(%d+)") and (C_Map.GetMapArtID(map) == tonumber(string.match(v, "art:(%d+)") or 0)) then pass = true end
 
-					-- Map must not have Art ID (-phase:n)
-					if string.match(v, "%-phase:(%d+)") and (C_Map.GetMapArtID(map) ~= tonumber(string.match(v, "%-phase:(%d+)") or 0)) then pass = true end
+					-- Map must not have Art ID (-art:n)
+					if string.match(v, "%-art:(%d+)") and (C_Map.GetMapArtID(map) ~= tonumber(string.match(v, "%-art:(%d+)") or 0)) then pass = true end
+
+					-- Map must have attained renown level (renown:n)
+					if string.match(v, "renown:(%d+)") and (C_Map.GetMapArtID(map) == tonumber(string.match(v, "renown:(%d+)") or 0)) then pass = true end
+
+					-- Map must not have attained renown level (-renown:n)
+					if string.match(v, "%-renown:(%d+)") and (C_Map.GetMapArtID(map) ~= tonumber(string.match(v, "%-renown:(%d+)") or 0)) then pass = true end
 
 					-- Mailbox
 					if v == "mailbox" and setting_showmailboxes then pass = true end
