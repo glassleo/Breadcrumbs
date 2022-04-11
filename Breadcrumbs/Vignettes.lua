@@ -240,7 +240,28 @@ Data.Vignettes = {
 	-- Highmountain
 	[650] = {
 		-- Treasure
+		[40475] = "Highmountain Clan Chest|10+|45.13 59.92||treasure link:750|Contains|{1397630} [Order Resources]",
 		[40475] = "Small Treasure Chest|10+|45.13 59.92||treasure link:750|Contains|{1397630} [Order Resources]",
+		[40476] = "Glimmering Treasure Chest|10+|38.3 61.01||treasure down link:655|Contains|{1397630} [Order Resources]", -- Lifespring Cavern
+		[40489] = "Treasure Chest|10+|85.23 37.96||treasure down link:651|Contains|{1397630} [Order Resources]", -- Bitestone Enclave
+	},
+
+	-- Lifespring Lower Cavern
+	[656] = {
+		-- Treasure
+		[40476] = "Glimmering Treasure Chest|10+|52.87 23.96||treasure down link:655|Contains|{1397630} [Order Resources]",
+	},
+
+	-- Lifespring Upper Cavern
+	[655] = {
+		-- Treasure
+		[40476] = "Glimmering Treasure Chest|10+|52.87 23.96||treasure|Contains|{1397630} [Order Resources]",
+	},
+
+	-- Bitestone Enclave
+	[651] = {
+		-- Treasure
+		[40489] = "Treasure Chest|10+|85.23 37.96||treasure|Contains|{1397630} [Order Resources]",
 	},
 
 
