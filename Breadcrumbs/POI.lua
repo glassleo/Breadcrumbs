@@ -542,6 +542,13 @@ Data.POI = {
 	-- Hall of Chieftains, Thunder Totem
 	[652] = {},
 
+	-- Neltharion's Vault
+	[657] = {
+		-- Teleport Pad
+		"teleportationnetwork-32x32:small|Titan Waygate|1+|52.02 28.65",
+		"teleportationnetwork-32x32:small|Titan Waygate|1+|59.09 42.78",
+	},
+
 
 	--[[ Stormheim ]]--
 
@@ -722,11 +729,11 @@ Data.POI = {
 
 	-- Tirisfal Glades
 	[18] = {
-		-- Phases: 19 (before BfA), 1136 (BfA)
+		-- Art: 19 (Cataclysm), 1136 (BfA)
 
 		-- Portal
-		"POI/Portal|Portals to Orgrimmar and Stranglethorn Vale|horde phase:19|61.2 58.6",
-		"POI/Portal|Portal to Howling Fjord|10+ horde phase:19|59.09 58.9",
+		"POI/Portal|Portals to Orgrimmar and Stranglethorn Vale|horde art:19|61.2 58.6",
+		"POI/Portal|Portal to Howling Fjord|10+ horde art:19|59.09 58.9",
 	},
 
 
