@@ -370,38 +370,6 @@ function Breadcrumbs:UpdateMap(event, ...)
 
 							Pins:AddWorldMapIconMap("Breadcrumbs", pin, map, x/100, y/100, nil, setting_questframelevel or "PIN_FRAME_LEVEL_STORY_LINE")
 							pin:Show()
-
-							if xx and yy then
-								-- Create alternate quest marker pin
-								local pin = NewPin()
-								size = setting_objectivesize
-								pin:SetSize(size, size)
-
-								pin:SetNormalAtlas(flags["down"] and "poi-door-down" or flags["up"] and "poi-door-up" or flags["inside"] and "poi-door-left" or flags["outside"] and "poi-door-right" or "questobjective")
-								
-								pin:SetScript("OnEnter", function(self, motion)
-									GameTooltip:Hide()
-									GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
-									GameTooltip:AddLine(C_QuestLog.GetTitleForQuestID(id) or id)
-									if flags["down"] or flags["up"] or flags["inside"] or flags["outside"] then
-										GameTooltip:AddLine(flags["up"] and "Entrance" or flags["outside"] and "Exit" or "Entrance", 1, 1, 1)
-									else
-										GameTooltip:AddDoubleLine(AVAILABLE_QUEST, Breadcrumbs:FormatTooltip(source and "{!} " .. source or "", flags) or "", 1, 1, 1)
-										if setting_showhelp and help and strlen(help) > 0 then
-											GameTooltip:AddLine(" ")
-											GameTooltip:AddLine(Breadcrumbs:FormatTooltip(help, flags), nil, nil, nil, true)
-										end
-									end
-									GameTooltip:Show()
-								end)
-
-								pin:SetScript("OnLeave", function(self, motion)
-									GameTooltip:Hide()
-								end)
-
-								Pins:AddWorldMapIconMap("Breadcrumbs", pin, map, xx/100, yy/100, nil, setting_questframelevel or "PIN_FRAME_LEVEL_STORY_LINE")
-								pin:Show()
-							end
 						end
 					end
 				end

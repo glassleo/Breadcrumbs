@@ -69,7 +69,6 @@ local _, Data = ...
 
 	Coordinates: Coordinates for the map pin(s)
 		X Y				Coordinates for the map pin indicating where to pick up the quest
-		XX YY			Coordinates for an optional map pin indicating where an entrance or exit is; should only provided if you also provide a positional flag (up, down, inside, outside)
 
 	Priority: Priority number used for sorting Discovery Quests
 		X				Priority, number between 1-99; the lowest number appears on top of the list
@@ -101,8 +100,6 @@ local _, Data = ...
 		
 		up				Quest is on a different map above the current map, also changes the XX YY pin to an exit marker if provided
 		down			Quest is on a different map below the current map, also changes the XX YY pin to an entrance marker if provided
-		inside			Quest is inside on the same map, also changes the XX YY pin to an entrance marker if provided
-		outside			Quest is outside on the same map, also changes the XX YY pin to an exit marker if provided
 
 		discovery		Quest can be discovered from a non-fixed location in the zone, for example by mining a node; places the pin in the Discovery Quest list (top left corner of the map) sorted by other flags and priority number
 	
@@ -363,7 +360,7 @@ Data.Quests = {
 
 		-- The Council's Challenge
 		[44782] = "Away From Prying Eyes|45+ 47000,44781|28.49 48.34|Archmage Khadgar|artifact",
-		[44821] = "In Dire Need|45+ 44782|22.21 39.05 24.21 48.01|Archmage Modera|artifact inside",
+		[44821] = "In Dire Need|45+ 44782|22.21 39.05|Archmage Modera|artifact",
 
 		-- The Highlord's Return (Death Knight, Demon Hunter, Druid, Monk, Paladin, Warrior)
 		[47025] = "Blood: Aid of the Illidari|45+ deathknight 44821|28.45 49.49|Archmage Ansirem Runeweaver|artifact", -- Death Knight
@@ -1460,7 +1457,7 @@ Data.Quests = {
 	-- Thunder Totem
 	[750] = {
 		-- The Rivermane Tribe
-		[42590] = "Moozy's Reunion|10+ 39572|45.89 54.92 49.74 53.59|Sella Waterwise|inside",
+		[42590] = "Moozy's Reunion|10+ 39572|45.89 54.92|Sella Waterwise",
 		[38911] = "The Rivermane Tribe|10+ 38907|44.5 50.71|Mayla Highmountain|down link:652",
 		[39491] = "Ormgul the Pestilent|10+ 38911|21.05 41.74|Jale Rivermane",
 		[39272] = "Poisoned Crops|10+ 38911|21.42 41.68|Farmer Maya",
@@ -1739,9 +1736,9 @@ Data.Quests = {
 
 		-- Plight of the Blackfeather
 		[42444] = "Plight of the Blackfeather|10+|50.31 34.04|Frightened Ravenbear",
-		[42446] = "Singed Feathers|10+ 42444|49.79 32.63 50.69 31.06|Cukkaw|inside",
-		[42445] = "Nithogg's Tribute|10+ 42444|49.98 32.65 50.69 31.06|Intact Greatstag Antler|inside",
-		[42447] = "Dances With Ravenbears|10+ 42446 42445|49.79 32.63 50.69 31.06|Cukkaw|inside",
+		[42446] = "Singed Feathers|10+ 42444|49.79 32.63|Cukkaw",
+		[42445] = "Nithogg's Tribute|10+ 42444|49.98 32.65|Intact Greatstag Antler",
+		[42447] = "Dances With Ravenbears|10+ 42446 42445|49.79 32.63|Cukkaw",
 
 		-- Dreyrgrot
 		[42640] = "The Value of Knowledge|10+|75.53 50.8|Crate of Ancient Relics",
