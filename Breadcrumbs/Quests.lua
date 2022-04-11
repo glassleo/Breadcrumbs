@@ -177,6 +177,30 @@ Data.Quests = {
 	},
 
 
+	--[[ Bastion ]]--
+
+	-- Bastion
+	[1533] = {
+		-- Threads of Fate: Bastion
+		[62723] = "Bolstering Bastion|50+ 63034,62707 -kyrian|51 46.8|Kalisthene|campaign", -- Not Kyrian
+		[62729] = "Return to Oribos|50+ 62723 -kyrian|51 46.8|Kalisthene|campaign", -- Not Kyrian
+	},
+
+	-- Elysian Hold - Archon's Rise
+	[1707] = {
+		-- Threads of Fate: Bastion
+		[62723] = "Bolstering Bastion|50+ 63034,62707 kyrian|37.09 61.18|Kalisthene|campaign", -- Kyrian
+		[62729] = "Return to Oribos|50+ 62723 kyrian|37.09 61.18|Kalisthene|campaign", -- Kyrian
+	},
+
+	-- Elysian Hold - Sanctum of Binding
+	[1708] = {
+		-- Threads of Fate: Bastion
+		[62723] = "Bolstering Bastion|50+ 63034,62707 kyrian|37.09 61.18|Kalisthene|campaign", -- Kyrian
+		[62729] = "Return to Oribos|50+ 62723 kyrian|37.09 61.18|Kalisthene|campaign", -- Kyrian
+	},
+
+
 	--[[ Tiragarde Sound ]]--
 
 	-- Boralus
