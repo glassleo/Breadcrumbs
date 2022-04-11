@@ -48,6 +48,13 @@ Data.Objectives = {
 		[38691] = "poi-door-left|38.88 53.05|Entrance to Ravencrest Mausoleum",
 	},
 
+	-- Hall of Chieftains, Thunder Totem
+	[652] = {
+		-- Keepers of the Hammer
+		[38907] = "questturnin|54.81 63.18|Keepers of the Hammer",
+		[39989] = "questturnin|54.81 63.18|Keepers of the Hammer",
+	},
+
 	-- Stormheim
 	[634] = {
 		-- Pins and Needles
