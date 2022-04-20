@@ -42,6 +42,12 @@ Data.Objectives = {
 		[41728] = "questobjective|47.16 47.75|The Defense of Tian Monastery|[Tak-Tak]",
 	},
 
+	-- Nar'thalas Academy, Azsuna
+	[631] = {
+		-- Into the Academy
+		[37468] = "questturnin|53.38 47.57|Into the Academy",
+	},
+
 	-- Val'sharah
 	[641] = {
 		-- Jarod's Mission
