@@ -177,6 +177,9 @@ Data.POI = {
 
 	-- Elysian Hold - Archon's Rise
 	[1707] = {
+		-- Portal
+		"POI/Portal|Portal to Oribos|research:1058|48.84 64.79", -- Requires Eternal Paths (Tier 3 Transport Network) (1058)
+
 		-- Mailbox
 		"mailbox:objective|Mailbox|mailbox|48.64 58.21",
 		"mailbox:objective|Mailbox|mailbox|24.62 32.17",
@@ -584,6 +587,7 @@ Data.POI = {
 	[371] = {
 		-- Profession Trainer
 		"POI/Enchanting|[Enchanting Trainer]|10+ enchanting|46.85 42.94|tooltip|Lai the Spellpaw",
+		"POI/Inscription|[Inscription Trainer]|10+ inscription|54.91 45.12|tooltip|Inkmaster Wei",
 	},
 
 
