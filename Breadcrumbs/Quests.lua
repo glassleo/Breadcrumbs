@@ -876,16 +876,21 @@ Data.Quests = {
 		[42394] = {"Unseen Protection|10+ hunter 42395|43.39 26.32|Emmarel Shadewarden|artifact", "Unseen Protection|10+ hunter 42395|41.59 74.72|Emmarel Shadewarden|artifact",},
 		[42436] = {"Aiding Our Allies|10+ hunter +42394|43.39 26.32|Emmarel Shadewarden|artifact", "Aiding Our Allies|10+ hunter +42394|41.59 74.72|Emmarel Shadewarden|artifact",},
 
-
 		-- Guise of the Unseen Path
 		[44233] = "Walk This Way|45+ hunter 40954|44.57 48.87|Outfitter Reynolds",
 	},
 
 	-- Mage - Hall of the Guardian - The Guardian's Library
-	[735] = {},
+	[735] = {
+		-- Vesture of Tirisgarde
+		[44240] = "Orange is the New Purple|45+ mage|44.77 57.88|Jackson Watkins", -- Add prereq quest
+	},
 
 	-- Mage - Hall of the Guardian
-	[734] = {},
+	[734] = {
+		-- Vesture of Tirisgarde
+		[44240] = "Orange is the New Purple|45+ mage|44.77 57.88|Jackson Watkins|up link:735", -- Add prereq quest
+	},
 
 	-- Monk - Wandering Isle
 	[709] = {
