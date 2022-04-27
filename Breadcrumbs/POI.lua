@@ -641,6 +641,29 @@ Data.POI = {
 	},
 
 
+	--[[ Mulgore ]]--
+
+	-- Thunder Bluff
+	[88] = {
+		-- Profession Trainer
+		"POI/Alchemy|[Alchemy Trainer]|5+ horde alchemy|46.61 33.2|tooltip|Bena Winterhoof",
+		"POI/Blacksmithing|[Blacksmithing Trainer]|5+ horde blacksmithing|39.38 55.1|tooltip|Karn Stonehoof",
+		"POI/Enchanting|[Enchanting Trainer]|5+ horde enchanting|45.3 38.47|tooltip|Teg Dawnstrider",
+		"POI/Engineering|[Engineering Trainer]|5+ horde engineering|36.05 59.62|tooltip|Engineer Palehoof",
+		"POI/Herbalism|[Herbalism Trainer]|5+ horde herbalism|49.96 40.39|tooltip|Komin Winterhoof",
+		"POI/Inscription|[Inscription Trainer]|5+ horde inscription|28.69 20.85|tooltip down|Poshken Hardbinder",
+		"POI/Jewelcrafting|[Jewelcrafting Trainer]|5+ horde jewelcrafting|34.83 54|tooltip|Nahari Cloudchaser",
+		"POI/Leatherworking|[Leatherworking Trainer]|5+ horde leatherworking|41.51 42.58|tooltip|Una",
+		"POI/Mining|[Mining Trainer]|5+ horde mining|34.39 57.88|tooltip|Brek Stonehoof",
+		"POI/Skinning|[Skinning Trainer]|5+ horde skinning|44.45 43.14|tooltip|Mooranta",
+		"POI/Tailoring|[Tailoring Trainer]|5+ horde tailoring|44.54 45.33|tooltip|Tepa",
+		"POI/Tailoring|[Bandage Trainer]|5+ horde tailoring|29.67 21.18|tooltip|Pand Stonebinder",
+		"POI/Cooking|[Cooking Trainer]|5+ horde|50.74 53.1|tooltip|Aska Mistrunner",
+		"POI/Fishing|[Fishing Trainer]|5+ horde|56.12 46.4|tooltip|Kah Mistrunner",
+		"POI/Archaeology|[Archaeology Trainer]|10+ horde|75.05 28.12|tooltip|Otoh Greyhide",
+	},
+
+
 	--[[ Moonglade ]]--
 
 	[80] = {
@@ -673,6 +696,24 @@ Data.POI = {
 		"POI/Portal|Portal to Undercity|49- horde|50.75 55.59",
 		"POI/Portal|Portal to Tirisfal Glades|50+ horde|50.75 55.59",
 		"POI/Portal|Portal to Tol Barad|30+ horde|47.39 39.26",
+
+		-- Profession Trainer
+		"POI/Alchemy|[Alchemy Trainer]|5+ horde alchemy|55.68 45.75|tooltip|Yelmak",
+		"POI/Blacksmithing|[Blacksmithing Trainer]|5+ horde blacksmithing|76.5 34.52|tooltip|Saru Steelfury",
+		"POI/Enchanting|[Enchanting Trainer]|5+ horde enchanting|53.49 49.55|tooltip|Godan",
+		"POI/Engineering|[Engineering Trainer]|5+ horde engineering|56.83 56.55|tooltip|Roxxik",
+		"POI/Herbalism|[Herbalism Trainer]|5+ horde herbalism|54.6 50.44|tooltip|Muraga",
+		"POI/Inscription|[Inscription Trainer]|5+ horde inscription|55.07 55.88|tooltip|Nerog",
+		"POI/Jewelcrafting|[Jewelcrafting Trainer]|5+ horde jewelcrafting|72.49 34.32|tooltip|Lugrah",
+		"POI/Leatherworking|[Leatherworking and Skinning Trainers]|5+ horde leatherworking skinning|61.04 54.81|tooltip|Karolek|Thuwd",
+		"POI/Leatherworking|[Leatherworking Trainer]|5+ horde leatherworking -skinning|60.89 54.89|tooltip|Karolek",
+		"POI/Mining|[Mining Trainer]|5+ horde mining|39.04 85.52|tooltip|Layla Stonebreaker",
+		"POI/Skinning|[Skinning Trainer]|5+ horde skinning -leatherworking|61.16 54.65|tooltip|Thuwd",
+		"POI/Tailoring|[Tailoring Trainer]|5+ horde tailoring|60.75 59.13|tooltip|Magar",
+		"POI/Tailoring|[Bandage Trainer]|5+ horde tailoring|38.51 86.41|tooltip|Mender Jessara",
+		"POI/Cooking|[Cooking Trainer]|5+ horde|56.53 62.48|tooltip|Marogg",
+		"POI/Fishing|[Fishing Trainer]|5+ horde|66.44 41.93|tooltip|Lumak",
+		"POI/Archaeology|[Archaeology Trainer]|10+ horde|49.06 70.56|tooltip|Belloc Brightblade",
 	},
 
 
