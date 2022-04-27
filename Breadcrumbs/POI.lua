@@ -106,7 +106,7 @@ Data.POI = {
 		"POI/ProtoformSynthesis|[Protoform Synthesis (Mount)]|60+ 65427|70.21 28.56|tooltip|Gather schematics and craft mounts with components found across Zereth Mortis.",
 
 		-- Creation Catalyst
-		"creationcatalyst-32x32|[Creation Catalyst]|60+|47.44 88.68|tooltip creationcatalyst|Transform a regular item from Season 3 Mythic+, Rated PvP or the Sepulcher of the First Ones into a set item.",
+		"creationcatalyst-32x32|[Creation Catalyst]|60+ !65774|47.44 88.68|tooltip creationcatalyst|Transform a regular item from Season 3 Mythic+, Rated PvP or the Sepulcher of the First Ones into a set item.",
 	},
 
 
