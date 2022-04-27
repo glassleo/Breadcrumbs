@@ -186,6 +186,7 @@ Data.Vignettes = {
 		[42291] = "Small Treasure Chest|10+|48.01 56.24||treasure down link:632|Contains|{1397630} [Order Resources]", -- Oceanus Cove
 		[42293] = "Small Treasure Chest|10+|63.64 39.17||treasure|Contains|{1397630} [Order Resources]",
 		[44104] = "Small Treasure Chest|10+|53.61 18.14||treasure down|Contains|{1397630} [Order Resources]",
+		[42294] = "Small Treasure Chest|10+|62.81 44.8||treasure down|Contains|{1397630} [Order Resources]",
 	},
 
 	-- Nar'thalas Academy
@@ -208,14 +209,15 @@ Data.Vignettes = {
 	-- Val'sharah
 	[641] = {
 		-- Treasure
+		[38355] = "Small Treasure Chest|10+|64.7 51.26||treasure|Contains|{1397630} [Order Resources]",
+		[38363] = "Small Treasure Chest|10+|43.39 75.9||treasure|Contains|{1397630} [Order Resources]",
 		[38366] = "Small Treasure Chest|10+|48.68 73.79|\"Inside a tree trunk\"|treasure|Contains|{1397630} [Order Resources]",
 		[38369] = "Small Treasure Chest|10+|39.95 54.6||treasure|Contains|{1397630} [Order Resources]", -- has phasing issues with the healer Broken Shore quest line
+		[38386] = "Small Treasure Chest|10+|67.39 53.41||treasure|Contains|{1397630} [Order Resources]",
 		[39079] = "Small Treasure Chest|10+|38.64 67.18||treasure|Contains|{1397630} [Order Resources]",
 		[39080] = {"Small Treasure Chest|10+ §38644|38.4 65.32|Heathrow Cellar|treasure|Contains|{1397630} [Order Resources]", "Small Treasure Chest|10+ 38644|38.4 65.32|Heathrow Cellar|treasure hardcore|Contains|{1397630} [Order Resources]||[ff0000]To get inside Heathrow Cellar you will have to die near the door and resurrect on the other side]",}, -- approx coords -- Door can only be opened while doing quest 38644
 		[39084] = "Small Treasure Chest|10+|43.22 54.88||treasure|Contains|{1397630} [Order Resources]",
 		[39085] = "Small Treasure Chest|10+|40.51 44.69||treasure down link:642|Contains|{1397630} [Order Resources]", -- Darkpens
-		[38355] = "Small Treasure Chest|10+|64.7 51.26||treasure|Contains|{1397630} [Order Resources]",
-		[38386] = "Small Treasure Chest|10+|67.39 53.41||treasure|Contains|{1397630} [Order Resources]",
 		[44139] = "Small Treasure Chest|10+|63.91 45.57||treasure|Contains|{1397630} [Order Resources]",
 	},
 
