@@ -38,6 +38,7 @@ local _, Data = ...
 
 		n				Must have completed quest ID n
 		+n				Must have either completed or picked up quest ID n
+		!n				Quest ID n must be ready for turn in or completed
 		-n				Must not have completed or picked up quest ID n
 		~n				Must not have picked up quest ID n
 		§n				Must have picked up quest ID n but not completed it
