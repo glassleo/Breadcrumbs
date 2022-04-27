@@ -51,8 +51,10 @@ POIs:
 - Dalaran (Broken Isles)
 - Legion Order Halls
 - Legion zones
+- Boralus
 - Shadowlands Sanctums
 - Oribos
+- Tazavesh, the Veiled Market
 - Zereth Mortis
 
 ### In Progress
@@ -62,3 +64,4 @@ POIs:
 - Legion Profession Questlines
 - Bastion Quests
 - Legion Order Halls
+- Pandaria POIs
