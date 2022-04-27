@@ -37,6 +37,7 @@ Questlines:
 - Legion Mining
 
 Treasures:
+- Tiragarde Sound
 - Drustvar
 - Stormsong Valley
 - Zuldazar
@@ -44,13 +45,19 @@ Treasures:
 - Vol'dun
 
 POIs:
+- Undercity
+- Stormwind
+- Orgrimmar
 - Dalaran (Broken Isles)
 - Legion Order Halls
 - Legion zones
+- Shadowlands Sanctums
+- Oribos
+- Zereth Mortis
 
 ### In Progress
 
-- Tiragarde Sound Treasures
+- Oribos Quests
 - Legion Treasures
 - Legion Profession Questlines
 - Bastion Quests
