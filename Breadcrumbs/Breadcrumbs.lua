@@ -738,7 +738,7 @@ function Breadcrumbs:UpdateMap(event, ...)
 						end
 					end
 
-					-- Create quest marker pin
+					-- Create POI pin
 					local pin = NewPin()
 
 					if texture == "-" then
@@ -788,6 +788,31 @@ function Breadcrumbs:UpdateMap(event, ...)
 								if tip8 then if strlen(tip8) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip8), nil, nil, nil, true) else GameTooltip:AddLine(" ") end end
 								if tip9 then if strlen(tip9) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip9), nil, nil, nil, true) else GameTooltip:AddLine(" ") end end
 							end
+
+							if flags["creationcatalyst"] then
+								-- Creation Catalyst Charges
+								local ChargeInfo = C_ItemInteraction.GetChargeInfo()
+
+								if ChargeInfo then
+									GameTooltip:AddLine(" ")
+
+									local Charges = tonumber(ChargeInfo.newChargeAmount or 0) or 0
+									local TimeToNextCharge = tonumber(ChargeInfo.timeToNextCharge or 0) or 0
+
+									if Charges == 1 then
+										GameTooltip:AddLine("1 Charge Available", 0, 1, 0)
+									elseif Charges > 1 then
+										GameTooltip:AddLine(Charges.." Charges Available", 0, 1, 0)
+									else
+										GameTooltip:AddLine("No Charges Available", 1, 0, 0)
+									end
+
+									if TimeToNextCharge > 0 then
+										GameTooltip:AddLine("Next Charge in "..SecondsToTime(TimeToNextCharge))
+									end
+								end
+							end
+
 							GameTooltip:Show()
 						end
 						if not flags["tooltip"] then
