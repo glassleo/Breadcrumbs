@@ -909,6 +909,9 @@ function Breadcrumbs:CheckQuest(map, quest, datastring)
 					-- Must have completed or picked up quest (+n)
 					if string.match(v, "%+(%d+)") and (C_QuestLog.IsQuestFlaggedCompleted(tonumber(string.match(v, "%+(%d+)") or 0)) or C_QuestLog.IsOnQuest(tonumber(string.match(v, "%+(%d+)") or 0))) then pass = true end
 
+					-- Must have completed quest or it is ready for turn in (!n)
+					if string.match(v, "!(%d+)") and (C_QuestLog.IsQuestFlaggedCompleted(tonumber(string.match(v, "!(%d+)") or 0)) or C_QuestLog.ReadyForTurnIn(tonumber(string.match(v, "!(%d+)") or 0))) then pass = true end
+
 					-- Must not have picked up quest (~n)
 					if string.match(v, "~(%d+)") and not C_QuestLog.IsOnQuest(tonumber(string.match(v, "~(%d+)") or 0)) then pass = true end
 
@@ -1035,6 +1038,9 @@ function Breadcrumbs:CheckPOI(map, datastring)
 
 					-- Must have completed or picked up quest (+n)
 					if string.match(v, "%+(%d+)") and (C_QuestLog.IsQuestFlaggedCompleted(tonumber(string.match(v, "%+(%d+)") or 0)) or C_QuestLog.IsOnQuest(tonumber(string.match(v, "%+(%d+)") or 0))) then pass = true end
+
+					-- Must have completed quest or it is ready for turn in (!n)
+					if string.match(v, "!(%d+)") and (C_QuestLog.IsQuestFlaggedCompleted(tonumber(string.match(v, "!(%d+)") or 0)) or C_QuestLog.ReadyForTurnIn(tonumber(string.match(v, "!(%d+)") or 0))) then pass = true end
 
 					-- Must not have picked up quest (~n)
 					if string.match(v, "~(%d+)") and not C_QuestLog.IsOnQuest(tonumber(string.match(v, "~(%d+)") or 0)) then pass = true end
