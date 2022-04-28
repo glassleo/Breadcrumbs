@@ -23,7 +23,7 @@ While the addon itself is more or less feature complete, only a tiny fraction of
 
 If you'd like to help, please [get in touch](mailto:hello@leo.glass)!
 
-So far, the following zones are pretty much done:
+So far, the following zones are in a near-complete state:
 - Azsuna
 - Val'sharah
 - Highmountain
