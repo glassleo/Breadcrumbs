@@ -17,52 +17,13 @@ All data has been verified and tested manually multiple times to make sure that 
 - Fix a Blizzard bug that leaves Legion Bonus Objectives stuck on your World Map after leveling past level 49
 - Options to choose which features you want to enable
 
-## Current Status
+## Current Progress
 
 While the addon itself is more or less feature complete, only a tiny fraction of all required data has been compiled and tested so far.
 
 If you'd like to help, please [get in touch](mailto:hello@leo.glass)!
 
-### Complete
-
-Quests:
-- Bastion (Threads of Fate)
-- Azsuna
-- Val'sharah
-- Highmountain
-- Stormheim
-- Broken Shore
+Currently, the following areas are more or less complete:
+- All Legion questing zones
 - Azuremyst Isle
-
-Questlines:
-- Legion Mining
-
-Treasures:
-- Tiragarde Sound
-- Drustvar
-- Stormsong Valley
-- Zuldazar
-- Nazmir
-- Vol'dun
-
-POIs:
-- Undercity
-- Stormwind
-- Orgrimmar
-- Dalaran (Broken Isles)
-- Legion Order Halls
-- Legion zones
-- Boralus
-- Shadowlands Sanctums
-- Oribos
-- Tazavesh, the Veiled Market
-- Zereth Mortis
-
-### In Progress
-
-- Oribos Quests
-- Legion Treasures
-- Legion Profession Questlines
-- Shadowlands Treasures
-- Legion Order Halls
-- Pandaria POIs
+- Bastion (Threads of Fate)
