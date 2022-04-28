@@ -933,11 +933,11 @@ function Breadcrumbs:CheckQuest(map, quest, datastring)
 					-- Map must not have Art ID (-art:n)
 					if string.match(v, "%-art:(%d+)") and (C_Map.GetMapArtID(map) ~= tonumber(string.match(v, "%-art:(%d+)") or 0)) then pass = true end
 
-					-- Map must have attained renown level (renown:n)
-					if string.match(v, "renown:(%d+)") and (C_Map.GetMapArtID(map) == tonumber(string.match(v, "renown:(%d+)") or 0)) then pass = true end
+					-- Must have attained renown level (renown:n)
+					if string.match(v, "renown:(%d+)") and (renown >= tonumber(string.match(v, "renown:(%d+)") or 0)) then pass = true end
 
-					-- Map must not have attained renown level (-renown:n)
-					if string.match(v, "%-renown:(%d+)") and (C_Map.GetMapArtID(map) ~= tonumber(string.match(v, "%-renown:(%d+)") or 0)) then pass = true end
+					-- Must not have attained renown level (-renown:n)
+					if string.match(v, "%-renown:(%d+)") and (renown < tonumber(string.match(v, "%-renown:(%d+)") or 0)) then pass = true end
 
 					-- Must have flying
 
@@ -1063,11 +1063,11 @@ function Breadcrumbs:CheckPOI(map, datastring)
 					-- Map must not have Art ID (-art:n)
 					if string.match(v, "%-art:(%d+)") and (C_Map.GetMapArtID(map) ~= tonumber(string.match(v, "%-art:(%d+)") or 0)) then pass = true end
 
-					-- Map must have attained renown level (renown:n)
-					if string.match(v, "renown:(%d+)") and (C_Map.GetMapArtID(map) == tonumber(string.match(v, "renown:(%d+)") or 0)) then pass = true end
+					-- Must have attained renown level (renown:n)
+					if string.match(v, "renown:(%d+)") and (renown >= tonumber(string.match(v, "renown:(%d+)") or 0)) then pass = true end
 
-					-- Map must not have attained renown level (-renown:n)
-					if string.match(v, "%-renown:(%d+)") and (C_Map.GetMapArtID(map) ~= tonumber(string.match(v, "%-renown:(%d+)") or 0)) then pass = true end
+					-- Must not have attained renown level (-renown:n)
+					if string.match(v, "%-renown:(%d+)") and (renown < tonumber(string.match(v, "%-renown:(%d+)") or 0)) then pass = true end
 
 					-- Mailbox
 					if v == "mailbox" and setting_showmailboxes then pass = true end
