@@ -23,7 +23,11 @@ While the addon itself is more or less feature complete, only a tiny fraction of
 
 If you'd like to help, please [get in touch](mailto:hello@leo.glass)!
 
-Currently, the following areas are more or less complete:
-- All Legion questing zones
+So far, the following zones are pretty much done:
+- Azsuna
+- Val'sharah
+- Highmountain
+- Stormheim
+- Broken Shore
 - Azuremyst Isle
 - Bastion (Threads of Fate)
