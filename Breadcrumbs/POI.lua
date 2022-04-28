@@ -56,7 +56,7 @@ Data.POI = {
 		"teleportationnetwork-32x32:small|Ring of Fates|1+|43.4 51.59|link:1670",
 
 		-- Heirloom Vendor
-		"timewalkingvendor-32x32|[Heirloom Vendor]|1+|59.97 72|tooltip|Au'Dara",
+		"timewalkingvendor-32x32|[Heirloom Vendor]|59770|59.97 72|tooltip|Au'Dara",
 	},
 
 	-- Ring of Fates
