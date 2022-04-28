@@ -2,7 +2,7 @@
 
 Breadcrumbs is an addon for World of Warcraft that adds dynamic pins to your World Map. It lets you quickly see exactly which Quests, Treasures and Vignettes are available to pick up in any given zone without having to check any external resources. It also adds a few additional quality of life features to your World Map.
 
-A great deal of care has been taken to make sure that the addon integrates with the map interface seamlessly without being obstructing.
+A great deal of care has been taken to make sure that the addon integrates with the map interface seamlessly without being obstructing while using as few resources as possible.
 
 All data has been verified and tested manually multiple times to make sure that it's as accurate and useful as possible.
 
