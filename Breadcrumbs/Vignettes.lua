@@ -25,6 +25,10 @@ Data.Vignettes = {
 	[1533] = {
 		-- Treasure
 		[58329] = "Purifying Draught|48+|52.04 86.07||treasure item:174007|Contains|{1528676} [Purifying Draught]",
+		--[60478] = "Vesper of Virtues|48+ 57037|ADD COORDS|treasure item:179982|Contains|{133706} [rare]Kyrian Bell]",
+		[61049] = "Larion Tamer's Harness|48+|58.23 39.99|\"Inside the Hall of Beasts\"|treasure down item:183126|Contains|{1059112} [rare]Kyrian Smith's Kit] (2)|{134372} [uncommon]Larion Treats] (3)",
+		[61044] = "Stolen Equipment|48+|40.51 49.81||treasure item:182561|Contains|{3386277} [rare]Fallen Disciple's Cloak]",
+		[61048] = "Lost Disciple's Notes|48+|59.33 60.92||treasure item:182693|Contains|{1506459} [uncommon]Lost Disciple's Notes]",
 	},
 
 

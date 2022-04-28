@@ -144,8 +144,15 @@ local _, Data = ...
 
 	Legion Order Halls
 		38894 - Founded Order Hall
-		41099,41069 - Demon Hunter, frist zone picked
-		39799 - Death Knight, first zone picked
+		41099,41069 - Demon Hunter, frist zone chosen
+		39799 - Death Knight, first zone chosen
+
+	Shadowlands
+		59770 - Maw Intro Completed (including through skip)
+		62704 - Threads of Fate chosen
+		60293 - Pride or Unit, Phalynx chosen
+		? - Pride or Unit, Larion chosen
+		-60259 -60260 -60261 -60262 -60263 - No Steward chosen
 ]]--
 
 Data.Quests = {
@@ -180,18 +187,15 @@ Data.Quests = {
 
 	--[[ Bastion ]]--
 
-	-- Bastion
-	[1533] = {
-		-- Threads of Fate: Bastion
-		[62723] = "Bolstering Bastion|50+ 63034,62707 -kyrian|51 46.8|Kalisthene|campaign", -- Not Kyrian
-		[62729] = "Return to Oribos|50+ 62723 -kyrian|51 46.8|Kalisthene|campaign", -- Not Kyrian
-	},
-
 	-- Elysian Hold - Archon's Rise
 	[1707] = {
 		-- Threads of Fate: Bastion
 		[62723] = "Bolstering Bastion|50+ 63034,62707 kyrian|37.09 61.18|Kalisthene|campaign", -- Kyrian
 		[62729] = "Return to Oribos|50+ 62723 kyrian|37.09 61.18|Kalisthene|campaign", -- Kyrian
+
+		-- Kyrian Combatant
+		[64323] = "Kyrian Veteran|48+ kyrian renown:43 -64086|42.74 70.25|Iona Skyblade|legendary", -- Kyrian, Renown 43
+		[64086] = "Kyrian Tactician|48+ kyrian renown:59 64323|42.74 70.25|Iona Skyblade|legendary", -- Kyrian, Renown 59
 	},
 
 	-- Elysian Hold - Sanctum of Binding
@@ -199,6 +203,84 @@ Data.Quests = {
 		-- Threads of Fate: Bastion
 		[62723] = "Bolstering Bastion|50+ 63034,62707 kyrian|37.09 61.18|Kalisthene|campaign", -- Kyrian
 		[62729] = "Return to Oribos|50+ 62723 kyrian|37.09 61.18|Kalisthene|campaign", -- Kyrian
+	},
+
+	-- Bastion
+	[1533] = {
+		-- Threads of Fate: Bastion
+		[62723] = "Bolstering Bastion|50+ 63034,62707 -kyrian|51 46.8|Kalisthene|campaign", -- Not Kyrian
+		[62729] = "Return to Oribos|50+ 62723 -kyrian|51 46.8|Kalisthene|campaign", -- Not Kyrian
+
+		-- Kyrian - Steward companion
+		[62916] = "Your Next Best Friend|48+ kyrian 59426 -60259 -60260 -60261 -60262 -60263|52.98 47.56|Sika", -- Weekly quest - only show if no Steward choice has been made
+		-- Isilios: 60259 60260 60261
+
+		-- Kyrian - Kyrian Combatant
+		[64323] = "Kyrian Veteran|48+ kyrian renown:43 -64086|64.76 20.33|Iona Skyblade|legendary", -- Kyrian, Renown 43
+		[64086] = "Kyrian Tactician|48+ kyrian renown:59 64323|64.76 20.33|Iona Skyblade|legendary", -- Kyrian, Renown 59
+
+		-- Pride or Unit
+		[59674] = "A Friendly Rivalry|48+ 59770|57.44 54.25|Pelodis",
+		[57931] = "Phalynx Malfunction|48+ 59770 ~58185|54.78 41.16|Pelodis", -- Invalidates breadcrumb 58185
+		[57932] = "Resource Drain|48+ 59770|54.79 41.25|Hopo",
+		[57933] = "We Can Rebuild Him|48+ 57931 57932|54.78 41.16|Pelodis",
+		[57934] = "Combat Drills|48+ 57933|54.78 41.16|Pelodis",
+		[57935] = "Laser Location|48+ 57933|54.78 41.16|Pelodis",
+		[57936] = "Superior Programming|48+ 57933|54.79 41.25|Hopo",
+		[57937] = "Tactical Formation|48+ 57934 57935 57936|54.78 41.16|Pelodis",
+		[58184] = "Antiquated Methodology|48+ 57937 -58037|54.78 41.16|Pelodis", -- Breadcrumb for 58037
+		[58037] = "Part of the Pride|48+ 59770 ~58184|57.27 39.21|Nemea", -- Invalidates breadcrumb 58184
+		[58038] = "All Natural Chews|48+ 58037|57.27 39.21|Nemea",
+		[58039] = "Larion at Large|48+ 58037|57.27 39.21|Nemea",
+		[58040] = "With Lance and Larion|48+ 58038 58039|57.27 39.21|Nemea",
+		[58041] = "Providing for the Pack|48+ 58038 58039|57.27 39.21|Nemea",
+		[58042] = "On Larion Wings|48+ 58040 58041|57.27 39.21|Nemea",
+		[58185] = "Success Without Soul|48+ 58042 -57931|57.27 39.21|Nemea", -- Breadcrumb for 57931
+		[58103] = "Pride or Unit|48+ 57937 58042 -60296|54.78 41.16|Pelodis",
+		[60296] = "Pride or Unit|48+ 57937 58042 -58103|57.27 39.21|Nemea",
+
+		-- The Spear of Kalliope
+		[57529] = "Garden in Turmoil|48+ 59770 -57538|52.32 61.36|Tamesis", -- Breadcrumb for 57538
+		[57538] = "Disturbing the Peace|48+ 59770 ~57529|51.33 59.54|Zosime", -- Invalidates breadcrumb 57529
+		[57545] = "Distractions for Kala|48+ 59770|51.33 59.54|Zosime",
+		[57547] = "A Test of Courage|48+ 57538 57545|51.33 59.54|Zosime",
+		[57568] = "Tough Love|48+ 57547|51.21 56.8|Zosime",
+
+		-- An Act of Service
+		[60466] = "The Old Ways|48+ 59770|47.88 73.5|Klystere",
+		[62714] = "A Gift for an Acolyte|48+ 60466|47.88 73.5|Klystere",
+		[62715] = "More Than A Gift|48+ 62714|53.87 73.95|Acolyte Amalthina",
+
+		-- In Agthia's Memory
+		[59554] = {"A Fine Journey|48+ 59770 -57549|45.27 59.86|Notice", "A Fine Journey|48+ 59770 -57549|51.95 47.67|Notice",}, -- Breadcrumb for 57549
+		[57549] = "In Agthia's Memory|48+ 59770 ~59554|46.99 63.45|Keeper Mnemis", -- Invalidates breadcrumb 59554
+		[57551] = "Agthia's Path|48+ 57549|46.99 63.45|Keeper Mnemis",
+		[57552] = "Warriors of the Void|48+ 57551|46.55 63.42|Agthia||\"Ring the [spell]Vesper of History] nearby if you cannot see Agthia\"",
+		[57554] = "Wicked Gateways|48+ 57551|46.55 63.42|Agthia||\"Ring the [spell]Vesper of History] nearby if you cannot see Agthia\"",
+		[57553] = "On Wounded Wings|48+ 57551|46.27 63.79|Agthian Defender||\"Ring the [spell]Vesper of History] nearby if you cannot see Agthia\"",
+		[57555] = "Shadow's Fall|48+ 57552 57554 57553|46.55 63.42|Agthia||\"Ring the [spell]Vesper of History] nearby if you cannot see Agthia\"",
+
+		-- Hero's Rest
+		[60315] = "WANTED: Gorgebeak|48+ 59770|53.27 46.43|Wanted Scroll",
+		[60366] = "WANTED: Darkwing|48+ 59770|53.27 46.43|Wanted Scroll",
+
+		-- Aspirant's Rest
+		[60316] = "WANTED: Altered Sentinel|48+ 59770|49.14 72.82|Wanted Scroll",
+
+		-- Purity's Reflection
+		[57444] = "An Inspired Moral Inventory|48+ 59770|54.03 73.94|Acolyte Galistos",
+
+		-- Aspirant's Crucible
+		[57712] = "Suggested Reading|48+ 59770|55.39 83.43|Aspirant Akimos",
+
+		-- The Necrotic Wake
+		[60057] = "Necrotic Wake: A Paragon's Plight|48+ 59770|40.94 55.35|Disciple Artemede",
+	},
+
+	-- Dungeon: The Necrotic Wake
+	[1666] = {
+		-- The Necrotic Wake
+		[60057] = "Necrotic Wake: A Paragon's Plight|48+ 59770|82.8 39.9|Disciple Artemede|elsewhere link:1533",
 	},
 
 
