@@ -26,6 +26,7 @@ If you'd like to help, please [get in touch](mailto:hello@leo.glass)!
 ### Complete
 
 Quests:
+- Bastion (Threads of Fate)
 - Azsuna
 - Val'sharah
 - Highmountain
@@ -62,6 +63,6 @@ POIs:
 - Oribos Quests
 - Legion Treasures
 - Legion Profession Questlines
-- Bastion Quests
+- Shadowlands Treasures
 - Legion Order Halls
 - Pandaria POIs
