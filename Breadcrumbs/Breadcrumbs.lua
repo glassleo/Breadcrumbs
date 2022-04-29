@@ -30,6 +30,7 @@ local setting_showmailboxesdense = false
 --local setting_mailboxtoggle = true
 local setting_showquests = true
 local setting_showobjectives = true
+local setting_showunittooltip = true
 
 
 -- Frame recycling pool
@@ -907,39 +908,31 @@ function Breadcrumbs:CheckQuest(map, quest, datastring)
 					if C_QuestLog.IsQuestFlaggedCompleted(tonumber(v) or 0) then pass = true end
 
 					-- Must have completed or picked up quest (+n)
-					if string.match(v, "%+(%d+)") and (C_QuestLog.IsQuestFlaggedCompleted(tonumber(string.match(v, "%+(%d+)") or 0)) or C_QuestLog.IsOnQuest(tonumber(string.match(v, "%+(%d+)") or 0))) then pass = true end
+					if string.match(v, "^%+(%d+)$") and (C_QuestLog.IsQuestFlaggedCompleted(tonumber(string.match(v, "%+(%d+)") or 0)) or C_QuestLog.IsOnQuest(tonumber(string.match(v, "%+(%d+)") or 0))) then pass = true end
 
 					-- Must have completed quest or it is ready for turn in (!n)
-					if string.match(v, "!(%d+)") and (C_QuestLog.IsQuestFlaggedCompleted(tonumber(string.match(v, "!(%d+)") or 0)) or C_QuestLog.ReadyForTurnIn(tonumber(string.match(v, "!(%d+)") or 0))) then pass = true end
+					if string.match(v, "^!(%d+)$") and (C_QuestLog.IsQuestFlaggedCompleted(tonumber(string.match(v, "!(%d+)") or 0)) or C_QuestLog.ReadyForTurnIn(tonumber(string.match(v, "!(%d+)") or 0))) then pass = true end
 
 					-- Must not have picked up quest (~n)
-					if string.match(v, "~(%d+)") and not C_QuestLog.IsOnQuest(tonumber(string.match(v, "~(%d+)") or 0)) then pass = true end
+					if string.match(v, "^~(%d+)$") and not C_QuestLog.IsOnQuest(tonumber(string.match(v, "~(%d+)") or 0)) then pass = true end
 
 					-- Must not have completed or picked up quest (-n)
-					if string.match(v, "%-(%d+)") and not C_QuestLog.IsQuestFlaggedCompleted(tonumber(string.match(v, "%-(%d+)") or 0)) and not C_QuestLog.IsOnQuest(tonumber(string.match(v, "%-(%d+)") or 0)) then pass = true end
+					if string.match(v, "^%-(%d+)$") and not C_QuestLog.IsQuestFlaggedCompleted(tonumber(string.match(v, "%-(%d+)") or 0)) and not C_QuestLog.IsOnQuest(tonumber(string.match(v, "%-(%d+)") or 0)) then pass = true end
 
 					-- Must have picked up quest but not completed it (§n)
-					if string.match(v, "§(%d+)") and not (C_QuestLog.IsQuestFlaggedCompleted(tonumber(string.match(v, "§(%d+)") or 0)) and C_QuestLog.IsOnQuest(tonumber(string.match(v, "§(%d+)") or 0))) then pass = true end
+					if string.match(v, "^§(%d+)$") and not (C_QuestLog.IsQuestFlaggedCompleted(tonumber(string.match(v, "§(%d+)") or 0)) and C_QuestLog.IsOnQuest(tonumber(string.match(v, "§(%d+)") or 0))) then pass = true end
 
-					-- Must have researched Garrison talent (research:n)
-					if string.match(v, "research:(%d+)") and C_Garrison.GetTalentInfo(tonumber(string.match(v, "research:(%d+)") or 0)).researched then pass = true end
+					-- research:n
+					if string.match(v, "^research:(%d+)$") and C_Garrison.GetTalentInfo(tonumber(string.match(v, "research:(%d+)") or 0)).researched then pass = true end
 
-					-- Must not have researched Garrison talent (-research:n)
-					if string.match(v, "%-research:(%d+)") and not C_Garrison.GetTalentInfo(tonumber(string.match(v, "research:(%d+)") or 0)).researched then pass = true end
+					-- art:n
+					if string.match(v, "^art:(%d+)$") and (C_Map.GetMapArtID(map) == tonumber(string.match(v, "art:(%d+)") or 0)) then pass = true end
 
-					-- Map must have Art ID (art:n)
-					if string.match(v, "art:(%d+)") and (C_Map.GetMapArtID(map) == tonumber(string.match(v, "art:(%d+)") or 0)) then pass = true end
+					-- renown:n
+					if string.match(v, "^renown:(%d+)$") and (renown >= tonumber(string.match(v, "renown:(%d+)") or 0)) then pass = true end
 
-					-- Map must not have Art ID (-art:n)
-					if string.match(v, "%-art:(%d+)") and (C_Map.GetMapArtID(map) ~= tonumber(string.match(v, "%-art:(%d+)") or 0)) then pass = true end
-
-					-- Must have attained renown level (renown:n)
-					if string.match(v, "renown:(%d+)") and (renown >= tonumber(string.match(v, "renown:(%d+)") or 0)) then pass = true end
-
-					-- Must not have attained renown level (-renown:n)
-					if string.match(v, "%-renown:(%d+)") and (renown < tonumber(string.match(v, "%-renown:(%d+)") or 0)) then pass = true end
-
-					-- Must have flying
+					-- toy:n
+					if string.match(v, "^toy:(%d+)$") and PlayerHasToy(tonumber(string.match(v, "toy:(%d+)") or 0)) then pass = true end
 
 					-- Must match...
 					if v == class or v == faction or v == covenant or v == prof1 or v == prof2 or v == race then pass = true end
@@ -963,6 +956,18 @@ function Breadcrumbs:CheckQuest(map, quest, datastring)
 					if string.match(v, "%-(%a+)") then
 						pass = true -- We invert our logic
 						local w = string.gsub(v, "%-(%a+)", "%1")
+
+						-- -research:n
+						if string.match(w, "^research:(%d+)$") and C_Garrison.GetTalentInfo(tonumber(string.match(w, "research:(%d+)") or 0)).researched then pass = false end
+
+						-- -art:n
+						if string.match(w, "^art:(%d+)$") and (C_Map.GetMapArtID(map) == tonumber(string.match(w, "art:(%d+)") or 0)) then pass = false end
+
+						-- -renown:n
+						if string.match(w, "^renown:(%d+)$") and (renown >= tonumber(string.match(w, "renown:(%d+)") or 0)) then pass = false end
+
+						-- -toy:n
+						if string.match(w, "^toy:(%d+)$") and PlayerHasToy(tonumber(string.match(w, "toy:(%d+)") or 0)) then pass = false end
 
 						if w == class or w == faction or w == covenant or w == prof1 or w == prof2 or w == race then pass = false end
 						if w == "garrison" and garrison >= 1 then pass = false end
@@ -1051,23 +1056,17 @@ function Breadcrumbs:CheckPOI(map, datastring)
 					-- Must have picked up quest but not completed it (§n)
 					if string.match(v, "§(%d+)") and not (C_QuestLog.IsQuestFlaggedCompleted(tonumber(string.match(v, "§(%d+)") or 0)) and C_QuestLog.IsOnQuest(tonumber(string.match(v, "§(%d+)") or 0))) then pass = true end
 
-					-- Must have researched Garrison talent (research:n)
-					if string.match(v, "research:(%d+)") and C_Garrison.GetTalentInfo(tonumber(string.match(v, "research:(%d+)") or 0)).researched then pass = true end
+					-- research:n
+					if string.match(v, "^research:(%d+)$") and C_Garrison.GetTalentInfo(tonumber(string.match(v, "research:(%d+)") or 0)).researched then pass = true end
 
-					-- Must not have researched Garrison talent (-research:n)
-					if string.match(v, "%-research:(%d+)") and not C_Garrison.GetTalentInfo(tonumber(string.match(v, "research:(%d+)") or 0)).researched then pass = true end
+					-- art:n
+					if string.match(v, "^art:(%d+)$") and (C_Map.GetMapArtID(map) == tonumber(string.match(v, "art:(%d+)") or 0)) then pass = true end
 
-					-- Map must have Art ID (art:n)
-					if string.match(v, "art:(%d+)") and (C_Map.GetMapArtID(map) == tonumber(string.match(v, "art:(%d+)") or 0)) then pass = true end
+					-- renown:n
+					if string.match(v, "^renown:(%d+)$") and (renown >= tonumber(string.match(v, "renown:(%d+)") or 0)) then pass = true end
 
-					-- Map must not have Art ID (-art:n)
-					if string.match(v, "%-art:(%d+)") and (C_Map.GetMapArtID(map) ~= tonumber(string.match(v, "%-art:(%d+)") or 0)) then pass = true end
-
-					-- Must have attained renown level (renown:n)
-					if string.match(v, "renown:(%d+)") and (renown >= tonumber(string.match(v, "renown:(%d+)") or 0)) then pass = true end
-
-					-- Must not have attained renown level (-renown:n)
-					if string.match(v, "%-renown:(%d+)") and (renown < tonumber(string.match(v, "%-renown:(%d+)") or 0)) then pass = true end
+					-- toy:n
+					if string.match(v, "^toy:(%d+)$") and PlayerHasToy(tonumber(string.match(v, "toy:(%d+)") or 0)) then pass = true end
 
 					-- Mailbox
 					if v == "mailbox" and setting_showmailboxes then pass = true end
@@ -1094,6 +1093,18 @@ function Breadcrumbs:CheckPOI(map, datastring)
 					if string.match(v, "%-(%a+)") then
 						pass = true -- We invert our logic
 						local w = string.gsub(v, "%-(%a+)", "%1")
+
+						-- -research:n
+						if string.match(w, "^research:(%d+)$") and C_Garrison.GetTalentInfo(tonumber(string.match(w, "research:(%d+)") or 0)).researched then pass = false end
+
+						-- -art:n
+						if string.match(w, "^art:(%d+)$") and (C_Map.GetMapArtID(map) == tonumber(string.match(w, "art:(%d+)") or 0)) then pass = false end
+
+						-- -renown:n
+						if string.match(w, "^renown:(%d+)$") and (renown >= tonumber(string.match(w, "renown:(%d+)") or 0)) then pass = false end
+
+						-- -toy:n
+						if string.match(w, "^toy:(%d+)$") and PlayerHasToy(tonumber(string.match(w, "toy:(%d+)") or 0)) then pass = false end
 
 						if w == class or w == faction or w == covenant or w == prof1 or w == prof2 or w == race then pass = false end
 						if archaeology and w == "archaeology" then pass = false end
@@ -1123,3 +1134,44 @@ function Breadcrumbs:CheckPOI(map, datastring)
 	-- eligible, texture, title, x, y, help, ...
 	return pass, texture, title, tonumber(x), tonumber(y), flags, help, help2, help3, help4, help5, help6, help7, help8, help9
 end
+
+
+local function OnTooltipSetUnit(tooltip)
+	if not setting_showunittooltip then return end
+
+	local tooltip = tooltip
+	local name, id = tooltip:GetUnit()
+	if not name or not id or not type(name) == "string" then return end
+
+	if C_QuestLog.IsOnQuest(58621) then -- Repeat After Me
+		if name == "Runestone of Rituals" then
+			GameTooltip:SetText(name, 0, 1, 0)
+			GameTooltip:AddLine(" ")
+			GameTooltip:AddLine("Repeat After Me")
+			GameTooltip:AddLine("\"Kneel before the Magus\"")
+		elseif name == "Runestone of Plague" then
+			GameTooltip:SetText(name, 0, 1, 0)
+			GameTooltip:AddLine(" ")
+			GameTooltip:AddLine("Repeat After Me")
+			GameTooltip:AddLine("\"Bleed for the Chemist\"")
+		elseif name == "Runestone of Chosen" then
+			GameTooltip:SetText(name, 0, 1, 0)
+			GameTooltip:AddLine(" ")
+			GameTooltip:AddLine("Repeat After Me")
+			GameTooltip:AddLine("\"Salute the Hero\"")
+		elseif name == "Runestone of Constructs" then
+			GameTooltip:SetText(name, 0, 1, 0)
+			GameTooltip:AddLine(" ")
+			GameTooltip:AddLine("Repeat After Me")
+			GameTooltip:AddLine("\"Flex for the Crafter\"")
+		elseif name == "Runestone of Eyes" then
+			GameTooltip:SetText(name, 0, 1, 0)
+			GameTooltip:AddLine(" ")
+			GameTooltip:AddLine("Repeat After Me")
+			GameTooltip:AddLine("\"Sneak up on the Spy\"")
+		end
+	end
+end
+
+-- Unit Tooltips
+GameTooltip:HookScript("OnTooltipSetUnit", OnTooltipSetUnit)
