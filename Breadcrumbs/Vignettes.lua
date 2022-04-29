@@ -12,13 +12,6 @@ local _, Data = ...
 
 Data.Vignettes = {
 
-	--[[ Ardenweald ]]--
-
-	[1565] = {
-		-- Treasure
-		[61073] = "Faerie Trove|48+|49.71 55.89||treasure item:182673|Contains|{3749005} [uncommon]Shimmerbough Hoarder]",
-	},
-
 
 	--[[ Bastion ]]--
 
@@ -29,6 +22,26 @@ Data.Vignettes = {
 		[61049] = "Larion Tamer's Harness|48+|58.23 39.99|\"Inside the Hall of Beasts\"|treasure down item:183126|Contains|{1059112} [rare]Kyrian Smith's Kit] (2)|{134372} [uncommon]Larion Treats] (3)",
 		[61044] = "Stolen Equipment|48+|40.51 49.81||treasure item:182561|Contains|{3386277} [rare]Fallen Disciple's Cloak]",
 		[61048] = "Lost Disciple's Notes|48+|59.33 60.92||treasure item:182693|Contains|{1506459} [uncommon]Lost Disciple's Notes]",
+	},
+
+
+	--[[ Maldraxxus ]]--
+
+	[1536] = {
+		-- Treasure
+		[59358] = "Ornate Bone Shield|48+|47.25 62.17||treasure item:180749|Contains|{3160514} [rare]Hauk's Battle-Scarred Bulwark]",
+		[60730] = "Halis's Lunch Pail|48+|30.79 28.75||treasure|Contains|{134028} [Finger Food] (7)|{1509635} [Tasty Toes] (2)|{132810} [Corpse Reanimator]",
+		--[] = "Kyrian Corpse|48+|32.74 21.28||treasure item:175708|{134344} [rare]Kyrian Keepsake]||Contains|{3536074} [rare]Reconstructed Family Locket]|{133471} [Handwritten Note]",
+		--[] = {"The Necronom-i-nom|48+ -toy:182732|42.35 23.34||treasure item:182732|Contains|{133737} [rare]The Necronom-i-nom]", "The Necronom-i-nom|48+ toy:182732|42.35 23.34||treasure item:183120|Contains|{3087534} [rare]Partially Digested Encyclopedia]",},
+		[59429] = "Strange Growth|48+|55.89 38.97||treasure item:182607|Contains|{134430} [uncommon]Hairy Egg]", -- 59428 completed after pulling the growth
+	},
+
+
+	--[[ Ardenweald ]]--
+
+	[1565] = {
+		-- Treasure
+		[61073] = "Faerie Trove|48+|49.71 55.89||treasure item:182673|Contains|{3749005} [uncommon]Shimmerbough Hoarder]",
 	},
 
 
