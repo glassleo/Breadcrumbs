@@ -65,6 +65,9 @@ local _, Data = ...
 		renown:n		Must have attained renown level n with their current covenant
 		-renown:n		Must not have attained renown level n with their current covenant
 
+		toy:n			Must have learned toy with item ID n
+		-toy:n			Must not have learned toy with item ID n
+
 		art:n			Map must currently have UiMapArt ID n (see https://wow.tools/dbc/?dbc=uimapart) - used to determine which phase of the map the player is currently on
 		-art:n			Map must not currently have UiMapArt ID n
 
@@ -168,17 +171,42 @@ Data.Quests = {
 		-- The Threads of Fate
 		[62716] = "Re-Introductions|50+ 62704|20.74 50.29|Fatescribe Roh-Tahl|campaign",
 		[62000] = "Choosing Your Purpose|50+ 62716|38.89 70|Tal-Inara|campaign",
-		[62159] = "Aiding the Shadowlands|50+ 62716|38.89 70|Tal-Inara|campaign",
+		-- Threads of Fate breadcrumb quests are only available after completing a zone quest (not Torghast/Battlegrounds)
+		[62159] = "Aiding the Shadowlands|50+ -60 62716|38.89 70|Tal-Inara|campaign", -- #1
+		-- HQT ??
+		-- [63208] = "The Next Step|50+ 62159|38.89 70|Tal-Inara", -- #2
+		-- HQT 64137
+		[63209] = "Furthering the Purpose|50+ -60 63208 64137|38.89 70|Tal-Inara", -- #3
+		-- HQT ??
+		-- [63210] = "The Last Step|50+ -60 63209|38.89 70|Tal-Inara", -- #4
 
 		-- Threads of Fate: Bastion
-		-- 62151 Chose Bastion HTQ - Also given breadcrumb 62275 (Bastion) which is optional
+		-- 62151 Bastion chosen - Also given optional breadcrumb 62275
 		[63034] = "The Elysian Fields|50+ 62151 ~62275 kyrian|38.89 70|Tal-Inara", -- Kyrian
 		[62707] = "The Elysian Fields|50+ 62151 ~62275 -kyrian|38.89 70|Tal-Inara", -- Not Kyrian
 
 		-- Threads of Fate: Maldraxxus
+		-- 62152 Maldraxxus chosen - Also given optional breadcrumb 62278
+		[63035] = "A Fresh Blade|50+ 62152 ~62278 necrolord|38.89 70|Tal-Inara", -- Necrolord
+		[62738] = "A Fresh Blade|50+ 62152 ~62278 -necrolord|38.89 70|Tal-Inara", -- Not Necrolord
+
 		-- Threads of Fate: Ardenweald
+		-- 62153 Ardenweald chosen - Also given optional breadcrumb 62277
+		[63036] = "Restoring Balance|50+ 62153 ~62277 nightfae|38.89 70|Tal-Inara", -- Night Fae
+		[62739] = "Restoring Balance|50+ 62153 ~62277 -nightfae|38.89 70|Tal-Inara", -- Not Night Fae
+
 		-- Threads of Fate: Revendreth
+		-- ??? Revendreth chosen - Also given optional breadcrumb 62279
+
+		-- Threads of Fate: Battlegrounds
+		-- 65030 Battlegrounds chosen - Also given optional breadcrumb 65031 (Battlegrounds)
+		[65032] = "Battleground Observers|50+ 65030 ~65031|38.89 70|Tal-Inara",
+		[65033] = "Observing Victory|50+ 65032 -53409|34.24 55.9|Strategist Zo'rak|campaign", -- Daily quest, only show while needed for Threads of Fate
+		-- HQT 53409
+		[65034] = "Return to Oribos|50+ 65033 ~65033|34.24 55.9|Strategist Zo'rak|campaign",
+
 		-- Threads of Fate: Torghast
+		-- ??? Torghast chosen - Also given optional breadcrumb 64846
 
 		-- Zereth Mortis - Secrets of the First Ones
 		--[64942] = "Call of the Primus|60+ ???|38.9 69.99|[Auto Accept]|campaign", -- Requires chapter 2 of Chains of Domination
@@ -190,7 +218,7 @@ Data.Quests = {
 	-- Elysian Hold - Archon's Rise
 	[1707] = {
 		-- Threads of Fate: Bastion
-		[62723] = "Bolstering Bastion|50+ 63034,62707 kyrian|37.09 61.18|Kalisthene|campaign", -- Kyrian
+		-- 62723 Bolstering Bastion (Auto Accept) - shows on map even with Storylines hidden
 		[62729] = "Return to Oribos|50+ 62723 kyrian|37.09 61.18|Kalisthene|campaign", -- Kyrian
 
 		-- Kyrian Combatant
@@ -201,15 +229,19 @@ Data.Quests = {
 	-- Elysian Hold - Sanctum of Binding
 	[1708] = {
 		-- Threads of Fate: Bastion
-		[62723] = "Bolstering Bastion|50+ 63034,62707 kyrian|37.09 61.18|Kalisthene|campaign", -- Kyrian
+		-- 62723 Bolstering Bastion (Auto Accept) - shows on map even with Storylines hidden
 		[62729] = "Return to Oribos|50+ 62723 kyrian|37.09 61.18|Kalisthene|campaign", -- Kyrian
+
+		-- Kyrian Combatant
+		[64323] = "Kyrian Veteran|48+ kyrian renown:43 -64086|42.74 70.25|Iona Skyblade|legendary", -- Kyrian, Renown 43
+		[64086] = "Kyrian Tactician|48+ kyrian renown:59 64323|42.74 70.25|Iona Skyblade|legendary", -- Kyrian, Renown 59
 	},
 
 	-- Bastion
 	[1533] = {
 		-- Threads of Fate: Bastion
-		[62723] = "Bolstering Bastion|50+ 63034,62707 -kyrian|51 46.8|Kalisthene|campaign", -- Not Kyrian
-		[62729] = "Return to Oribos|50+ 62723 -kyrian|51 46.8|Kalisthene|campaign", -- Not Kyrian
+		-- 62723 Bolstering Bastion (Auto Accept) - shows on map even with Storylines hidden
+		[62729] = {"Return to Oribos|50+ 62723|51 46.8|Kalisthene|campaign", "Return to Oribos|50+ 62723 kyrian|64 19.11|Kalisthene|campaign",},
 
 		-- Kyrian - Steward companion
 		[62916] = "Your Next Best Friend|48+ kyrian 59426 -60259 -60260 -60261 -60262 -60263|52.98 47.56|Sika", -- Weekly quest - only show if no Steward choice has been made
@@ -274,13 +306,64 @@ Data.Quests = {
 		[57712] = "Suggested Reading|48+ 59770|55.39 83.43|Aspirant Akimos",
 
 		-- The Necrotic Wake
-		[60057] = "Necrotic Wake: A Paragon's Plight|48+ 59770|40.94 55.35|Disciple Artemede",
+		[60057] = "Necrotic Wake: A Paragon's Plight|48+ 59770|40.94 55.35|Disciple Artemede|dungeon",
 	},
 
 	-- Dungeon: The Necrotic Wake
 	[1666] = {
 		-- The Necrotic Wake
 		[60057] = "Necrotic Wake: A Paragon's Plight|48+ 59770|82.8 39.9|Disciple Artemede|elsewhere link:1533",
+	},
+
+
+	--[[ Maldraxxus ]]--
+
+	-- Maldraxxus
+	[1536] = {
+		-- Threads of Fate: Maldraxxus
+		-- 62748 Rallying Maldraxxus (Auto Accept) - shows on map even with Storylines hidden
+		[62761] = {"Return to Oribos|50+ 62748|52.85 68.28|Secutor Mevix|campaign",
+			--"Return to Oribos|50+ 62748 necrolord|X Y|Secutor Mevix|campaign", -- Add Seat of the Primus location
+		},
+
+		-- Theater of Pain
+		[62785] = "I Could Be A Contender|48+ 59770 -59781|50.58 51.63|Anzio the Infallible", -- Breadcrumb for 59781
+		[59867] = "WANTED: Appraiser Vix|48+ 59770|54.14 47.47|Wanted: Appraiser Vix",
+		[59781] = "The Last Guy|48+ 59770 ~62785|54.48 48.59|Louison",
+		[59750] = "How to Get a Head|48+ 59770|54.48 48.59|Louison",
+		[58575] = "Stuff We All Get|48+ 59781 59750|54.48 48.59|Louison",
+		[59800] = "Team Spirit|48+ 59781 59750|54.48 48.59|Louison",
+		[58947] = "Test Your Mettle|48+ 58575 59800|54.48 48.59|Louison",
+		[58068] = "...Even The Most Ridiculous Request!|48+ 59770|54.14 50.6|Overseer Kalvaros",
+		[58088] = "Juicing Up|48+ 58068|53.81 50.53|Scrapper Minoire",
+		[58090] = "Side Effects|48+ 58088|53.7 47.92|So'narynar",
+		[59879] = "This Thing of Ours|48+ 58947 58090|54.48 48.59|Louison",
+		[59203] = "Leave Me a Loan|48+ 59879|53.6 47.51|Au'narim",
+		[59837] = "Working for the Living|48+ 59203|53.6 47.51|Au'narim",
+		[58900] = "A Sure Bet|48+ 59837|54.48 48.59|Louison",
+		[57316] = "The Ladder|48+ 58900|50.58 51.63|Anzio the Infallible",
+
+		-- Wasteland Work
+		[58785] = "Smack and Grab|48+ 59770|46.99 49.04|Caleesy",
+		[58750] = "Take the Bull by the Horns|48+ 59770|46.88 48.58|Dundae",
+		[58794] = "Stabbing Wasteward|48+ 58785 58750|46.99 49.04|Caleesy",
+
+		-- Mixing Monstrosities
+		[59430] = "A Plague on Your House|48+ 59770|58.06 72.11|Judas Sneap",
+		[59520] = "Plaguefall: Knee Deep In It|48+ +59430|59.45 72.97|Vial Master Lurgy|dungeon",
+		[58431] = "Pool of Potions|48+ 59430|59.45 72.97|Boil Master Yetch",
+		-- 57301 (Callous Concoctions) is a weekly quest
+
+		-- Archival Protection
+		[62605] = "Broker Business|48+ 59770 -58619|38.21 31.3|Forgotten Supplies", -- Breadcrumb for 58619
+		[58619] = "Read Between the Lines|48+ 59770 ~62605|40.66 33.07|Ta'eran", -- Invalidates breadcrumb 62605
+		[58621] = "Repeat After Me|48+ 58619|43.08 25.1|Ta'eran",
+		[59917] = "Kill Them, Of Course|48+ 58619|43.08 25.1|Ta'eran",
+		[58620] = "Slaylines|48+ 58621|43.08 25.1|Ta'eran",
+		[58622] = "Secrets Among the Shelves|48+ 59917 58620|43.08 25.1|Ta'eran",
+		[60900] = "Archival Protection|48+ 58622|41.8 23.65|Ta'eran",
+		[59994] = "Trust Fall|48+ 60900|43.08 25.1|Ta'eran",
+		[58623] = "A Complete Set|48+ 59994|43.14 25.39|Ta'eran||\"Use the Library Teleporter to get back to Tal'eran\"",
 	},
 
 
