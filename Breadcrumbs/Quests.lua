@@ -42,6 +42,7 @@ local _, Data = ...
 		-n				Must not have completed or picked up quest ID n
 		~n				Must not have picked up quest ID n
 		§n				Must have picked up quest ID n but not completed it
+		_n				Must not have completed quest ID n
 
 		class			Must be any of following classes (deathknight demonhunter druid hunter mage monk paladin, priest, rogue, shaman, warlock, warrior)
 		profession		Must have any of the following professions learned (alchemy, blacksmithing, enchanting, engineering, herbalism, inscription, jewelcrafting, leatherworking, mining, skinning, tailoring, archaeology, cooking, fishing)
@@ -50,6 +51,9 @@ local _, Data = ...
 		horde			Must be Horde
 		covenant		Must belong to any of the following covenants (kyrian, venthyr, nightfae, necrolord)
 		-x				Inverse of above
+
+		active:n		World Quest/Task Quest with ID n must be active
+		-active:n		World Quest/Task Quest with ID n must not be active
 
 		flying			Must have learned flying
 		-flying			Must not have learned flying
@@ -67,6 +71,9 @@ local _, Data = ...
 
 		toy:n			Must have learned toy with item ID n
 		-toy:n			Must not have learned toy with item ID n
+
+		item:n			Must have at least one item with ID n in bags (includes bank)
+		-item:n			Must not have any items with ID n in bags (includes bank)
 
 		art:n			Map must currently have UiMapArt ID n (see https://wow.tools/dbc/?dbc=uimapart) - used to determine which phase of the map the player is currently on
 		-art:n			Map must not currently have UiMapArt ID n
@@ -156,6 +163,7 @@ local _, Data = ...
 		60293 - Pride or Unit, Phalynx chosen
 		? - Pride or Unit, Larion chosen
 		-60259 -60260 -60261 -60262 -60263 - No Steward chosen
+		62704,57904,59609,62899,62921 - World Quests Unlocked
 ]]--
 
 Data.Quests = {
@@ -169,44 +177,49 @@ Data.Quests = {
 	-- Ring of Fates
 	[1670] = {
 		-- The Threads of Fate
-		[62716] = "Re-Introductions|50+ 62704|20.74 50.29|Fatescribe Roh-Tahl|campaign",
-		[62000] = "Choosing Your Purpose|50+ 62716|38.89 70|Tal-Inara|campaign",
+		[62716] = "Re-Introductions|62704|20.74 50.29|Fatescribe Roh-Tahl|campaign",
+		[62000] = "Choosing Your Purpose|62716|38.89 70|Tal-Inara|campaign",
 		-- Threads of Fate breadcrumb quests are only available after completing a zone quest (not Torghast/Battlegrounds)
-		[62159] = "Aiding the Shadowlands|50+ -60 62716|38.89 70|Tal-Inara|campaign", -- #1
+		[62159] = "Aiding the Shadowlands|59- 62716|38.89 70|Tal-Inara|campaign", -- #1
 		-- HQT ??
 		-- [63208] = "The Next Step|50+ 62159|38.89 70|Tal-Inara", -- #2
 		-- HQT 64137
-		[63209] = "Furthering the Purpose|50+ -60 63208 64137|38.89 70|Tal-Inara", -- #3
-		-- HQT ??
-		-- [63210] = "The Last Step|50+ -60 63209|38.89 70|Tal-Inara", -- #4
+		[63209] = "Furthering the Purpose|59- 63208 64137|38.89 70|Tal-Inara", -- #3
+		[63210] = {"The Last Step|50+ 59- 63209 -62729 62761 62776 62779|38.89 70|Tal-Inara", "The Last Step|50+ 59- 63209 62729 -62761 62776 62779|38.89 70|Tal-Inara", "The Last Step|50+ 59- 63209 62729 62761 -62776 62779|38.89 70|Tal-Inara", "The Last Step|50+ 59- 63209 62729 62761 62776 -62779|38.89 70|Tal-Inara",}, -- #4
 
 		-- Threads of Fate: Bastion
 		-- 62151 Bastion chosen - Also given optional breadcrumb 62275
-		[63034] = "The Elysian Fields|50+ 62151 ~62275 kyrian|38.89 70|Tal-Inara", -- Kyrian
-		[62707] = "The Elysian Fields|50+ 62151 ~62275 -kyrian|38.89 70|Tal-Inara", -- Not Kyrian
+		[63034] = "The Elysian Fields|62151 ~62275 kyrian|38.89 70|Tal-Inara", -- Kyrian
+		[62707] = "The Elysian Fields|62151 ~62275 -kyrian|38.89 70|Tal-Inara", -- Not Kyrian
 
 		-- Threads of Fate: Maldraxxus
 		-- 62152 Maldraxxus chosen - Also given optional breadcrumb 62278
-		[63035] = "A Fresh Blade|50+ 62152 ~62278 necrolord|38.89 70|Tal-Inara", -- Necrolord
-		[62738] = "A Fresh Blade|50+ 62152 ~62278 -necrolord|38.89 70|Tal-Inara", -- Not Necrolord
+		[63035] = "A Fresh Blade|62152 ~62278 necrolord|38.89 70|Tal-Inara", -- Necrolord
+		[62738] = "A Fresh Blade|62152 ~62278 -necrolord|38.89 70|Tal-Inara", -- Not Necrolord
 
 		-- Threads of Fate: Ardenweald
 		-- 62153 Ardenweald chosen - Also given optional breadcrumb 62277
-		[63036] = "Restoring Balance|50+ 62153 ~62277 nightfae|38.89 70|Tal-Inara", -- Night Fae
-		[62739] = "Restoring Balance|50+ 62153 ~62277 -nightfae|38.89 70|Tal-Inara", -- Not Night Fae
+		[63036] = "Restoring Balance|62153 ~62277 nightfae|38.89 70|Tal-Inara", -- Night Fae
+		[62739] = "Restoring Balance|62153 ~62277 -nightfae|38.89 70|Tal-Inara", -- Not Night Fae
 
 		-- Threads of Fate: Revendreth
-		-- ??? Revendreth chosen - Also given optional breadcrumb 62279
+		-- 62154 Revendreth chosen - Also given optional breadcrumb 62279
+		[63037] = "Dark Aspirations|62154 ~62279 venthyr|38.89 70|Tal-Inara", -- Venthyr
+		[62740] = "Dark Aspirations|62154 ~62279 -venthyr|38.89 70|Tal-Inara", -- Not Venthyr
 
 		-- Threads of Fate: Battlegrounds
 		-- 65030 Battlegrounds chosen - Also given optional breadcrumb 65031 (Battlegrounds)
-		[65032] = "Battleground Observers|50+ 65030 ~65031|38.89 70|Tal-Inara",
-		[65033] = "Observing Victory|50+ 65032 -53409|34.24 55.9|Strategist Zo'rak|campaign", -- Daily quest, only show while needed for Threads of Fate
-		-- HQT 53409
-		[65034] = "Return to Oribos|50+ 65033 ~65033|34.24 55.9|Strategist Zo'rak|campaign",
+		[65032] = "Battleground Observers|65030 ~65031|38.89 70|Tal-Inara",
+		-- 65033 Observing Victory - daily quest is displayed by default
+		-- HQT 53409 resets with daily
+		[65034] = "Return to Oribos|65032 65033|34.24 55.9|Strategist Zo'rak|campaign",
 
 		-- Threads of Fate: Torghast
 		-- ??? Torghast chosen - Also given optional breadcrumb 64846
+
+		-- Among the Kyrian
+		[63211] = "Report to Adrestes|60+ kyrian -60491|38.89 70|Tal-Inara|campaign", -- Breadcrumb for 60491
+		[60491] = "Among the Kyrian|60+ kyrian ~63211|36.13 64.22|Polemarch Adrestes|campaign", -- Invalidates 63211
 
 		-- Zereth Mortis - Secrets of the First Ones
 		--[64942] = "Call of the Primus|60+ ???|38.9 69.99|[Auto Accept]|campaign", -- Requires chapter 2 of Chains of Domination
@@ -219,151 +232,335 @@ Data.Quests = {
 	[1707] = {
 		-- Threads of Fate: Bastion
 		-- 62723 Bolstering Bastion (Auto Accept) - shows on map even with Storylines hidden
-		[62729] = "Return to Oribos|50+ 62723 kyrian|37.09 61.18|Kalisthene|campaign", -- Kyrian
+		[62729] = "Return to Oribos|62723 kyrian|37.09 61.18|Kalisthene|campaign", -- Kyrian
 
 		-- Kyrian Combatant
-		[64323] = "Kyrian Veteran|48+ kyrian renown:43 -64086|42.74 70.25|Iona Skyblade|legendary", -- Kyrian, Renown 43
-		[64086] = "Kyrian Tactician|48+ kyrian renown:59 64323|42.74 70.25|Iona Skyblade|legendary", -- Kyrian, Renown 59
+		[64323] = "Kyrian Veteran|60+,62704 kyrian renown:43 -64086|42.74 70.25|Iona Skyblade|legendary", -- Kyrian, Renown 43
+		[64086] = "Kyrian Tactician|60+,62704 kyrian renown:59 64323|42.74 70.25|Iona Skyblade|legendary", -- Kyrian, Renown 59
 	},
 
 	-- Elysian Hold - Sanctum of Binding
 	[1708] = {
 		-- Threads of Fate: Bastion
 		-- 62723 Bolstering Bastion (Auto Accept) - shows on map even with Storylines hidden
-		[62729] = "Return to Oribos|50+ 62723 kyrian|37.09 61.18|Kalisthene|campaign", -- Kyrian
+		[62729] = "Return to Oribos|62723 kyrian|37.09 61.18|Kalisthene|campaign", -- Kyrian
 
 		-- Kyrian Combatant
-		[64323] = "Kyrian Veteran|48+ kyrian renown:43 -64086|42.74 70.25|Iona Skyblade|legendary", -- Kyrian, Renown 43
-		[64086] = "Kyrian Tactician|48+ kyrian renown:59 64323|42.74 70.25|Iona Skyblade|legendary", -- Kyrian, Renown 59
+		[64323] = "Kyrian Veteran|60+,62704 kyrian renown:43 -64086|42.74 70.25|Iona Skyblade|legendary", -- Kyrian, Renown 43
+		[64086] = "Kyrian Tactician|60+,62704 kyrian renown:59 64323|42.74 70.25|Iona Skyblade|legendary", -- Kyrian, Renown 59
 	},
 
 	-- Bastion
 	[1533] = {
 		-- Threads of Fate: Bastion
 		-- 62723 Bolstering Bastion (Auto Accept) - shows on map even with Storylines hidden
-		[62729] = {"Return to Oribos|50+ 62723|51 46.8|Kalisthene|campaign", "Return to Oribos|50+ 62723 kyrian|64 19.11|Kalisthene|campaign",},
+		[62729] = {"Return to Oribos|62723|51 46.8|Kalisthene|campaign", "Return to Oribos|62723 kyrian|64 19.11|Kalisthene|campaign",},
 
-		-- Kyrian - Steward companion
-		[62916] = "Your Next Best Friend|48+ kyrian 59426 -60259 -60260 -60261 -60262 -60263|52.98 47.56|Sika", -- Weekly quest - only show if no Steward choice has been made
-		-- Isilios: 60259 60260 60261
+		-- Kyrian - Steward
+		[62916] = "Your Next Best Friend|60+,62704 59426 -60259 -60260 -60261 -60262 -60263|52.98 47.56|Sika", -- Weekly quest - only show if no Steward choice has been made
 
 		-- Kyrian - Kyrian Combatant
-		[64323] = "Kyrian Veteran|48+ kyrian renown:43 -64086|64.76 20.33|Iona Skyblade|legendary", -- Kyrian, Renown 43
-		[64086] = "Kyrian Tactician|48+ kyrian renown:59 64323|64.76 20.33|Iona Skyblade|legendary", -- Kyrian, Renown 59
+		[64323] = "Kyrian Veteran|60+,62704 kyrian renown:43 -64086|64.76 20.33|Iona Skyblade|legendary", -- Kyrian, Renown 43
+		[64086] = "Kyrian Tactician|60+,62704 kyrian renown:59 64323|64.76 20.33|Iona Skyblade|legendary", -- Kyrian, Renown 59
+
+		-- Among the Kyrian
+		[60492] = "A Proper Reception|60+ kyrian 60491|56.76 31.44|Polemarch Adrestes|campaign",
+		[57895] = "Elysian Hold|60+ kyrian 60491|58.44 28.92|Polemarch Adrestes|campaign",
 
 		-- Pride or Unit
-		[59674] = "A Friendly Rivalry|48+ 59770|57.44 54.25|Pelodis",
-		[57931] = "Phalynx Malfunction|48+ 59770 ~58185|54.78 41.16|Pelodis", -- Invalidates breadcrumb 58185
-		[57932] = "Resource Drain|48+ 59770|54.79 41.25|Hopo",
-		[57933] = "We Can Rebuild Him|48+ 57931 57932|54.78 41.16|Pelodis",
-		[57934] = "Combat Drills|48+ 57933|54.78 41.16|Pelodis",
-		[57935] = "Laser Location|48+ 57933|54.78 41.16|Pelodis",
-		[57936] = "Superior Programming|48+ 57933|54.79 41.25|Hopo",
-		[57937] = "Tactical Formation|48+ 57934 57935 57936|54.78 41.16|Pelodis",
-		[58184] = "Antiquated Methodology|48+ 57937 -58037|54.78 41.16|Pelodis", -- Breadcrumb for 58037
-		[58037] = "Part of the Pride|48+ 59770 ~58184|57.27 39.21|Nemea", -- Invalidates breadcrumb 58184
-		[58038] = "All Natural Chews|48+ 58037|57.27 39.21|Nemea",
-		[58039] = "Larion at Large|48+ 58037|57.27 39.21|Nemea",
-		[58040] = "With Lance and Larion|48+ 58038 58039|57.27 39.21|Nemea",
-		[58041] = "Providing for the Pack|48+ 58038 58039|57.27 39.21|Nemea",
-		[58042] = "On Larion Wings|48+ 58040 58041|57.27 39.21|Nemea",
-		[58185] = "Success Without Soul|48+ 58042 -57931|57.27 39.21|Nemea", -- Breadcrumb for 57931
-		[58103] = "Pride or Unit|48+ 57937 58042 -60296|54.78 41.16|Pelodis",
-		[60296] = "Pride or Unit|48+ 57937 58042 -58103|57.27 39.21|Nemea",
+		[59674] = "A Friendly Rivalry|52+,62704|57.44 54.25|Pelodis",
+		[57931] = "Phalynx Malfunction|52+,62704 ~58185|54.78 41.16|Pelodis", -- Invalidates breadcrumb 58185
+		[57932] = "Resource Drain|52+,62704|54.79 41.25|Hopo",
+		[57933] = "We Can Rebuild Him|52+,62704 57931 57932|54.78 41.16|Pelodis",
+		[57934] = "Combat Drills|52+,62704 57933|54.78 41.16|Pelodis",
+		[57935] = "Laser Location|52+,62704 57933|54.78 41.16|Pelodis",
+		[57936] = "Superior Programming|52+,62704 57933|54.79 41.25|Hopo",
+		[57937] = "Tactical Formation|52+,62704 57934 57935 57936|54.78 41.16|Pelodis",
+		[58184] = "Antiquated Methodology|52+,62704 57937 -58037|54.78 41.16|Pelodis", -- Breadcrumb for 58037
+		[58037] = "Part of the Pride|52+,62704 ~58184|57.27 39.21|Nemea", -- Invalidates breadcrumb 58184
+		[58038] = "All Natural Chews|52+,62704 58037|57.27 39.21|Nemea",
+		[58039] = "Larion at Large|52+,62704 58037|57.27 39.21|Nemea",
+		[58040] = "With Lance and Larion|52+,62704 58038 58039|57.27 39.21|Nemea",
+		[58041] = "Providing for the Pack|52+,62704 58038 58039|57.27 39.21|Nemea",
+		[58042] = "On Larion Wings|52+,62704 58040 58041|57.27 39.21|Nemea",
+		[58185] = "Success Without Soul|52+,62704 58042 -57931|57.27 39.21|Nemea", -- Breadcrumb for 57931
+		[58103] = "Pride or Unit|52+,62704 57937 58042 -60296|54.78 41.16|Pelodis",
+		[60296] = "Pride or Unit|52+,62704 57937 58042 -58103|57.27 39.21|Nemea",
 
-		-- The Spear of Kalliope
-		[57529] = "Garden in Turmoil|48+ 59770 -57538|52.32 61.36|Tamesis", -- Breadcrumb for 57538
-		[57538] = "Disturbing the Peace|48+ 59770 ~57529|51.33 59.54|Zosime", -- Invalidates breadcrumb 57529
-		[57545] = "Distractions for Kala|48+ 59770|51.33 59.54|Zosime",
-		[57547] = "A Test of Courage|48+ 57538 57545|51.33 59.54|Zosime",
-		[57568] = "Tough Love|48+ 57547|51.21 56.8|Zosime",
+		-- In the Garden of Respite
+		[57529] = "Garden in Turmoil|52+,62704 -57538|52.32 61.36|Tamesis", -- Breadcrumb for 57538
+		[57538] = "Disturbing the Peace|52+,62704 ~57529|51.33 59.54|Zosime", -- Invalidates breadcrumb 57529
+		[57545] = "Distractions for Kala|52+,62704|51.33 59.54|Zosime",
+		[57547] = "A Test of Courage|52+,62704 57538 57545|51.33 59.54|Zosime",
+		[57568] = "Tough Love|52+,62704 57547|51.21 56.8|Zosime",
 
 		-- An Act of Service
-		[60466] = "The Old Ways|48+ 59770|47.88 73.5|Klystere",
-		[62714] = "A Gift for an Acolyte|48+ 60466|47.88 73.5|Klystere",
-		[62715] = "More Than A Gift|48+ 62714|53.87 73.95|Acolyte Amalthina",
+		[60466] = "The Old Ways|51+,62704|47.88 73.5|Klystere", -- Prereq 57677?
+		[62714] = "A Gift for an Acolyte|51+,62704 60466|47.88 73.5|Klystere",
+		[62715] = "More Than A Gift|51+,62704 62714|53.87 73.95|Acolyte Amalthina",
 
 		-- In Agthia's Memory
-		[59554] = {"A Fine Journey|48+ 59770 -57549|45.27 59.86|Notice", "A Fine Journey|48+ 59770 -57549|51.95 47.67|Notice",}, -- Breadcrumb for 57549
-		[57549] = "In Agthia's Memory|48+ 59770 ~59554|46.99 63.45|Keeper Mnemis", -- Invalidates breadcrumb 59554
-		[57551] = "Agthia's Path|48+ 57549|46.99 63.45|Keeper Mnemis",
-		[57552] = "Warriors of the Void|48+ 57551|46.55 63.42|Agthia||\"Ring the [spell]Vesper of History] nearby if you cannot see Agthia\"",
-		[57554] = "Wicked Gateways|48+ 57551|46.55 63.42|Agthia||\"Ring the [spell]Vesper of History] nearby if you cannot see Agthia\"",
-		[57553] = "On Wounded Wings|48+ 57551|46.27 63.79|Agthian Defender||\"Ring the [spell]Vesper of History] nearby if you cannot see Agthia\"",
-		[57555] = "Shadow's Fall|48+ 57552 57554 57553|46.55 63.42|Agthia||\"Ring the [spell]Vesper of History] nearby if you cannot see Agthia\"",
+		[59554] = {"A Fine Journey|52+,62704 -57549|45.27 59.86|Notice", "A Fine Journey|52+,62704 -57549|51.95 47.67|Notice",}, -- Breadcrumb for 57549
+		[57549] = "In Agthia's Memory|52+,62704 ~59554|46.99 63.45|Keeper Mnemis", -- Invalidates breadcrumb 59554
+		[57551] = "Agthia's Path|52+,62704 57549|46.99 63.45|Keeper Mnemis",
+		[57552] = "Warriors of the Void|52+,62704 57551|46.55 63.42|Agthia||\"Ring the [spell]Vesper of History] nearby if you cannot see Agthia\"",
+		[57554] = "Wicked Gateways|52+,62704 57551|46.55 63.42|Agthia||\"Ring the [spell]Vesper of History] nearby if you cannot see Agthia\"",
+		[57553] = "On Wounded Wings|52+,62704 57551|46.27 63.79|Agthian Defender||\"Ring the [spell]Vesper of History] nearby if you cannot see Agthia\"",
+		[57555] = "Shadow's Fall|52+,62704 57552 57554 57553|46.55 63.42|Agthia||\"Ring the [spell]Vesper of History] nearby if you cannot see Agthia\"",
 
 		-- Hero's Rest
-		[60315] = "WANTED: Gorgebeak|48+ 59770|53.27 46.43|Wanted Scroll",
-		[60366] = "WANTED: Darkwing|48+ 59770|53.27 46.43|Wanted Scroll",
+		[60315] = "WANTED: Gorgebeak|52+,62704|53.27 46.43|Wanted Scroll",
+		[60366] = "WANTED: Darkwing|52+,62704|53.27 46.43|Wanted Scroll",
 
 		-- Aspirant's Rest
-		[60316] = "WANTED: Altered Sentinel|48+ 59770|49.14 72.82|Wanted Scroll",
+		[60316] = "WANTED: Altered Sentinel|51+,62704|49.14 72.82|Wanted Scroll",
 
 		-- Purity's Reflection
-		[57444] = "An Inspired Moral Inventory|48+ 59770|54.03 73.94|Acolyte Galistos",
+		[57444] = "An Inspired Moral Inventory|51+,62704|54.03 73.94|Acolyte Galistos",
 
 		-- Aspirant's Crucible
-		[57712] = "Suggested Reading|48+ 59770|55.39 83.43|Aspirant Akimos",
+		[57712] = "Suggested Reading|51+,62704|55.39 83.43|Aspirant Akimos", -- Prereq 57709?
 
 		-- The Necrotic Wake
-		[60057] = "Necrotic Wake: A Paragon's Plight|48+ 59770|40.94 55.35|Disciple Artemede|dungeon",
+		[60057] = "Necrotic Wake: A Paragon's Plight|51+,62704|40.94 55.35|Disciple Artemede|dungeon", -- Need story mode prereq
 	},
 
 	-- Dungeon: The Necrotic Wake
 	[1666] = {
 		-- The Necrotic Wake
-		[60057] = "Necrotic Wake: A Paragon's Plight|48+ 59770|82.8 39.9|Disciple Artemede|elsewhere link:1533",
+		[60057] = "Necrotic Wake: A Paragon's Plight|51+,62704|82.8 39.9|Disciple Artemede|elsewhere link:1533", -- Need story mode prereq
 	},
 
 
 	--[[ Maldraxxus ]]--
 
+	-- Seat of the Primus
+	[1698] = {
+		-- Threads of Fate: Maldraxxus
+		-- 62748 Rallying Maldraxxus (Auto Accept) - shows on map even with Storylines hidden
+		--[62761] = "Return to Oribos|62748 necrolord|X Y|Secutor Mevix|campaign",
+	},
+
 	-- Maldraxxus
 	[1536] = {
 		-- Threads of Fate: Maldraxxus
 		-- 62748 Rallying Maldraxxus (Auto Accept) - shows on map even with Storylines hidden
-		[62761] = {"Return to Oribos|50+ 62748|52.85 68.28|Secutor Mevix|campaign",
-			--"Return to Oribos|50+ 62748 necrolord|X Y|Secutor Mevix|campaign", -- Add Seat of the Primus location
+		[62761] = {"Return to Oribos|62748|52.85 68.28|Secutor Mevix|campaign", -- check if NL can take quest from both locations or not
+			--"Return to Oribos|62748 necrolord|X Y|Secutor Mevix|campaign", -- Add Seat of the Primus location
 		},
 
 		-- Theater of Pain
-		[62785] = "I Could Be A Contender|48+ 59770 -59781|50.58 51.63|Anzio the Infallible", -- Breadcrumb for 59781
-		[59867] = "WANTED: Appraiser Vix|48+ 59770|54.14 47.47|Wanted: Appraiser Vix",
-		[59781] = "The Last Guy|48+ 59770 ~62785|54.48 48.59|Louison",
-		[59750] = "How to Get a Head|48+ 59770|54.48 48.59|Louison",
-		[58575] = "Stuff We All Get|48+ 59781 59750|54.48 48.59|Louison",
-		[59800] = "Team Spirit|48+ 59781 59750|54.48 48.59|Louison",
-		[58947] = "Test Your Mettle|48+ 58575 59800|54.48 48.59|Louison",
-		[58068] = "...Even The Most Ridiculous Request!|48+ 59770|54.14 50.6|Overseer Kalvaros",
-		[58088] = "Juicing Up|48+ 58068|53.81 50.53|Scrapper Minoire",
-		[58090] = "Side Effects|48+ 58088|53.7 47.92|So'narynar",
-		[59879] = "This Thing of Ours|48+ 58947 58090|54.48 48.59|Louison",
-		[59203] = "Leave Me a Loan|48+ 59879|53.6 47.51|Au'narim",
-		[59837] = "Working for the Living|48+ 59203|53.6 47.51|Au'narim",
-		[58900] = "A Sure Bet|48+ 59837|54.48 48.59|Louison",
-		[57316] = "The Ladder|48+ 58900|50.58 51.63|Anzio the Infallible",
+		[62785] = "I Could Be A Contender|54+,62704 -59781|50.58 51.63|Anzio the Infallible", -- Breadcrumb for 59781
+		[59781] = "The Last Guy|54+,62704 ~62785|54.48 48.59|Louison",
+		[59750] = "How to Get a Head|54+,62704|54.48 48.59|Louison",
+		[58575] = "Stuff We All Get|54+,62704 59781 59750|54.48 48.59|Louison",
+		[59800] = "Team Spirit|54+,62704 59781 59750|54.48 48.59|Louison",
+		[58947] = "Test Your Mettle|54+,62704 58575 59800|54.48 48.59|Louison",
+		[58068] = "...Even The Most Ridiculous Request!|54+,62704|54.14 50.6|Overseer Kalvaros",
+		[58088] = "Juicing Up|53+,62704 58068|53.81 50.53|Scrapper Minoire",
+		[58090] = "Side Effects|54+,62704 58088|53.7 47.92|So'narynar",
+		[59879] = "This Thing of Ours|54+,62704 58947 58090|54.48 48.59|Louison",
+		[59203] = "Leave Me a Loan|55+,62704 59879|53.6 47.51|Au'narim",
+		[59837] = "Working for the Living|54+,62704 59203|53.6 47.51|Au'narim",
+		[58900] = "A Sure Bet|54+,62704 59837|54.48 48.59|Louison",
+		[57316] = "The Ladder|53+,62704 58900|50.58 51.63|Anzio the Infallible",
+		[59867] = "WANTED: Appraiser Vix|60+,62704 62704,57904,59609,62899,62921|54.14 47.47|Wanted: Appraiser Vix",
 
 		-- Wasteland Work
-		[58785] = "Smack and Grab|48+ 59770|46.99 49.04|Caleesy",
-		[58750] = "Take the Bull by the Horns|48+ 59770|46.88 48.58|Dundae",
-		[58794] = "Stabbing Wasteward|48+ 58785 58750|46.99 49.04|Caleesy",
+		[58785] = "Smack and Grab|53+,62704|46.99 49.04|Caleesy",
+		[58750] = "Take the Bull by the Horns|53+,62704|46.88 48.58|Dundae",
+		[58794] = "Stabbing Wasteward|53+,62704 58785 58750|46.99 49.04|Caleesy",
 
 		-- Mixing Monstrosities
-		[59430] = "A Plague on Your House|48+ 59770|58.06 72.11|Judas Sneap",
-		[59520] = "Plaguefall: Knee Deep In It|48+ +59430|59.45 72.97|Vial Master Lurgy|dungeon",
-		[58431] = "Pool of Potions|48+ 59430|59.45 72.97|Boil Master Yetch",
+		[59430] = "A Plague on Your House|54+,62704|58.06 72.11|Judas Sneap",
+		[59520] = "Plaguefall: Knee Deep In It|54+,62704 +59430|59.45 72.97|Vial Master Lurgy|dungeon",
+		[58431] = "Pool of Potions|54+,62704 59430|59.45 72.97|Boil Master Yetch",
 		-- 57301 (Callous Concoctions) is a weekly quest
 
 		-- Archival Protection
-		[62605] = "Broker Business|48+ 59770 -58619|38.21 31.3|Forgotten Supplies", -- Breadcrumb for 58619
-		[58619] = "Read Between the Lines|48+ 59770 ~62605|40.66 33.07|Ta'eran", -- Invalidates breadcrumb 62605
-		[58621] = "Repeat After Me|48+ 58619|43.08 25.1|Ta'eran",
-		[59917] = "Kill Them, Of Course|48+ 58619|43.08 25.1|Ta'eran",
-		[58620] = "Slaylines|48+ 58621|43.08 25.1|Ta'eran",
-		[58622] = "Secrets Among the Shelves|48+ 59917 58620|43.08 25.1|Ta'eran",
-		[60900] = "Archival Protection|48+ 58622|41.8 23.65|Ta'eran",
-		[59994] = "Trust Fall|48+ 60900|43.08 25.1|Ta'eran",
-		[58623] = "A Complete Set|48+ 59994|43.14 25.39|Ta'eran||\"Use the Library Teleporter to get back to Tal'eran\"",
+		[62605] = "Broker Business|54+,62704 -58619|38.21 31.3|Forgotten Supplies", -- Breadcrumb for 58619
+		[58619] = "Read Between the Lines|54+,62704 ~62605|40.66 33.07|Ta'eran", -- Invalidates breadcrumb 62605
+		[58621] = "Repeat After Me|54+,62704 58619|43.08 25.1|Ta'eran",
+		[59917] = "Kill Them, Of Course|54+,62704 58619|43.08 25.1|Ta'eran",
+		[58620] = "Slaylines|54+,62704 58621|43.08 25.1|Ta'eran",
+		[58622] = "Secrets Among the Shelves|54+,62704 59917 58620|43.08 25.1|Ta'eran",
+		[60900] = "Archival Protection|54+,62704 58622|41.8 23.65|Ta'eran",
+		[59994] = "Trust Fall|54+,62704 60900|43.08 25.1|Ta'eran",
+		[58623] = "A Complete Set|54+,62704 59994|43.14 25.39|Ta'eran||\"Use the Library Teleporter to get back to Tal'eran\"",
+	},
+
+
+	--[[ Ardenweald ]]--
+
+	-- Heart of the Forest
+	[1701] = {
+		-- Threads of Fate: Ardenweald
+		-- 62763 Support the Court (Auto Accept) - shows on map even with Storylines hidden
+		--[62776] = "Return to Oribos|62763 nightfae|X Y|Lady Moonberry|campaign",
+
+		-- Night Fae Combatant
+		[64322] = "Night Fae Veteran|60+,62704 nightfae renown:43 -64086|33.54 37|Laurel|legendary", -- Night Fae, Renown 43
+		[64085] = "Night Fae Tactician|60+,62704 nightfae renown:59 64323|33.54 37|Laurel|legendary", -- Night Fae, Renown 59
+	},
+
+	-- Ardenweald
+	[1565] = {
+		-- Threads of Fate: Ardenweald
+		-- 62763 Support the Court (Auto Accept) - shows on map even with Storylines hidden
+		[62776] = {"Return to Oribos|62763 -nightfae|49.34 52.36|Lady Moonberry|campaign", -- check if NF can take quest from both locations or not
+			--"Return to Oribos|62763 nightfae|X Y|Lady Moonberry|campaign", -- Add NF location
+		},
+
+		-- Night Fae - Night Fae Combatant
+		[64322] = "Night Fae Veteran|60+,62704 nightfae renown:43 -64086|44.95 52.98|Laurel|legendary", -- Night Fae, Renown 43
+		[64085] = "Night Fae Tactician|60+,62704 nightfae renown:59 64323|44.95 52.98|Laurel|legendary", -- Night Fae, Renown 59
+
+		-- Heart of the Forest
+		[62371] = "Tirna Scithe: A Warning Silence|56+,62704|48.38 50.46|Flwngyrr|dungeon",
+
+		-- An Ominous Stone
+		[58161] = "Forest Disappearances|56+,62704|64.39 35.19|Brigdin", -- Prereq outside ToF?
+		[58164] = "Cult of Personality|56+,62704 58161|70.35 32.6|Partik",
+		[58162] = "Mysterious Masks|56+,62704 58161|70.35 32.6|Partik",
+		[58163] = "A Desperate Solution|56+,62704 58161|72.19 33.86|Battered Journal",
+		[59802] = "The Crumbling Village|56+,62704 58164 58162 58163|70.35 32.6|Partik",
+		[58165] = "Cut the Roots|56+,62704 59802|74.32 32.36|Partik",
+		[59801] = "Take the Power|56+,62704 59802|74.32 32.36|Partik",
+		[58166] = "Unknown Assailants|56+,62704 58165 59801|74.32 32.36|Partik",
+
+		-- When a Gorm Eats a God
+		[57952] = "In Need of Gorm Gris|56+,62704|62.61 36.09|Guardian Kota",
+		[57818] = "Nothing Goes to Waste|56+,62704 57952|64.86 38.94|Master Sha'lor",
+		[57824] = "Collection Day|56+,62704 57818|64.86 38.94|Master Sha'lor",
+		[57825] = "Delivery for Guardian Kota|56+,62704 57824|64.86 38.94|Master Sha'lor",
+		[61051] = "The Absent-Minded Artisan|56+,62704 57825|62.61 36.09|Guardian Kota",
+		[58022] = "Finish What He Started|56+,62704 61051 _58023|62.89 32.14|Guardian Kota", -- Cannot be picked up after completing 58023, bug has been reported to Blizzard (you can use Party Sync to get it again though)
+		[58023] = "One Big Problem|56+,62704 61051|62.89 32.14|Guardian Kota",
+		[58024] = "Burrows Away|56+,62704 61051 +58022,+58023|62.17 30|Gorm Burrow",
+		[58025] = "Queen of the Underground|56+,62704 58023|59.59 33.44|Guardian Kota|down link:1824",
+		[58026] = "When a Gorm Eats a God|56+,62704 58025|59.59 33.44|Guardian Kota|down link:1824",
+
+		-- Trouble at the Gormling Corral
+		[57652] = "Supplies Needed: Amber Grease|56+,62704|46.92 27.66|Muddy Scroll",
+		[57660] = "The Grove of Creation|56+,62704 58026 -57651|62.92 36.23|Master Sha'lor", -- Breadcrumb for 57651
+		[57651] = "Trouble in the Banks|56+,62704 ~57660|51.11 33.88|Lady of the Falls", -- Invalidates 57660
+		[59621] = "Breaking a Few Eggs|56+,62704 57651|46.67 29.41|Foreman Thorodir",
+		[59622] = "Tending to the Tenders|56+,62704 57651|46.67 29.41|Foreman Thorodir",
+		[57653] = "Unsafe Workplace|56+,62704 59621 59622|46.67 29.41|Foreman Thorodir",
+		[57655] = "Supplies Needed: More Husks!|56+,62704 +57653|47.51 26.36|Discarded Scroll",
+		[57656] = "Gifts of the Forest|56+,62704 59621 59622|48.07 24.34|Fluttercatch", -- Check if this is available earlier (unlikely)
+		[57657] = "Tied Totem Toter|56+,62704 57656|48.07 24.34|Fluttercatch",
+		[59656] = "Well, Tell the Lady|56+,62704 57653 57657|46.67 29.41|Foreman Thorodir",
+		[59623] = "What a Buzzkill|56+,62704 57652 57655|51.58 33.99|Gormsmith Cavina", -- Check if 57655 is needed (57652 confirmed to be req)
+
+		-- Ages-Echoing Wisdom
+		[57865] = "Ages-Echoing Wisdom|56+,62704 59656|51.11 33.88|Lady of the Falls",
+		[57866] = "Idle Hands|56+,62704 59656|51.11 33.88|Lady of the Falls",
+		[57867] = {"The Sweat of Our Brow|56+,62704 59656|55.5 29.92|Helpful Faerie", "The Sweat of Our Brow|56+,62704 59656|55.96 23.42|Helpful Faerie",},
+		[57869] = "Spirit-Gathering Labor|56+,62704 59656|56.44 29.27|Groonoomcrooek",
+		[57868] = "Craftsman Needs No Tools|56+,62704 59656|55.82 23.42|Elder Finnan",
+		[57870] = "The Games We Play|56+,62704 59656|59.07 24.35|Elder Gwenna",
+		[57871] = "Outplayed|56+,62704 57870|59.07 24.35|Elder Gwenna",
+
+		-- Wicked Plan
+		[58265] = "Blooming Villains|57+,62704 60905|60.68 51.33|Guardian Molan",
+		[58266] = "Break It Down|57+,62704 60905|53.48 58.71|Primrose",
+		[58264] = "Wake Up, Get Up, Get Out There|57+,62704 60905|53.48 58.71|Primrose",
+		[58267] = "Beneath the Mask|57+,62704 58266 58264|53.48 58.71|Primrose",
+
+		-- Hibernal Hollow
+		[62807] = "Forest Refugees|57+,62704|60.08 53.94|Droman Aliothe",
+	},
+
+	-- Matriarch's Den
+	[1824] = {
+		-- When a Gorm Eats a God
+		[58025] = "Queen of the Underground|56+,62704 58023|60.21 45.13|Guardian Kota",
+		[58026] = "When a Gorm Eats a God|56+,62704 58025|60.21 45.13|Guardian Kota",
+	},
+
+
+	--[[ Revendreth ]]--
+
+	-- Sinfall - Sinfall Reaches
+	[1699] = {
+		-- Threads of Fate: Revendreth
+		-- 62778 Reinforcing Revendreth (Auto Accept) - shows on map even with Storylines hidden
+		--[62779] = "Return to Oribos|62778 venthyr|X Y|Prince Renathal|campaign",
+	},
+
+	-- Sinfall - Sinfall Depths
+	[1700] = {
+		-- Threads of Fate: Revendreth
+		-- 62778 Reinforcing Revendreth (Auto Accept) - shows on map even with Storylines hidden
+		--[62779] = "Return to Oribos|62778 venthyr|X Y|Prince Renathal|campaign",
+	},
+
+	-- Revendreth
+	[1525] = {
+		-- Threads of Fate: Revendreth
+		-- 62778 Reinforcing Revendreth (Auto Accept) - shows on map even with Storylines hidden
+		[62779] = {"Return to Oribos|62778 -venthyr|61.47 60.43|Prince Renathal|campaign", -- check if Venthyr can take quest from both locations or not
+			--"Return to Oribos|62778 venthyr|X Y|Prince Renathal|campaign", -- Add Sinfall location
+		},
+
+		-- Tithes of Darkhaven
+		[60176] = "Bring Out Your Tithe|58+,62704|61.32 63.78|Mistress Mihaela",
+		[60177] = "Reason for the Treason|58+,62704|62.22 61.36|Lajos",
+		[60279] = "WANTED: The Pale Doom|60+|62.19 63.54|Wanted: The Pale Doom",
+
+		-- The Banewood
+		[58936] = "Beast Control|58+,62704|49.61 75.96|Wanted: Aggregate of Doom",
+		[60514] = "Hunting Trophies|58+,62704|48.51 68.44|Huntmaster Constantin",
+		[58996] = "Abel's Fate|58+,62704|48.51 68.44|Huntmaster Constantin",
+
+		-- The Duelist's Debt
+		[60277] = "WANTED: Aggregate of Doom|58+,62704|59.08 69.2|Bounty: Beast Control",
+		[59710] = "A Curious Invitation|58+,62704|60.71 62.5|Dimwiddle",
+		[59712] = "The Lay of the Land|58+,62704 59710|59.5 66.73|Courier Araak",
+		[59846] = "Finders-Keepers, Sinners-Weepers|58+,62704 59712|59.9 68.89|Nadjia the Mistblade",
+
+		-- The Endmire
+		[60480] = "The Endmire|58+,62704|65.12 63.52|Tessle the Snitch",
+
+		-- Words Have Power
+		[58272] = "Words Have Power|58+,62704|67.74 67.66|Join the Rebellion!",
+
+		-- Dirty Jobs
+		[60509] = "Not My Job|58+,62704 -57471|67.54 68.53|Rendle", -- Breadcrumb for 57471
+		[57471] = "It's a Dirty Job|58+,62704 ~60509|72.57 73.21|Rendle", -- Invalidates 60509
+
+		-- The Final Atonement
+		[58093] = "Our Forgotten Purpose|58+,62704 -57919|72.99 52|Archivist Fane", -- Breadcrumb for 57919
+		[57919] = "An Abuse of Power|58+,62704 ~58093|71.76 40.41|The Accuser", -- Invalidates 58093
+		[60487] = "It Used to Be Quiet Here|58+,62704|69.53 53.38|Chiselgrump",
+		[57920] = "The Proper Souls|58+,62704 57919|71.76 40.41|The Accuser",
+		[57921] = "The Proper Tools|58+,62704 57919|71.76 40.41|The Accuser",
+		[57922] = "The Proper Punishment|58+,62704 57919|71.76 40.41|The Accuser",
+		[57923] = "Ritual of Absolution|58+,62704 57920 57921 57922|70.7 46.96|The Accuser",
+		[57924] = "Ritual of Judgment|58+,62704 57923|71.96 46.23|The Accuser",
+		[57925] = "Archivist Fane|58+,62704 57924|74.3 49.72|The Accuser",
+		[57928] = "Atonement Crypt Key|58+,62704 57925|69.48 54.42|{135828} [Atonement Crypt Key]||Has a chance to drop from any Depraved Venthyr",
+		[57926] = "The Sinstone Archive|58+,62704 57925|72.99 52|Archivist Fane",
+		[60127] = "Missing Stone Fiend|58+,62704 57925|72.99 52|Archivist Fane",
+		[57927] = "Rebuilding Temel|58+,62704 60127|70.15 56.21|Cryptkeeper Kassir",
+		[60128] = "Ready to Serve|58+,62704 57927|70.15 56.21|Cryptkeeper Kassir",
+		[57929] = "Hunting an Inquisitor|58+,62704 57926 60128|72.99 52|Archivist Fane", -- check if 60128 is req (it probably is)
+		[58092] = "Halls of Atonement: Your Absolution|58+,62704 57929|72.99 52|Archivist Fane|dungeon", -- check if 60128 is req (it probably is)
+
+		-- Revelations of the Light
+		[60467] = "A Rousing Aroma|59+,62704|35.07 53.88|Sabina",
+		[60469] = "Safe in the Shadows|59+,62704 60467|35.07 53.88|Sabina",
+		[60468] = "Rubble Rummaging|59+,62704 60467|35.07 53.88|Sabina",
+		[60470] = "Setting Sabina Free|59+,62704 60469 60468|35.07 53.88|Sabina",
+
+		-- Mirror Maker of the Master
+		[57531] = "An Unfortunate Situation|59+,62704|26.42 48.95|Laurent",
+		[57532] = "Foraging for Fragments|59+,62704 57531|26.42 48.95|Laurent",
+
+		-- Sanctuary of the Mad
+		[60276] = "WANTED: Summoner Marcelis|59+,62704|30.87 49.05|Wanted: Summoner Marcelis",
+		[60275] = "WANTED: Enforcer Kristof|60+|30.68 48.99|Wanted: Enforcer Kristof",
 	},
 
 

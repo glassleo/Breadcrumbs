@@ -41,7 +41,66 @@ Data.Vignettes = {
 
 	[1565] = {
 		-- Treasure
+		[61065] = "Ancient Cloudfeather Egg|48+|52.95 37.3||treasure item:180642|Contains|{657490} [uncommon]Cloudfeather Fledgling]",
 		[61073] = "Faerie Trove|48+|49.71 55.89||treasure item:182673|Contains|{3749005} [uncommon]Shimmerbough Hoarder]",
+		[62186] = "Swollen Anima Seed|48+ -item:182730|76.68 29.75||treasure item:182730|Contains|{3610497} [uncommon]Swollen Anima Seed]",
+		[62187] = "Lost Satchel|48+ -item:182731|48.27 20.39||treasure item:182731|Contains|{348524} [uncommon]Satchel of Culexwood]",
+		[61072] = "Aerto|48+|56.02 21.01||treasure item:180630|Contains|{3084139} [uncommon]Gorm Harrier]",
+	},
+
+
+	--[[ Revendreth ]]--
+
+	[1525] = {
+		-- Treasure
+		[59885] = "Remlate's Hidden Cache|48+|61.53 58.65||treasure|Contains|{/Random} [uncommon]Random Equipment] (2)|{133250} [Infused Ruby] (5)",
+		[59884] = "Wayfarer's Abandoned Spoils|48+|68.45 64.46||treasure|Contains|{/Random} [Random Trade Goods]|{133250} [Infused Ruby] (5)",
+		[59888] = "Abandoned Curios|57159|51.85 59.55||treasure item:182744|Contains|{1450755} [uncommon]Ornate Belt Buckle]|{133250} [Infused Ruby] (5)",
+		[59889] = "Smuggled Cache|48+|31.05 55.06||treasure item:182738|Contains|{133640} [uncommon]Bundle of Smuggled Parasol Components]|{/Random} [Random Food] (5)|{133250} [Infused Ruby] (5)||\"There is a high chance that you will be ambushed after looting this treasure\"",
+	},
+
+
+	--[[ Zereth Mortis ]]--
+
+	-- Zereth Mortis
+	[1970] = {
+		-- Treasure
+		[65592] = "Teleporter Lock|60+ 64969|50.01 76.71|\"Under a Bloomthorn Vine\"|treasure interact",
+		[65572] = {"Undulating Foliage|60+ 65589 65590 65591 65592|51.69 79.61||treasure down link:2066 item:190926|Contains|{3950360} [rare]Infested Automa Core]|{4038106} [rare]Spatial Opener]", "[red]Undulating Foliage]|60+ 64969 -65589,-65590,-65591,-65592|51.69 79.61|\"Open the four Teleporter Locks to unlock this treasure\"|treasure down link:2066 item:190926|Contains|{3950360} [rare]Infested Automa Core]|{4038106} [rare]Spatial Opener]",},
+		[65487] = "Fallen Vault|60+|51.56 9.9||treasure|Contains|{4038106} [rare]Spatial Opener]|{/Random} [uncommon]Random Equipment (229)] (1-2)",
+		[65537] = "Offering to the First Ones|60+|34.81 56.04|\"Takes 5 minutes to respawn if someone else recently looted it\"|treasure item:190339|Contains|{4254041} [rare]Enlightened Offering]",
+		[65536] = "Overgrown Protofruit|60+|35.25 44.12||treasure item:190953|Contains|{645345} [Protofruit Flesh] (20)",
+		[65542] = "Pilfered Curio|60+|60.87 42.95||treasure item:190098|Contains|{1044996} [rare]Pepepec]",
+		[65503] = "Filched Artifact|60+|49.77 87.23||treasure|Contains|{4038106} [rare]Spatial Opener]",
+		[65543] = "Stolen Scroll|60+|34.04 67.65||treasure item:190941|Contains|{4217591} [rare]Teachings of the Elders]|{4038106} [rare]Spatial Opener]",
+		[65447] = "Stolen Relic|60+|37.9 65.2||treasure|Contains|{/Random} [rare]Random Jewelry (236)]",
+		[65270] = "Symphonic Vault|60+|52.6 62.97|\"Use the four nearby Broken Consoles in the correct sequence to unlock this treasure\"|treasure|Unlock Sequence|1. [spell]Right, furthest in]|2. [spell]Left, on top of platform]|3. [spell]Right, closest to entrance]|4. [spell]Left, near treasure]||Contains|{4038106} [rare]Spatial Opener]",
+		[64667] = "Damaged Jiro Stash|60+|38.26 37.24||treasure item:190637|Contains|{4284643} [epic]Percussive Maintenance Instrument]",
+		[65540] = "Protomineral Extractor|60+|46.65 30.94||treasure item:190942|Contains|{4284642} [epic]Protomineral Extractor]",
+		[65480] = "Gnawed Valise|60+|38.98 73.21||treasure item:188054::::::::60:::27:3:6652:8108:1482:1:28:2057|Contains|{4096872} [rare]Antecedent Drape]",
+		[65573] = "Bushel of Progenitor Produce|60+|47.44 95.23|\"To open the door, gather 5 stacks of [spell]Creation Catalyst Overcharge] by killing Nascent Servitor in the nearby pool\"|treasure item:190853|Contains|{237269} [rare]Bushel of Mysterious Fruit]|{236571} [rare]Chef Pocopoc]",
+		[65545] = {"Grateful Boon|60+ -65427|37.18 78.31|\"Pet all the agitated animals nearby to unlock the treasure\"|treasure|[red]Requires Protoform Synthesis (Mount)]|{4217590} [rare]Schematic: Adorned Vombata]||\"The schematic won't drop for you now, but you can come back and loot it separately later\"", "Grateful Boon|60+ 65427|37.18 78.31|\"Pet all the agitated animals nearby to unlock the treasure\"|treasure item:189478|Contains|{4217590} [rare]Schematic: Adorned Vombata]",},
+		[65401] = "Protoform Schematic|60+ 65545 65427 -65401 -item:189478|36.96 78.27||treasure item:189478|Contains|{4217590} [rare]Schematic: Adorned Vombata]",
+		[65175] = "Template Archive|60+|59.61 46.16||treasure down link:2030 item:190060|Contains|{774766} [rare]Adventurous Pocopoc]",
+		--[] = {"Forgotten Proto-Vault|60+ active:65089 -65427|66.9 69.4|\"Only available while the World Quest Frog'it is active\"|treasure|[red]Requires Protoform Synthesis (Mount)]|{4217590} [rare]Schematic: Prototype Leaper]||\"The schematic won't drop for you now, but you can come back and loot it separately later regardless of weather the World Quest is active or not\"", "Forgotten Proto-Vault|60+ active:65089 65427|66.9 69.4|\"Only available while the World Quest Frog'it is active\"|treasure item:189469|Contains|{4217590} [rare]Schematic: Prototype Leaper]",},
+		--[65393] = "Protoform Schematic|60+ ??? 65427 -65393 -item:189469|36.96 78.27||treasure item:189478|Contains|{4217590} [rare]Schematic: Prototype Leaper]",
+		[64545] = {"Dangerous Orb of Power|60+|59.43 76.83||treasure interact", "Submerged Chest|60+|58.57 72.85|\"Carry the Dangerous Orb of Power to the nearby Forgotten Pump to access the treasure\"|treasure item:190061|Contains|{1676466} [rare]Admiral Pocopoc]|{4038106} [rare]Spatial Opener]",},
+		[65489] = "Crushed Supply Crate|60+|56.76 64.17|\"Pick up the Repair Tool next to the treasure and then talk to Hiu Fi nearby to trade it for a Jiro Hammer\"|treasure|Contains|{/Random} [rare]Random Equipment (233+)]",
+		[65546] = "Protoflora Harvester|60+|52.59 71.46||treasure item:190952|Contains|{4284644} [epic]Protoflora Harvester]",
+		--research:1932
+	},
+
+	-- Crystal Wards
+	[2066] = {
+		[65591] = "Teleporter Lock|60+ 64969|69.79 52.57|\"Under a Bloomthorn Vine\"|treasure interact",
+		[65590] = "Teleporter Lock|60+ 64969|60.22 87.14|\"Under a Bloomthorn Vine\"|treasure interact",
+		[65589] = "Teleporter Lock|60+ 64969|39.5 68.65|\"Inside a bush\"|treasure interact",
+		[65572] = {"Undulating Foliage|60+ 65589 65590 65591 65592|49.14 34.57|\"Use the unlocked Teleporter\"|treasure item:190926|Contains|{3950360} [rare]Infested Automa Core]|{4038106} [rare]Spatial Opener]", "[red]Undulating Foliage]|60+ 64969 -65589,-65590,-65591,-65592|49.14 34.57|\"Open the four Teleporter Locks to unlock this treasure\"|treasure item:190926|Contains|{3950360} [rare]Infested Automa Core]|{4038106} [rare]Spatial Opener]",},
+	},
+
+	-- Nexus of Actualization
+	[2030] = {
+		[65175] = {"Orb|60+|71.8 48.98||treasure interact", "Template Archive|60+|51.59 87.82|\"Push the Orb in order to gain access to the inner chamber\"|treasure item:190060|Contains|{774766} [rare]Adventurous Pocopoc]",},
 	},
 
 

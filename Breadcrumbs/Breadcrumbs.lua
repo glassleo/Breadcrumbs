@@ -146,12 +146,16 @@ function Breadcrumbs:FormatTooltip(text, flags)
 
 	text = string.gsub(text, "{([%d]+)}", "|T%1:18:18|t") -- texture id
 	text = string.gsub(text, "{(Interface/)([%w%p]+)}", "|T%1%2:16:16|t") -- texture path
+	text = string.gsub(text, "{(/)([%w%p]+)}", "|TInterface/AddOns/Breadcrumbs/Textures/%2:16:16|t") -- relative texture path
 	text = string.gsub(text, "{!}", CreateAtlasMarkup(flags["warboard"] and "warboard" or flags["artifact"] and "questartifact" or flags["legendary"] and "questlegendary" or flags["campaign"] and "quest-campaign-available" or flags["dailycampaign"] and "quest-dailycampaign-available" or flags["daily"] and "questdaily" or "questnormal")) -- !
 	text = string.gsub(text, "{([%w%p]+)}", CreateAtlasMarkup("%1")) -- atlas
 	text = string.gsub(text, "%[Auto Accept", "|cff00ff00Auto Accept") -- Auto Accept green
 	text = string.gsub(text, "%[friendly%]", "|cff00ff00") -- friendly green
-	text = string.gsub(text, "%[neutral%]", "|cffff0000") -- neutral yellow
+	text = string.gsub(text, "%[green%]", "|cff00ff00") -- green
+	text = string.gsub(text, "%[neutral%]", "|cffffff00") -- neutral yellow
+	text = string.gsub(text, "%[yellow%]", "|cffffff00") -- yellow
 	text = string.gsub(text, "%[hostile%]", "|cffff0000") -- hostile red
+	text = string.gsub(text, "%[red%]", "|cffff0000") -- red
 	text = string.gsub(text, "%[poor%]", "|cff9d9d9d") -- poor grey
 	text = string.gsub(text, "%[uncommon%]", "|cff1eff00") -- uncommon green
 	text = string.gsub(text, "%[rare%]", "|cff0070dd") -- rare blue
@@ -585,7 +589,7 @@ function Breadcrumbs:UpdateMap(event, ...)
 								elseif string.match(v, "icon:([%d]+)") then
 									flag_icon = tonumber(string.match(v, "icon:([%d]+)"))
 									flags["icon"] = true
-								elseif string.match(v, "item:([%d]+)") or string.match(v, "spell:([%d]+)") then
+								elseif string.match(v, "item:([%d:]+)") or string.match(v, "spell:([%d:]+)") then
 									hyperlink = v
 								elseif setting_showitemtooltipcurrency and string.match(v, "currency:([%d]+)") then
 									hyperlink = v
@@ -597,20 +601,31 @@ function Breadcrumbs:UpdateMap(event, ...)
 							if (flags["treasure"] and setting_showtreasures) or (flags["vignette"] and setting_showvignettes) then
 								-- Pin size
 								local size = setting_vignettesize
-								if flags["vignette"] and not flags["elsewhere"] and not flags["icon"] then
+								if flags["vignette"] and not flags["elsewhere"] and not flags["interact"] and not flags["speak"] and not flags["icon"] then
 									size = size * 1.25
+								elseif flags["interact"] or flags["speak"] and not flags["icon"] then
+									size = size * 1.15
 								end
 
 								-- Create quest marker pin
 								local pin = NewPin()
-								pin:SetSize(flags["elsewhere"] and size*0.7647 or size, size)
+								pin:SetSize(flags["elsewhere"] and size*0.7647 or flags["lock"] and size*0.7567 or size, size)
 
 								if flags["icon"] and flag_icon then
 									pin:SetNormalTexture(flag_icon)
 									pin:SetHighlightTexture(flag_icon)
+								elseif flags["speak"] then
+									pin:SetNormalTexture("Interface/AddOns/Breadcrumbs/Textures/Speak")
+									pin:SetHighlightTexture("Interface/AddOns/Breadcrumbs/Textures/Speak")
+								elseif flags["interact"] then
+									pin:SetNormalTexture("Interface/AddOns/Breadcrumbs/Textures/Interact")
+									pin:SetHighlightTexture("Interface/AddOns/Breadcrumbs/Textures/Interact")
+								elseif flags["inspect"] then
+									pin:SetNormalTexture("Interface/AddOns/Breadcrumbs/Textures/Inspect")
+									pin:SetHighlightTexture("Interface/AddOns/Breadcrumbs/Textures/Inspect")
 								else
-									pin:SetNormalAtlas(flags["elsewhere"] and "poi-traveldirections-arrow" or (flags["elite"] and flags["vignette"]) and "vignetteeventelite" or (flags["elite"] and flags["treasure"]) and "vignettelootelite" or flags["treasure"] and "vignetteloot" or flags["elite"] and "vignettekillelite" or "vignettekill")
-									pin:SetHighlightAtlas(flags["elsewhere"] and "poi-traveldirections-arrow" or (flags["elite"] and flags["vignette"]) and "vignetteeventelite" or (flags["elite"] and flags["treasure"]) and "vignettelootelite" or flags["treasure"] and "vignetteloot" or flags["elite"] and "vignettekillelite" or "vignettekill")
+									pin:SetNormalAtlas(flags["elsewhere"] and "poi-traveldirections-arrow" or flags["lock"] and "AdventureMapIcon-Lock" or (flags["elite"] and flags["vignette"]) and "vignetteeventelite" or (flags["elite"] and flags["treasure"]) and "vignettelootelite" or flags["treasure"] and "vignetteloot" or flags["elite"] and "vignettekillelite" or "vignettekill")
+									pin:SetHighlightAtlas(flags["elsewhere"] and "poi-traveldirections-arrow" or flags["lock"] and "AdventureMapIcon-Lock" or (flags["elite"] and flags["vignette"]) and "vignetteeventelite" or (flags["elite"] and flags["treasure"]) and "vignettelootelite" or flags["treasure"] and "vignetteloot" or flags["elite"] and "vignettekillelite" or "vignettekill")
 								end
 
 								pin:GetHighlightTexture():SetAlpha(0.5)
@@ -804,6 +819,8 @@ function Breadcrumbs:UpdateMap(event, ...)
 										GameTooltip:AddLine("1 Charge Available", 0, 1, 0)
 									elseif Charges > 1 then
 										GameTooltip:AddLine(Charges.." Charges Available", 0, 1, 0)
+									elseif TimeToNextCharge == 0 then
+										GameTooltip:AddLine("Ready For Use", 0, 1, 0)
 									else
 										GameTooltip:AddLine("No Charges Available", 1, 0, 0)
 									end
@@ -922,6 +939,12 @@ function Breadcrumbs:CheckQuest(map, quest, datastring)
 					-- Must have picked up quest but not completed it (§n)
 					if string.match(v, "^§(%d+)$") and not (C_QuestLog.IsQuestFlaggedCompleted(tonumber(string.match(v, "§(%d+)") or 0)) and C_QuestLog.IsOnQuest(tonumber(string.match(v, "§(%d+)") or 0))) then pass = true end
 
+					-- Must not have completed quest (_n)
+					if string.match(v, "^_(%d+)$") and not C_QuestLog.IsQuestFlaggedCompleted(tonumber(string.match(v, "_(%d+)") or 0)) then pass = true end
+
+					-- active:n
+					if string.match(v, "^active:(%d+)$") and C_TaskQuest.IsActive(tonumber(string.match(v, "active:(%d+)") or 0)) then pass = true end
+
 					-- research:n
 					if string.match(v, "^research:(%d+)$") and C_Garrison.GetTalentInfo(tonumber(string.match(v, "research:(%d+)") or 0)).researched then pass = true end
 
@@ -933,6 +956,9 @@ function Breadcrumbs:CheckQuest(map, quest, datastring)
 
 					-- toy:n
 					if string.match(v, "^toy:(%d+)$") and PlayerHasToy(tonumber(string.match(v, "toy:(%d+)") or 0)) then pass = true end
+
+					-- item:n
+					if string.match(v, "^item:(%d+)$") and GetItemCount(tonumber(string.match(v, "item:(%d+)") or 0), true, false, true) >= 1 then pass = true end
 
 					-- Must match...
 					if v == class or v == faction or v == covenant or v == prof1 or v == prof2 or v == race then pass = true end
@@ -957,6 +983,9 @@ function Breadcrumbs:CheckQuest(map, quest, datastring)
 						pass = true -- We invert our logic
 						local w = string.gsub(v, "%-(%a+)", "%1")
 
+						-- -active:n
+						if string.match(w, "^active:(%d+)$") and C_TaskQuest.IsActive(tonumber(string.match(w, "active:(%d+)") or 0)) then pass = false end
+
 						-- -research:n
 						if string.match(w, "^research:(%d+)$") and C_Garrison.GetTalentInfo(tonumber(string.match(w, "research:(%d+)") or 0)).researched then pass = false end
 
@@ -968,6 +997,9 @@ function Breadcrumbs:CheckQuest(map, quest, datastring)
 
 						-- -toy:n
 						if string.match(w, "^toy:(%d+)$") and PlayerHasToy(tonumber(string.match(w, "toy:(%d+)") or 0)) then pass = false end
+
+						-- -item:n
+						if string.match(w, "^item:(%d+)$") and GetItemCount(tonumber(string.match(w, "item:(%d+)") or 0), true, false, true) >= 1 then pass = false end
 
 						if w == class or w == faction or w == covenant or w == prof1 or w == prof2 or w == race then pass = false end
 						if w == "garrison" and garrison >= 1 then pass = false end
@@ -1056,6 +1088,12 @@ function Breadcrumbs:CheckPOI(map, datastring)
 					-- Must have picked up quest but not completed it (§n)
 					if string.match(v, "§(%d+)") and not (C_QuestLog.IsQuestFlaggedCompleted(tonumber(string.match(v, "§(%d+)") or 0)) and C_QuestLog.IsOnQuest(tonumber(string.match(v, "§(%d+)") or 0))) then pass = true end
 
+					-- Must not have completed quest (_n)
+					if string.match(v, "^_(%d+)$") and not C_QuestLog.IsQuestFlaggedCompleted(tonumber(string.match(v, "_(%d+)") or 0)) then pass = true end
+
+					-- active:n
+					if string.match(v, "^active:(%d+)$") and C_TaskQuest.IsActive(tonumber(string.match(v, "active:(%d+)") or 0)) then pass = true end
+
 					-- research:n
 					if string.match(v, "^research:(%d+)$") and C_Garrison.GetTalentInfo(tonumber(string.match(v, "research:(%d+)") or 0)).researched then pass = true end
 
@@ -1067,6 +1105,9 @@ function Breadcrumbs:CheckPOI(map, datastring)
 
 					-- toy:n
 					if string.match(v, "^toy:(%d+)$") and PlayerHasToy(tonumber(string.match(v, "toy:(%d+)") or 0)) then pass = true end
+
+					-- item:n
+					if string.match(v, "^item:(%d+)$") and GetItemCount(tonumber(string.match(v, "item:(%d+)") or 0), true, false, true) >= 1 then pass = true end
 
 					-- Mailbox
 					if v == "mailbox" and setting_showmailboxes then pass = true end
@@ -1094,6 +1135,9 @@ function Breadcrumbs:CheckPOI(map, datastring)
 						pass = true -- We invert our logic
 						local w = string.gsub(v, "%-(%a+)", "%1")
 
+						-- -active:n
+						if string.match(w, "^active:(%d+)$") and C_TaskQuest.IsActive(tonumber(string.match(w, "active:(%d+)") or 0)) then pass = false end
+
 						-- -research:n
 						if string.match(w, "^research:(%d+)$") and C_Garrison.GetTalentInfo(tonumber(string.match(w, "research:(%d+)") or 0)).researched then pass = false end
 
@@ -1105,6 +1149,9 @@ function Breadcrumbs:CheckPOI(map, datastring)
 
 						-- -toy:n
 						if string.match(w, "^toy:(%d+)$") and PlayerHasToy(tonumber(string.match(w, "toy:(%d+)") or 0)) then pass = false end
+
+						-- -item:n
+						if string.match(w, "^item:(%d+)$") and GetItemCount(tonumber(string.match(w, "item:(%d+)") or 0), true, false, true) >= 1 then pass = false end
 
 						if w == class or w == faction or w == covenant or w == prof1 or w == prof2 or w == race then pass = false end
 						if archaeology and w == "archaeology" then pass = false end
