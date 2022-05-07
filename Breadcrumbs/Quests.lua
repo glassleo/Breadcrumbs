@@ -1,5 +1,15 @@
 local _, Data = ...
 
+-- Hidden Bonus Objective Quests
+-- Pins for quests in this table are removed from Blizzard's Bonus Objective Data Provider if the "Hide Storylines" setting is enabled
+-- This is used to remove broken bonus objectives or to replace them with our own quest pins
+Data.HiddenBonusObjectiveQuests = {
+	[57301] = true, -- Maldraxxus - Callous Concoctions
+	[65649] = true, -- Oribos - A New Deal
+	[66042] = true, -- Zereth Mortis - Patterns Within Patterns
+	[64641] = true, -- Zereth Mortis - Mysterious Greenery
+}
+
 -- Quests
 
 --[[
@@ -182,35 +192,35 @@ Data.Quests = {
 		-- Threads of Fate breadcrumb quests are only available after completing a zone quest (not Torghast/Battlegrounds)
 		[62159] = "Aiding the Shadowlands|59- 62716|38.89 70|Tal-Inara|campaign", -- #1
 		-- HQT ??
-		-- [63208] = "The Next Step|50+ 62159|38.89 70|Tal-Inara", -- #2
+		-- [63208] = "The Next Step|50+ 62159|38.89 70|Tal-Inara|campaign", -- #2
 		-- HQT 64137
-		[63209] = "Furthering the Purpose|59- 63208 64137|38.89 70|Tal-Inara", -- #3
-		[63210] = {"The Last Step|50+ 59- 63209 -62729 62761 62776 62779|38.89 70|Tal-Inara", "The Last Step|50+ 59- 63209 62729 -62761 62776 62779|38.89 70|Tal-Inara", "The Last Step|50+ 59- 63209 62729 62761 -62776 62779|38.89 70|Tal-Inara", "The Last Step|50+ 59- 63209 62729 62761 62776 -62779|38.89 70|Tal-Inara",}, -- #4
+		[63209] = "Furthering the Purpose|59- 63208 64137|38.89 70|Tal-Inara|campaign", -- #3
+		[63210] = {"The Last Step|50+ 59- 63209 -62729 62761 62776 62779|38.89 70|Tal-Inara|campaign", "The Last Step|50+ 59- 63209 62729 -62761 62776 62779|38.89 70|Tal-Inara|campaign", "The Last Step|50+ 59- 63209 62729 62761 -62776 62779|38.89 70|Tal-Inara|campaign", "The Last Step|50+ 59- 63209 62729 62761 62776 -62779|38.89 70|Tal-Inara|campaign",}, -- #4
 
 		-- Threads of Fate: Bastion
 		-- 62151 Bastion chosen - Also given optional breadcrumb 62275
-		[63034] = "The Elysian Fields|62151 ~62275 kyrian|38.89 70|Tal-Inara", -- Kyrian
-		[62707] = "The Elysian Fields|62151 ~62275 -kyrian|38.89 70|Tal-Inara", -- Not Kyrian
+		[63034] = "The Elysian Fields|62151 ~62275 kyrian|38.89 70|Tal-Inara|campaign", -- Kyrian
+		[62707] = "The Elysian Fields|62151 ~62275 -kyrian|38.89 70|Tal-Inara|campaign", -- Not Kyrian
 
 		-- Threads of Fate: Maldraxxus
 		-- 62152 Maldraxxus chosen - Also given optional breadcrumb 62278
-		[63035] = "A Fresh Blade|62152 ~62278 necrolord|38.89 70|Tal-Inara", -- Necrolord
-		[62738] = "A Fresh Blade|62152 ~62278 -necrolord|38.89 70|Tal-Inara", -- Not Necrolord
+		[63035] = "A Fresh Blade|62152 ~62278 necrolord|38.89 70|Tal-Inara|campaign", -- Necrolord
+		[62738] = "A Fresh Blade|62152 ~62278 -necrolord|38.89 70|Tal-Inara|campaign", -- Not Necrolord
 
 		-- Threads of Fate: Ardenweald
 		-- 62153 Ardenweald chosen - Also given optional breadcrumb 62277
-		[63036] = "Restoring Balance|62153 ~62277 nightfae|38.89 70|Tal-Inara", -- Night Fae
-		[62739] = "Restoring Balance|62153 ~62277 -nightfae|38.89 70|Tal-Inara", -- Not Night Fae
+		[63036] = "Restoring Balance|62153 ~62277 nightfae|38.89 70|Tal-Inara|campaign", -- Night Fae
+		[62739] = "Restoring Balance|62153 ~62277 -nightfae|38.89 70|Tal-Inara|campaign", -- Not Night Fae
 
 		-- Threads of Fate: Revendreth
 		-- 62154 Revendreth chosen - Also given optional breadcrumb 62279
-		[63037] = "Dark Aspirations|62154 ~62279 venthyr|38.89 70|Tal-Inara", -- Venthyr
-		[62740] = "Dark Aspirations|62154 ~62279 -venthyr|38.89 70|Tal-Inara", -- Not Venthyr
+		[63037] = "Dark Aspirations|62154 ~62279 venthyr|38.89 70|Tal-Inara|campaign", -- Venthyr
+		[62740] = "Dark Aspirations|62154 ~62279 -venthyr|38.89 70|Tal-Inara|campaign", -- Not Venthyr
 
 		-- Threads of Fate: Battlegrounds
 		-- 65030 Battlegrounds chosen - Also given optional breadcrumb 65031 (Battlegrounds)
-		[65032] = "Battleground Observers|65030 ~65031|38.89 70|Tal-Inara",
-		-- 65033 Observing Victory - daily quest is displayed by default
+		[65032] = "Battleground Observers|65030 ~65031|38.89 70|Tal-Inara|campaign",
+		-- 65033 Observing Victory - this daily quest is displayed by the Bonus Objectives Data Provider so we don't have to
 		-- HQT 53409 resets with daily
 		[65034] = "Return to Oribos|65032 65033|34.24 55.9|Strategist Zo'rak|campaign",
 
@@ -221,8 +231,29 @@ Data.Quests = {
 		[63211] = "Report to Adrestes|60+ kyrian -60491|38.89 70|Tal-Inara|campaign", -- Breadcrumb for 60491
 		[60491] = "Among the Kyrian|60+ kyrian ~63211|36.13 64.22|Polemarch Adrestes|campaign", -- Invalidates 63211
 
+		-- Torghast, Tower of the Damned
+		[65625] = "The Jailer's Gauntlet|60+ 65305 ~65250 ~65260|55.61 49.32|Ve'nyo",
+
+		-- Zereth Mortis
+		[65649] = "A New Deal|60+ 65305|34.46 57.46|Zo'sorg|weekly",
+
 		-- Zereth Mortis - Secrets of the First Ones
 		--[64942] = "Call of the Primus|60+ ???|38.9 69.99|[Auto Accept]|campaign", -- Requires chapter 2 of Chains of Domination
+
+		-- Epilogue: Judgment
+		[65260] = "A Long Walk|60+ 65250|52.38 39.84|Uther",
+		[65263] = "The Fate of Sylvanas|60+ 65260|38.93 69.95|Arbiter Pelagos|elsewhere link:1673|\"Tal-Inara can take you to the Crucible\"",
+		[65297] = "Penance and Renewal|60+ 65263|38.93 69.95|Arbiter Pelagos|elsewhere link:1673|\"Tal-Inara can take you to the Crucible\"",
+	},
+
+	-- The Crucible
+	[1673] = {
+		-- Zereth Mortis - Starting Over
+		[65329] = "Safe Haven|60+ 65238 -65249|59.38 55.86|Kleia|campaign", -- Breadcrumb; cannot be picked up again if you leave the area/abadondon the quest
+
+		-- Epilogue: Judgment
+		[65263] = "The Fate of Sylvanas|60+ 65260|67.7 48.98|Arbiter Pelagos",
+		[65297] = "Penance and Renewal|60+ 65263|67.7 48.98|Arbiter Pelagos",
 	},
 
 
@@ -235,8 +266,8 @@ Data.Quests = {
 		[62729] = "Return to Oribos|62723 kyrian|37.09 61.18|Kalisthene|campaign", -- Kyrian
 
 		-- Kyrian Combatant
-		[64323] = "Kyrian Veteran|60+,62704 kyrian renown:43 -64086|42.74 70.25|Iona Skyblade|legendary", -- Kyrian, Renown 43
-		[64086] = "Kyrian Tactician|60+,62704 kyrian renown:59 64323|42.74 70.25|Iona Skyblade|legendary", -- Kyrian, Renown 59
+		[64323] = "Kyrian Veteran|60+,62704 kyrian renown:43|42.74 70.25|Iona Skyblade|legendary", -- Kyrian, Renown 43
+		[64086] = "Kyrian Tactician|60+,62704 kyrian renown:59|42.74 70.25|Iona Skyblade|legendary", -- Kyrian, Renown 59
 	},
 
 	-- Elysian Hold - Sanctum of Binding
@@ -246,8 +277,8 @@ Data.Quests = {
 		[62729] = "Return to Oribos|62723 kyrian|37.09 61.18|Kalisthene|campaign", -- Kyrian
 
 		-- Kyrian Combatant
-		[64323] = "Kyrian Veteran|60+,62704 kyrian renown:43 -64086|42.74 70.25|Iona Skyblade|legendary", -- Kyrian, Renown 43
-		[64086] = "Kyrian Tactician|60+,62704 kyrian renown:59 64323|42.74 70.25|Iona Skyblade|legendary", -- Kyrian, Renown 59
+		[64323] = "Kyrian Veteran|60+,62704 kyrian renown:43|42.74 70.25|Iona Skyblade|legendary", -- Kyrian, Renown 43
+		[64086] = "Kyrian Tactician|60+,62704 kyrian renown:59|42.74 70.25|Iona Skyblade|legendary", -- Kyrian, Renown 59
 	},
 
 	-- Bastion
@@ -260,8 +291,8 @@ Data.Quests = {
 		[62916] = "Your Next Best Friend|60+,62704 59426 -60259 -60260 -60261 -60262 -60263|52.98 47.56|Sika", -- Weekly quest - only show if no Steward choice has been made
 
 		-- Kyrian - Kyrian Combatant
-		[64323] = "Kyrian Veteran|60+,62704 kyrian renown:43 -64086|64.76 20.33|Iona Skyblade|legendary", -- Kyrian, Renown 43
-		[64086] = "Kyrian Tactician|60+,62704 kyrian renown:59 64323|64.76 20.33|Iona Skyblade|legendary", -- Kyrian, Renown 59
+		[64323] = "Kyrian Veteran|60+,62704 kyrian renown:43|64.76 20.33|Iona Skyblade|legendary", -- Kyrian, Renown 43
+		[64086] = "Kyrian Tactician|60+,62704 kyrian renown:59|64.76 20.33|Iona Skyblade|legendary", -- Kyrian, Renown 59
 
 		-- Among the Kyrian
 		[60492] = "A Proper Reception|60+ kyrian 60491|56.76 31.44|Polemarch Adrestes|campaign",
@@ -323,6 +354,12 @@ Data.Quests = {
 
 		-- The Necrotic Wake
 		[60057] = "Necrotic Wake: A Paragon's Plight|51+,62704|40.94 55.35|Disciple Artemede|dungeon", -- Need story mode prereq
+
+		-- Zereth Mortis - Crown of Wills
+		[64807] = "What We Wish to Forget|60+ 64806|59.25 88.19|Highlord Bolvar Fordragon|campaign",
+		[64808] = "What Makes Us Strong|60+ 64807|59.1 88.49|Anduin Wrynn|campaign",
+		[64798] = "What We Overcome|60+ 64808|59.1 88.49|Anduin Wrynn|campaign",
+		[64812] = "Forge of Domination|60+ 64798|59.25 88.19|Highlord Bolvar Fordragon|campaign",
 	},
 
 	-- Dungeon: The Necrotic Wake
@@ -359,6 +396,7 @@ Data.Quests = {
 		[58068] = "...Even The Most Ridiculous Request!|54+,62704|54.14 50.6|Overseer Kalvaros",
 		[58088] = "Juicing Up|53+,62704 58068|53.81 50.53|Scrapper Minoire",
 		[58090] = "Side Effects|54+,62704 58088|53.7 47.92|So'narynar",
+		[58095] = "Theater of Pain: Help Wanted|60+ 58090|54.14 50.6|Overseer Kalvaros|dungeon",
 		[59879] = "This Thing of Ours|54+,62704 58947 58090|54.48 48.59|Louison",
 		[59203] = "Leave Me a Loan|55+,62704 59879|53.6 47.51|Au'narim",
 		[59837] = "Working for the Living|54+,62704 59203|53.6 47.51|Au'narim",
@@ -399,8 +437,8 @@ Data.Quests = {
 		--[62776] = "Return to Oribos|62763 nightfae|X Y|Lady Moonberry|campaign",
 
 		-- Night Fae Combatant
-		[64322] = "Night Fae Veteran|60+,62704 nightfae renown:43 -64086|33.54 37|Laurel|legendary", -- Night Fae, Renown 43
-		[64085] = "Night Fae Tactician|60+,62704 nightfae renown:59 64323|33.54 37|Laurel|legendary", -- Night Fae, Renown 59
+		[64322] = "Night Fae Veteran|60+,62704 nightfae renown:43|33.54 37|Laurel|legendary", -- Night Fae, Renown 43
+		[64085] = "Night Fae Tactician|60+,62704 nightfae renown:59|33.54 37|Laurel|legendary", -- Night Fae, Renown 59
 	},
 
 	-- Ardenweald
@@ -412,8 +450,8 @@ Data.Quests = {
 		},
 
 		-- Night Fae - Night Fae Combatant
-		[64322] = "Night Fae Veteran|60+,62704 nightfae renown:43 -64086|44.95 52.98|Laurel|legendary", -- Night Fae, Renown 43
-		[64085] = "Night Fae Tactician|60+,62704 nightfae renown:59 64323|44.95 52.98|Laurel|legendary", -- Night Fae, Renown 59
+		[64322] = "Night Fae Veteran|60+,62704 nightfae renown:43|44.95 52.98|Laurel|legendary", -- Night Fae, Renown 43
+		[64085] = "Night Fae Tactician|60+,62704 nightfae renown:59|44.95 52.98|Laurel|legendary", -- Night Fae, Renown 59
 
 		-- Heart of the Forest
 		[62371] = "Tirna Scithe: A Warning Silence|56+,62704|48.38 50.46|Flwngyrr|dungeon",
@@ -487,6 +525,10 @@ Data.Quests = {
 		-- Threads of Fate: Revendreth
 		-- 62778 Reinforcing Revendreth (Auto Accept) - shows on map even with Storylines hidden
 		--[62779] = "Return to Oribos|62778 venthyr|X Y|Prince Renathal|campaign",
+
+		-- Sinfall Combatant
+		[64325] = "Sinfall Veteran|60+,62704 venthyr renown:43|54.33 26.46|Rahel|legendary", -- Venthyr, Renown 43
+		[64083] = "Sinfall Tactician|60+,62704 venthyr renown:59|54.33 26.46|Rahel|legendary", -- Venthyr, Renown 59
 	},
 
 	-- Sinfall - Sinfall Depths
@@ -503,6 +545,10 @@ Data.Quests = {
 		[62779] = {"Return to Oribos|62778 -venthyr|61.47 60.43|Prince Renathal|campaign", -- check if Venthyr can take quest from both locations or not
 			--"Return to Oribos|62778 venthyr|X Y|Prince Renathal|campaign", -- Add Sinfall location
 		},
+
+		-- Venthyr - Sinfall Combatant
+		[64325] = "Sinfall Veteran|60+,62704 venthyr renown:43|31.57 40.45|Rahel|legendary link:1699", -- Venthyr, Renown 43
+		[64083] = "Sinfall Tactician|60+,62704 venthyr renown:59|31.57 40.45|Rahel|legendary link:1699", -- Venthyr, Renown 59
 
 		-- Tithes of Darkhaven
 		[60176] = "Bring Out Your Tithe|58+,62704|61.32 63.78|Mistress Mihaela",
@@ -561,6 +607,173 @@ Data.Quests = {
 		-- Sanctuary of the Mad
 		[60276] = "WANTED: Summoner Marcelis|59+,62704|30.87 49.05|Wanted: Summoner Marcelis",
 		[60275] = "WANTED: Enforcer Kristof|60+|30.68 48.99|Wanted: Enforcer Kristof",
+	},
+
+
+	--[[ The Maw ]]--
+
+	-- The Runecarver's Oubliette
+	[1912] = {
+		-- Zereth Mortis - Crown of Wills
+		[64813] = "The Crown of Wills|60+ 64812|50.28 54.11|The Primus|campaign",
+		[64816] = "Reality's Doorstep|60+ 64813 -64875|49.27 69.71|Highlord Bolvar Fordragon|campaign", -- Breadcrumb for 64875 (Something Wonderful); does technically not have the campaign flag in-game
+	},
+
+
+	--[[ Zereth Mortis ]]--
+
+	-- Zereth Mortis
+	[1970] = {
+		-- Into the Unknown
+		-- ...
+
+		-- We Battle Onward
+		-- ...
+
+		-- Forming an Understanding
+		-- ...
+		[66042] = "Patterns Within Patterns|60+ 65305|34.99 64.76|Highlord Bolvar Fordragon|weekly",
+		[65748] = "You Supply the Effort|60+ 65305|35.16 65.75|Hadja",
+		[65735] = "WANTED: Custos|60+ 65305|35.41 65.53|Wanted: Custos",
+
+		-- Forging a New Path
+		-- ...
+		--[64831] = "Remnants of the First Ones|60+ ???|XY|Elder Ara|campaign",
+		--[64832] = "Reclaiming Provis Esper|60+ ???|XY|Elder Ara|campaign",
+		--[64837] = "The Pilgrim's Journey|60+ 64831 64832|XY|Elder Ara|campaign",
+		[64834] = "Glow and Behold|60+ 64837|61.29 51.44|Elder Ara|campaign",
+		[64838] = "Where There's a Pilgrim, There's a Way|60+ 64834|64.73 53.8|Elder Ara|campaign",
+		[64969] = "In the Weeds|60+ 64838|61.1 50.68|Elder Ara|campaign",
+		[64836] = "Nip It in the Bud|60+ 64969|48.16 75.13|Elder Ara|campaign",
+		[64839] = "Root of the Problem|60+ 64969|48.07 75.15|Feroz|campaign",
+		[64835] = "Pluck from the Vines|60+ 64969|48.07 75.15|Feroz|campaign",
+		[65331] = "Herbal Remedies|60+ 64836 64839 64835|47.67 79.88|Feroz|campaign",
+		[64840] = "Unchecked Growth|60+ 64836 64839 64835|47.67 79.88|Feroz|campaign",
+		[64841] = "Take Charge|60+ 64836 64839 64835|47.61 80.31|General Draven|campaign",
+		[64842] = "Flora Frenzy|60+ 65331 64840 64841|47.67 79.88|Feroz|campaign",
+		[64843] = "Key Crafting|60+ 64842|47.61 80.31|General Draven|campaign",
+		[64844] = "The Pilgrimage Ends|60+ 64843|47.34 88.5|Elder Ara|campaign",
+		[65774] = "The Catalyst Awakens|60+ 64844|34.75 64.13|Vilo",
+
+		-- Sepulcher of the First Ones
+		[65259] = "Heart of the Sepulcher|60+ 64844|34.99 64.76|Highlord Bolvar Fordragon|raid", -- check prereq
+
+		-- Crown of Wills
+		[64799] = "The Broken Crown|60+ 64844|34.99 64.76|Highlord Bolvar Fordragon|campaign",
+		[64800] = "Our Last Option|60+ 64799|33.17 68.91|Highlord Bolvar Fordragon|campaign",
+		[64802] = "Hello, Darkness|60+ 64800|33.29 68.73|The Primus|campaign",
+		[64801] = "Elder Eru|60+ 64802|33.17 68.91|Highlord Bolvar Fordragon|campaign",
+		[64803] = "Testing One Two|60+ 64802|33.29 68.73|The Primus|campaign",
+		[64804] = "Cryptic Catalogue|60+ 64801|56.17 83.33|Elder Eru|campaign",
+		[64805] = "The Not-Scientific Method|60+ 64803 64804|59.22 78.81|Elder Eru|campaign",
+		[64853] = "Two Paths to Tread|60+ 64805|59.22 78.81|Elder Eru|campaign",
+		[64809] = "One Half of the Equation|60+ 64853|33.17 68.91|Highlord Bolvar Fordragon|campaign",
+		[64810] = "Oppress and Destroy|60+ 64809|57.22 31.09|Highlord Bolvar Fordragon|campaign",
+		[64811] = "Aggressive Excavation|60+ 64809|57.23 31.16|Taelia Fordragon|campaign",
+		[64806] = "Where the Memory Resides|60+ 64810 64811|57.22 31.09|Highlord Bolvar Fordragon|campaign",
+		[64807] = "What We Wish to Forget|60+ 64806|33.17 68.91|Highlord Bolvar Fordragon|campaign elsewhere link:1533",
+		[64808] = "What Makes Us Strong|60+ 64807|33.17 68.91|Anduin Wrynn|campaign elsewhere link:1533",
+		[64798] = "What We Overcome|60+ 64808|33.17 68.91|Anduin Wrynn|campaign elsewhere link:1533",
+		[64812] = "Forge of Domination|60+ 64798|33.17 68.91|Anduin Wrynn|campaign elsewhere link:1533",
+		[64813] = "The Crown of Wills|60+ 64812|33.17 68.91|The Primus|campaign elsewhere link:1912",
+		[64816] = "Reality's Doorstep|60+ 64813 -64875|33.17 68.91|Highlord Bolvar Fordragon|elsewhere link:1912", -- Breadcrumb for 64875 (Something Wonderful)
+
+		-- A Means to an End
+		[64875] = "Something Wonderful|60+ 64813|35.46 65.08|Pelagos|campaign", -- Presumably invalidates 64816 when completed (but you can strangely be on both at the same time)
+		[64876] = "Music of the Spheres|60+ 64875|34.22 48.36|Firim|campaign",
+		[64878] = "What A Long Strange Trip|60+ 64876|34.12 47.33|Pocopoc|campaign",
+		[64888] = "Borrowed Power|60+ 64878|47.18 29.39|Pocopoc|campaign",
+		[65245] = "Pop Goes the Devourer!|60+ 64878|47.18 29.39|Pocopoc|campaign",
+		[64889] = "Match Made in Zereth Mortis|60+ 64888 65245|47.18 29.39|Pocopoc|campaign",
+		[64935] = "Between A Rock & A Rock|60+ 64888 65245 +64889|48.44 27.19|Suspicious Rubble Pile|campaign",
+		[64936] = "Searching High and Low|60+ 64889|34.12 47.33|Pocopoc|campaign",
+		[64937] = "You Light Up My Life|60+ 64936|47.95 33.98|Pocopoc|campaign",
+		[65237] = "Oracle, Heal Thyself|60+ 64937|34.08 48.05|Pocopoc|campaign",
+		[65328] = "Arbiter in the Making|60+ 65237|34.3 38.6|Pelagos|campaign",
+
+		-- Starting Over
+		[64879] = "A Monumental Discovery|60+ 65328 -64723|34.99 64.76|Highlord Bolvar Fordragon|campaign", -- Breadcrumb for 64723 (Restoration Project); does technically not have the campaign flag in-game but we are all about fixing Blizzard's mistakes here :)
+		[64723] = "Restoration Project|60+ 65328 ~64879|34.22 48.36|Firim|campaign", -- Invalidates 64879
+		[64733] = "Help From Beyond|60+ 64723|33.82 48.36|Kleia|campaign",
+		[64718] = "Keys To Victory|60+ 64733|57.08 31.07|Saezurah|campaign",
+		[64706] = "A Matter Of Motivation|60+ 64733|56.91 31.21|Firim|campaign",
+		[64720] = "Cleaving A Path|60+ 64733|56.4 31.15|Secutor Mevix|campaign",
+		[64722] = "Knocking On Death's Door|60+ 64718 64706 64720|55.86 29.9|Firim|campaign",
+		[64727] = "The Infinite Circle|60+ 64722|66.64 19.6|Saezurah|campaign link:2031",
+		[64726] = "The Order Of Things|60+ 64727|68.58 16.12|Saezurah|campaign link:2031",
+		[64725] = "Unforgivable Intrusion|60+ 64727|68.58 16.12|Saezurah|campaign link:2031",
+		[64962] = "As Foretold|60+ 64726 64725|68.58 16.12|Saezurah|campaign link:2031",
+		[64728] = "Acquaintances Forgotten|60+ 64962|68.58 16.12|Saezurah|campaign link:2031",
+		[64730] = "The Turning Point|60+ 64728|68.58 16.12|Saezurah|campaign link:2031",
+		[64731] = "For Every Soul|60+ 64730|68.49 15.96|Kleia|campaign link:2031",
+		[64729] = "Lifetimes To Consider|60+ 64731|68.58 16.12|Saezurah|campaign link:2031",
+		[65238] = "Souls Entwined|60+ 64729|34.36 48.49|Kleia|campaign",
+
+		-- Epilogue: Judgment
+		[65249] = "The Jailer's Defeat|60+ 65238 ~65329|34.99 64.76|Highlord Bolvar Fordragon",
+		[65250] = "Prisoner of Interest|60+ 65249|34.99 64.76|Highlord Bolvar Fordragon",
+
+		-- Exile's Hollow
+		[65700] = "Core Control|60+ research:1932|34.22 48.36|Firim", -- Requires Dealic Understanding
+
+		-- Not Al Are Lost
+		[64771] = "Enlightened Exodus|60+ 65305|33.73 64.65|Al'dalil",
+		-- ...
+
+		-- Small Pet Problems
+		[65064] = "Look Who I Found!|60+ 65305|34.7 66.28|Tamra",
+		-- ...
+
+		-- The Waters of Grace
+		[65463] = "The Wellspring of the First Ones|60+ 65305 -65349|61.49 49.17|Drim", -- Breadcrumb for 65349 (Lost Grace)
+		[65349] = "Lost Grace|60+ 65305 ~65349|61.87 53.51|Olem", -- Invalidates 65463
+		[65350] = "Restore the Flow|60+ 65349|55.12 50.2|Nadir",
+		[65353] = "An Automa-free Diet|60+ 65349|55.12 50.2|Nadir",
+		[65448] = "A Return to Grace|60+ 65350|58.38 55.74|Percolation Array|down link:2028",
+
+		-- Reap What You Sow
+		[64641] = "Mysterious Greenery|60+ research:1931|55.28 64.39|Glimmercane", -- Requires Sopranian Understanding
+		[64642] = "Clearing the Ruins|60+ 64641|60.5 70.02|Koh Shira",
+		[64643] = "Scavenging a Solution|60+ 64641|60.47 70.14|Koh Riva",
+		[64644] = "A Splash of the Eternal|60+ 64642 64643|60.68 69.78|Glimmercane",
+		[64645] = "Moment of Truth|60+ 64644|60.5 70.02|Koh Shira",
+		[64646] = "Ramping Up|60+ 64645|63.61 73.1|Koh Shira",
+		[64647] = "Strange Gears|60+ 64645|63.83 74.04|Perished Automa|link:2027",
+		[64648] = "Reap What We Have Sown|60+ 64646 64647|64.63 77.21|Koh Shira|down link:2027",
+
+		-- The Final Song
+		[64829] = "Finding Tahli|60+ research:1931|61.37 51.55|Elder Amir", -- Requires Sopranian Understanding
+		[64745] = "Selfless Preservation|60+ 64829|63.94 40.78|Tahli",
+		[64759] = "Junk's Not Dead|60+ 64745|61.19 37.62|Tahli",
+		[64761] = "Core Competency|60+ 64745|61.19 37.62|Tahli",
+		-- ...
+	},
+
+	-- Blooming Foundry
+	[2027] = {
+		-- Reap What You Sow
+		[64646] = "Ramping Up|60+ 64645|26.55 3.18|Koh Shira",
+		[64647] = "Strange Gears|60+ 64645|29.3 15.24|Perished Automa",
+		[64648] = "Reap What We Have Sown|60+ 64646 64647|39.35 55.33|Koh Shira",
+	},
+
+	-- Locrian Esper
+	[2028] = {
+		-- The Waters of Grace
+		[65448] = "A Return to Grace|60+ 65350|51.5 68.73|Percolation Array",
+	},
+
+	-- Crypts of the Eternal
+	[2031] = {
+		-- Starting Over
+		[64727] = "The Infinite Circle|60+ 64722|36.66 76.97|Saezurah|campaign",
+		[64726] = "The Order Of Things|60+ 64727|53.24 47.23|Saezurah|campaign",
+		[64725] = "Unforgivable Intrusion|60+ 64727|53.24 47.23|Saezurah|campaign",
+		[64962] = "As Foretold|60+ 64726 64725|53.24 47.23|Saezurah|campaign",
+		[64728] = "Acquaintances Forgotten|60+ 64962|53.24 47.23|Saezurah|campaign",
+		[64730] = "The Turning Point|60+ 64728|53.24 47.23|Saezurah|campaign",
+		[64731] = "For Every Soul|60+ 64730|52.48 45.87|Kleia|campaign",
+		[64729] = "Lifetimes To Consider|60+ 64731|53.24 47.23|Saezurah|campaign",
 	},
 
 

@@ -111,7 +111,14 @@ Data.POI = {
 
 	-- Crystal Wards
 	[2066] = {
+		-- Teleporter
 		"progenitorflightmaster-32x32:small|Teleporter|65589 65590 65591 65592|42.89 50.34",
+	},
+
+	-- Nexus of Actualization
+	[2030] = {
+		-- Teleporter
+		"teleportationnetwork-32x32:small|Teleporter|1+|54.85 86.15",
 	},
 
 
@@ -599,11 +606,35 @@ Data.POI = {
 	},
 
 
+	--[[ Valley of the Four Winds ]]--
+
+	[376] = {
+		-- Profession Trainer
+		"POI/Engineering|[Engineering Trainer]|10+ engineering|16.06 83.15|tooltip|Sally Fizzlefury",
+		"POI/Tailoring|[Tailoring Trainer]|10+ tailoring|62.66 59.75|tooltip|Silkmaster Tsai",
+	},
+
+
 	--[[ Kun-Lai Summit ]]--
 
 	[379] = {
 		-- Profession Trainer
 		"POI/Leatherworking|[Leatherworking Trainer]|10+ leatherworking|64.66 60.86|tooltip|Clean Pelt",
+	},
+
+
+	--[[ Vale of Eternal Blossoms ]]--
+
+	-- Shrine of Two Moons - The Imperial Mercantile
+	[392] = {
+		-- Portal
+		"POI/Portal|Portal to Orgrimmar|horde|73.37 42.64",
+	},
+
+	-- Shrine of Two Moons - Hall of the Crescent Moon
+	[391] = {
+		"POI/Engineering|[Engineering Trainer]|10+ horde engineering|61.05 41.76|tooltip|Guyo Crystalgear",
+		"POI/Tailoring|[Bandage Trainer]|10+ horde tailoring|29.38 75.69|tooltip|Ala'thinel",
 	},
 
 
