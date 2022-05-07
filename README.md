@@ -20,7 +20,7 @@ All data has been compiled and tested manually to ensure accuracy.
 
 This addon does not currently have an official release available since so much quest data is still missing. That said, it is very stable and the data that *is* there is very accurate. Most of the POI features are also more or less complete.
 
-If you would like to try it out, you can download it by clicking on the green Code button on GitHub and choosing "Download ZIP". Then extract the folder named ``Breadcrumbs`` (which is inside ``Breadcrumbs-main``) into your AddOns folder.
+If you would like to try it out, you can download it by clicking on the green Code button on GitHub and choosing "Download ZIP". Then extract the folder named ``Breadcrumbs`` (inside ``Breadcrumbs-main``) into your AddOns folder.
 
 The addon does have a lot of options available but you'll have to change them manually by editing ``Breadcrumbs.lua`` as there is no in-game GUI implemented for them yet.
 
