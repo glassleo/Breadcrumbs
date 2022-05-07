@@ -16,6 +16,14 @@ All data has been compiled and tested manually to ensure accuracy.
 - Fix several map related Blizzard bugs/oversights and add missing information for certain quests
 - Options to choose which features you want to enable (GUI NYI)
 
+## Pre-Release Notes
+
+This addon does not currently have an official release available since so much quest data is still missing. That said, it is very stable and the data that *is* there is very accurate. Most of the POI features are also more or less complete.
+
+If you would like to try it out, you can download it by clicking on the green Code button on GitHub and choosing "Download ZIP". Then extract the folder named ``Breadcrumbs`` (which is inside ``Breadcrumbs-main``) into your AddOns folder.
+
+The addon does have a lot of options available but you'll have to change them manually by editing ``Breadcrumbs.lua`` as there is no in-game GUI implemented for them yet.
+
 ## Current Progress
 
 While the addon itself is more or less feature complete, only a tiny fraction of all required data has been compiled and tested so far.
