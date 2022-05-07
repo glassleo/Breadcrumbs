@@ -6,89 +6,89 @@ local Throttle = {}
 
 
 -- User settings (GUI NYI)
-local setting_hidestorylines = true
-local setting_pinsize = 20
-local setting_objectivesize = 15
-local setting_vignettesize = 15
-local setting_poisize = 25
-local setting_poisizesmall = 20
-local setting_showhelp = true
-local setting_questframelevel = nil -- set to "PIN_FRAME_LEVEL_GROUP_MEMBER" to display above the player arrow
-local setting_objectiveframelevel = nil -- set to "PIN_FRAME_LEVEL_GROUP_MEMBER" to display above the player arrow
-local setting_vignetteframelevel = "PIN_FRAME_LEVEL_VIGNETTE" -- set to "PIN_FRAME_LEVEL_GROUP_MEMBER" to display above the player arrow
-local setting_poiframelevel = "PIN_FRAME_LEVEL_AREA_POI" -- set to "PIN_FRAME_LEVEL_GROUP_MEMBER" to display above the player arrow
-local setting_showbroken = false
-local setting_showdiscovery = true
-local setting_showitemtooltip = true
-local setting_showitemtooltipcurrency = true
-local setting_itemtooltipposition = "right" -- can be "bottom" or "right"
-local setting_showtreasures = true
-local setting_showvignettes = true
-local setting_showpoi = true
-local setting_showmailboxes = true
-local setting_showmailboxesdense = false
---local setting_mailboxtoggle = true
-local setting_showquests = true
-local setting_showobjectives = true
-local setting_showunittooltip = true
+local Setting_DisableStorylineQuestDataProvider = true
+local Setting_EnableQuests = true
+local Setting_PinSize = 20
+local Setting_ObjectivesPinSize = 15
+local Setting_VignettePinSize = 15
+local Setting_POIPinSize = 25
+local Setting_POISmallPinSize = 20
+local Setting_HumanTooltips = true
+local Setting_QuestFrameLevel = nil -- set to "PIN_FRAME_LEVEL_GROUP_MEMBER" to display above the player arrow
+local Setting_ObjectivesFrameLevel = nil -- set to "PIN_FRAME_LEVEL_GROUP_MEMBER" to display above the player arrow
+local Setting_VignetteFrameLevel = "PIN_FRAME_LEVEL_VIGNETTE" -- set to "PIN_FRAME_LEVEL_GROUP_MEMBER" to display above the player arrow
+local Setting_POIFrameLevel = "PIN_FRAME_LEVEL_AREA_POI" -- set to "PIN_FRAME_LEVEL_GROUP_MEMBER" to display above the player arrow
+local Setting_EnableBrokenQuests = false
+local Setting_EnableDiscoveryQuests = true
+local Setting_ShowItemTooltips = true
+local Setting_ShowCurrencyTooltips = true
+local Setting_ItemTooltipPosition = "right" -- can be "bottom" or "right"
+local Setting_EnableObjectives = true
+local Setting_EnableTreasures = true
+local Setting_EnableVignettes = true
+local Setting_EnablePOI = true
+local Setting_EnableMailboxes = true
+local Setting_EnableMailboxesEverywhere = false
+--local Setting_EnableMailboxToggleButton = true -- NYI
+local Setting_EnableUnitTooltips = true
 
 
 -- Frame recycling pool
 local MapPool = {}
-local MapPoolCount = 0
+local MapPoolBeans = 0
 
 local function RecycleAllPins()
-	if MapPoolCount > 0 then
-		for i = 1, MapPoolCount do
-			local pin = _G["BreadcrumbsMapPin"..i]
+	if MapPoolBeans > 0 then
+		for i = 1, MapPoolBeans do
+			local Pin = _G["BreadcrumbsMapPin"..i]
 			
-			pin:SetParent(WorldMapFrame)
-			pin:SetPoint("CENTER", WorldMapFrame)
-			pin.arrow:SetDesaturated(false)
-			pin.arrow:SetTexture("")
-			pin.arrow:Hide()
-			if pin:GetNormalTexture() then
-				pin:GetNormalTexture():SetDesaturated(false)
-				pin:GetNormalTexture():SetVertexColor(1, 1, 1)
-				pin:GetNormalTexture():SetTexCoord(0, 1, 0, 1)
+			Pin:SetParent(WorldMapFrame)
+			Pin:SetPoint("CENTER", WorldMapFrame)
+			Pin.Arrow:SetDesaturated(false)
+			Pin.Arrow:SetTexture("")
+			Pin.Arrow:Hide()
+			if Pin:GetNormalTexture() then
+				Pin:GetNormalTexture():SetDesaturated(false)
+				Pin:GetNormalTexture():SetVertexColor(1, 1, 1)
+				Pin:GetNormalTexture():SetTexCoord(0, 1, 0, 1)
 			end
-			pin:SetNormalTexture("")
-			if pin:GetHighlightTexture() then
-				pin:GetHighlightTexture():SetDesaturated(false)
-				pin:GetHighlightTexture():SetVertexColor(1, 1, 1)
-				pin:GetHighlightTexture():SetTexCoord(0, 1, 0, 1)
+			Pin:SetNormalTexture("")
+			if Pin:GetHighlightTexture() then
+				Pin:GetHighlightTexture():SetDesaturated(false)
+				Pin:GetHighlightTexture():SetVertexColor(1, 1, 1)
+				Pin:GetHighlightTexture():SetTexCoord(0, 1, 0, 1)
 			end
-			pin:SetHighlightTexture("")
-			pin:UnregisterAllEvents()
-			pin:SetScript("OnEnter", nil)
-			pin:SetScript("OnLeave", nil)
-			pin:SetScript("OnMouseUp", nil)
-			pin:Hide()
-			MapPool[pin] = true
+			Pin:SetHighlightTexture("")
+			Pin:UnregisterAllEvents()
+			Pin:SetScript("OnEnter", nil)
+			Pin:SetScript("OnLeave", nil)
+			Pin:SetScript("OnMouseUp", nil)
+			Pin:Hide()
+			MapPool[Pin] = true
 		end
 	end
 end
 
 local function NewPin()
-	local pin = next(MapPool)
+	local Pin = next(MapPool)
 
-	if pin then
-		MapPool[pin] = nil -- remove it from the pool
-		pin:SetParent(WorldMapFrame)
-		pin:ClearAllPoints()
-		return pin
+	if Pin then
+		MapPool[Pin] = nil -- remove it from the pool
+		Pin:SetParent(WorldMapFrame)
+		Pin:ClearAllPoints()
+		return Pin
 	end
 
-	-- Create a new pin frame
-	MapPoolCount = MapPoolCount + 1
-	pin = CreateFrame("Button", "BreadcrumbsMapPin"..MapPoolCount, WorldMapFrame)
+	-- Create a new Pin frame
+	MapPoolBeans = MapPoolBeans + 1
+	Pin = CreateFrame("Button", "BreadcrumbsMapPin"..MapPoolBeans, WorldMapFrame)
 
-	local arrow = pin:CreateTexture(nil, "OVERLAY")
-	pin.arrow = arrow
-	arrow:SetPoint("CENTER", pin)
-	arrow:Hide()
+	local Arrow = Pin:CreateTexture(nil, "OVERLAY")
+	Pin.Arrow = Arrow
+	Arrow:SetPoint("CENTER", Pin)
+	Arrow:Hide()
 
-	return pin
+	return Pin
 end
 
 
@@ -101,7 +101,7 @@ end
 
 -- Initialization
 function Breadcrumbs:OnInitialize()
-	if setting_hidestorylines then
+	if Setting_DisableStorylineQuestDataProvider then
 		-- Remove StorylineQuestDataProvider
 		for provider in next, WorldMapFrame.dataProviders do
 		    if(provider.RequestQuestLinesForMap) then
@@ -128,11 +128,11 @@ function Breadcrumbs:FixBonusObjectives()
 	if (UnitLevel("player") or 1) >= 50 and (map == 630 or map == 641 or map == 650 or map == 657 or map == 634) then
 		-- Azsuna, Val'sharah, Highmountain, Neltharion's Vault, Stormheim
 		WorldMapFrame:RemoveAllPinsByTemplate("BonusObjectivePinTemplate")
-	elseif setting_hidestorylines and Data.HiddenBonusObjectiveQuests and WorldMapFrame:GetNumActivePinsByTemplate("BonusObjectivePinTemplate") >= 1 then
+	elseif Setting_DisableStorylineQuestDataProvider and Data.HiddenBonusObjectiveQuests and WorldMapFrame:GetNumActivePinsByTemplate("BonusObjectivePinTemplate") >= 1 then
 		-- Remove specific quest pins
-		for pin in WorldMapFrame:EnumeratePinsByTemplate("BonusObjectivePinTemplate") do
-			if pin.questID and Data.HiddenBonusObjectiveQuests[pin.questID] then
-				WorldMapFrame:RemovePin(pin)
+		for Pin in WorldMapFrame:EnumeratePinsByTemplate("BonusObjectivePinTemplate") do
+			if Pin.questID and Data.HiddenBonusObjectiveQuests[Pin.questID] then
+				WorldMapFrame:RemovePin(Pin)
 			end
 		end
 	end
@@ -226,7 +226,7 @@ function Breadcrumbs:UpdateMap(event, ...)
 	local DisoveryQuests = {}
 
 	-- Create Quest Pins
-	if setting_showquests and Data.Quests and Data.Quests[map] then
+	if Setting_EnableQuests and Data.Quests and Data.Quests[map] then
 		for id in pairs(Data.Quests[map]) do
 			-- Quest must not be in the quest log and also not completed
 			if not C_QuestLog.IsOnQuest(id) and not C_QuestLog.IsQuestFlaggedCompleted(id) then
@@ -279,30 +279,30 @@ function Breadcrumbs:UpdateMap(event, ...)
 							}
 						else
 							-- Pin size
-							local size = setting_pinsize
+							local size = Setting_PinSize
 
 							-- Create quest marker pin
-							local pin = NewPin()
-							pin:SetSize(flags["elsewhere"] and size*0.7647 or size, size)
+							local Pin = NewPin()
+							Pin:SetSize(flags["elsewhere"] and size*0.7647 or size, size)
 
 							if flags["icon"] and flag_icon then
-								pin:SetNormalTexture(flag_icon)
+								Pin:SetNormalTexture(flag_icon)
 							elseif flags["kill"] then
-								pin:SetNormalTexture("Interface/AddOns/Breadcrumbs/Textures/QuestKill")
+								Pin:SetNormalTexture("Interface/AddOns/Breadcrumbs/Textures/QuestKill")
 							elseif flags["weekly"] then
-								pin:SetNormalTexture("Interface/AddOns/Breadcrumbs/Textures/QuestWeekly")
+								Pin:SetNormalTexture("Interface/AddOns/Breadcrumbs/Textures/QuestWeekly")
 							else
-								pin:SetNormalAtlas(flags["elsewhere"] and "poi-traveldirections-arrow" or flags["warboard"] and "warboard" or flags["campaign"] and "quest-campaign-available" or flags["dailycampaign"] and "quest-dailycampaign-available" or flags["up"] and "questnormal" or flags["down"] and "questnormal" or flags["artifact"] and "questartifact" or flags["legendary"] and "questlegendary" or flags["daily"] and "questdaily" or "questnormal")
+								Pin:SetNormalAtlas(flags["elsewhere"] and "poi-traveldirections-arrow" or flags["warboard"] and "warboard" or flags["campaign"] and "quest-campaign-available" or flags["dailycampaign"] and "quest-dailycampaign-available" or flags["up"] and "questnormal" or flags["down"] and "questnormal" or flags["artifact"] and "questartifact" or flags["legendary"] and "questlegendary" or flags["daily"] and "questdaily" or "questnormal")
 							end
 
 							if flags["down"] or flags["up"] then
-								pin:GetNormalTexture():SetDesaturated(true)
-								pin.arrow:SetAtlas(flags["up"] and "minimap-positionarrowup" or "minimap-positionarrowdown")
-								pin.arrow:SetSize(size*1.5, size*1.5)
-								pin.arrow:Show()
+								Pin:GetNormalTexture():SetDesaturated(true)
+								Pin.Arrow:SetAtlas(flags["up"] and "minimap-positionarrowup" or "minimap-positionarrowdown")
+								Pin.Arrow:SetSize(size*1.5, size*1.5)
+								Pin.Arrow:Show()
 							end
 
-							pin:SetScript("OnEnter", function(self, motion)
+							Pin:SetScript("OnEnter", function(self, motion)
 								GameTooltip:Hide()
 								GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
 								--local title = title or C_QuestLog.GetTitleForQuestID(id) or " "
@@ -337,7 +337,7 @@ function Breadcrumbs:UpdateMap(event, ...)
 								else -- It's a quest, show source
 									GameTooltip:AddDoubleLine(AVAILABLE_QUEST, Breadcrumbs:FormatTooltip(source and "{!}" .. source or "", flags) or "", 1, 1, 1)
 								end
-								if setting_showhelp then -- Help tip
+								if Setting_HumanTooltips then -- Help tip
 									if help and strlen(help) > 0 then
 										GameTooltip:AddLine(" ")
 										GameTooltip:AddLine(Breadcrumbs:FormatTooltip(help, flags), nil, nil, nil, true)
@@ -371,20 +371,20 @@ function Breadcrumbs:UpdateMap(event, ...)
 								GameTooltip:Show()
 							end)
 
-							pin:SetScript("OnLeave", function(self, motion)
+							Pin:SetScript("OnLeave", function(self, motion)
 								GameTooltip:Hide()
 							end)
 
 							if flags["link"] then
-								pin:SetScript("OnMouseUp", function(self, button)
+								Pin:SetScript("OnMouseUp", function(self, button)
 									if button == "LeftButton" then
 										WorldMapFrame:SetMapID(link)
 									end
 								end)
 							end
 
-							Pins:AddWorldMapIconMap("Breadcrumbs", pin, map, x/100, y/100, nil, setting_questframelevel or "PIN_FRAME_LEVEL_STORY_LINE")
-							pin:Show()
+							Pins:AddWorldMapIconMap("Breadcrumbs", Pin, map, x/100, y/100, nil, Setting_QuestFrameLevel or "PIN_FRAME_LEVEL_STORY_LINE")
+							Pin:Show()
 						end
 					end
 				end
@@ -393,7 +393,7 @@ function Breadcrumbs:UpdateMap(event, ...)
 	end
 
 	-- Create Discovery Quest Pins
-	if setting_showquests and setting_showdiscovery then
+	if Setting_EnableQuests and Setting_EnableDiscoveryQuests then
 		-- Sort the table
 		local sorted = {}
 		for k in pairs(DisoveryQuests) do sorted[#sorted+1] = k end
@@ -403,11 +403,11 @@ function Breadcrumbs:UpdateMap(event, ...)
 			local data = DisoveryQuests[k]
 
 			-- Pin size
-			local size = setting_pinsize*1.8
+			local size = Setting_PinSize*1.8
 
 			-- Create quest marker pin
-			local pin = NewPin()
-			pin:SetSize(size, size)
+			local Pin = NewPin()
+			Pin:SetSize(size, size)
 
 			-- Coordinates
 			local x = size/10
@@ -422,13 +422,13 @@ function Breadcrumbs:UpdateMap(event, ...)
 			local link = data["link"]
 
 			-- Icon
-			pin:SetNormalTexture("Interface/AddOns/Breadcrumbs/Textures/Discovery/" .. (data["icon"] or "Questionmark"))
-			pin:GetNormalTexture():SetTexCoord(0, 0.75, 0, 0.75) -- Crop 64×64 to 48×48
-			pin:SetHighlightTexture("Interface/AddOns/Breadcrumbs/Textures/Discovery/" .. (data["icon"] or "Questionmark"))
-			pin:GetHighlightTexture():SetTexCoord(0, 0.75, 0, 0.75) -- Crop 64×64 to 48×48
-			pin:GetHighlightTexture():SetAlpha(0.5)
+			Pin:SetNormalTexture("Interface/AddOns/Breadcrumbs/Textures/Discovery/" .. (data["icon"] or "Questionmark"))
+			Pin:GetNormalTexture():SetTexCoord(0, 0.75, 0, 0.75) -- Crop 64×64 to 48×48
+			Pin:SetHighlightTexture("Interface/AddOns/Breadcrumbs/Textures/Discovery/" .. (data["icon"] or "Questionmark"))
+			Pin:GetHighlightTexture():SetTexCoord(0, 0.75, 0, 0.75) -- Crop 64×64 to 48×48
+			Pin:GetHighlightTexture():SetAlpha(0.5)
 
-			pin:SetScript("OnEnter", function(self, motion)
+			Pin:SetScript("OnEnter", function(self, motion)
 				GameTooltip:Hide()
 				GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
 				if flags["legendary"] or flags["artifact"] then -- Legendary text color
@@ -459,7 +459,7 @@ function Breadcrumbs:UpdateMap(event, ...)
 				else -- It's a quest, show source
 					GameTooltip:AddDoubleLine(AVAILABLE_QUEST, Breadcrumbs:FormatTooltip(source and "{!}" .. source or "", flags) or "", 1, 1, 1)
 				end
-				if setting_showhelp then -- Help tip
+				if Setting_HumanTooltips then -- Help tip
 					if help and strlen(help) > 0 then
 						GameTooltip:AddLine(" ")
 						GameTooltip:AddLine(Breadcrumbs:FormatTooltip(help, flags))
@@ -493,25 +493,25 @@ function Breadcrumbs:UpdateMap(event, ...)
 				GameTooltip:Show()
 			end)
 
-			pin:SetScript("OnLeave", function(self, motion)
+			Pin:SetScript("OnLeave", function(self, motion)
 				GameTooltip:Hide()
 			end)
 
 			if flags["link"] then
-				pin:SetScript("OnMouseUp", function(self, button)
+				Pin:SetScript("OnMouseUp", function(self, button)
 					if button == "LeftButton" then
 						WorldMapFrame:SetMapID(link)
 					end
 				end)
 			end
 
-			Pins:AddWorldMapIconMap("Breadcrumbs", pin, map, x/100, y/100, nil, "PIN_FRAME_LEVEL_GROUP_MEMBER")
-			pin:Show()
+			Pins:AddWorldMapIconMap("Breadcrumbs", Pin, map, x/100, y/100, nil, "PIN_FRAME_LEVEL_GROUP_MEMBER")
+			Pin:Show()
 		end
 	end
 
 	-- Create Objective Pins
-	if setting_showobjectives and Data.Objectives and Data.Objectives[map] then
+	if Setting_EnableObjectives and Data.Objectives and Data.Objectives[map] then
 		for id in pairs(Data.Objectives[map]) do
 			if C_QuestLog.IsOnQuest(id or 0) then
 				for i = 1, type(Data.Objectives[map][id]) == "string" and 1 or #Data.Objectives[map][id] do
@@ -525,21 +525,21 @@ function Breadcrumbs:UpdateMap(event, ...)
 					if icon and x and y then
 						if not (icon == "questobjective" and (C_QuestLog.IsQuestFlaggedCompleted(id) or C_QuestLog.ReadyForTurnIn(id))) then -- Don't show the pin if the quest is complete
 							-- Pin size
-							local size = setting_objectivesize
-							if icon == "questturnin" then size = setting_pinsize end
+							local size = Setting_ObjectivesPinSize
+							if icon == "questturnin" then size = Setting_PinSize end
 
 							-- Create map pin
-							local pin = NewPin()
-							pin:SetSize(size, size)
+							local Pin = NewPin()
+							Pin:SetSize(size, size)
 
 							if string.match(icon, "[%w%p]+") then
-								pin:SetNormalAtlas(icon)
+								Pin:SetNormalAtlas(icon)
 							else
-								pin:SetNormalTexture(icon)
+								Pin:SetNormalTexture(icon)
 							end
 
 							if title then
-								pin:SetScript("OnEnter", function(self, motion)
+								Pin:SetScript("OnEnter", function(self, motion)
 									GameTooltip:Hide()
 									GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
 									GameTooltip:AddLine(Breadcrumbs:FormatTooltip(title))
@@ -561,13 +561,13 @@ function Breadcrumbs:UpdateMap(event, ...)
 									GameTooltip:Show()
 								end)
 
-								pin:SetScript("OnLeave", function(self, motion)
+								Pin:SetScript("OnLeave", function(self, motion)
 									GameTooltip:Hide()
 								end)
 							end
 
-							Pins:AddWorldMapIconMap("Breadcrumbs", pin, map, x/100, y/100)
-							pin:Show()
+							Pins:AddWorldMapIconMap("Breadcrumbs", Pin, map, x/100, y/100)
+							Pin:Show()
 						end
 					end
 				end
@@ -576,7 +576,7 @@ function Breadcrumbs:UpdateMap(event, ...)
 	end
 
 	-- Create Vignette Pins
-	if (setting_showtreasures or setting_showvignettes) and Data.Vignettes and Data.Vignettes[map] then
+	if (Setting_EnableTreasures or Setting_EnableVignettes) and Data.Vignettes and Data.Vignettes[map] then
 		for id in pairs(Data.Vignettes[map]) do
 			if type(id) == "number" then -- Quest
 				-- Quest must not be completed
@@ -599,16 +599,16 @@ function Breadcrumbs:UpdateMap(event, ...)
 									flags["icon"] = true
 								elseif string.match(v, "item:([%d:]+)") or string.match(v, "spell:([%d:]+)") then
 									hyperlink = v
-								elseif setting_showitemtooltipcurrency and string.match(v, "currency:([%d]+)") then
+								elseif Setting_ShowCurrencyTooltips and string.match(v, "currency:([%d]+)") then
 									hyperlink = v
 								else
 									flags[v] = true
 								end
 							end
 
-							if (flags["treasure"] and setting_showtreasures) or (flags["vignette"] and setting_showvignettes) then
+							if (flags["treasure"] and Setting_EnableTreasures) or (flags["vignette"] and Setting_EnableVignettes) then
 								-- Pin size
-								local size = setting_vignettesize
+								local size = Setting_VignettePinSize
 								if flags["vignette"] and not flags["elsewhere"] and not flags["interact"] and not flags["speak"] and not flags["icon"] then
 									size = size * 1.25
 								elseif flags["interact"] or flags["speak"] and not flags["icon"] then
@@ -616,37 +616,37 @@ function Breadcrumbs:UpdateMap(event, ...)
 								end
 
 								-- Create quest marker pin
-								local pin = NewPin()
-								pin:SetSize(flags["elsewhere"] and size*0.7647 or flags["locked"] and size*0.7567 or size, size)
+								local Pin = NewPin()
+								Pin:SetSize(flags["elsewhere"] and size*0.7647 or flags["locked"] and size*0.7567 or size, size)
 
 								if flags["icon"] and flag_icon then
-									pin:SetNormalTexture(flag_icon)
-									pin:SetHighlightTexture(flag_icon)
+									Pin:SetNormalTexture(flag_icon)
+									Pin:SetHighlightTexture(flag_icon)
 								elseif flags["speak"] then
-									pin:SetNormalTexture("Interface/AddOns/Breadcrumbs/Textures/Speak")
-									pin:SetHighlightTexture("Interface/AddOns/Breadcrumbs/Textures/Speak")
+									Pin:SetNormalTexture("Interface/AddOns/Breadcrumbs/Textures/Speak")
+									Pin:SetHighlightTexture("Interface/AddOns/Breadcrumbs/Textures/Speak")
 								elseif flags["interact"] then
-									pin:SetNormalTexture("Interface/AddOns/Breadcrumbs/Textures/Interact")
-									pin:SetHighlightTexture("Interface/AddOns/Breadcrumbs/Textures/Interact")
+									Pin:SetNormalTexture("Interface/AddOns/Breadcrumbs/Textures/Interact")
+									Pin:SetHighlightTexture("Interface/AddOns/Breadcrumbs/Textures/Interact")
 								elseif flags["inspect"] then
-									pin:SetNormalTexture("Interface/AddOns/Breadcrumbs/Textures/Inspect")
-									pin:SetHighlightTexture("Interface/AddOns/Breadcrumbs/Textures/Inspect")
+									Pin:SetNormalTexture("Interface/AddOns/Breadcrumbs/Textures/Inspect")
+									Pin:SetHighlightTexture("Interface/AddOns/Breadcrumbs/Textures/Inspect")
 								else
-									pin:SetNormalAtlas(flags["elsewhere"] and "poi-traveldirections-arrow" or flags["locked"] and "AdventureMapIcon-Lock" or (flags["elite"] and flags["vignette"]) and "vignetteeventelite" or (flags["elite"] and flags["treasure"]) and "vignettelootelite" or flags["treasure"] and "vignetteloot" or flags["elite"] and "vignettekillelite" or "vignettekill")
-									pin:SetHighlightAtlas(flags["elsewhere"] and "poi-traveldirections-arrow" or flags["locked"] and "AdventureMapIcon-Lock" or (flags["elite"] and flags["vignette"]) and "vignetteeventelite" or (flags["elite"] and flags["treasure"]) and "vignettelootelite" or flags["treasure"] and "vignetteloot" or flags["elite"] and "vignettekillelite" or "vignettekill")
+									Pin:SetNormalAtlas(flags["elsewhere"] and "poi-traveldirections-arrow" or flags["locked"] and "AdventureMapIcon-Lock" or (flags["elite"] and flags["vignette"]) and "vignetteeventelite" or (flags["elite"] and flags["treasure"]) and "vignettelootelite" or flags["treasure"] and "vignetteloot" or flags["elite"] and "vignettekillelite" or "vignettekill")
+									Pin:SetHighlightAtlas(flags["elsewhere"] and "poi-traveldirections-arrow" or flags["locked"] and "AdventureMapIcon-Lock" or (flags["elite"] and flags["vignette"]) and "vignetteeventelite" or (flags["elite"] and flags["treasure"]) and "vignettelootelite" or flags["treasure"] and "vignetteloot" or flags["elite"] and "vignettekillelite" or "vignettekill")
 								end
 
-								pin:GetHighlightTexture():SetAlpha(0.5)
+								Pin:GetHighlightTexture():SetAlpha(0.5)
 
 								if flags["down"] or flags["up"] then
-									pin:GetNormalTexture():SetDesaturated(true)
-									pin:GetHighlightTexture():SetDesaturated(true)
-									pin.arrow:SetAtlas(flags["up"] and "minimap-positionarrowup" or "minimap-positionarrowdown")
-									pin.arrow:SetSize(size*1.5, size*1.5)
-									pin.arrow:Show()
+									Pin:GetNormalTexture():SetDesaturated(true)
+									Pin:GetHighlightTexture():SetDesaturated(true)
+									Pin.Arrow:SetAtlas(flags["up"] and "minimap-positionarrowup" or "minimap-positionarrowdown")
+									Pin.Arrow:SetSize(size*1.5, size*1.5)
+									Pin.Arrow:Show()
 								end
 
-								pin:SetScript("OnEnter", function(self, motion)
+								Pin:SetScript("OnEnter", function(self, motion)
 									GameTooltip:Hide()
 									ItemTooltip:Hide()
 									GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
@@ -681,7 +681,7 @@ function Breadcrumbs:UpdateMap(event, ...)
 									elseif source then
 										GameTooltip:AddLine(Breadcrumbs:FormatTooltip(source), nil, nil, nil, true)
 									end
-									if setting_showhelp and tip1 then -- Help tip
+									if Setting_HumanTooltips and tip1 then -- Help tip
 										GameTooltip:AddLine(" ")
 										if tip1 then if strlen(tip1) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip1, flags), nil, nil, nil, true) else GameTooltip:AddLine(" ") end end
 										if tip2 then if strlen(tip2) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip2, flags), nil, nil, nil, true) else GameTooltip:AddLine(" ") end end
@@ -699,9 +699,9 @@ function Breadcrumbs:UpdateMap(event, ...)
 									end
 									GameTooltip:Show()
 
-									if setting_showitemtooltip and hyperlink then
+									if Setting_ShowItemTooltips and hyperlink then
 										ItemTooltip:SetOwner(GameTooltip, "ANCHOR_NONE")
-										if setting_itemtooltipposition == "bottom" then
+										if Setting_ItemTooltipPosition == "bottom" then
 											ItemTooltip:SetPoint("TOPLEFT", GameTooltip, "BOTTOMLEFT", 0, -2)
 										else
 											ItemTooltip:SetPoint("TOPLEFT", GameTooltip, "TOPRIGHT")
@@ -711,21 +711,21 @@ function Breadcrumbs:UpdateMap(event, ...)
 									end
 								end)
 
-								pin:SetScript("OnLeave", function(self, motion)
+								Pin:SetScript("OnLeave", function(self, motion)
 									GameTooltip:Hide()
 									ItemTooltip:Hide()
 								end)
 
 								if flags["link"] then
-									pin:SetScript("OnMouseUp", function(self, button)
+									Pin:SetScript("OnMouseUp", function(self, button)
 										if button == "LeftButton" then
 											WorldMapFrame:SetMapID(link)
 										end
 									end)
 								end
 
-								Pins:AddWorldMapIconMap("Breadcrumbs", pin, map, x/100, y/100, nil, setting_vignetteframelevel or "PIN_FRAME_LEVEL_VIGNETTE")
-								pin:Show()
+								Pins:AddWorldMapIconMap("Breadcrumbs", Pin, map, x/100, y/100, nil, Setting_VignetteFrameLevel or "PIN_FRAME_LEVEL_VIGNETTE")
+								Pin:Show()
 							end
 						end
 					end
@@ -738,7 +738,7 @@ function Breadcrumbs:UpdateMap(event, ...)
 	end
 
 	-- Create Point of Interest Pins
-	if setting_showpoi and Data.POI and Data.POI[map] then
+	if Setting_EnablePOI and Data.POI and Data.POI[map] then
 		for id, data in ipairs(Data.POI[map]) do
 			for i = 1, type(data) == "string" and 1 or #data do
 				local datastring = type(data) == "string" and data or data[i]
@@ -748,7 +748,7 @@ function Breadcrumbs:UpdateMap(event, ...)
 				if eligible and x and y then
 					-- Pin size
 					local texture, texturesize = strsplit(":", texture or "")
-					local size = (texturesize == "objective") and setting_objectivesize or (texturesize == "small") and setting_poisizesmall or (texturesize == "large") and (setting_poisize*1.5) or setting_poisize
+					local size = (texturesize == "objective") and Setting_ObjectivesPinSize or (texturesize == "small") and Setting_POISmallPinSize or (texturesize == "large") and (Setting_POIPinSize*1.5) or Setting_POIPinSize
 
 					-- Build the flags table
 					local link = nil
@@ -763,39 +763,39 @@ function Breadcrumbs:UpdateMap(event, ...)
 					end
 
 					-- Create POI pin
-					local pin = NewPin()
+					local Pin = NewPin()
 
 					if texture == "-" then
-						pin:SetNormalTexture("")
-						pin:SetHighlightAtlas("BonusChest-CircleGlow")
-						pin:GetHighlightTexture():SetAlpha(0.3)
+						Pin:SetNormalTexture("")
+						Pin:SetHighlightAtlas("BonusChest-CircleGlow")
+						Pin:GetHighlightTexture():SetAlpha(0.3)
 					elseif (tonumber(texture or 0) or 0) > 0 then
-						pin:SetNormalTexture(texture)
-						pin:SetHighlightTexture(texture)
-						pin:GetHighlightTexture():SetAlpha(0.5)
+						Pin:SetNormalTexture(texture)
+						Pin:SetHighlightTexture(texture)
+						Pin:GetHighlightTexture():SetAlpha(0.5)
 					elseif string.match(texture, "Discovery/[%w]+") then
-						pin:SetNormalTexture("Interface/AddOns/Breadcrumbs/Textures/" .. texture)
-						pin:SetHighlightTexture("Interface/AddOns/Breadcrumbs/Textures/" .. texture)
-						pin:GetNormalTexture():SetTexCoord(0, 0.75, 0, 0.75) -- Crop 64×64 to 48×48
-						pin:GetHighlightTexture():SetTexCoord(0, 0.75, 0, 0.75) -- Crop 64×64 to 48×48
-						pin:GetHighlightTexture():SetAlpha(0.5)
+						Pin:SetNormalTexture("Interface/AddOns/Breadcrumbs/Textures/" .. texture)
+						Pin:SetHighlightTexture("Interface/AddOns/Breadcrumbs/Textures/" .. texture)
+						Pin:GetNormalTexture():SetTexCoord(0, 0.75, 0, 0.75) -- Crop 64×64 to 48×48
+						Pin:GetHighlightTexture():SetTexCoord(0, 0.75, 0, 0.75) -- Crop 64×64 to 48×48
+						Pin:GetHighlightTexture():SetAlpha(0.5)
 					elseif string.match(texture, "POI/[%w]+") then
-						pin:SetNormalTexture("Interface/AddOns/Breadcrumbs/Textures/" .. texture)
-						pin:SetHighlightTexture("Interface/AddOns/Breadcrumbs/Textures/" .. texture)
-						pin:GetHighlightTexture():SetAlpha(0.5)
+						Pin:SetNormalTexture("Interface/AddOns/Breadcrumbs/Textures/" .. texture)
+						Pin:SetHighlightTexture("Interface/AddOns/Breadcrumbs/Textures/" .. texture)
+						Pin:GetHighlightTexture():SetAlpha(0.5)
 					elseif string.match(texture, "[%w%p]+") then
-						pin:SetNormalAtlas(texture)
-						pin:SetHighlightAtlas(texture)
-						pin:GetHighlightTexture():SetAlpha(0.5)
+						Pin:SetNormalAtlas(texture)
+						Pin:SetHighlightAtlas(texture)
+						Pin:GetHighlightTexture():SetAlpha(0.5)
 					else
-						pin:SetNormalTexture(texture)
-						pin:SetHighlightTexture(texture)
-						pin:GetHighlightTexture():SetAlpha(0.5)
+						Pin:SetNormalTexture(texture)
+						Pin:SetHighlightTexture(texture)
+						Pin:GetHighlightTexture():SetAlpha(0.5)
 					end
 
-					pin:SetSize(size, size)
+					Pin:SetSize(size, size)
 
-					pin:SetScript("OnEnter", function(self, motion)
+					Pin:SetScript("OnEnter", function(self, motion)
 						GameTooltip:Hide()
 
 						if flags["tooltip"] or flags["combo"] then
@@ -846,7 +846,7 @@ function Breadcrumbs:UpdateMap(event, ...)
 						end
 					end)
 
-					pin:SetScript("OnLeave", function(self, motion)
+					Pin:SetScript("OnLeave", function(self, motion)
 						if flags["tooltip"] or flags["combo"] then
 							GameTooltip:Hide()
 						end
@@ -856,15 +856,15 @@ function Breadcrumbs:UpdateMap(event, ...)
 					end)
 
 					if link then
-						pin:SetScript("OnMouseUp", function(self, button)
+						Pin:SetScript("OnMouseUp", function(self, button)
 							if button == "LeftButton" then
 								WorldMapFrame:SetMapID(link)
 							end
 						end)
 					end
 
-					Pins:AddWorldMapIconMap("Breadcrumbs", pin, map, x/100, y/100, nil, setting_poiframelevel or "PIN_FRAME_LEVEL_AREA_POI")
-					pin:Show()
+					Pins:AddWorldMapIconMap("Breadcrumbs", Pin, map, x/100, y/100, nil, Setting_POIFrameLevel or "PIN_FRAME_LEVEL_AREA_POI")
+					Pin:Show()
 				end
 			end
 		end
@@ -1028,11 +1028,11 @@ function Breadcrumbs:CheckQuest(map, quest, datastring)
 					end
 
 					-- Broken
-					if v == "broken" and setting_showbroken then pass = true end
+					if v == "broken" and Setting_EnableBrokenQuests then pass = true end
 
 					if string.match(v, "broken:(%d+)") then
 						local brokenlevel = tonumber((string.gsub(v, "broken:(%d+)", "%1"))) or 0
-						if level < brokenlevel or setting_showbroken then pass = true end
+						if level < brokenlevel or Setting_EnableBrokenQuests then pass = true end
 					end
 				end
 			end
@@ -1118,8 +1118,8 @@ function Breadcrumbs:CheckPOI(map, datastring)
 					if string.match(v, "^item:(%d+)$") and GetItemCount(tonumber(string.match(v, "item:(%d+)") or 0), true, false, true) >= 1 then pass = true end
 
 					-- Mailbox
-					if v == "mailbox" and setting_showmailboxes then pass = true end
-					if v == "mailboxdense" and setting_showmailboxes and setting_showmailboxesdense then pass = true end
+					if v == "mailbox" and Setting_EnableMailboxes then pass = true end
+					if v == "mailboxdense" and Setting_EnableMailboxes and Setting_EnableMailboxesEverywhere then pass = true end
 
 					-- Must match...
 					if v == class or v == faction or v == covenant or v == prof1 or v == prof2 or v == race then pass = true end
@@ -1175,11 +1175,11 @@ function Breadcrumbs:CheckPOI(map, datastring)
 					end
 
 					-- Broken
-					if v == "broken" and setting_showbroken then pass = true end
+					if v == "broken" and Setting_EnableBrokenQuests then pass = true end
 
 					if string.match(v, "broken:(%d+)") then
 						local brokenlevel = tonumber((string.gsub(v, "broken:(%d+)", "%1"))) or 0
-						if level < brokenlevel or setting_showbroken then pass = true end
+						if level < brokenlevel or Setting_EnableBrokenQuests then pass = true end
 					end
 				end
 			end
@@ -1192,7 +1192,7 @@ end
 
 
 local function OnTooltipSetUnit(tooltip)
-	if not setting_showunittooltip then return end
+	if not Setting_EnableUnitTooltips then return end
 
 	local tooltip = tooltip
 	local name, id = tooltip:GetUnit()
