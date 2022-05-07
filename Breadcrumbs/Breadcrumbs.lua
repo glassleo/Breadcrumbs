@@ -114,6 +114,7 @@ end
 function Breadcrumbs:OnEnable()
 	Breadcrumbs:UpdateMap()
 end
+--/run for o, _ in pairs(WorldMapFrame.pinPools["BonusObjectivePinTemplate"].activeObjects) do for k, v in pairs(o) do if k == "questID" and v == 64641 then WorldMapFrame:RemovePin(o) end end end
 
 
 -- Fix Bonus Objectives
@@ -121,15 +122,19 @@ function Breadcrumbs:FixBonusObjectives()
 	-- Attempt to fix the Blizzard map bug preventing Legion leveling bonus objectives from hiding properly at level 50+
 	if not WorldMapFrame then return end
 
-	-- If the player is below level 50 then do nothing
-	if (UnitLevel("player") or 1) < 50 then return end
-
 	-- We don't want to unregister the entire Data Provider since that would mess up bonus objectives on other maps
 	-- Instead we'll just hide all the BonusObjectivePinTemplate pins for specific zones
 	local map = WorldMapFrame:GetMapID() or 0
-	if map == 630 or map == 641 or map == 650 or map == 657 or map == 634 then
+	if (UnitLevel("player") or 1) >= 50 and (map == 630 or map == 641 or map == 650 or map == 657 or map == 634) then
 		-- Azsuna, Val'sharah, Highmountain, Neltharion's Vault, Stormheim
 		WorldMapFrame:RemoveAllPinsByTemplate("BonusObjectivePinTemplate")
+	elseif setting_hidestorylines and Data.HiddenBonusObjectiveQuests and WorldMapFrame:GetNumActivePinsByTemplate("BonusObjectivePinTemplate") >= 1 then
+		-- Remove specific quest pins
+		for pin in WorldMapFrame:EnumeratePinsByTemplate("BonusObjectivePinTemplate") do
+			if pin.questID and Data.HiddenBonusObjectiveQuests[pin.questID] then
+				WorldMapFrame:RemovePin(pin)
+			end
+		end
 	end
 end
 
@@ -282,8 +287,10 @@ function Breadcrumbs:UpdateMap(event, ...)
 
 							if flags["icon"] and flag_icon then
 								pin:SetNormalTexture(flag_icon)
-							elseif flags["red"] then
-								pin:SetNormalTexture("Interface/AddOns/Breadcrumbs/Textures/questred")
+							elseif flags["kill"] then
+								pin:SetNormalTexture("Interface/AddOns/Breadcrumbs/Textures/QuestKill")
+							elseif flags["weekly"] then
+								pin:SetNormalTexture("Interface/AddOns/Breadcrumbs/Textures/QuestWeekly")
 							else
 								pin:SetNormalAtlas(flags["elsewhere"] and "poi-traveldirections-arrow" or flags["warboard"] and "warboard" or flags["campaign"] and "quest-campaign-available" or flags["dailycampaign"] and "quest-dailycampaign-available" or flags["up"] and "questnormal" or flags["down"] and "questnormal" or flags["artifact"] and "questartifact" or flags["legendary"] and "questlegendary" or flags["daily"] and "questdaily" or "questnormal")
 							end
@@ -306,6 +313,7 @@ function Breadcrumbs:UpdateMap(event, ...)
 								else -- Normal quest
 									GameTooltip:AddLine(title)
 								end
+								if flags["weekly"] then GameTooltip:AddLine("|T" .. QUEST_ICONS_FILE .. ":18:18:0:0:128:64:36:54:36:54|t Weekly") end
 								if flags["dungeon"] then GameTooltip:AddLine(CreateAtlasMarkup("dungeon") .. " Dungeon") end
 								if flags["raid"] then GameTooltip:AddLine(CreateAtlasMarkup("raid") .. " Raid") end
 								if flags["alchemy"] then GameTooltip:AddLine(CreateAtlasMarkup("worldquest-icon-alchemy") .. " Alchemy") end
@@ -609,7 +617,7 @@ function Breadcrumbs:UpdateMap(event, ...)
 
 								-- Create quest marker pin
 								local pin = NewPin()
-								pin:SetSize(flags["elsewhere"] and size*0.7647 or flags["lock"] and size*0.7567 or size, size)
+								pin:SetSize(flags["elsewhere"] and size*0.7647 or flags["locked"] and size*0.7567 or size, size)
 
 								if flags["icon"] and flag_icon then
 									pin:SetNormalTexture(flag_icon)
@@ -624,8 +632,8 @@ function Breadcrumbs:UpdateMap(event, ...)
 									pin:SetNormalTexture("Interface/AddOns/Breadcrumbs/Textures/Inspect")
 									pin:SetHighlightTexture("Interface/AddOns/Breadcrumbs/Textures/Inspect")
 								else
-									pin:SetNormalAtlas(flags["elsewhere"] and "poi-traveldirections-arrow" or flags["lock"] and "AdventureMapIcon-Lock" or (flags["elite"] and flags["vignette"]) and "vignetteeventelite" or (flags["elite"] and flags["treasure"]) and "vignettelootelite" or flags["treasure"] and "vignetteloot" or flags["elite"] and "vignettekillelite" or "vignettekill")
-									pin:SetHighlightAtlas(flags["elsewhere"] and "poi-traveldirections-arrow" or flags["lock"] and "AdventureMapIcon-Lock" or (flags["elite"] and flags["vignette"]) and "vignetteeventelite" or (flags["elite"] and flags["treasure"]) and "vignettelootelite" or flags["treasure"] and "vignetteloot" or flags["elite"] and "vignettekillelite" or "vignettekill")
+									pin:SetNormalAtlas(flags["elsewhere"] and "poi-traveldirections-arrow" or flags["locked"] and "AdventureMapIcon-Lock" or (flags["elite"] and flags["vignette"]) and "vignetteeventelite" or (flags["elite"] and flags["treasure"]) and "vignettelootelite" or flags["treasure"] and "vignetteloot" or flags["elite"] and "vignettekillelite" or "vignettekill")
+									pin:SetHighlightAtlas(flags["elsewhere"] and "poi-traveldirections-arrow" or flags["locked"] and "AdventureMapIcon-Lock" or (flags["elite"] and flags["vignette"]) and "vignetteeventelite" or (flags["elite"] and flags["treasure"]) and "vignettelootelite" or flags["treasure"] and "vignetteloot" or flags["elite"] and "vignettekillelite" or "vignettekill")
 								end
 
 								pin:GetHighlightTexture():SetAlpha(0.5)
