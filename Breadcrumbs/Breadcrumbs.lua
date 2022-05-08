@@ -101,6 +101,8 @@ end
 
 -- Initialization
 function Breadcrumbs:OnInitialize()
+	if not BreadcrumbsQuestHistory then BreadcrumbsQuestHistory = {} end
+
 	if Setting_DisableStorylineQuestDataProvider then
 		-- Remove StorylineQuestDataProvider
 		for provider in next, WorldMapFrame.dataProviders do
@@ -176,8 +178,40 @@ function Breadcrumbs:FormatTooltip(text, flags)
 end
 
 
+-- Quest History
+function Breadcrumbs:UpdateQuestHistory(event, quest)
+	if not quest then return end
+
+	local name, realm = UnitFullName("player")
+	if not name or not realm then return end
+
+	if not BreadcrumbsQuestHistory[name.."-"..realm] then BreadcrumbsQuestHistory[name.."-"..realm] = {} end
+	BreadcrumbsQuestHistory[name.."-"..realm][quest] = time()
+end
+
+function Breadcrumbs:WasQuestCompletedToday(quest)
+	if not quest then return end
+
+	local name, realm = UnitFullName("player")
+	if not name or not realm then return end
+
+	if BreadcrumbsQuestHistory[name.."-"..realm] and BreadcrumbsQuestHistory[name.."-"..realm][quest] then
+		local today = time() + GetQuestResetTime() - 3600*24
+		if BreadcrumbsQuestHistory[name.."-"..realm][quest] >= today then
+			return true
+		end
+	end
+
+	return false
+end
+
+
 -- Update Map
 function Breadcrumbs:UpdateMap(event, ...)
+	if event == "QUEST_TURNED_IN" or event == "QUEST_AUTOCOMPLETE" then
+		Breadcrumbs:UpdateQuestHistory(event, ...)
+	end
+
 	if event and not event == "QUEST_ACCEPTED" then
 		if Throttle[event] then
 			return
@@ -950,6 +984,9 @@ function Breadcrumbs:CheckQuest(map, quest, datastring)
 					-- Must not have completed quest (_n)
 					if string.match(v, "^_(%d+)$") and not C_QuestLog.IsQuestFlaggedCompleted(tonumber(string.match(v, "_(%d+)") or 0)) then pass = true end
 
+					-- reset:n
+					if string.match(v, "^reset:(%d+)$") and not Breadcrumbs:WasQuestCompletedToday(tonumber(string.match(v, "reset:(%d+)") or 0)) then pass = true end
+
 					-- active:n
 					if string.match(v, "^active:(%d+)$") and C_TaskQuest.IsActive(tonumber(string.match(v, "active:(%d+)") or 0)) then pass = true end
 
@@ -967,6 +1004,12 @@ function Breadcrumbs:CheckQuest(map, quest, datastring)
 
 					-- item:n
 					if string.match(v, "^item:(%d+)$") and GetItemCount(tonumber(string.match(v, "item:(%d+)") or 0), true, false, true) >= 1 then pass = true end
+
+					-- item:n:x
+					if string.match(v, "^item:(%d+):(%d+)$") and GetItemCount(tonumber(string.match(v, "item:(%d+):%d+") or 0), true, false, true) >= (tonumber(string.match(v, "item:%d+:(%d+)") or 0)) then pass = true end
+
+					-- currency:n:x
+					if string.match(v, "^currency:(%d+):(%d+)$") and C_CurrencyInfo.GetCurrencyInfo(tonumber(string.match(v, "currency:(%d+):%d+") or 0)).quantity >= (tonumber(string.match(v, "currency:%d+:(%d+)") or 0)) then pass = true end
 
 					-- Must match...
 					if v == class or v == faction or v == covenant or v == prof1 or v == prof2 or v == race then pass = true end
@@ -1008,6 +1051,12 @@ function Breadcrumbs:CheckQuest(map, quest, datastring)
 
 						-- -item:n
 						if string.match(w, "^item:(%d+)$") and GetItemCount(tonumber(string.match(w, "item:(%d+)") or 0), true, false, true) >= 1 then pass = false end
+
+						-- -item:n:x
+						if string.match(w, "^item:(%d+):(%d+)$") and GetItemCount(tonumber(string.match(w, "item:(%d+):%d+") or 0), true, false, true) >= (tonumber(string.match(w, "item:%d+:(%d+)") or 0)) then pass = false end
+
+						-- -currency:n:x
+						if string.match(w, "^currency:(%d+):(%d+)$") and C_CurrencyInfo.GetCurrencyInfo(tonumber(string.match(w, "currency:(%d+):%d+") or 0)).quantity >= (tonumber(string.match(w, "currency:%d+:(%d+)") or 0)) then pass = false end
 
 						if w == class or w == faction or w == covenant or w == prof1 or w == prof2 or w == race then pass = false end
 						if w == "garrison" and garrison >= 1 then pass = false end
@@ -1099,6 +1148,9 @@ function Breadcrumbs:CheckPOI(map, datastring)
 					-- Must not have completed quest (_n)
 					if string.match(v, "^_(%d+)$") and not C_QuestLog.IsQuestFlaggedCompleted(tonumber(string.match(v, "_(%d+)") or 0)) then pass = true end
 
+					-- reset:n
+					if string.match(v, "^reset:(%d+)$") and not Breadcrumbs:WasQuestCompletedToday(tonumber(string.match(v, "reset:(%d+)") or 0)) then pass = true end
+
 					-- active:n
 					if string.match(v, "^active:(%d+)$") and C_TaskQuest.IsActive(tonumber(string.match(v, "active:(%d+)") or 0)) then pass = true end
 
@@ -1116,6 +1168,12 @@ function Breadcrumbs:CheckPOI(map, datastring)
 
 					-- item:n
 					if string.match(v, "^item:(%d+)$") and GetItemCount(tonumber(string.match(v, "item:(%d+)") or 0), true, false, true) >= 1 then pass = true end
+
+					-- item:n:x
+					if string.match(v, "^item:(%d+):(%d+)$") and GetItemCount(tonumber(string.match(v, "item:(%d+):%d+") or 0), true, false, true) >= (tonumber(string.match(v, "item:%d+:(%d+)") or 0)) then pass = true end
+
+					-- currency:n:x
+					if string.match(v, "^currency:(%d+):(%d+)$") and C_CurrencyInfo.GetCurrencyInfo(tonumber(string.match(v, "currency:(%d+):%d+") or 0)).quantity >= (tonumber(string.match(v, "currency:%d+:(%d+)") or 0)) then pass = true end
 
 					-- Mailbox
 					if v == "mailbox" and Setting_EnableMailboxes then pass = true end
@@ -1160,6 +1218,12 @@ function Breadcrumbs:CheckPOI(map, datastring)
 
 						-- -item:n
 						if string.match(w, "^item:(%d+)$") and GetItemCount(tonumber(string.match(w, "item:(%d+)") or 0), true, false, true) >= 1 then pass = false end
+
+						-- -item:n:x
+						if string.match(w, "^item:(%d+):(%d+)$") and GetItemCount(tonumber(string.match(w, "item:(%d+):%d+") or 0), true, false, true) >= (tonumber(string.match(w, "item:%d+:(%d+)") or 0)) then pass = false end
+
+						-- -currency:n:x
+						if string.match(w, "^currency:(%d+):(%d+)$") and C_CurrencyInfo.GetCurrencyInfo(tonumber(string.match(w, "currency:(%d+):%d+") or 0)).quantity >= (tonumber(string.match(w, "currency:%d+:(%d+)") or 0)) then pass = false end
 
 						if w == class or w == faction or w == covenant or w == prof1 or w == prof2 or w == race then pass = false end
 						if archaeology and w == "archaeology" then pass = false end
