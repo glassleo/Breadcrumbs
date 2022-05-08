@@ -7,6 +7,7 @@ Data.HiddenBonusObjectiveQuests = {
 	[57301] = true, -- Maldraxxus - Callous Concoctions
 	[65649] = true, -- Oribos - A New Deal
 	[66042] = true, -- Zereth Mortis - Patterns Within Patterns
+	[65749] = true, -- Zereth Mortis - The Necessity Of Equipment
 	[64641] = true, -- Zereth Mortis - Mysterious Greenery
 }
 
@@ -62,6 +63,8 @@ Data.HiddenBonusObjectiveQuests = {
 		covenant		Must belong to any of the following covenants (kyrian, venthyr, nightfae, necrolord)
 		-x				Inverse of above
 
+		reset:n			Quest ID n must not have been completed during today's daily quest reset
+
 		active:n		World Quest/Task Quest with ID n must be active
 		-active:n		World Quest/Task Quest with ID n must not be active
 
@@ -84,6 +87,11 @@ Data.HiddenBonusObjectiveQuests = {
 
 		item:n			Must have at least one item with ID n in bags (includes bank)
 		-item:n			Must not have any items with ID n in bags (includes bank)
+		item:n:x		Must have at least x items with ID n in bags (includes bank)
+		-item:n:x		Must not have x or more items with ID n in bags (includes bank)
+
+		currency:n:x	Must have at least x or more of currency with ID n
+		-currency:n:x	Must not have x or more of currency with ID n
 
 		art:n			Map must currently have UiMapArt ID n (see https://wow.tools/dbc/?dbc=uimapart) - used to determine which phase of the map the player is currently on
 		-art:n			Map must not currently have UiMapArt ID n
@@ -635,12 +643,15 @@ Data.Quests = {
 		[66042] = "Patterns Within Patterns|60+ 65305|34.99 64.76|Highlord Bolvar Fordragon|weekly",
 		[65748] = "You Supply the Effort|60+ 65305|35.16 65.75|Hadja",
 		[65735] = "WANTED: Custos|60+ 65305|35.41 65.53|Wanted: Custos",
+		[66383] = "Legendary Assistance|60+ 65305 alchemy,engineering,tailoring,leatherworking,blacksmithing,jewelcrafting|34.99 64.76|Highlord Bolvar Fordragon",
 
 		-- Forging a New Path
-		-- ...
-		--[64831] = "Remnants of the First Ones|60+ ???|XY|Elder Ara|campaign",
-		--[64832] = "Reclaiming Provis Esper|60+ ???|XY|Elder Ara|campaign",
-		--[64837] = "The Pilgrim's Journey|60+ 64831 64832|XY|Elder Ara|campaign",
+		[65335] = "News from Oribos|60+ 65305|34.96 64.69|Uther|campaign",
+		[64830] = "Enlisting the Enlightened|60+ 65335|34.99 64.76|Highlord Bolvar Fordragon|campaign",
+		[64833] = "Forging Unity from Diversity|60+ 64830|34.78 64.82|Elder Ara|campaign",
+		[64831] = "Remnants of the First Ones|60+ 64833|56.2 57.88|Elder Ara|campaign",
+		[64832] = "Reclaiming Provis Esper|60+ 64833|56.2 57.88|Elder Ara|campaign",
+		[64837] = "The Pilgrim's Journey|60+ 64831 64832|56.2 57.88|Elder Ara|campaign",
 		[64834] = "Glow and Behold|60+ 64837|61.29 51.44|Elder Ara|campaign",
 		[64838] = "Where There's a Pilgrim, There's a Way|60+ 64834|64.73 53.8|Elder Ara|campaign",
 		[64969] = "In the Weeds|60+ 64838|61.1 50.68|Elder Ara|campaign",
@@ -656,7 +667,7 @@ Data.Quests = {
 		[65774] = "The Catalyst Awakens|60+ 64844|34.75 64.13|Vilo",
 
 		-- Sepulcher of the First Ones
-		[65259] = "Heart of the Sepulcher|60+ 64844|34.99 64.76|Highlord Bolvar Fordragon|raid", -- check prereq
+		[65259] = "Heart of the Sepulcher|60+ 64844|34.99 64.76|Highlord Bolvar Fordragon|raid",
 
 		-- Crown of Wills
 		[64799] = "The Broken Crown|60+ 64844|34.99 64.76|Highlord Bolvar Fordragon|campaign",
@@ -714,15 +725,42 @@ Data.Quests = {
 		[65250] = "Prisoner of Interest|60+ 65249|34.99 64.76|Highlord Bolvar Fordragon",
 
 		-- Exile's Hollow
+		[65749] = "The Necessity Of Equipment|60+ 65305|34.22 48.36|Firim",
+		[65431] = "Further Research: Aealic|60+ research:1901 currency:1979:45|34.22 48.36|Firim", -- Requires Metrial Understanding and 45+ Cyphers
+		[65460] = "Your First Cantaric Protolock|60+ research:1972|34.22 48.36|Firim", -- Requires Cachial Understanding
+		[65461] = "Your First Mezzonic Protolock|60+ 65460|34.22 48.36|Firim",
+		[65466] = "Your First Fugueal Protolock|60+ 65461|34.22 48.36|Firim",
+		[65432] = "Further Research: Dealic|60+ research:1904 currency:1979:200|33.76 49.5|Cypher Console", -- Requires Aealic Understanding and 200+ Cyphers
 		[65700] = "Core Control|60+ research:1932|34.22 48.36|Firim", -- Requires Dealic Understanding
+		[65419] = "Protoform Synthesis|60+ research:1932|1 Pocopoc|Pocopoc|discovery", -- Requires Dealic Understanding
+		[65433] = "Further Research: Trebalim|60+ research:1932 currency:1979:260|33.76 49.5|Cypher Console", -- Requires Dealic Understanding and 260+ Cyphers
 
 		-- Not Al Are Lost
 		[64771] = "Enlightened Exodus|60+ 65305|33.73 64.65|Al'dalil",
-		-- ...
+		[64741] = "Security Check|60+ 64771|33.73 64.65|Al'dalil",
+		[64742] = "Traces of Tampering|60+ 64741|33.73 64.65|Al'dalil",
+		[64744] = "Broker Decloaker|60+ 64742|33.71 59.76|Al'dalil",
+		[64743] = "Xy Are You Doing This?|60+ 64742|33.71 59.76|Al'dalil",
+		[64758] = "Following the Leader|60+ 64744 64743|33.79 59.79|Rana",
+		[64760] = "Technical Difficulties|60+ 64758|31.67 67.38|Rana",
 
 		-- Small Pet Problems
 		[65064] = "Look Who I Found!|60+ 65305|34.7 66.28|Tamra",
-		-- ...
+		[65066] = "Flora Aroma|60+ 65064|49.26 71.75|Tamra",
+		[65067] = "Broker Beaker|60+ 65064|49.26 71.75|Tamra",
+		[65068] = "Cascades of Magnitude|60+ 65066 65067|49.26 71.75|Tamra",
+		[65069] = "Culling the Maelstrom|60+ 65068|49.26 71.75|Tamra",
+		[65070] = "Can I Keep Him?|60+ 65068|49.26 71.75|Tamra",
+
+		-- The Patient Bufonid
+		[65727] = "The Burrowed Bufonid|60+ 65305|34.34 65.89|Avna",
+		[65725] = "The Burrowed Bufonid|60+ 65727 reset:65727|34.34 65.89|Avna",
+		[65726] = "The Burrowed Bufonid|60+ 65725 reset:65725|34.34 65.89|Avna",
+		[65728] = "The Burrowed Bufonid|60+ 65726 reset:65726|34.34 65.89|Avna",
+		[65729] = "The Burrowed Bufonid|60+ 65728 reset:65728|34.34 65.89|Avna",
+		[65730] = "The Burrowed Bufonid|60+ 65729 reset:65729|34.34 65.89|Avna",
+		[65731] = "The Burrowed Bufonid|60+ 65730 reset:65730|34.34 65.89|Avna",
+		[65732] = "The Patient Bufonid|60+ 65731|34.34 65.89|Avna",
 
 		-- The Waters of Grace
 		[65463] = "The Wellspring of the First Ones|60+ 65305 -65349|61.49 49.17|Drim", -- Breadcrumb for 65349 (Lost Grace)
@@ -747,6 +785,9 @@ Data.Quests = {
 		[64759] = "Junk's Not Dead|60+ 64745|61.19 37.62|Tahli",
 		[64761] = "Core Competency|60+ 64745|61.19 37.62|Tahli",
 		-- ...
+
+		-- Professions
+		[65674] = "What Is This Thing?|60+ alchemy,engineering,tailoring,leatherworking,blacksmithing,jewelcrafting|2 UnformedEssence|{3950361} [Unformed Essence]|discovery|Has a chance to drop from any automa in Zereth Mortis",
 	},
 
 	-- Blooming Foundry
