@@ -1,8 +1,10 @@
 ## Interface: 90200
 ## Title: Breadcrumbs
-## Version: 9.2.0
-## Notes: Adds pins to your World Map for Quests, Treasures and Vignettes
+## Version: 22.5.8
+## Notes: Adds pins to your World Map
 ## Author: Leo
+
+## SavedVariables: BreadcrumbsQuestHistory
 
 # Libraries
 Libs\LibStub\LibStub.lua
