@@ -699,7 +699,7 @@ Data.Quests = {
 		[65149] = "Surveying Cyphers|60+ 64228|34.04 48.12|Firim|campaign",
 		[64230] = "Cyphers of the First Ones|60+ 65149|34.04 48.12|Firim|campaign",
 		[65305] = "The Way Forward|60+ 64230|33.95 47.93|Pelagos|campaign",
-		[66042] = "Patterns Within Patterns|60+ 64230|34.99 64.76|Highlord Bolvar Fordragon|weekly", -- Unlocks Cyphers of the First Ones currency and Pocopoc
+		[66042] = "Patterns Within Patterns|60+ 64230|34.99 64.76|Highlord Bolvar Fordragon|weekly", -- Unlocks Pocopoc and Cyphers of the First Ones
 
 		-- Forging a New Path
 		[65335] = "News from Oribos|60+ 65305|34.96 64.69|Uther|campaign",
