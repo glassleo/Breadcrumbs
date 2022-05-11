@@ -31,6 +31,7 @@ While the addon itself is more or less feature complete, only a tiny fraction of
 If you'd like to help, please [get in touch](mailto:hello@leo.glass)!
 
 So far, the following zones are in a near-complete state:
+- Zereth Mortis
 - Bastion (Threads of Fate)
 - Maldraxxus (Threads of Fate)
 - Ardenweald (Threads of Fate)
