@@ -190,6 +190,8 @@ Data.Quests = {
 
 	-- Ring of Transference
 	[1671] = {
+		-- Zereth Mortis - Into the Unknown
+		[64958] = "The Forces Gather|60+ 64957|49.56 37.67|Highlord Bolvar Fordragon|campaign",
 	},
 
 	-- Ring of Fates
@@ -242,16 +244,21 @@ Data.Quests = {
 		-- Torghast, Tower of the Damned
 		[65625] = "The Jailer's Gauntlet|60+ 65305 ~65250 ~65260|55.61 49.32|Ve'nyo",
 
-		-- Zereth Mortis
-		[65649] = "A New Deal|60+ 65305|34.46 57.46|Zo'sorg|weekly",
+		-- The Great Vault
+		[62457] = "The Great Vault|60+|64.51 36.01|Ba'vol",
 
-		-- Zereth Mortis - Secrets of the First Ones
-		--[64942] = "Call of the Primus|60+ ???|38.9 69.99|[Auto Accept]|campaign", -- Requires chapter 2 of Chains of Domination
+		-- Zereth Mortis
+		[65649] = "A New Deal|60+ 64958|34.46 57.46|Zo'sorg|weekly",
+
+		-- Zereth Mortis - Into the Unknown
+		--[64942] = "Call of the Primus|60+ ???|38.89 70|[Auto Accept]|campaign", -- Requires chapter 2 of Chains of Domination (incl skip)
+		[64944] = "A Hasty Voyage|60+ 64942|38.89 70|[Auto Accept]|campaign elsewhere link:2042|\"Tal-Inara can take you to the Crucible\"",
+		[64958] = "The Forces Gather|60+ 64957|49.56 37.67|Highlord Bolvar Fordragon|campaign up link:1671",
 
 		-- Epilogue: Judgment
 		[65260] = "A Long Walk|60+ 65250|52.38 39.84|Uther",
-		[65263] = "The Fate of Sylvanas|60+ 65260|38.93 69.95|Arbiter Pelagos|elsewhere link:1673|\"Tal-Inara can take you to the Crucible\"",
-		[65297] = "Penance and Renewal|60+ 65263|38.93 69.95|Arbiter Pelagos|elsewhere link:1673|\"Tal-Inara can take you to the Crucible\"",
+		[65263] = "The Fate of Sylvanas|60+ 65260|38.89 70|Arbiter Pelagos|elsewhere link:1673|\"Tal-Inara can take you to the Crucible\"",
+		[65297] = "Penance and Renewal|60+ 65263|38.89 70|Arbiter Pelagos|elsewhere link:1673|\"Tal-Inara can take you to the Crucible\"",
 	},
 
 	-- The Crucible
@@ -262,6 +269,12 @@ Data.Quests = {
 		-- Epilogue: Judgment
 		[65263] = "The Fate of Sylvanas|60+ 65260|67.7 48.98|Arbiter Pelagos",
 		[65297] = "Penance and Renewal|60+ 65263|67.7 48.98|Arbiter Pelagos",
+	},
+
+	-- Scenario: The Crucible
+	[2042] = {
+		-- Into the Unknown
+		[64944] = "A Hasty Voyage|60+ 64942|34.17 52.32|The Primus|campaign",
 	},
 
 
@@ -384,10 +397,18 @@ Data.Quests = {
 		-- Threads of Fate: Maldraxxus
 		-- 62748 Rallying Maldraxxus (Auto Accept) - shows on map even with Storylines hidden
 		--[62761] = "Return to Oribos|62748 necrolord|X Y|Secutor Mevix|campaign",
+
+		-- Necrolord Combatant
+		[64324] = "Necrolord Veteran|60+,62704 necrolord renown:43|46.41 40.19|Elspeth Larink|legendary", -- Necrolord, Renown 43
+		[64084] = "Necrolord Tactician|60+,62704 necrolord renown:59|46.41 40.19|Elspeth Larink|legendary", -- Necrolord, Renown 59
 	},
 
 	-- Maldraxxus
 	[1536] = {
+		-- Necrolord Combatant
+		[64324] = "Necrolord Veteran|60+,62704 necrolord renown:43|50.03 71.32|Elspeth Larink|legendary", -- Necrolord, Renown 43
+		[64084] = "Necrolord Tactician|60+,62704 necrolord renown:59|50.03 71.32|Elspeth Larink|legendary", -- Necrolord, Renown 59
+
 		-- Threads of Fate: Maldraxxus
 		-- 62748 Rallying Maldraxxus (Auto Accept) - shows on map even with Storylines hidden
 		[62761] = {"Return to Oribos|62748|52.85 68.28|Secutor Mevix|campaign", -- check if NL can take quest from both locations or not
@@ -633,17 +654,52 @@ Data.Quests = {
 	-- Zereth Mortis
 	[1970] = {
 		-- Into the Unknown
-		-- ...
+		[64945] = "Strangers in a Strange Land|60+ 64944|24.91 53.61|Pelagos|campaign",
+		[65456] = "Long Lost Firim|60+ 64945|28.51 53.51|Firim|campaign",
+		[64947] = "Give Me A Hand|60+ 65456|28.51 53.51|Firim|campaign",
+		[64950] = "A Mutual Exchange|60+ 64947|31.24 51.25|Firim|campaign",
+		[64949] = "For Research Purposes|60+ 64947|31.24 51.25|Firim|campaign",
+		[64951] = "The Road to Haven|60+ 64950 64949|31.24 51.25|Firim|campaign",
+		[65271] = "Forging Connections|60+ 64951|33.99 60.85|Pelagos|campaign",
+		[64953] = "Defending Haven|60+ 65271|34.85 64.87|Elder Kreth|campaign",
+		[64952] = "Destroying the Destructors|60+ 65271|34.78 64.82|Elder Ara|campaign",
+		[64957] = "This Old Waystone|60+ 64953 64952|34.78 64.82|Elder Ara|campaign",
+		[64958] = "The Forces Gather|60+ 64957|33.17 68.91|Highlord Bolvar Fordragon|campaign elsewhere link:1671",
 
 		-- We Battle Onward
-		-- ...
+		[66383] = "Legendary Assistance|60+ 64958 alchemy,engineering,tailoring,leatherworking,blacksmithing,jewelcrafting|34.99 64.76|Highlord Bolvar Fordragon",
+		[65748] = "You Supply the Effort|60+ 64958|35.16 65.75|Hadja",
+		[65735] = "WANTED: Custos|60+ 64958|35.41 65.53|Wanted: Custos",
+		[65768] = "Our Forward Scouts|60+ 64958|34.99 64.76|Highlord Bolvar Fordragon|campaign",
+		[65771] = "Favor of the First Ones|60+ 64958|34.84 64.99|Elder Zoor|campaign",
+		[65772] = "Necessary Harvest|60+ 64958|34.78 64.82|Elder Ara|campaign",
+		[64794] = "Knowing is Half the Battle|60+ 65768 65771 65772|34.99 64.76|Highlord Bolvar Fordragon|campaign",
+		[64796] = "Scour the Sands|60+ 64794|48.62 49.15|Shandris Feathermoon|campaign",
+		[64797] = "Harmony and Discord|60+ 64796|48.62 49.15|Shandris Feathermoon|campaign",
+		[64814] = "Battle for the Forge|60+ 64797|41.9 48.11|Highlord Darion Mograine|campaign",
+		[64815] = "Together, We Ride|60+ 64797|41.9 48.11|Highlord Darion Mograine|campaign",
+		[64817] = "In Plain Sight|60+ 64814 64815|41.9 48.11|Highlord Darion Mograine|campaign",
+		[64818] = "Reinforcements May Be Necessary|60+ 64817|41.43 53.54|Highlord Darion Mograine|campaign",
+		[64820] = "This is Your Fault, Fix It|60+ 64818|34.85 64.87|Elder Kreth|campaign",
+		[64822] = "A Break in Communication|60+ 64818|34.99 64.76|Highlord Bolvar Fordragon|campaign",
+		[64821] = "Nothing is True|60+ 64818|34.99 64.76|Highlord Bolvar Fordragon|campaign",
+		[64823] = "Doppelganger Duel|60+ 64820 64822 64821|34.99 64.76|Highlord Bolvar Fordragon|campaign",
+		[64824] = "Fighting for the Forge|60+ 64823|47.3 63.61|Lady Jaina Proudmoore|campaign",
+		[64825] = "Seeking Haven|60+ 64824|57.32 53.62|Lady Jaina Proudmoore|campaign",
 
 		-- Forming an Understanding
-		-- ...
-		[66042] = "Patterns Within Patterns|60+ 65305|34.99 64.76|Highlord Bolvar Fordragon|weekly",
-		[65748] = "You Supply the Effort|60+ 65305|35.16 65.75|Hadja",
-		[65735] = "WANTED: Custos|60+ 65305|35.41 65.53|Wanted: Custos",
-		[66383] = "Legendary Assistance|60+ 65305 alchemy,engineering,tailoring,leatherworking,blacksmithing,jewelcrafting|34.99 64.76|Highlord Bolvar Fordragon",
+		[64218] = "Danger Near and Far|60+ 64825|35.23 65.07|Pelagos|campaign",
+		[64219] = "A Mysterious Voice|60+ 64218|40.15 76.63|Pelagos|campaign",
+		[64223] = "Core of the Matter|60+ 64219|39.83 78.06|Pelagos|campaign",
+		[64224] = "Seeking the Unknown|60+ 64223|34.92 64.79|Pelagos|campaign",
+		[64225] = "Finding Firim|60+ 64224|34.92 64.79|Pelagos|campaign",
+		[64227] = "Unseen Agents|60+ 64225|34.59 48.15|Firim|campaign",
+		[64226] = "Security Measures|60+ 64225|34.59 48.15|Firim|campaign",
+		[64228] = "Now You May Speak|60+ 64227 64226|34.04 48.12|Firim|campaign",
+		[65149] = "Surveying Cyphers|60+ 64228|34.04 48.12|Firim|campaign",
+		[64230] = "Cyphers of the First Ones|60+ 65149|34.04 48.12|Firim|campaign",
+		[65305] = "The Way Forward|60+ 64230|33.95 47.93|Pelagos|campaign",
+		[66042] = "Patterns Within Patterns|60+ 64230|34.99 64.76|Highlord Bolvar Fordragon|weekly", -- Unlocks Cyphers of the First Ones currency and Pocopoc
 
 		-- Forging a New Path
 		[65335] = "News from Oribos|60+ 65305|34.96 64.69|Uther|campaign",
@@ -725,7 +781,7 @@ Data.Quests = {
 		[65250] = "Prisoner of Interest|60+ 65249|34.99 64.76|Highlord Bolvar Fordragon",
 
 		-- Exile's Hollow
-		[65749] = "The Necessity Of Equipment|60+ 65305|34.22 48.36|Firim",
+		[65749] = "The Necessity Of Equipment|60+ 64230|34.22 48.36|Firim",
 		[65431] = "Further Research: Aealic|60+ research:1901 currency:1979:45|34.22 48.36|Firim", -- Requires Metrial Understanding and 45+ Cyphers
 		[65460] = "Your First Cantaric Protolock|60+ research:1972|34.22 48.36|Firim", -- Requires Cachial Understanding
 		[65461] = "Your First Mezzonic Protolock|60+ 65460|34.22 48.36|Firim",
@@ -736,7 +792,7 @@ Data.Quests = {
 		[65433] = "Further Research: Trebalim|60+ research:1932 currency:1979:260|33.76 49.5|Cypher Console", -- Requires Dealic Understanding and 260+ Cyphers
 
 		-- Not Al Are Lost
-		[64771] = "Enlightened Exodus|60+ 65305|33.73 64.65|Al'dalil",
+		[64771] = "Enlightened Exodus|60+ 64958|33.73 64.65|Al'dalil",
 		[64741] = "Security Check|60+ 64771|33.73 64.65|Al'dalil",
 		[64742] = "Traces of Tampering|60+ 64741|33.73 64.65|Al'dalil",
 		[64744] = "Broker Decloaker|60+ 64742|33.71 59.76|Al'dalil",
@@ -753,7 +809,7 @@ Data.Quests = {
 		[65070] = "Can I Keep Him?|60+ 65068|49.26 71.75|Tamra",
 
 		-- The Patient Bufonid
-		[65727] = "The Burrowed Bufonid|60+ 65305|34.34 65.89|Avna",
+		[65727] = "The Burrowed Bufonid|60+ 64958|34.34 65.89|Avna",
 		[65725] = "The Burrowed Bufonid|60+ 65727 reset:65727|34.34 65.89|Avna",
 		[65726] = "The Burrowed Bufonid|60+ 65725 reset:65725|34.34 65.89|Avna",
 		[65728] = "The Burrowed Bufonid|60+ 65726 reset:65726|34.34 65.89|Avna",
@@ -763,8 +819,8 @@ Data.Quests = {
 		[65732] = "The Patient Bufonid|60+ 65731|34.34 65.89|Avna",
 
 		-- The Waters of Grace
-		[65463] = "The Wellspring of the First Ones|60+ 65305 -65349|61.49 49.17|Drim", -- Breadcrumb for 65349 (Lost Grace)
-		[65349] = "Lost Grace|60+ 65305 ~65349|61.87 53.51|Olem", -- Invalidates 65463
+		[65463] = "The Wellspring of the First Ones|60+ 64230 -65349|61.49 49.17|Drim", -- Breadcrumb for 65349 (Lost Grace)
+		[65349] = "Lost Grace|60+ 64230 ~65349|61.87 53.51|Olem", -- Invalidates 65463
 		[65350] = "Restore the Flow|60+ 65349|55.12 50.2|Nadir",
 		[65353] = "An Automa-free Diet|60+ 65349|55.12 50.2|Nadir",
 		[65448] = "A Return to Grace|60+ 65350|58.38 55.74|Percolation Array|down link:2028",
@@ -779,15 +835,21 @@ Data.Quests = {
 		[64647] = "Strange Gears|60+ 64645|63.83 74.04|Perished Automa|link:2027",
 		[64648] = "Reap What We Have Sown|60+ 64646 64647|64.63 77.21|Koh Shira|down link:2027",
 
-		-- The Final Song
+		-- The Final Song / A New Architect
 		[64829] = "Finding Tahli|60+ research:1931|61.37 51.55|Elder Amir", -- Requires Sopranian Understanding
 		[64745] = "Selfless Preservation|60+ 64829|63.94 40.78|Tahli",
 		[64759] = "Junk's Not Dead|60+ 64745|61.19 37.62|Tahli",
 		[64761] = "Core Competency|60+ 64745|61.19 37.62|Tahli",
-		-- ...
+		[64762] = "Revival of the Fittest|60+ 64759 64761|61.19 37.62|Tahli",
+		[64763] = "Maintenance Mode|60+ 64762|61.24 37.62|Kodah",
+		[64766] = "Access Request|60+ 64762|61.24 37.62|Kodah",
+		[64767] = "The Final Song|60+ 64763 64766|68.77 29.71|Kodah",
+		[65420] = "Judgment Call|60+ 64767|70.13 28.72|Tahli",
+		[65426] = "The Lost Component|60+ 65420|61.46 51.56|Tahli",
+		[65427] = "A New Architect|60+ 65426|70.21 28.57|Servitor Interface",
 
 		-- Professions
-		[65674] = "What Is This Thing?|60+ alchemy,engineering,tailoring,leatherworking,blacksmithing,jewelcrafting|2 UnformedEssence|{3950361} [Unformed Essence]|discovery|Has a chance to drop from any automa in Zereth Mortis",
+		[65674] = "What Is This Thing?|60+ 64230 alchemy,engineering,tailoring,leatherworking,blacksmithing,jewelcrafting|2 UnformedEssence|{3950361} [Unformed Essence]|discovery|Has a chance to drop from any automa in Zereth Mortis",
 	},
 
 	-- Blooming Foundry
