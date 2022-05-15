@@ -825,8 +825,20 @@ Data.Quests = {
 		[65353] = "An Automa-free Diet|60+ 65349|55.12 50.2|Nadir",
 		[65448] = "A Return to Grace|60+ 65350|58.38 55.74|Percolation Array|down link:2028",
 
+		-- Jiro to Hero
+		[64772] = "Broken Circle|60+ 64958 research:1902|40.07 42.03|Hanoa the Exile", -- Requires Altonian Understanding
+		[64773] = "A Jiro Guide to Not Being Eaten|60+ 64958 research:1902|37.98 39.72|Olea Pau", -- Requires Altonian Understanding
+		[64713] = "Picking Up the Pieces... Literally|60+ 64958 research:1902|36.67 37.83|Olea Novi", -- Requires Altonian Understanding
+		[65370] = "Gut Check|60+ 64958 research:1902|38.18 35.32|Olea Manu", -- Requires Altonian Understanding
+		[64775] = "Mawdified Behavior|60+ 64772|39.54 31.84|Hanoa the Exile",
+		[64739] = "Zovaal's Grasp|60+ 64775|39.43 32.26|Hanoa the Exile",
+		[64779] = "Pound of Flesh|60+ 64739|42.57 31.48|Olea Pau",
+		[64780] = "Mawsteel, Maw Problems|60+ 64739|42.6 31.56|Olea Novi",
+		[64778] = "Rift Recon|60+ 64739|42.66 31.57|Olea Manu",
+		[65219] = "Jiro to Hero|60+ 64779 64780 64778|42.65 31.41|Hanoa the Exile",
+
 		-- Reap What You Sow
-		[64641] = "Mysterious Greenery|60+ research:1931|55.28 64.39|Glimmercane", -- Requires Sopranian Understanding
+		[64641] = "Mysterious Greenery|60+ 64958 research:1931|55.28 64.39|Glimmercane", -- Requires Sopranian Understanding
 		[64642] = "Clearing the Ruins|60+ 64641|60.5 70.02|Koh Shira",
 		[64643] = "Scavenging a Solution|60+ 64641|60.47 70.14|Koh Riva",
 		[64644] = "A Splash of the Eternal|60+ 64642 64643|60.68 69.78|Glimmercane",
@@ -836,7 +848,7 @@ Data.Quests = {
 		[64648] = "Reap What We Have Sown|60+ 64646 64647|64.63 77.21|Koh Shira|down link:2027",
 
 		-- The Final Song / A New Architect
-		[64829] = "Finding Tahli|60+ research:1931|61.37 51.55|Elder Amir", -- Requires Sopranian Understanding
+		[64829] = "Finding Tahli|60+ 64958 research:1931|61.37 51.55|Elder Amir", -- Requires Sopranian Understanding
 		[64745] = "Selfless Preservation|60+ 64829|63.94 40.78|Tahli",
 		[64759] = "Junk's Not Dead|60+ 64745|61.19 37.62|Tahli",
 		[64761] = "Core Competency|60+ 64745|61.19 37.62|Tahli",

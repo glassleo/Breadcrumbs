@@ -93,6 +93,7 @@ Data.Vignettes = {
 		[65572] = {"Undulating Foliage|60+ 64953 64952 65589 65590 65591 65592|51.69 79.61|\"Open the four Teleporter Locks to unlock this treasure\"|treasure down link:2066 item:190926|Contains|{3950360} [rare]Infested Automa Core]|{4038106} [rare]Spatial Opener]", "Undulating Foliage|60+ 64953 64952 -65589,-65590,-65591,-65592|51.69 79.61|\"Open the four Teleporter Locks to unlock this treasure\"|treasure locked down link:2066 item:190926|Contains|{3950360} [rare]Infested Automa Core]|{4038106} [rare]Spatial Opener]",},
 		[65573] = "Bushel of Progenitor Produce|60+ 64953 64952|47.44 95.23|\"Defeating Nascent Servitors will give you a stacking buff required to open the door\"|treasure item:190853|Requires|{4038102} [spell]Creation Catalyst Overcharge] (5)||Contains|{237269} [rare]Bushel of Mysterious Fruit]|{236571} [rare]Chef Pocopoc]",
 		[65592] = "Teleporter Lock|60+ 64953 64952|50.01 76.71|\"Under a Bloomthorn Vine\"|treasure interact",
+		[65383] = "Protoform Schematic|60+ 64953 64952 65427 -item:189460 -65383|67.4 40.24||treasure down item:189460",
 	},
 
 	-- Crystal Wards
