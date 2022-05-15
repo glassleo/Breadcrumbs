@@ -15,6 +15,7 @@ local Setting_POIPinSize = 25
 local Setting_POISmallPinSize = 20
 local Setting_HumanTooltips = true
 local Setting_QuestFrameLevel = nil -- set to "PIN_FRAME_LEVEL_GROUP_MEMBER" to display above the player arrow
+local Setting_BonusObjectiveFrameLevel = nil -- set to "PIN_FRAME_LEVEL_GROUP_MEMBER" to display above the player arrow
 local Setting_ObjectivesFrameLevel = nil -- set to "PIN_FRAME_LEVEL_GROUP_MEMBER" to display above the player arrow
 local Setting_VignetteFrameLevel = "PIN_FRAME_LEVEL_VIGNETTE" -- set to "PIN_FRAME_LEVEL_GROUP_MEMBER" to display above the player arrow
 local Setting_POIFrameLevel = "PIN_FRAME_LEVEL_AREA_POI" -- set to "PIN_FRAME_LEVEL_GROUP_MEMBER" to display above the player arrow
@@ -417,7 +418,7 @@ function Breadcrumbs:UpdateMap(event, ...)
 								end)
 							end
 
-							Pins:AddWorldMapIconMap("Breadcrumbs", Pin, map, x/100, y/100, nil, Setting_QuestFrameLevel or "PIN_FRAME_LEVEL_STORY_LINE")
+							Pins:AddWorldMapIconMap("Breadcrumbs", Pin, map, x/100, y/100, nil, (flags["bonusobjective"] or flags["weekly"] or flags["daily"] or flags["campaign"]) and (Setting_BonusObjectiveFrameLevel or "PIN_FRAME_LEVEL_BONUS_OBJECTIVE") or Setting_QuestFrameLevel or "PIN_FRAME_LEVEL_STORY_LINE")
 							Pin:Show()
 						end
 					end
