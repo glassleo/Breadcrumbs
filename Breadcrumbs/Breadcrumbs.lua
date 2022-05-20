@@ -863,7 +863,7 @@ function Breadcrumbs:UpdateMap(event, ...)
 									elseif Charges > 1 then
 										GameTooltip:AddLine(Charges.." Charges Available", 0, 1, 0)
 									elseif TimeToNextCharge == 0 then
-										GameTooltip:AddLine("Ready For Use", 0, 1, 0)
+										GameTooltip:AddLine("Move closer to the Catalyst to see Available Charges", 1, 0.5, 0, true)
 									else
 										GameTooltip:AddLine("No Charges Available", 1, 0, 0)
 									end
