@@ -244,6 +244,9 @@ Data.Quests = {
 		-- Torghast, Tower of the Damned
 		[65625] = "The Jailer's Gauntlet|60+ 65305 ~65250 ~65260|55.61 49.32|Ve'nyo",
 
+		-- Trading Favors
+		[60274] = "Trading Favors|60+,62704|67.47 50.31|Host Ta'rela",
+
 		-- The Great Vault
 		[62457] = "The Great Vault|60+|64.51 36.01|Ba'vol",
 
@@ -309,7 +312,7 @@ Data.Quests = {
 		[62729] = {"Return to Oribos|62723|51 46.8|Kalisthene|campaign", "Return to Oribos|62723 kyrian|64 19.11|Kalisthene|campaign",},
 
 		-- Kyrian - Steward
-		[62916] = "Your Next Best Friend|60+,62704 59426 -60259 -60260 -60261 -60262 -60263|52.98 47.56|Sika", -- Weekly quest - only show if no Steward choice has been made
+		[62916] = "Your Next Best Friend|60+,62704 kyrian 59426 -60259 -60260 -60261 -60262 -60263|52.98 47.56|Sika", -- Weekly quest - only show if no Steward choice has been made
 
 		-- Kyrian - Kyrian Combatant
 		[64323] = "Kyrian Veteran|60+,62704 kyrian renown:43|64.76 20.33|Iona Skyblade|legendary", -- Kyrian, Renown 43
@@ -786,10 +789,10 @@ Data.Quests = {
 		[65460] = "Your First Cantaric Protolock|60+ research:1972|34.22 48.36|Firim", -- Requires Cachial Understanding
 		[65461] = "Your First Mezzonic Protolock|60+ 65460|34.22 48.36|Firim",
 		[65466] = "Your First Fugueal Protolock|60+ 65461|34.22 48.36|Firim",
-		[65432] = "Further Research: Dealic|60+ research:1904 currency:1979:200|33.76 49.5|Cypher Console", -- Requires Aealic Understanding and 200+ Cyphers
+		[65432] = "Further Research: Dealic|60+ 65431 research:1904 currency:1979:200|33.76 49.5|Cypher Console", -- Requires Aealic Understanding and 200+ Cyphers
 		[65700] = "Core Control|60+ research:1932|34.22 48.36|Firim", -- Requires Dealic Understanding
 		[65419] = "Protoform Synthesis|60+ research:1932|1 Pocopoc|Pocopoc|discovery", -- Requires Dealic Understanding
-		[65433] = "Further Research: Trebalim|60+ research:1932 currency:1979:260|33.76 49.5|Cypher Console", -- Requires Dealic Understanding and 260+ Cyphers
+		[65433] = "Further Research: Trebalim|60+ 65432 research:1932 currency:1979:260|33.76 49.5|Cypher Console", -- Requires Dealic Understanding and 260+ Cyphers
 
 		-- Not Al Are Lost
 		[64771] = "Enlightened Exodus|60+ 64958|33.73 64.65|Al'dalil",
