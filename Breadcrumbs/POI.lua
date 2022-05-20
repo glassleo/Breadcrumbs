@@ -597,6 +597,15 @@ Data.POI = {
 	},
 
 
+	--[[ Ashran ]]--
+
+	-- Stormshield
+	[622] = {
+		-- Portal
+		"POI/Portal|Portal to Stormwind|alliance|60.81 37.9",
+	},
+
+
 	--[[ The Jade Forest ]]--
 
 	[371] = {
