@@ -178,8 +178,8 @@ Data.HiddenBonusObjectiveQuests = {
 	Shadowlands
 		59770 - Maw Intro Completed (including through skip)
 		62704 - Threads of Fate chosen
-		60293 - Pride or Unit, Phalynx chosen
-		? - Pride or Unit, Larion chosen
+		60293 - Pride or Unit, Phalynx chosen (Pelodis)
+		60294 - Pride or Unit, Larion chosen (Nemea)
 		-60259 -60260 -60261 -60262 -60263 - No Steward chosen
 		62704,57904,59609,62899,62921 - World Quests Unlocked
 ]]--
@@ -201,8 +201,8 @@ Data.Quests = {
 		[62000] = "Choosing Your Purpose|62716|38.89 70|Tal-Inara|campaign",
 		-- Threads of Fate breadcrumb quests are only available after completing a zone quest (not Torghast/Battlegrounds)
 		[62159] = "Aiding the Shadowlands|59- 62716|38.89 70|Tal-Inara|campaign", -- #1
-		-- HQT ??
-		-- [63208] = "The Next Step|50+ 62159|38.89 70|Tal-Inara|campaign", -- #2
+		-- Vevica HQT 64067,64073,64405
+		[63208] = "The Next Step|50+ 59- 62159 62729,62761,62776,62779|38.89 70|Tal-Inara|campaign", -- #2
 		-- HQT 64137
 		[63209] = "Furthering the Purpose|59- 63208 64137|38.89 70|Tal-Inara|campaign", -- #3
 		[63210] = {"The Last Step|50+ 59- 63209 -62729 62761 62776 62779|38.89 70|Tal-Inara|campaign", "The Last Step|50+ 59- 63209 62729 -62761 62776 62779|38.89 70|Tal-Inara|campaign", "The Last Step|50+ 59- 63209 62729 62761 -62776 62779|38.89 70|Tal-Inara|campaign", "The Last Step|50+ 59- 63209 62729 62761 62776 -62779|38.89 70|Tal-Inara|campaign",}, -- #4
@@ -235,13 +235,32 @@ Data.Quests = {
 		[65034] = "Return to Oribos|65032 65033|34.24 55.9|Strategist Zo'rak|campaign",
 
 		-- Threads of Fate: Torghast
-		-- ??? Torghast chosen - Also given optional breadcrumb 64846
+		-- 64848 Torghast chosen - Also given optional breadcrumb 64846 (Torghast)
+		-- Also autocompletes 64557 (In Darkness, Found), 64210 (The Box of Many Things), 64216 (Tower Knowledge)
+		[64849] = "Tower of the Damned|64848 ~64846|38.89 70|Tal-Inara|campaign",
 
-		-- Among the Kyrian
+		-- Kyrian - Among the Kyrian
 		[63211] = "Report to Adrestes|60+ kyrian -60491|38.89 70|Tal-Inara|campaign", -- Breadcrumb for 60491
 		[60491] = "Among the Kyrian|60+ kyrian ~63211|36.13 64.22|Polemarch Adrestes|campaign", -- Invalidates 63211
+		[62796] = "Return to Adrestes|60+ kyrian 62837|39.96 68.6|Highlord Bolvar Fordragon|campaign",
 
-		-- Torghast, Tower of the Damned
+		-- Necrolord - Loyal to the Primus
+		[62844] = "Return to Draka|60+ necrolord 62837|39.96 68.6|Highlord Bolvar Fordragon|campaign",
+
+		-- Night Fae - For Queen and Grove!
+		[63214] = "Report to Moonberry|60+ nightfae -61475|38.89 70|Tal-Inara|campaign", -- Breadcrumb for 61475
+		[61475] = "The Heart of the Forest|60+ nightfae ~63214|39.75 60.89|Lady Moonberry|campaign", -- Invalidates 63214
+		[62894] = "Flutterback|60+ nightfae 62837|39.96 68.6|Highlord Bolvar Fordragon|campaign",
+
+		-- Night Fae - Daughter of the Night Warrior
+		[59181] = "Into the Maw|60+ nightfae 59179,59246|39.07 66.95|Shandris Feathermoon|campaign",
+
+		-- Venthyr - Sinfall
+		[62870] = "Souls for Sinfall|60+ venthyr 62837|39.96 68.6|Highlord Bolvar Fordragon|campaign",
+
+		-- Torghast
+		[60136] = {"Into Torghast|60+ kyrian 63029|39.96 68.6|Highlord Bolvar Fordragon|campaign", "Into Torghast|60+ necrolord 63032|39.96 68.6|Highlord Bolvar Fordragon|campaign", "Into Torghast|60+ nightfae 63030|39.96 68.6|Highlord Bolvar Fordragon|campaign", "Into Torghast|60+ venthyr 63033|39.96 68.6|Highlord Bolvar Fordragon|campaign",},
+		[61099] = "The Search for Baine|60+ 60136|39.96 68.6|Ve'nari|campaign elsewhere link:1543",
 		[65625] = "The Jailer's Gauntlet|60+ 65305 ~65250 ~65260|55.61 49.32|Ve'nyo",
 
 		-- Trading Favors
@@ -249,6 +268,10 @@ Data.Quests = {
 
 		-- The Great Vault
 		[62457] = "The Great Vault|60+|64.51 36.01|Ba'vol",
+
+		-- Chains of Domination - Battle of Ardenweald
+		[63576] = "The First Move|60+ 60272|40.25 68.14|[Auto Accept]|campaign",
+		[63856] = "A Gathering of Covenants|60+ 63576|38.89 70|Tal-Inara|campaign",
 
 		-- Zereth Mortis
 		[65649] = "A New Deal|60+ 64958|34.46 57.46|Zo'sorg|weekly",
@@ -292,6 +315,28 @@ Data.Quests = {
 		-- Kyrian Combatant
 		[64323] = "Kyrian Veteran|60+,62704 kyrian renown:43|42.74 70.25|Iona Skyblade|legendary", -- Kyrian, Renown 43
 		[64086] = "Kyrian Tactician|60+,62704 kyrian renown:59|42.74 70.25|Iona Skyblade|legendary", -- Kyrian, Renown 59
+
+		-- Transport Network
+		[63052] = "Step of Faith|60+ kyrian research:1056|42.62 53.06|Haephus", -- Requires Step of Faith (1056)
+		[63053] = "At a Moment's Notice|60+ kyrian 63052|48.86 62.7|Khamsius",
+
+		-- Anima Conductor
+		[57901] = "All That Remains|60+ kyrian research:1062|42.62 53.06|Haephus", -- Requires Flowing Tendrils (1062)
+		[57903] = "Power in the Sky|60+ kyrian 57901|37.91 67.49|Capheus",
+
+		-- Command Table
+		[57899] = "More Work?|60+ kyrian research:1077|42.62 53.06|Haephus", -- Requires Tactical Insight (1077)
+		[57900] = "Across the Shadowlands|60+ kyrian 57899|43.83 40.71|Koros",
+		[61859] = "Adventurer: Nemea|60+ kyrian 57900 60294 renown:4|43.83 40.71|Koros|legendary", -- Requires Renown 4 and Larion chosen during Pride or Unit
+		[61860] = "Adventurer: Pelodis|60+ kyrian 57900 60293 renown:4|43.83 40.71|Koros|legendary", -- Requires Renown 4 and Phalynx chosen during Pride or Unit
+		[61861] = "Adventurer: Sika|60+ kyrian 57900 renown:12|43.83 40.71|Koros|legendary", -- Requires Renown 12
+		[61862] = "Adventurer: Clora|60+ kyrian 57900 renown:17|43.83 40.71|Koros|legendary", -- Requires Renown 17
+		[61863] = "Adventurer: Apolon|60+ kyrian 57900 renown:27|43.83 40.71|Koros|legendary", -- Requires Renown 27
+		[61864] = "Adventurer: Bron|60+ kyrian 57900 renown:33|43.83 40.71|Koros|legendary", -- Requires Renown 33
+		[61865] = "Adventurer: Disciple Kosmas|60+ kyrian 57900 renown:38|43.83 40.71|Koros|legendary", -- Requires Renown 38
+		[64461] = "Adventurer: Hermestes|60+ kyrian 57900 renown:44|43.83 40.71|Koros|legendary", -- Requires Renown 44
+		[64462] = "Adventurer: Cromas the Mystic|60+ kyrian 57900 renown:62|43.83 40.71|Koros|legendary", -- Requires Renown 62
+		[64463] = "Adventurer: Auric Spiritguide|60+ kyrian 57900 renown:71|43.83 40.71|Koros|legendary", -- Requires Renown 71
 	},
 
 	-- Elysian Hold - Sanctum of Binding
@@ -311,6 +356,10 @@ Data.Quests = {
 		-- 62723 Bolstering Bastion (Auto Accept) - shows on map even with Storylines hidden
 		[62729] = {"Return to Oribos|62723|51 46.8|Kalisthene|campaign", "Return to Oribos|62723 kyrian|64 19.11|Kalisthene|campaign",},
 
+		-- Among the Kyrian
+		[60492] = "A Proper Reception|60+ kyrian 60491|56.76 31.44|Polemarch Adrestes|campaign",
+		[57895] = "Elysian Hold|60+ kyrian 60491|58.44 28.92|Polemarch Adrestes|campaign",
+
 		-- Kyrian - Steward
 		[62916] = "Your Next Best Friend|60+,62704 kyrian 59426 -60259 -60260 -60261 -60262 -60263|52.98 47.56|Sika", -- Weekly quest - only show if no Steward choice has been made
 
@@ -318,9 +367,27 @@ Data.Quests = {
 		[64323] = "Kyrian Veteran|60+,62704 kyrian renown:43|64.76 20.33|Iona Skyblade|legendary", -- Kyrian, Renown 43
 		[64086] = "Kyrian Tactician|60+,62704 kyrian renown:59|64.76 20.33|Iona Skyblade|legendary", -- Kyrian, Renown 59
 
-		-- Among the Kyrian
-		[60492] = "A Proper Reception|60+ kyrian 60491|56.76 31.44|Polemarch Adrestes|campaign",
-		[57895] = "Elysian Hold|60+ kyrian 60491|58.44 28.92|Polemarch Adrestes|campaign",
+		-- Kyrian - Transport Network
+		[63052] = "Step of Faith|60+ kyrian research:1056|64.75 18.01|Haephus", -- Requires Step of Faith (1056)
+		[63053] = "At a Moment's Notice|60+ kyrian 63052|65.59 19.32|Khamsius",
+
+		-- Kyrian - Anima Conductor
+		[57901] = "All That Remains|60+ kyrian research:1062|64.75 18.01|Haephus", -- Requires Flowing Tendrils (1062)
+		[57903] = "Power in the Sky|60+ kyrian 57901|64.11 19.96|Capheus",
+
+		-- Kyrian - Command Table
+		[57899] = "More Work?|60+ kyrian research:1077|64.75 18.01|Haephus", -- Requires Tactical Insight (1077)
+		[57900] = "Across the Shadowlands|60+ kyrian 57899|64.91 16.35|Koros",
+		[61859] = "Adventurer: Nemea|60+ kyrian 57900 60294 renown:4|64.91 16.35|Koros|legendary", -- Requires Renown 4 and Larion chosen during Pride or Unit
+		[61860] = "Adventurer: Pelodis|60+ kyrian 57900 60293 renown:4|64.91 16.35|Koros|legendary", -- Requires Renown 4 and Phalynx chosen during Pride or Unit
+		[61861] = "Adventurer: Sika|60+ kyrian 57900 renown:12|64.91 16.35|Koros|legendary", -- Requires Renown 12
+		[61862] = "Adventurer: Clora|60+ kyrian 57900 renown:17|64.91 16.35|Koros|legendary", -- Requires Renown 17
+		[61863] = "Adventurer: Apolon|60+ kyrian 57900 renown:27|64.91 16.35|Koros|legendary", -- Requires Renown 27
+		[61864] = "Adventurer: Bron|60+ kyrian 57900 renown:33|64.91 16.35|Koros|legendary", -- Requires Renown 33
+		[61865] = "Adventurer: Disciple Kosmas|60+ kyrian 57900 renown:38|64.91 16.35|Koros|legendary", -- Requires Renown 38
+		[64461] = "Adventurer: Hermestes|60+ kyrian 57900 renown:44|64.91 16.35|Koros|legendary", -- Requires Renown 44
+		[64462] = "Adventurer: Cromas the Mystic|60+ kyrian 57900 renown:62|64.91 16.35|Koros|legendary", -- Requires Renown 62
+		[64463] = "Adventurer: Auric Spiritguide|60+ kyrian 57900 renown:71|64.91 16.35|Koros|legendary", -- Requires Renown 71
 
 		-- Pride or Unit
 		[59674] = "A Friendly Rivalry|52+,62704|57.44 54.25|Pelodis",
@@ -371,7 +438,7 @@ Data.Quests = {
 		[60316] = "WANTED: Altered Sentinel|51+,62704|49.14 72.82|Wanted Scroll",
 
 		-- Purity's Reflection
-		[57444] = "An Inspired Moral Inventory|51+,62704|54.03 73.94|Acolyte Galistos",
+		[57444] = {"An Inspired Moral Inventory|51+,62704|54.03 73.94|Acolyte Galistos", "An Inspired Moral Inventory|51+,62704|57.97 75.88|Acolyte Galistos",},
 
 		-- Aspirant's Crucible
 		[57712] = "Suggested Reading|51+,62704|55.39 83.43|Aspirant Akimos", -- Prereq 57709?
@@ -445,7 +512,7 @@ Data.Quests = {
 		[59430] = "A Plague on Your House|54+,62704|58.06 72.11|Judas Sneap",
 		[59520] = "Plaguefall: Knee Deep In It|54+,62704 +59430|59.45 72.97|Vial Master Lurgy|dungeon",
 		[58431] = "Pool of Potions|54+,62704 59430|59.45 72.97|Boil Master Yetch",
-		-- 57301 (Callous Concoctions) is a weekly quest
+		[57301] = "Callous Concoctions|54+,62704 58431|58.52 73.45|Foul-Tongue Cyrlix|weekly",
 
 		-- Archival Protection
 		[62605] = "Broker Business|54+,62704 -58619|38.21 31.3|Forgotten Supplies", -- Breadcrumb for 58619
@@ -462,7 +529,22 @@ Data.Quests = {
 
 	--[[ Ardenweald ]]--
 
-	-- Heart of the Forest
+	-- Heart of the Forest - The Canopy
+	[1703] = {
+		-- For Queen and Grove!
+		[62883] = "Keeper of Great Renown|60+ nightfae 58160|51.2 27.72|Winter Queen|campaign",
+
+		-- Da Boss
+		[59809] = "On De Other Side|60+ nightfae renown:8 59242|1 MaskOfBwonsamdi|Mask of Bwonsamdi|discovery campaign",
+		[59811] = "Taking Inventory|60+ nightfae renown:8 59809|1 MaskOfBwonsamdi|Bwonsamdi|discovery campaign|\"Mask of Bwonsamdi can take you to the Other Side\"",
+		[59812] = "Following the Trail|60+ nightfae 59811|1 MaskOfBwonsamdi|Mask of Bwonsamdi|discovery campaign",
+		[59813] = "Minions of Mueh'zala|60+ nightfae 59812|1 MaskOfBwonsamdi|Mask of Bwonsamdi|discovery campaign",
+		[59815] = "Stolen Loa|60+ nightfae 59812|2 MaskOfBwonsamdi|Mask of Bwonsamdi|discovery campaign",
+		[59817] = "Winter Be Comin'|60+ nightfae 59813 59815|1 MaskOfBwonsamdi|Mask of Bwonsamdi|discovery campaign",
+		[59818] = "Gathering The Hunt|60+ nightfae 59817|51.2 27.72|Winter Queen|campaign",
+	},
+
+	-- Heart of the Forest - The Trunk
 	[1701] = {
 		-- Threads of Fate: Ardenweald
 		-- 62763 Support the Court (Auto Accept) - shows on map even with Storylines hidden
@@ -471,19 +553,192 @@ Data.Quests = {
 		-- Night Fae Combatant
 		[64322] = "Night Fae Veteran|60+,62704 nightfae renown:43|33.54 37|Laurel|legendary", -- Night Fae, Renown 43
 		[64085] = "Night Fae Tactician|60+,62704 nightfae renown:59|33.54 37|Laurel|legendary", -- Night Fae, Renown 59
+
+		-- For Queen and Grove!
+		[61475] = "The Heart of the Forest|60+ nightfae ~63214|49.24 39.97|Lady Moonberry|campaign elsewhere link:1670",
+		[62560] = "Growing in Power|60+ nightfae 61479|49.24 39.97|Lady Moonberry",
+		[58104] = "Show, Don't Tell|60+ nightfae 61479|49.24 39.97|Lady Moonberry|campaign",
+		[62883] = "Keeper of Great Renown|60+ nightfae 58160|53.71 38.36|Winter Queen|campaign elsewhere link:1703|\"Attendant Sparkledew can take you to the Queen's audience chamber\"",
+		[62884] = "The Forest Will Sing Your Name|60+ nightfae 62883|33.57 36.99|Laurel|campaign",
+		[62697] = "A Call to Service|60+ nightfae 62884|33.57 36.99|Laurel|campaign",
+		-- 2693 A Calling in Ardenweald (Bonus Objective)
+		[62890] = "Who Shapes the Forest|60+ nightfae 62697|53.8 5.99|Blodwyn|campaign",
+		[62891] = "Into the Reservoir|60+ nightfae 62890|40.71 33|Zayhad, The Builder|campaign",
+		[62892] = "Recover the Lost|60+ nightfae 62891|40.71 33|Zayhad, The Builder|campaign",
+		[62893] = "Do What We Cannot|60+ nightfae 62892|33.9 43.52|Flutterby|campaign",
+		[62894] = "Flutterback|60+ nightfae 62837|33.9 43.52|Highlord Bolvar Fordragon|campaign elsewhere link:1670",
+		[62897] = "Recovered Souls|60+ nightfae 62894|33.9 43.52|Flutterby|campaign",
+		[62898] = "The First New Growth|60+ nightfae 62894|40.71 33|Zayhad, The Builder|campaign",
+		[61541] = "The Forge of Bonds|60+ nightfae 62898|49.24 39.97|Lady Moonberry|campaign",
+		[61542] = "The Boon of Binding|60+ nightfae 61541|33.9 43.52|Flutterby|campaign",
+		[61550] = "Strengthening the Bond|60+ nightfae 61542|33.46 45.29|Niya|campaign",
+		[62900] = "A Conduit for Growth|60+ nightfae 61550|33.46 45.29|Niya|campaign",
+		[61058] = "Bound in Dreams|60+ nightfae 62900|35.39 48.22|Dreamweaver",
+		[61057] = "By Trials Forged|60+ nightfae 62900|35.18 47.46|Hunt-Captain Korayn",
+		[62899] = "The Endless Forest|60+ nightfae 62900|33.9 43.52|Flutterby|campaign", -- Unlocks Callings
+		[62860] = "Return Lost Souls|60+ nightfae 62894 -61331 -62858 -62859|33.9 43.52|Flutterby|campaign weekly", -- Combined with 61331 (5 souls), 62858 (10 souls) and 62859 (15 souls)
+		[61984] = "Replenish the Reservoir|60+ 62899|49.06 39.06|Sesselie|campaign weekly",
+		[63030] = "The Highlord Calls|60+ nightfae 62899|47.54 36.51|Lady Moonberry|campaign",
+
+		-- Daughter of the Night Warrior
+		[59179] = "Daughter of the Night Warrior|60+ nightfae renown:5 60272 alliance|44.77 38.98|Ysera|campaign", -- Alliance
+		[59246] = "Daughter of the Night Warrior|60+ nightfae renown:5 60272 horde|44.77 38.98|Ysera|campaign", -- Horde
+		[59181] = "Into the Maw|60+ nightfae 59179,59246|44.77 38.98|Shandris Feathermoon|campaign elsewhere link:1670",
+		[60508] = "On the Trail|60+ nightfae 59181|44.77 38.98|Shandris Feathermoon|campaign elsewhere link:1543",
+		[60530] = "The Sea of Souls|60+ nightfae 60508|44.77 38.98|Shandris Feathermoon|campaign elsewhere link:1543",
+		[59189] = "The Recovery of Tyrande Whisperwind|60+ nightfae 60530|44.77 38.98|Shandris Feathermoon|campaign elsewhere link:1543",
+		[59242] = "Their New Home|60+ nightfae 59189|44.77 38.98|Shandris Feathermoon|campaign elsewhere link:1543",
+
+		-- Da Boss
+		[59809] = "On De Other Side|60+ nightfae renown:8 59242|1 MaskOfBwonsamdi|Mask of Bwonsamdi|discovery campaign",
+		[59811] = "Taking Inventory|60+ nightfae renown:8 59809|1 MaskOfBwonsamdi|Bwonsamdi|discovery campaign|\"Mask of Bwonsamdi can take you to the Other Side\"",
+		[59812] = "Following the Trail|60+ nightfae 59811|1 MaskOfBwonsamdi|Mask of Bwonsamdi|discovery campaign",
+		[59813] = "Minions of Mueh'zala|60+ nightfae 59812|1 MaskOfBwonsamdi|Mask of Bwonsamdi|discovery campaign",
+		[59815] = "Stolen Loa|60+ nightfae 59812|2 MaskOfBwonsamdi|Mask of Bwonsamdi|discovery campaign",
+		[59817] = "Winter Be Comin'|60+ nightfae 59813 59815|1 MaskOfBwonsamdi|Mask of Bwonsamdi|discovery campaign",
+		[59818] = "Gathering The Hunt|60+ nightfae 59817|53.71 38.36|Winter Queen|campaign elsewhere link:1703|\"Attendant Sparkledew can take you to the Queen's audience chamber\"",
+
+		-- Night Warrior's Curse
+		[58610] = "The Speaker of Elune|60+ nightfae renown:11 59821|44.77 38.98|Ysera|campaign",
+
+		-- Drust to Drust
+		-- Renown 13
+
+		-- The Horned HUnter
+		-- Renown 17
+
+		-- Deal for a Loa
+		-- Renown 20
+
+		-- Drust and Ashes
+		-- Renown 22
+
+		-- Command Table
+		[61552] = "The Hunt Watches|60+ nightfae research:1074|40.71 33|Zayhad, The Builder", -- Requires Tactical Insight
+		[61553] = "Know Where to Strike|60+ nightfae 61552|30.6 79.1|Watcher Vesperbloom",
+		[61852] = "Adventurer: Guardian Kota|60+ nightfae 61553 renown:4|30.6 79.1|Watcher Vesperbloom|legendary",
+		[61853] = "Adventurer: Te'zan|60+ nightfae 61553 renown:12|30.6 79.1|Watcher Vesperbloom|legendary",
+		[61854] = "Adventurer: Master Sha'lor|60+ nightfae 61553 renown:17|30.6 79.1|Watcher Vesperbloom|legendary",
+		[61855] = "Adventurer: Qadarin|60+ nightfae 61553 renown:27|30.6 79.1|Watcher Vesperbloom|legendary",
+		[61856] = "Adventurer: Watcher Vesperbloom|60+ nightfae 61553 renown:33|30.6 79.1|Watcher Vesperbloom|legendary",
+		[61857] = "Adventurer: Groonoomcrooek|60+ nightfae 61553 renown:38|30.6 79.1|Watcher Vesperbloom|legendary",
+		[64458] = "Adventurer: Sulanoom|60+ nightfae 61553 renown:44|30.6 79.1|Watcher Vesperbloom|legendary",
+		[64459] = "Adventurer: Elwyn|60+ nightfae 61553 renown:62|30.6 79.1|Watcher Vesperbloom|legendary",
+		[64460] = "Adventurer: Yanlar|60+ nightfae 61553 renown:71|30.6 79.1|Watcher Vesperbloom|legendary",
+
+		-- Thread of Hope
+		[57661] = "Silk Shortage|60+ nightfae|59.45 31.82|Aithlyn",
+	},
+
+	-- Heart of the Forest - The Roots
+	[1702] = {
+		-- For Queen and Grove!
+		[62891] = "Into the Reservoir|60+ nightfae 62890|39.36 54.38|Zayhad, The Builder|campaign",
+		[62892] = "Recover the Lost|60+ nightfae 62891|39.36 54.38|Zayhad, The Builder|campaign",
+		[62898] = "The First New Growth|60+ nightfae 62894|39.36 54.38|Zayhad, The Builder|campaign",
+		[61984] = "Replenish the Reservoir|60+ 62899|50.6 62.63|Sesselie|campaign weekly",
+
+		-- Da Boss
+		[59809] = "On De Other Side|60+ nightfae renown:8 59242|1 MaskOfBwonsamdi|Mask of Bwonsamdi|discovery campaign",
+		[59811] = "Taking Inventory|60+ nightfae renown:8 59809|1 MaskOfBwonsamdi|Bwonsamdi|discovery campaign|\"Mask of Bwonsamdi can take you to the Other Side\"",
+		[59812] = "Following the Trail|60+ nightfae 59811|1 MaskOfBwonsamdi|Mask of Bwonsamdi|discovery campaign",
+		[59813] = "Minions of Mueh'zala|60+ nightfae 59812|1 MaskOfBwonsamdi|Mask of Bwonsamdi|discovery campaign",
+		[59815] = "Stolen Loa|60+ nightfae 59812|2 MaskOfBwonsamdi|Mask of Bwonsamdi|discovery campaign",
+		[59817] = "Winter Be Comin'|60+ nightfae 59813 59815|1 MaskOfBwonsamdi|Mask of Bwonsamdi|discovery campaign",
+
+		-- Command Table
+		[61552] = "The Hunt Watches|60+ nightfae research:1074|39.36 54.38|Zayhad, The Builder", -- Requires Tactical Insight
 	},
 
 	-- Ardenweald
 	[1565] = {
 		-- Threads of Fate: Ardenweald
 		-- 62763 Support the Court (Auto Accept) - shows on map even with Storylines hidden
-		[62776] = {"Return to Oribos|62763 -nightfae|49.34 52.36|Lady Moonberry|campaign", -- check if NF can take quest from both locations or not
+		[62776] = {"Return to Oribos|62763 -nightfae|49.34 52.36|Lady Moonberry|campaign",
 			--"Return to Oribos|62763 nightfae|X Y|Lady Moonberry|campaign", -- Add NF location
 		},
 
 		-- Night Fae - Night Fae Combatant
 		[64322] = "Night Fae Veteran|60+,62704 nightfae renown:43|44.95 52.98|Laurel|legendary", -- Night Fae, Renown 43
 		[64085] = "Night Fae Tactician|60+,62704 nightfae renown:59|44.95 52.98|Laurel|legendary", -- Night Fae, Renown 59
+
+		-- Night Fae - For Queen and Grove!
+		[61475] = "The Heart of the Forest|60+ nightfae ~63214|49.34 52.36|Lady Moonberry|campaign elsewhere link:1670",
+		[61479] = "The Boon of Shapes|60+ nightfae 61475|49.34 52.36|Lady Moonberry|campaign",
+		[58157] = "Break a Leg|60+ nightfae 58104|40.71 42.78|Featherlight|campaign",
+		[58158] = "The Fourth Wall, er, War|60+ nightfae 58157|40.71 42.78|Featherlight|campaign",
+		[58159] = "What's My Motivation?|60+ nightfae 58158|40.71 42.78|Featherlight|campaign",
+		[58160] = "For Queen and Grove!|60+ nightfae 58159|42.48 45.26|Ysera|campaign",
+		[58104] = "Show, Don't Tell|60+ nightfae 61479|46.11 53.29|Lady Moonberry|campaign",
+		[62883] = "Keeper of Great Renown|60+ nightfae 58160|46.44 53.07|Winter Queen|campaign elsewhere|\"Attendant Sparkledew can take you to the Queen's audience chamber\"",
+		[62884] = "The Forest Will Sing Your Name|60+ nightfae 62883|44.95 52.98|Laurel|campaign",
+		[62697] = "A Call to Service|60+ nightfae 62884|44.95 52.98|Laurel|campaign",
+		-- 2693 A Calling in Ardenweald (Bonus Objective)
+		[62890] = "Who Shapes the Forest|60+ nightfae 62697|46.45 50.68|Blodwyn|campaign",
+		[62891] = "Into the Reservoir|60+ nightfae 62890|45.48 52.69|Zayhad, The Builder|campaign",
+		[62892] = "Recover the Lost|60+ nightfae 62891|45.48 52.69|Zayhad, The Builder|campaign",
+		[62893] = "Do What We Cannot|60+ nightfae 62892|44.98 53.46|Flutterby|campaign",
+		[62894] = "Flutterback|60+ nightfae 62837|44.98 53.46|Highlord Bolvar Fordragon|campaign elsewhere link:1670",
+		[62897] = "Recovered Souls|60+ nightfae 62894|44.98 53.46|Flutterby|campaign",
+		[62898] = "The First New Growth|60+ nightfae 62894|45.48 52.69|Zayhad, The Builder|campaign",
+		[61541] = "The Forge of Bonds|60+ nightfae 62898|46.11 53.29|Lady Moonberry|campaign",
+		[61542] = "The Boon of Binding|60+ nightfae 61541|44.98 53.46|Flutterby|campaign",
+		[61550] = "Strengthening the Bond|60+ nightfae 61542|44.95 53.59|Niya|campaign",
+		[62900] = "A Conduit for Growth|60+ nightfae 61550|44.95 53.59|Niya|campaign",
+		[61058] = "Bound in Dreams|60+ nightfae 62900|45.09 53.81|Dreamweaver",
+		[61057] = "By Trials Forged|60+ nightfae 62900|45.07 53.75|Hunt-Captain Korayn",
+		[62899] = "The Endless Forest|60+ nightfae 62900|44.98 53.46|Flutterby|campaign",
+		[62860] = "Return Lost Souls|60+ nightfae 62894 -61331 -62858 -62859|44.98 53.46|Flutterby|campaign weekly", -- Combined with 61331 (5 souls), 62858 (10 souls) and 62859 (15 souls)
+		[61984] = "Replenish the Reservoir|60+ 62899|46.1 53.14|Sesselie|campaign weekly",
+		[63030] = "The Highlord Calls|60+ nightfae 62899|45.99 52.94|Lady Moonberry|campaign",
+
+		-- Night Fae - Daughter of the Night Warrior
+		[59179] = "Daughter of the Night Warrior|60+ nightfae renown:5 60272 alliance|45.78 53.12|Ysera|campaign", -- Alliance
+		[59246] = "Daughter of the Night Warrior|60+ nightfae renown:5 60272 horde|45.78 53.12|Ysera|campaign", -- Horde
+		[59181] = "Into the Maw|60+ nightfae 59179,59246|45.78 53.12|Shandris Feathermoon|campaign elsewhere link:1670",
+		[60508] = "On the Trail|60+ nightfae 59181|45.78 53.12|Shandris Feathermoon|campaign elsewhere link:1543",
+		[60530] = "The Sea of Souls|60+ nightfae 60508|45.78 53.12|Shandris Feathermoon|campaign elsewhere link:1543",
+		[59189] = "The Recovery of Tyrande Whisperwind|60+ nightfae 60530|45.78 53.12|Shandris Feathermoon|campaign elsewhere link:1543",
+		[59242] = "Their New Home|60+ nightfae 59189|45.78 53.12|Shandris Feathermoon|campaign elsewhere link:1543",
+
+		-- Night Fae - Da Boss
+		[59809] = "On De Other Side|60+ nightfae renown:8 59242|1 MaskOfBwonsamdi|Mask of Bwonsamdi|discovery campaign",
+		[59811] = "Taking Inventory|60+ nightfae 59809|1 MaskOfBwonsamdi|Bwonsamdi|discovery campaign|\"Mask of Bwonsamdi can take you to the Other Side\"",
+		[59812] = "Following the Trail|60+ nightfae 59811|1 MaskOfBwonsamdi|Mask of Bwonsamdi|discovery campaign",
+		[59813] = "Minions of Mueh'zala|60+ nightfae 59812|1 MaskOfBwonsamdi|Mask of Bwonsamdi|discovery campaign",
+		[59815] = "Stolen Loa|60+ nightfae 59812|2 MaskOfBwonsamdi|Mask of Bwonsamdi|discovery campaign",
+		[59817] = "Winter Be Comin'|60+ nightfae 59813 59815|1 MaskOfBwonsamdi|Mask of Bwonsamdi|discovery campaign",
+		[59818] = "Gathering The Hunt|60+ nightfae 59817|46.44 53.07|Winter Queen|campaign elsewhere link:1703|\"Attendant Sparkledew can take you to the Queen's audience chamber\"",
+		[59819] = "Cleansing the Forest|60+ nightfae 59818|66.66 55.6|Lady Moonberry|campaign",
+		[59821] = "Report to the Queen|60+ nightfae 59819|68.37 65.07|Lady Moonberry|campaign",
+
+		-- Night Fae - Night Warrior's Curse
+		[58610] = "The Speaker of Elune|60+ nightfae renown:11 59821|45.78 53.12|Ysera|campaign",
+
+		-- Night Fae - Drust to Drust
+		-- Renown 13
+
+		-- Night Fae - The Horned HUnter
+		-- Renown 17
+
+		-- Night Fae - Deal for a Loa
+		-- Renown 20
+
+		-- Night Fae - Drust and Ashes
+		-- Renown 22
+
+		-- Night Fae - Command Table
+		[61552] = "The Hunt Watches|60+ nightfae research:1074|45.48 52.69|Zayhad, The Builder", -- Requires Tactical Insight
+		[61553] = "Know Where to Strike|60+ nightfae 61552|44.67 56.28|Watcher Vesperbloom",
+		[61852] = "Adventurer: Guardian Kota|60+ nightfae 61553 renown:4|44.67 56.28|Watcher Vesperbloom|legendary",
+		[61853] = "Adventurer: Te'zan|60+ nightfae 61553 renown:12|44.67 56.28|Watcher Vesperbloom|legendary",
+		[61854] = "Adventurer: Master Sha'lor|60+ nightfae 61553 renown:17|44.67 56.28|Watcher Vesperbloom|legendary",
+		[61855] = "Adventurer: Qadarin|60+ nightfae 61553 renown:27|44.67 56.28|Watcher Vesperbloom|legendary",
+		[61856] = "Adventurer: Watcher Vesperbloom|60+ nightfae 61553 renown:33|44.67 56.28|Watcher Vesperbloom|legendary",
+		[61857] = "Adventurer: Groonoomcrooek|60+ nightfae 61553 renown:38|44.67 56.28|Watcher Vesperbloom|legendary",
+		[64458] = "Adventurer: Sulanoom|60+ nightfae 61553 renown:44|44.67 56.28|Watcher Vesperbloom|legendary",
+		[64459] = "Adventurer: Elwyn|60+ nightfae 61553 renown:62|44.67 56.28|Watcher Vesperbloom|legendary",
+		[64460] = "Adventurer: Yanlar|60+ nightfae 61553 renown:71|44.67 56.28|Watcher Vesperbloom|legendary",
 
 		-- Heart of the Forest
 		[62371] = "Tirna Scithe: A Warning Silence|56+,62704|48.38 50.46|Flwngyrr|dungeon",
@@ -540,6 +795,9 @@ Data.Quests = {
 
 		-- Hibernal Hollow
 		[62807] = "Forest Refugees|57+,62704|60.08 53.94|Droman Aliothe",
+
+		-- Thread of Hope
+		[57661] = "Silk Shortage|60+|48.48 50.42|Aithlyn",
 	},
 
 	-- Matriarch's Den
@@ -585,10 +843,12 @@ Data.Quests = {
 		-- Tithes of Darkhaven
 		[60176] = "Bring Out Your Tithe|58+,62704|61.32 63.78|Mistress Mihaela",
 		[60177] = "Reason for the Treason|58+,62704|62.22 61.36|Lajos",
+		[60178] = "And Then There Were None|58+,62704 60177|62.22 61.36|Lajos",
 		[60279] = "WANTED: The Pale Doom|60+|62.19 63.54|Wanted: The Pale Doom",
+		[58272] = "Words Have Power|58+,62704|67.74 67.66|Join the Rebellion!",
 
 		-- The Banewood
-		[58936] = "Beast Control|58+,62704|49.61 75.96|Wanted: Aggregate of Doom",
+		[58936] = "Beast Control|58+,62704|49.61 75.96|Bounty: Beast Control",
 		[60514] = "Hunting Trophies|58+,62704|48.51 68.44|Huntmaster Constantin",
 		[58996] = "Abel's Fate|58+,62704|48.51 68.44|Huntmaster Constantin",
 
@@ -597,16 +857,23 @@ Data.Quests = {
 		[59710] = "A Curious Invitation|58+,62704|60.71 62.5|Dimwiddle",
 		[59712] = "The Lay of the Land|58+,62704 59710|59.5 66.73|Courier Araak",
 		[59846] = "Finders-Keepers, Sinners-Weepers|58+,62704 59712|59.9 68.89|Nadjia the Mistblade",
+		[59713] = "Active Ingredients|58+,62704 59846|59.9 68.89|Nadjia the Mistblade",
+		[59714] = "A Fine Vintage|58+,62704 59846|59.9 68.89|Nadjia the Mistblade",
+		[59715] = "Message for Matyas|58+,62704 59713 59714|59.9 68.89|Nadjia the Mistblade",
+		[59716] = "Comfortably Numb|58+,62704 59715|60.17 69.45|Taskmaster Matyas",
+		[59724] = "The Field of Honor|58+,62704 59716|60.2 69.32|Nadjia the Mistblade",
+		[59868] = "Offer of Freedom|58+,62704 59716|60.2 69.32|Nadjia the Mistblade",
+		[59726] = "It's a Trap|58+,62704 59724 59868|60.21 78.63|Nadjia the Mistblade",
 
 		-- The Endmire
 		[60480] = "The Endmire|58+,62704|65.12 63.52|Tessle the Snitch",
 
-		-- Words Have Power
-		[58272] = "Words Have Power|58+,62704|67.74 67.66|Join the Rebellion!",
-
 		-- Dirty Jobs
 		[60509] = "Not My Job|58+,62704 -57471|67.54 68.53|Rendle", -- Breadcrumb for 57471
 		[57471] = "It's a Dirty Job|58+,62704 ~60509|72.57 73.21|Rendle", -- Invalidates 60509
+		[57474] = "Dredger Duty|58+,62704 57471|72.57 73.21|Rendle",
+		[57477] = "We're Gonna Need a Bigger Dredger|58+,62704 57474|72.57 73.21|Rendle",
+		[57481] = "Running a Muck|58+,62704 57477|72.84 73.92|Bootus",
 
 		-- The Final Atonement
 		[58093] = "Our Forgotten Purpose|58+,62704 -57919|72.99 52|Archivist Fane", -- Breadcrumb for 57919
@@ -635,6 +902,12 @@ Data.Quests = {
 		-- Mirror Maker of the Master
 		[57531] = "An Unfortunate Situation|59+,62704|26.42 48.95|Laurent",
 		[57532] = "Foraging for Fragments|59+,62704 57531|26.42 48.95|Laurent",
+		[57571] = "Moving Mirrors|59+,62704 57532|24.25 49.42|Laurent",
+		[57534] = "When Only Ash Remains|59+,62704 57571|24.25 49.42|Laurent",
+		[57533] = "Light Punishment|59+,62704 57571|24.22 49.48|Simone",
+		[57535] = "Escaping the Master|59+,62704 57534 57533|24.25 49.42|Laurent",
+		[59427] = "We Need More Power|59+,62704 57534 57533|24.22 49.48|Simone",
+		[57536] = "Mirror Making, Not Breaking|59+,62704 57535 59427|24.25 49.42|Laurent",
 
 		-- Sanctuary of the Mad
 		[60276] = "WANTED: Summoner Marcelis|59+,62704|30.87 49.05|Wanted: Summoner Marcelis",
@@ -644,8 +917,55 @@ Data.Quests = {
 
 	--[[ The Maw ]]--
 
+	-- The Maw
+	[1543] = {
+		-- Ve'nari
+		[62882] = {"Setting the Ground Rules|60+ kyrian 62832|46.91 41.69|Ve'nari|campaign", "Setting the Ground Rules|60+ necrolord 62843|46.91 41.69|Ve'nari|campaign", "Setting the Ground Rules|60+ nightfae 62893|46.91 41.69|Ve'nari|campaign", "Setting the Ground Rules|60+ venthyr 62905|46.91 41.69|Ve'nari|campaign",},
+		[60287] = "Rule 1: Have an Escape Plan|60+ 62882|46.91 41.69|Ve'nari|campaign",
+		[61355] = "Rule 2: Keep a Low Profile|60+ 60287|46.91 41.69|Ve'nari|campaign",
+		[60289] = "Rule 3: Trust is Earned|60+ 61355|46.91 41.69|Ve'nari|campaign",
+		[62837] = "Hopeful News|60+ 60289|46.91 41.69|Ve'nari|campaign",
+
+		-- Torghast
+		[61099] = "The Search for Baine|60+ 60136|46.91 41.69|Ve'nari|campaign",
+		-- 60267 Prison of the Forgotten
+		[62967] = "Prison of the Forgotten|60+ 61099 -60267|46.91 41.69|Ve'nari|campaign", -- You only get this if you missed looting Warden Arkoban (and thus missed 60267)
+		[60268] = "Deep Within|60+ 60267,62967|48.2 39.4|Runecarver|campaign elsewhere link:1912",
+		[60269] = "Reawakening|60+ 60268|48.2 39.4|Runecarver|campaign elsewhere link:1912",
+		[60270] = "A Damned Pact|60+ 60269|48.2 39.4|Runecarver|campaign elsewhere link:1912",
+		[60271] = "A Grave Chance|60+ 60270|46.91 41.69|Ve'nari|campaign",
+		[60272] = "The Weak Link|60+ 60271|46.91 41.69|Ve'nari|campaign", -- Unlocks the Runecarver
+
+		-- Night Fae - Daughter of the Night Warrior
+		[60508] = "On the Trail|60+ nightfae 59181|44.37 41.18|Shandris Feathermoon|campaign",
+		[60530] = "The Sea of Souls|60+ nightfae 60508|30.11 36.43|Shandris Feathermoon|campaign",
+		[59189] = "The Recovery of Tyrande Whisperwind|60+ nightfae 60530|46.86 41.69|Shandris Feathermoon|campaign",
+		[59242] = "Their New Home|60+ nightfae 59189|46.86 41.69|Shandris Feathermoon|campaign",
+	},
+
+	-- Torghast - Entrance
+	[1911] = {
+		-- Torghast
+		[60268] = "Deep Within|60+ 60267,62967|15.98 61.2|Runecarver|campaign elsewhere link:1912",
+		[60269] = "Reawakening|60+ 60268|15.98 61.2|Runecarver|campaign elsewhere link:1912",
+		[60270] = "A Damned Pact|60+ 60269|15.98 61.2|Runecarver|campaign elsewhere link:1912",
+	},
+
 	-- The Runecarver's Oubliette
 	[1912] = {
+		-- Torghast
+		[60268] = "Deep Within|60+ 60267,62967|50.3 53.73|Runecarver|campaign",
+		[60269] = "Reawakening|60+ 60268|50.3 53.73|Runecarver|campaign",
+		[60270] = "A Damned Pact|60+ 60269|50.3 53.73|Runecarver|campaign",
+
+		-- Legendary Crafting
+		[62700] = "Ashes of the Tower|60+ 60272|50.3 53.73|Runecarver|legendary",
+		[62719] = "The Final Pieces|60+ 60272|50.3 53.73|Runecarver|legendary",
+		[62799] = "The Vessels of Thread|60+ tailoring 60272|50.3 53.73|Runecarver|legendary tailoring",
+		[62798] = "The Vessels of Leather and Bone|60+ leatherworking 60272|50.3 53.73|Runecarver|legendary leatherworking",
+		[62797] = "The Vessels of Metal|60+ blacksmithing 60272|50.3 53.73|Runecarver|legendary blacksmithing",
+		[62800] = "The Vessels of Jewels|60+ jewelcrafting 60272|50.3 53.73|Runecarver|legendary jewelcrafting",
+
 		-- Zereth Mortis - Crown of Wills
 		[64813] = "The Crown of Wills|60+ 64812|50.28 54.11|The Primus|campaign",
 		[64816] = "Reality's Doorstep|60+ 64813 -64875|49.27 69.71|Highlord Bolvar Fordragon|campaign", -- Breadcrumb for 64875 (Something Wonderful); does technically not have the campaign flag in-game
@@ -839,6 +1159,7 @@ Data.Quests = {
 		[64780] = "Mawsteel, Maw Problems|60+ 64739|42.6 31.56|Olea Novi",
 		[64778] = "Rift Recon|60+ 64739|42.66 31.57|Olea Manu",
 		[65219] = "Jiro to Hero|60+ 64779 64780 64778|42.65 31.41|Hanoa the Exile",
+		[66579] = "Sounds of Healing|60+ 65219|3 ResonatingDisc|{1526019} [epic]Resonating Disc]|discovery|Has a chance to drop from any creature in Zereth Mortis",
 
 		-- Reap What You Sow
 		[64641] = "Mysterious Greenery|60+ 64958 research:1931|55.28 64.39|Glimmercane", -- Requires Sopranian Understanding
