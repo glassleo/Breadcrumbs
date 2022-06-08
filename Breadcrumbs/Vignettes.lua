@@ -17,9 +17,9 @@ Data.Vignettes = {
 
 	[1533] = {
 		-- Treasure
-		[58298] = {"Purians|48+ -68293,-68294 -item:173973|54.37 81.87||treasure interact", "Purians|48+ -68293,-68294 -item:173973|54.37 82.66||treasure interact", "Tribute|48+ -68293 item:173973|56.17 83.06||treasure interact", "Tribute|48+ -68294 item:173973|54.43 83.87||treasure interact", "Scroll of Aeons|48+ -68293,-68294|53.5 80.38|\"Loot nearby Purians and place them in two separate Tribute bowls in order to unlock this treasure\"|treasure locked item:173984|Contains|{1392955} [rare]Scroll of Aeons]", "Scroll of Aeons|48+ 68293 68294|53.5 80.38||treasure item:173984|Contains|{1392955} [rare]Scroll of Aeons]",},
+		[58298] = {"Purians|48+ -58293,-58294 -item:173973|54.37 81.87||treasure interact", "Purians|48+ -58293,-58294 -item:173973|54.37 82.66||treasure interact", "Tribute|48+ -58293 item:173973|56.17 83.06||treasure interact", "Tribute|48+ -58294 item:173973|54.43 83.87||treasure interact", "Scroll of Aeons|48+ -58293,-58294|53.5 80.38|\"Loot nearby Purians and place them in two separate Tribute bowls in order to unlock this treasure\"|treasure locked item:173984|Contains|{1392955} [rare]Scroll of Aeons]", "Scroll of Aeons|48+ 58293 58294|53.5 80.38||treasure item:173984|Contains|{1392955} [rare]Scroll of Aeons]",},
 		[58329] = "Purifying Draught|48+|52.04 86.07||treasure item:174007|Contains|{1528676} [Purifying Draught]",
-		[60478] = "Vesper of Virtues|48+ 57037|58.66 71.35|treasure item:179982|Contains|{133706} [rare]Kyrian Bell]",
+		[60478] = "Vesper of Virtues|48+ 57037|58.66 71.35||treasure item:179982|Contains|{133706} [rare]Kyrian Bell]",
 		[61044] = "Stolen Equipment|48+|40.51 49.81||treasure item:182561::::::::60::512::1:6706:60|Contains|{3386277} [rare]Fallen Disciple's Cloak]",
 		[61048] = "Lost Disciple's Notes|48+|59.33 60.92||treasure item:182693|Contains|{1506459} [uncommon]Lost Disciple's Notes]",
 		[61049] = "Larion Tamer's Harness|48+|58.23 39.99|\"Inside the Hall of Beasts\"|treasure down item:183126|Contains|{1059112} [rare]Kyrian Smith's Kit] (2)|{134372} [uncommon]Larion Treats] (3)",
@@ -34,7 +34,8 @@ Data.Vignettes = {
 		[59429] = "Strange Growth|48+|55.89 38.97||treasure item:182607|Contains|{134430} [uncommon]Hairy Egg]", -- 59428 completed after pulling the growth
 		[60587] = "Kyrian Corpse|48+ -item:180085|32.74 21.28||treasure item:175708|{134344} [rare]Kyrian Keepsake]||Contains|{3536074} [rare]Reconstructed Family Locket]|{133471} [Handwritten Note]", -- Quest completes when Kyrian Keepsake is opened
 		[60730] = "Halis's Lunch Pail|48+|30.79 28.75||treasure|Contains|{134028} [Finger Food] (7)|{1509635} [Tasty Toes] (2)|{132810} [Corpse Reanimator]",
-		[61470] = {"The Necronom-i-nom|48+ -toy:182732|42.35 23.34||treasure item:182732|Contains|{133737} [rare]The Necronom-i-nom]", "The Necronom-i-nom|48+ toy:182732|42.35 23.34||treasure item:183120::::::::60::512::1:6706:60|Contains|{3087534} [rare]Partially Digested Encyclopedia]",},
+		[61470] = {"The Necronom-i-nom|48+ -toy:182732|42.35 23.34||treasure item:182732|Contains|{133737} [rare]The Necronom-i-nom]", "The Necronom-i-nom|48+ toy:182732|42.35 23.34||treasure item:183120|Contains|{3087534} [rare]Partially Digested Encyclopedia]",},
+		[61451] = "Stolen Jar|48+|66.29 49.9|\"Only the Fungrets know the exact location of the Stolen Jar, but it can probably be found inside one of their many small caves in Glutharn's Decay\"|treasure item:182618|Contains|{237058} [uncommon]Reclaimed Vessel]",
 	},
 
 
@@ -55,10 +56,13 @@ Data.Vignettes = {
 
 	[1525] = {
 		-- Treasure
+		[59883] = "Filcher's Prize|48+|64.19 72.65||treasure item:179392|Contains|{613397} [rare]Orb of Burgeoning Ambition]|{133250} [Infused Ruby] (5)||\"A nearby gargoyle might not be very happy if you loot this treasure\"",
 		[59884] = "Wayfarer's Abandoned Spoils|48+|68.45 64.46||treasure|Contains|{/Random} [Random Trade Goods]|{133250} [Infused Ruby] (5)",
 		[59885] = "Remlate's Hidden Cache|48+|61.53 58.65||treasure|Contains|{/Random} [uncommon]Random Equipment] (2)|{133250} [Infused Ruby] (5)",
 		[59888] = "Abandoned Curios|57159|51.85 59.55||treasure item:182744|Contains|{1450755} [uncommon]Ornate Belt Buckle]|{133250} [Infused Ruby] (5)",
 		[59889] = "Smuggled Cache|48+|31.05 55.06||treasure item:182738|Contains|{133640} [uncommon]Bundle of Smuggled Parasol Components]|{/Random} [Random Food] (5)|{133250} [Infused Ruby] (5)||\"There is a high chance that you will be ambushed after looting this treasure\"",
+		[62199] = {"Ingress and Egress Rites|48+|63.01 72.36||treasure interact", "Taskmaster's Trove|48+|62.82 75.3|\"Use the nearby Ingress and Egress Rites to reveal this treasure\"|treasure item:183986|Contains|{1311628} [rare]Bondable Sinstone]",},
+		[62164] = "Vyrtha's Dredglaive|48+|70.17 60.06||treasure item:177807|Contains|{3150768} [rare]Vyrtha's Dredglaive]",
 	},
 
 
@@ -73,15 +77,20 @@ Data.Vignettes = {
 		[65175] = "Template Archive|60+ 64953 64952|59.61 46.16||treasure down link:2030 item:190060|Contains|{774766} [rare]Adventurous Pocopoc]|{4381149} [legendary]Cosmic Flux] (200)",
 		[65178] = {"Forgotten Proto-Vault|60+ 64953 64952 active:65089 _65427|66.99 69.4||treasure|Requires Active World Quest|[green]Frog'it]||[red]Requires Protoform Synthesis (Mount)]|{4217590} [rare]Schematic: Prototype Leaper]||\"The schematic won't drop for you now, but you can come back and loot it separately later regardless of weather the World Quest is active or not\"", "Forgotten Proto-Vault|60+ 64953 64952 active:65089 65427|66.9 69.4||treasure item:189469|Requires Active World Quest|[green]Frog'it]||Contains|{4217590} [rare]Schematic: Prototype Leaper]|{4381149} [legendary]Cosmic Flux] (200)", "Forgotten Proto-Vault|60+ 64953 64952 -active:65089 _65427|66.99 69.4||treasure locked|Requires Active World Quest|[red]Frog'it]||[red]Requires Protoform Synthesis (Mount)]|{4217590} [rare]Schematic: Prototype Leaper]||\"The schematic won't drop for you now, but you can come back and loot it separately later regardless of weather the World Quest is active or not\"", "Forgotten Proto-Vault|60+ 64953 64952 -active:65089 65427|66.9 69.4||treasure locked item:189469|Requires Active World Quest|[red]Frog'it]||Contains|{4217590} [rare]Schematic: Prototype Leaper]|{4381149} [legendary]Cosmic Flux] (200)",},
 		[65270] = "Symphonic Vault|60+ 64953 64952|52.6 62.97|\"Use the four nearby Broken Consoles in the correct sequence to unlock this treasure\"|treasure|Unlock Sequence|1. [spell]Right, furthest in]|2. [spell]Left, on top of platform]|3. [spell]Right, closest to entrance]|4. [spell]Left, near treasure]||Contains|{4038106} [rare]Spatial Opener]|{4381149} [legendary]Cosmic Flux] (200)",
-		[65333] = "Protoform Schematic|60+ 64953 64952 65522 -65333 -item:189435|53.66 72.62||treasure down item:189435|Contains|{4217590} [rare]Schematic: Multichicken]", 
-		[65383] = "Protoform Schematic|60+ 64953 64952 65427 -item:189460 -65383|67.4 40.24||treasure down item:189460",
-		[65393] = "Protoform Schematic|60+ 64953 64952 65178 65427 -65393 -item:189469|66.97 69.42||treasure item:189469|Contains|{4217590} [rare]Schematic: Prototype Leaper]",
-		[65401] = "Protoform Schematic|60+ 64953 64952 65545 65427 -65401 -item:189478|36.95 78.27||treasure item:189478|Contains|{4217590} [rare]Schematic: Adorned Vombata]",
+		[65333] = "Protoform Schematic|60+ 64953 64952 65522 -item:189435|53.66 72.62||treasure down item:189435|Contains|{4217590} [rare]Schematic: Multichicken]",
+		[65383] = "Protoform Schematic|60+ 64953 64952 65427 -item:189460|67.4 40.24|\"Inside the Chamber of Shaping behind the Dominated Architect\"|treasure down item:189460|Contains|{4217590} [rare]Schematic: Raptora Swooper]",
+		[65393] = "Protoform Schematic|60+ 64953 64952 65178 65427 -item:189469|66.97 69.42||treasure item:189469|Contains|{4217590} [rare]Schematic: Prototype Leaper]",
+		[65401] = "Protoform Schematic|60+ 64953 64952 65545 65427 -item:189478|36.95 78.27||treasure item:189478|Contains|{4217590} [rare]Schematic: Adorned Vombata]",
 		[65447] = "Stolen Relic|60+ 64953 64952|37.9 65.2||treasure|Contains|{/Random} [rare]Random Jewelry (236+)]|{4381149} [legendary]Cosmic Flux] (200)",
 		[65465] = {"Domination Cache|60+ 64953 64952 item:189704|60.02 18.98|\"The key is a rare drop from elites in the Endless Sands\"|treasure item:190638|Requires|{134245} [green]Dominance Key]||Contains|{3734530} [epic]Tormented Mawsteel Greatsword]|{4038106} [rare]Spatial Opener]|{4381149} [legendary]Cosmic Flux] (200)", "Domination Cache|60+ 64953 64952 -item:189704|60.02 18.98|\"The key is a rare drop from elites within the Arrangement Index\"|treasure locked item:190638|Requires|{134245} [red]Dominance Key]||Contains|{3734530} [epic]Tormented Mawsteel Greatsword]|{4038106} [rare]Spatial Opener]|{4381149} [legendary]Cosmic Flux] (200)",},
 		[65480] = "Gnawed Valise|60+ 64953 64952|38.98 73.21||treasure item:188054::::::::60:::27:3:6652:8108:1482:1:28:2057|Contains|{4096872} [rare]Antecedent Drape]|{4381149} [legendary]Cosmic Flux] (200)",
 		[65487] = "Fallen Vault|60+ 64953 64952|51.56 9.9||treasure|Contains|{4038106} [rare]Spatial Opener]|{/Random} [uncommon]Random Equipment (229)]|{4381149} [legendary]Cosmic Flux] (200)",
-		[65489] = "Crushed Supply Crate|60+ 64953 64952|56.76 64.17|\"Pick up the Repair Tool next to the treasure and then speak to Hiu Fi nearby to trade it for a Jiro Hammer\"|treasure|Contains|{/Random} [rare]Random Boots (233+)]|{4381149} [legendary]Cosmic Flux] (200)",
+		[65489] = {
+			"Crushed Supply Crate|60+ 64953 64952 mage,priest,warlock|56.76 64.17|\"Pick up the Repair Tool next to the treasure and then speak to Hiu Fi nearby to trade it for a Jiro Hammer\"|treasure item:188007::::::::60:257::27:3:6652:8108:1482:1:28:2057|Contains|{4076043} [rare]Choral Slippers]|{4381149} [legendary]Cosmic Flux] (200)",
+			"Crushed Supply Crate|60+ 64953 64952 demonhunter,druid,monk,rogue|56.76 64.17|\"Pick up the Repair Tool next to the treasure and then speak to Hiu Fi nearby to trade it for a Jiro Hammer\"|treasure item:188013::::::::60:257::27:3:6652:8108:1482:1:28:2057|Contains|{4076043} [rare]Staccato Boots]|{4381149} [legendary]Cosmic Flux] (200)",
+			"Crushed Supply Crate|60+ 64953 64952 evoker,hunter,shaman|56.76 64.17|\"Pick up the Repair Tool next to the treasure and then speak to Hiu Fi nearby to trade it for a Jiro Hammer\"|treasure item:188020::::::::60:257::27:3:6652:8108:1482:1:28:2057|Contains|{4076043} [rare]Anthemic Greaves]|{4381149} [legendary]Cosmic Flux] (200)",
+			"Crushed Supply Crate|60+ 64953 64952 deathknight,paladin,warrior|56.76 64.17|\"Pick up the Repair Tool next to the treasure and then speak to Hiu Fi nearby to trade it for a Jiro Hammer\"|treasure item:188029::::::::60:257::27:3:6652:8108:1482:1:28:2057|Contains|{4076043} [rare]Harmonium Percussive Stompers]|{4381149} [legendary]Cosmic Flux] (200)",
+		},
 		[65503] = "Filched Artifact|60+ 64953 64952|49.77 87.23||treasure|Contains|{/Random} [rare]Random Jewelry (236+)]|{4038106} [rare]Spatial Opener]|{4381149} [legendary]Cosmic Flux] (200)",
 		[65520] = "Architect's Reserve|60+ 64953 64952 65426|61.16 37.15||treasure item:187833|Contains|{133146} [rare]Dapper Pocopoc]|{4381149} [legendary]Cosmic Flux] (200)", -- maybe only requires 65420
 		[65522] = {"Mistaken Ovoid|60+ 64953 64952 65419 item:190239:5|53.66 72.62|\"Lost Ovoids are tiny orbs that can be found all around Zereth Mortis, often near or inside the metallic progenitor orbs\"|treasure down item:189435|Requires|{651737} [green]Lost Ovoid] (5)||Contains|{4217590} [rare]Schematic: Multichicken]", "Mistaken Ovoid|60+ 64953 64952 _65419 item:190239:5|53.66 72.62|\"Lost Ovoids are tiny orbs that can be found all around Zereth Mortis, often near or inside the metallic progenitor orbs\"|treasure down|Requires|{651737} [green]Lost Ovoid] (5)||[red]Requires Protoform Synthesis]|{4217590} [rare]Schematic: Multichicken]||\"The schematic won't drop for you now, but you can come back and loot it separately later\"", "Mistaken Ovoid|60+ 64953 64952 65419 -item:190239:5|53.66 72.62|\"Lost Ovoids are tiny orbs that can be found all around Zereth Mortis, often near or inside the metallic progenitor orbs\"|treasure down locked item:189435|Requires|{651737} [red]Lost Ovoid] (5)||Contains|{4217590} [rare]Schematic: Multichicken]", "Mistaken Ovoid|60+ 64953 64952 _65419 -item:190239:5|53.66 72.62|\"Lost Ovoids are tiny orbs that can be found all around Zereth Mortis, often near or inside the metallic progenitor orbs\"|treasure down locked|Requires|{651737} [red]Lost Ovoid] (5)||[red]Requires Protoform Synthesis]|{4217590} [rare]Schematic: Multichicken]||\"The schematic won't drop for you now, but you can come back and loot it separately later\"",},
@@ -97,10 +106,14 @@ Data.Vignettes = {
 		[65572] = {"Undulating Foliage|60+ 64953 64952 65589 65590 65591 65592|51.69 79.61|\"Open the four Teleporter Locks to unlock this treasure\"|treasure down link:2066 item:190926|Contains|{3950360} [rare]Infested Automa Core]|{4038106} [rare]Spatial Opener]|{4381149} [legendary]Cosmic Flux] (200)", "Undulating Foliage|60+ 64953 64952 -65589,-65590,-65591,-65592|51.69 79.61|\"Open the four Teleporter Locks to unlock this treasure\"|treasure locked down link:2066 item:190926|Contains|{3950360} [rare]Infested Automa Core]|{4038106} [rare]Spatial Opener]|{4381149} [legendary]Cosmic Flux] (200)",},
 		[65573] = "Bushel of Progenitor Produce|60+ 64953 64952|47.44 95.23|\"Defeating Nascent Servitors will give you a stacking buff required to open the door\"|treasure item:190853|Requires|{4038102} [spell]Creation Catalyst Overcharge] (5)||Contains|{237269} [rare]Bushel of Mysterious Fruit]|{236571} [rare]Chef Pocopoc]|{4381149} [legendary]Cosmic Flux] (200)",
 		[65592] = "Teleporter Lock|60+ 64953 64952|50.01 76.71|\"Under a Bloomthorn Vine\"|treasure interact",
+		[65381] = "Protoform Schematic|60+ 64953 64952 65427 -item:189458|62.03 43.53||treasure item:189458|Contains|{4217590} [rare]Schematic: Desertwing Hunter]",
+		[65400] = "Protoform Schematic|60+ 64953 64952 65427 -item:189477|64.2 35.6|\"Inside a cage\"|treasure item:189477|Contains|{4217590} [rare]Schematic: Darkened Vombata]",
+		[65396] = "Protoform Schematic|60+ 64953 64952 65427 -item:189473|48.89 34.74||treasure down link:2029 item:189473|Contains|{4217590} [rare]Schematic: Bronzewing Vespoid]",
 	},
 
 	-- Crystal Wards
 	[2066] = {
+		-- Treasure
 		[65572] = {"Undulating Foliage|60+ 64953 64952 65589 65590 65591 65592|49.14 34.57|\"Use the unlocked Teleporter\"|treasure item:190926|Contains|{3950360} [rare]Infested Automa Core]|{4038106} [rare]Spatial Opener]|{4381149} [legendary]Cosmic Flux] (200)", "Undulating Foliage|60+ 64953 64952 -65589,-65590,-65591,-65592|49.14 34.57|\"Open the four Teleporter Locks to unlock this treasure\"|treasure locked item:190926|Contains|{3950360} [rare]Infested Automa Core]|{4038106} [rare]Spatial Opener]|{4381149} [legendary]Cosmic Flux] (200)",},
 		[65589] = "Teleporter Lock|60+ 64953 64952|39.5 68.65|\"Inside a bush\"|treasure interact",
 		[65590] = "Teleporter Lock|60+ 64953 64952|60.22 87.14|\"Under a Bloomthorn Vine\"|treasure interact",
@@ -109,12 +122,20 @@ Data.Vignettes = {
 
 	-- Nexus of Actualization
 	[2030] = {
+		-- Treasure
 		[65175] = {"Orb|60+ 64953 64952|71.8 48.98||treasure interact", "Template Archive|60+ 64953 64952|51.59 87.82|\"Push the Orb in order to gain access to the inner chamber\"|treasure item:190060|Contains|{774766} [rare]Adventurous Pocopoc]",},
 	},
 
 	-- Blooming Foundry
 	[2027] = {
+		-- Treasure
 		[65566] = "Protopear|60+ 64953 64952 64645|65.73 50.15|\"Bring up to 5 Pollen Clouds to the Protopear one at a time until it ripens\"|treasure item:190058|Contains|{1658612} [rare]Peaceful Pocopoc]",
+	},
+
+	-- Gravid Repose
+	[2029] = {
+		-- Treasure
+		[65396] = "Protoform Schematic|60+ 64953 64952 65427 -item:189473|48.99 40.49|\"On top of a ramp hidden inside a container\"|treasure item:189473|Contains|{4217590} [rare]Schematic: Bronzewing Vespoid]",
 	},
 
 
