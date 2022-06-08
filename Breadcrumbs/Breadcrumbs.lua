@@ -324,8 +324,8 @@ function Breadcrumbs:UpdateMap(event, ...)
 								Pin:SetNormalTexture(flag_icon)
 							elseif flags["kill"] then
 								Pin:SetNormalTexture("Interface/AddOns/Breadcrumbs/Textures/QuestKill")
-							elseif flags["weekly"] then
-								Pin:SetNormalTexture("Interface/AddOns/Breadcrumbs/Textures/QuestWeekly")
+							--elseif flags["weekly"] then
+							--	Pin:SetNormalTexture("Interface/AddOns/Breadcrumbs/Textures/QuestWeekly")
 							else
 								Pin:SetNormalAtlas(flags["elsewhere"] and "poi-traveldirections-arrow" or flags["warboard"] and "warboard" or flags["campaign"] and "quest-campaign-available" or flags["dailycampaign"] and "quest-dailycampaign-available" or flags["up"] and "questnormal" or flags["down"] and "questnormal" or flags["artifact"] and "questartifact" or flags["legendary"] and "questlegendary" or flags["daily"] and "questdaily" or "questnormal")
 							end
