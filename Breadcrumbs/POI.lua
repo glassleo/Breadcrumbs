@@ -136,7 +136,7 @@ Data.POI = {
 		"136240:objective|[Alchemist]|1+|46.2 35.7|tooltip|Xy'mal||Wants|{132380} [Damaged Flask]|{132378} [Potion of Invisibility]|{1385244} [Vial of Nurgash's Blood]",
 		"133210:objective|[Exotic Spices]|1+|44.5 33.1|tooltip|Xy'nara||Wants|{1392949} [Aromatic Spices]|{2178530} [Cheap Spices]|{2178533} [Myza's Special Spice]",
 		"134332:objective|[Rare Texts]|1+|45.7 30.7|tooltip|Xy'kitab||Wants|{133739} [A History of Maldraxxus]|{442732} [Denathrius' Private Diary]|{133740} [Worn Journal]",
-		--"236572:objective|[Overpriced Art]|1+|36.6 32.9|tooltip|Xy'aro",
+		--"236572:objective|[Overpriced Art]|1+|36.6 32.9|tooltip|Xy'aro", -- Not used
 	},
 
 
@@ -157,6 +157,9 @@ Data.POI = {
 
 	-- Seat of the Primus
 	[1698] = {
+		-- Portal
+		"POI/Portal|Portal to Oribos|research:1052|56.37 31.5", -- Requires Flying Fortress (Tier 3 Transport Network) (1052)
+
 		-- Mailbox
 		"mailbox:objective|Mailbox|mailbox|48.33 28.16",
 
@@ -194,10 +197,16 @@ Data.POI = {
 		"teleportationnetwork-revendreth-32x32:small|Sinfall Reaches|1+|70.9 38.1|link:1699",
 
 		-- Sinfall Surface Flyer
-		"taxinode_neutral|Sinfall Surface Flyer|1+|67.18 47.39",
+		"taxinode_neutral:small|Sinfall Surface Flyer|1+|67.18 47.39",
 
 		-- Item Upgrades
 		"upgradeitem-32x32|[Item Upgrades]|60+|73.45 24.83",
+	},
+
+	-- Revendreth
+	[1525] = {
+		-- NPC
+		"repair:small|Deadfoot|item:182744 -item:182746|48.73 68.52|tooltip|\"Purchase an All-In-One Belt Repair Kit from Deadfoot to repair your Ornate Belt Buckle\"",
 	},
 
 
