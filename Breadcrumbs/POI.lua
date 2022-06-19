@@ -121,6 +121,19 @@ Data.POI = {
 		"teleportationnetwork-32x32:small|Teleporter|1+|54.85 86.15",
 	},
 
+	-- Gravid Repose
+	[2029] = {
+		-- Locus Shift
+		"flightmaster_progenitorobelisk-taxinode_neutral:small|Gravid Repose Locus|60+|59.42 41.33",
+		"flightmaster_progenitorobelisk-taxinode_neutral:small|Interior Locus|60+|40.34 34.36",
+		"flightmaster_progenitorobelisk-taxinode_neutral:small|Arcae Locus|60+ 65378|36.51 31.61",
+		"flightmaster_progenitorobelisk-taxinode_neutral:small|Repertory Alcove|60+ 65344|34.58 67.16",
+
+		-- Requisites Originator
+		"creationcatalyst-32x32|[Requisites Originator]|60+ 65344 65328 research:1901 research:1904 -65532|30.77 64.43|tooltip|Requisition something once per week.||[green]Avaialble]",
+		"creationcatalyst-32x32|[Requisites Originator]|60+ 65344 65328 research:1901 research:1904 65532|30.77 64.43|tooltip|Requisition something once per week.||[red]Already used this week]",
+	},
+
 
 	--[[ Tazavesih, the Veiled Market ]]--
 
