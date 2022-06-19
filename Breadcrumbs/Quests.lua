@@ -285,6 +285,13 @@ Data.Quests = {
 		[65260] = "A Long Walk|60+ 65250|52.38 39.84|Uther",
 		[65263] = "The Fate of Sylvanas|60+ 65260|38.89 70|Arbiter Pelagos|elsewhere link:1673|\"Tal-Inara can take you to the Crucible\"",
 		[65297] = "Penance and Renewal|60+ 65263|38.89 70|Arbiter Pelagos|elsewhere link:1673|\"Tal-Inara can take you to the Crucible\"",
+		[66170] = "Silent Vigil|60+ 65297|48.93 55.01|Dori'thur|up link:1671",
+	},
+
+	-- Ring of Transference
+	[1671] = {
+		-- Epilogue: Judgment
+		[66170] = "Silent Vigil|60+ 65297|46.56 55.93|Dori'thur",
 	},
 
 	-- The Crucible
