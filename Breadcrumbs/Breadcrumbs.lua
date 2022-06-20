@@ -663,6 +663,9 @@ function Breadcrumbs:UpdateMap(event, ...)
 								elseif flags["interact"] then
 									Pin:SetNormalTexture("Interface/AddOns/Breadcrumbs/Textures/Interact")
 									Pin:SetHighlightTexture("Interface/AddOns/Breadcrumbs/Textures/Interact")
+								elseif flags["scroll"] then
+									Pin:SetNormalTexture("Interface/AddOns/Breadcrumbs/Textures/Scroll")
+									Pin:SetHighlightTexture("Interface/AddOns/Breadcrumbs/Textures/Scroll")
 								elseif flags["inspect"] then
 									Pin:SetNormalTexture("Interface/AddOns/Breadcrumbs/Textures/Inspect")
 									Pin:SetHighlightTexture("Interface/AddOns/Breadcrumbs/Textures/Inspect")
