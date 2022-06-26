@@ -197,7 +197,7 @@ Data.Quests = {
 	-- Ring of Fates
 	[1670] = {
 		-- The Threads of Fate
-		[62716] = "Re-Introductions|62704|20.74 50.29|Fatescribe Roh-Tahl|campaign",
+		[62716] = "Re-Introductions|59- 62704|20.74 50.29|Fatescribe Roh-Tahl|campaign",
 		[62000] = "Choosing Your Purpose|62716|38.89 70|Tal-Inara|campaign",
 		-- Threads of Fate breadcrumb quests are only available after completing a zone quest (not Torghast/Battlegrounds)
 		[62159] = "Aiding the Shadowlands|59- 62716|38.89 70|Tal-Inara|campaign", -- #1
