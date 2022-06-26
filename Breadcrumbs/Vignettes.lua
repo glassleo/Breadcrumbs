@@ -82,7 +82,7 @@ Data.Vignettes = {
 		[65393] = "Protoform Schematic|60+ 64953 64952 65178 65427 -item:189469|66.97 69.42||treasure scroll item:189469|Contains|{4217590} [rare]Schematic: Prototype Leaper]",
 		[65401] = "Protoform Schematic|60+ 64953 64952 65545 65427 -item:189478|36.95 78.27||treasure scroll item:189478|Contains|{4217590} [rare]Schematic: Adorned Vombata]",
 		[65447] = "Stolen Relic|60+ 64953 64952|37.9 65.2||treasure|Contains|{/Random} [rare]Random Jewelry (236+)]|{4381149} [legendary]Cosmic Flux] (200)",
-		[65465] = {"Domination Cache|60+ 64953 64952 item:189704|60.02 18.98|\"The key is a rare drop from elites in the Endless Sands\"|treasure item:190638|Requires|{134245} [green]Dominance Key]||Contains|{3734530} [epic]Tormented Mawsteel Greatsword]|{4038106} [rare]Spatial Opener]|{4381149} [legendary]Cosmic Flux] (200)", "Domination Cache|60+ 64953 64952 -item:189704|60.02 18.98|\"The key is a rare drop from elites within the Endless Sands\"|treasure locked item:190638|Requires|{134245} [red]Dominance Key]||Contains|{3734530} [epic]Tormented Mawsteel Greatsword]|{4038106} [rare]Spatial Opener]|{4381149} [legendary]Cosmic Flux] (200)",},
+		[65465] = {"Domination Cache|60+ 64953 64952 item:189704|60.02 18.98|\"The key is a rare drop from elites in the Endless Sands\"|treasure item:190638|Requires|{134245} [green]Dominance Key]||Contains|{3734530} [epic]Tormented Mawsteel Greatsword]|{4038106} [rare]Spatial Opener]|{4381149} [legendary]Cosmic Flux] (200)", "Domination Cache|60+ 64953 64952 -item:189704|60.02 18.98|\"The key is a rare drop from elites in the Endless Sands\"|treasure locked item:190638|Requires|{134245} [red]Dominance Key]||Contains|{3734530} [epic]Tormented Mawsteel Greatsword]|{4038106} [rare]Spatial Opener]|{4381149} [legendary]Cosmic Flux] (200)",},
 		[65480] = "Gnawed Valise|60+ 64953 64952|38.98 73.21||treasure item:188054::::::::60:::27:3:6652:8108:1482:1:28:2057|Contains|{4096872} [rare]Antecedent Drape]|{4381149} [legendary]Cosmic Flux] (200)",
 		[65487] = "Fallen Vault|60+ 64953 64952|51.56 9.9||treasure|Contains|{4038106} [rare]Spatial Opener]|{/Random} [uncommon]Random Equipment (229)]|{4381149} [legendary]Cosmic Flux] (200)",
 		[65489] = {
@@ -113,9 +113,9 @@ Data.Vignettes = {
 		[65388] = "Protoform Schematic|60+ 64953 64952 65427 -item:189465|31.48 50.33||treasure scroll item:189465|Contains|{4217590} [rare]Schematic: Genesis Crawler]",
 		[65379] = "Protoform Schematic|60+ 64953 64952 65427 -item:189456|60.61 30.53||treasure scroll item:189456|Contains|{4217590} [rare]Schematic: Sundered Zerethsteed]",
 		[65395] = "Protoform Schematic|60+ 64953 64952 65427 -item:189472|50.32 27.05|\"Buried in a sand pile on the first platform of Resonant Peaks\"|treasure scroll item:189472|Contains|{4217590} [rare]Schematic: Vespoid Flutterer]",
-		[65395] = "Protoform Schematic|60+ 64953 64952 65427 -item:189472|50.32 27.05|\"Buried in a sand pile on the first platform of Resonant Peaks\"|treasure scroll item:189472|Contains|{4217590} [rare]Schematic: Vespoid Flutterer]",
 		[65346] = "{4238934} Dormant Alcove Arrangement|60+ 65328|51.04 32.48|\"On top of a pillar\"|treasure interact|Unlocks access to the Repertory Alcove",
 		[65344] = "{4238930} Repertory Alcove Arrangement|60+ 65328|49.62 30.93|\"Inside the Terrestrial Cache\"|treasure interact|Unlocks access to the Dormant Alcove",
+		[65387] = "Protoform Schematic|60+ 64953 64952 65427 -item:189464|47.69 9.55|\"On top of the arch\"|treasure scroll item:189464|Contains|{4217590} [rare]Schematic: Scarlet Helicid]",
 	},
 
 	-- Crystal Wards
