@@ -73,14 +73,14 @@ Data.Vignettes = {
 		-- Treasure
 		[64545] = {"Dangerous Orb of Power|60+ 64953 64952|59.43 76.83||treasure interact", "Submerged Chest|60+ 64953 64952|58.57 72.85|\"To access the treasure, carry the Dangerous Orb of Power to the nearby Forgotten Pump\"|treasure item:190061|Contains|{1676466} [rare]Admiral Pocopoc]|{4038106} [rare]Spatial Opener]|{4381149} [legendary]Cosmic Flux] (200)",},
 		[64667] = "Damaged Jiro Stash|60+ 64953 64952|38.26 37.24||treasure item:190637|Contains|{4284643} [epic]Percussive Maintenance Instrument]|{4381149} [legendary]Cosmic Flux] (200)",
-		[65173] = {"{4238930} Tablet|60+ 64953 64952 65419|57.87 78.9||treasure interact down", "Library Vault|60+ 64953 64952 65419|58.85 77.06|\"Pick up the nearby Tablet with the correct symbol to reveal the treasure\"|treasure down item:189447|Requires|{4238930} [spell]Memorized]||Contains|{4217590} [rare]Schematic: Viperid Menace]",},
+		[65173] = {"{4238930} Tablet|60+ 64953 64952 65419|57.87 78.9||treasure interact down", "Library Vault|60+ 64953 64952 65419|58.85 77.06|\"Pick up the nearby Tablet with the correct symbol to reveal the treasure\"|treasure scroll down item:189447|Requires|{4238930} [spell]Memorized]||Contains|{4217590} [rare]Schematic: Viperid Menace]",},
 		[65175] = "Template Archive|60+ 64953 64952|59.61 46.16||treasure down link:2030 item:190060|Contains|{774766} [rare]Adventurous Pocopoc]|{4381149} [legendary]Cosmic Flux] (200)",
 		[65178] = {"Forgotten Proto-Vault|60+ 64953 64952 active:65089 _65427|66.99 69.4||treasure|Requires|[green]Frog'it]||Unlocks|{4217590} [rare]Schematic: Prototype Leaper]", "Forgotten Proto-Vault|60+ 64953 64952 active:65089 65427|66.9 69.4||treasure item:189469|Requires|[green]Frog'it]||Contains|{4217590} [rare]Schematic: Prototype Leaper]|{4381149} [legendary]Cosmic Flux] (200)", "Forgotten Proto-Vault|60+ 64953 64952 -active:65089 _65427|66.99 69.4||treasure locked|Requires|[red]Frog'it]||Contains|{4381149} [legendary]Cosmic Flux] (200)||Unlocks|{4217590} [rare]Schematic: Prototype Leaper]", "Forgotten Proto-Vault|60+ 64953 64952 -active:65089 65427|66.9 69.4||treasure locked item:189469|Requires|[red]Frog'it]||Contains|{4217590} [rare]Schematic: Prototype Leaper]|{4381149} [legendary]Cosmic Flux] (200)",},
 		[65270] = "Symphonic Vault|60+ 64953 64952|52.6 62.97|\"Use the four nearby Broken Consoles in the correct sequence to unlock this treasure\"|treasure|Unlock Sequence|1. [spell]Right, furthest in]|2. [spell]Left, on top of platform]|3. [spell]Right, closest to entrance]|4. [spell]Left, near treasure]||Contains|{4038106} [rare]Spatial Opener]|{4381149} [legendary]Cosmic Flux] (200)",
 		[65333] = "Protoform Schematic|60+ 64953 64952 65522 -item:189435|53.66 72.62||treasure scroll down item:189435|Contains|{4217590} [rare]Schematic: Multichicken]",
 		[65383] = "Protoform Schematic|60+ 64953 64952 65427 -item:189460|67.4 40.24|\"Inside the Chamber of Shaping behind the Dominated Architect\"|treasure scroll down item:189460|Contains|{4217590} [rare]Schematic: Raptora Swooper]",
 		[65393] = "Protoform Schematic|60+ 64953 64952 65178 65427 -item:189469|66.97 69.42||treasure scroll item:189469|Contains|{4217590} [rare]Schematic: Prototype Leaper]",
-		[65401] = "Protoform Schematic|60+ 64953 64952 65545 65427 -item:189478|36.95 78.27||treasure scroll item:189478|Contains|{4217590} [rare]Schematic: Adorned Vombata]",
+		[65401] = "Protoform Schematic|60+ 64953 64952 65545 65427 -item:189478|36.95 78.26||treasure scroll item:189478|Contains|{4217590} [rare]Schematic: Adorned Vombata]",
 		[65447] = "Stolen Relic|60+ 64953 64952|37.9 65.2||treasure|Contains|{/Random} [rare]Random Jewelry (236+)]|{4381149} [legendary]Cosmic Flux] (200)",
 		[65465] = {"Domination Cache|60+ 64953 64952 item:189704|60.02 18.98|\"The key is a rare drop from elites in the Endless Sands\"|treasure item:190638|Requires|{134245} [green]Dominance Key]||Contains|{3734530} [epic]Tormented Mawsteel Greatsword]|{4038106} [rare]Spatial Opener]|{4381149} [legendary]Cosmic Flux] (200)", "Domination Cache|60+ 64953 64952 -item:189704|60.02 18.98|\"The key is a rare drop from elites in the Endless Sands\"|treasure locked item:190638|Requires|{134245} [red]Dominance Key]||Contains|{3734530} [epic]Tormented Mawsteel Greatsword]|{4038106} [rare]Spatial Opener]|{4381149} [legendary]Cosmic Flux] (200)",},
 		[65480] = "Gnawed Valise|60+ 64953 64952|38.98 73.21||treasure item:188054::::::::60:::27:3:6652:8108:1482:1:28:2057|Contains|{4096872} [rare]Antecedent Drape]|{4381149} [legendary]Cosmic Flux] (200)",
@@ -105,9 +105,9 @@ Data.Vignettes = {
 		[65566] = "Protopear|60+ 64953 64952 64645|66.71 76.8||treasure down link:2027 item:190058|Contains|{1658612} [rare]Peaceful Pocopoc]|{4381149} [legendary]Cosmic Flux] (200)",
 		[65572] = {"Undulating Foliage|60+ 64953 64952 65589 65590 65591 65592|51.69 79.61|\"Open the four Teleporter Locks to unlock this treasure\"|treasure down link:2066 item:190926|Contains|{3950360} [rare]Infested Automa Core]|{4038106} [rare]Spatial Opener]|{4381149} [legendary]Cosmic Flux] (200)", "Undulating Foliage|60+ 64953 64952 -65589,-65590,-65591,-65592|51.69 79.61|\"Open the four Teleporter Locks to unlock this treasure\"|treasure locked down link:2066 item:190926|Contains|{3950360} [rare]Infested Automa Core]|{4038106} [rare]Spatial Opener]|{4381149} [legendary]Cosmic Flux] (200)",},
 		[65573] = "Bushel of Progenitor Produce|60+ 64953 64952|47.44 95.23|\"Defeating Nascent Servitors will give you a stacking buff required to open the door\"|treasure item:190853|Requires|{4038102} [spell]Creation Catalyst Overcharge] (5)||Contains|{237269} [rare]Bushel of Mysterious Fruit]|{236571} [rare]Chef Pocopoc]|{4381149} [legendary]Cosmic Flux] (200)",
-		[65592] = "Teleporter Lock|60+ 64953 64952|50.01 76.71|\"Under a Bloomthorn Vine\"|treasure interact",
+		[65592] = "Teleporter Lock|60+ 64953 64952|50.01 76.71|\"Underneath a Bloomthorn Vine\"|treasure interact",
 		[65381] = "Protoform Schematic|60+ 64953 64952 65427 -item:189458|62.03 43.53|\"On top of a pillar\"|treasure scroll item:189458|Contains|{4217590} [rare]Schematic: Desertwing Hunter]",
-		[65400] = "Protoform Schematic|60+ 64953 64952 65427 -item:189477|64.2 35.6|\"Inside a cage\"|treasure scroll item:189477|Contains|{4217590} [rare]Schematic: Darkened Vombata]",
+		[65400] = "Protoform Schematic|60+ 64953 64952 65427 -item:189477|64.2 35.6|\"In a cage\"|treasure scroll item:189477|Contains|{4217590} [rare]Schematic: Darkened Vombata]",
 		[65389] = "Protoform Schematic|60+ +64811 64953 64952 65427 -item:189466|63.03 21.49|\"Inside a vault\"|treasure scroll item:189466|Contains|{4217590} [rare]Schematic: Tarachnid Creeper]",
 		[65396] = "Protoform Schematic|60+ 64953 64952 65427 -item:189473|48.89 34.74||treasure scroll down link:2029 item:189473|Contains|{4217590} [rare]Schematic: Bronzewing Vespoid]",
 		[65388] = "Protoform Schematic|60+ 64953 64952 65427 -item:189465|31.48 50.33||treasure scroll item:189465|Contains|{4217590} [rare]Schematic: Genesis Crawler]",
@@ -115,16 +115,20 @@ Data.Vignettes = {
 		[65395] = "Protoform Schematic|60+ 64953 64952 65427 -item:189472|50.32 27.05|\"Buried in a sand pile on the first platform of Resonant Peaks\"|treasure scroll item:189472|Contains|{4217590} [rare]Schematic: Vespoid Flutterer]",
 		[65346] = "{4238934} Dormant Alcove Arrangement|60+ 65328|51.04 32.48|\"On top of a pillar\"|treasure interact|Unlocks access to the Repertory Alcove",
 		[65344] = "{4238930} Repertory Alcove Arrangement|60+ 65328|49.62 30.93|\"Inside the Terrestrial Cache\"|treasure interact|Unlocks access to the Dormant Alcove",
+		[65343] = "{4238929} Camber Alcove Arrangement|60+ 65328|47.68 34.48|\"On the wall at the back side of the building\"|treasure interact|Unlocks access to the Camber Alcove",
+		[65347] = "{4238937} Fulgore Alcove Arrangement|60+ 65328|47.84 30.38|\"At one of the lower pillar platforms\"|treasure interact|Unlocks access to the Fulgor Alcove",
+		[65345] = "{4238933} Rondure Alcove Arrangement|60+ 65328|50.45 27.6|\"Underneath the top pillar platform\"|treasure interact|Unlocks access to the Rondure Alcove",
 		[65387] = "Protoform Schematic|60+ 64953 64952 65427 -item:189464|47.69 9.55|\"On top of the arch\"|treasure scroll item:189464|Contains|{4217590} [rare]Schematic: Scarlet Helicid]",
+		[65386] = "Prototype Schematic|60+ 64953 64952 65427 65343 -item:189463|50.3 34.9||treasure link:2029 down item:189463|Contains|{4217590} [rare]Schematic: Unsuccessful Prototype Fleetpod]|{4381149} [legendary]Cosmic Flux] (200)",
 	},
 
 	-- Crystal Wards
 	[2066] = {
 		-- Treasure
 		[65572] = {"Undulating Foliage|60+ 64953 64952 65589 65590 65591 65592|49.14 34.57|\"Use the unlocked Teleporter\"|treasure item:190926|Contains|{3950360} [rare]Infested Automa Core]|{4038106} [rare]Spatial Opener]|{4381149} [legendary]Cosmic Flux] (200)", "Undulating Foliage|60+ 64953 64952 -65589,-65590,-65591,-65592|49.14 34.57|\"Open the four Teleporter Locks to unlock this treasure\"|treasure locked item:190926|Contains|{3950360} [rare]Infested Automa Core]|{4038106} [rare]Spatial Opener]|{4381149} [legendary]Cosmic Flux] (200)",},
-		[65589] = "Teleporter Lock|60+ 64953 64952|39.5 68.65|\"Inside a bush\"|treasure interact",
-		[65590] = "Teleporter Lock|60+ 64953 64952|60.22 87.14|\"Under a Bloomthorn Vine\"|treasure interact",
-		[65591] = "Teleporter Lock|60+ 64953 64952|69.79 52.57|\"Under a Bloomthorn Vine\"|treasure interact",
+		[65589] = "Teleporter Lock|60+ 64953 64952|39.5 68.65|\"In a bush\"|treasure interact",
+		[65590] = "Teleporter Lock|60+ 64953 64952|60.22 87.14|\"Underneath a Bloomthorn Vine\"|treasure interact",
+		[65591] = "Teleporter Lock|60+ 64953 64952|69.79 52.57|\"Underneath a Bloomthorn Vine\"|treasure interact",
 	},
 
 	-- Nexus of Actualization
@@ -142,7 +146,28 @@ Data.Vignettes = {
 	-- Gravid Repose
 	[2029] = {
 		-- Treasure
-		[65396] = "Protoform Schematic|60+ 64953 64952 65427 -item:189473|48.99 40.49|\"Hidden inside a container\"|treasure scroll item:189473|Contains|{4217590} [rare]Schematic: Bronzewing Vespoid]",
+		[65396] = "Protoform Schematic|60+ 64953 64952 65427 -item:189473|48.99 40.49|\"Hidden in a container\"|treasure scroll item:189473|Contains|{4217590} [rare]Schematic: Bronzewing Vespoid]",
+		[65650] = {
+			"Inert Prototype|60+ 64953 64952 65427 65328 -65343 -item:189463|51.94 79.56|Camber Alcove|treasure locked|\"Retrieve the Camber Arrangement Index to unlock the Locus Shift to this location.\"",
+			"Inert Prototype|60+ 64953 64952 65427 65328 65343 -item:189463|51.94 79.56|Camber Alcove|treasure interact|\"Starts the Inert Protoype mini game. Collect five golden rings without hitting too many dust piles to unlock the Prototype Schematic.\"",
+		},
+		[65386] = {
+			"Prototype Schematic|60+ 64953 64952 65427 65328 -65650 -item:189463|49.68 72.03|Camber Alcove|treasure locked item:189463|Contains|{4217590} [rare]Schematic: Unsuccessful Prototype Fleetpod]|{4381149} [legendary]Cosmic Flux] (200)",
+			"Prototype Schematic|60+ 64953 64952 65427 65328 65650 -item:189463|49.68 72.03|Camber Alcove|treasure item:189463|Contains|{4217590} [rare]Schematic: Unsuccessful Prototype Fleetpod]|{4381149} [legendary]Cosmic Flux] (200)",
+		},
+		[65643] = {
+			"Torn Ethereal Drape|60+ 64953 64952 65328 -65347|23 90|Fulgor Alcove|treasure locked item:188054::::::::60:::27:3:6652:8108:1482:1:28:2057|\"Retrieve the Fulgore Arrangement Index to unlock the Locus Shift to this location.\"||Contains|{4096872} [rare]Antecedent Drape]|{4381149} [legendary]Cosmic Flux] (200)",
+			"Torn Ethereal Drape|60+ 64953 64952 65328 65347|23 90|Fulgor Alcove|treasure item:188054::::::::60:::27:3:6652:8108:1482:1:28:2057|Contains|{4096872} [rare]Antecedent Drape]|{4381149} [legendary]Cosmic Flux] (200)",
+		}
+		-- Rondure Cache 65567
+
+		-- Lumpy 65494
+		-- Glinting 65495
+		-- Shifting 65496
+		-- Humming 65497
+		-- Misshapen 65498
+		-- Sparkling 65499
+		-- Ticking 65500
 	},
 
 
@@ -329,7 +354,7 @@ Data.Vignettes = {
 		-- Treasure
 		[38355] = "Small Treasure Chest|10+|64.7 51.26||treasure|Contains|{1397630} [Order Resources]",
 		[38363] = "Small Treasure Chest|10+|43.39 75.9||treasure|Contains|{1397630} [Order Resources]",
-		[38366] = "Small Treasure Chest|10+|48.68 73.79|\"Inside a tree trunk\"|treasure|Contains|{1397630} [Order Resources]",
+		[38366] = "Small Treasure Chest|10+|48.68 73.79|\"In a tree trunk\"|treasure|Contains|{1397630} [Order Resources]",
 		[38369] = "Small Treasure Chest|10+|39.95 54.6||treasure|Contains|{1397630} [Order Resources]", -- has phasing issues with the healer Broken Shore quest line
 		[38386] = "Small Treasure Chest|10+|67.39 53.41||treasure|Contains|{1397630} [Order Resources]",
 		[39079] = "Small Treasure Chest|10+|38.64 67.18||treasure|Contains|{1397630} [Order Resources]",
