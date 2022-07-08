@@ -200,12 +200,12 @@ Data.Quests = {
 		[62716] = "Re-Introductions|59- 62704|20.74 50.29|Fatescribe Roh-Tahl|campaign",
 		[62000] = "Choosing Your Purpose|62716|38.89 70|Tal-Inara|campaign",
 		-- Threads of Fate breadcrumb quests are only available after completing a zone quest (not Torghast/Battlegrounds)
-		[62159] = "Aiding the Shadowlands|59- 62716|38.89 70|Tal-Inara|campaign", -- #1
+		[62159] = "Aiding the Shadowlands|59- 62716 ~65030 ~65032 ~65033 ~65034 ~64846 ~64849 ~64850 ~65035|38.89 70|Tal-Inara|campaign", -- #1
 		-- Vevica HQT 64067,64073,64405
 		[63208] = "The Next Step|50+ 59- 62159 62729,62761,62776,62779|38.89 70|Tal-Inara|campaign", -- #2
 		-- HQT 64137
-		[63209] = "Furthering the Purpose|59- 63208 64137|38.89 70|Tal-Inara|campaign", -- #3
-		[63210] = {"The Last Step|50+ 59- 63209 -62729 62761 62776 62779|38.89 70|Tal-Inara|campaign", "The Last Step|50+ 59- 63209 62729 -62761 62776 62779|38.89 70|Tal-Inara|campaign", "The Last Step|50+ 59- 63209 62729 62761 -62776 62779|38.89 70|Tal-Inara|campaign", "The Last Step|50+ 59- 63209 62729 62761 62776 -62779|38.89 70|Tal-Inara|campaign",}, -- #4
+		--[63209] = "Furthering the Purpose|59- 63208 64137 ~65030 ~65032 ~65033 ~65034 ~64846 ~64849 ~64850 ~65035|38.89 70|Tal-Inara|campaign", -- #3
+		[63210] = {"The Last Step|50+ 59- 63209 -62729 62761 62776 62779 ~65030 ~65032 ~65033 ~65034 ~64846 ~64849 ~64850 ~65035|38.89 70|Tal-Inara|campaign", "The Last Step|50+ 59- 63209 62729 -62761 62776 62779|38.89 70|Tal-Inara|campaign", "The Last Step|50+ 59- 63209 62729 62761 -62776 62779|38.89 70|Tal-Inara|campaign", "The Last Step|50+ 59- 63209 62729 62761 62776 -62779|38.89 70|Tal-Inara|campaign",}, -- #4
 
 		-- Threads of Fate: Bastion
 		-- 62151 Bastion chosen - Also given optional breadcrumb 62275
