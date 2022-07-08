@@ -552,7 +552,7 @@ function Breadcrumbs:UpdateMap(event, ...)
 				for i = 1, type(Data.Objectives[map][id]) == "string" and 1 or #Data.Objectives[map][id] do
 					local datastring = type(Data.Objectives[map][id]) == "string" and Data.Objectives[map][id] or Data.Objectives[map][id][i]
 					-- Get data
-					local icon, coordinates, title, line1, line2, line3, line4, line5, line6, line7, line8, line9 = strsplit("|", datastring)
+					local icon, coordinates, title, line1, line2, line3, line4, line5, line6, line7, line8, line9, line10, line11, line12 = strsplit("|", datastring)
 					local x, y = strsplit(" ", coordinates or "")
 					x = tonumber(x) or nil
 					y = tonumber(y) or nil
@@ -587,6 +587,9 @@ function Breadcrumbs:UpdateMap(event, ...)
 									if line7 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(line7)) end
 									if line8 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(line8)) end
 									if line9 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(line9)) end
+									if line10 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(line10)) end
+									if line11 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(line11)) end
+									if line12 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(line12)) end
 
 									if ZA and ZA.DebugMode then -- Debug
 										GameTooltip:AddLine(" ")
@@ -619,7 +622,7 @@ function Breadcrumbs:UpdateMap(event, ...)
 					for i = 1, type(Data.Vignettes[map][id]) == "string" and 1 or #Data.Vignettes[map][id] do
 						local datastring = type(Data.Vignettes[map][id]) == "string" and Data.Vignettes[map][id] or Data.Vignettes[map][id][i]
 						-- Check if we meet the quest requirements
-						local eligible, title, x, y, xx, yy, source, flags, tip1, tip2, tip3, tip4, tip5, tip6, tip7, tip8, tip9 = Breadcrumbs:CheckQuest(map, id, datastring)
+						local eligible, title, x, y, xx, yy, source, flags, tip1, tip2, tip3, tip4, tip5, tip6, tip7, tip8, tip9, tip10, tip11, tip12 = Breadcrumbs:CheckQuest(map, id, datastring)
 						
 						if eligible and x and y then
 							-- Build the flags table
@@ -730,6 +733,9 @@ function Breadcrumbs:UpdateMap(event, ...)
 										if tip7 then if strlen(tip7) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip7, flags), nil, nil, nil, true) else GameTooltip:AddLine(" ") end end
 										if tip8 then if strlen(tip8) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip8, flags), nil, nil, nil, true) else GameTooltip:AddLine(" ") end end
 										if tip9 then if strlen(tip9) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip9, flags), nil, nil, nil, true) else GameTooltip:AddLine(" ") end end
+										if tip10 then if strlen(tip10) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip10, flags), nil, nil, nil, true) else GameTooltip:AddLine(" ") end end
+										if tip11 then if strlen(tip11) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip11, flags), nil, nil, nil, true) else GameTooltip:AddLine(" ") end end
+										if tip12 then if strlen(tip12) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip12, flags), nil, nil, nil, true) else GameTooltip:AddLine(" ") end end
 									end
 									if ZA and ZA.DebugMode then -- Debug
 										GameTooltip:AddLine(" ")
@@ -781,7 +787,7 @@ function Breadcrumbs:UpdateMap(event, ...)
 			for i = 1, type(data) == "string" and 1 or #data do
 				local datastring = type(data) == "string" and data or data[i]
 				-- Check if we meet the quest requirements
-				local eligible, texture, title, x, y, flags, tip1, tip2, tip3, tip4, tip5, tip6, tip7, tip8, tip9 = Breadcrumbs:CheckPOI(map, datastring)
+				local eligible, texture, title, x, y, flags, tip1, tip2, tip3, tip4, tip5, tip6, tip7, tip8, tip9, tip10, tip11, tip12 = Breadcrumbs:CheckPOI(map, datastring)
 
 				if eligible and x and y then
 					-- Pin size
@@ -849,6 +855,9 @@ function Breadcrumbs:UpdateMap(event, ...)
 								if tip7 then if strlen(tip7) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip7), nil, nil, nil, true) else GameTooltip:AddLine(" ") end end
 								if tip8 then if strlen(tip8) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip8), nil, nil, nil, true) else GameTooltip:AddLine(" ") end end
 								if tip9 then if strlen(tip9) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip9), nil, nil, nil, true) else GameTooltip:AddLine(" ") end end
+								if tip10 then if strlen(tip10) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip10), nil, nil, nil, true) else GameTooltip:AddLine(" ") end end
+								if tip11 then if strlen(tip11) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip11), nil, nil, nil, true) else GameTooltip:AddLine(" ") end end
+								if tip12 then if strlen(tip12) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip12), nil, nil, nil, true) else GameTooltip:AddLine(" ") end end
 							end
 
 							if flags["creationcatalyst"] then
@@ -933,7 +942,7 @@ Breadcrumbs:RegisterEvent("QUEST_WATCH_LIST_CHANGED", "FixBonusObjectivesDelayed
 
 function Breadcrumbs:CheckQuest(map, quest, datastring)
 	-- Check requirements
-	local title, requirements, coordinates, source, flags, help, help2, help3, help4, help5, help6, help7, help8, help9 = strsplit("|", datastring)
+	local title, requirements, coordinates, source, flags, help, help2, help3, help4, help5, help6, help7, help8, help9, help10, help11, help12 = strsplit("|", datastring)
 	local data = { strsplit(" ", strlower(requirements)) }
 	local x, y, xx, yy = strsplit(" ", coordinates or "")
 
@@ -1093,12 +1102,12 @@ function Breadcrumbs:CheckQuest(map, quest, datastring)
 	end
 
 	-- eligible, title, x, y, xx, yy, source, flags, help, ...
-	return pass, title, x, y, xx, yy, source, flags, help, help2, help3, help4, help5, help6, help7, help8, help9
+	return pass, title, x, y, xx, yy, source, flags, help, help2, help3, help4, help5, help6, help7, help8, help9, help10, help11, help12
 end
 
 function Breadcrumbs:CheckPOI(map, datastring)
 	-- Check requirements
-	local texture, title, requirements, coordinates, flags, help, help2, help3, help4, help5, help6, help7, help8, help9 = strsplit("|", datastring)
+	local texture, title, requirements, coordinates, flags, help, help2, help3, help4, help5, help6, help7, help8, help9, help10, help11, help12 = strsplit("|", datastring)
 	local data = { strsplit(" ", strlower(requirements)) }
 	local x, y = strsplit(" ", coordinates or "")
 
@@ -1255,7 +1264,7 @@ function Breadcrumbs:CheckPOI(map, datastring)
 	end
 
 	-- eligible, texture, title, x, y, help, ...
-	return pass, texture, title, tonumber(x), tonumber(y), flags, help, help2, help3, help4, help5, help6, help7, help8, help9
+	return pass, texture, title, tonumber(x), tonumber(y), flags, help, help2, help3, help4, help5, help6, help7, help8, help9, help10, help11, help12
 end
 
 
