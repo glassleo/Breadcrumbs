@@ -16,7 +16,7 @@ All data has been compiled and tested manually to ensure accuracy.
 - Fix several map related Blizzard bugs/oversights and add missing information for certain quests
 - Options to choose which features you want to enable (GUI NYI)
 
-## Pre-Release Notes
+## How to Try
 
 This addon does not currently have an official release available since so much quest data is still missing. That said, it is very stable and the data that *is* there is very accurate. Most of the POI features are also more or less complete.
 
