@@ -38,8 +38,8 @@ local _, Data = ...
 		{!}				Quest bang
 		{n}				Texture/icon with ID n
 		{atlas}			Atlas
-		[text]			White text
-		[color]text]	Colored text where color is either a hex (like ff0800) or a named color (spell, friendly, neutral, hostile, daily, poor, uncommon, rare, epic, legendary, artifact, heirloom)
+		[text]			White text (common)
+		[color]text]	Colored text where color is either a hex (like ff0800) or a named color (spell, friendly, neutral, hostile, daily, poor, rare, epic, legendary, artifact, heirloom)
 ]]--
 
 Data.POI = {
@@ -101,6 +101,9 @@ Data.POI = {
 	--[[ Zereth Mortis ]]--
 
 	[1970] = {
+		-- Door
+		"poi-door-down:small|Gravid Repose|1+|50.54 32.22|link:2029",
+
 		-- Protoform Synthesis
 		"POI/ProtoformSynthesis|[Protoform Synthesis (Battle Pet)]|60+ 65419|60.53 59.39|tooltip|Gather schematics and craft battle pets with components found across Zereth Mortis.",
 		"POI/ProtoformSynthesis|[Protoform Synthesis (Mount)]|60+ 65427|70.21 28.56|tooltip|Gather schematics and craft mounts with components found across Zereth Mortis.",
@@ -123,15 +126,19 @@ Data.POI = {
 
 	-- Gravid Repose
 	[2029] = {
+		-- Door
+		"poi-door-up|Zereth Mortis|1+|69.9 8.43|link:1970",
+
 		-- Locus Shift
 		"flightmaster_progenitorobelisk-taxinode_neutral:small|Gravid Repose Locus|60+|59.42 41.33",
 		"flightmaster_progenitorobelisk-taxinode_neutral:small|Interior Locus|60+|40.34 34.36",
 		"flightmaster_progenitorobelisk-taxinode_neutral:small|Arcae Locus|60+ 65378|36.51 31.61",
 		"flightmaster_progenitorobelisk-taxinode_neutral:small|Repertory Alcove|60+ 65344|34.58 67.16",
+		"flightmaster_progenitorobelisk-taxinode_neutral:small|Camber Alcove|60+ 65343|48.19 76.67",
 
 		-- Requisites Originator
-		"creationcatalyst-32x32|[Requisites Originator]|60+ 65344 65328 research:1901 research:1904 -65532|30.77 64.43|tooltip|Requisition something once per week.||[green]Avaialble]",
-		"creationcatalyst-32x32|[Requisites Originator]|60+ 65344 65328 research:1901 research:1904 65532|30.77 64.43|tooltip|Requisition something once per week.||[red]Already used this week]",
+		"creationcatalyst-32x32|[Requisites Originator]|60+ 65344 65328 research:1901 research:1904 -65532|30.77 64.43|tooltip|Repertory Alcove||Requisition something once per week.||[green]Available]||1. {3950365} [uncommon]Thrumming Powerstone]|2. {3528288} [Reservoir Anima]|3. {3950362} [Cyphers of the First Ones]|4. {4287471} [green]Genesis Mote]|5. {/Random} Random|6. {/Random} [epic]Cypher Equipment]",
+		"creationcatalyst-32x32|[Requisites Originator]|60+ 65344 65328 research:1901 research:1904 65532|30.77 64.43|tooltip|Repertory Alcove||Requisition something once per week.||[red]Already used this week]",
 	},
 
 
