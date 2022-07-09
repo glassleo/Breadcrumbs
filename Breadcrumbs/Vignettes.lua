@@ -71,7 +71,21 @@ Data.Vignettes = {
 	-- Zereth Mortis
 	[1970] = {
 		-- Treasure
-		[64545] = {"Dangerous Orb of Power|60+ 64953 64952|59.43 76.83||treasure interact", "Submerged Chest|60+ 64953 64952|58.57 72.85|\"To access the treasure, carry the Dangerous Orb of Power to the nearby Forgotten Pump\"|treasure item:190061|Contains|{1676466} [rare]Admiral Pocopoc]|{4038106} [rare]Spatial Opener]|{4381149} [legendary]Cosmic Flux] (200)",},
+		[65670] = {
+			"{4238797} Runic Syllable|60+ 64953 64952|78.07 53.39||treasure interact",
+			"{4238797} Runic Syllable|60+ 64953 64952|76.94 46.68||treasure interact",
+			"{4238797} Runic Syllable|60+ 64953 64952|81.27 50.47||treasure interact",
+			"{4238797} Runic Syllable|60+ 64953 64952|80.94 56.24||treasure interact",
+			"{4238797} Runic Syllable|60+ 64953 64952|77.05 60.31||treasure interact",
+		},
+		[65565] = {
+			"Syntactic Vault|60+ 64953 64952 -65670|77.51 58.23|\"Find six different Runic Syllables around the area to unlock the Syntactic Seal - one can be found inside this cave and the others are marked on the map\"|treasure down item:190457|Requires|{4238797} [spell]Syllabic Recall] (6)||Contains|{4254892} [rare]Protopological Cube]|{4381149} [legendary]Cosmic Flux] (200)",
+			"Syntactic Vault|60+ 64953 64952 65670|77.51 58.23||treasure down item:190457|Contains|{4254892} [rare]Protopological Cube]|{4381149} [legendary]Cosmic Flux] (200)",
+		},
+		[64545] = {
+			"Dangerous Orb of Power|60+ 64953 64952|59.43 76.83||treasure interact",
+			"Submerged Chest|60+ 64953 64952|58.57 72.85|\"To access the treasure, carry the Dangerous Orb of Power to the nearby Forgotten Pump\"|treasure item:190061|Contains|{1676466} [rare]Admiral Pocopoc]|{4038106} [rare]Spatial Opener]|{4381149} [legendary]Cosmic Flux] (200)",
+		},
 		[64667] = "Damaged Jiro Stash|60+ 64953 64952|38.26 37.24||treasure item:190637|Contains|{4284643} [epic]Percussive Maintenance Instrument]|{4381149} [legendary]Cosmic Flux] (200)",
 		[65173] = {"{4238930} Tablet|60+ 64953 64952 65419|57.87 78.9||treasure interact down", "Library Vault|60+ 64953 64952 65419|58.85 77.06|\"Pick up the nearby Tablet with the correct symbol to reveal the treasure\"|treasure scroll down item:189447|Requires|{4238930} [spell]Memorized]||Contains|{4217590} [rare]Schematic: Viperid Menace]",},
 		[65175] = "Template Archive|60+ 64953 64952|59.61 46.16||treasure down link:2030 item:190060|Contains|{774766} [rare]Adventurous Pocopoc]|{4381149} [legendary]Cosmic Flux] (200)",
@@ -93,7 +107,11 @@ Data.Vignettes = {
 		},
 		[65503] = "Filched Artifact|60+ 64953 64952|49.77 87.23||treasure|Contains|{/Random} [rare]Random Jewelry (236+)]|{4038106} [rare]Spatial Opener]|{4381149} [legendary]Cosmic Flux] (200)",
 		[65520] = "Architect's Reserve|60+ 64953 64952 65426|61.16 37.15||treasure item:187833|Contains|{133146} [rare]Dapper Pocopoc]|{4381149} [legendary]Cosmic Flux] (200)", -- maybe only requires 65420
-		[65522] = {"Mistaken Ovoid|60+ 64953 64952 65419 item:190239:5|53.66 72.62|\"Lost Ovoids are tiny orbs that can be found all around Zereth Mortis, often near or inside the metallic progenitor orbs\"|treasure down item:189435|Requires|{651737} [green]Lost Ovoid] (5)||Contains|{4217590} [rare]Schematic: Multichicken]|{4381149} [legendary]Cosmic Flux] (200)", "Mistaken Ovoid|60+ 64953 64952 _65419 item:190239:5|53.66 72.62|\"Lost Ovoids are tiny orbs that can be found all around Zereth Mortis, often near or inside the metallic progenitor orbs\"|treasure down|Requires|{651737} [green]Lost Ovoid] (5)||Contains|{4381149} [legendary]Cosmic Flux] (200)||Unlocks|{4217590} [rare]Schematic: Multichicken]", "Mistaken Ovoid|60+ 64953 64952 65419 -item:190239:5|53.66 72.62|\"Lost Ovoids are tiny orbs that can be found all around Zereth Mortis, often near or inside the metallic progenitor orbs\"|treasure down locked item:189435|Requires|{651737} [red]Lost Ovoid] (5)||Contains|{4217590} [rare]Schematic: Multichicken]|{4381149} [legendary]Cosmic Flux] (200)", "Mistaken Ovoid|60+ 64953 64952 _65419 -item:190239:5|53.66 72.62|\"Lost Ovoids are tiny orbs that can be found all around Zereth Mortis, often near or inside the metallic progenitor orbs\"|treasure down locked|Requires|{651737} [red]Lost Ovoid] (5)||Contains|{4381149} [legendary]Cosmic Flux] (200)||Unlocks|{4217590} [rare]Schematic: Multichicken]",},
+		[65522] = {
+			"Mistaken Ovoid|60+ 64953 64952 65419 item:190239:5|53.66 72.62|\"Lost Ovoids are tiny orbs that can be found all around Zereth Mortis\"|treasure down item:189435|Requires|{651737} [green]Lost Ovoid] (5)||Contains|{4217590} [rare]Schematic: Multichicken]|{4381149} [legendary]Cosmic Flux] (200)",
+			"Mistaken Ovoid|60+ 64953 64952 _65419 item:190239:5|53.66 72.62|\"Lost Ovoids are tiny orbs that can be found all around Zereth Mortis\"|treasure down|Requires|{651737} [green]Lost Ovoid] (5)||Contains|{4381149} [legendary]Cosmic Flux] (200)||Unlocks|{4217590} [rare]Schematic: Multichicken]",
+			"Mistaken Ovoid|60+ 64953 64952 65419 -item:190239:5|53.66 72.62|\"Lost Ovoids are tiny orbs that can be found all around Zereth Mortis\"|treasure down locked item:189435|Requires|{651737} [red]Lost Ovoid] (5)||Contains|{4217590} [rare]Schematic: Multichicken]|{4381149} [legendary]Cosmic Flux] (200)",
+			"Mistaken Ovoid|60+ 64953 64952 _65419 -item:190239:5|53.66 72.62|\"Lost Ovoids are tiny orbs that can be found all around Zereth Mortis\"|treasure down locked|Requires|{651737} [red]Lost Ovoid] (5)||Contains|{4381149} [legendary]Cosmic Flux] (200)||Unlocks|{4217590} [rare]Schematic: Multichicken]",},
 		[65523] = "Drowned Broker Supplies|60+ 64953 64952 research:1932|34.96 69.96|\"Encourage Pocopoc to control the nearby Coreless Aurelid in order to retrieve the treasure\"|treasure item:190059|Contains|{2055035} [rare]Pirate Pocopoc]|{4381149} [legendary]Cosmic Flux] (200)",
 		[65536] = "Overgrown Protofruit|60+ 64953 64952|35.25 44.12||treasure item:190953|Contains|{645345} [Protofruit Flesh] (20)|{4381149} [legendary]Cosmic Flux] (200)",
 		[65537] = "Offering to the First Ones|60+ 64953 64952|34.81 56.04|\"Takes up to 5 minutes to respawn after someone loots it\"|treasure item:190339|Contains|{4254041} [rare]Enlightened Offering]",
@@ -148,7 +166,7 @@ Data.Vignettes = {
 		-- Treasure
 		[65396] = "Protoform Schematic|60+ 64953 64952 65427 -item:189473|48.99 40.49|\"Hidden in a container\"|treasure scroll item:189473|Contains|{4217590} [rare]Schematic: Bronzewing Vespoid]",
 		[65650] = {
-			"Inert Prototype|60+ 64953 64952 65427 65328 -65343 -item:189463|51.94 79.56|Camber Alcove|treasure locked|\"Retrieve the Camber Arrangement Index to unlock the Locus Shift to this location.\"",
+			"Inert Prototype|60+ 64953 64952 65427 65328 -65343 -item:189463|51.94 79.56|Camber Alcove|treasure locked|\"Retrieve the Camber Arrangement to unlock the Locus Shift to this location.\"",
 			"Inert Prototype|60+ 64953 64952 65427 65328 65343 -item:189463|51.94 79.56|Camber Alcove|treasure interact|\"Starts the Inert Protoype mini game. Collect five golden rings without hitting too many dust piles to unlock the Prototype Schematic.\"",
 		},
 		[65386] = {
@@ -156,11 +174,62 @@ Data.Vignettes = {
 			"Prototype Schematic|60+ 64953 64952 65427 65328 65650 -item:189463|49.68 72.03|Camber Alcove|treasure item:189463|Contains|{4217590} [rare]Schematic: Unsuccessful Prototype Fleetpod]|{4381149} [legendary]Cosmic Flux] (200)",
 		},
 		[65643] = {
-			"Torn Ethereal Drape|60+ 64953 64952 65328 -65347|23 90|Fulgor Alcove|treasure locked item:188054::::::::60:::27:3:6652:8108:1482:1:28:2057|\"Retrieve the Fulgore Arrangement Index to unlock the Locus Shift to this location.\"||Contains|{4096872} [rare]Antecedent Drape]|{4381149} [legendary]Cosmic Flux] (200)",
-			"Torn Ethereal Drape|60+ 64953 64952 65328 65347|23 90|Fulgor Alcove|treasure item:188054::::::::60:::27:3:6652:8108:1482:1:28:2057|Contains|{4096872} [rare]Antecedent Drape]|{4381149} [legendary]Cosmic Flux] (200)",
-		}
+			"Torn Ethereal Drape|60+ 64953 64952 65328 -65347|28 88|Fulgor Alcove|treasure locked item:188054::::::::60:::27:3:6652:8108:1482:1:28:2057|\"Retrieve the Fulgore Arrangement to unlock the Locus Shift to this location.\"||Contains|{4096872} [rare]Antecedent Drape]|{4381149} [legendary]Cosmic Flux] (200)",
+			"Torn Ethereal Drape|60+ 64953 64952 65328 65347|28 88|Fulgor Alcove|treasure item:188054::::::::60:::27:3:6652:8108:1482:1:28:2057|\"Activate the Automa Console directly opposite of the Locus Shift to spawn a Progenitor Orb that can carry you to the treasure\"||Contains|{4096872} [rare]Antecedent Drape]|{4381149} [legendary]Cosmic Flux] (200)",
+		},
+		[65567] = {
+			"Rondure Cache|60+ 64953 64952 65328 -65345|10 88|Rondure Alcove|treasure locked item:190096|\"Retrieve the Rondure Alcove Arrangement to unlock the Locus Shift to this location.\"||Contains|{2061718} [rare]Pocobold]|{/Random} [epic]Random Cypher Equipment]|{4381149} [legendary]Cosmic Flux] (200)",
+			"Rondure Cache|60+ 64953 64952 65328 65345|10 88|Rondure Alcove|treasure item:190096|\"A diabolical jumping puzzle. Having any sort of movement speed increase usually makes it more difficult.\"||Contains|{2061718} [rare]Pocobold]|{/Random} [epic]Random Cypher Equipment]|{4381149} [legendary]Cosmic Flux] (200)",
+		},
+		[65348] = {
+			"Protoform Schematic|60+ 64953 64952 65419 65328 -65345 -item:189440|12.5 88|Rondure Alcove|treasure locked item:189440|\"Retrieve the Rondure Alcove Arrangement to unlock the Locus Shift to this location.\"||Contains|{4217590} [rare]Schematic: Omnipotential Core]",
+			"Protoform Schematic|60+ 64953 64952 65419 65328 65345 -item:189440|12.5 88|Rondure Alcove|treasure scroll item:189440|\"Hidden on top of the large arch near one of the walls.\"||Contains|{4217590} [rare]Schematic: Omnipotential Core]",
+		},
 		-- Rondure Cache 65567
+		-- Schematic: Omnipotential Core 65348
 
+		[65498] = {
+			"Misshapen Sand Pile|60+ 64953 64952 65328 -65346 -item:189863|10 40|Dormant Alcove|treasure locked|\"Retrieve the Dormant Arrangement to unlock the Locus Shift to this location.\"||Requires|{4038106} [red]Spatial Opener]||Contains|{/Random} [epic]Random Cypher Trinket (242+)]|{4381149} [legendary]Cosmic Flux] (200)",
+			"Misshapen Sand Pile|60+ 64953 64952 65328 65346 -item:189863|10 40|Dormant Alcove|treasure locked|Requires|{4038106} [red]Spatial Opener]||Contains|{/Random} [epic]Random Cypher Trinket (242+)]|{4381149} [legendary]Cosmic Flux] (200)",
+			"Misshapen Sand Pile|60+ 64953 64952 65328 -65346 item:189863|10 40|Dormant Alcove|treasure locked|\"Retrieve the Dormant Arrangement to unlock the Locus Shift to this location.\"||Requires|{4038106} [green]Spatial Opener]||Contains|{/Random} [epic]Random Cypher Trinket (242+)]|{4381149} [legendary]Cosmic Flux] (200)",
+			"Misshapen Sand Pile|60+ 64953 64952 65328 65346 item:189863|10 40|Dormant Alcove|treasure|Requires|{4038106} [green]Spatial Opener]||Contains|{/Random} [epic]Random Cypher Trinket (242+)]|{4381149} [legendary]Cosmic Flux] (200)",
+		},
+		[65499] = {
+			"Sparkling Sand Pile|60+ 64953 64952 65328 -65346 -item:189863|12.5 40|Dormant Alcove|treasure locked item:190374::::::::60::::1:0|\"Retrieve the Dormant Arrangement to unlock the Locus Shift to this location.\"||Requires|{4038106} [red]Spatial Opener]||Contains|{237185} [epic]Gemstone of Prismatic Brilliance]|{4381149} [legendary]Cosmic Flux] (200)",
+			"Sparkling Sand Pile|60+ 64953 64952 65328 65346 -item:189863|12.5 40|Dormant Alcove|treasure locked item:190374::::::::60::::1:0|Requires|{4038106} [red]Spatial Opener]||Contains|{237185} [epic]Gemstone of Prismatic Brilliance]|{4381149} [legendary]Cosmic Flux] (200)",
+			"Sparkling Sand Pile|60+ 64953 64952 65328 -65346 item:189863|12.5 40|Dormant Alcove|treasure locked item:190374::::::::60::::1:0|\"Retrieve the Dormant Arrangement to unlock the Locus Shift to this location.\"||Requires|{4038106} [green]Spatial Opener]||Contains|{237185} [epic]Gemstone of Prismatic Brilliance]|{4381149} [legendary]Cosmic Flux] (200)",
+			"Sparkling Sand Pile|60+ 64953 64952 65328 65346 item:189863|12.5 40|Dormant Alcove|treasure item:190374::::::::60::::1:0|Requires|{4038106} [green]Spatial Opener]||Contains|{237185} [epic]Gemstone of Prismatic Brilliance]|{4381149} [legendary]Cosmic Flux] (200)",
+		},
+		[65494] = {
+			"Lumpy Sand Pile|60+ 64953 64952 65328 -65346 -item:189863|10 43.5|Dormant Alcove|treasure locked item:188045::::::::60::::2:1492:8093|\"Retrieve the Dormant Arrangement to unlock the Locus Shift to this location.\"||Requires|{4038106} [red]Spatial Opener]||Contains|{3950347} [epic]Salvaged Viperid Band]|{4381149} [legendary]Cosmic Flux] (200)",
+			"Lumpy Sand Pile|60+ 64953 64952 65328 65346 -item:189863|10 43.5|Dormant Alcove|treasure locked item:188045::::::::60::::2:1492:8093|Requires|{4038106} [red]Spatial Opener]||Contains|{3950347} [epic]Salvaged Viperid Band]|{4381149} [legendary]Cosmic Flux] (200)",
+			"Lumpy Sand Pile|60+ 64953 64952 65328 -65346 item:189863|10 43.5|Dormant Alcove|treasure locked item:188045::::::::60::::2:1492:8093|\"Retrieve the Dormant Arrangement to unlock the Locus Shift to this location.\"||Requires|{4038106} [green]Spatial Opener]||Contains|{3950347} [epic]Salvaged Viperid Band]|{4381149} [legendary]Cosmic Flux] (200)",
+			"Lumpy Sand Pile|60+ 64953 64952 65328 65346 item:189863|10 43.5|Dormant Alcove|treasure item:188045::::::::60::::2:1492:8093|Requires|{4038106} [green]Spatial Opener]||Contains|{3950347} [epic]Salvaged Viperid Band]|{4381149} [legendary]Cosmic Flux] (200)",
+		},
+		[65495] = {
+			"Glinting Sand Pile|60+ 64953 64952 65328 -65346 -item:189863|12.5 43.5|Dormant Alcove|treasure locked item:188055::::::::60::::2:1492:8093|\"Retrieve the Dormant Arrangement to unlock the Locus Shift to this location.\"||Requires|{4038106} [red]Spatial Opener]||Contains|{3950354} [epic]Impossibly Ancient Band]|{4381149} [legendary]Cosmic Flux] (200)",
+			"Glinting Sand Pile|60+ 64953 64952 65328 65346 -item:189863|12.5 43.5|Dormant Alcove|treasure locked item:188055::::::::60::::2:1492:8093|Requires|{4038106} [red]Spatial Opener]||Contains|{3950354} [epic]Impossibly Ancient Band]|{4381149} [legendary]Cosmic Flux] (200)",
+			"Glinting Sand Pile|60+ 64953 64952 65328 -65346 item:189863|12.5 43.5|Dormant Alcove|treasure locked item:188055::::::::60::::2:1492:8093|\"Retrieve the Dormant Arrangement to unlock the Locus Shift to this location.\"||Requires|{4038106} [green]Spatial Opener]||Contains|{3950354} [epic]Impossibly Ancient Band]|{4381149} [legendary]Cosmic Flux] (200)",
+			"Glinting Sand Pile|60+ 64953 64952 65328 65346 item:189863|12.5 43.5|Dormant Alcove|treasure item:188055::::::::60::::2:1492:8093|Requires|{4038106} [green]Spatial Opener]||Contains|{3950354} [epic]Impossibly Ancient Band]|{4381149} [legendary]Cosmic Flux] (200)",
+		},
+		[65497] = {
+			"Humming Sand Pile|60+ 64953 64952 65328 -65346 -item:189863|10 47|Dormant Alcove|treasure locked item:188053::::::::60::::2:1492:8093|\"Retrieve the Dormant Arrangement to unlock the Locus Shift to this location.\"||Requires|{4038106} [red]Spatial Opener]||Contains|{3950351} [epic]Abandoned Automa Loop]|{4381149} [legendary]Cosmic Flux] (200)",
+			"Humming Sand Pile|60+ 64953 64952 65328 65346 -item:189863|10 47|Dormant Alcove|treasure locked item:188053::::::::60::::2:1492:8093|Requires|{4038106} [red]Spatial Opener]||Contains|{3950351} [epic]Abandoned Automa Loop]|{4381149} [legendary]Cosmic Flux] (200)",
+			"Humming Sand Pile|60+ 64953 64952 65328 -65346 item:189863|10 47|Dormant Alcove|treasure locked item:188053::::::::60::::2:1492:8093|\"Retrieve the Dormant Arrangement to unlock the Locus Shift to this location.\"||Requires|{4038106} [green]Spatial Opener]||Contains|{3950351} [epic]Abandoned Automa Loop]|{4381149} [legendary]Cosmic Flux] (200)",
+			"Humming Sand Pile|60+ 64953 64952 65328 65346 item:189863|10 47|Dormant Alcove|treasure item:188053::::::::60::::2:1492:8093|Requires|{4038106} [green]Spatial Opener]||Contains|{3950351} [epic]Abandoned Automa Loop]|{4381149} [legendary]Cosmic Flux] (200)",
+		},
+		[65496] = {
+			"Shifting Sand Pile|60+ 64953 64952 65328 -65346 -item:189863|12.5 47|Dormant Alcove|treasure locked item:188044::::::::60::::2:1492:8093|\"Retrieve the Dormant Arrangement to unlock the Locus Shift to this location.\"||Requires|{4038106} [red]Spatial Opener]||Contains|{3536115} [epic]Discarded Cartel Al Signet]|{4381149} [legendary]Cosmic Flux] (200)",
+			"Shifting Sand Pile|60+ 64953 64952 65328 65346 -item:189863|12.5 47|Dormant Alcove|treasure locked item:188044::::::::60::::2:1492:8093|Requires|{4038106} [red]Spatial Opener]||Contains|{3536115} [epic]Discarded Cartel Al Signet]|{4381149} [legendary]Cosmic Flux] (200)",
+			"Shifting Sand Pile|60+ 64953 64952 65328 -65346 item:189863|12.5 47|Dormant Alcove|treasure locked item:188044::::::::60::::2:1492:8093|\"Retrieve the Dormant Arrangement to unlock the Locus Shift to this location.\"||Requires|{4038106} [green]Spatial Opener]||Contains|{3536115} [epic]Discarded Cartel Al Signet]|{4381149} [legendary]Cosmic Flux] (200)",
+			"Shifting Sand Pile|60+ 64953 64952 65328 65346 item:189863|12.5 47|Dormant Alcove|treasure item:188044::::::::60::::2:1492:8093|Requires|{4038106} [green]Spatial Opener]||Contains|{3536115} [epic]Discarded Cartel Al Signet]|{4381149} [legendary]Cosmic Flux] (200)",
+		},
+		[65500] = {
+			"Ticking Sand Pile|60+ 64953 64952 65328 -65346 -item:189863|10 50.5|Dormant Alcove|treasure locked item:188106::::::::60::::2:1492:8093|\"Retrieve the Dormant Arrangement to unlock the Locus Shift to this location.\"||Requires|{4038106} [red]Spatial Opener]||Contains|{3950338} [epic]Unfathomable Pendant]|{4381149} [legendary]Cosmic Flux] (200)",
+			"Ticking Sand Pile|60+ 64953 64952 65328 65346 -item:189863|10 50.5|Dormant Alcove|treasure locked item:188106::::::::60::::2:1492:8093|Requires|{4038106} [red]Spatial Opener]||Contains|{3950338} [epic]Unfathomable Pendant]|{4381149} [legendary]Cosmic Flux] (200)",
+			"Ticking Sand Pile|60+ 64953 64952 65328 -65346 item:189863|10 50.5|Dormant Alcove|treasure locked item:188106::::::::60::::2:1492:8093|\"Retrieve the Dormant Arrangement to unlock the Locus Shift to this location.\"||Requires|{4038106} [green]Spatial Opener]||Contains|{3950338} [epic]Unfathomable Pendant]|{4381149} [legendary]Cosmic Flux] (200)",
+			"Ticking Sand Pile|60+ 64953 64952 65328 65346 item:189863|10 50.5|Dormant Alcove|treasure item:188106::::::::60::::2:1492:8093|Requires|{4038106} [green]Spatial Opener]||Contains|{3950338} [epic]Unfathomable Pendant]|{4381149} [legendary]Cosmic Flux] (200)",
+		},
 		-- Lumpy 65494
 		-- Glinting 65495
 		-- Shifting 65496
