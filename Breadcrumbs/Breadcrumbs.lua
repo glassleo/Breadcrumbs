@@ -14,11 +14,6 @@ local Setting_VignettePinSize = 15
 local Setting_POIPinSize = 25
 local Setting_POISmallPinSize = 20
 local Setting_HumanTooltips = true
-local Setting_QuestFrameLevel = nil -- set to "PIN_FRAME_LEVEL_GROUP_MEMBER" to display above the player arrow
-local Setting_BonusObjectiveFrameLevel = nil -- set to "PIN_FRAME_LEVEL_GROUP_MEMBER" to display above the player arrow
-local Setting_ObjectivesFrameLevel = nil -- set to "PIN_FRAME_LEVEL_GROUP_MEMBER" to display above the player arrow
-local Setting_VignetteFrameLevel = "PIN_FRAME_LEVEL_VIGNETTE" -- set to "PIN_FRAME_LEVEL_GROUP_MEMBER" to display above the player arrow
-local Setting_POIFrameLevel = "PIN_FRAME_LEVEL_AREA_POI" -- set to "PIN_FRAME_LEVEL_GROUP_MEMBER" to display above the player arrow
 local Setting_EnableBrokenQuests = false
 local Setting_EnableDiscoveryQuests = true
 local Setting_ShowItemTooltips = true
@@ -32,6 +27,7 @@ local Setting_EnableMailboxes = true
 local Setting_EnableMailboxesEverywhere = false
 --local Setting_EnableMailboxToggleButton = true -- NYI
 local Setting_EnableUnitTooltips = true
+local Setting_EnableAutomapGravidRepose = true
 
 
 -- Frame recycling pool
@@ -418,7 +414,7 @@ function Breadcrumbs:UpdateMap(event, ...)
 								end)
 							end
 
-							Pins:AddWorldMapIconMap("Breadcrumbs", Pin, map, x/100, y/100, nil, (flags["bonusobjective"] or flags["weekly"] or flags["daily"] or flags["campaign"]) and (Setting_BonusObjectiveFrameLevel or "PIN_FRAME_LEVEL_BONUS_OBJECTIVE") or Setting_QuestFrameLevel or "PIN_FRAME_LEVEL_STORY_LINE")
+							Pins:AddWorldMapIconMap("Breadcrumbs", Pin, map, x/100, y/100, nil, (flags["bonusobjective"] or flags["weekly"] or flags["daily"] or flags["campaign"]) and "PIN_FRAME_LEVEL_BONUS_OBJECTIVE" or "PIN_FRAME_LEVEL_STORY_LINE")
 							Pin:Show()
 						end
 					end
@@ -613,6 +609,77 @@ function Breadcrumbs:UpdateMap(event, ...)
 		end
 	end
 
+	-- Create Objective Step Pins
+	if Setting_EnableObjectives and Data.ObjectiveSteps and Data.ObjectiveSteps[map] then
+		for id in pairs(Data.ObjectiveSteps[map]) do
+			if C_QuestLog.IsOnQuest(id or 0) then
+				for i = 1, type(Data.ObjectiveSteps[map][id]) == "string" and 1 or #Data.ObjectiveSteps[map][id] do
+					local datastring = type(Data.ObjectiveSteps[map][id]) == "string" and Data.ObjectiveSteps[map][id] or Data.ObjectiveSteps[map][id][i]
+					-- Get data
+					local icon, coordinates, title, task = strsplit("|", datastring)
+					local x, y = strsplit(" ", coordinates or "")
+					x = tonumber(x) or nil
+					y = tonumber(y) or nil
+
+					local Objectives = C_QuestLog.GetQuestObjectives(id or 0)
+					local match = false
+
+					if Objectives then
+						for i = 1, #Objectives do
+							local text = Objectives[i].text or ""
+							text = string.gsub(text, "%d/%d%s(.+)", "%1")
+
+							if Objectives[i].finished == false and text == task then
+								match = Objectives[i].text
+							end
+						end
+					end
+
+					if match and icon and x and y then
+						if not (icon == "questobjective" and (C_QuestLog.IsQuestFlaggedCompleted(id) or C_QuestLog.ReadyForTurnIn(id))) then -- Don't show the pin if the quest is complete
+							-- Pin size
+							local size = Setting_ObjectivesPinSize
+							if icon == "questturnin" then size = Setting_PinSize end
+
+							-- Create map pin
+							local Pin = NewPin()
+							Pin:SetSize(size, size)
+
+							if string.match(icon, "[%w%p]+") then
+								Pin:SetNormalAtlas(icon)
+							else
+								Pin:SetNormalTexture(icon)
+							end
+
+							if title then
+								Pin:SetScript("OnEnter", function(self, motion)
+									GameTooltip:Hide()
+									GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
+									GameTooltip:AddLine(Breadcrumbs:FormatTooltip(title))
+									GameTooltip:AddLine("- " .. match, 1, 1, 1, true)
+
+									if ZA and ZA.DebugMode then -- Debug
+										GameTooltip:AddLine(" ")
+										GameTooltip:AddLine("|cff3ba5ffQuest ID:|r |cffffffff" .. (id or "unknown") .. "|r")
+									end
+
+									GameTooltip:Show()
+								end)
+
+								Pin:SetScript("OnLeave", function(self, motion)
+									GameTooltip:Hide()
+								end)
+							end
+
+							Pins:AddWorldMapIconMap("Breadcrumbs", Pin, map, x/100, y/100, nil, "PIN_FRAME_LEVEL_SUPER_TRACKED_QUEST")
+							Pin:Show()
+						end
+					end
+				end
+			end
+		end
+	end
+
 	-- Create Vignette Pins
 	if (Setting_EnableTreasures or Setting_EnableVignettes) and Data.Vignettes and Data.Vignettes[map] then
 		for id in pairs(Data.Vignettes[map]) do
@@ -768,7 +835,7 @@ function Breadcrumbs:UpdateMap(event, ...)
 									end)
 								end
 
-								Pins:AddWorldMapIconMap("Breadcrumbs", Pin, map, x/100, y/100, nil, Setting_VignetteFrameLevel or "PIN_FRAME_LEVEL_VIGNETTE")
+								Pins:AddWorldMapIconMap("Breadcrumbs", Pin, map, x/100, y/100, nil, "PIN_FRAME_LEVEL_VIGNETTE")
 								Pin:Show()
 							end
 						end
@@ -910,7 +977,7 @@ function Breadcrumbs:UpdateMap(event, ...)
 						end)
 					end
 
-					Pins:AddWorldMapIconMap("Breadcrumbs", Pin, map, x/100, y/100, nil, Setting_POIFrameLevel or "PIN_FRAME_LEVEL_AREA_POI")
+					Pins:AddWorldMapIconMap("Breadcrumbs", Pin, map, x/100, y/100, nil, "PIN_FRAME_LEVEL_AREA_POI")
 					Pin:Show()
 				end
 			end
@@ -1307,3 +1374,20 @@ end
 
 -- Unit Tooltips
 GameTooltip:HookScript("OnTooltipSetUnit", OnTooltipSetUnit)
+
+-- Auto Map Change
+WorldMapFrame:HookScript("OnShow", function(...)
+	if Setting_EnableAutomapGravidRepose then
+		local zone = GetZoneText() or ""
+
+		local remap = {
+			["Dormant Alcove"] = 2029, -- Gravid Repose
+			["Rondure Alcove"] = 2029, -- Gravid Repose
+			["Fulgor Alcove"] = 2029, -- Gravid Repose
+		}
+
+		if WorldMapFrame:GetMapID() == 1970 and remap[zone] then
+			WorldMapFrame:SetMapID(remap[zone])
+		end
+	end
+end)
