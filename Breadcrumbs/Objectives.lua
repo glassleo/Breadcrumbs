@@ -117,3 +117,44 @@ Data.Objectives = {
 		[59641] = "questobjective|22.8 24.7|The Nation of Kul Tiras|[Jaina Proudmoore]",
 	},
 }
+
+
+-- Quest Objective Steps
+
+--[[
+	Data Structure
+
+	[MapID] = {
+		[QuestID] = "Icon|Coordinates|Title|Objective", -- Quest Name
+	},
+
+	Icon: Texture or Atlas to use as the pin's icon (use "questobjective" for a yellow dot)
+	https://www.townlong-yak.com/framexml/9.1.0/Helix/AtlasInfo.lua
+		questobjective	Yellow dot
+		poi-door-down	Entrance (above)
+		poi-door-up		Exit (below)
+		poi-door-left	Entrance (inside)
+		poi-door-right	Exit (outside)
+		questturnin		Quest turn-in question mark (?)
+
+	Coordinates: Coordinates for the map pin
+		X Y				Coordinates for the map pin
+
+	Title: Quest Name
+
+	Objective: Objective text to match, excluding "0/X"
+]]--
+
+Data.ObjectiveSteps = {
+	-- Zereth Mortis
+	[1970] = {
+		[64889] = {
+			"questobjective|48.43 26.38|Match Made in Zereth Mortis|Ascend to Primus Locus",
+			"questobjective|47.95 27.9|Match Made in Zereth Mortis|Ascend to Secundus Locus",
+			"questobjective|51.91 27.11|Match Made in Zereth Mortis|Ascend to Tertius Locus",
+			"questobjective|48.51 29.67|Match Made in Zereth Mortis|Ascend to Quartus Locus",
+			"questobjective|50.77 32.55|Match Made in Zereth Mortis|Ascend to Quintus Locus",
+			"questobjective|48.71 31.97|Match Made in Zereth Mortis|Ascend to Ultimus Locus",
+		},
+	},
+}
