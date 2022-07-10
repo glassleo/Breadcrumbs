@@ -672,7 +672,7 @@ Data.POI = {
 	-- Shrine of Two Moons - Hall of the Crescent Moon
 	[391] = {
 		"POI/Engineering|[Engineering Trainer]|10+ horde engineering|61.05 41.76|tooltip|Guyo Crystalgear",
-		"POI/Tailoring|[Bandage Trainer]|10+ horde tailoring|29.38 75.69|tooltip|Ala'thinel",
+		"POI/FirstAid|[Bandage Trainer]|10+ horde tailoring|29.38 75.69|tooltip|Ala'thinel",
 	},
 
 
@@ -731,7 +731,7 @@ Data.POI = {
 		"POI/Mining|[Mining Trainer]|5+ horde mining|34.39 57.88|tooltip|Brek Stonehoof",
 		"POI/Skinning|[Skinning Trainer]|5+ horde skinning|44.45 43.14|tooltip|Mooranta",
 		"POI/Tailoring|[Tailoring Trainer]|5+ horde tailoring|44.54 45.33|tooltip|Tepa",
-		"POI/Tailoring|[Bandage Trainer]|5+ horde tailoring|29.67 21.18|tooltip|Pand Stonebinder",
+		"POI/FirstAid|[Bandage Trainer]|5+ horde tailoring|29.67 21.18|tooltip|Pand Stonebinder",
 		"POI/Cooking|[Cooking Trainer]|5+ horde|50.74 53.1|tooltip|Aska Mistrunner",
 		"POI/Fishing|[Fishing Trainer]|5+ horde|56.12 46.4|tooltip|Kah Mistrunner",
 		"POI/Archaeology|[Archaeology Trainer]|10+ horde|75.05 28.12|tooltip|Otoh Greyhide",
@@ -784,7 +784,7 @@ Data.POI = {
 		"POI/Mining|[Mining Trainer]|5+ horde mining|39.04 85.52|tooltip|Layla Stonebreaker",
 		"POI/Skinning|[Skinning Trainer]|5+ horde skinning -leatherworking|61.16 54.65|tooltip|Thuwd",
 		"POI/Tailoring|[Tailoring Trainer]|5+ horde tailoring|60.75 59.13|tooltip|Magar",
-		"POI/Tailoring|[Bandage Trainer]|5+ horde tailoring|38.51 86.41|tooltip|Mender Jessara",
+		"POI/FirstAid|[Bandage Trainer]|5+ horde tailoring|38.51 86.41|tooltip|Mender Jessara",
 		"POI/Cooking|[Cooking Trainer]|5+ horde|56.53 62.48|tooltip|Marogg",
 		"POI/Fishing|[Fishing Trainer]|5+ horde|66.44 41.93|tooltip|Lumak",
 		"POI/Archaeology|[Archaeology Trainer]|10+ horde|49.06 70.56|tooltip|Belloc Brightblade",
@@ -834,7 +834,7 @@ Data.POI = {
 		"POI/Mining|[Mining Trainer]|5+ alliance mining|59.52 37.78|tooltip|Gelman Stonehand",
 		"POI/Skinning|[Skinning Trainer]|5+ alliance skinning -leatherworking|72.14 62.21|tooltip|Maris Granger",
 		"POI/Tailoring|[Tailoring Trainer]|5+ alliance tailoring|53.08 81.35|tooltip|Georgio Bolero",
-		"POI/Tailoring|[Bandage Trainer]|5+ alliance tailoring|52.18 45.38|tooltip|Angela Leifeld",
+		"POI/FirstAid|[Bandage Trainer]|5+ alliance tailoring|52.18 45.38|tooltip|Angela Leifeld",
 		"POI/Cooking|[Cooking Trainer]|5+ alliance|50.57 71.9|tooltip|Robby Flay",
 		"POI/Fishing|[Fishing Trainer]|5+ alliance|54.79 69.6|tooltip|Arnold Leland",
 		"POI/Archaeology|[Archaeology Trainer]|10+ alliance|85.81 25.94|tooltip|Harrison Jones",
@@ -864,7 +864,7 @@ Data.POI = {
 		"POI/Mining|[Mining Trainer]|5+ horde mining -jewelcrafting|56.04 37.45|tooltip|Brom Killian",
 		"POI/Skinning|[Skinning Trainer]|5+ horde skinning -leatherworking|70.18 59.21|tooltip|Killian Hagey",
 		"POI/Tailoring|[Tailoring Trainer]|5+ horde tailoring|70.76 30.72|tooltip|Josef Gregorian",
-		"POI/Tailoring|[Bandage Trainer]|5+ horde tailoring|73.15 55.16|tooltip|Mary Edras",
+		"POI/FirstAid|[Bandage Trainer]|5+ horde tailoring|73.15 55.16|tooltip|Mary Edras",
 		"POI/Cooking|[Cooking Trainer]|5+ horde|62.15 44.9|tooltip|Eunice Burch",
 		"POI/Fishing|[Fishing Trainer]|5+ horde|80.7 31.27|tooltip|Armand Cromwell",
 		"POI/Archaeology|[Archaeology Trainer]|10+ horde|75.41 37.71|tooltip|Adam Hossack",
