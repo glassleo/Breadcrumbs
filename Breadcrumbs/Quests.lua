@@ -93,8 +93,8 @@ Data.HiddenBonusObjectiveQuests = {
 		currency:n:x	Must have at least x or more of currency with ID n
 		-currency:n:x	Must not have x or more of currency with ID n
 
-		art:n			Map must currently have UiMapArt ID n (see https://wow.tools/dbc/?dbc=uimapart) - used to determine which phase of the map the player is currently on
-		-art:n			Map must not currently have UiMapArt ID n
+		art:n			Map must currently have UiMapArtID n (see https://wow.tools/dbc/?dbc=uimapxmapart) - used to determine which phase of the map the player is currently on
+		-art:n			Map must not currently have UiMapArtID n
 
 		broken			Quest is broken and cannot be completed, it will be hidden unless the user has decided to display broken quests
 		broken:n		Quest is broken if you are level n or higher and cannot be completed, it will be hidden unless the user has decided to display broken quests
@@ -1227,6 +1227,9 @@ Data.Quests = {
 
 	-- Boralus
 	[1161] = {
+		-- The Heart of Azeroth
+		[53028] = "A Dying World|50+ alliance|75.05 14.95|Earthen Guardian",
+
 		-- A Nation Divided
 		[47099] = "Get Your Bearings|10+ alliance 47098|75.73 23.58|Taelia",
 		[46729] = "The Old Knight|10+ alliance 47099|67.57 15.24|Taelia",
@@ -1256,6 +1259,9 @@ Data.Quests = {
 
 	-- Tiragarde Sound
 	[895] = {
+		-- The Heart of Azeroth
+		[53028] = "A Dying World|50+ alliance|75.5 23.39|Earthen Guardian|link:1161",
+
 		-- The Ashvane Trading Company
 		[47486] = "Suspicious Shipments|10+ alliance 47485|76.84 43.43|Cagney",
 		[47487] = "Labor Dispute|10+ alliance 47485|76.84 43.43|Cagney",
@@ -3465,10 +3471,29 @@ Data.Quests = {
 
 	--[[ Feralas ]]--
 
-	-- Feralas
 	[69] = {
 		-- OOX-17/FE
 		[25475] = "Find OOX-22/FE!|15+|1 OOXDistressBeacon|{132836} [uncommon]OOX-17/FE Distress Beacon]|discovery|Zone Drop",
+	},
+
+
+	--[[ Silithus ]]--
+
+	-- Silithus
+	[81] = {
+		-- Classic: art:86
+		-- BfA: art:962
+
+		-- The Heart of Azeroth
+		[51211] = "The Heart of Azeroth|art:962 40+ 43028,52946|42.22 44.27|Magni Bronzebeard",
+		[52428] = "Infusing the Heart|40+ 51211|43.2 44.49|Magni Bronzebeard|elsewhere link:1021",
+	},
+
+	-- Chamber of Heart
+	[1021] = {
+		-- The Heart of Azeroth
+		[51211] = "The Heart of Azeroth|40+ 43028,52946|50.1 30.62|Magni Bronzebeard|elsewhere link:81",
+		[52428] = "Infusing the Heart|40+ 51211|50.15 53.66|Magni Bronzebeard",
 	},
 
 
