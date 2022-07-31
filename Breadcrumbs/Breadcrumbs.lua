@@ -112,6 +112,10 @@ end
 
 function Breadcrumbs:OnEnable()
 	Breadcrumbs:UpdateMap()
+
+	if TipTac then
+		TipTac:AddModifiedTip("BreadcrumbsItemTooltip", true)
+	end
 end
 --/run for o, _ in pairs(WorldMapFrame.pinPools["BonusObjectivePinTemplate"].activeObjects) do for k, v in pairs(o) do if k == "questID" and v == 64641 then WorldMapFrame:RemovePin(o) end end end
 
@@ -818,6 +822,7 @@ function Breadcrumbs:UpdateMap(event, ...)
 											ItemTooltip:SetPoint("TOPLEFT", GameTooltip, "TOPRIGHT")
 										end
 										ItemTooltip:SetHyperlink(hyperlink)
+										ItemTooltip:SetScale(1)
 										ItemTooltip:Show()
 									end
 								end)
