@@ -109,7 +109,7 @@ Data.POI = {
 		"POI/ProtoformSynthesis|[Protoform Synthesis (Mount)]|60+ 65427|70.21 28.56|tooltip|Gather schematics and craft mounts with components found across Zereth Mortis.",
 
 		-- Creation Catalyst
-		"creationcatalyst-32x32|[Creation Catalyst]|60+ 65305|47.44 88.68|tooltip creationcatalyst|Transform a regular item from Season 3 Mythic+, Rated PvP or the Sepulcher of the First Ones into a set item.",
+		"creationcatalyst-32x32|[Creation Catalyst]|60+ 65305|47.44 88.68|tooltip|Transform a regular item from Shadowlands Season 3 or 4 into a set item.",
 	},
 
 	-- Crystal Wards
@@ -762,8 +762,9 @@ Data.POI = {
 	},
 
 
-	--[[ Orgrimmar ]]--
+	--[[ Durotar ]]--
 
+	-- Orgrimmar
 	[85] = {
 		-- Portal
 		"-:large|The Western Earthshrine|horde|50.4 37.3||Cataclysm Portals",
@@ -788,6 +789,28 @@ Data.POI = {
 		"POI/Cooking|[Cooking Trainer]|5+ horde|56.53 62.48|tooltip|Marogg",
 		"POI/Fishing|[Fishing Trainer]|5+ horde|66.44 41.93|tooltip|Lumak",
 		"POI/Archaeology|[Archaeology Trainer]|10+ horde|49.06 70.56|tooltip|Belloc Brightblade",
+	},
+
+
+	--[[ Silithus ]]--
+
+	-- Silithus
+	[81] = {
+		-- Classic: art:86
+		-- BfA: art:962
+
+		-- Portal
+		"POI/Portal:small|Portal to Tiragarde|art:962 50+ alliance|41.49 44.85",
+		"POI/Portal:small|Portal to Zuldazar|art:962 50+ horde|41.49 44.85",
+
+		-- Teleport Pad
+		"teleportationnetwork-32x32:small|Chamber of Heart|art:962 40+ +51211|43.2 44.49|link:1021",
+	},
+
+	-- Chamber of Heart
+	[1021] = {
+		-- Teleport Pad
+		"teleportationnetwork-32x32|Silithus|1+|50.1 30.62|link:81",
 	},
 
 
