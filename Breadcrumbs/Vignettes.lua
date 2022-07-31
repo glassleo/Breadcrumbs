@@ -129,7 +129,13 @@ Data.Vignettes = {
 		[65389] = "Protoform Schematic|60+ +64811 64953 64952 65427 -item:189466|63.03 21.49|\"Inside a vault\"|treasure scroll item:189466|Contains|{4217590} [rare]Schematic: Tarachnid Creeper]",
 		[65396] = "Protoform Schematic|60+ 64953 64952 65427 -item:189473|48.89 34.74||treasure scroll down link:2029 item:189473|Contains|{4217590} [rare]Schematic: Bronzewing Vespoid]",
 		[65388] = "Protoform Schematic|60+ 64953 64952 65427 -item:189465|31.48 50.33||treasure scroll item:189465|Contains|{4217590} [rare]Schematic: Genesis Crawler]",
-		[65379] = "Protoform Schematic|60+ 64953 64952 65427 -item:189456|60.61 30.53||treasure scroll item:189456|Contains|{4217590} [rare]Schematic: Sundered Zerethsteed]",
+		
+		[65441] = {
+			"Mawsworn Cache|60+ 64953 64952 -65427|60.59 30.54|treasure|Contains|{4381149} [legendary]Cosmic Flux] (200)||Unlocks|{4217590} [rare]Schematic: Sundered Zerethsteed]",
+			"Mawsworn Cache|60+ 64953 64952 65427|60.59 30.54|treasure item:189456|Contains|{4217590} [rare]Schematic: Sundered Zerethsteed]|{4381149} [legendary]Cosmic Flux] (200)",
+		},
+		[65379] = "Protoform Schematic|60+ 64953 64952 65427 65441 -item:189456|60.61 30.53||treasure scroll item:189456|Contains|{4217590} [rare]Schematic: Sundered Zerethsteed]",
+		
 		[65395] = "Protoform Schematic|60+ 64953 64952 65427 -item:189472|50.32 27.05|\"Buried in a sand pile on the first platform of Resonant Peaks\"|treasure scroll item:189472|Contains|{4217590} [rare]Schematic: Vespoid Flutterer]",
 		[65346] = "{4238934} Dormant Alcove Arrangement|60+ 65328|51.04 32.48|\"On top of a pillar\"|treasure interact|Unlocks access to the Repertory Alcove",
 		[65344] = "{4238930} Repertory Alcove Arrangement|60+ 65328|49.62 30.93|\"Inside the Terrestrial Cache\"|treasure interact|Unlocks access to the Dormant Alcove",
@@ -138,6 +144,7 @@ Data.Vignettes = {
 		[65345] = "{4238933} Rondure Alcove Arrangement|60+ 65328|50.45 27.6|\"Underneath the top pillar platform\"|treasure interact|Unlocks access to the Rondure Alcove",
 		[65387] = "Protoform Schematic|60+ 64953 64952 65427 -item:189464|47.69 9.55|\"On top of the arch\"|treasure scroll item:189464|Contains|{4217590} [rare]Schematic: Scarlet Helicid]",
 		[65386] = "Prototype Schematic|60+ 64953 64952 65427 65343 -item:189463|50.3 34.9||treasure link:2029 down item:189463|Contains|{4217590} [rare]Schematic: Unsuccessful Prototype Fleetpod]|{4381149} [legendary]Cosmic Flux] (200)",
+		
 	},
 
 	-- Crystal Wards
