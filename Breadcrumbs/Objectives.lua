@@ -37,6 +37,12 @@ local _, Data = ...
 ]]--
 
 Data.Objectives = {
+	-- Maldraxxus
+	[1536] = {
+		-- Read Between the Lines
+		[58619] = "questturnin|43.08 25.1|Read Between the Lines",
+	},
+
 	-- Monk - Wandering Isle
 	[709] = {
 		[41728] = "questobjective|47.16 47.75|The Defense of Tian Monastery|[Tak-Tak]",
