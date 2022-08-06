@@ -49,6 +49,9 @@ Data.POI = {
 
 	-- Ring of Transference
 	[1671] = {
+		-- Portal
+		"POI/Portal|Portals|60+|56.27 75.98||Gorgrond, Karazhan, Mechagon",
+
 		-- Teleport Pad
 		"teleportationnetwork-32x32:small|Ring of Fates|1+|49.52 60.92|link:1670",
 		"teleportationnetwork-32x32:small|Ring of Fates|1+|55.66 51.62|link:1670",
