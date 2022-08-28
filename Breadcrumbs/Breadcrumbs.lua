@@ -559,6 +559,7 @@ function Breadcrumbs:UpdateMap(event, ...)
 
 					if icon and x and y then
 						if not (icon == "questobjective" and (C_QuestLog.IsQuestFlaggedCompleted(id) or C_QuestLog.ReadyForTurnIn(id))) then -- Don't show the pin if the quest is complete
+							if icon == "questobjective-override" then icon = "questobjective" end
 							-- Pin size
 							local size = Setting_ObjectivesPinSize
 							if icon == "questturnin" then size = Setting_PinSize end
