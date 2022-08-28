@@ -213,12 +213,12 @@ function Breadcrumbs:UpdateMap(event, ...)
 		Breadcrumbs:UpdateQuestHistory(event, ...)
 	end
 
-	if event and not event == "QUEST_ACCEPTED" then
+	if event and event ~= "QUEST_ACCEPTED" then
 		if Throttle[event] then
 			return
 		elseif event == "PLAYER_LEVEL_UP" or event == "BAG_UPDATE" then
 			Throttle[event] = true
-			C_Timer.After(1, function() Throttle[event] = false end)
+			C_Timer.After(0.25, function() Throttle[event] = false end)
 		else
 			Throttle[event] = true
 			C_Timer.After(0.5, function() Throttle[event] = false end)
@@ -895,7 +895,7 @@ function Breadcrumbs:UpdateMap(event, ...)
 						Pin:GetNormalTexture():SetTexCoord(0, 0.75, 0, 0.75) -- Crop 64×64 to 48×48
 						Pin:GetHighlightTexture():SetTexCoord(0, 0.75, 0, 0.75) -- Crop 64×64 to 48×48
 						Pin:GetHighlightTexture():SetAlpha(0.5)
-					elseif string.match(texture, "POI/[%w]+") then
+					elseif string.match(texture, "POI/[%w]+") or texture == "Speak" or texture == "Interact" or texture == "Inspect" or texture == "Scroll" or texture == "Random" then
 						Pin:SetNormalTexture("Interface/AddOns/Breadcrumbs/Textures/" .. texture)
 						Pin:SetHighlightTexture("Interface/AddOns/Breadcrumbs/Textures/" .. texture)
 						Pin:GetHighlightTexture():SetAlpha(0.5)
@@ -1394,5 +1394,13 @@ WorldMapFrame:HookScript("OnShow", function(...)
 		if WorldMapFrame:GetMapID() == 1970 and remap[zone] then
 			WorldMapFrame:SetMapID(remap[zone])
 		end
+	end
+	Breadcrumbs:UpdateMap("WorldMapFrame_OnShow")
+end)
+
+WorldMapFrame:HookScript("OnUpdate", function(...)
+	local entries = C_QuestLog.GetNumQuestLogEntries() or 0
+	if entries == 0 then
+		Breadcrumbs:UpdateMap("WorldMapFrame_OnUpdate")
 	end
 end)
