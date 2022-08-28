@@ -1377,12 +1377,32 @@ Data.Quests = {
 		-- Demon Hunter - Destiny of the Illidari
 		[42594] = "Move Like No Other|10+ demonhunter 42593|26.03 52.08|Archmage Lan'dalock|artifact",
 
+		-- Hunter - Path of the Hunter
+		[40384] = "Needs of the Hunters|10+ hunter 44184,44663|61.27 44.89|Snowfeather|artifact",
+		[41415] = "The Hunter's Call|10+ hunter 40384|60.04 53.46|Emmarel Shadewarden|artifact",
+		[40618] = "Weapons of Legend|10+ hunter 41415|60.04 53.46|Emmarel Shadewarden|artifact",
+
+		-- Hunter - Titanstrike
+		-- Titanstrike chosen = 40621
+
+		-- Hunter - Talonclaw
+		-- Titanstrike chosen = 40619
+
+		-- Hunter - Thas'dorah, Legacy of the Windrunners
+		-- Thas'dorah chosen = 40620
+		[41540] = "Rendezvous with the Courier|10+ hunter 40618 40620 -40953|60.04 53.46|Emmarel Shadewarden|artifact", -- First artifact
+		[40392] = "Call of the Marksman|10+ hunter 41540 -40953|71.45 49.99|Courier Larkspur|artifact", -- First artifact
+		[40400] = "Clandestine Operation|10+ hunter 40392 -40953 alliance|71.45 49.99|Vereesa Windrunner|artifact elsewhere link:646", -- First artifact - Alliance
+		[40402] = "Clandestine Operation|10+ hunter 40392 -40953 horde -bloodelf|71.45 49.99|Vereesa Windrunner|artifact elsewhere link:646", -- First artifact - Horde
+		[40403] = "Clandestine Operation|10+ hunter 40392 -40953 horde bloodelf|71.45 49.99|Vereesa Windrunner|artifact elsewhere link:646", -- First artifact -- Blood Elf
+		[40419] = "Rescue Mission|10+ hunter 40400,40402,40403 -40953|71.45 49.99|Vereesa Windrunner|artifact elsewhere link:646",
+
 		-- Hunter - The Unseen Path
-		[40953] = "On Eagle's Wings|10+ hunter|60.04 53.46|Emmarel Shadewarden|artifact",
-		[40954] = "The Unseen Path|10+ hunter 40953|15 20|Emmarel Shadewarden|artifact elsewhere link:739|Visit {!}Emmarel Shadewarden in Trueshot Lodge to continue the Hunter Campaign",
-		[40955] = "Oath of Service|10+ hunter 40954|15 20|Emmarel Shadewarden|artifact elsewhere link:739|Visit {!}Emmarel Shadewarden in Trueshot Lodge to continue the Hunter Campaign",
-		[40958] = "Tactical Matters|10+ hunter 40955|15 20|Emmarel Shadewarden|artifact elsewhere link:739|Visit {!}Emmarel Shadewarden in Trueshot Lodge to continue the Hunter Campaign",
-		[40959] = "The Campaign Begins|10+ hunter 40958|15 20|Tactician Tinderfell|artifact elsewhere link:739|Visit {!}Tactician Tinderfell in Trueshot Lodge to continue the Hunter Campaign",
+		[40953] = "On Eagle's Wings|10+ hunter 40952,41008,41009|60.04 53.46|Emmarel Shadewarden|artifact",
+		[40954] = "The Unseen Path|10+ hunter 40953|72.83 41.19|Emmarel Shadewarden|artifact elsewhere link:739|Visit {!}Emmarel Shadewarden in Trueshot Lodge to continue the Hunter Campaign",
+		[40955] = "Oath of Service|10+ hunter 40954|72.83 41.19|Emmarel Shadewarden|artifact elsewhere link:739|Visit {!}Emmarel Shadewarden in Trueshot Lodge to continue the Hunter Campaign",
+		[40958] = "Tactical Matters|10+ hunter 40955|72.83 41.19|Emmarel Shadewarden|artifact elsewhere link:739|Visit {!}Emmarel Shadewarden in Trueshot Lodge to continue the Hunter Campaign",
+		[40959] = "The Campaign Begins|10+ hunter 40958|72.83 41.19|Tactician Tinderfell|artifact elsewhere link:739|Visit {!}Tactician Tinderfell in Trueshot Lodge to continue the Hunter Campaign",
 
 		-- Azsuna - Behind Legion Lines
 		[41220] = "Down to Azsuna|10+ 39718 -38834 -44137|72.5 45.63|Archmage Khadgar",
@@ -1887,7 +1907,22 @@ Data.Quests = {
 		[40958] = "Tactical Matters|10+ hunter 40955|43.51 24.67|Emmarel Shadewarden|artifact",
 		[40959] = "The Campaign Begins|10+ hunter 40958|42.78 46.94|Tactician Tinderfell|artifact",
 		[44043] = "Continuing the Legend|10+ hunter 40959|43.42 26.36|Emmarel Shadewarden|artifact",
-		[44366] = "One Last Adventure|10+ hunter 44043|43.42 26.36|Emmarel Shadewarden|artifact|Available only after you have obtained your second Artifact Weapon",
+		[44366] = {
+			-- Titansstrike complete = TITAN
+			-- Talonclaw complete = TALON
+			-- Thas'dorah complete = 40952
+			--"One Last Adventure|10+ hunter 44043 TTIAN TALON|43.42 26.36|Emmarel Shadewarden|artifact", -- Add all 3 combinations
+			--"One Last Adventure|10+ hunter 44043 40952 TITAN|43.42 26.36|Emmarel Shadewarden|artifact", -- Add all 3 combinations
+			--"One Last Adventure|10+ hunter 44043 40952 TALON|43.42 26.36|Emmarel Shadewarden|artifact", -- Add all 3 combinations
+		},
+
+		-- Thas'dorah, Legacy of the Windrunners
+		[41540] = "Rendezvous with the Courier|10+ hunter 40618 40620 44043|43.42 26.36|Emmarel Shadewarden|artifact", -- Second/third artifact
+		[40392] = "Call of the Marksman|10+ hunter 41540 40953|47.6 44.8|Courier Larkspur|artifact", -- Second/third artifact
+		[40400] = "Clandestine Operation|10+ hunter 40392 40953 alliance|47.6 44.8|Vereesa Windrunner|artifact elsewhere link:646", -- Second/third artifact - Alliance
+		[40402] = "Clandestine Operation|10+ hunter 40392 40953 horde -bloodelf|47.6 44.8|Vereesa Windrunner|artifact elsewhere link:646", -- Second/third artifact - Horde
+		[40403] = "Clandestine Operation|10+ hunter 40392 40953 horde bloodelf|47.6 44.8|Vereesa Windrunner|artifact elsewhere link:646", -- Second/third artifact -- Blood Elf
+		[40419] = "Rescue Mission|10+ hunter 40400,40402,40403 40953|47.6 44.8|Vereesa Windrunner|artifact elsewhere link:646",
 
 		-- Watchers in the Wild
 		[42519] = "Rise, Champions|10+ hunter 40959|47.28 53.98|Altar Keeper Biehn|artifact",
@@ -3013,6 +3048,12 @@ Data.Quests = {
 	--[[ Broken Shore ]]--
 
 	[646] = {
+		-- Hunter - Thas'dorah, Legacy of the Windrunners
+		[40400] = "Clandestine Operation|10+ hunter 40392 alliance|32.28 32.42|Vereesa Windrunner|artifact", -- Alliance
+		[40402] = "Clandestine Operation|10+ hunter 40392 horde -bloodelf|32.28 32.42|Vereesa Windrunner|artifact", -- Horde
+		[40403] = "Clandestine Operation|10+ hunter 40392 horde bloodelf|32.28 32.42|Vereesa Windrunner|artifact", -- Blood Elf
+		[40419] = "Rescue Mission|10+ hunter 40400,40402,40403|32.28 32.42|Vereesa Windrunner|artifact",
+
 		-- Armies of Legionfall
 		[45727] = "Uniting the Isles|45+ -43341|7.22 32.9|Archmage Khadgar|link:627|Visit {!}Archmage Khadgar in the Violet Citadel to start the Broken Shore campaign",
 		[46730] = "Armies of Legionfall|45+ 45727|18.5 33.1|Archmage Khadgar|link:627|Visit {!}Archmage Khadgar in Krasus' Landing to start the Broken Shore campaign",
@@ -3046,11 +3087,11 @@ Data.Quests = {
 		[46666] = "The Motherlode|45+ 46511|39.54 71.68|Excavator Karla||Available the following day after completing We're Treasure Hunters",
 
 		-- Cathedral of Eternal Night
-		[46253] = "Pillars of Creation|45+|44.73 63.27|Archmage Khadgar|dungeon",
+		[46253] = "Pillars of Creation|45+ 46734|44.73 63.27|Archmage Khadgar|dungeon",
 		[46244] = "Cathedral of Eternal Night: Altar of the Aegis|45+ 46286|44.73 63.27|Archmage Khadgar|dungeon",
 
 		-- Tomb of Sargeras
-		[46805] = "The Deceiver's Downfall|45+|44.56 63.39|Prophet Velen|raid",
+		[46805] = "The Deceiver's Downfall|45+ 46734|44.56 63.39|Prophet Velen|raid",
 
 		-- The King's Path (Alliance)
 		[46268] = "A Found Memento|45+ alliance|53.34 80.45|Battered Trinket",
@@ -3269,7 +3310,17 @@ Data.Quests = {
 	-- Darnassus
 	[89] = {
 		-- Battle for Azeroth - A Nation Divided
-		[46727] = "Tides of War|10+ alliance -58983 -56775|45.1 50.13|Hero's Herald", -- 58983 is Exile's Reach version - 56775 don't show for Exile's Reach players
+		[46727] = "Tides of War|10+ alliance -58983 -56775|45.1 50.13|Hero's Herald", -- 58983 is Exile's Reach version - 56775 doesn't show for Exile's Reach players
+
+		-- Worgen: The Howling Oak
+		[26385] = "Breaking Waves of Change|5+ worgen 28517 -26383 -13518 -28490|48.13 14.45|Genn Greymane",
+	},
+
+	-- Teldrassil
+	[57] = {
+		-- Worgen: The Howling Oak
+		[28517] = "The Howling Oak|5+ worgen|55.23 89.18|Krennan Aranas", -- TODO: Check if you can get this after choosing Exile's Reach as your starting zone
+		[26385] = "Breaking Waves of Change|5+ worgen 28517 -26383 -13518 -28490|30.45 39.11|Genn Greymane|link:89",
 	},
 
 
@@ -3432,7 +3483,18 @@ Data.Quests = {
 
 	--[[ Durotar ]]--
 
+	-- Orgrimmar
+	[85] = {
+		-- Legion Intro
+		[43926] = "Legion: The Legion Returns|10+ -44663 horde|49.67 76.46|Warchief's Command Board",
+	},
+
+	-- Durotar
 	[1] = {
+		-- Legion Intro
+		[44281] = "To Be Prepared|10+ -44663 43926 horde|46.01 13.78|Holgar Stormaxe",
+		[40518] = "The Battle for Broken Shore|10+ -44663 44281 horde|55.65 11.04|Stone Guard Mukar",
+
 		-- Stormheim - Greymane's Gambit
 		[39698] = "Making the Rounds|10+ 38307 horde|61.37 8.86|Lady Sylvanas Windrunner",
 		[39801] = "The Splintered Fleet|10+ 39698 horde|61.49 8.77|Lady Sylvanas Windrunner",
@@ -3494,6 +3556,23 @@ Data.Quests = {
 		-- The Heart of Azeroth
 		[51211] = "The Heart of Azeroth|40+ 43028,52946|50.1 30.62|Magni Bronzebeard|elsewhere link:81",
 		[52428] = "Infusing the Heart|40+ 51211|50.15 53.66|Magni Bronzebeard",
+	},
+
+
+	--[[ Dun Morohh ]]--
+
+	-- Ironforge
+	[87] = {},
+
+	-- Dun Morogh
+	[27] = {
+		-- Coldridge Valley
+		[24469] = "Hold the Line!|1+ alliance|36.87 70.05|Joren Ironstock|link:427",
+	},
+
+	-- Coldridge Valley
+	[427] = {
+		[24469] = "Hold the Line!|1+ alliance|67.14 41.3|Joren Ironstock",
 	},
 
 
