@@ -1,6 +1,6 @@
-## Interface: 90205
+## Interface: 90207
 ## Title: Breadcrumbs
-## Version: 22.7.31
+## Version: 22.8.17
 ## Notes: Adds pins to your World Map
 ## Author: Leo
 ## OptionalDeps: TipTac
