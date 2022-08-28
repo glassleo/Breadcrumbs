@@ -131,8 +131,8 @@ Data.Vignettes = {
 		[65388] = "Protoform Schematic|60+ 64953 64952 65427 -item:189465|31.48 50.33||treasure scroll item:189465|Contains|{4217590} [rare]Schematic: Genesis Crawler]",
 		
 		[65441] = {
-			"Mawsworn Cache|60+ 64953 64952 -65427|60.59 30.54|treasure|Contains|{4381149} [legendary]Cosmic Flux] (200)||Unlocks|{4217590} [rare]Schematic: Sundered Zerethsteed]",
-			"Mawsworn Cache|60+ 64953 64952 65427|60.59 30.54|treasure item:189456|Contains|{4217590} [rare]Schematic: Sundered Zerethsteed]|{4381149} [legendary]Cosmic Flux] (200)",
+			"Mawsworn Cache|60+ 64953 64952 -65427|60.59 30.54||treasure|Contains|{4381149} [legendary]Cosmic Flux] (200)||Unlocks|{4217590} [rare]Schematic: Sundered Zerethsteed]",
+			"Mawsworn Cache|60+ 64953 64952 65427|60.59 30.54||treasure item:189456|Contains|{4217590} [rare]Schematic: Sundered Zerethsteed]|{4381149} [legendary]Cosmic Flux] (200)",
 		},
 		[65379] = "Protoform Schematic|60+ 64953 64952 65427 65441 -item:189456|60.61 30.53||treasure scroll item:189456|Contains|{4217590} [rare]Schematic: Sundered Zerethsteed]",
 		
