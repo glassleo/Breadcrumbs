@@ -50,7 +50,7 @@ Data.POI = {
 	-- Ring of Transference
 	[1671] = {
 		-- Portal
-		"POI/Portal|Portals|60+|56.27 75.98||Gorgrond, Karazhan, Mechagon",
+		"POI/Portal|Portals|1+|56.27 75.98||Gorgrond, Karazhan, Mechagon",
 
 		-- Teleport Pad
 		"teleportationnetwork-32x32:small|Ring of Fates|1+|49.52 60.92|link:1670",
@@ -229,7 +229,16 @@ Data.POI = {
 	-- Revendreth
 	[1525] = {
 		-- NPC
-		"repair:small|Deadfoot|item:182744 -item:182746|48.73 68.52|tooltip|\"Purchase an All-In-One Belt Repair Kit from Deadfoot to repair your Ornate Belt Buckle\"",
+		"banker|Deadfoot|item:182744 -item:182746|48.73 68.52|tooltip|\"Purchase an All-In-One Belt Repair Kit from Deadfoot to repair your Ornate Belt Buckle\"",
+	},
+
+
+	--[[ Nazjatar ]]--
+
+	-- Nazjatar
+	[1355] = {
+		-- NPC
+		"banker|Gloomseeker Yarga|item:170191,item:170472,item:170189|39.02 57.99|tooltip|\"Yarga will trade any cursed items for gold. She can be found in an underwater cave.\"||Accepts|{1500930} [rare]Blind Eye]|{2744751} [rare]Encrusted Coin]|{615099} [rare]Skeletal Hand]",
 	},
 
 
@@ -287,7 +296,7 @@ Data.POI = {
 		"POI/Enchanting|[Enchanting]|10+ enchanting|38.64 40.93|tooltip|Simply Enchanting",
 		"POI/Engineering|[Engineering]|10+ engineering|38.75 25.38|tooltip|Like Clockwork",
 		"POI/Herbalism|[Herbalism]|10+ herbalism|tooltip|43 34.72",
-		"POI/Inscription|[Inscription]|10+ inscription|43.29 34.21|tooltip|The Scribe's Sacellum",
+		"POI/Inscription|[Inscription]|10+ inscription|41.28 37.03|tooltip|The Scribe's Sacellum",
 		"POI/Jewelcrafting|[Jewelcrafting]|10+ jewelcrafting|39.74 34.84|tooltip|Cartier & Co. Fine Jewelry",
 		"POI/Leatherworking|[Leatherworking and Skinning]|10+ leatherworking skinning|35.41 29.02|tooltip|Legendary Leathers",
 		"POI/Leatherworking|[Leatherworking]|leatherworking -skinning|35.41 29.02|tooltip|Legendary Leathers",
@@ -644,6 +653,7 @@ Data.POI = {
 		-- Profession Trainer
 		"POI/Enchanting|[Enchanting Trainer]|10+ enchanting|46.85 42.94|tooltip|Lai the Spellpaw",
 		"POI/Inscription|[Inscription Trainer]|10+ inscription|54.91 45.12|tooltip|Inkmaster Wei",
+		"POI/Mining|[Mining Trainer]|10+ mining|46.07 29.41|tooltip|Smeltmaster Ashpaw",
 	},
 
 
@@ -792,6 +802,12 @@ Data.POI = {
 		"POI/Cooking|[Cooking Trainer]|5+ horde|56.53 62.48|tooltip|Marogg",
 		"POI/Fishing|[Fishing Trainer]|5+ horde|66.44 41.93|tooltip|Lumak",
 		"POI/Archaeology|[Archaeology Trainer]|10+ horde|49.06 70.56|tooltip|Belloc Brightblade",
+	},
+
+	-- Durotar
+	[1] = {
+		-- Legion Intro
+		"Speak:small|[Holgar Stormaxe]|10+ 43926 _40518 -44663 horde|46.01 13.78|tooltip|Skip the Legion introductory quests and begin your journey in Dalaran.",
 	},
 
 
