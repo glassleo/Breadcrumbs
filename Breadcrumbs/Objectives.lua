@@ -122,6 +122,18 @@ Data.Objectives = {
 		[46728] = "questobjective|22.8 24.7|The Nation of Kul Tiras|[Jaina Proudmoore]",
 		[59641] = "questobjective|22.8 24.7|The Nation of Kul Tiras|[Jaina Proudmoore]",
 	},
+
+	-- Dun Morogh
+	[27] = {
+		-- Get to the Airfield
+		[25998] = "questobjective-override|75.22 52.77|Get to the Airfield|[Mathel's Flying Machine]",
+
+		-- Striking Back
+		[26094] = "questobjective|77.14 18.52|Striking Back|[Repaired Bomber]",
+
+		-- Demanding Answers
+		[26112] = "questobjective-override|75.94 16.81|Demanding Answers|[Rixa's Flying Machine]",
+	},
 }
 
 
