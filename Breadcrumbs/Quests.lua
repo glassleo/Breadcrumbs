@@ -53,7 +53,7 @@ Data.HiddenBonusObjectiveQuests = {
 		-n				Must not have completed or picked up quest ID n
 		~n				Must not have picked up quest ID n
 		§n				Must have picked up quest ID n but not completed it
-		_n				Must not have completed quest ID n
+		_n				Must not have completed quest ID n (not turned in)
 
 		class			Must be any of following classes (deathknight demonhunter druid hunter mage monk paladin, priest, rogue, shaman, warlock, warrior)
 		profession		Must have any of the following professions learned (alchemy, blacksmithing, enchanting, engineering, herbalism, inscription, jewelcrafting, leatherworking, mining, skinning, tailoring, archaeology, cooking, fishing)
@@ -368,7 +368,7 @@ Data.Quests = {
 		[57895] = "Elysian Hold|60+ kyrian 60491|58.44 28.92|Polemarch Adrestes|campaign",
 
 		-- Kyrian - Steward
-		[62916] = "Your Next Best Friend|60+,62704 kyrian 59426 -60259 -60260 -60261 -60262 -60263|52.98 47.56|Sika", -- Weekly quest - only show if no Steward choice has been made
+		[62916] = "Your Next Best Friend|60+,62704 kyrian 59426 -60259 -60260 -60261 -60262 -60263|52.98 47.56|Sika|weekly", -- Weekly quest - only show if no Steward choice has been made
 
 		-- Kyrian - Kyrian Combatant
 		[64323] = "Kyrian Veteran|60+,62704 kyrian renown:43|64.76 20.33|Iona Skyblade|legendary", -- Kyrian, Renown 43
@@ -3326,6 +3326,16 @@ Data.Quests = {
 
 	--[[ Azuremyst Isle ]]--
 
+	-- The Exodar
+	[103] = {
+		-- Azure Watch
+		[9605] = "Hippogryph Master Stephanos|1+ 9604 draenei alliance|57.01 50.09|Nurguni", -- Draenei only
+		[9606] = "Return to Caregiver Chellan|1+ 9605 draenei alliance|54.49 36.3|Stephanos", -- Draenei only
+
+		-- Bloodmyst Isle
+		[9625] = "Elekks Are Serious Business|1+ 9623 -28559 alliance|81.51 51.46|Torallius the Pack Handler", -- Breadcrumb for Bloodmyst; mutually exclusive with Hero's Call 28559
+	},
+
 	-- Ammen Vale
 	[468] = {
 		[9279] = "You Survived!|1+ -9280 draenei alliance|61.16 29.5|Megelon", -- Draenei only
@@ -3472,14 +3482,6 @@ Data.Quests = {
 		[9566] = "Blood Crystals|1+ 9565 alliance|65.18 30.89|Blood Crystal",
 	},
 
-	-- The Exodar
-	[103] = {
-		-- Azure Watch
-		[9605] = "Hippogryph Master Stephanos|1+ 9604 draenei alliance|57.01 50.09|Nurguni", -- Draenei only
-		[9606] = "Return to Caregiver Chellan|1+ 9605 draenei alliance|54.49 36.3|Stephanos", -- Draenei only
-		[9625] = "Elekks Are Serious Business|1+ 9623 -28559 alliance|81.51 51.46|Torallius the Pack Handler", -- Breadcrumb for Bloodmyst; mutually exclusive with Hero's Call 28559
-	},
-
 
 	--[[ Durotar ]]--
 
@@ -3562,17 +3564,125 @@ Data.Quests = {
 	--[[ Dun Morohh ]]--
 
 	-- Ironforge
-	[87] = {},
+	[87] = {
+		-- Dun Morogh
+		[6388]  = "Gryth Thurden|1+ dwarf,gnome,darkiron alliance 6391|51.54 26.32|Golnir Bouldertoe", -- Dwarf/Gnome/Dark Iron only
+		[6392]  = "Return to Gremlock|1+ dwarf,gnome,darkiron alliance 6388|55.49 47.74|Gryth Thurden", -- Dwarf/Gnome/Dark Iron only
+		[26118] = "Seize the Ambassador|1+ alliance 26112|39.77 57.28|Moira Thaurissan",
 
-	-- Dun Morogh
-	[27] = {
-		-- Coldridge Valley
-		[24469] = "Hold the Line!|1+ alliance|36.87 70.05|Joren Ironstock|link:427",
+		-- Loch Modan
+		[26131] = "Reinforcements for Loch Modan|5+ alliance -28567|41.43 52.29|Mountaineer Barleybrew", -- Exclusive with 28567 (Hero's Call: Loch Modan)
 	},
 
 	-- Coldridge Valley
 	[427] = {
 		[24469] = "Hold the Line!|1+ alliance|67.14 41.3|Joren Ironstock",
+		[24470] = "Give 'em What-For|1+ alliance 24469|67.14 41.3|Joren Ironstock",
+		[24471] = "Aid for the Wounded|1+ alliance 24469|65.51 43.01|Sten Stoutarm",
+		[24473] = "Lockdown in Anvilmar|1+ alliance 24470 24471|67.14 41.3|Joren Ironstock",
+		[24474] = "First Things First: We're Gonna Need Some Beer|1+ alliance 24473|62.88 21.03|Jona Ironstock",
+		[24475] = "All the Other Stuff|1+ alliance 24474|62.88 21.03|Jona Ironstock",
+		[24477] = "Dwarven Artifacts|1+ alliance 24473|61.7 22.06|Grundel Harkin",
+		[24486] = "Make Hay While the Sun Shines|1+ alliance 24477|61.7 22.06|Grundel Harkin",
+		[24487] = "Whitebeard Needs Ye|1+ alliance 24475 24486|62.88 21.03|Jona Ironstock",
+		[182]   = "The Troll Menace|1+ alliance 24487|42.72 62.21|Grelin Whitebeard",
+		[24489] = "Trolling for Information|1+ alliance 24487|43.24 63.11|Apprentice Soren",
+		[3361]  = "A Refugee's Quandary|1+ alliance 24487|41.92 63.43|Felix Whindlebolt",
+		[218]   = "Ice and Fire|1+ alliance 182 24489 3361|42.72 62.21|Grelin Whitebeard",
+		[24490] = "A Trip to Ironforge|1+ alliance 218|42.72 62.21|Grelin Whitebeard",
+		[24491] = "Follow that Gyro-Copter!|1+ alliance 24490|87.51 44.47|Hands Springsprocket",
+		[24492] = "Pack Your Bags|1+ alliance 24491|69.84 44|Milo Geartwinge",
+		[24493] = "Don't Forget About Us|1+ alliance +24492 _24492|62.88 21.03|Jona Ironstock", -- Can only be obtained while on 24492
+	},
+
+	-- New Tinkertown
+	[469] = {
+
+
+		[26380] = "Bound for Kharanos|1+ alliance|81.78 55.37|Ciara Deepstone",
+	},
+
+	-- Dun Morogh
+	[27] = {
+		-- Coldridge Valley
+		[24469] = "Hold the Line!|1+ alliance|36.87 70.05|Joren Ironstock|link:427",
+		[24470] = "Give 'em What-For|1+ alliance 24469|36.87 70.05|Joren Ironstock|link:427",
+		[24471] = "Aid for the Wounded|1+ alliance 24469|36.55 70.38|Sten Stoutarm|link:427",
+		[24473] = "Lockdown in Anvilmar|1+ alliance 24470 24471|36.87 70.05|Joren Ironstock|link:427",
+		[24474] = "First Things First: We're Gonna Need Some Beer|1+ alliance 24473|36.03 66.05|Jona Ironstock|link:427",
+		[24475] = "All the Other Stuff|1+ alliance 24474|36.03 66.05|Jona Ironstock|link:427",
+		[24477] = "Dwarven Artifacts|1+ alliance 24473|35.8 66.25|Grundel Harkin|link:427",
+		[24486] = "Make Hay While the Sun Shines|1+ alliance 24477|35.8 66.25|Grundel Harkin|link:427",
+		[24487] = "Whitebeard Needs Ye|1+ alliance 24475 24486|36.03 66.05|Jona Ironstock|link:427",
+		[182]   = "The Troll Menace|1+ alliance 24487|32.06 74.17|Grelin Whitebeard|link:427",
+		[24489] = "Trolling for Information|1+ alliance 24487|32.16 74.35|Apprentice Soren|link:427",
+		[3361]  = "A Refugee's Quandary|1+ alliance 24487|31.9 74.41|Felix Whindlebolt|link:427",
+		[218]   = "Ice and Fire|1+ alliance 182 24489 3361|32.06 74.17|Grelin Whitebeard|link:427",
+		[24490] = "A Trip to Ironforge|1+ alliance 218|32.06 74.17|Grelin Whitebeard|link:427",
+		[24491] = "Follow that Gyro-Copter!|1+ alliance 24490|40.88 70.67|Hands Springsprocket|link:427",
+		[24492] = "Pack Your Bags|1+ alliance 24491|37.4 70.58|Milo Geartwinge|link:427",
+		[24493] = "Don't Forget About Us|1+ alliance +24492 _24492|36.03 66.05|Jona Ironstock|link:427", -- Can only be obtained while on 24492
+
+		-- New Tinkertown
+
+		-- Kharanos
+		[26380] = "Bound for Kharanos|1+ alliance|49.9 44.98|Ciara Deepstone",
+		[6387]  = "Honor Students|1+ dwarf,gnome,darkiron alliance|54.78 50.63|Gremlock Pilsnor", -- Dwarf/Gnome/Dark Iron only
+		[6391]  = "Ride to Ironforge|1+ dwarf,gnome,darkiron alliance 6387|53.8 52.76|Brolan Galebeard", -- Dwarf/Gnome/Dark Iron only
+		[384]   = "Beer Basted Boar Ribs|1+ alliance|53.93 50.69|Ragnar Thunderbrew|cooking",
+		[315]   = "The Perfect Stout|1+ alliance|54.2 51.17|Rejold Barleybrew",
+		[25724] = "Frostmane Aggression|1+ alliance|53.71 52.19|Captain Tharran",
+		[25668] = "Pilfered Supplies|1+ alliance 25724|53.71 52.1|Quartermaster Glynna",
+		[25667] = "Culling the Wendigos|1+ alliance 25724|53.71 52.19|Captain Tharran",
+		[313]   = "Forced to Watch from Afar|1+ alliance 25724|53.71 52.19|Captain Tharran",
+		[25792] = "Pushing Forward|1+ alliance 25667 313|53.71 52.19|Captain Tharran",
+		[412]   = "Operation Recombobulation|1+ alliance 25667 313|53.27 51.9|Razzle Sprysprocket",
+		[25838] = "Help from Steelgrill's Depot|1+ alliance 25792 412|53.71 52.19|Captain Tharran",
+		[25839] = "The Ultrasafe Personnel Launcher|1+ alliance 25838|56.82 47.1|Delber Cranktoggle",
+
+		-- Frostmane Retreat
+		[28868] = "The View from Down Here|1+ alliance 25839|62.55 53.81|Snevik the Blade",
+		[25840] = "Eliminate the Resistance|1+ alliance 25839|62.5 53.71|Slamp Wobblecog",
+		[25841] = "Strike From Above|1+ alliance 25839|62.5 53.71|Slamp Wobblecog",
+		[25882] = "A Hand at the Ranch|1+ alliance 25840 25841 -25932|62.5 53.71|Slamp Wobblecog", -- Breadcrumb for 25932
+
+		-- Amberstill Ranch
+		[25932] = "It's Raid Night Every Night|1+ alliance ~25882|70.41 48.92|Sergeant Flinthammer", -- Invalidates breadcrumb 25882
+		[25905] = "Rams on the Lam|1+ alliance 25932|70.66 48.87|Veron Amberstill",
+		[314]   = "Protecting the Herd|1+ alliance 25932|70.28 48.16|Rudra Amberstill",
+		[25933] = "Help for the Quarry|1+ alliance 25905 314|70.41 48.92|Sergeant Flinthammer",
+
+		-- Gol'Bolar Quarry
+		[432]   = "Those Blasted Troggs!|1+ alliance|75.31 54.67|Foreman Stonebrow",
+		[433]   = "The Public Servant|1+ alliance|75.9 54.31|Senator Mehr Stonehallow|weekly", -- Weekly quest
+		[25937] = "Priceless Treasures|1+ alliance|76.19 53.04|Prospector Drugan",
+		[25986] = "Trouble at the Lake|1+ alliance 433 -25978|75.9 54.31|Senator Mehr Stonehallow", -- Breadcrumb for 25978 -- check if 432 and/or 25937 are prereqs
+
+		-- Bahrum's Post
+		[25978] = "Entombed in Ice|1+ alliance ~25986|82.85 48.41|Sergeant Bahrum", -- Invalidates breadcrumb 25986
+		[25979] = "Dealing with the Surge|1+ alliance|82.64 48.3|Khurgorn Singefeather",
+		[25997] = "Dark Iron Scheming|1+ alliance 25978 25979|82.85 48.41|Sergeant Bahrum",
+		[25998] = "Get to the Airfield|1+ alliance 25997|82.85 48.41|Sergeant Bahrum",
+
+		-- Ironforge Airfield
+		[26078] = "Extinguish the Fires|1+ alliance 25998|78.25 20.51|Commander Stonebreaker||\"You can use Mathel's Flying Machine in Gol'Bolar Quarry if you need to get back to the Airfield.\"",
+		[26085] = "Rallying the Defenders|1+ alliance 26078|78.25 20.51|Commander Stonebreaker||\"You can use Mathel's Flying Machine in Gol'Bolar Quarry if you need to get back to the Airfield.\"",
+		[26094] = "Striking Back|1+ alliance 26085|78.25 20.51|Commander Stonebreaker||\"You can use Mathel's Flying Machine in Gol'Bolar Quarry if you need to get back to the Airfield.\"",
+		[26102] = "Grimaxe's Demise|1+ alliance 26094|78.25 20.51|Commander Stonebreaker||\"You can use Mathel's Flying Machine in Gol'Bolar Quarry if you need to get back to the Airfield.\"",
+		[26112] = "Demanding Answers|1+ alliance 26102|78.25 20.51|Commander Stonebreaker||\"You can use Mathel's Flying Machine in Gol'Bolar Quarry if you need to get back to the Airfield.\"",
+
+		-- South Gate Outpost
+		[26854] = "The Lost Pilot|5+ alliance|92.23 48.55|Pilot Hammerfoot|link:48", -- Invalidates breadcrumbs 26131 and 28567
+		[26855] = "A Pilot's Revenge|5+ alliance 26854|87.64 50.14|A Dwarven Corpse",
+	},
+
+
+	--[[ Loch Modan ]]--
+
+	[48] = {
+		-- South Gate Outpost
+		[26854] = "The Lost Pilot|5+ alliance|14 56.49|Pilot Hammerfoot",
+		[26855] = "A Pilot's Revenge|5+ alliance 26854|5.84 59.31|A Dwarven Corpse|link:27",
 	},
 
 
