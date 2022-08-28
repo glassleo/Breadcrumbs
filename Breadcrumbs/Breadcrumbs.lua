@@ -218,7 +218,7 @@ function Breadcrumbs:UpdateMap(event, ...)
 			return
 		elseif event == "PLAYER_LEVEL_UP" or event == "BAG_UPDATE" then
 			Throttle[event] = true
-			C_Timer.After(0.25, function() Throttle[event] = false end)
+			C_Timer.After(1, function() Throttle[event] = false end)
 		else
 			Throttle[event] = true
 			C_Timer.After(0.5, function() Throttle[event] = false end)
