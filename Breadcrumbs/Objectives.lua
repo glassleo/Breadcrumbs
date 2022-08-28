@@ -175,4 +175,13 @@ Data.ObjectiveSteps = {
 			"questobjective|48.71 31.97|Match Made in Zereth Mortis|Ascend to Ultimus Locus",
 		},
 	},
+
+	-- Loch Modan
+	[48] = {
+		[13650] = {
+			"questobjective|70.69 67.59|Keep Your Hands Off The Goods!|Artifact of the Broken Tablet Inspected",
+			--"questobjective|70.06 59.89|Keep Your Hands Off The Goods!|Artifact of the Upturned Giant Inspected", -- The only one that is working properly
+			"questobjective|72.72 65.47|Keep Your Hands Off The Goods!|Artifact of the Overdressed Woman Inspected",
+		},
+	},
 }

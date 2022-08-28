@@ -3672,8 +3672,9 @@ Data.Quests = {
 		[26112] = "Demanding Answers|1+ alliance 26102|78.25 20.51|Commander Stonebreaker||\"You can use Mathel's Flying Machine in Gol'Bolar Quarry if you need to get back to the Airfield.\"",
 
 		-- South Gate Outpost
-		[26854] = "The Lost Pilot|5+ alliance|92.23 48.55|Pilot Hammerfoot|link:48", -- Invalidates breadcrumbs 26131 and 28567
+		[26854] = "The Lost Pilot|5+ alliance|92.23 48.55|Pilot Hammerfoot|link:48",
 		[26855] = "A Pilot's Revenge|5+ alliance 26854|87.64 50.14|A Dwarven Corpse",
+		[13635] = "South Gate Status Report|5+ alliance 26855|92.23 48.55|Pilot Hammerfoot|link:48",
 	},
 
 
@@ -3683,6 +3684,90 @@ Data.Quests = {
 		-- South Gate Outpost
 		[26854] = "The Lost Pilot|5+ alliance|14 56.49|Pilot Hammerfoot",
 		[26855] = "A Pilot's Revenge|5+ alliance 26854|5.84 59.31|A Dwarven Corpse|link:27",
+		[13635] = "South Gate Status Report|5+ alliance 26855|14 56.49|Pilot Hammerfoot",
+
+		-- Valley of Kings
+		[26146] = "In Defense of the King's Lands|5+ alliance|23.38 75.04|Captain Rugelfuss",
+		[26145] = "The Trogg Threat|5+ alliance ~13635|23.33 74.92|Mountaineer Cobbleflint", -- Maybe requires 13635?
+		[26147] = "Bigger and Uglier|5+ alliance 26146|23.3 75.05|Mountaineer Wallbang",
+		[26148] = "A Decisive Strike|5+ alliance 26146|23.38 75.04|Captain Rugelfuss",
+		[26176] = "Onward to Thelsamar|5+ alliance 26148 -26842|23.38 75.04|Captain Rugelfuss", -- Breadcrumb for 26842
+
+		-- Thelsamar
+		[26842] = "Out of Gnoll-where|5+ alliance ~26176|35.06 46.59|Mountaineer Kadrell", -- Invalidates 26176
+		[13636] = "Stormpike's Orders|5+ alliance -26843|35.06 46.59|Mountaineer Kadrell", -- Breadcrumb for 26843
+		[25118] = "Looking for Lurkers|5+ alliance|35.43 42.82|Dakk Blunderblast",
+		[26860] = "Thelsamar Blood Sausages|5+ alliance|34.83 49.28|Vidra Hearthstove|cooking",
+		[13648] = "WANTED: The Dark Iron Spy|5+ alliance|37.3 46.52|Wanted!",
+
+		-- Algaz Station
+		[26843] = "A Tiny, Clever Commander|5+ alliance ~13636|25.45 17.96|Mountaineer Stormpike", -- Invalidates breadcrumb 13636
+		[26844] = "Kobold and Kobolder|5+ alliance 26843|25.45 17.96|Mountaineer Stormpike",
+		[26845] = "Who's In Charge Here?|5+ alliance 26844|25.45 17.96|Mountaineer Stormpike",
+		[26863] = "Filthy Paws|5+ alliance 26844|25.45 17.96|Mountaineer Stormpike",
+		[26846] = "A Nasty Exploit|5+ alliance 26844|25.4 17.79|Scout Dorli",
+		[26864] = "The Bearer of Gnoll-edge|5+ alliance 26845|25.45 17.96|Mountaineer Stormpike",
+		[26137] = "Checking on the Boys|10+ alliance ~28565 -25395|25.45 17.96|Mountaineer Stormpike", -- Breadcrumb for 25395
+
+		-- The Axis of Awful
+		[26927] = "Suddenly, Murlocs!|5+ alliance 26864|35.06 46.59|Mountaineer Kadrell",
+		[26928] = "Smells Like A Plan|5+ alliance 26927|34.79 49.12|Cannary Caskshot",
+		[26929] = "A Load of Croc|5+ alliance 26927|34.79 49.12|Cannary Caskshot",
+		[26932] = "Buzz Off|5+ alliance 26927|35.06 46.59|Mountaineer Kadrell",
+		[26868] = "Axis of Awful|5+ alliance 26928|34.79 49.12|Cannary Caskshot",
+
+		-- Ironband's Excavation
+		[13639] = "Resupplying the Excavation|5+ alliance 26868|37.24 47.38|Jern Hornhelm",
+		[309]   = "Protecting the Shipment|5+ alliance 13639|56.36 65.98|Huldar",
+		[13650] = "Keep Your Hands Off The Goods!|5+ alliance 309|65.34 65.98|Prospector Ironband",
+		[26961] = "Gathering Idols|5+ alliance|64.89 66.66|Magmar Fellhew",
+		[13647] = "Joining the Hunt|5+ alliance 13650 26961|64.89 66.66|Magmar Fellhew",
+
+		-- Farstrider Lodge
+		[27025] = "Thistle While You Work|5+ alliance|82.79 63.46|Safety Warden Pipsy",
+		[27026] = "Defcon: Bobcat|5+ alliance 27025|82.79 63.46|Safety Warden Pipsy",
+		[27016] = "The Joy of Boar Hunting|5+ alliance|83.48 65.38|Daryl the Youngling",
+		[27036] = "Vyrin's Revenge|5+ alliance 27016|81.91 64.61|Vyrin Swiftwind",
+		[27037] = "Vyrin's Revenge|5+ alliance 27036|83.48 65.38|Daryl the Youngling",
+		[27028] = "Hornet Hunting|5+ alliance|81.75 61.66|Marek Ironheart",
+		[27030] = "Foxtails By The Handful|5+ alliance|81.75 61.66|Marek Ironheart",
+		[27031] = "Wing Nut|5+ alliance|81.64 64.76|Bingles Blastenheimer",
+		[27032] = "Bird is the Word|5+ alliance 27031|81.64 64.76|Bingles Blastenheimer",
+		[27033] = "Skystrider's Heart|5+ alliance 27032|78.58 76.22|Rusted Skystrider|down|\"Inside Ironwing Cavern\"",
+		[27034] = "He's That Age|5+ alliance 27033|81.64 64.76|Bingles Blastenheimer",
+
+		-- Twilight Threats
+		[27035] = "Standing Up|5+ alliance 27034|58.51 29.1|Ando Blastenheimer",
+		[27074] = "Fight the Hammer|5+ alliance 27035|58.51 29.1|Ando Blastenheimer",
+		[27075] = "Servants of Cho'gall|5+ alliance 27074|64.12 26.61|Ashlan Stonesmirk",
+		[27077] = "Clutching at Chaos|5+ alliance 27074|64.12 26.61|Ashlan Stonesmirk",
+		[27078] = "Gor'kresh|5+ alliance 27075 27077|64.12 26.61|Ashlan Stonesmirk",
+		[27115] = "Ando's Call|5+ alliance 27078|64.12 26.61|Ashlan Stonesmirk",
+		[27116] = "The Winds of Loch Modan|5+ alliance 27115|58.51 29.1|Ando Blastenheimer",
+
+		-- Explorer's League Documents
+		[13656] = "Explorers' League Document (1 of 6)|5+ alliance|36.75 61.11|Stolen Explorers' League Document",
+		[13655] = "Explorers' League Document (2 of 6)|5+ alliance|41.37 38.98|Stolen Explorers' League Document",
+		[13657] = "Explorers' League Document (3 of 6)|5+ alliance|61.71 73.17|Stolen Explorers' League Document",
+		[13658] = "Explorers' League Document (4 of 6)|5+ alliance|68.11 66.14|Stolen Explorers' League Document",
+		[13660] = "Explorers' League Document (5 of 6)|5+ alliance|53.7 38.11|Stolen Explorers' League Document",
+		[13659] = "Explorers' League Document (6 of 6)|5+ alliance|73.17 35.86|Stolen Explorers' League Document",
+		[13661] = "Heartfelt Appreciation|5+ alliance 13656 13655 13657 13658 13660 13659|37.27 47.76|Torren Squarejaw",
+	},
+
+
+	--[[ Wetlands ]]--
+
+	[56] = {
+		-- Dun Algaz
+		[25395] = "The Stolen Keg|10+ alliance ~26137 ~28565|49.95 79.16|Mountaineer Rharen", -- Invalidates breadcrumbs 26137 and 28565
+		[25211] = "Cleaning Hovel|10+ alliance|49.91 79.24|Mountaineer Grugelm",
+		[25770] = "Keg Run|10+ alliance 25395 -25721|49.95 79.16|Mountaineer Rharen", -- Breadcrumb for 25721
+
+		-- Slabchisel's Survey
+		[25721] = "Fight the Flood|10+ alliance ~25770|57.51 71.76|Forba Slabchisel", -- Invalidates 25770
+		[25722] = "Sedimentary, My Dear|10+ alliance|57.47 71.43|Surveyor Thurdan",
+		[25723] = "Thresh Out of Luck|10+ alliance|57.84 71.49|Dunlor Marblebeard",
 	},
 
 
