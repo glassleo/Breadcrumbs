@@ -31,7 +31,7 @@ While the addon itself is more or less feature complete, only a tiny fraction of
 If you'd like to help, please [get in touch](mailto:hello@leo.glass)!
 
 So far, the following zones are entirely complete or in a near-complete state:
-- Zereth Mortis and Secrets of the First Ones
+- Zereth Mortis and the Secrets of the First Ones campaign
 - Bastion (Threads of Fate)
 - Maldraxxus (Threads of Fate)
 - Ardenweald (Threads of Fate)
