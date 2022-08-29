@@ -3658,10 +3658,60 @@ Data.Quests = {
 		[24493] = "Don't Forget About Us|1+ alliance +24492 _24492|62.88 21.03|Jona Ironstock", -- Can only be obtained while on 24492
 	},
 
+	-- Gnomeregan, New Tinkertown
+	[30] = {
+		[27670] = "Pinned Down|1+ alliance gnome -deathknight|34.09 32.21|Nevin Twistwrench", -- Gnome only; not available for Death Knights
+		[28167] = "Report to Carvo Blastbolt|1+ alliance gnome 27670|34.09 32.21|Nevin Twistwrench", -- Gnome only
+		[27671] = "See to the Survivors|1+ alliance gnome 28167|50.96 31.93|Carvo Blastbolt", -- Gnome only
+		[28169] = "Withdraw to the Loading Room!|1+ alliance gnome 27671|50.96 31.93|Carvo Blastbolt", -- Gnome only
+		[27635] = "Decontamination|1+ alliance gnome 28169|53.08 82.33|Gaffer Coilspring", -- Gnome only
+		[27674] = "To the Surface|1+ alliance gnome 27635|66.44 81.58|Technician Braggle", -- Gnome only
+	},
+
 	-- New Tinkertown
 	[469] = {
+		-- Gnomeregan
+		[27670] = "Pinned Down|1+ alliance gnome -deathknight|25.76 31.96|Nevin Twistwrench|down link:30", -- Gnome only; not available for Death Knights
+		[28167] = "Report to Carvo Blastbolt|1+ alliance gnome 27670|25.76 31.96|Nevin Twistwrench|down link:30", -- Gnome only
+		[27671] = "See to the Survivors|1+ alliance gnome 28167|25.76 31.96|Carvo Blastbolt|down link:30", -- Gnome only
+		[28169] = "Withdraw to the Loading Room!|1+ alliance gnome 27671|25.76 31.96|Carvo Blastbolt|down link:30", -- Gnome only
+		[27635] = "Decontamination|1+ alliance gnome 28169|25.76 31.96|Gaffer Coilspring|down link:30", -- Gnome only
+		[27674] = "To the Surface|1+ alliance gnome 27635|27.83 36.12|Technician Braggle|down link:30", -- Gnome only
 
+		-- New Tinkertown
+		[41217] = "The Future of Gnomeregan|1+ alliance gnome 27635 hunter|39.51 38.39|Nevin Twistwrench", -- Gnome Hunter only
+		[26197] = "The Future of Gnomeregan|1+ alliance gnome 27635 mage|39.51 38.39|Nevin Twistwrench", -- Gnome Mage only
+		[31135] = "The Future of Gnomeregan|1+ alliance gnome 27635 monk|39.51 38.39|Nevin Twistwrench", -- Gnome Monk only
+		[26199] = "The Future of Gnomeregan|1+ alliance gnome 27635 priest|39.51 38.39|Nevin Twistwrench", -- Gnome Priest only
+		[26206] = "The Future of Gnomeregan|1+ alliance gnome 27635 rogue|39.51 38.39|Nevin Twistwrench", -- Gnome Rogue only
+		[26202] = "The Future of Gnomeregan|1+ alliance gnome 27635 warlock|39.51 38.39|Nevin Twistwrench", -- Gnome Warlock only
+		[26203] = "The Future of Gnomeregan|1+ alliance gnome 27635 warrior|39.51 38.39|Nevin Twistwrench", -- Gnome Warrior only
+		[41218] = "Meet the High Tinker|1+ alliance gnome 41217 hunter|41.93 31.64|Muffinus Chromebrew", -- Gnome Hunter only
+		[26421] = "Meet the High Tinker|1+ alliance gnome 26197 mage|41.09 29.13|Bipsi Frostflinger", -- Gnome Mage only
+		[31137] = "Meet the High Tinker|1+ alliance gnome 31135 monk|40.1 35.61|Xi, Friend to the Small", -- Gnome Monk only
+		[26422] = "Meet the High Tinker|1+ alliance gnome 26199 priest|39.4 28.38|\"Doc\" Cogspin", -- Gnome Priest only
+		[26423] = "Meet the High Tinker|1+ alliance gnome 26206 rogue|38.03 33.56|Kelsey Steelspark", -- Gnome Rogue only
+		[26424] = "Meet the High Tinker|1+ alliance gnome 26202 warlock|37.68 37.97|Alamar Grimm", -- Gnome Warlock only
+		[26425] = "Meet the High Tinker|1+ alliance gnome 26203 warrior|40.65 35.36|Drill Sergeant Steamcrank", -- Gnome Warrior only
+		[26208] = "The Fight Continues|1+ alliance gnome 41218,26421,31137,26422,26423,26424,26425|38.79 32.73|High Tinker Mekkatorque", -- Gnome only
+		[26566] = "A Triumph of Gnomish Ingenuity|1+ alliance gnome 26208|38.79 32.73|High Tinker Mekkatorque", -- Gnome only
+		[26222] = "Scrounging for Parts|1+ alliance gnome 26566|40.58 28.02|Engineer Grindspark", -- Gnome only
+		[26205] = "A Job for the Multi-Bot|1+ alliance gnome 26222|40.58 28.02|Engineer Grindspark", -- Gnome only
+		[26264] = "What's Left Behind|1+ alliance gnome 26222|39.23 26.56|Tock Sprysprocket", -- Gnome only
+		[26265] = "Dealing with the Fallout|1+ alliance gnome 26222|38.2 40.21|Corporal Fizzwhistle", -- Gnome only
+		[26316] = "What's Keeping Kharmarn?|1+ alliance gnome 26205 26264 26265|38.38 33.48|Captain Tread Sparknozzle", -- Gnome only
+		[26285] = "Get Me Explosives Back!|1+ alliance gnome 26316|37.29 65.2|Kharmarn Palegrip", -- Gnome only
+		[26284] = "Missing in Action|1+ alliance gnome 26316|37.29 65.2|Kharmarn Palegrip", -- Gnome only
+		[26318] = "Finishin' the Job|1+ alliance gnome 26285 26284|37.29 65.2|Kharmarn Palegrip", -- Gnome only
+		[26329] = "One More Thing|1+ alliance gnome 26318|37.29 65.2|Kharmarn Palegrip", -- Gnome only
+		[26331] = "Crushcog's Minions|1+ alliance gnome 26329|38.79 32.73|High Tinker Mekkatorque", -- Gnome only
+		[26333] = "No Tanks!|1+ alliance gnome 26329|38.2 33.66|Hinkles Fastblast", -- Gnome only
+		[26339] = {"Staging in Brewnall|1+ alliance gnome 26331 26333|38.03 33.56|Kelsey Steelspark", "Staging in Brewnall|1+ alliance gnome 26331 26333|41.93 31.64|Muffinus Chromebrew",}, -- Gnome only
+		[26342] = "Paint it Black|1+ alliance gnome 26339|48.76 52.88|Jarvi Shadowstep", -- Gnome only
+		[26364] = "Down with Crushcog!|1+ alliance gnome 26342|48.76 52.88|Jarvi Shadowstep", -- Gnome only
+		[26373] = "On to Kharanos|1+ alliance gnome 26364|48.76 52.88|Jarvi Shadowstep", -- Gnome only
 
+		-- Kharanos
 		[26380] = "Bound for Kharanos|1+ alliance|81.78 55.37|Ciara Deepstone",
 	},
 
@@ -3686,7 +3736,46 @@ Data.Quests = {
 		[24492] = "Pack Your Bags|1+ alliance 24491|37.4 70.58|Milo Geartwinge|link:427",
 		[24493] = "Don't Forget About Us|1+ alliance +24492 _24492|36.03 66.05|Jona Ironstock|link:427", -- Can only be obtained while on 24492
 
+		-- Gnomeregan
+		[27670] = "Pinned Down|1+ alliance gnome -deathknight|25.76 31.96|Nevin Twistwrench|down link:30", -- Gnome only; not available for Death Knights
+		[28167] = "Report to Carvo Blastbolt|1+ alliance gnome 27670|25.76 31.96|Nevin Twistwrench|down link:30", -- Gnome only
+		[27671] = "See to the Survivors|1+ alliance gnome 28167|27.73 31.92|Carvo Blastbolt|down link:30", -- Gnome only
+		[28169] = "Withdraw to the Loading Room!|1+ alliance gnome 27671|27.73 31.92|Carvo Blastbolt|down link:30", -- Gnome only
+		[27635] = "Decontamination|1+ alliance gnome 28169|27.97 37.79|Gaffer Coilspring|down link:30", -- Gnome only
+		[27674] = "To the Surface|1+ alliance gnome 27635|29.53 37.7|Technician Braggle|down link:30", -- Gnome only
+
 		-- New Tinkertown
+		[41217] = "The Future of Gnomeregan|1+ alliance gnome 27635 hunter|33.93 38.57|Nevin Twistwrench|link:469", -- Gnome Hunter only
+		[26197] = "The Future of Gnomeregan|1+ alliance gnome 27635 mage|33.93 38.57|Nevin Twistwrench|link:469", -- Gnome Mage only
+		[31135] = "The Future of Gnomeregan|1+ alliance gnome 27635 monk|33.93 38.57|Nevin Twistwrench|link:469", -- Gnome Monk only
+		[26199] = "The Future of Gnomeregan|1+ alliance gnome 27635 priest|33.93 38.57|Nevin Twistwrench|link:469", -- Gnome Priest only
+		[26206] = "The Future of Gnomeregan|1+ alliance gnome 27635 rogue|33.93 38.57|Nevin Twistwrench|link:469", -- Gnome Rogue only
+		[26202] = "The Future of Gnomeregan|1+ alliance gnome 27635 warlock|33.93 38.57|Nevin Twistwrench|link:469", -- Gnome Warlock only
+		[26203] = "The Future of Gnomeregan|1+ alliance gnome 27635 warrior|33.93 38.57|Nevin Twistwrench|link:469", -- Gnome Warrior only
+		[41218] = "Meet the High Tinker|1+ alliance gnome 41217 hunter|34.85 36.01|Muffinus Chromebrew|link:469", -- Gnome Hunter only
+		[26421] = "Meet the High Tinker|1+ alliance gnome 26197 mage|34.53 35.06|Bipsi Frostflinger|link:469", -- Gnome Mage only
+		[31137] = "Meet the High Tinker|1+ alliance gnome 31135 monk|34.16 37.51|Xi, Friend to the Small|link:469", -- Gnome Monk only
+		[26422] = "Meet the High Tinker|1+ alliance gnome 26199 priest|33.89 34.78|\"Doc\" Cogspin|link:469", -- Gnome Priest only
+		[26423] = "Meet the High Tinker|1+ alliance gnome 26206 rogue|33.38 36.74|Kelsey Steelspark|link:469", -- Gnome Rogue only
+		[26424] = "Meet the High Tinker|1+ alliance gnome 26202 warlock|33.24 38.4|Alamar Grimm|link:469", -- Gnome Warlock only
+		[26425] = "Meet the High Tinker|1+ alliance gnome 26203 warrior|34.37 37.42|Drill Sergeant Steamcrank|link:469", -- Gnome Warrior only
+		[26208] = "The Fight Continues|1+ alliance gnome 41218,26421,31137,26422,26423,26424,26425|33.67 36.42|High Tinker Mekkatorque|link:469", -- Gnome only
+		[26566] = "A Triumph of Gnomish Ingenuity|1+ alliance gnome 26208|33.67 36.42|High Tinker Mekkatorque|link:469", -- Gnome only
+		[26222] = "Scrounging for Parts|1+ alliance gnome 26566|34.34 34.65|Engineer Grindspark|link:469", -- Gnome only
+		[26205] = "A Job for the Multi-Bot|1+ alliance gnome 26222|34.34 34.65|Engineer Grindspark|link:469", -- Gnome only
+		[26264] = "What's Left Behind|1+ alliance gnome 26222|33.83 34.09|Tock Sprysprocket|link:469", -- Gnome only
+		[26265] = "Dealing with the Fallout|1+ alliance gnome 26222|33.44 39.25|Corporal Fizzwhistle|link:469", -- Gnome only
+		[26316] = "What's Keeping Kharmarn?|1+ alliance gnome 26205 26264 26265|33.51 36.71|Captain Tread Sparknozzle|link:469", -- Gnome only
+		[26285] = "Get Me Explosives Back!|1+ alliance gnome 26316|33.1 48.69|Kharmarn Palegrip|link:469", -- Gnome only
+		[26284] = "Missing in Action|1+ alliance gnome 26316|33.1 48.69|Kharmarn Palegrip|link:469", -- Gnome only
+		[26318] = "Finishin' the Job|1+ alliance gnome 26285 26284|33.1 48.69|Kharmarn Palegrip|link:469", -- Gnome only
+		[26329] = "One More Thing|1+ alliance gnome 26318|33.1 48.69|Kharmarn Palegrip|link:469", -- Gnome only
+		[26331] = "Crushcog's Minions|1+ alliance gnome 26329|33.67 36.42|High Tinker Mekkatorque|link:469", -- Gnome only
+		[26333] = "No Tanks!|1+ alliance gnome 26329|33.44 36.78|Hinkles Fastblast|link:469", -- Gnome only
+		[26339] = "Staging in Brewnall|1+ alliance gnome 26331 26333|33.38 36.74|Kelsey Steelspark|link:469", -- Gnome only
+		[26342] = "Paint it Black|1+ alliance gnome 26339|37.43 44.04|Jarvi Shadowstep|link:469", -- Gnome only
+		[26364] = "Down with Crushcog!|1+ alliance gnome 26342|37.43 44.04|Jarvi Shadowstep|link:469", -- Gnome only
+		[26373] = "On to Kharanos|1+ alliance gnome 26364|37.43 44.04|Jarvi Shadowstep|link:469", -- Gnome only
 
 		-- Kharanos
 		[26380] = "Bound for Kharanos|1+ alliance|49.9 44.98|Ciara Deepstone",
@@ -3694,7 +3783,7 @@ Data.Quests = {
 		[6391]  = "Ride to Ironforge|1+ dwarf,gnome,darkiron alliance 6387|53.8 52.76|Brolan Galebeard", -- Dwarf/Gnome/Dark Iron only
 		[384]   = "Beer Basted Boar Ribs|1+ alliance|53.93 50.69|Ragnar Thunderbrew|cooking",
 		[315]   = "The Perfect Stout|1+ alliance|54.2 51.17|Rejold Barleybrew",
-		[25724] = "Frostmane Aggression|1+ alliance|53.71 52.19|Captain Tharran",
+		[25724] = "Frostmane Aggression|1+ alliance ~26373|53.71 52.19|Captain Tharran",
 		[25668] = "Pilfered Supplies|1+ alliance 25724|53.71 52.1|Quartermaster Glynna",
 		[25667] = "Culling the Wendigos|1+ alliance 25724|53.71 52.19|Captain Tharran",
 		[313]   = "Forced to Watch from Afar|1+ alliance 25724|53.71 52.19|Captain Tharran",

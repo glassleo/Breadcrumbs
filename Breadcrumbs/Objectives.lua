@@ -184,4 +184,10 @@ Data.ObjectiveSteps = {
 			"questobjective|72.72 65.47|Keep Your Hands Off The Goods!|Artifact of the Overdressed Woman Inspected",
 		},
 	},
+
+	-- Gnomeregan
+	[30] = {
+		[27635] = "questobjective|58.81 81.71|Decontamination|Decontamination Process started",
+		[27674] = "questobjective|67.3 84.15|To the Surface|Speak to Torben Zapblast",
+	},
 }
