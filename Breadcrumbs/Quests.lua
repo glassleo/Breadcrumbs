@@ -1377,6 +1377,12 @@ Data.Quests = {
 		-- Demon Hunter - Destiny of the Illidari
 		[42594] = "Move Like No Other|10+ demonhunter 42593|26.03 52.08|Archmage Lan'dalock|artifact",
 
+		-- Druid - The Dreamgrove
+		[40643] = "A Summons From Moonglade|10+ druid 44184,44663|60.39 44.99|Archdruid Hamuul Runetotem|artifact",
+		[41106] = "Call of the Wilds|10+ druid 40643|60.39 44.99|Archdruid Hamuul Runetotem|artifact elsewhere link:80|Visit {!}Archdruid Hamuul Runetotem in Moonglade to continue the Druid Campaign",
+		[40644] = "The Dreamway|10+ druid 41106|60.39 44.99|Archdruid Hamuul Runetotem|artifact elsewhere link:80|Visit {!}Archdruid Hamuul Runetotem in Moonglade to continue the Druid Campaign",
+		[40645] = "To The Dreamgrove|10+ druid 40644|60.39 44.99|Malfurion Stormrage|artifact elsewhere link:80|Visit {!}Malfurion Stormrage in Moonglade to continue the Druid Campaign",
+
 		-- Hunter - Path of the Hunter
 		[40384] = "Needs of the Hunters|10+ hunter 44184,44663|61.27 44.89|Snowfeather|artifact",
 		[41415] = "The Hunter's Call|10+ hunter 40384|60.04 53.46|Emmarel Shadewarden|artifact",
@@ -1895,25 +1901,72 @@ Data.Quests = {
 
 	-- Druid - The Dreamgrove
 	[747] = {
+		-- The Dreamgrove
+		[40646] = "Weapons of Legend|10+ druid 40645|44.51 51.1|Rensar Greathoof|artifact", -- First artifact
+		-- 40781 - Scythe of Elune chosen
+		-- 40900 - Scythe of Elune complete
+		-- 40701 - Fangs of Ashamane chosen
+		-- 42430 - Fangs of Ashamane complete
+		-- 40702 - Claws of Ursoc chosen
+		-- 41918 - Claws of Ursoc complete
+		-- 40703 - G'Hanir, the Mother Tree chosen
+		-- 41689 - G'Hanir, the Mother Tree complete
+		[41255] = "Sowing The Seed|10+ druid 40646 40900,42430,41918,41689|44.51 51.1|Rensar Greathoof|artifact",
+		[41332] = "Ascending The Circle|10+ druid 41255|30.92 54.25|Rensar Greathoof|artifact",
+		[40652] = "Word on the Winds|10+ druid 41332|45.98 51.04|Malfurion Stormrage|artifact",
+		[40653] = "Making Trails|10+ druid 40652|52.59 51.43|Skylord Omnuron|artifact",
+		[43980] = "Another Weapon of Old|10+ druid 40653|44.51 51.1|Rensar Greathoof|artifact", -- Second artifact
+		[44431] = {
+			-- Third artifact
+			"More Weapons of Old|10+ druid 43980 40900 42430|44.51 51.1|Rensar Greathoof|artifact", -- Scythe and Fangs complete
+			"More Weapons of Old|10+ druid 43980 40900 41918|44.51 51.1|Rensar Greathoof|artifact", -- Scythe and Claws complete
+			"More Weapons of Old|10+ druid 43980 40900 41689|44.51 51.1|Rensar Greathoof|artifact", -- Scythe and G'Hanir complete
+			"More Weapons of Old|10+ druid 43980 42430 41918|44.51 51.1|Rensar Greathoof|artifact", -- Fangs and Claws complete
+			"More Weapons of Old|10+ druid 43980 42430 41689|44.51 51.1|Rensar Greathoof|artifact", -- Fangs and G'Hanir complete
+			"More Weapons of Old|10+ druid 43980 41918 41689|44.51 51.1|Rensar Greathoof|artifact", -- Claws and G'Hanir complete
+		},
+		[44443] = {
+			-- Fourth artifact
+			"Weapons of the Ancients|10+ druid 44431 -40900 42430 41918 41689|44.51 51.1|Rensar Greathoof|artifact", -- Scythe missing
+			"Weapons of the Ancients|10+ druid 44431 40900 -42430 41918 41689|44.51 51.1|Rensar Greathoof|artifact", -- Fangs missing
+			"Weapons of the Ancients|10+ druid 44431 40900 42430 -41918 41689|44.51 51.1|Rensar Greathoof|artifact", -- Claws missing
+			"Weapons of the Ancients|10+ druid 44431 40900 42430 41918 -41689|44.51 51.1|Rensar Greathoof|artifact", -- G'Hanir missing
+		},
+		[42583] = "Rise, Champions|10+ druid 40653|44.51 51.1|Rensar Greathoof|artifact",
+		-- ... rest can be done on Errol
+
+		-- The Scythe of Elune
+		[40783] = "The Scythe of Elune|10+ druid 40646 40781|44.52 51.43|Naralex|artifact",
+
+		-- The Fangs of Ashamane
+		[42428] = "The Shrine of Ashamane|10+ druid 40646 40701|44.51 51.1|Rensar Greathoof|artifact",
+
+		-- The Claws of Ursoc
+		[41468] = "Mistress of the Claw|10+ druid 40646 40702|44.51 51.1|Rensar Greathoof|artifact",
+
+		-- G'Hanir, the Mother Tree
+		[40649] = "Meet with Mylune|10+ druid 40646 40703|45.65 50.26|Keeper Remulos|artifact",
+
 		-- Dreamgrove Raiment
-		[44232] = "The Grove Provides|45+ druid|40.03 17.76|Amurra Thistledew",
+		[44232] = "The Grove Provides|45+ druid 40645|40.03 17.76|Amurra Thistledew",
 	},
 
 	-- Hunter - Trueshot Lodge
 	[739] = {
 		-- The Unseen Path
+		-- 42185 - Titansstrike complete
+		-- 40385 - Talonclaw complete
+		-- 40952 - Thas'dorah complete
 		[40954] = "The Unseen Path|10+ hunter 40953|36.66 29.14|Emmarel Shadewarden|artifact",
 		[40955] = "Oath of Service|10+ hunter 40954|43.51 24.67|Emmarel Shadewarden|artifact",
 		[40958] = "Tactical Matters|10+ hunter 40955|43.51 24.67|Emmarel Shadewarden|artifact",
 		[40959] = "The Campaign Begins|10+ hunter 40958|42.78 46.94|Tactician Tinderfell|artifact",
-		[44043] = "Continuing the Legend|10+ hunter 40959|43.42 26.36|Emmarel Shadewarden|artifact",
+		[44043] = "Continuing the Legend|10+ hunter 40959|43.42 26.36|Emmarel Shadewarden|artifact", -- Second artifact
 		[44366] = {
-			-- Titansstrike complete = TITAN
-			-- Talonclaw complete = TALON
-			-- Thas'dorah complete = 40952
-			--"One Last Adventure|10+ hunter 44043 TTIAN TALON|43.42 26.36|Emmarel Shadewarden|artifact", -- Add all 3 combinations
-			--"One Last Adventure|10+ hunter 44043 40952 TITAN|43.42 26.36|Emmarel Shadewarden|artifact", -- Add all 3 combinations
-			--"One Last Adventure|10+ hunter 44043 40952 TALON|43.42 26.36|Emmarel Shadewarden|artifact", -- Add all 3 combinations
+			-- Third artifact
+			"One Last Adventure|10+ hunter 44043 42185 40385|43.42 26.36|Emmarel Shadewarden|artifact", -- Titanstrike and Talonclaw complete
+			"One Last Adventure|10+ hunter 44043 40952 42185|43.42 26.36|Emmarel Shadewarden|artifact", -- Titanstrike and Thas'dorah complete
+			"One Last Adventure|10+ hunter 44043 40385 40952|43.42 26.36|Emmarel Shadewarden|artifact", -- Talonclaw and Thas'dorah complete
 		},
 
 		-- Thas'dorah, Legacy of the Windrunners
@@ -3541,6 +3594,16 @@ Data.Quests = {
 	},
 
 
+	--[[ Moonglade ]]--
+
+	[80] = {
+		-- Druid - The Dreamgrove
+		[41106] = "Call of the Wilds|10+ druid 40643|56.26 31.83|Archdruid Hamuul Runetotem|artifact",
+		[40644] = "The Dreamway|10+ druid 41106|56.26 31.83|Archdruid Hamuul Runetotem|artifact",
+		[40645] = "To The Dreamgrove|10+ druid 40644|66.73 60.54|Malfurion Stormrage|artifact",
+	},
+
+
 	--[[ Silithus ]]--
 
 	-- Silithus
@@ -3778,12 +3841,22 @@ Data.Quests = {
 		-- Alliance Balloon
 		[29412] = "Blown Away|10+ alliance|58.89 52.74|Vin",
 
+		-- Legion
+		[40519] = {
+			"Legion: The Legion Returns|10+ alliance -demonhunter -44663 -44184|62.87 71.47|Hero's Call Board",
+			"Legion: The Legion Returns|10+ alliance -demonhunter -44663 -44184|62.23 29.86|Hero's Call Board",
+		},
+		[42782] = "To Be Prepared|10+ alliance -demonhunter -44663 -44184 40519|37.08 43.1|Recruiter Lee",
+
 		-- Stormheim - Greymane's Gambit
 		[38206] = "Making the Rounds|10+ 38035 alliance|18.92 42.78|Sky Admiral Rogers",
 		[39800] = "Greymane's Gambit|10+ 38206 alliance|18.66 51.1|Genn Greymane",
 
 		-- Battle for Azeroth - A Nation Divided
-		[46727] = {"Tides of War|10+ alliance -58983 -56775|62.82 71.75|Hero's Herald", "Tides of War|10+ alliance -58983 -56775|62.17 30.14|Hero's Herald",}, -- 58983 is Exile's Reach version - 56775 don't show for Exile's Reach players
+		[46727] = {
+			"Tides of War|10+ alliance -58983 -56775|62.82 71.75|Hero's Herald",
+			"Tides of War|10+ alliance -58983 -56775|62.17 30.14|Hero's Herald",
+		}, -- 58983 is Exile's Reach version - 56775 won't show for Exile's Reach players
 		[46728] = "The Nation of Kul Tiras|10+ alliance 46727 -59641 -56775|80.26 33.13|Anduin Wrynn", -- 59641 is Exile's Reach version
 	},
 
@@ -3793,6 +3866,11 @@ Data.Quests = {
 	[47] = {
 		-- Death Knight - Apocalypse
 		[40931] = "Following the Curse|10+ deathknight 40930|77.42 36.32|Revil Kost|artifact",
+
+		-- Druid - The Scythe of Elune
+		[40784] = "Its Rightful Place|10+ druid 40783|48.9 34.32|Valorn Stillbough|artifact",
+		[40785] = "A Foe of the Dark|10+ druid 40784|48.83 34.22|Belysra Starbreeze|artifact",
+		[40834] = "Following the Curse|10+ druid 40785|77.42 36.32|Revil Kost|artifact",
 	},
 
 
@@ -3804,6 +3882,12 @@ Data.Quests = {
 		[40933] = "A Grisly Task|10+ deathknight 40932|52.42 34.41|Revil Kost|artifact",
 		[40934] = "The Dark Riders|10+ deathknight 40933 -40986|49.46 74.73|Revil Kost|artifact", -- 40986 is used if 2nd/3rd artifact
 		[40935] = "The Call of Vengeance|10+ deathknight 40934,40986 -40987|46.91 69.48|Revil Kost|artifact", -- 40987 is used if 2nd/3rd artifact
+
+		-- Druid - The Scythe of Elune
+		[40835] = "Disturbing the Past|10+ druid 40834|52.42 34.41|Revil Kost|artifact",
+		[40837] = "The Deadwind Hunt|10+ druid 40835|52.42 34.41|Revil Kost|artifact",
+		[40838] = "The Dark Riders|10+ druid 40837|46.92 69.47|Revil Kost|artifact",
+		[40900] = "The Burden Borne|10+ druid 40838|46.92 69.47|Revil Kost|artifact",
 	},
 
 

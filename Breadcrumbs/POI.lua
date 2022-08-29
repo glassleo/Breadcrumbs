@@ -375,8 +375,8 @@ Data.POI = {
 	-- Druid - The Dreamgrove
 	[747] = {
 		-- Portal
-		"POI/DreamwayPortal|Emerald Dreamway|10+ druid 40645|55.4 22.06",
-		"POI/Portal|Portal to Dalaran|druid|56.5 43.1",
+		"POI/DreamwayPortal|Emerald Dreamway|10+ druid +40645|55.4 22.06",
+		"POI/Portal|Portal to Dalaran|10+ druid 40653|56.5 43.1",
 
 		-- Flight Master
 		"taxinode_neutral:small|The Dreamgrove, Val'sharah|druid|61.74 33.99",
@@ -808,7 +808,7 @@ Data.POI = {
 	-- Durotar
 	[1] = {
 		-- Legion Intro
-		"Speak:small|[Holgar Stormaxe]|10+ 43926 _40518 -44663 horde|46.01 13.78|tooltip|Skip the Legion introductory quests and begin your journey in Dalaran.",
+		"Speak:small|[Holgar Stormaxe]|10+ 43926 _40518 -44663 -44184 horde|46.01 13.78|tooltip|Skip the Legion introductory quests and begin your journey in Dalaran.",
 	},
 
 
@@ -881,6 +881,9 @@ Data.POI = {
 		"POI/Cooking|[Cooking]|5+ alliance|50.57 71.9|tooltip|Robby Flay",
 		"POI/Fishing|[Fishing]|5+ alliance|54.79 69.6|tooltip|Arnold Leland",
 		"POI/Archaeology|[Archaeology]|10+ alliance|85.81 25.94|tooltip|Harrison Jones",
+
+		-- Legion Intro
+		"Speak:small|[Recruiter Lee]|10+ 40519 _42740 -44663 -44184 alliance|37.01 42.53|tooltip|Skip the Legion introductory quests and begin your journey in Dalaran.",
 	},
 
 
