@@ -40,6 +40,6 @@ So far, the following zones are entirely complete or in a near-complete state:
 - Highmountain
 - Stormheim
 - Broken Shore
-- Dun Morogh (including New Tinkertown and Coldridge Valley)
+- Dun Morogh (including Coldridge Valley and New Tinkertown)
 - Loch Modan
 - Azuremyst Isle (including Ammen Vale)
