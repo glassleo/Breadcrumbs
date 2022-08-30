@@ -3940,7 +3940,7 @@ Data.Quests = {
 		[26396] = "Return to Argus|1+ alliance human,kultiran 26395|70.94 72.47|Dungar Longdrink", -- Human/Kul Tiran only
 
 		-- Loch Modan
-		[353]   = "Stormpike's Delivery|1+ alliance ~1097|59.72 33.8|Grimand Elmore",
+		[353]   = "Stormpike's Delivery|1+ alliance ~1097|59.72 33.8|Grimand Elmore", -- Invalidates breadcrumb 1097
 
 		-- Legion
 		[40519] = {
@@ -4001,30 +4001,45 @@ Data.Quests = {
 		[26393] = "A Swift Message|1+ alliance human,kultiran|41.71 65.54|Smith Argus", -- Human/Kul Tiran only
 		[26394] = {"Continue to Stormwind|1+ alliance human,kultiran 26393|41.72 64.63|Bartlett the Brave", "Continue to Stormwind|1+ alliance human,kultiran 26393|81.83 66.55|Goss the Swift",}, -- Human/Kul Tiran only
 		[40]    = "A Fishy Peril|1+ alliance|42.14 67.25|Remy \"Two Times\"",
+		[35]    = "Further Concerns|1+ alliance 40|42.11 65.93|Marshal Dughan",
 		[47]    = "Gold Dust Exchange|1+ alliance|42.14 67.25|Remy \"Two Times\"",
 		[62]    = "The Fargodeep Mine|1+ alliance ~54|42.11 65.93|Marshal Dughan",
+		[76]    = "The Jasperlode Mine|1+ alliance 62|42.11 65.93|Marshal Dughan",
 		[60]    = "Kobold Candles|1+ alliance|43.32 65.71|William Pestle",
+		[26150] = "A Visit With Maybell|1+ alliance 60 -106|43.32 65.71|William Pestle", -- Breadcrumb for 106
+		[239]   = "Westbrook Garrison Needs Help!|1+ alliance 59 -11|42.11 65.93|Marshal Dughan", -- Breadcrumb for 11
 
 		-- Stonefield Farm and Maclure Vineyards
-		[85]    = "Lost Necklace|1+ alliance|34.49 84.25|\"Auntie\" Bernice Stonefield",
 		[88]    = "Princess Must Die!|1+ alliance|34.66 84.48|Ma Stonefield",
-		[106]   = "Young Lovers|1+ alliance|43.15 89.62|Maybell Maclure",
+		[85]    = "Lost Necklace|1+ alliance|34.49 84.25|\"Auntie\" Bernice Stonefield",
+		[86]    = "Pie for Billy|1+ alliance 85|43.13 85.72|Billy Maclure",
+		[84]    = "Back to Billy|1+ alliance 86|34.49 84.25|\"Auntie\" Bernice Stonefield",
+		[87]    = "Goldtooth|1+ alliance 84|43.13 85.72|Billy Maclure",
+		[106]   = "Young Lovers|1+ alliance ~26150|43.15 89.62|Maybell Maclure", -- Invalidates breadcrumb 26150
+		[111]   = "Speak with Gramma|1+ alliance 106|29.84 86|Tommy Joe Stonefield",
+		[107]   = "Note to William|1+ alliance 111|34.94 83.86|Gramma Stonefield",
+		[112]   = "Collecting Kelp|1+ alliance 107|43.32 65.71|William Pestle",
+		[114]   = "The Escape|1+ alliance 112|43.32 65.71|William Pestle",
 
 		-- Eastvale Logging Camp
+		[37]    = "Find the Lost Guards|1+ alliance 35|73.97 72.19|Guard Thomas",
+		[45]    = "Discover Rolf's Fate|1+ alliance 37|72.66 60.33|A half-eaten body",
+		[71]    = "Report to Thomas|1+ alliance 45|79.8 55.51|Rolf's corpse",
+		[59]    = "Cloth and Leather Armor|1+ alliance 71|73.97 72.19|Guard Thomas",
 		[52]    = "Protect the Frontier|1+ alliance|73.97 72.19|Guard Thomas",
 		[46]    = "Bounty on Murlocs|1+ alliance|74.03 72.31|Bounty Board",
 		[26152] = "WANTED: James Clark|1+ alliance|74.03 72.31|Bounty Board",
+		[123]   = "The Collector|1+ alliance|78.62 67.18|{134939} [Gold Pickup Schedule]||Drops from James Clark",
+		[147]   = "Manhunt|1+ alliance 123|81.86 66.04|Marshal Patterson",
 		[83]    = "Fine Linen Goods|1+ alliance|79.46 68.71|Sara Timberlain",
 		[5545]  = "A Bundle of Trouble|1+ alliance|81.38 66.11|Supervisor Raelen",
 
 		-- Westbrook Garrison
-		[176]   = {
-			"WANTED: \"Hogger\"|1+ alliance|24.57 78.23|Wanted Poster",
-			"WANTED: \"Hogger\"|1+ alliance|24.55 74.67|Wanted Poster",
-		},
-		[11]    = "Riverpaw Gnoll Bounty|1+ alliance|24.23 74.45|Deputy Rainer",
+		[176]   = {"WANTED: \"Hogger\"|1+ alliance|24.57 78.23|Wanted Poster", "WANTED: \"Hogger\"|1+ alliance|24.55 74.67|Wanted Poster",},
+		[11]    = "Riverpaw Gnoll Bounty|1+ alliance ~239|24.23 74.45|Deputy Rainer", -- Invalidates breadcrumb 239
 
 		-- Westfall
+		[184]   = "Furlbrow's Deed|5+ alliance|24.78 95.26|Westfall Deed",
 		[26378] = { -- Breadcrumb for 26209; 28562 is the Hero's Call Board version
 			"Hero's Call: Westfall|5+ alliance -28562 -26209|24.23 74.45|Deputy Rainer",
 			"Hero's Call: Westfall|5+ alliance -28562 -26209|42.11 65.93|Marshal Dughan",
@@ -4039,7 +4054,7 @@ Data.Quests = {
 
 	[52] = {
 		-- The Jansen Stead
-		[26209] = "Murder Was The Case That They Gave Me|5+ alliance ~26378 ~28562|60.05 19.28|Lieutenant Horatio Laine",
+		[26209] = "Murder Was The Case That They Gave Me|5+ alliance ~26378 ~28562|60.05 19.28|Lieutenant Horatio Laine", -- Invalidates breadcrumbs 26378 and 28562
 	},
 
 
