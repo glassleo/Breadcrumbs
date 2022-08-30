@@ -3949,6 +3949,147 @@ Data.Quests = {
 		[46728] = "The Nation of Kul Tiras|10+ alliance 46727 -59641 -56775|80.26 33.13|Anduin Wrynn", -- 59641 is Exile's Reach version
 	},
 
+	-- Northshire
+	[425] = {
+		[28767] = "Beating Them Back!|1+ alliance human hunter|33.56 53.05|Marshal McBride", -- Human Hunter only
+		[28757] = "Beating Them Back!|1+ alliance human mage|33.56 53.05|Marshal McBride", -- Human Mage only
+		[31139] = "Beating Them Back!|1+ alliance human monk|33.56 53.05|Marshal McBride", -- Human Monk only
+		[28762] = "Beating Them Back!|1+ alliance human paladin|33.56 53.05|Marshal McBride", -- Human Paladin only
+		[28763] = "Beating Them Back!|1+ alliance human priest|33.56 53.05|Marshal McBride", -- Human Priest only
+		[28764] = "Beating Them Back!|1+ alliance human rogue|33.56 53.05|Marshal McBride", -- Human Rogue only
+		[28765] = "Beating Them Back!|1+ alliance human warlock|33.56 53.05|Marshal McBride", -- Human Warlock only
+		[28766] = "Beating Them Back!|1+ alliance human warrior|33.56 53.05|Marshal McBride", -- Human Warrior only
+		[29078] = "Beating Them Back!|1+ alliance -human|33.56 53.05|Marshal McBride", -- Non-Human only
+		[28759] = "Lions for Lambs|1+ alliance human hunter 28767|33.56 53.05|Marshal McBride", -- Human Hunter only
+		[28769] = "Lions for Lambs|1+ alliance human mage 28757|33.56 53.05|Marshal McBride", -- Human Mage only
+		[31140] = "Lions for Lambs|1+ alliance human monk 31139|33.56 53.05|Marshal McBride", -- Human Monk only
+		[28770] = "Lions for Lambs|1+ alliance human paladin 28762|33.56 53.05|Marshal McBride", -- Human Paladin only
+		[28771] = "Lions for Lambs|1+ alliance human priest 28763|33.56 53.05|Marshal McBride", -- Human Priest only
+		[28772] = "Lions for Lambs|1+ alliance human rogue 28764|33.56 53.05|Marshal McBride", -- Human Rogue only
+		[28773] = "Lions for Lambs|1+ alliance human warlock 28765|33.56 53.05|Marshal McBride", -- Human Warlock only
+		[28774] = "Lions for Lambs|1+ alliance human warrior 28766|33.56 53.05|Marshal McBride", -- Human Warrior only
+		[29079] = "Lions for Lambs|1+ alliance -human 29078|33.56 53.05|Marshal McBride", -- Non-Human only
+		[29080] = { -- 9 quests
+			-- If you complete one version of this quest the game will autocomplete all the others as well
+			"Join the Battle!|1+ alliance 28759,28769,31140,28770,28771,28772,28773,28774,29079 -28780 -28784 -31143 -28785 -28786 -28787 -28788 -28789 human hunter,mage,monk,paladin,priest,rogue,warlock,warrior|33.56 53.05|Marshal McBride",
+			"Join the Battle!|1+ alliance 28759,28769,31140,28770,28771,28772,28773,28774,29079 -28780 -28784 -31143 -28785 -28786 -28787 -28788 -28789 -human|33.56 53.05|Marshal McBride",
+		},
+		[29081] = { -- 9 quests
+			-- If you complete one version of this quest the game will autocomplete all the others as well
+			"They Sent Assassins|1+ alliance 29080,28780,28784,31143,28785,28786,28787,28788,28789 -31144 -28791 -28795 -28792 -28794 -28793 -28797 -28796 human hunter,mage,monk,paladin,priest,rogue,warlock,warrior|35.73 39.8|Sergeant Willem",
+			"They Sent Assassins|1+ alliance 29080,28780,28784,31143,28785,28786,28787,28788,28789 -31144 -28791 -28795 -28792 -28794 -28793 -28797 -28796 -human|35.73 39.8|Sergeant Willem",
+		},
+		[28809] = { -- 9 quests
+			-- If you complete one version of this quest the game will autocomplete all the others as well
+			"Fear No Evil|1+ alliance 29080,28780,28784,31143,28785,28786,28787,28788,28789 -28811 -28810 -63447 -29082 -28808 -28812 -28813 -28806 human hunter,mage,monk,paladin,priest,rogue,warlock,warrior|34.99 38.29|Brother Paxton",
+			"Fear No Evil|1+ alliance 29080,28780,28784,31143,28785,28786,28787,28788,28789 -28811 -28810 -63447 -29082 -28808 -28812 -28813 -28806 -human|34.99 38.29|Brother Paxton",
+		},
+		[28817] = { -- 9 quests
+			-- If you complete one version of this quest the game will autocomplete all the others as well
+			"The Rear is Clear|1+ alliance 29081,31144,28791,28795,28792,28794,28793,28797,28796 28809,28811,28810,63447,29082,28808,28812,28813,28806 -28823 -28821 -31145 -29083 -28820 -28819 -28822 -28818 human hunter,mage,monk,paladin,priest,rogue,warlock,warrior|35.73 39.8|Sergeant Willem",
+			"The Rear is Clear|1+ alliance 29081,31144,28791,28795,28792,28794,28793,28797,28796 28809,28811,28810,63447,29082,28808,28812,28813,28806 -28823 -28821 -31145 -29083 -28820 -28819 -28822 -28818 -human|35.73 39.8|Sergeant Willem",
+		},
+		[26389] = "Blackrock Invasion|1+ alliance 28817,28823,28821,31145,29083,28820,28819,28822,28818|33.56 53.05|Marshal McBride",
+		[26391] = "Extinguishing Hope|1+ alliance 28817,28823,28821,31145,29083,28820,28819,28822,28818|33.39 54.66|Milly Osworth",
+		[26390] = "Ending the Invasion!|1+ alliance 26389|33.56 53.05|Marshal McBride",
+		[54]    = "Report to Goldshire|1+ alliance 26390|33.56 53.05|Marshal McBride",
+
+		-- Goldshire
+		[37112] = "Rest and Relaxation|1+ alliance|23.42 77.83|Falkhaan Isenstrider",
+	},
+
+	-- Elwynn Forest
+	[37] = {
+		-- Northshire
+		[28767] = "Beating Them Back!|1+ alliance human hunter|48.2 42.08|Marshal McBride|link:425", -- Human Hunter only
+		[28757] = "Beating Them Back!|1+ alliance human mage|48.2 42.08|Marshal McBride|link:425", -- Human Mage only
+		[31139] = "Beating Them Back!|1+ alliance human monk|48.2 42.08|Marshal McBride|link:425", -- Human Monk only
+		[28762] = "Beating Them Back!|1+ alliance human paladin|48.2 42.08|Marshal McBride|link:425", -- Human Paladin only
+		[28763] = "Beating Them Back!|1+ alliance human priest|48.2 42.08|Marshal McBride|link:425", -- Human Priest only
+		[28764] = "Beating Them Back!|1+ alliance human rogue|48.2 42.08|Marshal McBride|link:425", -- Human Rogue only
+		[28765] = "Beating Them Back!|1+ alliance human warlock|48.2 42.08|Marshal McBride|link:425", -- Human Warlock only
+		[28766] = "Beating Them Back!|1+ alliance human warrior|48.2 42.08|Marshal McBride|link:425", -- Human Warrior only
+		[29078] = "Beating Them Back!|1+ alliance -human|48.2 42.08|Marshal McBride|link:425", -- Non-human only
+		[28759] = "Lions for Lambs|1+ alliance human hunter 28767|48.2 42.08|Marshal McBride|link:425", -- Human Hunter only
+		[28769] = "Lions for Lambs|1+ alliance human mage 28757|48.2 42.08|Marshal McBride|link:425", -- Human Mage only
+		[31140] = "Lions for Lambs|1+ alliance human monk 31139|48.2 42.08|Marshal McBride|link:425", -- Human Monk only
+		[28770] = "Lions for Lambs|1+ alliance human paladin 28762|48.2 42.08|Marshal McBride|link:425", -- Human Paladin only
+		[28771] = "Lions for Lambs|1+ alliance human priest 28763|48.2 42.08|Marshal McBride|link:425", -- Human Priest only
+		[28772] = "Lions for Lambs|1+ alliance human rogue 28764|48.2 42.08|Marshal McBride|link:425", -- Human Rogue only
+		[28773] = "Lions for Lambs|1+ alliance human warlock 28765|48.2 42.08|Marshal McBride|link:425", -- Human Warlock only
+		[28774] = "Lions for Lambs|1+ alliance human warrior 28766|48.2 42.08|Marshal McBride|link:425", -- Human Warrior only
+		[29079] = "Lions for Lambs|1+ alliance -human 29078|48.2 42.08|Marshal McBride|link:425", -- Non-Human only
+		[29080] = { -- 9 quests
+			-- If you complete one version of this quest the game will autocomplete all the others as well
+			"Join the Battle!|1+ alliance 28759,28769,31140,28770,28771,28772,28773,28774,29079 -28780 -28784 -31143 -28785 -28786 -28787 -28788 -28789 human hunter,mage,monk,paladin,priest,rogue,warlock,warrior|48.2 42.08|Marshal McBride|link:425",
+			"Join the Battle!|1+ alliance 28759,28769,31140,28770,28771,28772,28773,28774,29079 -28780 -28784 -31143 -28785 -28786 -28787 -28788 -28789 -human|48.2 42.08|Marshal McBride|link:425",
+		},
+		[29081] = { -- 9 quests
+			-- If you complete one version of this quest the game will autocomplete all the others as well
+			"They Sent Assassins|1+ alliance 29080,28780,28784,31143,28785,28786,28787,28788,28789 -31144 -28791 -28795 -28792 -28794 -28793 -28797 -28796 human hunter,mage,monk,paladin,priest,rogue,warlock,warrior|48.81 38.38|Sergeant Willem|link:425",
+			"They Sent Assassins|1+ alliance 29080,28780,28784,31143,28785,28786,28787,28788,28789 -31144 -28791 -28795 -28792 -28794 -28793 -28797 -28796 -human|48.81 38.38|Sergeant Willem|link:425",
+		},
+		[28809] = { -- 9 quests
+			-- If you complete one version of this quest the game will autocomplete all the others as well
+			"Fear No Evil|1+ alliance 29080,28780,28784,31143,28785,28786,28787,28788,28789 -28811 -28810 -63447 -29082 -28808 -28812 -28813 -28806 human hunter,mage,monk,paladin,priest,rogue,warlock,warrior|48.6 37.96|Brother Paxton|link:425",
+			"Fear No Evil|1+ alliance 29080,28780,28784,31143,28785,28786,28787,28788,28789 -28811 -28810 -63447 -29082 -28808 -28812 -28813 -28806 -human|48.6 37.96|Brother Paxton|link:425",
+		},
+		[28817] = { -- 9 quests
+			-- If you complete one version of this quest the game will autocomplete all the others as well
+			"The Rear is Clear|1+ alliance 29081,31144,28791,28795,28792,28794,28793,28797,28796 28809,28811,28810,63447,29082,28808,28812,28813,28806 -28823 -28821 -31145 -29083 -28820 -28819 -28822 -28818 human hunter,mage,monk,paladin,priest,rogue,warlock,warrior|48.81 38.38|Sergeant Willem|link:425",
+			"The Rear is Clear|1+ alliance 29081,31144,28791,28795,28792,28794,28793,28797,28796 28809,28811,28810,63447,29082,28808,28812,28813,28806 -28823 -28821 -31145 -29083 -28820 -28819 -28822 -28818 -human|48.81 38.38|Sergeant Willem|link:425",
+		},
+		[26389] = "Blackrock Invasion|1+ alliance 28817,28823,28821,31145,29083,28820,28819,28822,28818|48.2 42.08|Marshal McBride|link:425",
+		[26391] = "Extinguishing Hope|1+ alliance 28817,28823,28821,31145,29083,28820,28819,28822,28818|48.15 42.52|Milly Osworth|link:425",
+		[26390] = "Ending the Invasion!|1+ alliance 26389|48.2 42.08|Marshal McBride|link:425",
+		[54]    = "Report to Goldshire|1+ alliance 26390|48.2 42.08|Marshal McBride|link:425",
+
+		-- Goldshire
+		[37112] = "Rest and Relaxation|1+ alliance|45.37 48.99|Falkhaan Isenstrider",
+		[1097]  = "Elmore's Task|1+ alliance -353|41.71 65.54|Smith Argus", -- Breadcrumb for 353
+		[26393] = "A Swift Message|1+ alliance human,kultiran|41.71 65.54|Smith Argus", -- Human/Kul Tiran only
+		[40]    = "A Fishy Peril|1+ alliance|42.14 67.25|Remy \"Two Times\"",
+		[47]    = "Gold Dust Exchange|1+ alliance|42.14 67.25|Remy \"Two Times\"",
+		[62]    = "The Fargodeep Mine|1+ alliance ~54|42.11 65.93|Marshal Dughan",
+		[60]    = "Kobold Candles|1+ alliance|43.32 65.71|William Pestle",
+
+		-- Stonefield Farm and Maclure Vineyards
+		[85]    = "Lost Necklace|1+ alliance|34.49 84.25|\"Auntie\" Bernice Stonefield",
+		[88]    = "Princess Must Die!|1+ alliance|34.66 84.48|Ma Stonefield",
+		[106]   = "Young Lovers|1+ alliance|43.15 89.62|Maybell Maclure",
+
+		-- Eastvale Logging Camp
+		[52]    = "Protect the Frontier|1+ alliance|73.97 72.19|Guard Thomas",
+		[46]    = "Bounty on Murlocs|1+ alliance|74.03 72.31|Bounty Board",
+		[26152] = "WANTED: James Clark|1+ alliance|74.03 72.31|Bounty Board",
+		[83]    = "Fine Linen Goods|1+ alliance|79.46 68.71|Sara Timberlain",
+		[5545]  = "A Bundle of Trouble|1+ alliance|81.38 66.11|Supervisor Raelen",
+
+		-- Westbrook Garrison
+		[176]   = {
+			"WANTED: \"Hogger\"|1+ alliance|24.57 78.23|Wanted Poster",
+			"WANTED: \"Hogger\"|1+ alliance|24.55 74.67|Wanted Poster",
+		},
+		[11]    = "Riverpaw Gnoll Bounty|1+ alliance|24.23 74.45|Deputy Rainer",
+
+		-- Westfall
+		[26378] = { -- Breadcrumb for 26209; 28562 is the Hero's Call Board version
+			"Hero's Call: Westfall|5+ alliance -28562 -26209|24.23 74.45|Deputy Rainer",
+			"Hero's Call: Westfall|5+ alliance -28562 -26209|42.11 65.93|Marshal Dughan",
+			"Hero's Call: Westfall|5+ alliance -28562 -26209|73.97 72.19|Guard Thomas",
+			"Hero's Call: Westfall|5+ alliance -28562 -26209|81.86 66.04|Marshal Patterson",
+			"Hero's Call: Westfall|5+ alliance -28562 -26209|84.61 69.38|Marshal Haggard",
+		},
+	},
+
+
+	--[[ Westfall ]]--
+
+	[52] = {
+		-- The Jansen Stead
+		[26209] = "Murder Was The Case That They Gave Me|5+ alliance ~26378 ~28562|60.05 19.28|Lieutenant Horatio Laine",
+	},
+
 
 	--[[ Duskwood ]]--
 
