@@ -840,29 +840,8 @@ Data.POI = {
 	[84] = {
 		-- Portal
 		"-:large|The Eastern Earthshrine|alliance|74.85 17.65||Cataclysm Portals",
-		"POI/Portal|Portal to Darnassus|49- alliance|23.86 56.09",
-		"POI/Portal|Portal to Darkshore|50+ alliance|23.86 56.09",
-
-		-- Mailbox
-		"mailbox:objective|Mailbox|mailboxdense|50.91 70.39", -- Canals near the Stockades
-		"mailbox:objective|Mailbox|mailboxdense|57.4 71.72", -- Canals between Mage Quarter and Trade District
-		"mailbox:objective|Mailbox|mailboxdense|50.59 89.74", -- Mage Quarter
-		"mailbox:objective|Mailbox|mailboxdense|62.52 74.74", -- Trade District
-		"mailbox:objective|Mailbox|mailboxdense|61.94 70.3", -- Trade District
-		"mailbox:objective|Mailbox|mailboxdense|66.63 65.39", -- Canals between Trade District and Old Town
-		"mailbox:objective|Mailbox|mailboxdense|75.72 64.64", -- Old Town
-		"mailbox:objective|Mailbox|mailboxdense|74.54 55.41", -- Old Town
-		"mailbox:objective|Mailbox|mailboxdense|54.65 62.89", -- Canals between Trade District and Cathedral Square
-		"mailbox:objective|Mailbox|mailboxdense|37.9 34.35", -- Harbor stairs
-		"mailbox:objective|Mailbox|mailboxdense|30.36 49.19", -- Harbor
-		"mailbox:objective|Mailbox|mailboxdense|30.33 25.52", -- Harbor
-		"mailbox:objective|Mailbox|mailboxdense|54.6 57.6", -- Cathedral Square
-		"mailbox:objective|Mailbox|mailboxdense|60.65 50.57", -- Canals between Cathedral Square and Dwarven Districts
-		"mailbox:objective|Mailbox|mailboxdense|63.67 31.21", -- Dwarven District
-		"mailbox:objective|Mailbox|mailboxdense|53.02 15.39", -- Embassy
-		--"mailbox:objective|Mailbox|mailboxdense|49.63 87", -- Mage Quarter
-		--"mailbox:objective|Mailbox|mailboxdense|61.63 76.08", -- Trade District
-		--"mailbox:objective|Mailbox|mailboxdense|62.03 30.88", -- Dwarven District
+		"POI/Portal|Portal to Darnassus|10+ 49- alliance|23.86 56.09", -- Requires level 10 to use
+		"POI/Portal|Portal to Darkshore|50+ alliance|23.86 56.09", -- To do: check map IDs instead of level
 
 		-- Professions
 		"POI/Alchemy|[Alchemy]|5+ alliance alchemy|55.66 86.08|tooltip|Lilyssia Nightbreeze",
