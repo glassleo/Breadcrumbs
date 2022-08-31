@@ -14,7 +14,8 @@ All data has been compiled and tested manually to ensure accuracy.
 - Show currently available Treasures and Vignettes on the World Map with helpful tooltips
 - Add additional Points of Interest such as Portals, Profession Trainers and missing Flight Masters to the World Map
 - Fix several map related Blizzard bugs/oversights and add missing information for certain quests
-- Options to choose which features you want to enable (GUI NYI)
+- Show warnings for some buggy quests directly on the map (for exaomple [The Spruted Fronds](https://www.wowhead.com/quest=2399/the-sprouted-fronds#comments))
+- Lots of options to tailor the addon to your liking (GUI NYI)
 
 ## How to Try
 
@@ -32,14 +33,17 @@ If you'd like to help, please [get in touch](mailto:hello@leo.glass)!
 
 So far, the following zones are entirely complete or in a near-complete state:
 - Zereth Mortis and the Secrets of the First Ones campaign
-- Bastion (Threads of Fate)
-- Maldraxxus (Threads of Fate)
-- Ardenweald (Threads of Fate)
+- Bastion (Threads of Fate only)
+- Maldraxxus (Threads of Fate only)
+- Ardenweald (Threads of Fate only)
+- Revendreth (Threads of Fate only)
 - Azsuna
 - Val'sharah
 - Highmountain
 - Stormheim
 - Broken Shore
-- Dun Morogh (including Coldridge Valley and New Tinkertown)
+- Elwynn Forest and Northshire
+- Dun Morogh, Coldridge Valley and New Tinkertown
 - Loch Modan
-- Azuremyst Isle (including Ammen Vale)
+- Teldrassil and Shadowglen
+- Azuremyst Isle and Ammen Vale
