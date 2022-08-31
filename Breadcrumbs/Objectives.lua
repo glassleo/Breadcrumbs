@@ -126,13 +126,21 @@ Data.Objectives = {
 	-- Dun Morogh
 	[27] = {
 		-- Get to the Airfield
-		[25998] = "questobjective-override|75.22 52.77|Get to the Airfield|[Mathel's Flying Machine]",
+		[25998] = "questobjective:override|75.22 52.77|Get to the Airfield|[Mathel's Flying Machine]",
 
 		-- Striking Back
 		[26094] = "questobjective|77.14 18.52|Striking Back|[Repaired Bomber]",
 
 		-- Demanding Answers
-		[26112] = "questobjective-override|75.94 16.81|Demanding Answers|[Rixa's Flying Machine]",
+		[26112] = "questobjective:override|75.94 16.81|Demanding Answers|[Rixa's Flying Machine]",
+	},
+
+	-- Teldrassil
+	[57] = {
+		[931] = {
+			"questturnin|59.94 59.77|The Shimmering Frond|[green]You will be able to get the follow-up quest [The Sprouted Fronds] if you turn in this quest here.]",
+			"services-icon-warning:super|43.9 44|[red]Warning]|[red]You might not want to turn in [The Shimmering Frond] here!]||\"Due to a bug, you will only be able to get the follow-up quest [The Sprouted Fronds] if you turn in the quest at Lake Al'ameth instead.\"",
+		},
 	},
 }
 
@@ -190,4 +198,17 @@ Data.ObjectiveSteps = {
 		[27635] = "questobjective|58.81 81.71|Decontamination|Decontamination Process started",
 		[27674] = "questobjective|67.3 84.15|To the Surface|Speak to Torben Zapblast",
 	},
+
+	-- Ban'ethil Barrow Den - Lower Den, Teldrassil
+	[61] = {
+		[483] = {
+			"questobjective|64.48 19.59|The Relics of Wakening|Raven Claw Talisman",
+			"questobjective|51.93 86.46|The Relics of Wakening|Black Feather Quill",
+			"questobjective|49.84 36.54|The Relics of Wakening|Sapphire of Sky",
+			"questobjective|54.88 75.42|The Relics of Wakening|Rune of Nesting",
+		}
+	},
+
+
+	
 }
