@@ -1084,6 +1084,9 @@ function Breadcrumbs:CheckQuest(map, quest, datastring)
 					-- art:n
 					if string.match(v, "^art:(%d+)$") and (C_Map.GetMapArtID(map) == tonumber(string.match(v, "art:(%d+)") or 0)) then pass = true end
 
+					-- art:x:n
+					if string.match(v, "^art:(%d+):(%d+)$") and (C_Map.GetMapArtID(tonumber(string.match(v, "art:(%d+):%d+") or 0)) == tonumber(string.match(v, "art:%d+:(%d+)") or 0)) then pass = true end
+
 					-- renown:n
 					if string.match(v, "^renown:(%d+)$") and (renown >= tonumber(string.match(v, "renown:(%d+)") or 0)) then pass = true end
 
@@ -1130,6 +1133,9 @@ function Breadcrumbs:CheckQuest(map, quest, datastring)
 
 						-- -art:n
 						if string.match(w, "^art:(%d+)$") and (C_Map.GetMapArtID(map) == tonumber(string.match(w, "art:(%d+)") or 0)) then pass = false end
+
+						-- -art:x:n
+						if string.match(w, "^art:(%d+):(%d+)$") and (C_Map.GetMapArtID(tonumber(string.match(w, "art:(%d+):%d+") or 0)) == tonumber(string.match(w, "art:%d+:(%d+)") or 0)) then pass = false end
 
 						-- -renown:n
 						if string.match(w, "^renown:(%d+)$") and (renown >= tonumber(string.match(w, "renown:(%d+)") or 0)) then pass = false end
@@ -1248,6 +1254,9 @@ function Breadcrumbs:CheckPOI(map, datastring)
 					-- art:n
 					if string.match(v, "^art:(%d+)$") and (C_Map.GetMapArtID(map) == tonumber(string.match(v, "art:(%d+)") or 0)) then pass = true end
 
+					-- art:x:n
+					if string.match(v, "^art:(%d+):(%d+)$") and (C_Map.GetMapArtID(tonumber(string.match(v, "art:(%d+):%d+") or 0)) == tonumber(string.match(v, "art:%d+:(%d+)") or 0)) then pass = true end
+
 					-- renown:n
 					if string.match(v, "^renown:(%d+)$") and (renown >= tonumber(string.match(v, "renown:(%d+)") or 0)) then pass = true end
 
@@ -1297,6 +1306,9 @@ function Breadcrumbs:CheckPOI(map, datastring)
 
 						-- -art:n
 						if string.match(w, "^art:(%d+)$") and (C_Map.GetMapArtID(map) == tonumber(string.match(w, "art:(%d+)") or 0)) then pass = false end
+
+						-- -art:x:n
+						if string.match(w, "^art:(%d+):(%d+)$") and (C_Map.GetMapArtID(tonumber(string.match(w, "art:(%d+):%d+") or 0)) == tonumber(string.match(w, "art:%d+:(%d+)") or 0)) then pass = false end
 
 						-- -renown:n
 						if string.match(w, "^renown:(%d+)$") and (renown >= tonumber(string.match(w, "renown:(%d+)") or 0)) then pass = false end
