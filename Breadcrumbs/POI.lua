@@ -700,6 +700,12 @@ Data.POI = {
 
 	--[[ Teldrassil ]]--
 
+	-- Darnassus
+	[89] = {
+		-- Portal
+		"POI/Portal|Portals|alliance|43 74||Exodar, Hellfire Peninsula",
+	},
+
 	-- Teldrassil
 	[57] = {
 		-- Portal
@@ -707,10 +713,18 @@ Data.POI = {
 		"POI/Portal|Portal to Exodar|alliance|52.27 89.47",
 	},
 
-	-- Darnassus
-	[89] = {
-		-- Portal
-		"POI/Portal|Portals to Exodar and Hellfire Peninsula|alliance|43 74",
+	-- Ban'ethil Barrow Den - Upper Den
+	[60] = {
+		-- Door
+		"poi-door-up|Teldrassil|1+|54.1 22.1|link:57",
+		"poi-door-down|Lower Den|1+|55 33.6|link:61",
+		"poi-door-down|Lower Den|1+|25.2 88.8|link:61",
+	},
+
+	-- Ban'ethil Barrow Den - Lower Den
+	[61] = {
+		"poi-door-up|Upper Den|1+|44.4 42.6|link:60",
+		"poi-door-up|Upper Den|1+|29.1 75.4|link:60",
 	},
 
 
