@@ -558,15 +558,17 @@ function Breadcrumbs:UpdateMap(event, ...)
 					y = tonumber(y) or nil
 
 					if icon and x and y then
-						if not (icon == "questobjective" and (C_QuestLog.IsQuestFlaggedCompleted(id) or C_QuestLog.ReadyForTurnIn(id))) then -- Don't show the pin if the quest is complete
-							if icon == "questobjective-override" then icon = "questobjective" end
+						local icon, iconflag = strsplit(":", icon or "")
+
+						if not (icon == "questobjective" and iconflag ~= "override" and (C_QuestLog.IsQuestFlaggedCompleted(id) or C_QuestLog.ReadyForTurnIn(id))) then -- Don't show the pin if the quest is complete
 							-- Pin size
 							local size = Setting_ObjectivesPinSize
 							if icon == "questturnin" then size = Setting_PinSize end
+							if iconflag == "super" then size = size * 1.3 end
 
 							-- Create map pin
 							local Pin = NewPin()
-							Pin:SetSize(size, size)
+							Pin:SetSize((icon == "services-icon-warning" and size*1.135 or size), size)
 
 							if string.match(icon, "[%w%p]+") then
 								Pin:SetNormalAtlas(icon)
@@ -579,18 +581,18 @@ function Breadcrumbs:UpdateMap(event, ...)
 									GameTooltip:Hide()
 									GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
 									GameTooltip:AddLine(Breadcrumbs:FormatTooltip(title))
-									if line1 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(line1)) end
-									if line2 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(line2)) end
-									if line3 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(line3)) end
-									if line4 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(line4)) end
-									if line5 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(line5)) end
-									if line6 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(line6)) end
-									if line7 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(line7)) end
-									if line8 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(line8)) end
-									if line9 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(line9)) end
-									if line10 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(line10)) end
-									if line11 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(line11)) end
-									if line12 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(line12)) end
+									if line1 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(line1), nil, nil, nil, true) end
+									if line2 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(line2), nil, nil, nil, true) end
+									if line3 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(line3), nil, nil, nil, true) end
+									if line4 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(line4), nil, nil, nil, true) end
+									if line5 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(line5), nil, nil, nil, true) end
+									if line6 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(line6), nil, nil, nil, true) end
+									if line7 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(line7), nil, nil, nil, true) end
+									if line8 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(line8), nil, nil, nil, true) end
+									if line9 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(line9), nil, nil, nil, true) end
+									if line10 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(line10), nil, nil, nil, true) end
+									if line11 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(line11), nil, nil, nil, true) end
+									if line12 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(line12), nil, nil, nil, true) end
 
 									if ZA and ZA.DebugMode then -- Debug
 										GameTooltip:AddLine(" ")
@@ -605,7 +607,7 @@ function Breadcrumbs:UpdateMap(event, ...)
 								end)
 							end
 
-							Pins:AddWorldMapIconMap("Breadcrumbs", Pin, map, x/100, y/100)
+							Pins:AddWorldMapIconMap("Breadcrumbs", Pin, map, x/100, y/100, nil, (iconflag == "super" and "PIN_FRAME_LEVEL_GROUP_MEMBER" or nil))
 							Pin:Show()
 						end
 					end
