@@ -95,6 +95,8 @@ Data.HiddenBonusObjectiveQuests = {
 
 		art:n			Map must currently have UiMapArtID n (see https://wow.tools/dbc/?dbc=uimapxmapart) - used to determine which phase of the map the player is currently on
 		-art:n			Map must not currently have UiMapArtID n
+		art:x:n			Map with ID x must currently have UiMapArtID n
+		-art:x:n		Map with ID x must not currently have UiMapArtID n
 
 		broken			Quest is broken and cannot be completed, it will be hidden unless the user has decided to display broken quests
 		broken:n		Quest is broken if you are level n or higher and cannot be completed, it will be hidden unless the user has decided to display broken quests
@@ -3371,6 +3373,9 @@ Data.Quests = {
 
 		-- The Howling Oak
 		[26385] = "Breaking Waves of Change|5+ alliance worgen 28517 -26383 -13518 -28490|48.13 14.45|Genn Greymane", -- Worgen only
+
+		-- Darkshore
+		[26383] = "Breaking Waves of Change|5+ alliance -26385 -13518 -28490|43.91 76.16|Sentinel Cordressa Briarbow", -- Breadcrumb for 13518
 	},
 
 	-- Shadowglen
@@ -3465,7 +3470,9 @@ Data.Quests = {
 
 		-- The Howling Oak
 		[28517] = "The Howling Oak|5+ alliance worgen|55.23 89.18|Krennan Aranas", -- Worgen only; unsure if this is available to Worgens starting in Exile's Reach
-		[26385] = "Breaking Waves of Change|5+ alliance worgen 28517 -26383 -13518 -28490|30.45 39.11|Genn Greymane|link:89", -- Worgen only
+		
+		-- Darkshore
+		[26385] = "Breaking Waves of Change|5+ alliance worgen 28517 -26383 -13518 -28490|30.45 39.11|Genn Greymane|link:89", -- Worgen only breadcrumb for 13518
 	},
 
 	-- Ban'ethil Barrow Den - Upper Den
@@ -3479,6 +3486,15 @@ Data.Quests = {
 	[61] = {
 		[2541]  = "The Sleeping Druid|1+ alliance|54.9 71.6|Oben Rageclaw|up link:60",
 		[2561]  = "Druid of the Claw|1+ alliance 2541|54.9 71.6|Oben Rageclaw|up link:60",
+	},
+
+
+	--[[ Darkshore ]]--
+
+	[62]= {
+		-- art:67 - Cataclysm
+		-- art:1176 - Battle for Azeroth Warfront
+		[13518] = "The Last Wave of Survivors|5+ art:67 alliance ~26383 ~26385 ~28490|51.78 18.01|Dentaria Silverglade", -- Invalidates breadcrumbs 26383, 26385 and 28490
 	},
 
 
