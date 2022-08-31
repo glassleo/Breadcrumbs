@@ -3362,18 +3362,123 @@ Data.Quests = {
 
 	-- Darnassus
 	[89] = {
+		-- Dolanaar
+		[6342]  = "An Unexpected Gift|1+ alliance nightelf 6341|36.08 53.49|Sister Aquinne", -- Night Elf only
+		[6343]  = "Return to Nyoma|1+ alliance nightelf 6342|36.62 47.85|Leora", -- Night Elf only
+
 		-- Battle for Azeroth - A Nation Divided
 		[46727] = "Tides of War|10+ alliance -58983 -56775|45.1 50.13|Hero's Herald", -- 58983 is Exile's Reach version - 56775 doesn't show for Exile's Reach players
 
-		-- Worgen: The Howling Oak
-		[26385] = "Breaking Waves of Change|5+ worgen 28517 -26383 -13518 -28490|48.13 14.45|Genn Greymane",
+		-- The Howling Oak
+		[26385] = "Breaking Waves of Change|5+ alliance worgen 28517 -26383 -13518 -28490|48.13 14.45|Genn Greymane", -- Worgen only
+	},
+
+	-- Shadowglen
+	[460] = {
+		[28713] = "The Balance of Nature|1+ alliance|45.63 74.54|Ilthalaine",
+		[28714] = "Fel Moss Corruption|1+ alliance 28713|45.63 74.54|Ilthalaine",
+		[28715] = "Demonic Thieves|1+ alliance 28713|45.95 72.88|Melithar Staghelm",
+		[28723] = "Priestess of the Moon|1+ alliance 28714 28715|46.3 73.5|Ilthalaine",
+		[28724] = "Iverron's Antidote|1+ alliance 28723|42.51 50.51|Dentaria Silverglade",
+		[28725] = "The Woodland Protector|1+ alliance 28724|42.51 50.51|Dentaria Silverglade",
+		[28726] = "Webwood Corruption|1+ alliance 28725|39.01 30.18|Tarindrella",
+		[28727] = "Vile Touch|1+ alliance 28726|39.01 30.18|Tarindrella",
+		[28728] = "Signs of Things to Come|1+ alliance 28727|39.01 30.18|Tarindrella",
+		[28729] = "Teldrassil: Crown of Azeroth|1+ alliance 28728|42.51 50.51|Dentaria Silverglade",
+		[28730] = "Precious Waters|1+ alliance 28729|42.51 50.51|Dentaria Silverglade",
+		[28731] = "Teldrassil: Passing Awareness|1+ alliance 28730|47.21 55.94|Tenaron Stormgrip",
+
+		-- Dolanaar
+		[2159]  = "Dolanaar Delivery|1+ alliance|54.56 84.72|Porthannius",
+	},
+
+	-- Shadowthread Cave, Shadowglen
+	[58] = {
+		[28726] = "Webwood Corruption|1+ alliance 28725|1 Tarindrella|Tarindrella|discovery",
+		[28727] = "Vile Touch|1+ alliance 28726|1 Tarindrella|Tarindrella|discovery",
+		[28728] = "Signs of Things to Come|1+ alliance 28727|1 Tarindrella|Tarindrella|discovery",
 	},
 
 	-- Teldrassil
 	[57] = {
-		-- Worgen: The Howling Oak
-		[28517] = "The Howling Oak|5+ worgen|55.23 89.18|Krennan Aranas", -- TODO: Check if you can get this after choosing Exile's Reach as your starting zone
-		[26385] = "Breaking Waves of Change|5+ worgen 28517 -26383 -13518 -28490|30.45 39.11|Genn Greymane|link:89",
+		-- Shadowglen
+		[28713] = "The Balance of Nature|1+ alliance|57.96 39.19|Ilthalaine|link:460",
+		[28714] = "Fel Moss Corruption|1+ alliance 28713|57.96 39.19|Ilthalaine|link:460",
+		[28715] = "Demonic Thieves|1+ alliance 28713|58.04 38.79|Melithar Staghelm|link:460",
+		[28723] = "Priestess of the Moon|1+ alliance 28714 28715|58.13 38.94|Ilthalaine|link:460",
+		[28724] = "Iverron's Antidote|1+ alliance 28723|57.19 33.26|Dentaria Silverglade|link:460",
+		[28725] = "The Woodland Protector|1+ alliance 28724|57.19 33.26|Dentaria Silverglade|link:460",
+		[28726] = "Webwood Corruption|1+ alliance 28725|56.33 28.25|Tarindrella|link:460",
+		[28727] = "Vile Touch|1+ alliance 28726|56.33 28.25|Tarindrella|link:460",
+		[28728] = "Signs of Things to Come|1+ alliance 28727|56.33 28.25|Tarindrella|link:460",
+		[28729] = "Teldrassil: Crown of Azeroth|1+ alliance 28728|57.19 33.26|Dentaria Silverglade|link:460",
+		[28730] = "Precious Waters|1+ alliance 28729|57.19 33.26|Dentaria Silverglade|link:460",
+		[28731] = "Teldrassil: Passing Awareness|1+ alliance 28730|58.35 34.6|Tenaron Stormgrip|link:460",
+
+		-- Dolanaar
+		[2159]  = "Dolanaar Delivery|1+ alliance|60.17 41.71|Porthannius",
+		[929]   = "Teldrassil: The Refusal of the Aspects|1+ alliance 28731|55.82 53.89|Corithras Moonrage",
+		[6344]  = "Reminders of Home|1+ alliance nightelf|56.73 53.51|Nyoma", -- Night Elf only
+		[6341]  = "To Darnassus|1+ alliance nightelf 6344|55.47 50.42|Nyoma", -- Night Elf only
+		[488]   = "Zenn's Bidding|1+ alliance|59.56 49.09|Zenn Foulhoof",
+		[489]   = "Seek Redemption!|1+ alliance 488|55.77 50.45|Syral Bladeleaf",
+		[13946] = "Nature's Reprisal|1+ alliance 489|55.77 50.45|Syral Bladeleaf",
+		[932]   = "Twisted Hatred|1+ alliance 489|55.55 49.99|Tallonkai Swiftroot",
+		[2438]  = "The Emerald Dreamcatcher|1+ alliance|55.55 49.99|Tallonkai Swiftroot",
+		[2459]  = "Ferocitas the Dream Eater|1+ alliance 2438|55.55 49.99|Tallonkai Swiftroot",
+		[475]   = "A Troubling Breeze|1+ alliance|55.69 52|Athridas Bearmantle",
+		[476]   = "Gnarlpine Corruption|1+ alliance 475|64.59 51.14|Gaerolas Talvethren",
+		[13945] = "Resident Danger|1+ alliance 476|55.66 51.99|Sentinel Kyra Starsong",
+		[483]   = "The Relics of Wakening|1+ alliance 476|55.69 52|Athridas Bearmantle",
+		[486]   = "Ursal the Mauler|1+ alliance 483|55.69 52|Athridas Bearmantle",
+		[487]   = "The Road to Darnassus|1+ alliance 483|49.35 44.66|Moon Priestess Amara",
+		[997]   = "Denalan's Earth|1+ alliance 486|55.77 50.45|Syral Bladeleaf",
+
+		-- Ban'ethil Barrow Den
+		[2541]  = "The Sleeping Druid|1+ alliance|45.03 53.48|Oben Rageclaw|down link:60",
+		[2561]  = "Druid of the Claw|1+ alliance 2541|45.03 53.48|Oben Rageclaw|down link:60",
+
+		-- Lake Al'Ameth
+		[930]   = "The Glowing Fruit|1+ alliance|57.64 63.02|Strange Fruited Plant",
+		[927]   = "The Moss-twined Heart|1+ alliance|52.04 63.68|{134339} [Moss-Twined Heart]||Drops from Blackmoss the Fetid",
+		[941]   = "Planting the Heart|1+ alliance 927|59.94 59.77|Denalan",
+		[918]   = "Timberling Seeds|1+ alliance 997|59.94 59.77|Denalan",
+		[919]   = "Timberling Sprouts|1+ alliance 997|59.94 59.77|Denalan",
+		[922]   = "Rellian Greenspyre|1+ alliance 918|59.94 59.77|Denalan",
+		[7383]  = "Teldrassil: The Burden of the Kaldorei|1+ alliance 929 918|55.82 53.89|Corithras Moonrage",
+
+		-- The Oracle Glade
+		[931]   = "The Shimmering Frond|1+ alliance|37.12 25.5|Strange Fronded Plant",
+		[2518]  = "Tears of the Moon|1+ alliance|39.17 29.9|Priestess A'moora",
+		[937]   = "The Enchanted Glade|1+ alliance|39.5 29.86|Sentinel Arynia Cloudsbreak",
+		[938]   = "Mist|1+ alliance|34.49 27.82|Mist",
+
+		-- Wellspring Hovel
+		[923]   = "Mossy Tumors|1+ alliance 922|43.96 44.16|Rellian Greenspyre",
+		[2499]  = "Oakenscowl|1+ alliance 923|43.94 44.2|Denalan",
+
+		-- Pools of Arlithien
+		[933]   = "Teldrassil: The Coming Dawn|1+ alliance 7383|41.02 45.59|Corithras Moonrage",
+		[14005] = "The Vengeance of Elune|1+ alliance 933|42.52 58.18|Tarindrella",
+		[935]   = "The Waters of Teldrassil|1+ alliance 14005|42.52 58.18|Tarindrella",
+		[14039] = "Home of the Kaldorei|1+ alliance 935|41.02 45.59|Corithras Moonrage",
+
+		-- The Howling Oak
+		[28517] = "The Howling Oak|5+ alliance worgen|55.23 89.18|Krennan Aranas", -- Worgen only; unsure if this is available to Worgens starting in Exile's Reach
+		[26385] = "Breaking Waves of Change|5+ alliance worgen 28517 -26383 -13518 -28490|30.45 39.11|Genn Greymane|link:89", -- Worgen only
+	},
+
+	-- Ban'ethil Barrow Den - Upper Den
+	[60] = {
+		-- Check if this has any prereqs, suspecting 476
+		[2541]  = "The Sleeping Druid|1+ alliance|41.27 83.74|Oben Rageclaw",
+		[2561]  = "Druid of the Claw|1+ alliance 2541|41.27 83.74|Oben Rageclaw",
+	},
+
+	-- Ban'ethil Barrow Den - Lower Den
+	[61] = {
+		[2541]  = "The Sleeping Druid|1+ alliance|54.9 71.6|Oben Rageclaw|up link:60",
+		[2561]  = "Druid of the Claw|1+ alliance 2541|54.9 71.6|Oben Rageclaw|up link:60",
 	},
 
 
