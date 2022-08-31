@@ -854,8 +854,8 @@ Data.POI = {
 	[84] = {
 		-- Portal
 		"-:large|The Eastern Earthshrine|alliance|74.85 17.65||Cataclysm Portals",
-		"POI/Portal|Portal to Darnassus|10+ 49- alliance|23.86 56.09", -- Requires level 10 to use
-		"POI/Portal|Portal to Darkshore|50+ alliance|23.86 56.09", -- To do: check map IDs instead of level
+		"POI/Portal|Portal to Darnassus|10+ art:62:67 alliance|24.5 55.6", -- Requires level 10 to use; phased to Cataclysm
+		"POI/Portal|Portal to Darkshore|10+ art:62:1176 alliance|24.5 55.6", -- Phased to BfA
 
 		-- Professions
 		"POI/Alchemy|[Alchemy]|5+ alliance alchemy|55.66 86.08|tooltip|Lilyssia Nightbreeze",
