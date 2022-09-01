@@ -381,11 +381,45 @@ function Breadcrumbs:UpdateMap(event, ...)
 										GameTooltip:AddLine(" ")
 
 										if playerlevel >= 50 then
-											GameTooltip:AddLine(CreateAtlasMarkup("chromietime-32x32") .. " You must Party Sync with a low level character to be able to obtain this quest", 1, 0, 0, true)
+											if C_QuestSession.HasJoined() and UnitEffectiveLevel("player") <= 50 then
+												GameTooltip:AddLine(CreateAtlasMarkup("chromietime-32x32") .. " Party Sync is active", 0, 1, 0, true)
+											else
+												GameTooltip:AddLine(CreateAtlasMarkup("chromietime-32x32") .. " You must Party Sync with a low level character to be able to obtain this quest", 1, 0, 0, true)
+											end
 										elseif chromietime then
 											GameTooltip:AddLine(CreateAtlasMarkup("chromietime-32x32") .. " You have a Timewalking Campaign active and should be able to obtain this quest", 0, 1, 0, true)
 										else
 											GameTooltip:AddLine(CreateAtlasMarkup("chromietime-32x32") .. " You must activate a Timewalking Campaign to be able to obtain this quest", 1, 0, 0, true)
+										end
+									elseif flags["partysync-warning"] then
+										if playerlevel >= 50 then
+											GameTooltip:AddLine(" ")
+
+											if C_QuestSession.HasJoined() and UnitEffectiveLevel("player") <= 50 then
+												GameTooltip:AddLine(CreateAtlasMarkup("chromietime-32x32") .. " Party Sync is active", 0, 1, 0, true)
+											else
+												GameTooltip:AddLine(CreateAtlasMarkup("chromietime-32x32") .. " You will likely need to Party Sync with a low level character to be able to pick up this quest", 1, 0, 0, true)
+											end
+										end
+									elseif flags["partysync-warning-turnin"] then
+										if playerlevel >= 50 then
+											GameTooltip:AddLine(" ")
+
+											if C_QuestSession.HasJoined() and UnitEffectiveLevel("player") <= 50 then
+												GameTooltip:AddLine(CreateAtlasMarkup("chromietime-32x32") .. " Party Sync is active", 0, 1, 0, true)
+											else
+												GameTooltip:AddLine(CreateAtlasMarkup("chromietime-32x32") .. " You will likely need to Party Sync with a low level character to be able to complete this quest", 1, 0, 0, true)
+											end
+										end
+									elseif flags["partysync-warning-chain"] then
+										if playerlevel >= 50 then
+											GameTooltip:AddLine(" ")
+
+											if C_QuestSession.HasJoined() and UnitEffectiveLevel("player") <= 50 then
+												GameTooltip:AddLine(CreateAtlasMarkup("chromietime-32x32") .. " Party Sync is active", 0, 1, 0, true)
+											else
+												GameTooltip:AddLine(CreateAtlasMarkup("chromietime-32x32") .. " You will likely need to Party Sync with a low level character to be able to complete parts of this quest chain", 1, 0, 0, true)
+											end
 										end
 									elseif flags["chromietime"] then
 										GameTooltip:AddLine(" ")
