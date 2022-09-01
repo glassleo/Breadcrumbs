@@ -21,7 +21,7 @@ All data has been compiled and tested manually to ensure accuracy and seamlessne
 
 ![Screenshot](https://i.imgur.com/N43xls7.png)
 
-![Screenshot](https://i.imgur.com/oX2PW9t.png)
+![Screenshot](https://i.imgur.com/t0071Ad.png)
 
 ## How to Try
 
