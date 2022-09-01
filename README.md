@@ -20,6 +20,7 @@ All data has been compiled and tested manually to ensure accuracy and seamlessne
 - Lots of options to tailor the addon to your liking (GUI NYI)
 
 ![Screenshot](https://i.imgur.com/N43xls7.png)
+
 ![Screenshot](https://i.imgur.com/oX2PW9t.png)
 
 ## How to Try
