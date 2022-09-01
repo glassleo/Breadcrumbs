@@ -33,20 +33,28 @@ While the addon itself is more or less feature complete, only a tiny fraction of
 If you'd like to help, please [get in touch](mailto:hello@leo.glass)!
 
 So far, the following zones are entirely complete or in a near-complete state:
+
+Shadowlands
 - Zereth Mortis and the Secrets of the First Ones campaign
 - Oribos
 - Bastion (Threads of Fate only)
 - Maldraxxus (Threads of Fate only)
 - Ardenweald (Threads of Fate only)
 - Revendreth (Threads of Fate only)
+
+Legion
 - Azsuna
 - Val'sharah
 - Highmountain
 - Stormheim
 - Broken Shore
+
+Eastern Kingdoms
 - Elwynn Forest
 - Dun Morogh
 - Loch Modan
+
+Kalimdor
 - Teldrassil
 - Azuremyst Isle
 - Mulgore
