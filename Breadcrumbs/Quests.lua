@@ -2154,7 +2154,7 @@ Data.Quests = {
 		[42694] = "Back from the Dead|10+ 42692 42693|53.39 45.43|Olothil Starlance",
 		
 		-- Against the Giants
-		[38407] = "Bottled Up|10+|50.6 34.9|{461806} [Okuna's Message]||Drops from Salteye murlocs",
+		[38407] = "Bottled Up|10+|50.6 34.9|{461806} [Okuna's Message]||Drops from [red]Salteye] Murlocs",
 		[37496] = "Infiltrating Shipwreck Arena|10+ 38407|47.05 41.48|Lady Irisse",
 		[37507] = "Boss Whalebelly's in Charge|10+ 37496|50.01 48.56|Okuna Longtusk",
 		[37542] = "No Time for Tryouts|10+ 37507|50.01 48.56|Okuna Longtusk",
@@ -2283,7 +2283,7 @@ Data.Quests = {
 		[38455] = "Frenzied Furbolgs|10+ 38142|49.08 82.35|Rylissa Bearsong",
 		[38922] = "Littlefur|10+ 38142|48.4 84.65|Elder Sookh",
 		[38246] = "Totemic Call|10+ 38922|46.26 84.55|Littlefur",
-		[38146] = "The Chieftain's Beads|10+ 38922|48.78 88.45|{133306} [Chieftain's Beads]||Drops from Chieftain Graw",
+		[38146] = "The Chieftain's Beads|10+ 38922|48.78 88.45|{133306} [Chieftain's Beads]||Drops from [red]Chieftain Graw]",
 		[38143] = "Awakening the Archdruid|10+ 38455 38246|49.08 82.35|Rylissa Bearsong",
 		[38144] = "The Demons Below|10+ 38143|50.03 85.67|Koda Steelclaw|down link:643",
 		[38145] = "Out of the Dream|10+ 38143|50.03 85.67|Koda Steelclaw|down link:643",
@@ -2336,7 +2336,7 @@ Data.Quests = {
 		[38646] = "A Sight For Sore Eyes|10+ 38643,39149|38.8 61.4|Granny Marl",
 		[38647] = "For the Corn!|10+ 38643,39149|38.8 61.4|Granny Marl",
 		[39117] = "Shriek No More|10+ 38643,39149|37 58.4|Cecily Radcliffe",
-		[38711] = "The Warden's Signet|10+ 38643,39149|39.12 64.5|{1025252} [Warden's Signet]||Drops from Lelyn Swiftshadow",
+		[38711] = "The Warden's Signet|10+ 38643,39149|39.12 64.5|{1025252} [Warden's Signet]||Drops from [red]Lelyn Swiftshadow]",
 		[39015] = "Grumpy|10+|38.64 65.64|Grumpy||Available after walking through the fire to the top floor of Heathrow Manor",
 
 		-- Black Rook Hold
@@ -2355,14 +2355,14 @@ Data.Quests = {
 		-- Lunarwing Shallows
 		[40220] = "Thorny Dancing|10+|53.8 79.8|Saylanna Riverbreeze",
 		[40221] = "Spread Your Lunarwings and Fly|10+|53.8 79.8|Saylanna Riverbreeze",
-		[38862] = "Thieving Thistleleaf|10+|52.4 83.5|{132834} [Lunarwing Egg]||Drops from Thistleleaf sprites",
+		[38862] = "Thieving Thistleleaf|10+|52.4 83.5|{132834} [Lunarwing Egg]||Drops from [red]Thistleleaf] Sprites",
 
 		-- Lostlight Grotto
 		[42748] = "Emerald Sisters|10+|59.4 84.1|Guviena Bladesong",
 		[42747] = "Where the Wildkin Are|10+|59.4 84.1|Guviena Bladesong",
 		[42751] = "Moon Reaver|10+ 42747|59.4 84.1|Guviena Bladesong",
 		[42750] = "Dreamcatcher|10+ +42748,+42747|59.5 82|Leirana",
-		[42786] = "Grotesque Remains|10+|60.2 81.75|{646670} [Grotesque Remains]||Drops from Undulating Boneslimes",
+		[42786] = "Grotesque Remains|10+|60.2 81.75|{646670} [Grotesque Remains]||Drops from [red]Undulating Boneslime]",
 
 		-- Grizzleweald
 		[42883] = "All Grell Broke Loose|10+|66.7 77.3|Old Grizzleback",
@@ -2371,7 +2371,7 @@ Data.Quests = {
 		[42857] = "Moist Around the Hedges|10+|66.8 75.7|Moist Grizzlecomb",
 
 		-- Mark of the Demon
-		[38656] = "Mark of the Demon|10+|56.77 54.33|{133791} [Demonic Emblem]||Drops from Gravax the Desecrator",
+		[38656] = "Mark of the Demon|10+|56.77 54.33|{133791} [Demonic Emblem]||Drops from [red]Gravax the Desecrator]",
 
 		-- Sylvan Falls
 		[41094] = "Hatchlings of the Talon|10+|76.08 31.39|Aviana",
@@ -2824,7 +2824,7 @@ Data.Quests = {
 		[38459] = "The Ancient Trials|10+ 38362 horde|36.8 31.02|Huginn", -- Horde
 		[38331] = {"Havi's Test|10+ 38210 alliance|43.17 49.15|Havi", "Havi's Test|10+ 38459 horde|41.83 43.06|Havi",}, -- Havi's location changes depending on faction
 		[39590] = {"Ahead of the Game|10+ 38331 alliance|43.17 49.15|Havi", "Ahead of the Game|10+ 38331 horde|41.83 43.06|Havi",},
-		[39595] = "Blood and Gold|10+ 38331|44.32 44.53|{132594} [Challenger's Tribute]||Drops from Bloodtotem, Felskorn and Mightstone challengers in the area",
+		[39595] = "Blood and Gold|10+ 38331|44.32 44.53|{132594} [Challenger's Tribute]||Drops from [red]Bloodtotem], [red]Felskorn] and [red]Mightstone] Challengers in the area",
 		[39591] = "A Trial of Valor|10+ 39590|46.73 44.44|Yotnar's Head",
 		[39592] = "A Trial of Will|10+ 39590|46.73 44.44|Yotnar's Head",
 		[39593] = "The Shattered Watcher|10+ 39590|46.73 44.44|Yotnar's Head",
@@ -2832,8 +2832,8 @@ Data.Quests = {
 		[39597] = "The Blessing of the Watchers|10+ 39594|46.32 44.83|Yotnar",
 
 		-- The Trial of Will
-		[38337] = "Built to Scale|10+ alliance|44.45 64.34|{134308} [Storm Drake Scale]||Drops from Stormwing Drakes in Hrydshal", -- Alliance
-		[38616] = "Built to Scale|10+ horde|44.45 64.34|{134308} [Storm Drake Scale]||Drops from Stormwing Drakes in Hrydshal", -- Horde
+		[38337] = "Built to Scale|10+ alliance|44.45 64.34|{134308} [Storm Drake Scale]||Drops from [red]Stormwing Drake] in Hrydshal", -- Alliance
+		[38616] = "Built to Scale|10+ horde|44.45 64.34|{134308} [Storm Drake Scale]||Drops from [red]Stormwing Drake] in Hrydshal", -- Horde
 		[38473] = "Will of the Thorignir|10+ 39597 alliance|43.17 49.15|Havi", -- Alliance
 		[38611] = "Will of the Thorignir|10+ 39597 horde|41.83 43.06|Havi", -- Horde
 		[38312] = "A Grapple a Day|10+ 38473 alliance|37.38 63.85|Commander Lorna Crowley", -- Alliance
@@ -3446,7 +3446,7 @@ Data.Quests = {
 
 		-- Lake Al'Ameth
 		[930]   = "The Glowing Fruit|1+ alliance|57.64 63.02|Strange Fruited Plant",
-		[927]   = "The Moss-twined Heart|1+ alliance|52.04 63.68|{134339} [Moss-Twined Heart]||Drops from Blackmoss the Fetid",
+		[927]   = "The Moss-twined Heart|1+ alliance|52.04 63.68|{134339} [Moss-Twined Heart]||Drops from [red]Blackmoss the Fetid]",
 		[941]   = "Planting the Heart|1+ alliance 927|59.94 59.77|Denalan",
 		[918]   = "Timberling Seeds|1+ alliance 997|59.94 59.77|Denalan",
 		[919]   = "Timberling Sprouts|1+ alliance 997|59.94 59.77|Denalan",
@@ -3529,7 +3529,7 @@ Data.Quests = {
 		[9309] = "The Missing Scout|1+ 37444,9303 alliance|50.64 48.73|Vindicator Aldar", -- check if also req 9294?
 		[10303] = "The Blood Elves|1+ 9309 alliance|33.9 69.38|Tolaan",
 		[9311] = "Blood Elf Spy|1+ 10303 alliance|33.9 69.38|Tolaan",
-		[9798] = "Blood Elf Plans|1+ 10303 alliance|27.79 80.42|{132319} [Blood Elf Plans]||Drops from Surveyor Candress",
+		[9798] = "Blood Elf Plans|1+ 10303 alliance|27.79 80.42|{132319} [Blood Elf Plans]||Drops from [Surveyor Candress]",
 		[9312] = "The Emitter|1+ 37445,9305 9311 alliance|50.64 48.73|Vindicator Aldar",
 		[9313] = "Travel to Azure Watch|1+ 9312 alliance|50.49 47.87|Technician Zhanaa",
 		[9314] = "Word from Azure Watch|1+ alliance|17.1 54.15|Aeun",
@@ -3554,7 +3554,7 @@ Data.Quests = {
 		[9309] = "The Missing Scout|1+ 37444,9303 alliance|50.64 48.73|Vindicator Aldar|link:468", -- check if also req 9294?
 		[10303] = "The Blood Elves|1+ 9309 alliance|72.01 60.84|Tolaan|link:468",
 		[9311] = "Blood Elf Spy|1+ 10303 alliance|72.01 60.84|Tolaan|link:468",
-		[9798] = "Blood Elf Plans|1+ 10303 alliance|69.27 65.77|{132319} [Blood Elf Plans]|link:468|Drops from Surveyor Candress",
+		[9798] = "Blood Elf Plans|1+ 10303 alliance|69.27 65.77|{132319} [Blood Elf Plans]|link:468|Drops from [Surveyor Candress]",
 		[9312] = "The Emitter|1+ 37445,9305 9311 alliance|79.48 51.63|Vindicator Aldar|link:468",
 		[9313] = "Travel to Azure Watch|1+ 9312 alliance|79.42 51.24|Technician Zhanaa|link:468",
 		[9314] = "Word from Azure Watch|1+ alliance|64.5 54.04|Aeun",
@@ -3564,7 +3564,7 @@ Data.Quests = {
 		[9453] = "Find Acteon!|1+ 9452 alliance|61.06 54.24|Diktynna",
 		[9454] = "The Great Moongraze Hunt|1+ alliance|49.78 51.93|Acteon",
 		[10324] = "The Great Moongraze Hunt|1+ 9454 alliance|49.78 51.93|Acteon",
-		[9455] = "Strange Findings|1+ alliance|43 38.6|{134072} [Faintly Glowing Crystal]||Drops from Infected Nightstalker Runt",
+		[9455] = "Strange Findings|1+ alliance|43 38.6|{134072} [Faintly Glowing Crystal]||Drops from [red]Infected Nightstalker Runt]",
 		[9456] = "Nightstalker Clean Up, Isle 2...|1+ 9455 alliance|47.12 50.61|Exarch Menelaous",
 		[9603] = "Beds, Bandages, and Beyond|1+ draenei alliance|48.34 49.15|Caregiver Chellan", -- Draenei only
 		[9604] = "On the Wings of a Hippogryph|1+ 9603 draenei alliance|49.71 49.11|Zaldaan", -- Draenei only
@@ -3585,7 +3585,7 @@ Data.Quests = {
 		[9512] = "Cookie's Jumbo Gumbo|1+ alliance|46.68 70.54|\"Cookie\" McWeaksauce",
 		[9513] = "Reclaiming the Ruins|1+ 9506,9512 alliance|47.12 70.28|Priestess Kyleen Il'dinare",
 		[9523] = "Precious and Fragile Things Need Special Handling|1+ 9506,9512 alliance|47.24 69.99|Archaeologist Adamant Ironheart",
-		[9514] = "Rune Covered Tablet|1+ 9506,9512 alliance|34.7 77.3|{134462} [Rune Covered Tablet]||Drops from Wrathscale naga",
+		[9514] = "Rune Covered Tablet|1+ 9506,9512 alliance|34.7 77.3|{134462} [Rune Covered Tablet]||Drops from [red]Wrathscale] Naga",
 		[9515] = "Warlord Sriss'tiz|1+ 9514 alliance|47.12 70.28|Priestess Kyleen Il'dinare", -- double check prereqs
 
 		-- The Prophecy of Akida
@@ -3599,7 +3599,7 @@ Data.Quests = {
 
 		-- Stillpine Hold
 		[9562] = "Murlocs... Why Here? Why Now?|1+ 9538 alliance|44.64 23.48|Gurf", -- Might require 9544?
-		[9564] = "Gurf's Dignity|1+ +9562 alliance|34.6 15|{134350} [Gurf's Dignity]||Drops from Murgurgula who patrols the shore", -- Requires 9562 in log
+		[9564] = "Gurf's Dignity|1+ +9562 alliance|34.6 15|{134350} [Gurf's Dignity]||Drops from [red]Murgurgula] who patrols the shore", -- Requires 9562 in log
 		[9560] = "Beasts of the Apocalypse!|1+ 9538 alliance|44.77 23.89|Moordo", -- Might require 9544?
 		[9565] = "Search Stillpine Hold|1+ 9560,9562 alliance|46.68 20.63|High Chief Stillpine", -- check if 9560 or 9560,9562 or 9560 9562
 		[9566] = "Blood Crystals|1+ 9565 alliance|45.5 18.9|Blood Crystal|down link:99",
@@ -3613,42 +3613,9 @@ Data.Quests = {
 		[9527] = "All That Remains|1+ 10428 alliance|16.59 94.45|Cowlen",
 		[9528] = "A Cry For Help|1+ alliance|13.63 73.22|Magwin",
 
-		-- Random
-		[9612] = {
-			"A Hearty Thanks!|1+ draenei alliance|37.4 19.4|Draenei Youngling||Available after using [spell]Gift of the Naaru] on a Draenei Youngling who is in combat", -- West of Stillpine Hold
-			"A Hearty Thanks!|1+ draenei alliance|46.6 31.6|Draenei Youngling||Available after using [spell]Gift of the Naaru] on a Draenei Youngling who is in combat", -- South of Stillpine Hold
-			"A Hearty Thanks!|1+ draenei alliance|55 29|Draenei Youngling||Available after using [spell]Gift of the Naaru] on a Draenei Youngling who is in combat", -- South of Emberglade
-			"A Hearty Thanks!|1+ draenei alliance|39.4 37.2|Draenei Youngling||Available after using [spell]Gift of the Naaru] on a Draenei Youngling who is in combat", -- North of Valaar's Berth
-			"A Hearty Thanks!|1+ draenei alliance|42 57.4|Draenei Youngling||Available after using [spell]Gift of the Naaru] on a Draenei Youngling who is in combat||Available after healing a Draenei Youngling using {135923} [Gift of the Naaru] in combat", -- South of Valaar's Berth
-			"A Hearty Thanks!|1+ draenei alliance|40 71.6|Draenei Youngling||Available after using [spell]Gift of the Naaru] on a Draenei Youngling who is in combat||Available after healing a Draenei Youngling using {135923} [Gift of the Naaru] in combat", -- West of Odesyus' Landing
-			"A Hearty Thanks!|1+ draenei alliance|56.8 59.6|Draenei Youngling||Available after using [spell]Gift of the Naaru] on a Draenei Youngling who is in combat", -- East of the Pod Wreckage
-			"A Hearty Thanks!|1+ draenei alliance|53.4 42.4|Draenei Youngling||Available after using [spell]Gift of the Naaru] on a Draenei Youngling who is in combat", -- Northeast of Azure Watch
-			"A Hearty Thanks!|1+ draenei alliance|55 47|Draenei Youngling||Available after using [spell]Gift of the Naaru] on a Draenei Youngling who is in combat", -- East of Azure Watch
-			"A Hearty Thanks!|1+ draenei alliance|58.6 42.2|Draenei Youngling||Available after using [spell]Gift of the Naaru] on a Draenei Youngling who is in combat", -- Beach
-		},
-		[9616] = {
-			-- Thanks to Wowhead user axelia for these coordinates <https://www.wowhead.com/quest=9616/bandits#comments:id=1981342>
-			-- Blizzard bug: as of 9.0 the drop is broken outside Chromie Time and will not drop at all for level 50+ characters, not even in Party Sync
-			"Bandits!|1+ broken:50 alliance|28.6 79.2|{133473} [Blood Elf Communication]|chromietime|Drops from Blood Elf Bandit who is stealthed near one of these spawn points",
-			"Bandits!|1+ broken:50 alliance|26.4 67.2|{133473} [Blood Elf Communication]|chromietime|Drops from Blood Elf Bandit who is stealthed near one of these spawn points",
-			"Bandits!|1+ broken:50 alliance|33.4 71|{133473} [Blood Elf Communication]|chromietime|Drops from Blood Elf Bandit who is stealthed near one of these spawn points",
-			"Bandits!|1+ broken:50 alliance|32.4 62.8|{133473} [Blood Elf Communication]|chromietime|Drops from Blood Elf Bandit who is stealthed near one of these spawn points",
-			"Bandits!|1+ broken:50 alliance|35.2 64.4|{133473} [Blood Elf Communication]|chromietime|Drops from Blood Elf Bandit who is stealthed near one of these spawn points",
-			"Bandits!|1+ broken:50 alliance|36 60.4|{133473} [Blood Elf Communication]|chromietime|Drops from Blood Elf Bandit who is stealthed near one of these spawn points",
-			"Bandits!|1+ broken:50 alliance|43 63.2|{133473} [Blood Elf Communication]|chromietime|Drops from Blood Elf Bandit who is stealthed near one of these spawn points",
-			"Bandits!|1+ broken:50 alliance|53.2 61.2|{133473} [Blood Elf Communication]|chromietime|Drops from Blood Elf Bandit who is stealthed near one of these spawn points",
-			"Bandits!|1+ broken:50 alliance|46.4 39.2|{133473} [Blood Elf Communication]|chromietime|Drops from Blood Elf Bandit who is stealthed near one of these spawn points",
-			"Bandits!|1+ broken:50 alliance|53.6 41.2|{133473} [Blood Elf Communication]|chromietime|Drops from Blood Elf Bandit who is stealthed near one of these spawn points",
-			"Bandits!|1+ broken:50 alliance|50.2 29|{133473} [Blood Elf Communication]|chromietime|Drops from Blood Elf Bandit who is stealthed near one of these spawn points",
-			"Bandits!|1+ broken:50 alliance|54.2 21.6|{133473} [Blood Elf Communication]|chromietime|Drops from Blood Elf Bandit who is stealthed near one of these spawn points",
-			"Bandits!|1+ broken:50 alliance|52 17.4|{133473} [Blood Elf Communication]|chromietime|Drops from Blood Elf Bandit who is stealthed near one of these spawn points",
-			"Bandits!|1+ broken:50 alliance|59 18.2|{133473} [Blood Elf Communication]|chromietime|Drops from Blood Elf Bandit who is stealthed near one of these spawn points",
-			"Bandits!|1+ broken:50 alliance|37 20.8|{133473} [Blood Elf Communication]|chromietime|Drops from Blood Elf Bandit who is stealthed near one of these spawn points",
-			"Bandits!|1+ broken:50 alliance|34 19.2|{133473} [Blood Elf Communication]|chromietime|Drops from Blood Elf Bandit who is stealthed near one of these spawn points",
-			"Bandits!|1+ broken:50 alliance|33.4 26.6|{133473} [Blood Elf Communication]|chromietime|Drops from Blood Elf Bandit who is stealthed near one of these spawn points",
-			"Bandits!|1+ broken:50 alliance|36.4 32.4|{133473} [Blood Elf Communication]|chromietime|Drops from Blood Elf Bandit who is stealthed near one of these spawn points",
-			"Bandits!|1+ broken:50 alliance|27.4 52|{133473} [Blood Elf Communication]|chromietime|Drops from Blood Elf Bandit who is stealthed near one of these spawn points",
-		},
+		-- Random location
+		[9612] = "A Hearty Thanks!|1+ draenei alliance|1 GiftOfTheNaaru|Draenei Youngling|discovery tomtom|Cast {135923} [spell]Gift of the Naaru] on a [green]Draenei Youngling] who is in combat to obtain this quest",
+		[9616] = "Bandits!|1+ broken:50 alliance|2 BloodElfCommunication|{133473} [Blood Elf Communication]|discovery chromietime tomtom|Drops from [red]Blood Elf Bandit] who is stealthed in a random location",
 	},
 
 	-- Stillpine Hold
@@ -3663,6 +3630,13 @@ Data.Quests = {
 	[85] = {
 		[66253] = "Stolen Shipments|1+ horde|48.54 75.91|Zaa'je",
 		[66323] = "Idling Pie|1+ horde 66253|48.54 75.91|Zaa'je",
+		[29401] = "Blown Away|10+ horde|48.13 46.85|Jaga",
+
+		-- Azshara
+		[25275] = "Report to the Labor Captain|1+ horde goblin -28496 -14129|49.21 72.27|Eitrigg", -- Goblin only breadcrumb for 14129, mutually exclusive with 28496
+
+		-- Ragefire Chasm
+		[31034] = "Enemies Below|7+ horde -31036 -31037|49.21 72.27|Eitrigg", -- Mutually exclusive with 31036 and 31037
 
 		-- Legion
 		[43926] = "Legion: The Legion Returns|10+ -44663 horde|49.67 76.46|Warchief's Command Board",
@@ -3832,10 +3806,23 @@ Data.Quests = {
 		[25170] = "Cleaning Up the Coastline|1+ horde|55.74 75.36|Bom'bay",
 
 		-- Razor Hill
+		[25232] = "The Burning Blade|1+ horde|52.25 43.15|Orgnil Soulscar",
+		[840]   = "Conscript of the Horde|5+ horde|50.85 43.59|Takrin Pathseeker",
 
 		-- Southfury Watershed
 
+		-- Drygulch Ravine
+		[834]   = "Winds in the Desert|1+ horde|46.38 22.93|Rezlak",
+		[835]   = "Securing the Lines|1+ horde|46.38 22.93|Rezlak",
+
 		-- The Dranosh'ar Blockade
+		[25236] = "Thunder Down Under|1+ horde|45 14.77|Gor the Enforcer",
+		[25205] = "The Wolf and the Kodo|1+ horde|44.9 14.83|Shin Stonepillar",
+		[25206] = "Ignoring the Warnings|1+ horde 25205|45 14.77|Gor the Enforcer",
+		[25648] = "Beyond Durotar|1+ horde 25236 25206 -28496|45 14.77|Gor the Enforcer", -- Mutually exclusive with 28496
+
+		-- Deadeye Shore
+		[25256] = "Sent for Help|1+ horde|56.38 20.22|Vek'nag",
 
 		-- Legion
 		[44281] = "To Be Prepared|10+ -44663 43926 horde|46.01 13.78|Holgar Stormaxe",
@@ -3864,7 +3851,7 @@ Data.Quests = {
 		[264]   = "Until Death Do Us Part|5+ horde|28.91 26|Clarice Foster",
 
 		-- Ragefire Chasm
-		[31036] = "Enemies Below|7+ horde -31034 -31037|60.26 51.68|Baine Bloodhoof",
+		[31036] = "Enemies Below|7+ horde -31034 -31037|60.26 51.68|Baine Bloodhoof", -- Mutually exclusive with 31034 and 31037
 
 		-- Battle for Azeroth - The Stormwind Extraction
 		[51443] = "Battle for Azeroth: Mission Statement|10+ horde -60361 -59926|42.41 58.31|Warchief's Herald", -- 60361 is the Exile's Reach version
@@ -3928,11 +3915,19 @@ Data.Quests = {
 		-- Camp Sungraze
 		[833]   = "A Sacred Burial|1+ horde|49.52 17.1|Lorekeeper Raintotem",
 		[744]   = "Preparation for Ceremony|1+ horde|49.59 17.59|Eyahn Eagletalon",
-		[770]   = "The Demon Scarred Cloak|1+ horde|43.28 14.84|{134358} [Demon Scarred Cloak]||Drops from Ghost Howl who roams the area",
+		[770]   = "The Demon Scarred Cloak|1+ horde|43.28 14.84|{134358} [Demon Scarred Cloak]||Drops from [red]Ghost Howl] who roams the area",
 		[773]   = "Rite of Wisdom|1+ horde tauren 20441|49.52 17.1|Lorekeeper Raintotem", -- Tauren only
 		[24523] = "Wildmane Totem|1+ horde tauren 24456|49.37 17.33|Una Wildmane", -- Tauren only
 		[24524] = "Wildmane Cleansing|1+ horde tauren 24523|49.37 17.33|Una Wildmane", -- Tauren only
 		[24550] = "Journey into Thunder Bluff|1+ horde tauren 24524 -24540|49.37 17.33|Una Wildmane", -- Tauren only; breadcrumb for 24540
+	},
+
+
+	--[[ Northern Barrens ]]--
+
+	[10] = {
+		-- Far Watch Post
+		[871]   = "In Defense of Far Watch|5+ horde ~840|67.67 39.39|Kargal Battlescar",
 	},
 
 
@@ -4405,7 +4400,7 @@ Data.Quests = {
 		[52]    = "Protect the Frontier|1+ alliance|73.97 72.19|Guard Thomas",
 		[46]    = "Bounty on Murlocs|1+ alliance|74.03 72.31|Bounty Board",
 		[26152] = "WANTED: James Clark|1+ alliance|74.03 72.31|Bounty Board",
-		[123]   = "The Collector|1+ alliance|78.62 67.18|{134939} [Gold Pickup Schedule]||Drops from James Clark",
+		[123]   = "The Collector|1+ alliance|78.62 67.18|{134939} [Gold Pickup Schedule]||Drops from [red]James Clark]",
 		[147]   = "Manhunt|1+ alliance 123|81.86 66.04|Marshal Patterson",
 		[83]    = "Fine Linen Goods|1+ alliance|79.46 68.71|Sara Timberlain",
 		[5545]  = "A Bundle of Trouble|1+ alliance|81.38 66.11|Supervisor Raelen",
@@ -4482,5 +4477,50 @@ Data.Quests = {
 	[26] = {
 		-- OOX-17/HL
 		[485] = "Find OOX-22/HL!|10+|1 OOXDistressBeacon|{132836} [uncommon]OOX-17/HL Distress Beacon]|discovery|Zone Drop",
+	},
+}
+
+
+-- TomTom Waypoints
+-- [QuestID] = "Map|Title|Coordinates|Icon",
+
+Data.TomTomWaypoints = {
+	-- A Hearty Thanks!
+	[9612] = {
+		"97|Draenei Youngling (Possible Location)|37.4 19.4|135923", -- West of Stillpine Hold
+		"97|Draenei Youngling (Possible Location)|46.6 31.6|135923", -- South of Stillpine Hold
+		"97|Draenei Youngling (Possible Location)|55 29|135923", -- South of Emberglade
+		"97|Draenei Youngling (Possible Location)|39.4 37.2|135923", -- North of Valaar's Berth
+		"97|Draenei Youngling (Possible Location)|42 57.4|135923", -- South of Valaar's Berth
+		"97|Draenei Youngling (Possible Location)|40 71.6|135923", -- West of Odesyus' Landing
+		"97|Draenei Youngling (Possible Location)|56.8 59.6|135923", -- East of the Pod Wreckage
+		"97|Draenei Youngling (Possible Location)|53.4 42.4|135923", -- Northeast of Azure Watch
+		"97|Draenei Youngling (Possible Location)|55 47|135923", -- East of Azure Watch
+		"97|Draenei Youngling (Possible Location)|58.6 42.2|135923", -- Beach
+	},
+
+	-- Bandits!
+	[9616] = {
+		-- Thanks to Wowhead user axelia for these coordinates <https://www.wowhead.com/quest=9616/bandits#comments:id=1981342>
+		-- Blizzard bug: as of 9.0 the drop is broken outside Chromie Time and will not drop at all for level 50+ characters, not even in Party Sync
+		"97|Blood Elf Bandit (Possible Location)|28.6 79.2|132320",
+		"97|Blood Elf Bandit (Possible Location)|26.4 67.2|132320",
+		"97|Blood Elf Bandit (Possible Location)|33.4 71|132320",
+		"97|Blood Elf Bandit (Possible Location)|32.4 62.8|132320",
+		"97|Blood Elf Bandit (Possible Location)|35.2 64.4|132320",
+		"97|Blood Elf Bandit (Possible Location)|36 60.4|132320",
+		"97|Blood Elf Bandit (Possible Location)|43 63.2|132320",
+		"97|Blood Elf Bandit (Possible Location)|53.2 61.2|132320",
+		"97|Blood Elf Bandit (Possible Location)|46.4 39.2|132320",
+		"97|Blood Elf Bandit (Possible Location)|53.6 41.2|132320",
+		"97|Blood Elf Bandit (Possible Location)|50.2 29|132320",
+		"97|Blood Elf Bandit (Possible Location)|54.2 21.6|132320",
+		"97|Blood Elf Bandit (Possible Location)|52 17.4|132320",
+		"97|Blood Elf Bandit (Possible Location)|59 18.2|132320",
+		"97|Blood Elf Bandit (Possible Location)|37 20.8|132320",
+		"97|Blood Elf Bandit (Possible Location)|34 19.2|132320",
+		"97|Blood Elf Bandit (Possible Location)|33.4 26.6|132320",
+		"97|Blood Elf Bandit (Possible Location)|36.4 32.4|132320",
+		"97|Blood Elf Bandit (Possible Location)|27.4 52|132320",
 	},
 }
