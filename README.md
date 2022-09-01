@@ -12,13 +12,15 @@ All data has been compiled and tested manually to ensure accuracy and seamlessne
 
 - Show currently available Quests on the World Map with accurate locations
 - Show currently available Treasures and Vignettes on the World Map with helpful tooltips
+
+![Screenshot](https://i.imgur.com/N43xls7.png)
+
 - Add additional Points of Interest such as Portals, Doors, Profession Trainers and missing Flight Masters to the World Map
 - Fix several map related Blizzard bugs/oversights
 - Add missing information or objective locations for certain quests
 - Show warnings for some buggy quests directly on the map and in tooltips (for example [The Spruted Fronds](https://www.wowhead.com/quest=2399/the-sprouted-fronds#comments))
 - Lots of options to tailor the addon to your liking (GUI NYI)
 
-![Screenshot](https://i.imgur.com/N43xls7.png)
 ![Screenshot](https://i.imgur.com/uOay2Sz.png)
 
 ## How to Try
