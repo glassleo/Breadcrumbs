@@ -10,8 +10,8 @@ All data has been compiled and tested manually to ensure accuracy and seamlessne
 
 ## Features
 
-- Show currently available Quests on the World Map with accurate locations
-- Show currently available Treasures and Vignettes on the World Map with helpful tooltips
+- Show currently available quests on the World Map with accurate locations
+- Show currently available treasures and vignettes on the World Map with helpful tooltips
 
 ![Screenshot](https://i.imgur.com/N43xls7.png)
 
