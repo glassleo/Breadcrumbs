@@ -213,7 +213,7 @@ function Breadcrumbs:UpdateMap(event, ...)
 		Breadcrumbs:UpdateQuestHistory(event, ...)
 	end
 
-	if event and event ~= "QUEST_ACCEPTED" then
+	if event and event ~= "QUEST_ACCEPTED" and event ~= "WorldMapFrame_OnUpdate" then
 		if Throttle[event] then
 			return
 		elseif event == "PLAYER_LEVEL_UP" or event == "BAG_UPDATE" then
@@ -389,7 +389,7 @@ function Breadcrumbs:UpdateMap(event, ...)
 										elseif chromietime then
 											GameTooltip:AddLine(CreateAtlasMarkup("chromietime-32x32") .. " You have a Timewalking Campaign active and should be able to obtain this quest", 0, 1, 0, true)
 										else
-											GameTooltip:AddLine(CreateAtlasMarkup("chromietime-32x32") .. " You must activate a Timewalking Campaign to be able to obtain this quest", 1, 0, 0, true)
+											GameTooltip:AddLine(CreateAtlasMarkup("chromietime-32x32") .. " You might need to activate a Timewalking Campaign to be able to obtain this quest", 1, 0, 0, true)
 										end
 									elseif flags["partysync-warning"] then
 										if playerlevel >= 50 then
@@ -422,14 +422,15 @@ function Breadcrumbs:UpdateMap(event, ...)
 											end
 										end
 									elseif flags["chromietime"] then
-										GameTooltip:AddLine(" ")
-
 										if playerlevel >= 50 then
+											GameTooltip:AddLine(" ")
 											GameTooltip:AddLine(CreateAtlasMarkup("chromietime-32x32") .. " You cannot complete this quest because your level is too high", 1, 0, 0, true)
 										elseif chromietime then
+											GameTooltip:AddLine(" ")
 											GameTooltip:AddLine(CreateAtlasMarkup("chromietime-32x32") .. " You have a Timewalking Campaign active and should be able to obtain this quest", 0, 1, 0, true)
-										else
-											GameTooltip:AddLine(CreateAtlasMarkup("chromietime-32x32") .. " You must activate a Timewalking Campaign to be able to obtain this quest", 1, 0, 0, true)
+										elseif playerlevel >= 30 then
+											GameTooltip:AddLine(" ")
+											GameTooltip:AddLine(CreateAtlasMarkup("chromietime-32x32") .. " You might need to activate a Timewalking Campaign to be able to obtain this quest", 1, 0, 0, true)
 										end
 									end
 								end
@@ -531,28 +532,69 @@ function Breadcrumbs:UpdateMap(event, ...)
 				if Setting_HumanTooltips then -- Help tip
 					if help and strlen(help) > 0 then
 						GameTooltip:AddLine(" ")
-						GameTooltip:AddLine(Breadcrumbs:FormatTooltip(help, flags))
+						GameTooltip:AddLine(Breadcrumbs:FormatTooltip(help, flags), nil, nil, nil, true)
 					end
 					if flags["chromiesync"] then
 						GameTooltip:AddLine(" ")
 
 						if playerlevel >= 50 then
-							GameTooltip:AddLine(CreateAtlasMarkup("chromietime-32x32") .. " |cffff0000You must Party Sync with a low level character to be able to obtain this quest|r")
+							if C_QuestSession.HasJoined() and UnitEffectiveLevel("player") <= 50 then
+								GameTooltip:AddLine(CreateAtlasMarkup("chromietime-32x32") .. " Party Sync is active", 0, 1, 0, true)
+							else
+								GameTooltip:AddLine(CreateAtlasMarkup("chromietime-32x32") .. " You must Party Sync with a low level character to be able to obtain this quest", 1, 0, 0, true)
+							end
 						elseif chromietime then
-							GameTooltip:AddLine(CreateAtlasMarkup("chromietime-32x32") .. " |cff00ff00You have a Timewalking Campaign active and should be able to obtain this quest|r")
+							GameTooltip:AddLine(CreateAtlasMarkup("chromietime-32x32") .. " You have a Timewalking Campaign active and should be able to obtain this quest", 0, 1, 0, true)
 						else
-							GameTooltip:AddLine(CreateAtlasMarkup("chromietime-32x32") .. " |cffff0000You must activate a Timewalking Campaign to be able to obtain this quest|r")
+							GameTooltip:AddLine(CreateAtlasMarkup("chromietime-32x32") .. " You might need to activate a Timewalking Campaign to be able to obtain this quest", 1, 0, 0, true)
+						end
+					elseif flags["partysync-warning"] then
+						if playerlevel >= 50 then
+							GameTooltip:AddLine(" ")
+
+							if C_QuestSession.HasJoined() and UnitEffectiveLevel("player") <= 50 then
+								GameTooltip:AddLine(CreateAtlasMarkup("chromietime-32x32") .. " Party Sync is active", 0, 1, 0, true)
+							else
+								GameTooltip:AddLine(CreateAtlasMarkup("chromietime-32x32") .. " You will likely need to Party Sync with a low level character to be able to pick up this quest", 1, 0, 0, true)
+							end
+						end
+					elseif flags["partysync-warning-turnin"] then
+						if playerlevel >= 50 then
+							GameTooltip:AddLine(" ")
+
+							if C_QuestSession.HasJoined() and UnitEffectiveLevel("player") <= 50 then
+								GameTooltip:AddLine(CreateAtlasMarkup("chromietime-32x32") .. " Party Sync is active", 0, 1, 0, true)
+							else
+								GameTooltip:AddLine(CreateAtlasMarkup("chromietime-32x32") .. " You will likely need to Party Sync with a low level character to be able to complete this quest", 1, 0, 0, true)
+							end
+						end
+					elseif flags["partysync-warning-chain"] then
+						if playerlevel >= 50 then
+							GameTooltip:AddLine(" ")
+
+							if C_QuestSession.HasJoined() and UnitEffectiveLevel("player") <= 50 then
+								GameTooltip:AddLine(CreateAtlasMarkup("chromietime-32x32") .. " Party Sync is active", 0, 1, 0, true)
+							else
+								GameTooltip:AddLine(CreateAtlasMarkup("chromietime-32x32") .. " You will likely need to Party Sync with a low level character to be able to complete parts of this quest chain", 1, 0, 0, true)
+							end
 						end
 					elseif flags["chromietime"] then
+						if playerlevel >= 50 then
+							GameTooltip:AddLine(" ")
+							GameTooltip:AddLine(CreateAtlasMarkup("chromietime-32x32") .. " You cannot complete this quest because your level is too high", 1, 0, 0, true)
+						elseif chromietime then
+							GameTooltip:AddLine(" ")
+							GameTooltip:AddLine(CreateAtlasMarkup("chromietime-32x32") .. " You have a Timewalking Campaign active and should be able to obtain this quest", 0, 1, 0, true)
+						elseif playerlevel >= 30 then
+							GameTooltip:AddLine(" ")
+							GameTooltip:AddLine(CreateAtlasMarkup("chromietime-32x32") .. " You might need to activate a Timewalking Campaign to be able to obtain this quest", 1, 0, 0, true)
+						end
+					end
+
+					if flags["tomtom"] and TomTom and Data.TomTomWaypoints and Data.TomTomWaypoints[id] then
 						GameTooltip:AddLine(" ")
 
-						if playerlevel >= 50 then
-							GameTooltip:AddLine(CreateAtlasMarkup("chromietime-32x32") .. " |cffff0000You cannot complete this quest because your level is too high|r")
-						elseif chromietime then
-							GameTooltip:AddLine(CreateAtlasMarkup("chromietime-32x32") .. " |cff00ff00You have a Timewalking Campaign active and should be able to obtain this quest|r")
-						else
-							GameTooltip:AddLine(CreateAtlasMarkup("chromietime-32x32") .. " |cffff0000You must activate a Timewalking Campaign to be able to obtain this quest|r")
-						end
+						GameTooltip:AddLine(Breadcrumbs:FormatTooltip("{newplayertutorial-icon-mouse-leftbutton} Add TomTom waypoints to your map for this quest"), 0, 1, 0, true)
 					end
 				end
 				if ZA and ZA.DebugMode then -- Debug
@@ -570,6 +612,27 @@ function Breadcrumbs:UpdateMap(event, ...)
 				Pin:SetScript("OnMouseUp", function(self, button)
 					if button == "LeftButton" then
 						WorldMapFrame:SetMapID(link)
+					end
+				end)
+			elseif flags["tomtom"] and TomTom and Data.TomTomWaypoints and Data.TomTomWaypoints[id] then
+				Pin:SetScript("OnMouseUp", function(self, button)
+					if button == "LeftButton" then
+						for _, TtData in pairs(Data.TomTomWaypoints[id]) do
+							local TtMap, TtTitle, TtCoordinates, TtIcon = strsplit("|", TtData or "")
+							local TtX, TtY = strsplit(" ", TtCoordinates or "")
+							TtMap = tonumber(TtMap) or nil
+							TtX = tonumber(TtX) or nil
+							TtY = tonumber(TtY) or nil
+
+							if TtMap and TtTitle and TtX and TtY and TtIcon then
+								TomTom:AddWaypoint(TtMap, TtX/100, TtY/100, {
+									["title"] = TtTitle,
+									["source"] = "Breadcrumbs",
+									["worldmap_icon"] = TtIcon,
+								})
+							end
+						end
+						
 					end
 				end)
 			end
