@@ -139,6 +139,9 @@ Data.HiddenBonusObjectiveQuests = {
 	
 		chromietime		Quest can only be picked up during a Timewalking Campaign (Chromie Time); adds a dynamic help tip depending on level and Chromie Time status
 		chromiesync		Quest can only be picked up during a Timewalking Campaign (Chromie Time) or in Party Sync; adds a dynamic help tip depending on level and Chromie Time status
+		partysync-warning			Adds a warning tooltip for players at level 50 or above: "You will likely need to Party Sync with a low level character to be able to pick up this quest" 
+		partysync-warning-turnin	Adds a warning tooltip for players at level 50 or above: "You will likely need to Party Sync with a low level character to be able to complete this quest" 
+		partysync-warning-chain		Adds a warning tooltip for players at level 50 or above: "You will likely need to Party Sync with a low level character to be able to complete parts of this quest chain" 
 
 	Help: Tooltip help text
 		{!}				Quest bang
@@ -3687,17 +3690,64 @@ Data.Quests = {
 
 	-- Echo Isles
 	[463] = {
-		-- Death Knights, Demon Hunters, Paladins and Evokers are all out of luck
-		[24764] = "The Rise of the Darkspear|1+ horde druid|42.83 53.43|Jin'thala",
-		[24776] = "The Rise of the Darkspear|1+ horde hunter|42.83 53.43|Jin'thala",
-		[24750] = "The Rise of the Darkspear|1+ horde mage|42.83 53.43|Jin'thala",
-		[31159] = "The Rise of the Darkspear|1+ horde monk|42.83 53.43|Jin'thala",
-		[24782] = "The Rise of the Darkspear|1+ horde priest|42.83 53.43|Jin'thala",
-		[24770] = "The Rise of the Darkspear|1+ horde rogue|42.83 53.43|Jin'thala",
-		[24758] = "The Rise of the Darkspear|1+ horde shaman|42.83 53.43|Jin'thala",
-		[26272] = "The Rise of the Darkspear|1+ horde warlock|42.83 53.43|Jin'thala",
-		[24607] = "The Rise of the Darkspear|1+ horde warrior|42.83 53.43|Jin'thala",
-		[26273] = "The Basics: Hitting Things|1+ horde warlock 26272|50.04 49.95|Voldreka",
+		-- Death Knights, Demon Hunters, Evokers and Paladins are all out of luck
+		[24764] = "The Rise of the Darkspear|1+ horde druid|42.83 53.43|Jin'thala", -- Druid only
+		[24776] = "The Rise of the Darkspear|1+ horde hunter|42.83 53.43|Jin'thala", -- Hunter only
+		[24750] = "The Rise of the Darkspear|1+ horde mage|42.83 53.43|Jin'thala", -- Mage only
+		[31159] = "The Rise of the Darkspear|1+ horde monk|42.83 53.43|Jin'thala", -- Monk only
+		[24782] = "The Rise of the Darkspear|1+ horde priest|42.83 53.43|Jin'thala", -- Priest only
+		[24770] = "The Rise of the Darkspear|1+ horde rogue|42.83 53.43|Jin'thala", -- Rogue only
+		[24758] = "The Rise of the Darkspear|1+ horde shaman|42.83 53.43|Jin'thala", -- Shaman only
+		[26272] = "The Rise of the Darkspear|1+ horde warlock|42.83 53.43|Jin'thala", -- Warlock only
+		[24607] = "The Rise of the Darkspear|1+ horde warrior|42.83 53.43|Jin'thala", -- Warrior only
+		[24765] = "The Basics: Hitting Things|1+ horde druid 24764|58.07 54.04|Zen'tabra", -- Druid only
+		[24777] = "The Basics: Hitting Things|1+ horde hunter 24776|56.39 50.08|Ortezza", -- Hunter only
+		[24751] = "The Basics: Hitting Things|1+ horde mage 24750|59.69 52.06|Soratha", -- Mage only
+		[31158] = "The Basics: Hitting Things|1+ horde monk 31159|52.57 51.85|Zabrax", -- Monk only
+		[24783] = "The Basics: Hitting Things|1+ horde priest 24782|58.04 49.26|Tunari", -- Priest only
+		[24771] = "The Basics: Hitting Things|1+ horde rogue 24770|52.89 49.02|Legati", -- Rogue only
+		[24759] = "The Basics: Hitting Things|1+ horde shaman 24758|50.08 52.75|Nekali", -- Shaman only
+		[26273] = "The Basics: Hitting Things|1+ horde warlock 26272|50.04 49.95|Voldreka", -- Warlock only
+		[24639] = "The Basics: Hitting Things|1+ horde warrior 24607|52.54 53.68|Nortet", -- Warrior only
+		[24767] = "A Rough Start|1+ horde druid 24765|58.07 54.04|Zen'tabra", -- Druid only
+		[24779] = "A Rough Start|1+ horde hunter 24777|56.39 50.08|Ortezza", -- Hunter only
+		[24753] = "A Rough Start|1+ horde mage 24751|59.69 52.06|Soratha", -- Mage only
+		[31160] = "A Rough Start|1+ horde monk 31158|52.57 51.85|Zabrax", -- Monk only
+		[24785] = "A Rough Start|1+ horde priest 24783|58.04 49.26|Tunari", -- Priest only
+		[24773] = "A Rough Start|1+ horde rogue 24771|52.89 49.02|Legati", -- Rogue only
+		[24761] = "A Rough Start|1+ horde shaman 24759|50.08 52.75|Nekali", -- Shaman only
+		[26275] = "A Rough Start|1+ horde warlock 26273|50.04 49.95|Voldreka", -- Warlock only
+		[24641] = "A Rough Start|1+ horde warrior 24639|52.54 53.68|Nortet", -- Warrior only
+		[24768] = "Proving Pit|1+ horde druid 24767|58.07 54.04|Zen'tabra", -- Druid only
+		[24780] = "Proving Pit|1+ horde hunter 24779|56.39 50.08|Ortezza", -- Hunter only
+		[24754] = "Proving Pit|1+ horde mage 24753|59.69 52.06|Soratha", -- Mage only
+		[31161] = "Proving Pit|1+ horde monk 31160|52.57 51.85|Zabrax", -- Monk only
+		[24786] = "Proving Pit|1+ horde priest 24785|58.04 49.26|Tunari", -- Priest only
+		[24774] = "Proving Pit|1+ horde rogue 24773|52.89 49.02|Legati", -- Rogue only
+		[24762] = "Proving Pit|1+ horde shaman 24761|50.08 52.75|Nekali", -- Shaman only
+		[26276] = "Proving Pit|1+ horde warlock 26275|50.04 49.95|Voldreka", -- Warlock only
+		[24642] = "Proving Pit|1+ horde warrior 24641|52.54 53.68|Nortet", -- Warrior only
+		[24769] = "More Than Expected|1+ horde druid 24768|58.07 54.04|Zen'tabra", -- Druid only
+		[24781] = "More Than Expected|1+ horde hunter 24780|56.39 50.08|Ortezza", -- Hunter only
+		[24755] = "More Than Expected|1+ horde mage 24754|59.69 52.06|Soratha", -- Mage only
+		[31163] = "More Than Expected|1+ horde monk 31161|52.57 51.85|Zabrax", -- Monk only
+		[24787] = "More Than Expected|1+ horde priest 24786|58.04 49.26|Tunari", -- Priest only
+		[24775] = "More Than Expected|1+ horde rogue 24774|52.89 49.02|Legati", -- Rogue only
+		[24763] = "More Than Expected|1+ horde shaman 24762|50.08 52.75|Nekali", -- Shaman only
+		[26277] = "More Than Expected|1+ horde warlock 26276|50.04 49.95|Voldreka", -- Warlock only
+		[24643] = "More Than Expected|1+ horde warrior 24642|52.54 53.68|Nortet", -- Warrior only
+		[25037] = "Crab Fishin'|1+ horde 26277,24781,31163,24763,24755,24775,24787,24643,24769|60.54 62.89|Tora'jin",
+		[25064] = "Moraya|1+ horde 26277,24781,31163,24763,24755,24775,24787,24643,24769|61.57 65.86|Vol'jin",
+		[24622] = "A Troll's Truest Companion|1+ horde 25064|56.83 63.68|Moraya",
+		[24623] = "Saving the Young|1+ horde 24622|45.58 85.11|Kijara",
+		[24624] = "Mercy for the Lost|1+ horde 24622|45.73 85|Tegashi",
+		[24625] = "Consort of the Sea Witch|1+ horde 24622|45.73 85|Tegashi",
+		[24626] = "Young and Vicious|1+ horde 24623 24624 24625|45.58 85.11|Kijara",
+		[25035] = "Breaking the Line|1+ horde 24626|58.95 66.84|Tortunga",
+		[24812] = "No More Mercy|1+ horde 25035|58.92 23.06|Morakki",
+		[24813] = "Territorial Fetish|1+ horde 25035|58.92 23.06|Morakki",
+		[24814] = "An Ancient Enemy|1+ horde 24812 24813|58.92 23.06|Morakki",
+		[25073] = "Sen'jin Village|1+ horde 24814 -25167|61.57 65.86|Vol'jin", -- Breadcrumb for 25167
 	},
 
 	-- Durotar
@@ -3718,19 +3768,67 @@ Data.Quests = {
 		[25133] = "Report to Sen'jin Village|1+ horde 25132|43.45 67.5|Zureetha Fargaze|link:461",
 
 		-- Echo Isles
-		[24764] = "The Rise of the Darkspear|1+ horde druid|62.46 84.45|Jin'thala|link:463",
-		[24776] = "The Rise of the Darkspear|1+ horde hunter|62.46 84.45|Jin'thala|link:463",
-		[24750] = "The Rise of the Darkspear|1+ horde mage|62.46 84.45|Jin'thala|link:463",
-		[31159] = "The Rise of the Darkspear|1+ horde monk|62.46 84.45|Jin'thala|link:463",
-		[24782] = "The Rise of the Darkspear|1+ horde priest|62.46 84.45|Jin'thala|link:463",
-		[24770] = "The Rise of the Darkspear|1+ horde rogue|62.46 84.45|Jin'thala|link:463",
-		[24758] = "The Rise of the Darkspear|1+ horde shaman|62.46 84.45|Jin'thala|link:463",
-		[26272] = "The Rise of the Darkspear|1+ horde warlock|62.46 84.45|Jin'thala|link:463",
-		[24607] = "The Rise of the Darkspear|1+ horde warrior|62.46 84.45|Jin'thala|link:463",
-		[26273] = "The Basics: Hitting Things|1+ horde warlock 26272|64.93 83.26|Voldreka|link:463",
+		-- Death Knights, Demon Hunters, Evokers and Paladins are all out of luck
+		[24764] = "The Rise of the Darkspear|1+ horde druid|62.46 84.45|Jin'thala|link:463", -- Druid only
+		[24776] = "The Rise of the Darkspear|1+ horde hunter|62.46 84.45|Jin'thala|link:463", -- Hunter only
+		[24750] = "The Rise of the Darkspear|1+ horde mage|62.46 84.45|Jin'thala|link:463", -- Mage only
+		[31159] = "The Rise of the Darkspear|1+ horde monk|62.46 84.45|Jin'thala|link:463", -- Monk only
+		[24782] = "The Rise of the Darkspear|1+ horde priest|62.46 84.45|Jin'thala|link:463", -- Priest only
+		[24770] = "The Rise of the Darkspear|1+ horde rogue|62.46 84.45|Jin'thala|link:463", -- Rogue only
+		[24758] = "The Rise of the Darkspear|1+ horde shaman|62.46 84.45|Jin'thala|link:463", -- Shaman only
+		[26272] = "The Rise of the Darkspear|1+ horde warlock|62.46 84.45|Jin'thala|link:463", -- Warlock only
+		[24607] = "The Rise of the Darkspear|1+ horde warrior|62.46 84.45|Jin'thala|link:463", -- Warrior only
+		[24765] = "The Basics: Hitting Things|1+ horde druid 24764|67.67 84.65|Zen'tabra|link:463", -- Druid only
+		[24777] = "The Basics: Hitting Things|1+ horde hunter 24776|67.09 83.3|Ortezza|link:463", -- Hunter only
+		[24751] = "The Basics: Hitting Things|1+ horde mage 24750|68.22 83.98|Soratha|link:463", -- Mage only
+		[31158] = "The Basics: Hitting Things|1+ horde monk 31159|65.79 83.91|Zabrax|link:463", -- Monk only
+		[24783] = "The Basics: Hitting Things|1+ horde priest 24782|67.66 83.02|Tunari|link:463", -- Priest only
+		[24771] = "The Basics: Hitting Things|1+ horde rogue 24770|65.9 83.25|Legati|link:463", -- Rogue only
+		[24759] = "The Basics: Hitting Things|1+ horde shaman 24758|64.94 84.21|Nekali|link:463", -- Shaman only
+		[26273] = "The Basics: Hitting Things|1+ horde warlock 26272|64.93 83.26|Voldreka|link:463", -- Warlock only
+		[24639] = "The Basics: Hitting Things|1+ horde warrior 24607|65.78 84.53|Nortet|link:463", -- Warrior only
+		[24767] = "A Rough Start|1+ horde druid 24765|67.67 84.65|Zen'tabra|link:463", -- Druid only
+		[24779] = "A Rough Start|1+ horde hunter 24777|67.09 83.3|Ortezza|link:463", -- Hunter only
+		[24753] = "A Rough Start|1+ horde mage 24751|68.22 83.98|Soratha|link:463", -- Mage only
+		[31160] = "A Rough Start|1+ horde monk 31158|65.79 83.91|Zabrax|link:463", -- Monk only
+		[24785] = "A Rough Start|1+ horde priest 24783|67.66 83.02|Tunari|link:463", -- Priest only
+		[24773] = "A Rough Start|1+ horde rogue 24771|65.9 83.25|Legati|link:463", -- Rogue only
+		[24761] = "A Rough Start|1+ horde shaman 24759|64.94 84.21|Nekali|link:463", -- Shaman only
+		[26275] = "A Rough Start|1+ horde warlock 26273|64.93 83.26|Voldreka|link:463", -- Warlock only
+		[24641] = "A Rough Start|1+ horde warrior 24639|65.78 84.53|Nortet|link:463", -- Warrior only
+		[24768] = "Proving Pit|1+ horde druid 24767|67.67 84.65|Zen'tabra|link:463", -- Druid only
+		[24780] = "Proving Pit|1+ horde hunter 24779|67.09 83.3|Ortezza|link:463", -- Hunter only
+		[24754] = "Proving Pit|1+ horde mage 24753|68.22 83.98|Soratha|link:463", -- Mage only
+		[31161] = "Proving Pit|1+ horde monk 31160|65.79 83.91|Zabrax|link:463", -- Monk only
+		[24786] = "Proving Pit|1+ horde priest 24785|67.66 83.02|Tunari|link:463", -- Priest only
+		[24774] = "Proving Pit|1+ horde rogue 24773|65.9 83.25|Legati|link:463", -- Rogue only
+		[24762] = "Proving Pit|1+ horde shaman 24761|64.94 84.21|Nekali|link:463", -- Shaman only
+		[26276] = "Proving Pit|1+ horde warlock 26275|64.93 83.26|Voldreka|link:463", -- Warlock only
+		[24642] = "Proving Pit|1+ horde warrior 24641|65.78 84.53|Nortet|link:463", -- Warrior only
+		[24769] = "More Than Expected|1+ horde druid 24768|67.67 84.65|Zen'tabra|link:463", -- Druid only
+		[24781] = "More Than Expected|1+ horde hunter 24780|67.09 83.3|Ortezza|link:463", -- Hunter only
+		[24755] = "More Than Expected|1+ horde mage 24754|68.22 83.98|Soratha|link:463", -- Mage only
+		[31163] = "More Than Expected|1+ horde monk 31161|65.79 83.91|Zabrax|link:463", -- Monk only
+		[24787] = "More Than Expected|1+ horde priest 24786|67.66 83.02|Tunari|link:463", -- Priest only
+		[24775] = "More Than Expected|1+ horde rogue 24774|65.9 83.25|Legati|link:463", -- Rogue only
+		[24763] = "More Than Expected|1+ horde shaman 24762|64.94 84.21|Nekali|link:463", -- Shaman only
+		[26277] = "More Than Expected|1+ horde warlock 26276|64.93 83.26|Voldreka|link:463", -- Warlock only
+		[24643] = "More Than Expected|1+ horde warrior 24642|65.78 84.53|Nortet|link:463", -- Warrior only
+		[25037] = "Crab Fishin'|1+ horde 26277,24781,31163,24763,24755,24775,24787,24643,24769|68.51 87.68|Tora'jin|link:463",
+		[25064] = "Moraya|1+ horde 26277,24781,31163,24763,24755,24775,24787,24643,24769|68.86 88.69|Vol'jin|link:463",
+		[24622] = "A Troll's Truest Companion|1+ horde 25064|67.25 87.95|Moraya|link:463",
+		[24623] = "Saving the Young|1+ horde 24622|63.4 95.27|Kijara|link:463",
+		[24624] = "Mercy for the Lost|1+ horde 24622|63.45 95.23|Tegashi|link:463",
+		[24625] = "Consort of the Sea Witch|1+ horde 24622|63.45 95.23|Tegashi|link:463",
+		[24626] = "Young and Vicious|1+ horde 24623 24624 24625|63.4 95.27|Kijara|link:463",
+		[25035] = "Breaking the Line|1+ horde 24626|67.97 89.03|Tortunga|link:463",
+		[24812] = "No More Mercy|1+ horde 25035|67.96 74.07|Morakki|link:463",
+		[24813] = "Territorial Fetish|1+ horde 25035|67.96 74.07|Morakki|link:463",
+		[24814] = "An Ancient Enemy|1+ horde 24812 24813|67.96 74.07|Morakki|link:463",
+		[25073] = "Sen'jin Village|1+ horde 24814 -25167|68.86 88.69|Vol'jin|link:463", -- Breadcrumb for 25167
 
 		-- Sen'jin Village
-		[25167] = "Breaking the Chain|1+ horde ~25133 ~25073|55.95 74.72|Master Gadrin",
+		[25167] = "Breaking the Chain|1+ horde ~25133 ~25073|55.95 74.72|Master Gadrin", -- Invalidates breadcrumb 25133
 		[25170] = "Cleaning Up the Coastline|1+ horde|55.74 75.36|Bom'bay",
 
 		-- Razor Hill
