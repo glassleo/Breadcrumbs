@@ -3668,9 +3668,78 @@ Data.Quests = {
 		[51443] = "Battle for Azeroth: Mission Statement|10+ horde -60361 -59926|49.41 76.6|Warchief's Herald", -- 60361 is the Exile's Reach version
 	},
 
+	-- Valley of Trials
+	[461] = {
+		[25152] = "Your Place In The World|1+ horde|45.2 68.39|Kaltunk",
+		[25126] = "Cutting Teeth|1+ horde 25152|44.93 66.41|Gornek",
+		[25136] = "Galgar's Cactus Apple Surprise|1+ horde 25126|42.97 62.4|Galgar",
+		[25172] = "Invaders in Our Home|1+ horde 25126|44.93 66.41|Gornek",
+		[25127] = "Sting of the Scorpid|1+ horde 25172|44.93 66.41|Gornek",
+		[25128] = "Hana'zua|1+ horde 25127 -25129|41.71 70|Canaga Earthcaller", -- Breadcrumb for 25129
+		[25129] = "Sarkoth|1+ horde ~25128|34.61 44.21|Hana'zua", -- Invalidates breadcrumb 25128
+		[25130] = "Back to the Den|1+ horde 25129|34.61 44.21|Hana'zua",
+		[25131] = "Vile Familiars|1+ horde 25127|45.81 63.43|Zureetha Fargaze",
+		[37446] = "Lazy Peons|1+ horde 25172|46.17 63.28|Foreman Thazz'ril",
+		[25135] = "Thazz'ril's Pick|1+ horde 25131 37446|46.17 63.28|Foreman Thazz'ril",
+		[25132] = "Burning Blade Medallion|1+ horde 25131 37446|45.81 63.43|Zureetha Fargaze",
+		[25133] = "Report to Sen'jin Village|1+ horde 25132|45.81 63.43|Zureetha Fargaze", -- Breadcrumb for 25167
+	},
+
+	-- Echo Isles
+	[463] = {
+		-- Death Knights, Demon Hunters, Paladins and Evokers are all out of luck
+		[24764] = "The Rise of the Darkspear|1+ horde druid|42.83 53.43|Jin'thala",
+		[24776] = "The Rise of the Darkspear|1+ horde hunter|42.83 53.43|Jin'thala",
+		[24750] = "The Rise of the Darkspear|1+ horde mage|42.83 53.43|Jin'thala",
+		[31159] = "The Rise of the Darkspear|1+ horde monk|42.83 53.43|Jin'thala",
+		[24782] = "The Rise of the Darkspear|1+ horde priest|42.83 53.43|Jin'thala",
+		[24770] = "The Rise of the Darkspear|1+ horde rogue|42.83 53.43|Jin'thala",
+		[24758] = "The Rise of the Darkspear|1+ horde shaman|42.83 53.43|Jin'thala",
+		[26272] = "The Rise of the Darkspear|1+ horde warlock|42.83 53.43|Jin'thala",
+		[24607] = "The Rise of the Darkspear|1+ horde warrior|42.83 53.43|Jin'thala",
+		[26273] = "The Basics: Hitting Things|1+ horde warlock 26272|50.04 49.95|Voldreka",
+	},
+
 	-- Durotar
 	[1] = {
-		-- Legion Intro
+		-- Valley of Trials
+		[25152] = "Your Place In The World|1+ horde|43.3 68.76|Kaltunk|link:461",
+		[25126] = "Cutting Teeth|1+ horde 25152|43.23 68.26|Gornek|link:461",
+		[25136] = "Galgar's Cactus Apple Surprise|1+ horde 25126|42.73 67.23|Galgar|link:461",
+		[25172] = "Invaders in Our Home|1+ horde 25126|43.23 68.26|Gornek|link:461",
+		[25127] = "Sting of the Scorpid|1+ horde 25172|43.23 68.26|Gornek|link:461",
+		[25128] = "Hana'zua|1+ horde 25127 -25129|42.41 69.17|Canaga Earthcaller|link:461", -- Breadcrumb for 25129
+		[25129] = "Sarkoth|1+ horde ~25128|40.59 62.59|Hana'zua|link:461", -- Invalidates breadcrumb 25128
+		[25130] = "Back to the Den|1+ horde 25129|40.59 62.59|Hana'zua|link:461",
+		[25131] = "Vile Familiars|1+ horde 25127|43.45 67.5|Zureetha Fargaze|link:461",
+		[37446] = "Lazy Peons|1+ horde 25172|43.55 67.46|Foreman Thazz'ril|link:461",
+		[25135] = "Thazz'ril's Pick|1+ horde 25131 37446|43.55 67.46|Foreman Thazz'ril|link:461",
+		[25132] = "Burning Blade Medallion|1+ horde 25131 37446|43.45 67.5|Zureetha Fargaze|link:461",
+		[25133] = "Report to Sen'jin Village|1+ horde 25132|43.45 67.5|Zureetha Fargaze|link:461",
+
+		-- Echo Isles
+		[24764] = "The Rise of the Darkspear|1+ horde druid|62.46 84.45|Jin'thala|link:463",
+		[24776] = "The Rise of the Darkspear|1+ horde hunter|62.46 84.45|Jin'thala|link:463",
+		[24750] = "The Rise of the Darkspear|1+ horde mage|62.46 84.45|Jin'thala|link:463",
+		[31159] = "The Rise of the Darkspear|1+ horde monk|62.46 84.45|Jin'thala|link:463",
+		[24782] = "The Rise of the Darkspear|1+ horde priest|62.46 84.45|Jin'thala|link:463",
+		[24770] = "The Rise of the Darkspear|1+ horde rogue|62.46 84.45|Jin'thala|link:463",
+		[24758] = "The Rise of the Darkspear|1+ horde shaman|62.46 84.45|Jin'thala|link:463",
+		[26272] = "The Rise of the Darkspear|1+ horde warlock|62.46 84.45|Jin'thala|link:463",
+		[24607] = "The Rise of the Darkspear|1+ horde warrior|62.46 84.45|Jin'thala|link:463",
+		[26273] = "The Basics: Hitting Things|1+ horde warlock 26272|64.93 83.26|Voldreka|link:463",
+
+		-- Sen'jin Village
+		[25167] = "Breaking the Chain|1+ horde ~25133 ~25073|55.95 74.72|Master Gadrin",
+		[25170] = "Cleaning Up the Coastline|1+ horde|55.74 75.36|Bom'bay",
+
+		-- Razor Hill
+
+		-- Southfury Watershed
+
+		-- The Dranosh'ar Blockade
+
+		-- Legion
 		[44281] = "To Be Prepared|10+ -44663 43926 horde|46.01 13.78|Holgar Stormaxe",
 		[40518] = "The Battle for Broken Shore|10+ -44663 44281 horde|55.65 11.04|Stone Guard Mukar",
 
