@@ -3364,18 +3364,18 @@ Data.Quests = {
 
 	-- Darnassus
 	[89] = {
-		-- Dolanaar
+		-- Teldrassil
 		[6342]  = "An Unexpected Gift|1+ alliance nightelf 6341|36.08 53.49|Sister Aquinne", -- Night Elf only
 		[6343]  = "Return to Nyoma|1+ alliance nightelf 6342|36.62 47.85|Leora", -- Night Elf only
-
-		-- Battle for Azeroth - A Nation Divided
-		[46727] = "Tides of War|10+ alliance -58983 -56775|45.1 50.13|Hero's Herald", -- 58983 is Exile's Reach version - 56775 doesn't show for Exile's Reach players
 
 		-- The Howling Oak
 		[26385] = "Breaking Waves of Change|5+ alliance worgen 28517 -26383 -13518 -28490|48.13 14.45|Genn Greymane", -- Worgen only
 
 		-- Darkshore
 		[26383] = "Breaking Waves of Change|5+ alliance -26385 -13518 -28490|43.91 76.16|Sentinel Cordressa Briarbow", -- Breadcrumb for 13518
+
+		-- Battle for Azeroth - A Nation Divided
+		[46727] = "Tides of War|10+ alliance -58983 -56775|45.1 50.13|Hero's Herald", -- 58983 is Exile's Reach version - 56775 doesn't show for Exile's Reach players
 	},
 
 	-- Shadowglen
@@ -3392,8 +3392,6 @@ Data.Quests = {
 		[28729] = "Teldrassil: Crown of Azeroth|1+ alliance 28728|42.51 50.51|Dentaria Silverglade",
 		[28730] = "Precious Waters|1+ alliance 28729|42.51 50.51|Dentaria Silverglade",
 		[28731] = "Teldrassil: Passing Awareness|1+ alliance 28730|47.21 55.94|Tenaron Stormgrip",
-
-		-- Dolanaar
 		[2159]  = "Dolanaar Delivery|1+ alliance|54.56 84.72|Porthannius",
 	},
 
@@ -3419,9 +3417,9 @@ Data.Quests = {
 		[28729] = "Teldrassil: Crown of Azeroth|1+ alliance 28728|57.19 33.26|Dentaria Silverglade|link:460",
 		[28730] = "Precious Waters|1+ alliance 28729|57.19 33.26|Dentaria Silverglade|link:460",
 		[28731] = "Teldrassil: Passing Awareness|1+ alliance 28730|58.35 34.6|Tenaron Stormgrip|link:460",
+		[2159]  = "Dolanaar Delivery|1+ alliance|60.17 41.71|Porthannius",
 
 		-- Dolanaar
-		[2159]  = "Dolanaar Delivery|1+ alliance|60.17 41.71|Porthannius",
 		[929]   = "Teldrassil: The Refusal of the Aspects|1+ alliance 28731|55.82 53.89|Corithras Moonrage",
 		[6344]  = "Reminders of Home|1+ alliance nightelf|56.73 53.51|Nyoma", -- Night Elf only
 		[6341]  = "To Darnassus|1+ alliance nightelf 6344|55.47 50.42|Nyoma", -- Night Elf only
@@ -3652,7 +3650,6 @@ Data.Quests = {
 
 	-- Stillpine Hold
 	[99] = {
-		-- Stillpine Hold
 		[9566] = "Blood Crystals|1+ 9565 alliance|65.18 30.89|Blood Crystal",
 	},
 
@@ -3661,8 +3658,14 @@ Data.Quests = {
 
 	-- Orgrimmar
 	[85] = {
-		-- Legion Intro
+		[66253] = "Stolen Shipments|1+ horde|48.54 75.91|Zaa'je",
+		[66323] = "Idling Pie|1+ horde 66253|48.54 75.91|Zaa'je",
+
+		-- Legion
 		[43926] = "Legion: The Legion Returns|10+ -44663 horde|49.67 76.46|Warchief's Command Board",
+
+		-- Battle for Azeroth - The Stormwind Extraction
+		[51443] = "Battle for Azeroth: Mission Statement|10+ horde -60361 -59926|49.41 76.6|Warchief's Herald", -- 60361 is the Exile's Reach version
 	},
 
 	-- Durotar
@@ -3677,6 +3680,92 @@ Data.Quests = {
 
 		-- Death Knight - The Four Horsemen
 		[42484] = "The Firstborn Rises|10+ deathknight 42449|47.32 17.67|Thassarian|artifact",
+	},
+
+
+	--[[ Mulgore ]]--
+
+	-- Thunder Bluff
+	[88] = {
+		-- Mulgore
+		[6363]  = "Tal the Wind Rider Master|1+ horde tauren 6362|45.74 55.85|Ahanu", -- Tauren only
+		[6364]  = "Return to Varg|1+ horde tauren 6363|47.02 49.6|Tal", -- Tauren only
+		[24540] = "War Dance|1+ horde tauren 24524 ~24550|60.26 51.68|Baine Bloodhoof", -- Tauren only; invalidates breadcrumb 24550
+		[26397] = "Walk With The Earth Mother|1+ horde tauren 24540|60.26 51.68|Baine Bloodhoof", -- Tauren only
+
+		-- Silverpine Forest
+		[264]   = "Until Death Do Us Part|5+ horde|28.91 26|Clarice Foster",
+
+		-- Ragefire Chasm
+		[31036] = "Enemies Below|7+ horde -31034 -31037|60.26 51.68|Baine Bloodhoof",
+
+		-- Battle for Azeroth - The Stormwind Extraction
+		[51443] = "Battle for Azeroth: Mission Statement|10+ horde -60361 -59926|42.41 58.31|Warchief's Herald", -- 60361 is the Exile's Reach version
+	},
+
+	-- Camp Narache
+	[462] = {
+		[14449] = "The First Step|1+ horde|27.73 28.28|Chief Hawkwind",
+		[14452] = "Rite of Strength|1+ horde 14449|39.45 37.25|Grull Hawkwind",
+		[24852] = "Our Tribe, Imprisoned|1+ horde 14452|39.45 37.25|Grull Hawkwind",
+		[14458] = "Go to Adana|1+ horde 24852|39.45 37.25|Grull Hawkwind",
+		[14456] = "Rite of Courage|1+ horde 14458|30.92 50.6|Adana Thunderhorn",
+		[14455] = "Stop the Thorncallers|1+ horde 14458|30.92 50.6|Adana Thunderhorn",
+		[14459] = "The Battleboars|1+ horde 14456 14455|30.92 50.6|Adana Thunderhorn",
+		[14461] = "Feed of Evil|1+ horde 14456 14455|30.92 50.6|Adana Thunderhorn",
+		[14460] = "Rite of Honor|1+ horde 14459 14461|30.92 50.6|Adana Thunderhorn",
+		[24861] = "Last Rites, First Rites|1+ horde 14460|27.73 28.28|Chief Hawkwind",
+		[23733] = "Rites of the Earthmother|1+ horde 24861|27.73 28.28|Chief Hawkwind",
+		[24215] = "Rite of the Winds|1+ horde 23733|15.63 30.27|Dyami Windsoar",
+	},
+
+	-- Mulgore
+	[7] = {
+		-- Camp Narache
+		[14449] = "The First Step|1+ horde|45.15 75.45|Chief Hawkwind|link:462",
+		[14452] = "Rite of Strength|1+ horde 14449|48.95 78.35|Grull Hawkwind|link:462",
+		[24852] = "Our Tribe, Imprisoned|1+ horde 14452|48.95 78.35|Grull Hawkwind|link:462",
+		[14458] = "Go to Adana|1+ horde 24852|48.95 78.35|Grull Hawkwind|link:462",
+		[14456] = "Rite of Courage|1+ horde 14458|46.19 82.68|Adana Thunderhorn|link:462",
+		[14455] = "Stop the Thorncallers|1+ horde 14458|46.19 82.68|Adana Thunderhorn|link:462",
+		[14459] = "The Battleboars|1+ horde 14456 14455|46.19 82.68|Adana Thunderhorn|link:462",
+		[14461] = "Feed of Evil|1+ horde 14456 14455|46.19 82.68|Adana Thunderhorn|link:462",
+		[14460] = "Rite of Honor|1+ horde 14459 14461|46.19 82.68|Adana Thunderhorn|link:462",
+		[24861] = "Last Rites, First Rites|1+ horde 14460|45.15 75.45|Chief Hawkwind|link:462",
+		[23733] = "Rites of the Earthmother|1+ horde 24861|45.15 75.45|Chief Hawkwind|link:462",
+		[24215] = "Rite of the Winds|1+ horde 23733|41.23 76.09|Dyami Windsoar|link:462",
+
+		-- Bloodhoof Village
+		[6361]  = "A Bundle of Hides|1+ horde tauren|46.06 58.19|Varg Windwhisper", -- Tauren only
+		[6362]  = "Ride to Thunder Bluff|1+ horde tauren 6361|47.44 58.64|Tak", -- Tauren only
+		[14438] = "Sharing the Land|1+ horde|47.66 59.59|Ahmo Thunderhorn",
+		[14491] = "The Restless Earth|1+ horde 14438|47.66 59.59|Ahmo Thunderhorn",
+		[743]   = "Dangers of the Windfury|1+ horde|47.51 61.32|Ruul Eagletalon",
+		[761]   = "Swoop Hunting|1+ horde|48.79 58.79|Harken Windtotem",
+		[26188] = "Mazzranache|1+ horde|47.16 56.66|Maur Raincaller",
+		[11129] = "Kyle's Gone Missing!|1+ horde|48.34 53.09|Ahab Wheathoof",
+		[24459] = "Morin Cloudstalker|1+ horde -749|47.66 59.59|Ahmo Thunderhorn", -- Breadcrumb for 749
+		[20440] = "Poison Water|1+ horde tauren|48.62 59.8|Mull Thunderhorn", -- Tauren only
+		[24440] = "Winterhoof Cleansing|1+ horde tauren 20440|48.62 59.8|Mull Thunderhorn", -- Tauren only
+		[24441] = "Thunderhorn Totem|1+ horde tauren 24440|48.62 59.8|Mull Thunderhorn", -- Tauren only
+		[24456] = "Thunderhorn Cleansing|1+ horde tauren 24441|48.62 59.8|Mull Thunderhorn", -- Tauren only
+		[24457] = "Rite of Vision|1+ horde tauren 24456|48.62 59.8|Mull Thunderhorn", -- Tauren only
+		[20441] = "Rite of Vision|1+ horde tauren 24457|47.89 57.11|Zarlman Two-Moons", -- Tauren only
+
+		-- The Ravaged Caravan
+		[749]   = "The Ravaged Caravan|1+ horde ~24459|57.05 60.43|Morin Cloudstalker", -- Invalidates breadcrumb 24459
+		[751]   = "The Ravaged Caravan|1+ horde 749|53.53 48.28|Sealed Supply Crate",
+		[26179] = "The Venture Co.|1+ horde 751|57.05 60.43|Morin Cloudstalker",
+		[26180] = "Supervisor Fizsprocket|1+ horde 751|57.05 60.43|Morin Cloudstalker",
+
+		-- Camp Sungraze
+		[833]   = "A Sacred Burial|1+ horde|49.52 17.1|Lorekeeper Raintotem",
+		[744]   = "Preparation for Ceremony|1+ horde|49.59 17.59|Eyahn Eagletalon",
+		[770]   = "The Demon Scarred Cloak|1+ horde|43.28 14.84|{134358} [Demon Scarred Cloak]||Drops from Ghost Howl who roams the area",
+		[773]   = "Rite of Wisdom|1+ horde tauren 20441|49.52 17.1|Lorekeeper Raintotem", -- Tauren only
+		[24523] = "Wildmane Totem|1+ horde tauren 24456|49.37 17.33|Una Wildmane", -- Tauren only
+		[24524] = "Wildmane Cleansing|1+ horde tauren 24523|49.37 17.33|Una Wildmane", -- Tauren only
+		[24550] = "Journey into Thunder Bluff|1+ horde tauren 24524 -24540|49.37 17.33|Una Wildmane", -- Tauren only; breadcrumb for 24540
 	},
 
 
@@ -4048,7 +4137,6 @@ Data.Quests = {
 
 	-- Stormwind City
 	[84] = {
-		-- Stormwind City
 		[332]   = "Wine Shop Advert|1+ alliance|63.77 73.59|Renato Gallina",
 		[333]   = "Harlan Needs a Resupply|1+ alliance|62.32 67.94|Harlan Bagley",
 		[334]   = "Package for Thurman|1+ alliance|58.09 67.49|Rema Schneider",
