@@ -34,7 +34,7 @@ If you'd like to help, please [get in touch](mailto:hello@leo.glass)!
 
 So far, the following zones are entirely complete or in a near-complete state:
 
-Shadowlands
+### Shadowlands
 - Zereth Mortis and the Secrets of the First Ones campaign
 - Oribos
 - Bastion (Threads of Fate only)
@@ -42,19 +42,19 @@ Shadowlands
 - Ardenweald (Threads of Fate only)
 - Revendreth (Threads of Fate only)
 
-Legion
+### Legion
 - Azsuna
 - Val'sharah
 - Highmountain
 - Stormheim
 - Broken Shore
 
-Eastern Kingdoms
+### Eastern Kingdoms
 - Elwynn Forest
 - Dun Morogh
 - Loch Modan
 
-Kalimdor
+### Kalimdor
 - Teldrassil
 - Azuremyst Isle
 - Mulgore
