@@ -44,8 +44,9 @@ So far, the following zones are entirely complete or in a near-complete state:
 - Highmountain
 - Stormheim
 - Broken Shore
-- Elwynn Forest and Northshire
-- Dun Morogh, Coldridge Valley and New Tinkertown
+- Elwynn Forest
+- Dun Morogh
 - Loch Modan
-- Teldrassil and Shadowglen
-- Azuremyst Isle and Ammen Vale
+- Teldrassil
+- Azuremyst Isle
+- Mulgore
