@@ -62,4 +62,5 @@ So far, the following zones are entirely complete or in a near-complete state:
 ### Kalimdor
 - Teldrassil
 - Azuremyst Isle
+- Durotar
 - Mulgore
