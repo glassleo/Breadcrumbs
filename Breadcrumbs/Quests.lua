@@ -3503,7 +3503,7 @@ Data.Quests = {
 
 	-- The Exodar
 	[103] = {
-		-- Azure Watch
+		-- Azuremyst Isle
 		[9605] = "Hippogryph Master Stephanos|1+ 9604 draenei alliance|57.01 50.09|Nurguni", -- Draenei only
 		[9606] = "Return to Caregiver Chellan|1+ 9605 draenei alliance|54.49 36.3|Stephanos", -- Draenei only
 
@@ -3632,17 +3632,33 @@ Data.Quests = {
 		[66323] = "Idling Pie|1+ horde 66253|48.54 75.91|Zaa'je",
 		[29401] = "Blown Away|10+ horde|48.13 46.85|Jaga",
 
+		-- Durotar
+		[6385]  = "Doras the Wind Rider Master|1+ horde orc,maghar,troll 6384|53.64 78.77|Innkeeper Gryshka", --Orc/Mag'har/Troll only
+		[6386]  = "Return to Razor Hill|1+ horde orc,maghar,troll 6385|49.63 59.2|Doras", --Orc/Mag'har/Troll only
+
+		-- Northern Barrens
+		[25264] = "Ak'Zeloth|5+ horde 25263|49.91 59.15|Arnak Fireblade|down link:86",
+
 		-- Azshara
 		[25275] = "Report to the Labor Captain|1+ horde goblin -28496 -14129|49.21 72.27|Eitrigg", -- Goblin only breadcrumb for 14129, mutually exclusive with 28496
 
 		-- Ragefire Chasm
 		[31034] = "Enemies Below|7+ horde -31036 -31037|49.21 72.27|Eitrigg", -- Mutually exclusive with 31036 and 31037
 
+		-- Fishing
+		--[6608]  = "You Too Good.|15+ horde fishing:1:225|66.46 41.93|Lumak", -- Requires 225 skill in Classic Fishing
+
 		-- Legion
 		[43926] = "Legion: The Legion Returns|10+ -44663 horde|49.67 76.46|Warchief's Command Board",
 
 		-- Battle for Azeroth - The Stormwind Extraction
 		[51443] = "Battle for Azeroth: Mission Statement|10+ horde -60361 -59926|49.41 76.6|Warchief's Herald", -- 60361 is the Exile's Reach version
+	},
+
+	-- Cleft of Shadow, Orgrimmar
+	[86] = {
+		-- Northern Barrens
+		[25264] = "Ak'Zeloth|5+ horde 25263|58.15 54.47|Arnak Fireblade",
 	},
 
 	-- Valley of Trials
@@ -3802,27 +3818,54 @@ Data.Quests = {
 		[25073] = "Sen'jin Village|1+ horde 24814 -25167|68.86 88.69|Vol'jin|link:463", -- Breadcrumb for 25167
 
 		-- Sen'jin Village
-		[25167] = "Breaking the Chain|1+ horde ~25133 ~25073|55.95 74.72|Master Gadrin", -- Invalidates breadcrumb 25133
 		[25170] = "Cleaning Up the Coastline|1+ horde|55.74 75.36|Bom'bay",
+		[25165] = "Never Trust a Big Barb and a Smile|1+ horde 25170|55.74 75.36|Bom'bay",
+		[25167] = "Breaking the Chain|1+ horde ~25133 ~25073|55.95 74.72|Master Gadrin", -- Invalidates breadcrumb 25133
+		[25168] = "Purge the Valley|1+ horde 25167|55.95 74.72|Master Gadrin",
+		[25169] = "The War of Northwatch Aggression|1+ horde 25167|55.43 75.1|Lar Prowltusk",
+		[25171] = "Riding On|1+ horde 25168 25169|55.95 74.72|Master Gadrin",
 
 		-- Razor Hill
+		[6365]  = "Meats to Orgrimmar|1+ horde orc,maghar,troll|50.74 42.83|Grimtak", --Orc/Mag'har/Troll only
+		[6384]  = "Ride to Orgrimmar|1+ horde orc,maghar,troll 6365|53.09 43.58|Burok", --Orc/Mag'har/Troll only
+		[25173] = "From Bad to Worse|1+ horde 25171|51.94 43.51|Gar'Thok",
+		[25177] = "Storming the Beaches|1+ horde 25173|51.94 43.51|Gar'Thok",
+		[25179] = "Loss Reduction|1+ horde 25173|57.91 45.14|Injured Razor Hill Grunt",
+		[25176] = "Exploiting the Situation|1+ horde 25171|53.1 43.14|Gail Nozzywig",
+		[25178] = "Shipwreck Searching|1+ horde 25173 25176|53.1 43.14|Gail Nozzywig",
+		[25227] = "Thonk|1+ horde 25178 -25187|53.1 43.14|Gail Nozzywig", -- Breadcrumb for 25187
 		[25232] = "The Burning Blade|1+ horde|52.25 43.15|Orgnil Soulscar",
+		[25196] = "The Dranosh'ar Blockade|1+ horde 25232|52.25 43.15|Orgnil Soulscar",
 		[840]   = "Conscript of the Horde|5+ horde|50.85 43.59|Takrin Pathseeker",
 
 		-- Southfury Watershed
+		[25187] = "Lost in the Floods|1+ horde ~25227|49.58 40.17|Thonk", -- Invalidates breadcrumb 25227
+		[25188] = "Watershed Patrol|1+ horde 25187|49.58 40.17|Thonk",
+		[25190] = "Raggaran's Rage|1+ horde +25188|42.7 49.9|Raggaran",
+		[25192] = "Raggaran's Fury|1+ horde 25190 +25188|42.7 49.9|Raggaran",
+		[25193] = "Lost But Not Forgotten|1+ horde +25188|43.38 30.63|Misha Tor'kren",
+		[25194] = "Unbidden Visitors|1+ horde +25188|35.85 41.38|Zen'Taji",
+		[25195] = "That's the End of That Raptor|1+ horde 25194 +25188|35.85 41.38|Zen'Taji",
 
 		-- Drygulch Ravine
 		[834]   = "Winds in the Desert|1+ horde|46.38 22.93|Rezlak",
 		[835]   = "Securing the Lines|1+ horde|46.38 22.93|Rezlak",
 
 		-- The Dranosh'ar Blockade
+		[25260] = "Fizzled|1+ horde 25196|45 14.77|Gor the Enforcer",
+		[25261] = "Margoz|1+ horde 25260|45 14.77|Gor the Enforcer",
 		[25236] = "Thunder Down Under|1+ horde|45 14.77|Gor the Enforcer",
 		[25205] = "The Wolf and the Kodo|1+ horde|44.9 14.83|Shin Stonepillar",
 		[25206] = "Ignoring the Warnings|1+ horde 25205|45 14.77|Gor the Enforcer",
 		[25648] = "Beyond Durotar|1+ horde 25236 25206 -28496|45 14.77|Gor the Enforcer", -- Mutually exclusive with 28496
 
 		-- Deadeye Shore
+		[25262] = "Skull Rock|1+ horde 25261|56.41 20.04|Margoz",
+		[25263] = "Arnak Fireblade|1+ horde 25262|56.41 20.04|Margoz",
 		[25256] = "Sent for Help|1+ horde|56.38 20.22|Vek'nag",
+		[25257] = "Ghislania|1+ horde 25256|58.83 23.17|Spiketooth",
+		[25258] = "Griswold Hanniston|1+ horde 25256|58.83 23.17|Spiketooth",
+		[25259] = "Gaur Icehorn|1+ horde 25256|58.83 23.17|Spiketooth",
 
 		-- Legion
 		[44281] = "To Be Prepared|10+ -44663 43926 horde|46.01 13.78|Holgar Stormaxe",
@@ -3928,6 +3971,8 @@ Data.Quests = {
 	[10] = {
 		-- Far Watch Post
 		[871]   = "In Defense of Far Watch|5+ horde ~840|67.67 39.39|Kargal Battlescar",
+
+		-- The Crossroads
 	},
 
 
