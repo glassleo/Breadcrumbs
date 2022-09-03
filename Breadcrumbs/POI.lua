@@ -796,7 +796,8 @@ Data.POI = {
 	[85] = {
 		-- Portal
 		"-:large|The Western Earthshrine|horde|50.4 37.3||Cataclysm Portals",
-		"POI/Portal|Portal to Undercity|49- horde|50.75 55.59",
+		"POI/Portal|Portal to Undercity|art:18:19 horde|50.75 55.59",
+		"POI/Portal|Portal to Tirisfal Glades|art:18:1136 horde|50.75 55.59",
 		"POI/Portal|Portal to Tirisfal Glades|50+ horde|50.75 55.59",
 		"POI/Portal|Portal to Tol Barad|30+ horde|47.39 39.26",
 
@@ -950,11 +951,14 @@ Data.POI = {
 
 	-- Tirisfal Glades
 	[18] = {
-		-- Art: 19 (Cataclysm), 1136 (BfA)
+		-- art:19 - Cataclysm
+		-- art:1136 - Battle for Azeroth
 
 		-- Portal
-		"POI/Portal|Portals to Orgrimmar and Stranglethorn Vale|horde art:19|61.2 58.6",
-		"POI/Portal|Portal to Howling Fjord|10+ horde art:19|59.09 58.9",
+		--"POI/Portal|Portals to Orgrimmar and Stranglethorn Vale|horde art:19|61.2 58.6",
+		"POI/Portal:small|Portal to Orgrimmar|horde art:19|60.74 58.68",
+		"POI/Portal:small|Portal to Stranglethorn Vale|horde art:19|61.88 59.01",
+		"POI/Portal:small|Portal to Howling Fjord|10+ horde art:19|59.09 58.9",
 	},
 
 
