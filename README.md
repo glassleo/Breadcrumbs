@@ -55,6 +55,7 @@ So far, the following zones are entirely complete or in a near-complete state:
 - Broken Shore
 
 ### Eastern Kingdoms
+- Tirisfal Glades
 - Elwynn Forest
 - Dun Morogh
 - Loch Modan
