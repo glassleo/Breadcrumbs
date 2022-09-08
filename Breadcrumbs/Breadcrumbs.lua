@@ -165,6 +165,7 @@ function Breadcrumbs:FormatTooltip(text, flags)
 	text = string.gsub(text, "%[hostile%]", "|cffff0000") -- hostile red
 	text = string.gsub(text, "%[red%]", "|cffff0000") -- red
 	text = string.gsub(text, "%[poor%]", "|cff9d9d9d") -- poor grey
+	text = string.gsub(text, "%[dead%]", "|cff999999") -- dead grey
 	text = string.gsub(text, "%[uncommon%]", "|cff1eff00") -- uncommon green
 	text = string.gsub(text, "%[rare%]", "|cff0070dd") -- rare blue
 	text = string.gsub(text, "%[epic%]", "|cffa335ee") -- epic purple
@@ -1134,6 +1135,8 @@ function Breadcrumbs:CheckQuest(map, quest, datastring)
 	if prof1 then prof1 = strlower(GetProfessionInfo(prof1)) end -- This won't work on non-English clients
 	if prof2 then prof2 = strlower(GetProfessionInfo(prof2)) end
 	local flying = IsSpellKnown(34090) or IsSpellKnown(34091) or IsSpellKnown(90265) and true or false
+	local aldor = (select(3, GetFactionInfoByID(932))) or 0
+	local scryer = (select(3, GetFactionInfoByID(934))) or 0
 
 	local pass = true
 	for _, v in ipairs(data) do
@@ -1206,6 +1209,8 @@ function Breadcrumbs:CheckQuest(map, quest, datastring)
 					if v == "garrison:2" and garrison == 2 then pass = true end
 					if v == "garrison:3" and garrison == 3 then pass = true end
 					if v == "flying" and flying then pass = true end
+					if v == "aldor" and aldor >= 4 then pass = true end
+					if v == "scryer" and scryer >= 4 then pass = true end
 					if archaeology and v == "archaeology" then pass = true end
 					if fishing and v == "fishing" then pass = true end
 					if cooking and v == "cooking" then pass = true end
@@ -1255,6 +1260,8 @@ function Breadcrumbs:CheckQuest(map, quest, datastring)
 						if w == "garrison:2" and garrison == 2 then pass = false end
 						if w == "garrison:3" and garrison == 3 then pass = false end
 						if flying and w == "flying" then pass = false end
+						if aldor >= 4 and w == "aldor" then pass = false end
+						if scryer >= 4 and w == "scryer" then pass = false end
 						if archaeology and w == "archaeology" then pass = false end
 						if fishing and w == "fishing" then pass = false end
 						if cooking and w == "cooking" then pass = false end
@@ -1304,6 +1311,9 @@ function Breadcrumbs:CheckPOI(map, datastring)
 	prof1, prof2, archaeology, fishing, cooking = GetProfessions()
 	if prof1 then prof1 = strlower(GetProfessionInfo(prof1)) end -- This won't work on non-English clients
 	if prof2 then prof2 = strlower(GetProfessionInfo(prof2)) end
+	local flying = IsSpellKnown(34090) or IsSpellKnown(34091) or IsSpellKnown(90265) and true or false
+	local aldor = (select(3, GetFactionInfoByID(932))) or 0
+	local scryer = (select(3, GetFactionInfoByID(934))) or 0
 
 	local pass = true
 	for _, v in ipairs(data) do
@@ -1379,6 +1389,9 @@ function Breadcrumbs:CheckPOI(map, datastring)
 					if v == "garrison:1" and garrison == 1 then pass = true end
 					if v == "garrison:2" and garrison == 2 then pass = true end
 					if v == "garrison:3" and garrison == 3 then pass = true end
+					if v == "flying" and flying then pass = true end
+					if v == "aldor" and aldor >= 4 then pass = true end
+					if v == "scryer" and scryer >= 4 then pass = true end
 					if archaeology and v == "archaeology" then pass = true end
 					if fishing and v == "fishing" then pass = true end
 					if cooking and v == "cooking" then pass = true end
@@ -1426,6 +1439,9 @@ function Breadcrumbs:CheckPOI(map, datastring)
 						if archaeology and w == "archaeology" then pass = false end
 						if fishing and w == "fishing" then pass = false end
 						if cooking and w == "cooking" then pass = false end
+						if flying and w == "flying" then pass = false end
+						if aldor >= 4 and w == "aldor" then pass = false end
+						if scryer >= 4 and w == "scryer" then pass = false end
 						if race == "scourge" and (w == "undead" or w == "forsaken") then pass = false end
 						if race == "highmountaintauren" and w == "highmountain" then pass = false end
 						if race == "darkirondwarf" and w == "darkiron" then pass = false end
