@@ -137,10 +137,17 @@ Data.Objectives = {
 
 	-- Teldrassil
 	[57] = {
+		-- The Shimmering Frond
 		[931] = {
 			"questturnin|59.94 59.77|The Shimmering Frond|[green]You will be able to get the follow-up quest [The Sprouted Fronds] if you turn in this quest here.]",
 			"services-icon-warning:super|43.9 44|[red]Warning]|[red]You might not want to turn in [The Shimmering Frond] here!]||\"Due to a bug, you will only be able to get the follow-up quest [The Sprouted Fronds] if you turn in the quest at Lake Al'ameth instead.\"",
 		},
+	},
+
+	-- Ban'ethil Barrow Den - Upper Den, Teldrassil
+	[60] = {
+		-- The Sleeping Druid
+		[2541] = "questturnin|41.25 83.72|The Sleeping Druid",
 	},
 }
 
