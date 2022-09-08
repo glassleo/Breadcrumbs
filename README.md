@@ -56,6 +56,7 @@ So far, the following zones are entirely complete or in a near-complete state:
 
 ### Eastern Kingdoms
 - Tirisfal Glades
+- Eversong Woods
 - Elwynn Forest
 - Dun Morogh
 - Loch Modan
