@@ -3504,118 +3504,120 @@ Data.Quests = {
 	-- The Exodar
 	[103] = {
 		-- Azuremyst Isle
-		[9605] = "Hippogryph Master Stephanos|1+ 9604 draenei alliance|57.01 50.09|Nurguni", -- Draenei only
-		[9606] = "Return to Caregiver Chellan|1+ 9605 draenei alliance|54.49 36.3|Stephanos", -- Draenei only
+		[9605]  = "Hippogryph Master Stephanos|1+ 9604 draenei alliance|57.01 50.09|Nurguni", -- Draenei only
+		[9606]  = "Return to Caregiver Chellan|1+ 9605 draenei alliance|54.49 36.3|Stephanos", -- Draenei only
 
 		-- Bloodmyst Isle
-		[9625] = "Elekks Are Serious Business|1+ 9623 -28559 alliance|81.51 51.46|Torallius the Pack Handler", -- Breadcrumb for Bloodmyst; mutually exclusive with Hero's Call 28559
+		[9625]  = "Elekks Are Serious Business|1+ 9623 -28559 alliance|81.51 51.46|Torallius the Pack Handler", -- Breadcrumb for Bloodmyst; mutually exclusive with Hero's Call 28559
 	},
 
 	-- Ammen Vale
 	[468] = {
-		[9279] = "You Survived!|1+ -9280 draenei alliance|61.16 29.5|Megelon", -- Draenei only
-		[9280] = "Replenishing the Healing Crystals|1+ 9279 draenei alliance|52.74 35.9|Proenitus", -- Draenei
-		[9369] = "Replenishing the Healing Crystals|1+ -draenei alliance|52.74 35.9|Proenitus", -- Other races
-		[9409] = "Urgent Delivery!|1+ 9280,9369 alliance|52.74 35.9|Proenitus",
-		[9283] = "Rescue the Survivors!|1+ 9409 draenei alliance|52.07 42.63|Zalduun", -- Draenei only
-		[9371] = "Botanist Taerix|1+ 9409 -10302 alliance|52.74 35.9|Proenitus", -- Breadcrumb for Volatile Mutations
+		[9279]  = "You Survived!|1+ -9280 draenei alliance|61.16 29.5|Megelon", -- Draenei only
+		[9280]  = "Replenishing the Healing Crystals|1+ 9279 draenei alliance|52.74 35.9|Proenitus", -- Draenei
+		[9369]  = "Replenishing the Healing Crystals|1+ -draenei alliance|52.74 35.9|Proenitus", -- Other races
+		[9409]  = "Urgent Delivery!|1+ 9280,9369 alliance|52.74 35.9|Proenitus",
+		[9283]  = "Rescue the Survivors!|1+ 9409 draenei alliance|52.07 42.63|Zalduun", -- Draenei only
+		[9371]  = "Botanist Taerix|1+ 9409 -10302 alliance|52.74 35.9|Proenitus", -- Breadcrumb for Volatile Mutations
 		[10302] = "Volatile Mutations|1+ 9280,9369 alliance|49.87 37.33|Botanist Taerix",
-		[9293] = "What Must Be Done...|1+ 10302 alliance|49.87 37.33|Botanist Taerix",
-		[9294] = "Healing the Lake|1+ 9293 alliance|49.87 37.33|Botanist Taerix",
+		[9293]  = "What Must Be Done...|1+ 10302 alliance|49.87 37.33|Botanist Taerix",
+		[9294]  = "Healing the Lake|1+ 9293 alliance|49.87 37.33|Botanist Taerix",
 		[10304] = "Vindicator Aldar|1+ 9294 -37444 -9303 alliance|49.87 37.33|Botanist Taerix", -- Breadcrumb for Inoculation
-		[9799] = "Botanical Legwork|1+ 10302 alliance|49.72 37.52|Apprentice Vishael",
+		[9799]  = "Botanical Legwork|1+ 10302 alliance|49.72 37.52|Apprentice Vishael",
 		[37445] = "Spare Parts|1+ 10302 -9305 alliance|50.49 47.87|Technician Zhanaa", -- Pre-6.0 version is 9305
 		[37444] = "Inoculation|1+ 10302 -9303 alliance|50.64 48.73|Vindicator Aldar", -- Pre-6.0 version is 9303
-		[9309] = "The Missing Scout|1+ 37444,9303 alliance|50.64 48.73|Vindicator Aldar", -- check if also req 9294?
+		[9309]  = "The Missing Scout|1+ 37444,9303 alliance|50.64 48.73|Vindicator Aldar", -- check if also req 9294?
 		[10303] = "The Blood Elves|1+ 9309 alliance|33.9 69.38|Tolaan",
-		[9311] = "Blood Elf Spy|1+ 10303 alliance|33.9 69.38|Tolaan",
-		[9798] = "Blood Elf Plans|1+ 10303 alliance|27.79 80.42|{132319} [Blood Elf Plans]||Drops from [Surveyor Candress]",
-		[9312] = "The Emitter|1+ 37445,9305 9311 alliance|50.64 48.73|Vindicator Aldar",
-		[9313] = "Travel to Azure Watch|1+ 9312 alliance|50.49 47.87|Technician Zhanaa",
-		[9314] = "Word from Azure Watch|1+ alliance|17.1 54.15|Aeun",
+		[9311]  = "Blood Elf Spy|1+ 10303 alliance|33.9 69.38|Tolaan",
+		[9798]  = "Blood Elf Plans|1+ alliance|27.79 80.42|{132319} [Blood Elf Plans]||Drops from [Surveyor Candress]",
+		[9312]  = "The Emitter|1+ 37445,9305 9311 alliance|50.64 48.73|Vindicator Aldar",
+		[9313]  = "Travel to Azure Watch|1+ 9312 alliance|50.49 47.87|Technician Zhanaa",
+		[9314]  = "Word from Azure Watch|1+ alliance|17.1 54.15|Aeun",
 	},
 
 	-- Azuremyst Isle
 	[97] = {
 		-- Ammen Vale
-		[9279] = "You Survived!|1+ -9280 draenei alliance|84.18 43.03|Megelon|link:468", -- Draenei only
-		[9280] = "Replenishing the Healing Crystals|1+ 9279 draenei alliance|80.42 45.88|Proenitus|link:468", -- Draenei
-		[9369] = "Replenishing the Healing Crystals|1+ -draenei alliance|80.42 45.88|Proenitus|link:468", -- Other races
-		[9409] = "Urgent Delivery!|1+ 9280,9369 alliance|80.42 45.88|Proenitus|link:468",
-		[9283] = "Rescue the Survivors!|1+ 9409 draenei alliance|80.12 48.9|Zalduun|link:468", -- Draenei only
-		[9371] = "Botanist Taerix|1+ 9409 -10302 alliance|80.42 45.88|Proenitus|link:468", -- Breadcrumb for Volatile Mutations
+		[9279]  = "You Survived!|1+ -9280 draenei alliance|84.18 43.03|Megelon|link:468", -- Draenei only
+		[9280]  = "Replenishing the Healing Crystals|1+ 9279 draenei alliance|80.42 45.88|Proenitus|link:468", -- Draenei
+		[9369]  = "Replenishing the Healing Crystals|1+ -draenei alliance|80.42 45.88|Proenitus|link:468", -- Other races
+		[9409]  = "Urgent Delivery!|1+ 9280,9369 alliance|80.42 45.88|Proenitus|link:468",
+		[9283]  = "Rescue the Survivors!|1+ 9409 draenei alliance|80.12 48.9|Zalduun|link:468", -- Draenei only
+		[9371]  = "Botanist Taerix|1+ 9409 -10302 alliance|80.42 45.88|Proenitus|link:468", -- Breadcrumb for Volatile Mutations
 		[10302] = "Volatile Mutations|1+ 9280,9369 alliance|79.14 46.53|Botanist Taerix|link:468",
-		[9293] = "What Must Be Done...|1+ 10302 alliance|79.14 46.53|Botanist Taerix|link:468",
-		[9294] = "Healing the Lake|1+ 9293 alliance|79.14 46.53|Botanist Taerix|link:468",
+		[9293]  = "What Must Be Done...|1+ 10302 alliance|79.14 46.53|Botanist Taerix|link:468",
+		[9294]  = "Healing the Lake|1+ 9293 alliance|79.14 46.53|Botanist Taerix|link:468",
 		[10304] = "Vindicator Aldar|1+ 9294 -37444 -9303 alliance|79.14 46.53|Botanist Taerix|link:468", -- Breadcrumb for Inoculation
-		[9799] = "Botanical Legwork|1+ 10302 alliance|79.07 46.01|Apprentice Vishael|link:468",
+		[9799]  = "Botanical Legwork|1+ 10302 alliance|79.07 46.01|Apprentice Vishael|link:468",
 		[37445] = "Spare Parts|1+ 10302 -9305 alliance|79.42 51.24|Technician Zhanaa|link:468", -- Pre-6.0 version is 9305
 		[37444] = "Inoculation|1+ 10302 -9303 alliance|79.48 51.63|Vindicator Aldar|link:468", -- Pre-6.0 version is 9303
-		[9309] = "The Missing Scout|1+ 37444,9303 alliance|50.64 48.73|Vindicator Aldar|link:468", -- check if also req 9294?
+		[9309]  = "The Missing Scout|1+ 37444,9303 alliance|50.64 48.73|Vindicator Aldar|link:468", -- check if also req 9294?
 		[10303] = "The Blood Elves|1+ 9309 alliance|72.01 60.84|Tolaan|link:468",
-		[9311] = "Blood Elf Spy|1+ 10303 alliance|72.01 60.84|Tolaan|link:468",
-		[9798] = "Blood Elf Plans|1+ 10303 alliance|69.27 65.77|{132319} [Blood Elf Plans]|link:468|Drops from [Surveyor Candress]",
-		[9312] = "The Emitter|1+ 37445,9305 9311 alliance|79.48 51.63|Vindicator Aldar|link:468",
-		[9313] = "Travel to Azure Watch|1+ 9312 alliance|79.42 51.24|Technician Zhanaa|link:468",
-		[9314] = "Word from Azure Watch|1+ alliance|64.5 54.04|Aeun",
+		[9311]  = "Blood Elf Spy|1+ 10303 alliance|72.01 60.84|Tolaan|link:468",
+		[9798]  = "Blood Elf Plans|1+ 10303 alliance|69.27 65.77|{132319} [Blood Elf Plans]|link:468|Drops from [Surveyor Candress]",
+		[9312]  = "The Emitter|1+ 37445,9305 9311 alliance|79.48 51.63|Vindicator Aldar|link:468",
+		[9313]  = "Travel to Azure Watch|1+ 9312 alliance|79.42 51.24|Technician Zhanaa|link:468",
+		[9314]  = "Word from Azure Watch|1+ alliance|64.5 54.04|Aeun",
+
+		-- Ammen Ford
+		[9452]  = "Red Snapper - Very Tasty!|1+ alliance|61.06 54.24|Diktynna",
+		[9453]  = "Find Acteon!|1+ 9452 alliance|61.06 54.24|Diktynna",
 
 		-- Azure Watch
-		[9452] = "Red Snapper - Very Tasty!|1+ alliance|61.06 54.24|Diktynna",
-		[9453] = "Find Acteon!|1+ 9452 alliance|61.06 54.24|Diktynna",
-		[9454] = "The Great Moongraze Hunt|1+ alliance|49.78 51.93|Acteon",
+		[9612]  = "A Hearty Thanks!|1+ draenei alliance|1 GiftOfTheNaaru|Draenei Youngling|discovery tomtom|Cast {135923} [spell]Gift of the Naaru] on a [green]Draenei Youngling] who is in combat to obtain this quest",
+		[9616]  = "Bandits!|1+ broken:50 alliance|2 BloodElfCommunication|{133473} [Blood Elf Communication]|discovery chromietime tomtom|Drops from [red]Blood Elf Bandit] who is stealthed in a random location",
+		[9454]  = "The Great Moongraze Hunt|1+ alliance|49.78 51.93|Acteon",
 		[10324] = "The Great Moongraze Hunt|1+ 9454 alliance|49.78 51.93|Acteon",
-		[9455] = "Strange Findings|1+ alliance|43 38.6|{134072} [Faintly Glowing Crystal]||Drops from [red]Infected Nightstalker Runt]",
-		[9456] = "Nightstalker Clean Up, Isle 2...|1+ 9455 alliance|47.12 50.61|Exarch Menelaous",
-		[9603] = "Beds, Bandages, and Beyond|1+ draenei alliance|48.34 49.15|Caregiver Chellan", -- Draenei only
-		[9604] = "On the Wings of a Hippogryph|1+ 9603 draenei alliance|49.71 49.11|Zaldaan", -- Draenei only
-		[9605] = "Hippogryph Master Stephanos|1+ 9604 draenei alliance|28.71 43.06|Nurguni|down link:103", -- Draenei only
-		[9606] = "Return to Caregiver Chellan|1+ 9605 draenei alliance|28.06 39.48|Stephanos|down link:103", -- Draenei only
-		[9463] = "Medicinal Purpose|1+ draenei alliance|48.39 51.76|Anchorite Fateema", -- Draenei only
-		[9473] = "An Alternative Alternative|1+ 9463 draenei alliance|48.38 51.49|Daedal", -- Draenei only
-		[9505] = "The Prophecy of Velen|1+ 9473 -9506 draenei alliance|48.38 51.49|Daedal", -- Draenei only breadcrumb for Odesyus' Landing
-		[9623] = "Coming of Age|1+ alliance|47.12 50.61|Exarch Menelaous",
-		[9625] = "Elekks Are Serious Business|1+ 9623 -28559 alliance|35.07 43.42|Torallius the Pack Handler", -- Breadcrumb for Bloodmyst; mutually exclusive with Hero's Call 28559
+		[9455]  = "Strange Findings|1+ alliance|43 38.6|{134072} [Faintly Glowing Crystal]||Drops from [red]Infected Nightstalker Runt]",
+		[9456]  = "Nightstalker Clean Up, Isle 2...|1+ 9455 alliance|47.12 50.61|Exarch Menelaous",
+		[9603]  = "Beds, Bandages, and Beyond|1+ draenei alliance|48.34 49.15|Caregiver Chellan", -- Draenei only
+		[9604]  = "On the Wings of a Hippogryph|1+ 9603 draenei alliance|49.71 49.11|Zaldaan", -- Draenei only
+		[9605]  = "Hippogryph Master Stephanos|1+ 9604 draenei alliance|28.71 43.06|Nurguni|down link:103", -- Draenei only
+		[9606]  = "Return to Caregiver Chellan|1+ 9605 draenei alliance|28.06 39.48|Stephanos|down link:103", -- Draenei only
+		[9463]  = "Medicinal Purpose|1+ draenei alliance|48.39 51.76|Anchorite Fateema", -- Draenei only
+		[9473]  = "An Alternative Alternative|1+ 9463 draenei alliance|48.38 51.49|Daedal", -- Draenei only
+		[9505]  = "The Prophecy of Velen|1+ 9473 -9506 draenei alliance|48.38 51.49|Daedal", -- Draenei only breadcrumb for 9506
+		[9623]  = "Coming of Age|1+ alliance|47.12 50.61|Exarch Menelaous",
+		[9625]  = "Elekks Are Serious Business|1+ 9623 -28559 alliance|35.07 43.42|Torallius the Pack Handler", -- Breadcrumb for Bloodmyst; mutually exclusive with 28559
+		[9582]  = "Strength of One|10+ alliance warrior|50.02 50.52|Ruada", -- Warrior only
+		[10350] = "Behomat|1+ alliance warrior 9582|50.02 50.52|Ruada", -- Warrior only
 
 		-- Odesyus' Landing
-		[9506] = "A Small Start|1+ alliance|47.04 70.2|Admiral Odesyus",
-		[9530] = "I've Got a Plant|1+ 9506 alliance|47.04 70.2|Admiral Odesyus",
-		[9531] = "Tree's Company|1+ 9530 alliance|47.04 70.2|Admiral Odesyus",
-		[9537] = "Show Gnomercy|1+ 9531 alliance|47.04 70.2|Admiral Odesyus",
-		[9602] = "Deliver Them From Evil...|1+ 9537 alliance|47.04 70.2|Admiral Odesyus",
-		[9512] = "Cookie's Jumbo Gumbo|1+ alliance|46.68 70.54|\"Cookie\" McWeaksauce",
-		[9513] = "Reclaiming the Ruins|1+ 9506,9512 alliance|47.12 70.28|Priestess Kyleen Il'dinare",
-		[9523] = "Precious and Fragile Things Need Special Handling|1+ 9506,9512 alliance|47.24 69.99|Archaeologist Adamant Ironheart",
-		[9514] = "Rune Covered Tablet|1+ 9506,9512 alliance|34.7 77.3|{134462} [Rune Covered Tablet]||Drops from [red]Wrathscale] Naga",
-		[9515] = "Warlord Sriss'tiz|1+ 9514 alliance|47.12 70.28|Priestess Kyleen Il'dinare", -- double check prereqs
+		[9506]  = "A Small Start|1+ alliance ~9505|47.04 70.2|Admiral Odesyus", -- Invalidates breadcrumb 9505
+		[9530]  = "I've Got a Plant|1+ 9506 alliance|47.04 70.2|Admiral Odesyus",
+		[9531]  = "Tree's Company|1+ 9530 alliance|47.04 70.2|Admiral Odesyus",
+		[9537]  = "Show Gnomercy|1+ 9531 alliance|47.04 70.2|Admiral Odesyus",
+		[9602]  = "Deliver Them From Evil...|1+ 9537 alliance|47.04 70.2|Admiral Odesyus",
+		[9512]  = "Cookie's Jumbo Gumbo|1+ alliance|46.68 70.54|\"Cookie\" McWeaksauce",
+		[9513]  = "Reclaiming the Ruins|1+ 9506 alliance|47.12 70.28|Priestess Kyleen Il'dinare",
+		[9523]  = "Precious and Fragile Things Need Special Handling|1+ 9506 alliance|47.24 69.99|Archaeologist Adamant Ironheart",
+		[9514]  = "Rune Covered Tablet|1+ 9506 alliance|34.7 77.3|{134462} [Rune Covered Tablet]||Drops from [red]Wrathscale] Naga",
+		[9515]  = "Warlord Sriss'tiz|1+ 9514 alliance|47.12 70.28|Priestess Kyleen Il'dinare",
 
 		-- The Prophecy of Akida
-		[9538] = "Lerning the Language|1+ alliance|49.38 50.97|Cryptographer Aurren",
-		[9539] = "Totem of Coo|1+ 9538 alliance|49.44 50.98|Totem of Akida",
-		[9540] = "Totem of Tikti|1+ 9539 alliance|55.23 41.65|Totem of Coo",
-		[9541] = "Totem of Yor|1+ 9540 alliance|64.47 39.77|Totem of Tikti",
-		[9542] = "Totem of Vark|1+ 9541 alliance|63.12 67.88|Totem of Yor",
-		[9544] = "The Prophecy of Akida|1+ 9542 alliance|28.11 62.39|Totem of Vark",
-		[9559] = "Stillpine Hold|1+ 9544 alliance|49.37 51.09|Arugoo of the Stillpine",
+		[9538]  = "Lerning the Language|1+ alliance|49.38 50.97|Cryptographer Aurren",
+		[9539]  = "Totem of Coo|1+ 9538 alliance|49.44 50.98|Totem of Akida",
+		[9540]  = "Totem of Tikti|1+ 9539 alliance|55.23 41.65|Totem of Coo",
+		[9541]  = "Totem of Yor|1+ 9540 alliance|64.47 39.77|Totem of Tikti",
+		[9542]  = "Totem of Vark|1+ 9541 alliance|63.12 67.88|Totem of Yor",
+		[9544]  = "The Prophecy of Akida|1+ 9542 alliance|28.11 62.39|Totem of Vark",
+		[9559]  = "Stillpine Hold|1+ 9544 alliance|49.37 51.09|Arugoo of the Stillpine",
 
 		-- Stillpine Hold
-		[9562] = "Murlocs... Why Here? Why Now?|1+ 9538 alliance|44.64 23.48|Gurf", -- Might require 9544?
-		[9564] = "Gurf's Dignity|1+ +9562 alliance|34.6 15|{134350} [Gurf's Dignity]||Drops from [red]Murgurgula] who patrols the shore", -- Requires 9562 in log
-		[9560] = "Beasts of the Apocalypse!|1+ 9538 alliance|44.77 23.89|Moordo", -- Might require 9544?
-		[9565] = "Search Stillpine Hold|1+ 9560,9562 alliance|46.68 20.63|High Chief Stillpine", -- check if 9560 or 9560,9562 or 9560 9562
-		[9566] = "Blood Crystals|1+ 9565 alliance|45.5 18.9|Blood Crystal|down link:99",
-		[9573] = "Chieftain Oomooroo|1+ 9560,9562 alliance|46.9 21.17|Stillpine the Younger", -- check if 9560 or 9560,9562 or 9560 9562
-		[9570] = "The Kurken is Lurkin'|1+ 9560,9562 alliance|46.9 21.17|Kurz the Revelator", -- check if 9560 or 9560,9562 or 9560 9562
-		[9571] = "The Kurken's Hide|1+ 9570 alliance|46.9 21.17|Kurz the Revelator",
-		[9622] = "Warn Your People|1+ 9570 9573 9566|46.68 20.63|High Chief Stillpine",
+		[9562]  = "Murlocs... Why Here? Why Now?|1+ 9538 alliance|44.64 23.48|Gurf", -- Might require 9544?
+		[9564]  = "Gurf's Dignity|1+ +9562 alliance|34.6 15|{134350} [Gurf's Dignity]||Drops from [red]Murgurgula] who patrols the shore", -- Requires 9562 in log
+		[9560]  = "Beasts of the Apocalypse!|1+ 9538 alliance|44.77 23.89|Moordo", -- Might require 9544?
+		[9565]  = "Search Stillpine Hold|1+ 9560,9562 alliance|46.68 20.63|High Chief Stillpine", -- check if 9560 or 9560,9562 or 9560 9562
+		[9566]  = "Blood Crystals|1+ 9565 alliance|45.5 18.9|Blood Crystal|down link:99",
+		[9573]  = "Chieftain Oomooroo|1+ 9560,9562 alliance|46.9 21.17|Stillpine the Younger", -- check if 9560 or 9560,9562 or 9560 9562
+		[9570]  = "The Kurken is Lurkin'|1+ 9560,9562 alliance|46.9 21.17|Kurz the Revelator", -- check if 9560 or 9560,9562 or 9560 9562
+		[9571]  = "The Kurken's Hide|1+ 9570 alliance|46.9 21.17|Kurz the Revelator",
+		[9622]  = "Warn Your People|1+ 9570 9573 9566|46.68 20.63|High Chief Stillpine",
 
 		-- Silvermyst Isle
-		[10428] = "The Missing Fisherman|1+ -9527 alliance|48.96 51.06|Dulvi",
-		[9527] = "All That Remains|1+ 10428 alliance|16.59 94.45|Cowlen",
-		[9528] = "A Cry For Help|1+ alliance|13.63 73.22|Magwin",
-
-		-- Random location
-		[9612] = "A Hearty Thanks!|1+ draenei alliance|1 GiftOfTheNaaru|Draenei Youngling|discovery tomtom|Cast {135923} [spell]Gift of the Naaru] on a [green]Draenei Youngling] who is in combat to obtain this quest",
-		[9616] = "Bandits!|1+ broken:50 alliance|2 BloodElfCommunication|{133473} [Blood Elf Communication]|discovery chromietime tomtom|Drops from [red]Blood Elf Bandit] who is stealthed in a random location",
+		[10428] = "The Missing Fisherman|1+ -9527 alliance|48.96 51.06|Dulvi", -- Breadcrumb for 9527
+		[9527]  = "All That Remains|1+ ~10428 alliance|16.59 94.45|Cowlen", -- Invalidates breadcrumb 10428
+		[9528]  = "A Cry For Help|1+ alliance|13.63 73.22|Magwin",
 	},
 
 	-- Stillpine Hold
@@ -4501,6 +4503,126 @@ Data.Quests = {
 		[40837] = "The Deadwind Hunt|10+ druid 40835|52.42 34.41|Revil Kost|artifact",
 		[40838] = "The Dark Riders|10+ druid 40837|46.92 69.47|Revil Kost|artifact",
 		[40900] = "The Burden Borne|10+ druid 40838|46.92 69.47|Revil Kost|artifact",
+	},
+
+
+	--[[ Eversong Woods ]]--
+
+	-- Silvermoon City
+	[110] = {
+		-- Eversong Woods
+		[9134]  = "Skymistress Gloaming|1+ horde bloodelf 9133|53.94 71.03|Sathren Azuredawn", -- Blood Elf only
+		[9135]  = "Return to Sathiel|1+ horde bloodelf 9134|63.12 96.4|Skymistress Gloaming", -- Blood Elf only
+	},
+
+	-- Sunstrider Isle
+	[467] = {
+		[8325]  = "Reclaiming Sunstrider Isle|1+ horde bloodelf|61.03 45.13|Magistrix Erona", -- Blood Elf only
+		[8326]  = "Unfortunate Measures|1+ horde bloodelf 8325|61.03 45.13|Magistrix Erona", -- Blood Elf only
+		[37440] = "A Fistful of Slivers|1+ horde bloodelf 8326|61.82 39.35|Arcanist Ithanas", -- Blood Elf only
+		[37442] = "The Shrine of Dath'Remar|1+ horde bloodelf 8326|63.97 42.83|Well Watcher Solanian", -- Blood Elf only
+		[37443] = "Solanian's Belongings|1+ horde bloodelf 8326|63.97 42.83|Well Watcher Solanian", -- Blood Elf only
+		[37439] = "Thirst Unending|1+ horde bloodelf 8326|58.46 38.79|Arcanist Helion|link:467", -- Blood Elf only
+		[8327]  = "Report to Lanthan Perilon|1+ horde bloodelf 8326 -8334|61.03 45.13|Magistrix Erona", -- Blood Elf only breadcrumb for 8334
+		[8334]  = "Aggression|1+ horde bloodelf 8326 ~8327|52.88 49.78|Lanthan Perilon", -- Blood Elf only; invalidates breadcrumb 8327
+		[8338]  = "Tainted Arcane Sliver|1+ horde bloodelf|38.85 63.94|{132884} [Tainted Arcane Sliver]||Drops from [Tainted Arcane Wraith]", -- Blood Elf only
+		[8335]  = "Felendren the Banished|1+ horde bloodelf 8334|52.88 49.78|Lanthan Perilon", -- Blood Elf only
+		[8347]  = "Aiding the Outrunners|1+ horde bloodelf 8335 -9704|52.88 49.78|Lanthan Perilon", -- Blood Elf only breadcrumb for 9704
+		[9704]  = "Slain by the Wretched|1+ horde ~8347|68.42 79.61|Outrunner Alarion", -- Invalidates breadcrumb 8347
+		[9705]  = "Package Recovery|1+ horde 9704|73.36 90.21|[dead]Slain Outrunner]",
+		[8350]  = "Completing the Delivery|1+ horde 9705|68.42 79.61|Outrunner Alarion",
+	},
+
+	-- Eversong Woods
+	[94] = {
+		-- Sunstrider Isle
+		[8325]  = "Reclaiming Sunstrider Isle|1+ horde bloodelf|38.02 21.01|Magistrix Erona|link:467", -- Blood Elf only
+		[8326]  = "Unfortunate Measures|1+ horde bloodelf 8325|38.02 21.01|Magistrix Erona|link:467", -- Blood Elf only
+		[37440] = "A Fistful of Slivers|1+ horde bloodelf 8326|38.27 19.13|Arcanist Ithanas|link:467", -- Blood Elf only
+		[37442] = "The Shrine of Dath'Remar|1+ horde bloodelf 8326|38.97 20.26|Well Watcher Solanian|link:467", -- Blood Elf only
+		[37443] = "Solanian's Belongings|1+ horde bloodelf 8326|38.97 20.26|Well Watcher Solanian|link:467", -- Blood Elf only
+		[37439] = "Thirst Unending|1+ horde bloodelf 8326|37.18 18.95|Arcanist Helion|link:467", -- Blood Elf only
+		[8327]  = "Report to Lanthan Perilon|1+ horde bloodelf 8326 -8334|38.02 21.01|Magistrix Erona|link:467", -- Blood Elf only breadcrumb for 8334
+		[8334]  = "Aggression|1+ horde bloodelf 8326 ~8327|35.37 22.52|Lanthan Perilon|link:467", -- Blood Elf only; invalidates breadcrumb 8327
+		[8335]  = "Felendren the Banished|1+ horde bloodelf 8334|35.37 22.52|Lanthan Perilon|link:467", -- Blood Elf only
+		[8338]  = "Tainted Arcane Sliver|1+ horde bloodelf|30.71 27.12|{132884} [Tainted Arcane Sliver]|link:467|Drops from [Tainted Arcane Wraith]", -- Blood Elf only
+		[8347]  = "Aiding the Outrunners|1+ horde bloodelf 8335 -9704|35.37 22.52|Lanthan Perilon|link:467", -- Blood Elf only breadcrumb for 9704
+		[9704]  = "Slain by the Wretched|1+ horde ~8347|40.42 32.21|Outrunner Alarion", -- Invalidates breadcrumb 8347
+		[9705]  = "Package Recovery|1+ horde 9704|42.02 35.65|[dead]Slain Outrunner]",
+		[8350]  = "Completing the Delivery|1+ horde 9705|40.42 32.21|Outrunner Alarion",
+
+		-- Falconwing Square
+		[8468]  = "WANTED: Thaelis the Hungerer|1+ horde|48.17 46.31|Wanted: Thaelis the Hungerer",
+		[8463]  = "Unstable Mana Crystals|1+ horde|48.17 46|Aeldon Sunbrand",
+		[9352]  = "Darnassian Intrusions|1+ horde 8463|48.17 46|Aeldon Sunbrand",
+		[8472]  = "Major Malfunction|1+ horde|47.25 46.31|Magister Jaronis",
+		[8895]  = "Delivery to the North Sanctum|1+ horde 8472|47.25 46.31|Magister Jaronis",
+		[9119]  = "Malfunction at the West Sanctum|1+ horde 8895|44.63 53.14|Ley-Keeper Caidanis",
+		[8486]  = "Arcane Instability|1+ horde 9119|36.7 57.44|Ley-Keeper Velania",
+		[8482]  = "Incriminating Documents|1+ horde|36.78 61|{133464} [Incriminating Documents]||Drops from [red]Darnassian Scout]",
+		[8483]  = "The Dwarven Spy|1+ horde 8482|48.17 46|Aeldon Sunbrand",
+		[9256]  = "Fairbreeze Village|1+ horde 8483 -8892|48.17 46|Aeldon Sunbrand", -- Breadcrumb for 8892
+
+		-- Swift Discipline
+		[9035]  = "Roadside Ambush|1+ horde -9062|45.19 56.43|Apprentice Ralen", -- Breadcrumb for 9062
+		[9062]  = "Soaked Pages|1+ horde ~9035|44.87 61.03|Apprentice Meledor", -- Invalidates breadcrumb 9035
+		[9064]  = "Taking the Fall|1+ horde 9062|44.87 61.03|Apprentice Meledor",
+		[9066]  = "Swift Discipline|1+ horde 9064|55.7 54.51|Instructor Antheol",
+
+		-- Fairbreeze Village
+		[8491]  = "Pelt Collection|1+ horde|44.72 69.63|Velan Brightoak",
+		[9130]  = "Goods from Silvermoon City|1+ horde bloodelf|43.7 71.56|Sathiel", -- Blood Elf only
+		[9133]  = "Fly to Silvermoon City|1+ horde bloodelf 9130|43.95 69.98|Skymaster Brightdawn", -- Blood Elf only
+		[9135]  = "Return to Sathiel|1+ horde bloodelf 9134|54.37 50.73|Skymistress Gloaming", -- Blood Elf only
+		[9358]  = "Ranger Sareyn|1+ horde -9252|43.67 71.31|Marniel Amberlight", -- Breadcrumb for 9252
+		[9258]  = "The Scorched Grove|1+ horde -8473|43.58 71.2|Ardeyn Riverwind", -- Breadcrumb for 8473
+		[8892]  = "Situation at Sunsail Anchorage|1+ horde ~9256|43.35 70.83|Ranger Degolien", -- Invalidates breadcrumb 9256
+		[9359]  = "Farstrider Retreat|1+ horde 8892 -8476|43.35 70.83|Ranger Degolien", -- Breadcrumb for 8476
+		[9144]  = "Missing in the Ghostlands|1+ horde -28560 -9147|44.03 70.76|Magistrix Landra Dawnstrider", -- Breadcrumb for 9147; mutually exclusive with 28560
+		[9395]  = "Saltheril's Haven|1+ horde -9067|44.03 70.76|Magistrix Landra Dawnstrider", -- Breadcrumb for 9067
+		[9067]  = "The Party Never Ends|1+ horde ~9395|38.15 73.55|Lord Saltheril", -- Invalidates breadcrumb 9395
+		[9254]  = "The Wayward Apprentice|1+ horde -8487|44.03 70.76|Magistrix Landra Dawnstrider", -- Breadcrumb for 8487
+
+		-- Tranquil Shore
+		[8884]  = "Fish Heads, Fish Heads...|1+ horde|30.22 58.34|Hathvelion Sungaze",
+		[8885]  = "The Ring of Mmmrrrggglll|1+ horde 8884|30.22 58.34|Hathvelion Sungaze",
+		[8886]  = "Grimscale Pirates!|1+ horde|36.36 66.62|Captain Kelisendra",
+		[8887]  = "Captain Kelisendra's Lost Rutters|1+ horde|26.89 59.82|{134939} [Captain Kelisendra's Lost Rutters]||Has a chance to drop from [red]Grimscale] Murlocs",
+		[8480]  = "Lost Armaments|1+ horde|36.36 66.78|Velendris Whitemorn",
+		[9076]  = "Wretched Ringleader|1+ horde 8480|36.36 66.78|Velendris Whitemorn",
+
+		-- The Scorched Grove
+		[8473]  = "A Somber Task|1+ horde ~9258|34.06 80.02|Larianna Riverwind", -- Invalidates breadcrumb 9258
+		[8474]  = "Old Whitebark's Pendant|1+ horde|34.81 84.34|{133280} [Old Whitebark's Pendant]||Drops from [red]Old Whitebark]",
+		[10166] = "Whitebark's Memory|1+ horde 8474|34.06 80.02|Larianna Riverwind",
+
+		-- The Dead Scar
+		[8475]  = "The Dead Scar|1+ horde|50.34 50.77|Ranger Jaela",
+		[9252]  = "Defending Fairbreeze Village|1+ horde ~9358|46.93 71.78|Ranger Sareyn", -- Invalidates breadcrumb 9358
+		[9253]  = "Runewarden Deryan|1+ horde 9252 -8490|46.93 71.78|Ranger Sareyn", -- Breadcrumb for 8490
+		[8490]  = "Powering our Defenses|1+ horde ~9253|44.2 85.47|Runewarden Deryan", -- Invalidates breadcrumb 9253
+		[8487]  = "Corrupted Soil|1+ horde ~9254|54.28 70.98|Apprentice Mirveda", -- Invalidates breadcrumb 9254
+		[8488]  = "Unexpected Results|1+ horde 8487|54.28 70.98|Apprentice Mirveda",
+		[9255]  = "Research Notes|1+ horde 8488|54.28 70.98|Apprentice Mirveda",
+
+		-- Duskwither Spire
+		[9394]  = "Where's Wyllithen?|1+ horde -8894|67.81 56.53|Apprentice Loralthalis", -- Breadcrumb for 9394
+		[8894]  = "Cleaning up the Grounds|1+ horde ~9394|68.71 46.95|Groundskeeper Wyllithen", -- Invalidates breadcrumb 9394
+		[8889]  = "Deactivating the Spire|1+ horde ~8888|67.81 56.53|Apprentice Loralthalis", -- Invalidates breadcrumb 8889
+		[8890]  = "Word from the Spire|1+ horde 8889|67.81 56.53|Apprentice Loralthalis",
+		[8891]  = "Abandoned Investigations|1+ horde|69.24 52.11|Magister Duskwither's Journal|up",
+
+		-- Farstrider Retreat
+		[8476]  = "Amani Encroachment|1+ horde ~9359|60.32 62.77|Lieutenant Dawnrunner", -- Invalidates breadcrumb 9359
+		[8477]  = "The Spearcrafter's Hammer|1+ horde|59.52 62.6|Arathel Sunforge",
+		[8888]  = "The Magister's Apprentice|1+ horde -8889|60.31 61.38|Magister Duskwither", -- Breadcrumb for 8889
+		[8479]  = "Zul'Marosh|1+ horde|70.53 72.34|Ven'jashi",
+		[9360]  = "Amani Invasion|1+ horde|62.4 79.6|{134946} [Amani Invasion Plans]||Drops from [red]Chieftain Zul'Marosh]",
+		[9363]  = "Warning Fairbreeze Village|1+ horde 9360|60.32 62.77|Lieutenant Dawnrunner",
+
+		-- Ghostlands
+		[9147]  = "The Fallen Courier|1+ horde ~9144|49.02 89.05|Apothecary Thedra", -- Invalidates breadcrumb 9144
+		[9148]  = "Delivery to Tranquillien|1+ horde 9147 ~9138|48.98 88.99|Courier Dawnstrider", -- Cannot be picked up at the same time as 9138
 	},
 
 
