@@ -902,7 +902,7 @@ Data.POI = {
 		"POI/FirstAid|[Bandage Trainer]|5+ horde tailoring|38.51 86.41",
 		"POI/Cooking|[Cooking]|5+ horde|56.53 62.48||Borstan's Firepit",
 		"POI/Fishing|[Fishing]|5+ horde|66.44 41.93",
-		"POI/Archaeology Trainer|[Archaeology]|10+ horde|49.06 70.56||Grommash Hold",
+		"POI/Archaeology|[Archaeology Trainer]|10+ horde|49.06 70.56||Grommash Hold",
 	},
 
 	-- Durotar
