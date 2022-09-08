@@ -84,20 +84,20 @@ Data.POI = {
 		"upgradeitem-32x32|[Item Upgrades]|60+|34.56 56.52",
 
 		-- Professions
-		"POI/Alchemy|[Alchemy]|48+ alchemy|39.23 40.38|tooltip",
-		"POI/Blacksmithing|[Blacksmithing]|48+ blacksmithing|40.48 31.5|tooltip",
-		"POI/Enchanting|[Enchanting]|48+ enchanting|48.41 29.44|tooltip",
-		"POI/Engineering|[Engineering]|48+ engineering|38.06 44.66|tooltip",
-		"POI/Herbalism|[Herbalism]|48+ herbalism|40.23 38.26|tooltip",
-		"POI/Inscription|[Inscription]|48+ inscription|36.52 36.7|tooltip",
-		"POI/Jewelcrafting|[Jewelcrafting]|48+ jewelcrafting|35.2 41.35|tooltip",
-		"POI/Leatherworking|[Leatherworking]|48+ leatherworking -skinning|42.27 26.58|tooltip",
-		"POI/Leatherworking|[Leatherworking and Skinning]|48+ leatherworking skinning|42.14 27.31|tooltip",
-		"POI/Mining|[Mining]|48+ mining|39.3 32.94|tooltip",
-		"POI/Skinning|[Skinning]|48+ skinning -leatherworking|42.13 28.08|tooltip",
-		"POI/Tailoring|[Tailoring]|48+ tailoring|45.47 31.76|tooltip",
-		"POI/Cooking|[Cooking]|48+|46.82 22.66|tooltip",
-		"POI/Fishing|[Fishing]|48+|46.14 26.35|tooltip",
+		"POI/Alchemy|[Alchemy]|48+ alchemy|39.23 40.38",
+		"POI/Blacksmithing|[Blacksmithing]|48+ blacksmithing|40.48 31.5",
+		"POI/Enchanting|[Enchanting]|48+ enchanting|48.41 29.44",
+		"POI/Engineering|[Engineering]|48+ engineering|38.06 44.66",
+		"POI/Herbalism|[Herbalism]|48+ herbalism|40.23 38.26",
+		"POI/Inscription|[Inscription]|48+ inscription|36.52 36.7",
+		"POI/Jewelcrafting|[Jewelcrafting]|48+ jewelcrafting|35.2 41.35",
+		"POI/Leatherworking|[Leatherworking]|48+ leatherworking -skinning|42.27 26.58",
+		"POI/Leatherworking|[Leatherworking and Skinning]|48+ leatherworking skinning|42.14 27.31",
+		"POI/Mining|[Mining]|48+ mining|39.3 32.94",
+		"POI/Skinning|[Skinning]|48+ skinning -leatherworking|42.13 28.08",
+		"POI/Tailoring|[Tailoring]|48+ tailoring|45.47 31.76",
+		"POI/Cooking|[Cooking]|48+|46.82 22.66",
+		"POI/Fishing|[Fishing]|48+|46.14 26.35",
 	},
 
 
@@ -255,20 +255,20 @@ Data.POI = {
 		"poi-scrapper|[Scrap-O-Matic 1000]|alliance|77.13 16.31",
 
 		-- Professions
-		"POI/Alchemy|[Alchemy]|alliance alchemy|74.2 6.54|tooltip",
-		"POI/Blacksmithing|[Blacksmithing]|alliance blacksmithing|73.4 8.46|tooltip",
-		"POI/Enchanting|[Enchanting]|alliance enchanting|74.03 11.55|tooltip",
-		"POI/Engineering|[Engineering]|alliance engineering|77.62 14.33|tooltip",
-		"POI/Herbalism|[Herbalism]|alliance herbalism|70.8 5.4|tooltip",
-		"POI/Inscription|[Inscription]|alliance inscription|73.39 6.33|tooltip",
-		"POI/Jewelcrafting|[Jewelcrafting]|alliance jewelcrafting|75.2 9.88|tooltip",
-		"POI/Leatherworking|[Leatherworking]|alliance leatherworking|75.47 12.6|tooltip",
-		"POI/Mining|[Mining]|alliance mining|75.22 7.56|tooltip",
-		"POI/Skinning|[Skinning]|alliance skinning|75.66 13.39|tooltip",
-		"POI/Tailoring|[Tailoring]|alliance tailoring|76.93 11.16|tooltip",
-		"POI/Cooking|[Cooking]|alliance|71.21 10.69|tooltip",
-		"POI/Fishing|[Fishing]|alliance|74.16 5.58|tooltip",
-		"POI/Archaeology|[Archaeology]|alliance|68.33 8.47|tooltip",
+		"POI/Alchemy|[Alchemy]|alliance alchemy|74.2 6.54",
+		"POI/Blacksmithing|[Blacksmithing]|alliance blacksmithing|73.4 8.46",
+		"POI/Enchanting|[Enchanting]|alliance enchanting|74.03 11.55",
+		"POI/Engineering|[Engineering]|alliance engineering|77.62 14.33",
+		"POI/Herbalism|[Herbalism]|alliance herbalism|70.8 5.4",
+		"POI/Inscription|[Inscription]|alliance inscription|73.39 6.33",
+		"POI/Jewelcrafting|[Jewelcrafting]|alliance jewelcrafting|75.2 9.88",
+		"POI/Leatherworking|[Leatherworking]|alliance leatherworking|75.47 12.6",
+		"POI/Mining|[Mining]|alliance mining|75.22 7.56",
+		"POI/Skinning|[Skinning]|alliance skinning|75.66 13.39",
+		"POI/Tailoring|[Tailoring]|alliance tailoring|76.93 11.16",
+		"POI/Cooking|[Cooking]|alliance|71.21 10.69",
+		"POI/Fishing|[Fishing]|alliance|74.16 5.58",
+		"POI/Archaeology|[Archaeology]|alliance|68.33 8.47",
 	},
 
 
@@ -290,24 +290,24 @@ Data.POI = {
 		"groupfinder-icon-class-hunter|[Trueshot Lodge]|10+ hunter 40953|72.85 41.21|tooltip|Eagle to Trueshot Lodge, Home of the Unseen Path",
 
 		-- Professions
-		"POI/Alchemy|[Alchemy]|10+ alchemy|41.44 31.75|tooltip|The Agronomical Apothecary",
-		"POI/Blacksmithing|[Blacksmithing]|10+ blacksmithing -mining|45.1 28.3|tooltip|Tanks for Everything",
-		"POI/Mining|[Mining]|10+ mining -blacksmithing|45.1 28.3|tooltip|Tanks for Everything",
-		"POI/Blacksmithing|[Blacksmithing and Mining]|10+ blacksmithing mining|45.1 28.3|tooltip|Tanks for Everything",
-		"POI/Enchanting|[Enchanting]|10+ enchanting|38.64 40.93|tooltip|Simply Enchanting",
-		"POI/Engineering|[Engineering]|10+ engineering|38.75 25.38|tooltip|Like Clockwork",
-		"POI/Herbalism|[Herbalism]|10+ herbalism|tooltip|43 34.72",
-		"POI/Inscription|[Inscription]|10+ inscription|41.28 37.03|tooltip|The Scribe's Sacellum",
-		"POI/Jewelcrafting|[Jewelcrafting]|10+ jewelcrafting|39.74 34.84|tooltip|Cartier & Co. Fine Jewelry",
-		"POI/Leatherworking|[Leatherworking]|leatherworking -skinning|35.41 29.02|tooltip|Legendary Leathers",
-		"POI/Skinning|[Skinning]|skinning -leatherworking|35.41 29.02|tooltip|Legendary Leathers",
-		"POI/Leatherworking|[Leatherworking and Skinning]|10+ leatherworking skinning|35.41 29.02|tooltip|Legendary Leathers",
-		"POI/Tailoring|[Tailoring]|10+ tailoring|36.04 33.51|tooltip|Talismanic Textiles",
-		"POI/FirstAid|[Bandages]|10+ tailoring|36.6 37.11|tooltip|First to Your Aid",
-		"POI/Cooking|[Cooking]|10+ alliance|40.07 65.98|tooltip|A Hero's Welcome",
-		"POI/Cooking|[Cooking]|10+ horde|69.77 38.77|tooltip|The Filthy Animal",
-		"POI/Fishing|[Fishing]|10+|52.81 65.59|tooltip|Marcia Chase",
-		"POI/Archaeology|[Archaeology]|10+|41.26 25.36|tooltip|Things of the Past",
+		"POI/Alchemy|[Alchemy]|10+ alchemy|41.44 31.75||The Agronomical Apothecary",
+		"POI/Blacksmithing|[Blacksmithing]|10+ blacksmithing -mining|45.51 28.3||Tanks for Everything",
+		"POI/Mining|[Mining]|10+ mining -blacksmithing|46.42 26.82||Tanks for Everything",
+		"POI/Blacksmithing|[Blacksmithing and Mining]|10+ blacksmithing mining|45.51 28.3||Tanks for Everything",
+		"POI/Enchanting|[Enchanting]|10+ enchanting|38.64 40.93||Simply Enchanting",
+		"POI/Engineering|[Engineering]|10+ engineering|38.75 25.38||Like Clockwork",
+		"POI/Herbalism|[Herbalism]|10+ herbalism|43 34.72",
+		"POI/Inscription|[Inscription]|10+ inscription|41.28 37.03||The Scribe's Sacellum",
+		"POI/Jewelcrafting|[Jewelcrafting]|10+ jewelcrafting|39.74 34.84||Cartier & Co. Fine Jewelry",
+		"POI/Leatherworking|[Leatherworking]|leatherworking -skinning|35.41 29.02||Legendary Leathers",
+		"POI/Skinning|[Skinning]|skinning -leatherworking|35.41 29.02||Legendary Leathers",
+		"POI/Leatherworking|[Leatherworking and Skinning]|10+ leatherworking skinning|35.41 29.02||Legendary Leathers",
+		"POI/Tailoring|[Tailoring]|10+ tailoring|36.04 33.51||Talismanic Textiles",
+		"POI/FirstAid|[Bandage Trainer]|10+ tailoring|36.6 37.11||First to Your Aid",
+		"POI/Cooking|[Cooking]|10+ alliance|40.07 65.98||A Hero's Welcome",
+		"POI/Cooking|[Cooking]|10+ horde|69.77 38.77||The Filthy Animal",
+		"POI/Fishing|[Fishing Trainer]|10+|52.81 65.59",
+		"POI/Archaeology|[Archaeology]|10+|41.26 25.36||Things of the Past",
 	},
 
 	-- Aegwynn's Gallery
@@ -645,6 +645,24 @@ Data.POI = {
 	[622] = {
 		-- Portal
 		"POI/Portal|Portal to Stormwind|alliance|60.81 37.9",
+
+		-- Professions
+		"POI/Alchemy|[Alchemy]|5+ alliance alchemy|36.7 68.6",
+		"POI/Blacksmithing|[Blacksmithing]|5+ alliance blacksmithing|49.5 47.69",
+		"POI/Enchanting|[Enchanting]|5+ alliance enchanting|56.79 65.11",
+		"POI/Engineering|[Engineering]|5+ alliance engineering|47.8 39.94||Engineering Works",
+		"POI/Herbalism|[Herbalism]|5+ alliance herbalism|37.78 70.31",
+		"POI/Inscription|[Inscription]|5+ alliance inscription|62.64 33.53||Andromath's Rise",
+		"POI/Jewelcrafting|[Jewelcrafting]|5+ alliance jewelcrafting|43.68 35.13",
+		"POI/Leatherworking|[Leatherworking and Skinning]|5+ alliance leatherworking skinning|52.25 42.46",
+		"POI/Leatherworking|[Leatherworking]|5+ alliance leatherworking -skinning|52.25 42.46",
+		"POI/Mining|[Mining]|5+ alliance mining|47.28 43.68",
+		"POI/Skinning|[Skinning]|5+ alliance skinning -leatherworking|52.24 43.2",
+		"POI/Tailoring|[Tailoring]|5+ alliance tailoring|51.32 36.65",
+		"POI/FirstAid|[Bandage Trainer]|5+ alliance tailoring|45.61 30.71||Stormshield Barracks",
+		"POI/Cooking|[Cooking]|5+ alliance|35.12 76.19||Hero's Rest Inn",
+		"POI/Fishing|[Fishing]|5+ alliance|55.47 78.48",
+		"POI/Archaeology|[Archaeology]|10+ alliance|48.84 33.39",
 	},
 
 
@@ -652,9 +670,9 @@ Data.POI = {
 
 	[371] = {
 		-- Professions
-		"POI/Enchanting|[Enchanting]|10+ enchanting|46.85 42.94|tooltip",
-		"POI/Inscription|[Inscription]|10+ inscription|54.91 45.12|tooltip",
-		"POI/Mining|[Mining]|10+ mining|46.07 29.41|tooltip",
+		"POI/Enchanting|[Enchanting]|10+ enchanting|46.85 42.94",
+		"POI/Inscription|[Inscription]|10+ inscription|54.91 45.12",
+		"POI/Mining|[Mining]|10+ mining|46.07 29.41",
 	},
 
 
@@ -662,8 +680,8 @@ Data.POI = {
 
 	[376] = {
 		-- Professions
-		"POI/Engineering|[Engineering]|10+ engineering|16.06 83.15|tooltip",
-		"POI/Tailoring|[Tailoring]|10+ tailoring|62.66 59.75|tooltip",
+		"POI/Engineering|[Engineering]|10+ engineering|16.06 83.15",
+		"POI/Tailoring|[Tailoring]|10+ tailoring|62.66 59.75",
 	},
 
 
@@ -671,7 +689,7 @@ Data.POI = {
 
 	[379] = {
 		-- Professions
-		"POI/Leatherworking|[Leatherworking]|10+ leatherworking|64.66 60.86|tooltip",
+		"POI/Leatherworking|[Leatherworking]|10+ leatherworking|64.66 60.86",
 	},
 
 
@@ -686,7 +704,39 @@ Data.POI = {
 	-- Shrine of Two Moons - Hall of the Crescent Moon
 	[391] = {
 		"POI/Engineering|[Engineering]|10+ horde engineering|61.05 41.76|tooltip",
-		"POI/FirstAid|[Bandages]|10+ horde tailoring|29.38 75.69|tooltip",
+		"POI/FirstAid|[Bandage Trainer]|10+ horde tailoring|29.38 75.69|tooltip",
+	},
+
+
+	--[[ Crystalsong Forest ]]--
+
+	-- Dalaran
+	[125] = {
+		-- Portal
+		"POI/Portal|Portal to Stormwind|alliance|40.11 62.81",
+		"POI/Portal|Portal to Orgrimmar|horde|55.31 24.02",
+
+		-- Flight Master
+		"taxinode_neutral:small|Dalaran|1+|72.18 45.78",
+
+		-- Professions
+		"POI/Alchemy|[Alchemy]|10+ alchemy|41.44 31.75||The Agronomical Apothecary",
+		"POI/Blacksmithing|[Blacksmithing]|10+ blacksmithing|45.51 28.3||Tanks for Everything",
+		"POI/Mining|[Mining]|10+ mining|41.26 25.36||All That Glitters Prospecting Co.",
+		"POI/Enchanting|[Enchanting]|10+ enchanting|38.64 40.93||Simply Enchanting",
+		"POI/Engineering|[Engineering]|10+ engineering|38.75 25.38||Like Clockwork",
+		"POI/Herbalism|[Herbalism]|10+ herbalism|43 34.72",
+		"POI/Inscription|[Inscription]|10+ inscription|41.28 37.03||The Scribe's Sacellum",
+		"POI/Jewelcrafting|[Jewelcrafting]|10+ jewelcrafting|39.74 34.84||Cartier & Co. Fine Jewelry",
+		"POI/Leatherworking|[Leatherworking]|leatherworking -skinning|35.41 29.02||Legendary Leathers",
+		"POI/Skinning|[Skinning]|skinning -leatherworking|35.41 29.02||Legendary Leathers",
+		"POI/Leatherworking|[Leatherworking and Skinning]|10+ leatherworking skinning|35.41 29.02||Legendary Leathers",
+		"POI/Tailoring|[Tailoring]|10+ tailoring|36.04 33.51||Talismanic Textiles",
+		"POI/FirstAid|[Bandage Trainer]|10+ tailoring|36.6 37.11||First to Your Aid",
+		"POI/Cooking|[Cooking]|10+ alliance|40.07 65.98||A Hero's Welcome",
+		"POI/Cooking|[Cooking]|10+ horde|69.77 38.77||The Filthy Animal",
+		"POI/Fishing|[Fishing Trainer]|10+|52.81 65.59",
+		"POI/Archaeology|[Archaeology Trainer]|10+|48.37 38.21||The Legerdemain Lounge",
 	},
 
 
@@ -695,6 +745,41 @@ Data.POI = {
 	[116] = {
 		-- Portal
 		"POI/DreamwayPortal|Emerald Dreamway|10+ druid 40645|50.32 29.2",
+	},
+
+
+	--[[ Terokkar Forest ]]--
+
+	-- Shattrath
+	[111] = {
+		-- Portal
+		"POI/Portal|Portal to Stormwind|alliance|57.21 48.27",
+		"POI/Portal|Portal to Orgrimmar|horde|56.82 48.87",
+		"POI/Portal|Portal to Isle of Quel'Danas|25+|48.59 42.02",
+
+		-- Professions
+		"POI/Alchemy|[Alchemy]|5+ aldor alchemy -herbalism|38.46 30.11||Aldor Rise",
+		"POI/Alchemy|[Alchemy and Herbalism]|5+ aldor alchemy herbalism|38.46 30.11||Aldor Rise",
+		"POI/Herbalism|[Herbalism]|5+ aldor herbalism -alchemy|38.46 30.11||Aldor Rise",
+		"POI/Blacksmithing|[Blacksmithing]|5+ aldor blacksmithing -engineering|37.49 31.72||Aldor Rise",
+		"POI/Blacksmithing|[Engineering and Blacksmithing]|5+ aldor blacksmithing engineering|37.49 31.72||Aldor Rise",
+		"POI/Engineering|[Engineering]|5+ aldor engineering -blacksmithing|37.49 31.72||Aldor Rise",
+		"POI/Enchanting|[Enchanting]|5+ aldor enchanting -inscription|36.28 43.95||Aldor Rise",
+		"POI/Enchanting|[Enchanting and Inscription]|5+ aldor enchanting inscription|36.28 43.95||Aldor Rise",
+		"POI/Inscription|[Inscription]|5+ aldor inscription -enchanting|36.28 43.95||Aldor Rise",
+		"POI/Jewelcrafting|[Jewelcrafting]|5+ aldor jewelcrafting|35.86 20.09||Aldor Rise",
+		"POI/Mining|[Mining]|5+ aldor mining|35.89 48.38||Aldor Rise",
+		"POI/Skinning|[Skinning]|5+ aldor skinning -leatherworking -tailoring|37.47 27.21||Aldor Rise",
+		"POI/Leatherworking|[Leatherworking]|5+ aldor leatherworking -skinning -tailoring|37.47 27.21||Aldor Rise",
+		"POI/Leatherworking|[Leatherworking and Skinning]|5+ aldor leatherworking skinning|37.47 27.21||Aldor Rise",
+		"POI/Tailoring|[Tailoring]|5+ aldor tailoring -leatherwokring -skinning|37.47 27.21||Aldor Rise",
+		"POI/Tailoring|[Tailoring and Leatherworking]|5+ aldor tailoring leatherwokring|37.47 27.21||Aldor Rise",
+		"POI/Tailoring|[Tailoring and Skinning]|5+ aldor tailoring skinning|37.47 27.21||Aldor Rise",
+		"POI/FirstAid|[Bandage Trainer]|5+ aldor tailoring|66.5 13.44||Shattrath Infirmary",
+		--"POI/Cooking|[Cooking]|5+ aldor|35.12 76.19||Aldor Rise",
+		--"POI/Fishing|[Fishing]|5+ aldor|55.47 78.48||Aldor Rise",
+		--"POI/Archaeology|[Archaeology]|10+ aldor|48.84 33.39||Aldor Rise",
+		"profession|[Profession Trainers]|10+ scryer|43.65 90.87||The Seer's Library",
 	},
 
 
@@ -748,21 +833,21 @@ Data.POI = {
 	-- Thunder Bluff
 	[88] = {
 		-- Professions
-		"POI/Alchemy|[Alchemy]|5+ horde alchemy|46.61 33.2|tooltip",
-		"POI/Blacksmithing|[Blacksmithing]|5+ horde blacksmithing|39.38 55.1|tooltip",
-		"POI/Enchanting|[Enchanting]|5+ horde enchanting|45.3 38.47|tooltip",
-		"POI/Engineering|[Engineering]|5+ horde engineering|36.05 59.62|tooltip",
-		"POI/Herbalism|[Herbalism]|5+ horde herbalism|49.96 40.39|tooltip",
-		"POI/Inscription|[Inscription]|5+ horde inscription|28.69 20.85|tooltip down",
-		"POI/Jewelcrafting|[Jewelcrafting]|5+ horde jewelcrafting|34.83 54|tooltip",
-		"POI/Leatherworking|[Leatherworking]|5+ horde leatherworking|41.51 42.58|tooltip",
-		"POI/Mining|[Mining]|5+ horde mining|34.39 57.88|tooltip",
-		"POI/Skinning|[Skinning]|5+ horde skinning|44.45 43.14|tooltip",
-		"POI/Tailoring|[Tailoring]|5+ horde tailoring|44.54 45.33|tooltip",
-		"POI/FirstAid|[Bandages]|5+ horde tailoring|29.67 21.18|tooltip",
-		"POI/Cooking|[Cooking]|5+ horde|50.74 53.1|tooltip",
-		"POI/Fishing|[Fishing]|5+ horde|56.12 46.4|tooltip",
-		"POI/Archaeology|[Archaeology]|10+ horde|75.05 28.12|tooltip",
+		"POI/Alchemy|[Alchemy]|5+ horde alchemy|46.61 33.2",
+		"POI/Blacksmithing|[Blacksmithing]|5+ horde blacksmithing|39.38 55.1",
+		"POI/Enchanting|[Enchanting]|5+ horde enchanting|45.3 38.47",
+		"POI/Engineering|[Engineering]|5+ horde engineering|36.05 59.62",
+		"POI/Herbalism|[Herbalism]|5+ horde herbalism|49.96 40.39",
+		"POI/Inscription|[Inscription]|5+ horde inscription|28.69 20.85|down",
+		"POI/Jewelcrafting|[Jewelcrafting]|5+ horde jewelcrafting|34.83 54",
+		"POI/Leatherworking|[Leatherworking]|5+ horde leatherworking|41.51 42.58",
+		"POI/Mining|[Mining]|5+ horde mining|34.39 57.88",
+		"POI/Skinning|[Skinning]|5+ horde skinning|44.45 43.14",
+		"POI/Tailoring|[Tailoring]|5+ horde tailoring|44.54 45.33",
+		"POI/FirstAid|[Bandage Trainer]|5+ horde tailoring|29.67 21.18",
+		"POI/Cooking|[Cooking]|5+ horde|50.74 53.1",
+		"POI/Fishing|[Fishing]|5+ horde|56.12 46.4",
+		"POI/Archaeology|[Archaeology]|10+ horde|75.05 28.12",
 	},
 
 
@@ -802,22 +887,22 @@ Data.POI = {
 		"POI/Portal|Portal to Tol Barad|30+ horde|47.39 39.26",
 
 		-- Professions
-		"POI/Alchemy|[Alchemy]|5+ horde alchemy|55.68 45.75|tooltip",
-		"POI/Blacksmithing|[Blacksmithing]|5+ horde blacksmithing|76.5 34.52|tooltip",
-		"POI/Enchanting|[Enchanting]|5+ horde enchanting|53.49 49.55|tooltip",
-		"POI/Engineering|[Engineering]|5+ horde engineering|56.83 56.55|tooltip",
-		"POI/Herbalism|[Herbalism]|5+ horde herbalism|54.6 50.44|tooltip",
-		"POI/Inscription|[Inscription]|5+ horde inscription|55.07 55.88|tooltip",
-		"POI/Jewelcrafting|[Jewelcrafting]|5+ horde jewelcrafting|72.49 34.32|tooltip",
-		"POI/Leatherworking|[Leatherworking and Skinning]|5+ horde leatherworking skinning|61.04 54.81|tooltip",
-		"POI/Leatherworking|[Leatherworking]|5+ horde leatherworking -skinning|60.89 54.89|tooltip",
-		"POI/Mining|[Mining]|5+ horde mining|39.04 85.52|tooltip|Layla Stonebreaker",
-		"POI/Skinning|[Skinning]|5+ horde skinning -leatherworking|61.16 54.65|tooltip",
-		"POI/Tailoring|[Tailoring]|5+ horde tailoring|60.75 59.13|tooltip",
-		"POI/FirstAid|[Bandage]|5+ horde tailoring|38.51 86.41|tooltip",
-		"POI/Cooking|[Cooking]|5+ horde|56.53 62.48|tooltip",
-		"POI/Fishing|[Fishing]|5+ horde|66.44 41.93|tooltip",
-		"POI/Archaeology|[Archaeology]|10+ horde|49.06 70.56|tooltip",
+		"POI/Alchemy|[Alchemy]|5+ horde alchemy|55.68 45.75||Yelmak's Alchemy and Potions",
+		"POI/Blacksmithing|[Blacksmithing]|5+ horde blacksmithing|76.5 34.52||The Burning Anvil",
+		"POI/Enchanting|[Enchanting]|5+ horde enchanting|53.49 49.55||Godan's Runeworks",
+		"POI/Engineering|[Engineering]|5+ horde engineering|56.83 56.55||Nogg's Machine Shop",
+		"POI/Herbalism|[Herbalism]|5+ horde herbalism|54.6 50.44||The Arboretum",
+		"POI/Inscription|[Inscription]|5+ horde inscription|55.07 55.88||The Mighty Pen",
+		"POI/Jewelcrafting|[Jewelcrafting]|5+ horde jewelcrafting|72.49 34.32||Red Canyon Mining & Jewelcrafting",
+		"POI/Leatherworking|[Leatherworking and Skinning]|5+ horde leatherworking skinning|61.04 54.81||Kodohide Leatherworkers",
+		"POI/Leatherworking|[Leatherworking]|5+ horde leatherworking -skinning|60.89 54.89||Kodohide Leatherworkers",
+		"POI/Mining|[Mining]|5+ horde mining|39.04 85.52",
+		"POI/Skinning|[Skinning]|5+ horde skinning -leatherworking|61.16 54.65||Kodohide Leatherworkers",
+		"POI/Tailoring|[Tailoring]|5+ horde tailoring|60.75 59.13||Magar's Cloth Goods",
+		"POI/FirstAid|[Bandage Trainer]|5+ horde tailoring|38.51 86.41",
+		"POI/Cooking|[Cooking]|5+ horde|56.53 62.48||Borstan's Firepit",
+		"POI/Fishing|[Fishing]|5+ horde|66.44 41.93",
+		"POI/Archaeology Trainer|[Archaeology]|10+ horde|49.06 70.56||Grommash Hold",
 	},
 
 	-- Durotar
@@ -859,22 +944,22 @@ Data.POI = {
 		"POI/Portal|Portal to Darkshore|10+ art:62:1176 alliance|24.5 55.6", -- Phased to BfA
 
 		-- Professions
-		"POI/Alchemy|[Alchemy]|5+ alliance alchemy|55.66 86.08|tooltip|Lilyssia Nightbreeze",
-		"POI/Blacksmithing|[Blacksmithing]|5+ alliance blacksmithing|63.66 37.01|tooltip|Therum Deepforge",
-		"POI/Enchanting|[Enchanting]|5+ alliance enchanting|52.9 74.46|tooltip|Lucan Cordell",
-		"POI/Engineering|[Engineering]|5+ alliance engineering|62.84 31.96|tooltip|Lilliam Sparkspindle",
-		"POI/Herbalism|[Herbalism]|5+ alliance herbalism|54.28 84.1|tooltip|Tannysa",
-		"POI/Inscription|[Inscription]|5+ alliance inscription|49.82 74.82|tooltip|Catarina Stanford",
-		"POI/Jewelcrafting|[Jewelcrafting]|5+ alliance jewelcrafting|63.48 61.84|tooltip|Theresa Denman",
-		"POI/Leatherworking|[Leatherworking and Skinning]|5+ alliance leatherworking skinning|71.88 62.55|tooltip|The Protective Hide",
-		"POI/Leatherworking|[Leatherworking]|5+ alliance leatherworking -skinning|71.68 63|tooltip|Simon Tanner",
-		"POI/Mining|[Mining]|5+ alliance mining|59.52 37.78|tooltip|Gelman Stonehand",
-		"POI/Skinning|[Skinning]|5+ alliance skinning -leatherworking|72.14 62.21|tooltip|Maris Granger",
-		"POI/Tailoring|[Tailoring]|5+ alliance tailoring|53.08 81.35|tooltip|Georgio Bolero",
-		"POI/FirstAid|[Bandages]|5+ alliance tailoring|52.18 45.38|tooltip|Angela Leifeld",
-		"POI/Cooking|[Cooking]|5+ alliance|50.57 71.9|tooltip|Robby Flay",
-		"POI/Fishing|[Fishing]|5+ alliance|54.79 69.6|tooltip|Arnold Leland",
-		"POI/Archaeology|[Archaeology]|10+ alliance|85.81 25.94|tooltip|Harrison Jones",
+		"POI/Alchemy|[Alchemy]|5+ alliance alchemy|55.66 86.08",
+		"POI/Blacksmithing|[Blacksmithing]|5+ alliance blacksmithing|63.66 37.01",
+		"POI/Enchanting|[Enchanting]|5+ alliance enchanting|52.9 74.46",
+		"POI/Engineering|[Engineering]|5+ alliance engineering|62.84 31.96",
+		"POI/Herbalism|[Herbalism]|5+ alliance herbalism|54.28 84.1",
+		"POI/Inscription|[Inscription]|5+ alliance inscription|49.82 74.82",
+		"POI/Jewelcrafting|[Jewelcrafting]|5+ alliance jewelcrafting|63.48 61.84",
+		"POI/Leatherworking|[Leatherworking and Skinning]|5+ alliance leatherworking skinning|71.88 62.55||The Protective Hide",
+		"POI/Leatherworking|[Leatherworking]|5+ alliance leatherworking -skinning|71.68 63||The Protective Hide",
+		"POI/Mining|[Mining]|5+ alliance mining|59.52 37.78",
+		"POI/Skinning|[Skinning]|5+ alliance skinning -leatherworking|72.14 62.21||The Protective Hide",
+		"POI/Tailoring|[Tailoring]|5+ alliance tailoring|53.08 81.35",
+		"POI/FirstAid|[Bandage Trainer]|5+ alliance tailoring|52.18 45.38",
+		"POI/Cooking|[Cooking]|5+ alliance|50.57 71.9",
+		"POI/Fishing|[Fishing]|5+ alliance|54.79 69.6",
+		"POI/Archaeology|[Archaeology]|10+ alliance|85.81 25.94",
 
 		-- Legion Intro
 		"Speak:small|[Recruiter Lee]|10+ 40519 _42740 -44663 -44184 alliance|37.01 42.53|tooltip|Skip the Legion introductory quests and begin your journey in Dalaran.",
@@ -892,24 +977,24 @@ Data.POI = {
 		"timewalkingvendor-32x32|[Heirloom Vendor]|alliance|73.9 8.5|tooltip",
 
 		-- Professions
-		"POI/Alchemy|[Alchemy]|5+ alliance alchemy|66.3 55.05|tooltip|Berryfizz's Potions and Mixed Drinks",
-		"POI/Blacksmithing|[Blacksmithing]|5+ alliance blacksmithing|50.95 41.86|tooltip|The Great Forge",
-		"POI/Enchanting|[Enchanting]|5+ alliance enchanting -inscription|60.78 44.56|tooltip|Thistlefuzz Arcanery",
-		"POI/Inscription|[Inscription]|5+ alliance -enchanting inscription|60.78 44.56|tooltip|Thistlefuzz Arcanery",
-		"POI/Enchanting|[Enchanting and Inscription]|5+ alliance enchanting inscription|60.78 44.56|tooltip|Thistlefuzz Arcanery",
-		"POI/Engineering|[Engineering]|5+ alliance engineering|67.59 43.18|tooltip|Springspindle's Gadgets",
-		"POI/FirstAid|[Bandages]|5+ alliance -herbalism tailoring|54.92 58.35|tooltip|Ironforge Physician",
-		"POI/Herbalism|[Herbalism and Bandages]|5+ alliance herbalism tailoring|54.92 58.35|tooltip|Ironforge Physician",
-		"POI/Mining|[Mining]|5+ alliance mining -jewelcrafting|50.64 26.89|tooltip|Deepmountain Mining & Jewelcrafting",
-		"POI/Jewelcrafting|[Jewelcrafting]|5+ alliance -mining jewelcrafting|50.64 26.89|tooltip|Deepmountain Mining & Jewelcrafting",
-		"POI/Jewelcrafting|[Jewelcrafting and Mining]|5+ alliance mining jewelcrafting|50.64 26.89|tooltip|Deepmountain Mining & Jewelcrafting",
-		"POI/Skinning|[Skinning]|5+ alliance skinning -leatherworking|40.38 33.68|tooltip|Finespindle's Leather Goods",
-		"POI/Leatherworking|[Leatherworking]|5+ alliance -skinning leatherworking|40.38 33.68|tooltip|Finespindle's Leather Goods",
-		"POI/Leatherworking|[Leatherworking and Skinning]|5+ alliance skinning leatherworking|40.38 33.68|tooltip|Finespindle's Leather Goods",
-		"POI/Tailoring|[Tailoring]|5+ alliance tailoring|43.53 28.83|tooltip|Stonebrow's Clothier",
-		"POI/Cooking|[Cooking]|5+ alliance|60.28 37.19|tooltip|The Bronze Kettle",
-		"POI/Fishing|[Fishing]|5+ alliance|48.25 7.01|tooltip|Traveling Fisherman",
-		"POI/Archaeology|[Archaeology]|10+ alliance|75.59 11.12|tooltip|The Library",
+		"POI/Alchemy|[Alchemy]|5+ alliance alchemy|66.3 55.05||Berryfizz's Potions and Mixed Drinks",
+		"POI/Blacksmithing|[Blacksmithing]|5+ alliance blacksmithing|50.95 41.86||The Great Forge",
+		"POI/Enchanting|[Enchanting]|5+ alliance enchanting -inscription|60.78 44.56||Thistlefuzz Arcanery",
+		"POI/Inscription|[Inscription]|5+ alliance -enchanting inscription|60.78 44.56||Thistlefuzz Arcanery",
+		"POI/Enchanting|[Enchanting and Inscription]|5+ alliance enchanting inscription|60.78 44.56||Thistlefuzz Arcanery",
+		"POI/Engineering|[Engineering]|5+ alliance engineering|67.59 43.18||Springspindle's Gadgets",
+		"POI/FirstAid|[Bandage Trainer]|5+ alliance -herbalism tailoring|54.92 58.35||Ironforge Physician",
+		"POI/Herbalism|[Herbalism and Bandage Trainer]|5+ alliance herbalism tailoring|54.92 58.35||Ironforge Physician",
+		"POI/Mining|[Mining]|5+ alliance mining -jewelcrafting|50.64 26.89||Deepmountain Mining & Jewelcrafting",
+		"POI/Jewelcrafting|[Jewelcrafting]|5+ alliance -mining jewelcrafting|50.64 26.89||Deepmountain Mining & Jewelcrafting",
+		"POI/Jewelcrafting|[Jewelcrafting and Mining]|5+ alliance mining jewelcrafting|50.64 26.89||Deepmountain Mining & Jewelcrafting",
+		"POI/Skinning|[Skinning]|5+ alliance skinning -leatherworking|40.38 33.68||Finespindle's Leather Goods",
+		"POI/Leatherworking|[Leatherworking]|5+ alliance -skinning leatherworking|40.38 33.68||Finespindle's Leather Goods",
+		"POI/Leatherworking|[Leatherworking and Skinning]|5+ alliance skinning leatherworking|40.38 33.68||Finespindle's Leather Goods",
+		"POI/Tailoring|[Tailoring]|5+ alliance tailoring|43.53 28.83||Stonebrow's Clothier",
+		"POI/Cooking|[Cooking]|5+ alliance|60.28 37.19||The Bronze Kettle",
+		"POI/Fishing|[Fishing]|5+ alliance|48.25 7.01||Traveling Fisherman",
+		"POI/Archaeology|[Archaeology]|10+ alliance|75.59 11.12||The Library",
 	},
 
 	-- Old Ironforge
@@ -930,23 +1015,23 @@ Data.POI = {
 		"timewalkingvendor-32x32|[Heirloom Vendor]|horde|78.14 76.3|tooltip",
 
 		-- Professions
-		"POI/Alchemy|[Alchemy]|5+ horde alchemy|47.77 73.32|tooltip",
-		"POI/Blacksmithing|[Blacksmithing]|5+ horde blacksmithing|61.26 30.62|tooltip",
-		"POI/Enchanting|[Enchanting]|5+ horde enchanting|61.87 61.4|tooltip",
-		"POI/Engineering|[Engineering]|5+ horde engineering|76.13 74.03|tooltip",
-		"POI/Herbalism|[Herbalism]|5+ horde herbalism|54 49.54|tooltip",
-		"POI/Inscription|[Inscription]|5+ horde inscription|61.05 57.95|tooltip",
-		"POI/Jewelcrafting|[Jewelcrafting]|5+ horde jewelcrafting -mining|56.53 36.3|tooltip",
-		"POI/Jewelcrafting|[Jewelcrafting and Mining]|5+ horde jewelcrafting mining|56.3 36.91|tooltip",
-		"POI/Leatherworking|[Leatherworking and Skinning]|5+ horde leatherworking skinning|70.16 58.29|tooltip",
-		"POI/Leatherworking|[Leatherworking]|5+ horde leatherworking -skinning|70.16 57.43|tooltip",
-		"POI/Mining|[Mining]|5+ horde mining -jewelcrafting|56.04 37.45|tooltip",
-		"POI/Skinning|[Skinning]|5+ horde skinning -leatherworking|70.18 59.21|tooltip",
-		"POI/Tailoring|[Tailoring]|5+ horde tailoring|70.76 30.72|tooltip",
-		"POI/FirstAid|[Bandages]|5+ horde tailoring|73.15 55.16|tooltip",
-		"POI/Cooking|[Cooking]|5+ horde|62.15 44.9|tooltip",
-		"POI/Fishing|[Fishing]|5+ horde|80.7 31.27|tooltip",
-		"POI/Archaeology|[Archaeology]|10+ horde|75.41 37.71|tooltip",
+		"POI/Alchemy|[Alchemy]|5+ horde alchemy|47.77 73.32",
+		"POI/Blacksmithing|[Blacksmithing]|5+ horde blacksmithing|61.26 30.62",
+		"POI/Enchanting|[Enchanting]|5+ horde enchanting|61.87 61.4",
+		"POI/Engineering|[Engineering]|5+ horde engineering|76.13 74.03",
+		"POI/Herbalism|[Herbalism]|5+ horde herbalism|54 49.54",
+		"POI/Inscription|[Inscription]|5+ horde inscription|61.05 57.95",
+		"POI/Jewelcrafting|[Jewelcrafting]|5+ horde jewelcrafting -mining|56.53 36.3",
+		"POI/Jewelcrafting|[Jewelcrafting and Mining]|5+ horde jewelcrafting mining|56.3 36.91",
+		"POI/Leatherworking|[Leatherworking and Skinning]|5+ horde leatherworking skinning|70.16 58.29",
+		"POI/Leatherworking|[Leatherworking]|5+ horde leatherworking -skinning|70.16 57.43",
+		"POI/Mining|[Mining]|5+ horde mining -jewelcrafting|56.04 37.45",
+		"POI/Skinning|[Skinning]|5+ horde skinning -leatherworking|70.18 59.21",
+		"POI/Tailoring|[Tailoring]|5+ horde tailoring|70.76 30.72",
+		"POI/FirstAid|[Bandage Trainer]|5+ horde tailoring|73.15 55.16",
+		"POI/Cooking|[Cooking]|5+ horde|62.15 44.9",
+		"POI/Fishing|[Fishing]|5+ horde|80.7 31.27",
+		"POI/Archaeology|[Archaeology]|10+ horde|75.41 37.71",
 	},
 
 	-- Tirisfal Glades
