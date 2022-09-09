@@ -1,5 +1,6 @@
 local _, Data = ...
 
+
 -- Hidden Bonus Objective Quests
 -- Pins for quests in this table are removed from Blizzard's Bonus Objective Data Provider if the "Hide Storylines" setting is enabled
 -- This is used to remove broken bonus objectives or to replace them with our own quest pins
@@ -10,6 +11,10 @@ Data.HiddenBonusObjectiveQuests = {
 	[65749] = true, -- Zereth Mortis - The Necessity Of Equipment
 	[64641] = true, -- Zereth Mortis - Mysterious Greenery
 }
+
+
+-- --------------------------------------------------
+
 
 -- Quests
 
@@ -3565,7 +3570,7 @@ Data.Quests = {
 
 		-- Azure Watch
 		[9612]  = "A Hearty Thanks!|1+ draenei alliance|1 GiftOfTheNaaru|Draenei Youngling|discovery tomtom|Cast {135923} [spell]Gift of the Naaru] on a [green]Draenei Youngling] who is in combat to obtain this quest",
-		[9616]  = "Bandits!|1+ broken:50 alliance|2 BloodElfCommunication|{133473} [Blood Elf Communication]|discovery chromietime tomtom|Drops from [red]Blood Elf Bandit] who is stealthed in a random location",
+		[9616]  = "Bandits!|1+ broken:50 alliance|2 BloodElfCommunication|{133473} [Blood Elf Communication]|discovery chromietime tomtom|Drops from [red]Blood Elf Bandit] who is stealthed in a random location", -- Blizzard bug: as of 9.0 the drop is broken outside Chromie Time and will not drop at all for level 50+ characters, not even in Party Sync
 		[9454]  = "The Great Moongraze Hunt|1+ alliance|49.78 51.93|Acteon",
 		[10324] = "The Great Moongraze Hunt|1+ 9454 alliance|49.78 51.93|Acteon",
 		[9455]  = "Strange Findings|1+ alliance|43 38.6|{134072} [Faintly Glowing Crystal]||Drops from [red]Infected Nightstalker Runt]",
@@ -4697,7 +4702,7 @@ Data.Quests = {
 		[6323]  = "Ride to the Undercity|1+ art:19 horde undead 6321|58.84 51.94|Anette Williams", -- Undead only
 		[24983] = "Forsaken Duties|1+ art:19 horde ~24982|61 50.54|Magistrate Sevren", -- Invalidates breadcrumb 24982
 		[24990] = "Darkhound Pounding|1+ art:19 horde 24976|60.05 52.86|Junior Apothecary Holland",
-		[24992] = "Escaped From Gilneas|1+ art:19 horde 24976 -25039|1 WorgenInfiltrator|[red]Worgen Infiltrator]|discovery|Bring a [red]Darkhound] to low health to force the [red]Worgen Infiltrator] out of hiding", -- Mutually exclusive with 25039; triggering the Worgen Infiltrator completes HQT 25040
+		[24992] = "Escaped From Gilneas|1+ art:19 horde 24976 -25039|1 WorgenInfiltrator|[red]Worgen Infiltrator]|discovery|Bring a [red]Darkhound] to low health to force a [red]Worgen Infiltrator] out of hiding", -- Mutually exclusive with 25039; triggering the Worgen Infiltrator completes HQT 25040
 		[25039] = "Have You Seen Anything Weird Out There?|1+ art:19 horde 25040 -24992|61.88 51.96|Ratslin Maime", -- Requires HQT 25040; mutually exclusive with 24992
 		[24993] = "Annihilate the Worgen|1+ art:19 horde 24992,25039|60.54 51.86|Executor Zygand",
 		[24996] = "Holland's Experiment|1+ art:19 horde 24990|60.05 52.86|Junior Apothecary Holland",
@@ -4770,6 +4775,9 @@ Data.Quests = {
 }
 
 
+-- --------------------------------------------------
+
+
 -- TomTom Waypoints
 -- [QuestID] = "Map|Title|Coordinates|Icon",
 
@@ -4791,7 +4799,6 @@ Data.TomTomWaypoints = {
 	-- Bandits!
 	[9616] = {
 		-- Thanks to Wowhead user axelia for these coordinates <https://www.wowhead.com/quest=9616/bandits#comments:id=1981342>
-		-- Blizzard bug: as of 9.0 the drop is broken outside Chromie Time and will not drop at all for level 50+ characters, not even in Party Sync
 		"97|Blood Elf Bandit (Possible Location)|28.6 79.2|132320",
 		"97|Blood Elf Bandit (Possible Location)|26.4 67.2|132320",
 		"97|Blood Elf Bandit (Possible Location)|33.4 71|132320",
