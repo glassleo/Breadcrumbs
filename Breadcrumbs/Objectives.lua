@@ -1,5 +1,6 @@
 local _, Data = ...
 
+
 -- Quest Objectives
 
 --[[
@@ -37,39 +38,51 @@ local _, Data = ...
 ]]--
 
 Data.Objectives = {
-	-- Maldraxxus
+	
+	--[[ Maldraxxus ]]--
+
 	[1536] = {
 		-- Read Between the Lines
 		[58619] = "questturnin|43.08 25.1|Read Between the Lines",
 	},
+
+
+	--[[ Legion Order Halls ]]--
 
 	-- Monk - Wandering Isle
 	[709] = {
 		[41728] = "questobjective|47.16 47.75|The Defense of Tian Monastery|[Tak-Tak]",
 	},
 
-	-- Nar'thalas Academy, Azsuna
+
+	--[[ Azsuna ]]--
+
+	-- Nar'thalas Academy
 	[631] = {
-		-- Into the Academy
 		[37468] = "questturnin|53.38 47.57|Into the Academy",
 	},
 
-	-- Val'sharah
+
+	--[[ Val'sharah ]]--
+
 	[641] = {
-		-- Jarod's Mission
 		[38691] = "poi-door-left|38.88 53.05|Entrance to Ravencrest Mausoleum",
 	},
 
-	-- Hall of Chieftains, Thunder Totem
+
+	--[[ Highmountain ]]--
+
+	-- Thunder Totem - Hall of Chieftains
 	[652] = {
-		-- Keepers of the Hammer
 		[38907] = "questturnin|54.81 63.18|Keepers of the Hammer",
 		[39989] = "questturnin|54.81 63.18|Keepers of the Hammer",
 	},
 
+
+	--[[ Stormheim ]]--
+
 	-- Stormheim
 	[634] = {
-		-- Pins and Needles
 		[38059] = {
 			"questobjective|30.26 53|Pins and Needles|[7th Legion Dragoon]",
 			"questobjective|28.22 52.93|Pins and Needles|[7th Legion Dragoon]",
@@ -77,19 +90,8 @@ Data.Objectives = {
 		},
 	},
 
-	-- Broken Shore
-	[646] = {
-		-- Excavations
-		[46499] = "questobjective|43.33 31.39|Spiders, Huh?|[Spider-Covered Treasure Chest]",
-		[46501] = "questobjective|49.7 46.7|Grave Robbin'|[Dusty Treasure Chest]",
-		[46509] = "questobjective|67.61 16.16|Tomb Raidering|[Grandiose Treasure Chest]",
-		[46510] = "questobjective|54.69 77.89|Ship Graveyard|[Sunken Treasure Chest]",
-		[46511] = "questobjective|75.75 21.7|We're Treasure Hunters|[Sandy Treasure Chest]",
-	},
-
-	-- Stormscale Cavern, Stormheim
+	-- Stormscale Cavern
 	[636] = {
-		-- Pins and Needles
 		[38059] = {
 			"questobjective|69.6 65.77|Pins and Needles|[7th Legion Dragoon]",
 			"questobjective|45.19 66.93|Pins and Needles|[7th Legion Dragoon]",
@@ -99,9 +101,21 @@ Data.Objectives = {
 		},
 	},
 
-	-- The Jade Forest
+
+	--[[ Broken Shore ]]--
+
+	[646] = {
+		[46499] = "questobjective|43.33 31.39|Spiders, Huh?|[Spider-Covered Treasure Chest]",
+		[46501] = "questobjective|49.7 46.7|Grave Robbin'|[Dusty Treasure Chest]",
+		[46509] = "questobjective|67.61 16.16|Tomb Raidering|[Grandiose Treasure Chest]",
+		[46510] = "questobjective|54.69 77.89|Ship Graveyard|[Sunken Treasure Chest]",
+		[46511] = "questobjective|75.75 21.7|We're Treasure Hunters|[Sandy Treasure Chest]",
+	},
+
+
+	--[[ The Jade Forest ]]--
+
 	[371] = {
-		-- Slowing the Spread
 		[41729] = {
 			"questobjective|38.99 23.24|Slowing the Spread|[Fel Spreader]",
 			"questobjective|41.62 23.75|Slowing the Spread|[Fel Spreader]",
@@ -109,47 +123,48 @@ Data.Objectives = {
 		},
 	},
 
-	-- Stillpine Hold, Azuremyst Isle
-	[99] = {
-		-- Stillpine Hold
-		[9573] = "questobjective|38.49 52.89|Chieftain Oomooroo|[Chieftain Oomooroo]",
-		[9565] = "questturnin|65.18 30.89|Search Stillpine Hold",
-	},
+
+	--[[ Elwynn Forest ]]--
 
 	-- Stormwind
 	[84] = {
-		-- The Nation of Kul Tiras
 		[46728] = "questobjective|22.8 24.7|The Nation of Kul Tiras|[Jaina Proudmoore]",
 		[59641] = "questobjective|22.8 24.7|The Nation of Kul Tiras|[Jaina Proudmoore]",
 	},
 
-	-- Dun Morogh
+
+	--[[ Dun Morogh ]]--
+
 	[27] = {
-		-- Get to the Airfield
 		[25998] = "questobjective:override|75.22 52.77|Get to the Airfield|[Mathel's Flying Machine]",
-
-		-- Striking Back
 		[26094] = "questobjective|77.14 18.52|Striking Back|[Repaired Bomber]",
-
-		-- Demanding Answers
 		[26112] = "questobjective:override|75.94 16.81|Demanding Answers|[Rixa's Flying Machine]",
 	},
 
+
+	--[[ Teldrassil ]]--
+
 	-- Teldrassil
 	[57] = {
-		-- The Shimmering Frond
 		[931] = {
 			"questturnin|59.94 59.77|The Shimmering Frond|[green]You will be able to get the follow-up quest [The Sprouted Fronds] if you turn in this quest here.]",
 			"services-icon-warning:super|43.9 44|[red]Warning]|[red]You might not want to turn in [The Shimmering Frond] here!]||\"Due to a bug, you will only be able to get the follow-up quest [The Sprouted Fronds] if you turn in the quest at Lake Al'ameth instead.\"",
 		},
 	},
 
-	-- Ban'ethil Barrow Den - Upper Den, Teldrassil
-	[60] = {
-		-- The Sleeping Druid
-		[2541] = "questturnin|41.25 83.72|The Sleeping Druid",
+
+	--[[ Azuremyst Isle ]]--
+
+	-- Stillpine Hold
+	[99] = {
+		[9573] = "questobjective|38.49 52.89|Chieftain Oomooroo|[Chieftain Oomooroo]",
+		[9565] = "questturnin|65.18 30.89|Search Stillpine Hold",
 	},
+
 }
+
+
+-- --------------------------------------------------
 
 
 -- Quest Objective Steps
@@ -179,7 +194,9 @@ Data.Objectives = {
 ]]--
 
 Data.ObjectiveSteps = {
-	-- Zereth Mortis
+	
+	--[[ Zereth Mortis ]]--
+
 	[1970] = {
 		[64889] = {
 			"questobjective|48.43 26.38|Match Made in Zereth Mortis|Ascend to Primus Locus",
@@ -191,14 +208,8 @@ Data.ObjectiveSteps = {
 		},
 	},
 
-	-- Loch Modan
-	[48] = {
-		[13650] = {
-			"questobjective|70.69 67.59|Keep Your Hands Off The Goods!|Artifact of the Broken Tablet Inspected",
-			--"questobjective|70.06 59.89|Keep Your Hands Off The Goods!|Artifact of the Upturned Giant Inspected", -- The only one that is working properly
-			"questobjective|72.72 65.47|Keep Your Hands Off The Goods!|Artifact of the Overdressed Woman Inspected",
-		},
-	},
+
+	--[[ Dun Morogh ]]--
 
 	-- Gnomeregan
 	[30] = {
@@ -206,7 +217,29 @@ Data.ObjectiveSteps = {
 		[27674] = "questobjective|67.3 84.15|To the Surface|Speak to Torben Zapblast",
 	},
 
-	-- Ban'ethil Barrow Den - Lower Den, Teldrassil
+	-- The Grizzled Den
+	[29] = {
+		[313] = {
+			"questobjective|51.83 48.37|Forced to Watch from Afar|Convey orders to Mountaineer Dunstan",
+			"questobjective|60.28 56.21|Forced to Watch from Afar|Convey orders to Mountaineer Lewin",
+			"questobjective|61.54 22.27|Forced to Watch from Afar|Convey orders to Mountaineer Valgrum",
+		},
+	},
+
+	
+	--[[ Loch Modan ]]--
+
+	[48] = {
+		[13650] = {
+			"questobjective|70.69 67.59|Keep Your Hands Off The Goods!|Artifact of the Broken Tablet Inspected",
+			"questobjective|72.72 65.47|Keep Your Hands Off The Goods!|Artifact of the Overdressed Woman Inspected",
+		},
+	},
+
+
+	--[[ Teldrassil ]]--
+
+	-- Ban'ethil Barrow Den - Lower Den
 	[61] = {
 		[483] = {
 			"questobjective|64.48 19.59|The Relics of Wakening|Raven Claw Talisman",
@@ -215,7 +248,5 @@ Data.ObjectiveSteps = {
 			"questobjective|54.88 75.42|The Relics of Wakening|Rune of Nesting",
 		}
 	},
-
-
 	
 }
