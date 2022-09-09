@@ -717,7 +717,7 @@ Data.POI = {
 		"POI/Portal|Portal to Orgrimmar|horde|55.31 24.02",
 
 		-- Flight Master
-		"taxinode_neutral:small|Dalaran|1+|72.18 45.78",
+		"taxinode_neutral:small|Dalaran, Crystalsong Forest|1+|72.18 45.78",
 
 		-- Professions
 		"POI/Alchemy|[Alchemy]|10+ alchemy|41.44 31.75||The Agronomical Apothecary",
@@ -794,8 +794,8 @@ Data.POI = {
 	-- Teldrassil
 	[57] = {
 		-- Portal
-		"POI/Portal|Portal to Stormwind|alliance|55.03 93.71",
-		"POI/Portal|Portal to Exodar|alliance|52.27 89.47",
+		"POI/Portal:small|Portal to Stormwind|alliance|55.03 93.71",
+		"POI/Portal:small|Portal to Exodar|alliance|52.27 89.47",
 	},
 
 	-- Ban'ethil Barrow Den - Upper Den
@@ -818,7 +818,7 @@ Data.POI = {
 	-- Azuremyst Isle
 	[97] = {
 		-- Portal
-		"POI/Portal|Portal to Darnassus|alliance|20.4 54.18",
+		"POI/Portal:small|Portal to Darnassus|alliance|20.4 54.18",
 	},
 
 	-- The Exodar
@@ -1004,6 +1004,18 @@ Data.POI = {
 	},
 
 
+	--[[ Eversong Woods ]]--
+
+	-- Silvermoon City
+	[110] = {
+		-- Orb of Translocation
+		"flightmasterargus|Translocator to Tirisfal Glades|horde|49.46 15.05",
+
+		-- Portal
+		"POI/Portal|Portal to Orgrimmar|horde|58.54 18.65",
+	},
+
+
 	--[[ Tirisfal Glades ]]--
 
 	-- Undercity
@@ -1038,6 +1050,9 @@ Data.POI = {
 	[18] = {
 		-- art:19 - Cataclysm
 		-- art:1136 - Battle for Azeroth
+
+		-- Orb of Translocation
+		"flightmasterargus:small|Translocator to Silvermoon City|horde|59.41 67.44",
 
 		-- Portal
 		--"POI/Portal|Portals to Orgrimmar and Stranglethorn Vale|horde art:19|61.2 58.6",
