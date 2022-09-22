@@ -4684,7 +4684,7 @@ Data.Quests = {
 		[24972] = "Vital Intelligence|1+ horde 24971|30.84 66.2|Shadow Priest Sarvis|link:465",
 
 		-- Calston Estate
-		[24979] = "A Scarlet Letter|1+ art:19 horde|32.71 47.82|{237451} [A Scarlet Letter]||Has a chance to drop from [red]Scarlet Warrior]",
+		[24979] = "A Scarlet Letter|1+ art:19 horde|34.21 48.05|{237451} [A Scarlet Letter]||Has a chance to drop from [red]Scarlet Warrior]",
 		[24974] = "Ever So Lonely|1+ art:19 horde|44.75 53.64|Sedrick Calston",
 		[24978] = "Reaping the Reapers|1+ art:19 horde|44.75 53.67|Deathguard Simmer",
 		[24980] = "The Scarlet Palisade|1+ art:19 horde 24978|44.75 53.67|Deathguard Simmer",
@@ -4702,7 +4702,7 @@ Data.Quests = {
 		[6323]  = "Ride to the Undercity|1+ art:19 horde undead 6321|58.84 51.94|Anette Williams", -- Undead only
 		[24983] = "Forsaken Duties|1+ art:19 horde ~24982|61 50.54|Magistrate Sevren", -- Invalidates breadcrumb 24982
 		[24990] = "Darkhound Pounding|1+ art:19 horde 24976|60.05 52.86|Junior Apothecary Holland",
-		[24992] = "Escaped From Gilneas|1+ art:19 horde 24976 -25039|1 WorgenInfiltrator|[red]Worgen Infiltrator]|discovery|Bring a [red]Darkhound] to low health to force a [red]Worgen Infiltrator] out of hiding", -- Mutually exclusive with 25039; triggering the Worgen Infiltrator completes HQT 25040
+		[24992] = "Escaped From Gilneas|1+ art:19 horde +24990 -25039|1 WorgenInfiltrator|[red]Worgen Infiltrator]|discovery|Bring a [red]Darkhound] to low health to force a [red]Worgen Infiltrator] out of hiding", -- Mutually exclusive with 25039; triggering the Worgen Infiltrator completes HQT 25040
 		[25039] = "Have You Seen Anything Weird Out There?|1+ art:19 horde 25040 -24992|61.88 51.96|Ratslin Maime", -- Requires HQT 25040; mutually exclusive with 24992
 		[24993] = "Annihilate the Worgen|1+ art:19 horde 24992,25039|60.54 51.86|Executor Zygand",
 		[24996] = "Holland's Experiment|1+ art:19 horde 24990|60.05 52.86|Junior Apothecary Holland",
