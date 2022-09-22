@@ -168,7 +168,7 @@ Data.POI = {
 	-- Elysian Hold - Archon's Rise
 	[1707] = {
 		-- Portal
-		"POI/Portal|Portal to Oribos|research:1058|48.84 64.79", -- Requires Eternal Paths (Tier 3 Transport Network) (1058)
+		"POI/Portal|Portal to Oribos|kyrian research:1058|48.84 64.79", -- Requires Eternal Paths (Tier 3 Transport Network) (1058)
 
 		-- Mailbox
 		"mailbox:objective|Mailbox|mailbox|48.64 58.21",
@@ -181,7 +181,7 @@ Data.POI = {
 	-- Seat of the Primus
 	[1698] = {
 		-- Portal
-		"POI/Portal|Portal to Oribos|research:1052|56.37 31.5", -- Requires Flying Fortress (Tier 3 Transport Network) (1052)
+		"POI/Portal|Portal to Oribos|necrolord research:1052|56.37 31.5", -- Requires Flying Fortress (Tier 3 Transport Network) (1052)
 
 		-- Mailbox
 		"mailbox:objective|Mailbox|mailbox|48.33 28.16",
@@ -193,10 +193,19 @@ Data.POI = {
 
 	--[[ Ardenweald ]]--
 
-	-- Heart of the Forest
+	-- Heart of the Forest - The Trunk
 	[1701] = {
+		-- Portal
+		"POI/Portal|Portal to Oribos|nightfae research:1055|56.07 12.42", -- Requires Blossoming Network (Tier 3 Transport Network) (1055)
+
 		-- Mailbox
 		"mailbox:objective|Mailbox|mailbox nightfae|52.42 56.33",
+	},
+
+	-- Heart of the Forest - The Roots
+	[1702] = {
+		-- Portal
+		"POI/Portal|Portal to Oribos|nightfae research:1055|59.88 28.46", -- Requires Blossoming Network (Tier 3 Transport Network) (1055)
 	},
 
 
@@ -204,6 +213,9 @@ Data.POI = {
 
 	-- Sinfall - Sinfall Reaches
 	[1699] = {
+		-- Portal
+		"POI/Portal|Portal to Oribos|venthyr research:1049|62.47 26.55", -- Requires Mirror's Edge (Tier 3 Transport Network) (1049)
+
 		-- Mirror
 		"teleportationnetwork-revendreth-32x32:small|Sinfall Depths|1+|36.2 48.2|link:1700",
 
@@ -247,14 +259,12 @@ Data.POI = {
 	-- Boralus
 	[1161] = {
 		-- Portal
-		-- To do: Add Nazjatar portal
-		"POI/Portal|Sanctum of the Sages|10+ alliance -kultiran 47186|70.52 17.28",
-		"POI/Portal|Sanctum of the Sages|10+ alliance kultiran|70.52 17.28",
+		"POI/Portal|Sanctum of the Sages|10+ alliance 47186,kultiran|70.52 17.28",
 
 		-- Scrapper
 		"poi-scrapper|[Scrap-O-Matic 1000]|alliance|77.13 16.31",
 
-		-- Professions
+		-- Profession
 		"POI/Alchemy|[Alchemy]|alliance alchemy|74.2 6.54",
 		"POI/Blacksmithing|[Blacksmithing]|alliance blacksmithing|73.4 8.46",
 		"POI/Enchanting|[Enchanting]|alliance enchanting|74.03 11.55",
@@ -267,8 +277,54 @@ Data.POI = {
 		"POI/Skinning|[Skinning]|alliance skinning|75.66 13.39",
 		"POI/Tailoring|[Tailoring]|alliance tailoring|76.93 11.16",
 		"POI/Cooking|[Cooking]|alliance|71.21 10.69",
-		"POI/Fishing|[Fishing]|alliance|74.16 5.58",
+		"POI/Fishing|[Fishing Trainer]|alliance|74.16 5.58",
 		"POI/Archaeology|[Archaeology]|alliance|68.33 8.47",
+	},
+
+
+	--[[ Zuldazar ]]--
+
+	-- Dazar'alor
+	[1165] = {
+		-- Portal
+		"POI/Portal|Hall of Ancient Paths|10+ horde 46931,zandalari|51.2 46.11|link:1163",
+
+		-- Scrapper
+		"poi-scrapper|[Shred-Master Mk1]|horde|45.05 40.03",
+
+		-- Profession
+		"POI/Alchemy|[Alchemy]|horde alchemy|42.22 37.95",
+		"POI/Blacksmithing|[Blacksmithing]|horde blacksmithing|43.65 38.3",
+		"POI/Enchanting|[Enchanting]|horde enchanting|47.1 35.68|down|Hall of Glimmers",
+		--"POI/Engineering|[Engineering]|horde engineering|45.21 40.81",
+		"POI/Herbalism|[Herbalism]|horde herbalism|42.1 35.83",
+		"POI/Inscription|[Inscription]|horde inscription|42.33 39.73",
+		"POI/Jewelcrafting|[Jewelcrafting]|horde jewelcrafting|47.05 37.92|down|Hall of Glimmers",
+		"POI/Leatherworking|[Leatherworking]|horde leatherworking|44.07 34.64",
+		"POI/Mining|[Mining]|horde mining|44.12 38.97",
+		"POI/Skinning|[Skinning]|horde skinning|43.76 34.66",
+		"POI/Tailoring|[Tailoring]|horde tailoring|44.5 33.89",
+		"POI/Cooking|[Cooking]|horde|48.65 44.63|link:1164|The Royal Meat Rack",
+		"POI/Fishing|[Fishing Trainer]|horde|50.51 23.36",
+	},
+
+	-- The Great Seal
+	[1163] = {
+		-- Portal
+		"POI/Portal|Portal to Silvermoon City|10+ horde 46931,zandalari|73.85 62.2",
+		"POI/Portal|Portal to Orgrimmar|10+ horde 46931,zandalari|73.85 69.92",
+		"POI/Portal|Portal to Thunder Bluff|10+ horde 46931,zandalari|73.85 77.38",
+		"POI/Portal|Portal to Silithus|50+ horde|73.85 85.35",
+		"POI/Portal|Portal to Nazjatar|50+ horde 55053|62.97 85.44",
+
+		-- Profession
+		"POI/Archaeology|[Archaeology]|horde|31.75 35.36||Vault of Kings",
+	},
+
+	-- Hall of Chroniclers
+	[1164] = {
+		-- Professions
+		"POI/Cooking|[Cooking]|horde|28.51 50.17||The Royal Meat Rack",
 	},
 
 
@@ -651,18 +707,30 @@ Data.POI = {
 		"POI/Blacksmithing|[Blacksmithing]|5+ alliance blacksmithing|49.5 47.69",
 		"POI/Enchanting|[Enchanting]|5+ alliance enchanting|56.79 65.11",
 		"POI/Engineering|[Engineering]|5+ alliance engineering|47.8 39.94||Engineering Works",
-		"POI/Herbalism|[Herbalism]|5+ alliance herbalism|37.78 70.31",
 		"POI/Inscription|[Inscription]|5+ alliance inscription|62.64 33.53||Andromath's Rise",
 		"POI/Jewelcrafting|[Jewelcrafting]|5+ alliance jewelcrafting|43.68 35.13",
-		"POI/Leatherworking|[Leatherworking and Skinning]|5+ alliance leatherworking skinning|52.25 42.46",
-		"POI/Leatherworking|[Leatherworking]|5+ alliance leatherworking -skinning|52.25 42.46",
-		"POI/Mining|[Mining]|5+ alliance mining|47.28 43.68",
-		"POI/Skinning|[Skinning]|5+ alliance skinning -leatherworking|52.24 43.2",
+		"POI/Leatherworking|[Leatherworking]|5+ alliance leatherworking|52.25 42.46",
 		"POI/Tailoring|[Tailoring]|5+ alliance tailoring|51.32 36.65",
-		"POI/FirstAid|[Bandage Trainer]|5+ alliance tailoring|45.61 30.71||Stormshield Barracks",
-		"POI/Cooking|[Cooking]|5+ alliance|35.12 76.19||Hero's Rest Inn",
-		"POI/Fishing|[Fishing]|5+ alliance|55.47 78.48",
+		"POI/Fishing|[Fishing Trainer]|5+ alliance|55.47 78.48",
 		"POI/Archaeology|[Archaeology]|10+ alliance|48.84 33.39",
+	},
+
+	-- Warspear
+	[624] = {
+		-- Portal
+		"POI/Portal|Portal to Orgrimmar|horde|60.81 51.61",
+
+		-- Professions
+		"POI/Alchemy|[Alchemy]|5+ horde alchemy|61.17 27.14||Alchemy Lab",
+		"POI/Blacksmithing|[Blacksmithing]|5+ horde blacksmithing|74.41 37.36",
+		"POI/Enchanting|[Enchanting]|5+ horde enchanting|78.4 53.03||Enchanter's Study",
+		"POI/Engineering|[Engineering]|5+ horde engineering|71.19 39.61||Gallywix's Garage",
+		"POI/Inscription|[Inscription]|5+ horde inscription|76.54 47.29",
+		"POI/Jewelcrafting|[Jewelcrafting]|5+ horde jewelcrafting|60.03 40.25||Gem Boutique",
+		"POI/Leatherworking|[Leatherworking]|5+ horde leatherworking|49.97 27.84||The Tannery",
+		"POI/Tailoring|[Tailoring]|5+ horde tailoring|59.35 43.09",
+		"POI/Fishing|[Fishing Trainer]|5+ horde|69.12 16.52",
+		"POI/Archaeology|[Archaeology]|10+ horde|73.99 31.6",
 	},
 
 
@@ -756,6 +824,11 @@ Data.POI = {
 		"POI/Portal|Portal to Stormwind|alliance|57.21 48.27",
 		"POI/Portal|Portal to Orgrimmar|horde|56.82 48.87",
 		"POI/Portal|Portal to Isle of Quel'Danas|25+|48.59 42.02",
+
+		-- Mailbox
+		"mailbox:objective|Mailbox|mailbox scryer|55.41 80.62",
+		"mailbox:objective|Mailbox|mailbox scryer|60.07 65.05",
+		"mailbox:objective|Mailbox|mailbox scryer|61.15 64.24",
 
 		-- Professions
 		"POI/Alchemy|[Alchemy]|5+ aldor alchemy -herbalism|38.46 30.11||Aldor Rise",
@@ -881,10 +954,9 @@ Data.POI = {
 	[85] = {
 		-- Portal
 		"-:large|The Western Earthshrine|horde|50.4 37.3||Cataclysm Portals",
-		"POI/Portal|Portal to Undercity|art:18:19 horde|50.75 55.59",
-		"POI/Portal|Portal to Tirisfal Glades|art:18:1136 horde|50.75 55.59",
-		"POI/Portal|Portal to Tirisfal Glades|50+ horde|50.75 55.59",
-		"POI/Portal|Portal to Tol Barad|30+ horde|47.39 39.26",
+		"POI/Portal:small|Portal to Undercity|art:18:19 horde|50.75 55.59",
+		"POI/Portal:small|Portal to Tirisfal Glades|art:18:1136 horde|50.75 55.59",
+		"POI/Portal:small|Portal to Tol Barad|30+ horde|47.39 39.26",
 
 		-- Professions
 		"POI/Alchemy|[Alchemy]|5+ horde alchemy|55.68 45.75||Yelmak's Alchemy and Potions",
@@ -916,8 +988,8 @@ Data.POI = {
 
 	-- Silithus
 	[81] = {
-		-- Classic: art:86
-		-- BfA: art:962
+		-- art:86 - Cataclysm
+		-- art:962 - Battle for Azeroth
 
 		-- Portal
 		"POI/Portal:small|Portal to Tiragarde|art:962 50+ alliance|41.49 44.85",
@@ -940,26 +1012,26 @@ Data.POI = {
 	[84] = {
 		-- Portal
 		"-:large|The Eastern Earthshrine|alliance|74.85 17.65||Cataclysm Portals",
-		"POI/Portal|Portal to Darnassus|10+ art:62:67 alliance|24.5 55.6", -- Requires level 10 to use; phased to Cataclysm
-		"POI/Portal|Portal to Darkshore|10+ art:62:1176 alliance|24.5 55.6", -- Phased to BfA
+		"POI/Portal:small|Portal to Darnassus|10+ art:62:67 alliance|24.5 55.6", -- Requires level 10 to use; phased to Cataclysm
+		"POI/Portal:small|Portal to Darkshore|10+ art:62:1176 alliance|24.5 55.6", -- Phased to BfA
 
 		-- Professions
-		"POI/Alchemy|[Alchemy]|5+ alliance alchemy|55.66 86.08",
+		"POI/Alchemy|[Alchemy]|5+ alliance alchemy|55.66 86.08||Alchemy Needs",
 		"POI/Blacksmithing|[Blacksmithing]|5+ alliance blacksmithing|63.66 37.01",
-		"POI/Enchanting|[Enchanting]|5+ alliance enchanting|52.9 74.46",
+		"POI/Enchanting|[Enchanting]|5+ alliance enchanting|52.9 74.46||Cordell's Enchanting",
 		"POI/Engineering|[Engineering]|5+ alliance engineering|62.84 31.96",
-		"POI/Herbalism|[Herbalism]|5+ alliance herbalism|54.28 84.1",
-		"POI/Inscription|[Inscription]|5+ alliance inscription|49.82 74.82",
-		"POI/Jewelcrafting|[Jewelcrafting]|5+ alliance jewelcrafting|63.48 61.84",
+		"POI/Herbalism|[Herbalism Trainer]|5+ alliance herbalism|54.28 84.1",
+		"POI/Inscription|[Inscription]|5+ alliance inscription|49.82 74.82||The Scribe of Stormwind",
+		"POI/Jewelcrafting|[Jewelcrafting]|5+ alliance jewelcrafting|63.48 61.84||Denman Family Jewelers",
 		"POI/Leatherworking|[Leatherworking and Skinning]|5+ alliance leatherworking skinning|71.88 62.55||The Protective Hide",
 		"POI/Leatherworking|[Leatherworking]|5+ alliance leatherworking -skinning|71.68 63||The Protective Hide",
-		"POI/Mining|[Mining]|5+ alliance mining|59.52 37.78",
+		"POI/Mining|[Mining]|5+ alliance mining|59.52 37.78||Stonehand Mining",
 		"POI/Skinning|[Skinning]|5+ alliance skinning -leatherworking|72.14 62.21||The Protective Hide",
-		"POI/Tailoring|[Tailoring]|5+ alliance tailoring|53.08 81.35",
-		"POI/FirstAid|[Bandage Trainer]|5+ alliance tailoring|52.18 45.38",
-		"POI/Cooking|[Cooking]|5+ alliance|50.57 71.9",
+		"POI/Tailoring|[Tailoring]|5+ alliance tailoring|53.08 81.35||Duncan's Textiles",
+		"POI/FirstAid|[Bandage Trainer]|5+ alliance tailoring|52.18 45.38||Cathedral of Light",
+		"POI/Cooking|[Cooking]|5+ alliance|50.6 73.86",
 		"POI/Fishing|[Fishing]|5+ alliance|54.79 69.6",
-		"POI/Archaeology|[Archaeology]|10+ alliance|85.81 25.94",
+		"POI/Archaeology|[Archaeology]|10+ alliance|85.81 25.94||Royal Library",
 
 		-- Legion Intro
 		"Speak:small|[Recruiter Lee]|10+ 40519 _42740 -44663 -44184 alliance|37.01 42.53|tooltip|Skip the Legion introductory quests and begin your journey in Dalaran.",
