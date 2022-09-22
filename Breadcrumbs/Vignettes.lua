@@ -63,6 +63,27 @@ Data.Vignettes = {
 		[59889] = "Smuggled Cache|48+|31.05 55.06||treasure item:182738|Contains|{133640} [uncommon]Bundle of Smuggled Parasol Components]|{/Random} [Random Food] (5)|{133250} [Infused Ruby] (5)||\"There is a high chance that you will be ambushed after looting this treasure\"",
 		[62199] = {"Ingress and Egress Rites|48+|63.01 72.36||treasure interact", "Taskmaster's Trove|48+|62.82 75.3|\"Use the nearby Ingress and Egress Rites to reveal this treasure\"|treasure item:183986|Contains|{1311628} [rare]Bondable Sinstone]",},
 		[62164] = "Vyrtha's Dredglaive|48+|70.17 60.06||treasure item:177807|Contains|{3150768} [rare]Vyrtha's Dredglaive]",
+		
+		-- Thanks to Wowhead users Raapnaap, Frimlin and Emerno for all the details on Broken Mirrors
+		-- Broken Mirror Group 1
+		[9999991] = "Forgotten Chest|60+ venthyr research:1049 active:61879,61879|29.49 37.26|[green]Broken Mirror]|treasure|\"In a room with a cooking pot\"||Requires|{133617} [rare]Handcrafted Mirror Repair Kit]",
+		[9999992] = "Forgotten Chest|60+ venthyr research:1049 active:61879,61879|27.15 21.63|[green]Broken Mirror]|treasure|\"In a room with spiders\"||Requires|{133617} [rare]Handcrafted Mirror Repair Kit]",
+		[9999993] = "Forgotten Chest|60+ venthyr research:1049 active:61879,61879|40.41 73.34|[green]Broken Mirror]|treasure|\"In a house with sleeping wildlife\"||Requires|{133617} [rare]Handcrafted Mirror Repair Kit]",
+
+		-- Broken Mirror Group 2
+		[9999994] = "Forgotten Chest|60+ venthyr research:1049 active:61883,61883|39.09 52.18|[green]Broken Mirror]|treasure|\"On the ground floor\"||Requires|{133617} [rare]Handcrafted Mirror Repair Kit]",
+		[9999995] = "Forgotten Chest|60+ venthyr research:1049 active:61883,61883|58.8 67.8|[green]Broken Mirror]|treasure|\"In the corner house next to Feeder's Thicket\"||Requires|{133617} [rare]Handcrafted Mirror Repair Kit]",
+		[9999996] = "Forgotten Chest|60+ venthyr research:1049 active:61883,61883|70.97 43.63|[green]Broken Mirror]|treasure|\"In a room with disciples\"||Requires|{133617} [rare]Handcrafted Mirror Repair Kit]",
+
+		-- Broken Mirror Group 3
+		[61830] = "Forgotten Chest|60+ venthyr research:1049 active:61885,61885|72.55 43.64|[green]Broken Mirror: Forgotten Chamber]|treasure|\"Repair the mirror inside the Depraved crypt to access the Forgotten Chamber\"||Requires|{133617} [rare]Handcrafted Mirror Repair Kit]", -- Repair: 61817
+		[61831] = "Forgotten Chest|60+ venthyr research:1049 active:61885,61885|40.33 77.18|[green]Broken Mirror: Forgotten Chamber]|treasure|\"Repair the mirror inside the house to access the Forgotten Chamber\"||Requires|{133617} [rare]Handcrafted Mirror Repair Kit]", -- Repair: 61821
+		[61832] = "Forgotten Chest|60+ venthyr research:1049 active:61885,61885|77.15 65.49|[green]Broken Mirror: Forgotten Chamber]|treasure|\"Repair the mirror inside Caretaker's Manor to access the Forgotten Chamber\"||Requires|{133617} [rare]Handcrafted Mirror Repair Kit]", -- Repair: 61825
+
+		-- Broken Mirror Group 4
+		[9999990] = "Forgotten Chest|60+ venthyr research:1049 active:61886,61886|29.6 25.89|[green]Broken Mirror]|treasure|\"In a room with an elite Soulbinder\"||Requires|{133617} [rare]Handcrafted Mirror Repair Kit]",
+		[9999911] = "Forgotten Chest|60+ venthyr research:1049 active:61886,61886|20.75 54.26|[green]Broken Mirror]|treasure|\"Entrance of main building\"||Requires|{133617} [rare]Handcrafted Mirror Repair Kit]",
+		[9999912] = "Forgotten Chest|60+ venthyr research:1049 active:61886,61886|55.12 35.67|[green]Broken Mirror]|treasure|\"Inside a crypt with nobles\"||Requires|{133617} [rare]Handcrafted Mirror Repair Kit]",
 	},
 
 
@@ -538,7 +559,15 @@ Data.Vignettes = {
 	-- Lunarfall
 	[582] = {
 		-- Treasure
-		[35383] = {"Pipper's Buried Supplies|10+ alliance garrison:1|30.9 27.7||treasure|Contains|{1005027} [Garrison Resources]",},
+		[35383] = "Pipper's Buried Supplies|10+ alliance garrison:1|30.9 27.7||treasure|Contains|{1005027} [Garrison Resources]",
+	},
+
+
+	--[[ Nagrand ]]--
+
+	[550] = {
+		-- Vignette
+		[35898] = "Gorepetal|10+|93.1 28.39|\"Pick the Pristine Lily to force Gorepetal out of hiding\"|vignette item:116916|Drops|{944150} [rare]Gorepetal's Gentle Grasp]",
 	},
 
 
