@@ -695,6 +695,15 @@ Data.POI = {
 	},
 
 
+	--[[ Shadowmoon Valley ]]--
+
+	-- Lunarfall
+	[582] = {
+		-- Portal
+		"POI/Portal|Portal to Ashran|alliance garrison:3|70.1 27.3",
+	},
+
+
 	--[[ Ashran ]]--
 
 	-- Stormshield
@@ -1014,6 +1023,7 @@ Data.POI = {
 		"-:large|The Eastern Earthshrine|alliance|74.85 17.65||Cataclysm Portals",
 		"POI/Portal:small|Portal to Darnassus|10+ art:62:67 alliance|24.5 55.6", -- Requires level 10 to use; phased to Cataclysm
 		"POI/Portal:small|Portal to Darkshore|10+ art:62:1176 alliance|24.5 55.6", -- Phased to BfA
+		"POI/Portal:small|Rift to Telogrus|alliance voidelf|54.47 15.36", -- Void Elf only
 
 		-- Professions
 		"POI/Alchemy|[Alchemy]|5+ alliance alchemy|55.66 86.08||Alchemy Needs",
