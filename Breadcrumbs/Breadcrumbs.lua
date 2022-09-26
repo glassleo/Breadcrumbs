@@ -940,8 +940,8 @@ function Breadcrumbs:UpdateMap(event, ...)
 										end
 									end)
 								end
-
-								Pins:AddWorldMapIconMap("Breadcrumbs", Pin, map, x/100, y/100, nil, "PIN_FRAME_LEVEL_VIGNETTE")
+								
+								Pins:AddWorldMapIconMap("Breadcrumbs", Pin, map, x/100, y/100, nil, "PIN_FRAME_LEVEL_SUPER_TRACKED_QUEST")
 								Pin:Show()
 							end
 						end
