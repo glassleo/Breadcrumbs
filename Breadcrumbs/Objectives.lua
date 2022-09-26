@@ -42,8 +42,8 @@ Data.Objectives = {
 	--[[ Maldraxxus ]]--
 
 	[1536] = {
-		-- Read Between the Lines
 		[58619] = "questturnin|43.08 25.1|Read Between the Lines",
+		[61095] = "questturnin|50.76 53.39|Supplies from The Undying Army", -- This quest is hidden on the world map normally for some reason
 	},
 
 
