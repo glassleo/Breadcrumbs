@@ -1023,7 +1023,8 @@ Data.POI = {
 		"-:large|The Eastern Earthshrine|alliance|74.85 17.65||Cataclysm Portals",
 		"POI/Portal:small|Portal to Darnassus|10+ art:62:67 alliance|24.5 55.6", -- Requires level 10 to use; phased to Cataclysm
 		"POI/Portal:small|Portal to Darkshore|10+ art:62:1176 alliance|24.5 55.6", -- Phased to BfA
-		"POI/Portal:small|Rift to Telogrus|alliance voidelf|54.47 15.36", -- Void Elf only
+		"POI/VoidPortal:small|Rift to Telogrus|alliance voidelf|54.47 15.36", -- Void Elf only
+		"teleportationnetwork-32x32:small|Mechagon City Teleporter|alliance mechagnome|52.75 16.08", -- Mechagnome only
 
 		-- Professions
 		"POI/Alchemy|[Alchemy]|5+ alliance alchemy|55.66 86.08||Alchemy Needs",
@@ -1045,6 +1046,21 @@ Data.POI = {
 
 		-- Legion Intro
 		"Speak:small|[Recruiter Lee]|10+ 40519 _42740 -44663 -44184 alliance|37.01 42.53|tooltip|Skip the Legion introductory quests and begin your journey in Dalaran.",
+	},
+
+	-- Telogrus Rift
+	[971] = {
+		-- Portal
+		"POI/VoidPortal|Rift to Stormwind|alliance|27.99 21.51",
+		"POI/VoidPortal|Rift to Fathom's Edge|alliance|27.9 28.61",
+		"POI/VoidPortal|Rift to Telogrus|alliance|29.45 37.79",
+	},
+
+	-- Mechagon City
+	[1573] = {
+		-- Portal
+		"teleportationnetwork-32x32:small|Stormwind Teleportation Unit|alliance|20.5 59.8",
+		--"teleportationnetwork-32x32:small|Mechagon City Teleporter|alliance|31 87.75", -- Inactive
 	},
 
 
