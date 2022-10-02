@@ -929,6 +929,9 @@ Data.Quests = {
 		-- Sanctuary of the Mad
 		[60276] = "WANTED: Summoner Marcelis|59+,62704|30.87 49.05|Wanted: Summoner Marcelis",
 		[60275] = "WANTED: Enforcer Kristof|60+|30.68 48.99|Wanted: Enforcer Kristof",
+
+		-- Stonehead
+		[58327] = "Snacks for Stonehead|60+,62704|39.31 65.22|Chewed Light Shard||\"Use the nearby Hollow Rock to disguise yourself from Stonehead\"",
 	},
 
 
