@@ -173,7 +173,7 @@ Data.Objectives = {
 	Data Structure
 
 	[MapID] = {
-		[QuestID] = "Icon|Coordinates|Title|Objective", -- Quest Name
+		[QuestID] = "Icon|Coordinates|Title|Objective|Description", -- Quest Name
 	},
 
 	Icon: Texture or Atlas to use as the pin's icon (use "questobjective" for a yellow dot)
@@ -190,7 +190,9 @@ Data.Objectives = {
 
 	Title: Quest Name
 
-	Objective: Objective text to match, excluding "0/X"
+	Objective: Objective text to match, excluding "0/X" OR item:id:n
+
+	Description: Optional description text, only used for items
 ]]--
 
 Data.ObjectiveSteps = {
@@ -206,6 +208,13 @@ Data.ObjectiveSteps = {
 			"questobjective|50.77 32.55|Match Made in Zereth Mortis|Ascend to Quintus Locus",
 			"questobjective|48.71 31.97|Match Made in Zereth Mortis|Ascend to Ultimus Locus",
 		},
+	},
+
+
+	--[[ Redridge Mountains ]]--
+
+	[49] = {
+		[26646] = "questobjective|69.52 76.31|Prisoners of War|item:59261|Blackrock Holding Pen Key",
 	},
 
 

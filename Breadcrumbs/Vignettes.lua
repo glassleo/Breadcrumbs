@@ -627,4 +627,12 @@ Data.Vignettes = {
 		[54131] = "Waterlogged Chest|1+|32.2 63.5||treasure item:3678|Contains|{135274} [Pitted Defias Shortsword]|{134939} [Recipe: Crocolisk Steak]|{133694} [poor]Red Defias Mask]|{133994} [Stormwind Brie]",
 	},
 
+
+	--[[ Redridge Mountains ]]--
+
+	[49] = {
+		-- Vignette
+		[54214] = "Gnollfeaster|7+|24.36 70.97||vignette item:165722|Drops|{132834} [rare]Redridge Tarantula Egg]",
+	},
+
 }

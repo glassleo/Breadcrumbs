@@ -4553,12 +4553,59 @@ Data.Quests = {
 
 	[49] = {
 		-- Three Corners
+		[26503] = "Still Assessing the Threat|7+ alliance ~26365 ~28563|15.32 64.59|Watch Captain Parker", -- Invalidates breadcrumbs 26365 and 28563
+		[26505] = "Parker's Report|7+ alliance 26503|15.32 64.59|Watch Captain Parker",
+		[26506] = "Franks and Beans|7+ alliance|15.62 65.32|Darcy Parker",
+		[26504] = "WANTED: Redridge Gnolls|7+ alliance|16.04 64.61|Wanted!",
 
 		-- Lakeshire
 		[26508] = "Nida's Necklace|7+ alliance|28.34 48.87|Shawn",
-		[26510] = "We Must Prepare!|7+ alliance ~26505|28.91 41.11|Magistrate Solomon", -- Invalidates breadcrumb 26505?
-		[26511] = "Lake Everstill Clean Up|7+ alliance|28.68 40.95|Bailiff Conacher",
+		[26509] = "An Unwelcome Guest|7+ alliance|22.04 42.7|Martie Jainrose",
 		[26728] = "Hero's Call: Duskwood!|10+ alliance -28564 -26618|28.68 40.95|Bailiff Conacher", -- Breadcrumb for 26618; mutually exclusive with 28564
+		[26510] = "We Must Prepare!|7+ alliance|28.91 41.11|Magistrate Solomon",
+		[26511] = "Lake Everstill Clean Up|7+ alliance|28.68 40.95|Bailiff Conacher",
+		[26512] = "Tuning the Gnomecorder|7+ alliance 26510|28.91 41.11|Magistrate Solomon",
+		[26513] = "Like a Fart in the Wind|7+ alliance 26510|31.86 44.89|Marshal Marris", -- 26511 might be prereq?
+		[26519] = "He Who Controls the Ettins|7+ alliance 26510|28.23 23.58|{134944} [uncommon]Dirt-Stained Scroll]||Has a chance to drop from [red]Redridge] Gnolls in the Redridge Canyons",
+		[26520] = "Saving Foreman Oslow|7+ alliance 26519|17.86 18.6|Ettin Control Orb|down|\"Inside Rethban Caverns\"",
+		[26514] = "Canyon Romp|7+ alliance 26512|28.91 41.11|Magistrate Solomon",
+		[26544] = "They've Wised Up...|7+ alliance 26514|28.91 41.11|Magistrate Solomon",
+		[26545] = "Yowler Must Die!|7+ alliance 26544|28.91 41.11|Magistrate Solomon",
+		[26567] = "John J. Keeshan|7+ alliance 26520 26545|28.66 40.73|Colonel Troteman",
+		[26568] = "This Ain't My War|7+ alliance 26567|26.29 40.13|John J. Keeshan",
+		[26570] = "Render's Army|7+ alliance 26568|29.73 44.52|Marshal Marris",
+		[26569] = "Surveying Equipment|7+ alliance 26568|29.65 44.54|Foreman Oslow",
+		[26571] = "Weapons of War|7+ alliance 26568|28.66 40.73|Colonel Troteman",
+		[26573] = "His Heart Must Be In It|7+ alliance 26571|28.66 40.73|Colonel Troteman",
+		[26586] = "In Search of Bravo Company|7+ alliance 26568|28.66 40.73|Colonel Troteman",
+		[26587] = "Breaking Out is Hard to Do|7+ alliance 26586|47.53 41.95|Messner",
+		[26560] = "Jorgensen|7+ alliance 26587|41.72 20.87|Messner",
+		[26561] = "Krakauer|7+ alliance 26560|33.69 11.68|Jorgensen",
+		[26562] = "And Last But Not Least... Danforth|7+ alliance 26561|30.7 9.3|Krakauer",
+		[26563] = "Return of the Bravo Company|7+ alliance 26562|30.7 9.3|Danforth",
+		[26607] = "They Drew First Blood|7+ alliance 26573 26563|28.66 40.73|Colonel Troteman",
+		[26616] = "It's Never Over|7+ alliance 26607|26.33 40.1|John J. Keeshan",
+
+		-- Camp Everstill
+		[26636] = "Bravo Company Field Kit: Camouflage|7+ alliance 26616|52.4 55.4|Krakauer",
+		[26637] = "Bravo Company Field Kit: Chloroform|7+ alliance 26616|52.43 55.55|Messner",
+		[26638] = "Hunting the Hunters|7+ alliance 26616|52.53 55.55|Danforth",
+		[26639] = "Point of Contact: Brubaker|7+ alliance 26616|52.55 55.41|John J. Keeshan",
+		[26640] = "Unspeakable Atrocities|7+ alliance 26639|53.05 67.83|[dead]Brubaker]",
+		[26646] = "Prisoners of War|7+ alliance 26636 26637 26638 26640|52.55 55.41|John J. Keeshan",
+		[26651] = "To Win a War, You Gotta Become War|7+ alliance 26646|52.55 55.41|John J. Keeshan",
+
+		--- Shalewind Canyon
+		[26668] = "Detonation|7+ alliance 26651|77.69 65.5|John J. Keeshan",
+		[26692] = "Shadowhide Extinction|7+ alliance 26668|77.63 65.34|Danforth",
+		[26693] = "The Dark Tower|7+ alliance 26668|77.69 65.5|John J. Keeshan",
+		[26694] = "The Grand Magus Doane|7+ alliance 26693|77.69 65.5|John J. Keeshan",
+		[26708] = "AHHHHHHHHHHHH! AHHHHHHHHH!!!|7+ alliance 26694|77.2 65.93|Colonel Troteman",
+
+		-- Keeshan's Post
+		[26713] = "Showdown at Stonewatch|7+ alliance 26708|60.66 36.66|Colonel Troteman",
+		[26714] = "Darkblaze, Brood of the Worldbreaker|7+ alliance 26713|60.66 36.66|Colonel Troteman",
+		[26726] = "Triumphant Return|7+ alliance 26714|60.66 36.66|Colonel Troteman",
 	},
 
 
