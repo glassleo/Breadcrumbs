@@ -721,15 +721,34 @@ function Breadcrumbs:UpdateMap(event, ...)
 				for i = 1, type(Data.ObjectiveSteps[map][id]) == "string" and 1 or #Data.ObjectiveSteps[map][id] do
 					local datastring = type(Data.ObjectiveSteps[map][id]) == "string" and Data.ObjectiveSteps[map][id] or Data.ObjectiveSteps[map][id][i]
 					-- Get data
-					local icon, coordinates, title, task = strsplit("|", datastring)
+					local icon, coordinates, title, task, description = strsplit("|", datastring)
 					local x, y = strsplit(" ", coordinates or "")
 					x = tonumber(x) or nil
 					y = tonumber(y) or nil
 
 					local Objectives = C_QuestLog.GetQuestObjectives(id or 0)
 					local match = false
+					local type = "objective"
+					local item = 0
+					local count = 0
 
-					if Objectives then
+					if string.match(task, "item:([%d]+):([%d]+)") then
+						item = tonumber(string.match(task, "item:([%d]+):[%d]+"))
+						count = tonumber(string.match(task, "item:[%d]+:([%d]+)"))
+
+						if GetItemCount(item, true, false, true) < count then
+							match = true
+							type = "item"
+						end
+					elseif string.match(task, "item:([%d]+)") then
+						item = tonumber(string.match(task, "item:([%d]+)"))
+						count = 1
+
+						if GetItemCount(item, true, false, true) < count then
+							match = true
+							type = "item"
+						end
+					elseif Objectives then
 						for i = 1, #Objectives do
 							local text = Objectives[i].text or ""
 							text = string.gsub(text, "%d/%d%s(.+)", "%1")
@@ -761,7 +780,12 @@ function Breadcrumbs:UpdateMap(event, ...)
 									GameTooltip:Hide()
 									GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
 									GameTooltip:AddLine(Breadcrumbs:FormatTooltip(title))
-									GameTooltip:AddLine("- " .. match, 1, 1, 1, true)
+
+									if type == "item" then
+										GameTooltip:AddLine("- " .. GetItemCount(item, true, false, true) .. "/" .. count .. " " .. (description or ""), 1, 1, 1, true)
+									else
+										GameTooltip:AddLine("- " .. match, 1, 1, 1, true)
+									end
 
 									if ZA and ZA.DebugMode then -- Debug
 										GameTooltip:AddLine(" ")
@@ -940,7 +964,7 @@ function Breadcrumbs:UpdateMap(event, ...)
 										end
 									end)
 								end
-								
+
 								Pins:AddWorldMapIconMap("Breadcrumbs", Pin, map, x/100, y/100, nil, "PIN_FRAME_LEVEL_SUPER_TRACKED_QUEST")
 								Pin:Show()
 							end
