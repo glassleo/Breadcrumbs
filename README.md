@@ -58,6 +58,7 @@ So far, the following zones are entirely complete or in a near-complete state:
 - Tirisfal Glades
 - Eversong Woods
 - Elwynn Forest
+- Westfall
 - Dun Morogh
 - Loch Modan
 
