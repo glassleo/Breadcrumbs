@@ -4365,8 +4365,21 @@ Data.Quests = {
 		[26395] = "Dungar Longdrink|1+ alliance human,kultiran 26394|77.17 60.99|Osric Strang", -- Human/Kul Tiran only
 		[26396] = "Return to Argus|1+ alliance human,kultiran 26395|70.94 72.47|Dungar Longdrink", -- Human/Kul Tiran only
 
+		-- Westfall
+		[26370] = "Return to Sentinel Hill|5+ alliance 26322|85.86 32.79|Grand Admiral Jes-Tereth",
+
+		-- Redridge Mountains
+		[26365] = "Hero's Call: Redridge Mountains!|7+ alliance -28563 -26503|85.86 32.79|Grand Admiral Jes-Tereth", -- Breadcrumb for 26503; mutually exclusive with 28563
+
 		-- Loch Modan
 		[353]   = "Stormpike's Delivery|1+ alliance ~1097|59.72 33.8|Grimand Elmore", -- Invalidates breadcrumb 1097
+
+		-- Hillsbrad Foothills
+		[543]   = "The Perenolde Tiara|7+ alliance|81.55 34.07|Count Remington Ridgewell",
+
+		-- Mists of Pandaria
+		[29547] = "The King's Command|10+ alliance|85.86 32.79|Grand Admiral Jes-Tereth",
+		[29548] = "The Mission|10+ alliance 29547|78.8 39.9|Rell Nightwind",
 
 		-- Legion
 		[40519] = {
@@ -4481,6 +4494,71 @@ Data.Quests = {
 	[52] = {
 		-- The Jansen Stead
 		[26209] = "Murder Was The Case That They Gave Me|5+ alliance ~26378 ~28562|60.05 19.28|Lieutenant Horatio Laine", -- Invalidates breadcrumbs 26378 and 28562
+		[26213] = "Hot On the Trail: The Riverpaw Clan|5+ alliance 26209|60.05 19.28|Lieutenant Horatio Laine",
+		[26214] = "Hot On the Trail: Murlocs|5+ alliance 26209|60.05 19.28|Lieutenant Horatio Laine",
+		[26215] = "Meet Two-Shoed Lou|5+ alliance 26213 26214|60.05 19.28|Lieutenant Horatio Laine",
+
+		-- Furlbrow's Pumpkin Farm
+		[26228] = "Livin' the Life|5+ alliance 26215|49.66 19.39|Two-Shoed Lou",
+		[26229] = "\"I TAKE Candle!\"|5+ alliance 26215|49.59 19.61|Jimb \"Candles\" McHannigan",
+		[26230] = "Feast or Famine|5+ alliance 26215|49.54 19.14|Mama Celeste",
+		[26232] = "Lou's Parting Thoughts|5+ alliance 26228|49.66 19.39|Two-Shoed Lou",
+		[26236] = "Shakedown at the Saldean's|5+ alliance 26232|49.66 19.39|Two-Shoed Lou",
+
+		-- Saldean's Farm
+		[26237] = "Times are Tough|5+ alliance 26236|56.04 31.23|Farmer Saldean",
+		[26252] = "Heart of the Watcher|5+ alliance 26236|54.12 32.43|{133862} [Harvest Watcher Heart]||Has a chance to drop from [red]Harvest Watcher]",
+		[26257] = "It's Alive!|5+ alliance 26252|56.04 31.23|Farmer Saldean",
+		[26241] = "Westfall Stew|5+ alliance 26236|56.42 30.52|Salma Saldean",
+		[26270] = "You Have Our Thanks|5+ alliance 26237 26241|56.04 31.23|Farmer Saldean",
+		[26266] = "Hope for the People|5+ alliance 26270|56.42 30.52|Salma Saldean",
+
+		-- Sentinel Hill
+		[26371] = "The Legend of Captain Grayson|5+ alliance -26322 -26348|56.39 47.35|Scout Galiaan", -- Breadcrumb for 26348
+		[26371] = "The Legend of Captain Grayson|5+ alliance 26322 -26348|56.3 49.52|Scout Galiaan", -- Galiaan moves after completing 26322
+		[26271] = "Feeding the Hungry and the Hopeless|5+ alliance 26266|56.97 47.11|Hope Saldean",
+		[26287] = "The Westfall Brigade|5+ alliance 26266|56.45 47.57|Captain Danuvin",
+		[26288] = "Jango Spothide|5+ alliance 26287|56.45 47.57|Captain Danuvin",
+		[26365] = "Hero's Call: Redridge Mountains!|7+ alliance -26322 -28563 -26503|56.45 47.57|Captain Danuvin", -- Breadcrumb for 26503; mutually exclusive with 28563
+		[26365] = "Hero's Call: Redridge Mountains!|7+ alliance 26322 -28563 -26503|56.42 49.53|Captain Danuvin", -- Danuvin moves after completing 26322
+		[26286] = "In Defense of Westfall|5+ alliance 26266|56.32 47.52|Marshal Gryan Stoutmantle",
+		[26289] = "Find Agent Kearnen|5+ alliance 26271 26286|56.32 47.52|Marshal Gryan Stoutmantle",
+		[26290] = "Secrets of the Tower|5+ alliance 26289|68.33 70.38|Agent Kearnen",
+		[26291] = "Big Trouble in Moonbrook|5+ alliance 26290|68.33 70.38|Agent Kearnen",
+		[26292] = "To Moonbrook!|5+ alliance 26291|56.32 47.52|Marshal Gryan Stoutmantle",
+		[26322] = "Rise of the Brotherhood|5+ alliance 26320|56.32 47.52|Marshal Gryan Stoutmantle",
+		[26761] = "Threat to the Kingdom|5+ alliance 26370|56.37 49.63|Marshal Gryan Stoutmantle",
+
+		-- Moonbrook
+		[26295] = "Propaganda|5+ alliance 26292|42.1 64.12|Captain Alpert",
+		[26296] = "Evidence Collection|5+ alliance 26292|42.86 69.17|{237277} [Red Bandana]||Drops from [red]Moonbrook Thug]",
+		[26297] = "The Dawning of a New Day|5+ alliance 26295|42.1 64.12|Captain Alpert",
+		[26319] = "Secrets Revealed|5+ alliance 26297|42.1 64.12|Captain Alpert",
+		[26320] = "A Vision of the Past|5+ alliance 26319|42.97 65.03|Thoralius the Wise",
+
+		-- Captain Sanders' Hidden Treasure
+		[26353] = "Captain Sanders' Hidden Treasure|5+|50.46 9.91|{134269} [Captain Sanders' Treasure Map]||Has a chance to drop from any Murloc along the coast",
+		[26354] = "Captain Sanders' Hidden Treasure|5+ 26353|25.9 47.76|Captain's Footlocker",
+		[26355] = "Captain Sanders' Hidden Treasure|5+ 26354|40.52 47.78|Broken Barrel",
+		[26356] = "Captain Sanders' Hidden Treasure|5+ 26355|40.63 17.03|Old Jug",
+
+		-- Westfall Lighthouse
+		[26348] = "The Coast Isn't Clear|5+ alliance ~26371|30.5 85.62|Captain Grayson", -- Invalidates breadcrumb 26371
+		[26347] = "Keeper of the Flame|5+ alliance|30.5 85.62|Captain Grayson",
+		[26349] = "The Coastal Menace|5+ alliance|30.5 85.62|Captain Grayson",
+	},
+
+
+	--[[ Redridge Mountains ]]--
+
+	[49] = {
+		-- Three Corners
+
+		-- Lakeshire
+		[26508] = "Nida's Necklace|7+ alliance|28.34 48.87|Shawn",
+		[26510] = "We Must Prepare!|7+ alliance ~26505|28.91 41.11|Magistrate Solomon", -- Invalidates breadcrumb 26505?
+		[26511] = "Lake Everstill Clean Up|7+ alliance|28.68 40.95|Bailiff Conacher",
+		[26728] = "Hero's Call: Duskwood!|10+ alliance -28564 -26618|28.68 40.95|Bailiff Conacher", -- Breadcrumb for 26618; mutually exclusive with 28564
 	},
 
 
