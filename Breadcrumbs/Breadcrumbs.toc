@@ -1,6 +1,6 @@
-## Interface: 90207
+## Interface: 100000
 ## Title: Breadcrumbs
-## Version: 22.9.1
+## Version: 22.10.26
 ## Notes: Adds dynamic pins to your World Map
 ## Author: Leo
 ## OptionalDeps: TomTom, TipTac
