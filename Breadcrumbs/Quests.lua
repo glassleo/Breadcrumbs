@@ -3655,6 +3655,18 @@ Data.Quests = {
 		-- Ragefire Chasm
 		[31034] = "Enemies Below|7+ horde -31036 -31037|49.21 72.27|Eitrigg", -- Mutually exclusive with 31036 and 31037
 
+		-- Cataclysm
+		[28805] = "The Eye of the Storm|30+ horde|50.48 38.38|Farseer Krogar",
+
+		-- Mount Hyjal
+		[49855] = "Disaster at Mount Hyjal|30+ horde 28805 -27721 -25316|50.48 38.38|Farseer Krogar",
+
+		-- Vashj'ir
+		[28816] = "To the Depths|30+ horde 28805 -27718 -25924|50.48 38.38|Farseer Krogar",
+
+		-- Deepholm
+		[27203] = "The Maelstrom|30+ horde|50.48 38.38|Farseer Krogar",
+
 		-- Fishing
 		--[6608]  = "You Too Good.|15+ horde fishing:1:225|66.46 41.93|Lumak", -- Requires 225 skill in Classic Fishing
 
@@ -4024,6 +4036,9 @@ Data.Quests = {
 	--[[ Moonglade ]]--
 
 	[80] = {
+		-- Mount Hyjal
+		[25316] = "As Hyjal Burns|30+ ~49855 ~27721 ~27726|45.48 44.87|Emissary Windsong",
+
 		-- Druid - The Dreamgrove
 		[41106] = "Call of the Wilds|10+ druid 40643|56.26 31.83|Archdruid Hamuul Runetotem|artifact",
 		[40644] = "The Dreamway|10+ druid 41106|56.26 31.83|Archdruid Hamuul Runetotem|artifact",
@@ -4404,8 +4419,8 @@ Data.Quests = {
 	[425] = {
 		-- The early Northshire quests all have 9 versions of the same quest
 		-- Completing one version will also autocomplete the other 8 for the character, so there is no need to check which exact quest we can pick up
-		-- All currently available Alliance class/race combination seem to be able to do these quests as of 9.2.7
-		[29078] = "Beating Them Back!|1+ alliance -28757 -28767 -28766 -28764 -31139 -28765 -28762 -28763|33.56 53.05|Marshal McBride", -- 9 quests
+		-- All currently available Alliance races except Mechagnomes seem to be able to do these quests as of 9.2.7
+		[29078] = "Beating Them Back!|1+ alliance -mechagnome -28757 -28767 -28766 -28764 -31139 -28765 -28762 -28763|33.56 53.05|Marshal McBride", -- 9 quests
 		[29079] = "Lions for Lambs|1+ alliance 28757,29078,28767,28766,28764,31139,28765,28762,28763 -28759 -28772 -28769 -28771 -28773 -31140 -28770 -28774|33.56 53.05|Marshal McBride", -- 9 quests
 		[29080] = "Join the Battle!|1+ alliance 28759,28769,31140,28770,28771,28772,28773,28774,29079 -28780 -28784 -31143 -28785 -28786 -28787 -28788 -28789|33.56 53.05|Marshal McBride", -- 9 quests
 		[29081] = "They Sent Assassins|1+ alliance 29080,28780,28784,31143,28785,28786,28787,28788,28789 -31144 -28791 -28795 -28792 -28794 -28793 -28797 -28796|35.73 39.8|Sergeant Willem", -- 9 quests
@@ -4423,7 +4438,7 @@ Data.Quests = {
 	-- Elwynn Forest
 	[37] = {
 		-- Northshire
-		[29078] = "Beating Them Back!|1+ alliance -28757 -28767 -28766 -28764 -31139 -28765 -28762 -28763|48.2 42.08|Marshal McBride|link:425", -- 9 quests
+		[29078] = "Beating Them Back!|1+ alliance -mechagnome -28757 -28767 -28766 -28764 -31139 -28765 -28762 -28763|48.2 42.08|Marshal McBride|link:425", -- 9 quests
 		[29079] = "Lions for Lambs|1+ alliance 28757,29078,28767,28766,28764,31139,28765,28762,28763 -28759 -28772 -28769 -28771 -28773 -31140 -28770 -28774|48.2 42.08|Marshal McBride|link:425", -- 9 quests
 		[29080] = "Join the Battle!|1+ alliance 28759,28769,31140,28770,28771,28772,28773,28774,29079 -28780 -28784 -31143 -28785 -28786 -28787 -28788 -28789|48.2 42.08|Marshal McBride|link:425", -- 9 quests
 		[29081] = "They Sent Assassins|1+ alliance 29080,28780,28784,31143,28785,28786,28787,28788,28789 -31144 -28791 -28795 -28792 -28794 -28793 -28797 -28796|48.81 38.38|Sergeant Willem|link:425", -- 9 quests
@@ -4514,13 +4529,17 @@ Data.Quests = {
 		[26266] = "Hope for the People|5+ alliance 26270|56.42 30.52|Salma Saldean",
 
 		-- Sentinel Hill
-		[26371] = "The Legend of Captain Grayson|5+ alliance -26322 -26348|56.39 47.35|Scout Galiaan", -- Breadcrumb for 26348
-		[26371] = "The Legend of Captain Grayson|5+ alliance 26322 -26348|56.3 49.52|Scout Galiaan", -- Galiaan moves after completing 26322
+		[26371] = { -- Breadcrumb for 26348
+			"The Legend of Captain Grayson|5+ alliance -26322 -26348|56.39 47.35|Scout Galiaan", 
+			"The Legend of Captain Grayson|5+ alliance 26322 -26348|56.3 49.52|Scout Galiaan", -- Galiaan moves after completing 26322
+		},
 		[26271] = "Feeding the Hungry and the Hopeless|5+ alliance 26266|56.97 47.11|Hope Saldean",
 		[26287] = "The Westfall Brigade|5+ alliance 26266|56.45 47.57|Captain Danuvin",
 		[26288] = "Jango Spothide|5+ alliance 26287|56.45 47.57|Captain Danuvin",
-		[26365] = "Hero's Call: Redridge Mountains!|7+ alliance -26322 -28563 -26503|56.45 47.57|Captain Danuvin", -- Breadcrumb for 26503; mutually exclusive with 28563
-		[26365] = "Hero's Call: Redridge Mountains!|7+ alliance 26322 -28563 -26503|56.42 49.53|Captain Danuvin", -- Danuvin moves after completing 26322
+		[26365] = { -- Breadcrumb for 26503; mutually exclusive with 28563
+			"Hero's Call: Redridge Mountains!|7+ alliance -26322 -28563 -26503|56.45 47.57|Captain Danuvin",
+			"Hero's Call: Redridge Mountains!|7+ alliance 26322 -28563 -26503|56.42 49.53|Captain Danuvin", -- Danuvin moves after completing 26322
+		},
 		[26286] = "In Defense of Westfall|5+ alliance 26266|56.32 47.52|Marshal Gryan Stoutmantle",
 		[26289] = "Find Agent Kearnen|5+ alliance 26271 26286|56.32 47.52|Marshal Gryan Stoutmantle",
 		[26290] = "Secrets of the Tower|5+ alliance 26289|68.33 70.38|Agent Kearnen",
