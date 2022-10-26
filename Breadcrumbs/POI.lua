@@ -190,6 +190,12 @@ Data.POI = {
 		"upgradeitem-32x32|[Item Upgrades]|60+|56.26 48.1",
 	},
 
+	-- Maldraxxus
+	[1536] = {
+		-- Vendor
+		"Scroll:objective|One-Eyed Joby|-item:181163|53.14 41.31|tooltip||Sells|{134943} [Scroll of Teleport: Theater of Pain]",
+	},
+
 
 	--[[ Ardenweald ]]--
 
@@ -241,7 +247,7 @@ Data.POI = {
 	-- Revendreth
 	[1525] = {
 		-- NPC
-		"banker|Deadfoot|item:182744 -item:182746|48.73 68.52|tooltip|\"Purchase an All-In-One Belt Repair Kit from Deadfoot to repair your Ornate Belt Buckle\"",
+		"banker:objective|Deadfoot|item:182744 -item:182746|48.73 68.52|tooltip|\"Purchase an All-In-One Belt Repair Kit from Deadfoot to repair your Ornate Belt Buckle\"",
 	},
 
 
@@ -645,6 +651,12 @@ Data.POI = {
 		"groupfinder-icon-class-warrior:small|[Skyhold]|10+ warrior 40585|46.11 59.95|tooltip|Entrance to Skyhold, Home of the Valarjar",
 	},
 
+	-- Hall of Chieftains, Thunder Totem
+	[652] = {
+		-- Portal
+		"POI/Portal|Portal to Orgrimmar|horde Highmountain|46.01 63.85", -- Highmountain Tauren only
+	},
+
 	-- Thunder Totem
 	[750] = {
 		-- Flight Master
@@ -654,9 +666,6 @@ Data.POI = {
 		"groupfinder-icon-class-warrior|[Skyhold]|10+ warrior 40585 41359|39.83 41.97|tooltip|Entrance to Skyhold, Home of the Valarjar",
 		"groupfinder-icon-class-warrior|[Skyhold]|10+ warrior 40585 -41359|39.83 41.97|tooltip|Entrance to Skyhold, Home of the Valarjar||\"Speak to {flightmaster} Windtamer Nalt if you cannot see the Gaze of Odyn\"",
 	},
-
-	-- Hall of Chieftains, Thunder Totem
-	[652] = {},
 
 	-- Neltharion's Vault
 	[657] = {
@@ -953,7 +962,9 @@ Data.POI = {
 
 	[198] = {
 		-- Portal
-		"POI/DreamwayPortal|Emerald Dreamway|10+ druid 40645|59 26.24",
+		"POI/Portal:small|Portal to Stormwind|alliance|62.62 23.13",
+		"POI/Portal:small|Portal to Orgrimmar|horde|63.49 24.44",
+		"POI/DreamwayPortal:small|Emerald Dreamway|10+ druid 40645|59 26.24",
 	},
 
 
@@ -966,6 +977,7 @@ Data.POI = {
 		"POI/Portal:small|Portal to Undercity|art:18:19 horde|50.75 55.59",
 		"POI/Portal:small|Portal to Tirisfal Glades|art:18:1136 horde|50.75 55.59",
 		"POI/Portal:small|Portal to Tol Barad|30+ horde|47.39 39.26",
+		"POI/Portal:small|Portal to Thunder Totem|horde Highmountain|40.09 76.83", -- Highmountain Tauren only
 
 		-- Professions
 		"POI/Alchemy|[Alchemy]|5+ horde alchemy|55.68 45.75||Yelmak's Alchemy and Potions",
