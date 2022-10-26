@@ -1,8 +1,6 @@
 # Lib: HereBeDragons
 
-## [2.06-release](https://github.com/Nevcairiel/HereBeDragons/tree/2.06-release) (2021-05-08)
-[Full Changelog](https://github.com/Nevcairiel/HereBeDragons/compare/2.05-release...2.06-release) [Previous Releases](https://github.com/Nevcairiel/HereBeDragons/releases)
+## [2.10-release](https://github.com/Nevcairiel/HereBeDragons/tree/2.10-release) (2022-09-16)
+[Full Changelog](https://github.com/Nevcairiel/HereBeDragons/compare/2.09-release...2.10-release) [Previous Releases](https://github.com/Nevcairiel/HereBeDragons/releases)
 
-- Fixup Luacheck  
-- Update API check to be independent of WoW version  
-- Add transform and worldmap data for BC  
+- Update Map Data for 10.0  
