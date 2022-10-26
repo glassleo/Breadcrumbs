@@ -47,8 +47,9 @@ Data.Vignettes = {
 		[61067] = "Hearty Dragon Plume|48+|48.22 39.28||treasure item:182729|Contains|{2103819} [rare]Hearty Dragon Plume]",
 		[61072] = "Aerto|48+|56.02 21.01||treasure item:180630|Contains|{3084139} [uncommon]Gorm Harrier]",
 		[61073] = "Faerie Trove|48+|49.71 55.89||treasure item:182673|Contains|{3749005} [uncommon]Shimmerbough Hoarder]",
-		[62186] = "Swollen Anima Seed|48+ -item:182730|76.68 29.75||treasure item:182730|Contains|{3610497} [uncommon]Swollen Anima Seed]",
-		[62187] = "Lost Satchel|48+ -item:182731|48.27 20.39||treasure item:182731|Contains|{348524} [uncommon]Satchel of Culexwood]",
+		[62259] = "Enchanted Dreamcatcher|55+,62704 -item:183129|36.42 25.06||treasure item:183129|Contains|{3489827} [uncommon]Anima-Laden Dreamcatcher]",
+		[62186] = "Swollen Anima Seed|55+,62704 -item:182730|76.68 29.75||treasure item:182730|Contains|{3610497} [uncommon]Swollen Anima Seed]",
+		[62187] = "Lost Satchel|55+,62704 -item:182731|48.27 20.39||treasure item:182731|Contains|{348524} [uncommon]Satchel of Culexwood]",
 	},
 
 
@@ -528,7 +529,7 @@ Data.Vignettes = {
 		[40475] = "Small Treasure Chest|10+|45.13 59.92||treasure link:750|Contains|{1397630} [Order Resources]", -- Thunder Totem
 		[40476] = "Glimmering Treasure Chest|10+|38.3 61.01||treasure down link:655|Contains|{1397630} [Order Resources]", -- Lifespring Cavern
 		[40484] = "Small Treasure Chest|10+|53.04 52.23|\"Inside Candle Rock\"|treasure down|Contains|{1397630} [Order Resources]", -- Candle Rock
-		[40489] = "Treasure Chest|10+|85.23 37.96||treasure down link:651|Contains|{1397630} [Order Resources]", -- Bitestone Enclave
+		--[40489] = "Treasure Chest|10+|85.23 37.96||treasure down link:651|Contains|{1397630} [Order Resources]", -- Bitestone Enclave
 		[40493] = "Small Treasure Chest|10+|53.04 52.23|\"On the furthest ledge inside Crystal Fissure\"|treasure down|Contains|{1397630} [Order Resources]", -- Crystal Fissure
 		[40506] = "Small Treasure Chest|10+|50.81 35.04||treasure|Contains|{1397630} [Order Resources]",
 
