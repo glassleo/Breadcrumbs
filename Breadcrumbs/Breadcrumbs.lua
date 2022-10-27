@@ -42,20 +42,18 @@ local function RecycleAllPins()
 			Pin:SetParent(WorldMapFrame)
 			Pin:SetPoint("CENTER", WorldMapFrame)
 			Pin.Arrow:SetDesaturated(false)
-			Pin.Arrow:SetTexture("")
 			Pin.Arrow:Hide()
 			if Pin:GetNormalTexture() then
 				Pin:GetNormalTexture():SetDesaturated(false)
 				Pin:GetNormalTexture():SetVertexColor(1, 1, 1)
 				Pin:GetNormalTexture():SetTexCoord(0, 1, 0, 1)
 			end
-			Pin:SetNormalTexture("")
 			if Pin:GetHighlightTexture() then
 				Pin:GetHighlightTexture():SetDesaturated(false)
 				Pin:GetHighlightTexture():SetVertexColor(1, 1, 1)
 				Pin:GetHighlightTexture():SetTexCoord(0, 1, 0, 1)
+				Pin:GetHighlightTexture():SetAlpha(0)
 			end
-			Pin:SetHighlightTexture("")
 			Pin:UnregisterAllEvents()
 			Pin:SetScript("OnEnter", nil)
 			Pin:SetScript("OnLeave", nil)
