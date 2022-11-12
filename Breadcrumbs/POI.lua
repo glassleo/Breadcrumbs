@@ -1187,4 +1187,13 @@ Data.POI = {
 		"POI/DreamwayPortal|Emerald Dreamway|10+ druid 40645|62.28 22.67",
 	},
 
+
+	--[[ Darkmoon Island ]]--
+
+	[407] = {
+		-- Portal
+		"mageportalhorde|Portal to Elwynn Forest|alliance|50.56 90.7",
+		"mageportalhorde|Portal to Mulgore|horde|50.56 90.7",
+	},
+
 }
