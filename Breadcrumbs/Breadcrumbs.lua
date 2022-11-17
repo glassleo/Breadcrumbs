@@ -131,7 +131,7 @@ function Breadcrumbs:FixBonusObjectives()
 	if (UnitLevel("player") or 1) >= 50 and (map == 630 or map == 641 or map == 650 or map == 657 or map == 634) then
 		-- Azsuna, Val'sharah, Highmountain, Neltharion's Vault, Stormheim
 		WorldMapFrame:RemoveAllPinsByTemplate("BonusObjectivePinTemplate")
-	elseif Setting_DisableStorylineQuestDataProvider and Data.HiddenBonusObjectiveQuests and WorldMapFrame:GetNumActivePinsByTemplate("BonusObjectivePinTemplate") >= 1 then
+	elseif Setting_DisableStorylineQuestDataProvider and Data and Data.HiddenBonusObjectiveQuests and WorldMapFrame:GetNumActivePinsByTemplate("BonusObjectivePinTemplate") >= 1 then
 		-- Remove specific quest pins
 		for Pin in WorldMapFrame:EnumeratePinsByTemplate("BonusObjectivePinTemplate") do
 			if Pin.questID and Data.HiddenBonusObjectiveQuests[Pin.questID] then
@@ -1492,6 +1492,7 @@ function Breadcrumbs:CheckPOI(map, datastring)
 end
 
 
+-- Unit Tooltips
 local function OnTooltipSetUnit(tooltip)
 	if not Setting_EnableUnitTooltips then return end
 
@@ -1529,8 +1530,7 @@ local function OnTooltipSetUnit(tooltip)
 	end
 end
 
--- Unit Tooltips
-GameTooltip:HookScript("OnTooltipSetUnit", OnTooltipSetUnit)
+TooltipDataProcessor.AddTooltipPostCall(Enum.TooltipDataType.Unit, OnTooltipSetUnit)
 
 -- Auto Map Change
 WorldMapFrame:HookScript("OnShow", function(...)
