@@ -1550,6 +1550,7 @@ WorldMapFrame:HookScript("OnShow", function(...)
 	Breadcrumbs:UpdateMap("WorldMapFrame_OnShow")
 end)
 
+-- Handle empty quest logs
 WorldMapFrame:HookScript("OnUpdate", function(...)
 	local entries = C_QuestLog.GetNumQuestLogEntries() or 0
 	if entries == 0 then
