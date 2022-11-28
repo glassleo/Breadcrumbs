@@ -187,7 +187,7 @@ Data.POI = {
 		"mailbox:objective|Mailbox|mailbox|48.33 28.16",
 
 		-- Item Upgrades
-		"upgradeitem-32x32|[Item Upgrades]|60+|56.26 48.1",
+		"upgradeitem-32x32|[Item Upgrades]|60+ necrolord|56.26 48.1",
 	},
 
 	-- Maldraxxus
@@ -206,6 +206,9 @@ Data.POI = {
 
 		-- Mailbox
 		"mailbox:objective|Mailbox|mailbox nightfae|52.42 56.33",
+
+		-- Item Upgrades
+		"upgradeitem-32x32|[Item Upgrades]|60+ nightfae|46.94 56.89",
 	},
 
 	-- Heart of the Forest - The Roots
@@ -755,10 +758,15 @@ Data.POI = {
 	--[[ The Jade Forest ]]--
 
 	[371] = {
+		-- Portal
+		"POI/Portal:small|Portal to Orgrimmar|horde|28.52 14.02",
+
 		-- Professions
 		"POI/Enchanting|[Enchanting]|10+ enchanting|46.85 42.94",
 		"POI/Inscription|[Inscription]|10+ inscription|54.91 45.12",
 		"POI/Mining|[Mining]|10+ mining|46.07 29.41",
+		"POI/Herbalism|[Herbalism]|10+ herbalism alliance|45.4 86",
+		"POI/Herbalism|[Herbalism]|10+ herbalism horde|27.79 15.53",
 	},
 
 
@@ -789,8 +797,8 @@ Data.POI = {
 
 	-- Shrine of Two Moons - Hall of the Crescent Moon
 	[391] = {
-		"POI/Engineering|[Engineering]|10+ horde engineering|61.05 41.76|tooltip",
-		"POI/Bandage|[Bandage Trainer]|10+ horde tailoring|29.38 75.69|tooltip",
+		"POI/Engineering|[Engineering]|10+ horde engineering|61.05 41.76",
+		"POI/Bandage|[Bandage Trainer]|10+ horde tailoring|29.38 75.69",
 	},
 
 
@@ -800,7 +808,7 @@ Data.POI = {
 	[125] = {
 		-- Portal
 		"POI/Portal|Portal to Stormwind|alliance|40.11 62.81",
-		"POI/Portal|Portal to Orgrimmar|horde|55.31 24.02",
+		"POI/Portal|Portal to Orgrimmar|horde|55.33 25.44",
 
 		-- Flight Master
 		"taxinode_neutral:small|Dalaran, Crystalsong Forest|1+|72.18 45.78",
