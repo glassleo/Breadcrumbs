@@ -39,6 +39,10 @@ If you'd like to help, please [get in touch](mailto:hello@leo.glass)!
 
 So far, the following zones are entirely complete or in a near-complete state:
 
+### Dragon Isles
+- Valdrakken POIs
+- Algeth'ar Academy POIs
+
 ### Shadowlands
 - Zereth Mortis and the Secrets of the First Ones campaign
 - Oribos
