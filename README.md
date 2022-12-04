@@ -51,7 +51,7 @@ So far, the following zones are entirely complete or in a near-complete state:
 - Ardenweald (Threads of Fate only)
 - Revendreth (Threads of Fate only)
 
-### Legion
+### Broken Isles
 - Azsuna
 - Val'sharah
 - Highmountain
