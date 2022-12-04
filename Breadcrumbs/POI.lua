@@ -45,12 +45,59 @@ local _, Data = ...
 Data.POI = {
 
 
+	--[[ Valdrakken ]]--
+
+	[2112] = {
+		-- Portal
+		"POI/Portal|Portal to Orgrimmar|horde|56.64 38.3",
+		"POI/Portal|Portal to Stormwind|alliance|59.79 41.71",
+		"POI/Portal|Seasonal Portals|1+|53.95 55",
+
+		-- Crafting Orders
+		"Professions-Crafting-Orders-Icon|Crafting Orders|58+|34.72 62.47",
+
+		-- Professions
+		"POI/Alchemy|[Alchemy]|58+ alchemy|36.39 71.73",
+		"POI/Blacksmithing|[Blacksmithing]|58+ blacksmithing|36.97 47.1",
+		"POI/Enchanting|[Enchanting]|58+ enchanting|31.17 61.19",
+		"POI/Engineering|[Engineering]|58+ engineering|42.26 48.8",
+		"POI/Herbalism|[Herbalism]|58+ herbalism|36.89 65.4",
+		"POI/Inscription|[Inscription]|58+ inscription|38.85 73.39",
+		"POI/Jewelcrafting|[Jewelcrafting]|58+ jewelcrafting|40.27 61.57",
+		"POI/Leatherworking|[Leatherworking]|58+ leatherworking|28.83 62.12",
+		"POI/Mining|[Mining]|58+ mining|38.87 51.49",
+		"POI/Skinning|[Skinning]|58+ skinning|28.47 59.62",
+		"POI/Tailoring|[Tailoring]|58+ tailoring|32.04 66.28",
+		"POI/Cooking|[Cooking]|58+|46.51 46.26",
+		"POI/Fishing|[Fishing]|58+|43.7 74.5",
+
+		-- Rostrum of Transformation
+		"dragon-rostrum|[Rostrum of Transformation]|58+|25.05 50.64",
+
+		-- Pets
+		"WildBattlePet|[Pet Supplies]|1+|48.3 82.51",
+		"Stablemaster|[Stable Master]|1+|46.65 78.95",
+	},
+
+
+	--[[ Algeth'ar Academy ]]--
+
+	-- Algeth'ar Academy
+	[2097] = {
+		"132533:objective|[friendly]Black Dragonflight Recruiter]|1+|45.84 71.15|tooltip||{132533} [spell]Black Dragonflight Pledge Pin]|[Critical Strike increased by 5%.]",
+		"132530:objective|[friendly]Bronze Dragonflight Recruiter]|1+|42.73 68.17|tooltip||{132530} [spell]Bronze Dragonflight Pledge Pin]|[Haste increased by 5%.]",
+		"132526:objective|[friendly]Blue Dragonflight Recruiter]|1+|43.02 61.67|tooltip||{132526} [spell]Blue Dragonflight Pledge Pin]|[Mastery increased.]",
+		"132529:objective|[friendly]Green Dragonflight Recruiter]|1+|46.56 56.37|tooltip||{132529} [spell]Green Dragonflight Pledge Pin]|[Healing taken increased by 10%.]",
+		"132532:objective|[friendly]Red Dragonflight Recruiter]|1+|48.48 59.08|tooltip||{132532} [spell]Red Dragonflight Pledge Pin]|[Versatility increased by 5%.]",
+	},
+
+
 	--[[ Oribos ]]--
 
 	-- Ring of Transference
 	[1671] = {
 		-- Portal
-		"POI/Portal|Portals|1+|56.27 75.98||Gorgrond, Karazhan, Mechagon",
+		--"POI/Portal|Portals|1+|56.27 75.98||Gorgrond, Karazhan, Mechagon",
 
 		-- Teleport Pad
 		"teleportationnetwork-32x32:small|Ring of Fates|1+|49.52 60.92|link:1670",
@@ -1173,7 +1220,6 @@ Data.POI = {
 		"flightmasterargus:small|Translocator to Silvermoon City|horde|59.41 67.44",
 
 		-- Portal
-		--"POI/Portal|Portals to Orgrimmar and Stranglethorn Vale|horde art:19|61.2 58.6",
 		"POI/Portal:small|Portal to Orgrimmar|horde art:19|60.74 58.68",
 		"POI/Portal:small|Portal to Stranglethorn Vale|horde art:19|61.88 59.01",
 		"POI/Portal:small|Portal to Howling Fjord|10+ horde art:19|59.09 58.9",
@@ -1202,6 +1248,32 @@ Data.POI = {
 		-- Portal
 		"mageportalhorde|Portal to Elwynn Forest|alliance|50.56 90.7",
 		"mageportalhorde|Portal to Mulgore|horde|50.56 90.7",
+	},
+
+
+	--[[ Tanaris ]]--
+
+	-- Tanaris
+	[71] = {
+		-- Door
+		"poi-door-down:small|Caverns of Time|1+|64.98 49.97|link:74",
+	},
+
+	-- Timeless Tunnel
+	[74] = {
+		-- Door
+		"poi-door-up:small|Tanaris|1+|52.85 29.52|link:71",
+		"poi-door-down:small|Caverns of Time|1+|30.94 73.52|link:75",
+
+		-- Portal
+		"POI/Portal|Portal to Stormwind|alliance|58.98 26.73",
+		"POI/Portal|Portal to Orgrimmar|horde|58.18 26.68",
+	},
+
+	-- Caverns of Time
+	[75] = {
+		-- Door
+		"poi-door-up:small|Timeless Tunnel|1+|73.74 50.86|link:74",
 	},
 
 }
