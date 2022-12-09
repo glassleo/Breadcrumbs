@@ -42,6 +42,7 @@ So far, the following zones are entirely complete or in a near-complete state:
 ### Dragon Isles
 - Valdrakken POIs
 - Algeth'ar Academy POIs
+- The Waking Shores (including Adventure Mode)
 
 ### Shadowlands
 - Zereth Mortis and the Secrets of the First Ones campaign
