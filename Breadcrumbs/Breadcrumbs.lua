@@ -148,9 +148,15 @@ end
 
 
 -- Format Tooltip Text
-function Breadcrumbs:FormatTooltip(text, flags)
-	text = text or ""
-	flags = flags or {}
+function Breadcrumbs:FormatTooltip(text, flags, varwrap)
+	local text = text or ""
+	local flags = flags or {}
+	local wrap = true
+
+	if strsub(text, 1, 1) == "!" then
+		text = strsub(text, 2)
+		wrap = false
+	end
 
 	text = string.gsub(text, "{([%d]+)}", "|T%1:18:18|t") -- texture id
 	text = string.gsub(text, "{(Interface/)([%w%p]+)}", "|T%1%2:16:16|t") -- texture path
@@ -176,7 +182,12 @@ function Breadcrumbs:FormatTooltip(text, flags)
 	text = string.gsub(text, "%[(%x%x%x%x%x%x)%]", "|cff%1") -- color
 	text = string.gsub(text, "%[", "|cffffffff") -- white
 	text = string.gsub(text, "%]", "|r") -- close color
-	return text
+
+	if varwrap then
+		return text, nil, nil, nil, wrap
+	else
+		return text
+	end
 end
 
 
@@ -376,7 +387,7 @@ function Breadcrumbs:UpdateMap(event, ...)
 								if Setting_HumanTooltips then -- Help tip
 									if help and strlen(help) > 0 then
 										GameTooltip:AddLine(" ")
-										GameTooltip:AddLine(Breadcrumbs:FormatTooltip(help, flags), nil, nil, nil, true)
+										GameTooltip:AddLine(Breadcrumbs:FormatTooltip(help, flags, true))
 									end
 									if flags["chromiesync"] then
 										GameTooltip:AddLine(" ")
@@ -533,7 +544,7 @@ function Breadcrumbs:UpdateMap(event, ...)
 				if Setting_HumanTooltips then -- Help tip
 					if help and strlen(help) > 0 then
 						GameTooltip:AddLine(" ")
-						GameTooltip:AddLine(Breadcrumbs:FormatTooltip(help, flags), nil, nil, nil, true)
+						GameTooltip:AddLine(Breadcrumbs:FormatTooltip(help, flags, true))
 					end
 					if flags["chromiesync"] then
 						GameTooltip:AddLine(" ")
@@ -679,18 +690,18 @@ function Breadcrumbs:UpdateMap(event, ...)
 									GameTooltip:Hide()
 									GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
 									GameTooltip:AddLine(Breadcrumbs:FormatTooltip(title))
-									if line1 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(line1), nil, nil, nil, true) end
-									if line2 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(line2), nil, nil, nil, true) end
-									if line3 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(line3), nil, nil, nil, true) end
-									if line4 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(line4), nil, nil, nil, true) end
-									if line5 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(line5), nil, nil, nil, true) end
-									if line6 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(line6), nil, nil, nil, true) end
-									if line7 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(line7), nil, nil, nil, true) end
-									if line8 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(line8), nil, nil, nil, true) end
-									if line9 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(line9), nil, nil, nil, true) end
-									if line10 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(line10), nil, nil, nil, true) end
-									if line11 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(line11), nil, nil, nil, true) end
-									if line12 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(line12), nil, nil, nil, true) end
+									if line1 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(line1, nil, true)) end
+									if line2 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(line2, nil, true)) end
+									if line3 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(line3, nil, true)) end
+									if line4 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(line4, nil, true)) end
+									if line5 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(line5, nil, true)) end
+									if line6 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(line6, nil, true)) end
+									if line7 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(line7, nil, true)) end
+									if line8 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(line8, nil, true)) end
+									if line9 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(line9, nil, true)) end
+									if line10 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(line10, nil, true)) end
+									if line11 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(line11, nil, true)) end
+									if line12 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(line12, nil, true)) end
 
 									if ZA and ZA.DebugMode then -- Debug
 										GameTooltip:AddLine(" ")
@@ -920,18 +931,18 @@ function Breadcrumbs:UpdateMap(event, ...)
 									end
 									if Setting_HumanTooltips and tip1 then -- Help tip
 										GameTooltip:AddLine(" ")
-										if tip1 then if strlen(tip1) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip1, flags), nil, nil, nil, true) else GameTooltip:AddLine(" ") end end
-										if tip2 then if strlen(tip2) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip2, flags), nil, nil, nil, true) else GameTooltip:AddLine(" ") end end
-										if tip3 then if strlen(tip3) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip3, flags), nil, nil, nil, true) else GameTooltip:AddLine(" ") end end
-										if tip4 then if strlen(tip4) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip4, flags), nil, nil, nil, true) else GameTooltip:AddLine(" ") end end
-										if tip5 then if strlen(tip5) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip5, flags), nil, nil, nil, true) else GameTooltip:AddLine(" ") end end
-										if tip6 then if strlen(tip6) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip6, flags), nil, nil, nil, true) else GameTooltip:AddLine(" ") end end
-										if tip7 then if strlen(tip7) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip7, flags), nil, nil, nil, true) else GameTooltip:AddLine(" ") end end
-										if tip8 then if strlen(tip8) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip8, flags), nil, nil, nil, true) else GameTooltip:AddLine(" ") end end
-										if tip9 then if strlen(tip9) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip9, flags), nil, nil, nil, true) else GameTooltip:AddLine(" ") end end
-										if tip10 then if strlen(tip10) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip10, flags), nil, nil, nil, true) else GameTooltip:AddLine(" ") end end
-										if tip11 then if strlen(tip11) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip11, flags), nil, nil, nil, true) else GameTooltip:AddLine(" ") end end
-										if tip12 then if strlen(tip12) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip12, flags), nil, nil, nil, true) else GameTooltip:AddLine(" ") end end
+										if tip1 then if strlen(tip1) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip1, flags, true)) else GameTooltip:AddLine(" ") end end
+										if tip2 then if strlen(tip2) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip2, flags, true)) else GameTooltip:AddLine(" ") end end
+										if tip3 then if strlen(tip3) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip3, flags, true)) else GameTooltip:AddLine(" ") end end
+										if tip4 then if strlen(tip4) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip4, flags, true)) else GameTooltip:AddLine(" ") end end
+										if tip5 then if strlen(tip5) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip5, flags, true)) else GameTooltip:AddLine(" ") end end
+										if tip6 then if strlen(tip6) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip6, flags, true)) else GameTooltip:AddLine(" ") end end
+										if tip7 then if strlen(tip7) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip7, flags, true)) else GameTooltip:AddLine(" ") end end
+										if tip8 then if strlen(tip8) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip8, flags, true)) else GameTooltip:AddLine(" ") end end
+										if tip9 then if strlen(tip9) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip9, flags, true)) else GameTooltip:AddLine(" ") end end
+										if tip10 then if strlen(tip10) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip10, flags, true)) else GameTooltip:AddLine(" ") end end
+										if tip11 then if strlen(tip11) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip11, flags, true)) else GameTooltip:AddLine(" ") end end
+										if tip12 then if strlen(tip12) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip12, flags, true)) else GameTooltip:AddLine(" ") end end
 									end
 									if ZA and ZA.DebugMode then -- Debug
 										GameTooltip:AddLine(" ")
@@ -1043,18 +1054,18 @@ function Breadcrumbs:UpdateMap(event, ...)
 							GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
 							GameTooltip:AddLine(Breadcrumbs:FormatTooltip(flags["combo"] and tip2 or title))
 							if tip1 or flags["combo"] then
-								if tip1 and not flags["combo"] then if strlen(tip1) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip1), nil, nil, nil, true) elseif not flags["combo"] then GameTooltip:AddLine(" ") end end
-								if tip2 and not flags["combo"] then if strlen(tip2) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip2), nil, nil, nil, true) elseif not flags["combo"] then GameTooltip:AddLine(" ") end end
-								if tip3 then if strlen(tip3) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip3), nil, nil, nil, true) else GameTooltip:AddLine(" ") end end
-								if tip4 then if strlen(tip4) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip4), nil, nil, nil, true) else GameTooltip:AddLine(" ") end end
-								if tip5 then if strlen(tip5) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip5), nil, nil, nil, true) else GameTooltip:AddLine(" ") end end
-								if tip6 then if strlen(tip6) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip6), nil, nil, nil, true) else GameTooltip:AddLine(" ") end end
-								if tip7 then if strlen(tip7) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip7), nil, nil, nil, true) else GameTooltip:AddLine(" ") end end
-								if tip8 then if strlen(tip8) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip8), nil, nil, nil, true) else GameTooltip:AddLine(" ") end end
-								if tip9 then if strlen(tip9) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip9), nil, nil, nil, true) else GameTooltip:AddLine(" ") end end
-								if tip10 then if strlen(tip10) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip10), nil, nil, nil, true) else GameTooltip:AddLine(" ") end end
-								if tip11 then if strlen(tip11) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip11), nil, nil, nil, true) else GameTooltip:AddLine(" ") end end
-								if tip12 then if strlen(tip12) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip12), nil, nil, nil, true) else GameTooltip:AddLine(" ") end end
+								if tip1 and not flags["combo"] then if strlen(tip1) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip1, nil, true)) elseif not flags["combo"] then GameTooltip:AddLine(" ") end end
+								if tip2 and not flags["combo"] then if strlen(tip2) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip2, nil, true)) elseif not flags["combo"] then GameTooltip:AddLine(" ") end end
+								if tip3 then if strlen(tip3) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip3, nil, true)) else GameTooltip:AddLine(" ") end end
+								if tip4 then if strlen(tip4) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip4, nil, true)) else GameTooltip:AddLine(" ") end end
+								if tip5 then if strlen(tip5) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip5, nil, true)) else GameTooltip:AddLine(" ") end end
+								if tip6 then if strlen(tip6) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip6, nil, true)) else GameTooltip:AddLine(" ") end end
+								if tip7 then if strlen(tip7) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip7, nil, true)) else GameTooltip:AddLine(" ") end end
+								if tip8 then if strlen(tip8) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip8, nil, true)) else GameTooltip:AddLine(" ") end end
+								if tip9 then if strlen(tip9) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip9, nil, true)) else GameTooltip:AddLine(" ") end end
+								if tip10 then if strlen(tip10) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip10, nil, true)) else GameTooltip:AddLine(" ") end end
+								if tip11 then if strlen(tip11) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip11, nil, true)) else GameTooltip:AddLine(" ") end end
+								if tip12 then if strlen(tip12) > 0 then GameTooltip:AddLine(Breadcrumbs:FormatTooltip(tip12, nil, true)) else GameTooltip:AddLine(" ") end end
 							end
 
 							if flags["creationcatalyst"] then
@@ -1159,6 +1170,7 @@ function Breadcrumbs:CheckQuest(map, quest, datastring)
 	if prof1 then prof1 = strlower(GetProfessionInfo(prof1)) end -- This won't work on non-English clients
 	if prof2 then prof2 = strlower(GetProfessionInfo(prof2)) end
 	local flying = IsSpellKnown(34090) or IsSpellKnown(34091) or IsSpellKnown(90265) and true or false
+	local dragonriding = IsSpellKnown(376777) and true or false
 	local aldor = (select(3, GetFactionInfoByID(932))) or 0
 	local scryer = (select(3, GetFactionInfoByID(934))) or 0
 
@@ -1233,6 +1245,7 @@ function Breadcrumbs:CheckQuest(map, quest, datastring)
 					if v == "garrison:2" and garrison == 2 then pass = true end
 					if v == "garrison:3" and garrison == 3 then pass = true end
 					if v == "flying" and flying then pass = true end
+					if v == "dragonriding" and dragonriding then pass = true end
 					if v == "aldor" and aldor >= 4 then pass = true end
 					if v == "scryer" and scryer >= 4 then pass = true end
 					if archaeology and v == "archaeology" then pass = true end
@@ -1284,6 +1297,7 @@ function Breadcrumbs:CheckQuest(map, quest, datastring)
 						if w == "garrison:2" and garrison == 2 then pass = false end
 						if w == "garrison:3" and garrison == 3 then pass = false end
 						if flying and w == "flying" then pass = false end
+						if dragonriding and w == "dragonriding" then pass = false end
 						if aldor >= 4 and w == "aldor" then pass = false end
 						if scryer >= 4 and w == "scryer" then pass = false end
 						if archaeology and w == "archaeology" then pass = false end
@@ -1336,6 +1350,7 @@ function Breadcrumbs:CheckPOI(map, datastring)
 	if prof1 then prof1 = strlower(GetProfessionInfo(prof1)) end -- This won't work on non-English clients
 	if prof2 then prof2 = strlower(GetProfessionInfo(prof2)) end
 	local flying = IsSpellKnown(34090) or IsSpellKnown(34091) or IsSpellKnown(90265) and true or false
+	local dragonriding = IsSpellKnown(376777) and true or false
 	local aldor = (select(3, GetFactionInfoByID(932))) or 0
 	local scryer = (select(3, GetFactionInfoByID(934))) or 0
 
@@ -1414,6 +1429,7 @@ function Breadcrumbs:CheckPOI(map, datastring)
 					if v == "garrison:2" and garrison == 2 then pass = true end
 					if v == "garrison:3" and garrison == 3 then pass = true end
 					if v == "flying" and flying then pass = true end
+					if v == "dragonriding" and dragonriding then pass = true end
 					if v == "aldor" and aldor >= 4 then pass = true end
 					if v == "scryer" and scryer >= 4 then pass = true end
 					if archaeology and v == "archaeology" then pass = true end
@@ -1464,6 +1480,7 @@ function Breadcrumbs:CheckPOI(map, datastring)
 						if fishing and w == "fishing" then pass = false end
 						if cooking and w == "cooking" then pass = false end
 						if flying and w == "flying" then pass = false end
+						if dragonriding and w == "dragonriding" then pass = false end
 						if aldor >= 4 and w == "aldor" then pass = false end
 						if scryer >= 4 and w == "scryer" then pass = false end
 						if race == "scourge" and (w == "undead" or w == "forsaken") then pass = false end
