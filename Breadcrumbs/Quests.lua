@@ -237,10 +237,102 @@ Data.Quests = {
 	--[[ Ohn'ahran Plains ]]--
 	
 	[2023] = {
-		-- Timberstep Outpost
+		-- Into the Plains
+		[65779] = "Into the Plains|60+ 62+,67030 65795,67030|79.44 15.2|Ambassador Taurasza|campaign", -- Adventure mode bypasses prereqs
+
+		-- Maruukai
+		[72429] = "Orientation: Maruukai|60+ 67030|63.4 41.39|Sansok Khan",
+		[70739] = "Bloodlines, Sweets, and Teerai|60+ 62+,67030|63.61 40.46|Hunter Narman",
+		[70730] = "Shikaar Giver|60+ 62+,67030|62.81 35.45|Windsage Dawa",
+		[70721] = "After My Ohn Heart|60+ 62+,67030 70739 70730|62.81 35.45|Windsage Dawa",
+
+		-- Taivan's Purpose
+		--[67772] = "The Trouble with Taivan|60+ 62+,67030|61.21 40|Healer Selbekh",
+
+		-- Initiate's Day Out
+		[65906] = "A Disgruntled Initiate|60+ 62+,67030 -65901|63.12 34.05|Windsage Ordven", -- Breadcrumb for 65901
+		[65901] = "Sneaking Out|60+ 62+,67030 ~65906|56.25 75.95|Initiate Radiya", -- Invalidates breadcrumb 65906
+		[65907] = "Favorite Fruit|60+ 62+,67030 65901|54.78 66.41|Initiate Radiya",
+		[65770] = "A Promise Is A Promise|60+ 62+,67030 65907|54.78 66.41|Initiate Radiya",
+		[65761] = "More Adventure Than Expected|60+ 62+,67030 65770|52.05 63.24|Godoloto",
+		[65711] = "Stealing Its Thunder|60+ 62+,67030 65761|47.5 54.13|Initiate Radiya",
+		[66676] = "Sneaking In|60+ 62+,67030 65711|48.27 56.5|Initiate Radiya",
+
+		-- Lilac Ramble
+		[65899] = "Find Theramus|60+ 62+,67030|25.06 56.88|Celina Crunchyleaves",
+		[65900] = "Suspiciously Spiced Steak|60+ 62+,67030 65899|24.46 63.04|Felina Starrunner",
+		[65903] = "Can't Beat Fluffy|60+ 62+,67030 65899|24.44 63.01|Celina Crunchyleaves",
+		[65902] = "Food or Floof|60+ 62+,67030 65900 65903|24.46 63.04|Felina Starrunner",
+		[65905] = "More Than Weeds|60+ 62+,67030 65902|24.46 63.04|Felina Starrunner",
+		[65937] = "Proof of Negligence|60+ 62+,67030 65902|24.44 63.01|Celina Crunchyleaves",
+		[65904] = "Enough Is Enough|60+ 62+,67030 65905 65937|24.44 63.01|Celina Crunchyleaves",
+		[66011] = "In Memory of Ysera|60+ 62+,67030 65904|24.54 63.97|Felina Starrunner",
+
+		-- Shady Sanctuary / Pilot
+		[70062] = "Some Call Me Bug Catcher|60+ 62+,67030|29.68 58.63|Gracus||\"Gracus wanders around the Shady Sanctuary\"",
+		[70069] = "Others Call Me Duck Herder|60+ 62+,67030 70062|29.68 58.63|Gracus||\"Gracus wanders around the Shady Sanctuary\"",
+		[70070] = "But... I Am the Hero of Ducks|60+ 62+,67030 70069|29.68 58.63|Gracus||\"Gracus wanders around the Shady Sanctuary\"",
+
+		-- Pinewood Post
+		[65837] = "Trouble In The Pines|60+ 62+,67030 -66681|61.99 41.81|Beastmaster Tirren", -- Breadcrumb for 66681
+		[66681] = "Tempests Abound|60+ 62+,67030 ~65837|81.03 58.94|Sentinel Olekk", -- Invalidates breadcrumb 65837
+		[66680] = "Counting Sheep|60+ 62+,67030 ~65837|81.02 58.97|Scout Watu",
+		[66689] = "More Than A Rock|60+ 62+,67030 ~65837|82.33 64.38|{4554450} [Stormtouched Shards]||Drops from any [red]Stormtouched beast] in Sagecrest Pines",
+		[66683] = "Last Resort Analysis|60+ 62+,67030 66681 66680 66689|81.02 58.97|Scout Watu",
+		[65836] = "Show of Storm|60+ 62+,67030 66683|81.02 58.97|Scout Watu",
+		[66684] = "Storm Chasing|60+ 62+,67030 65836|83.98 60.73|Scout Watu",
+
+		-- Elder Nazuun
+		[71027] = "WANTED: Mara'nar the Thunderous|60+ 62+,67030|39.56 56.42|WANTED: Mara'nar the Thunderous",
+		[66687] = "Land of the Apex|60+ 62+,67030|41.63 56.74|Elder Nazuun",
+		[66834] = "Rellen, the Learned|60+ 62+,67030 66687|41.63 56.74|Elder Nazuun",
+		[66688] = "Signs of the Wind|60+ 62+,67030|41.63 56.74|Elder Nazuun",
+		[70374] = "Himia, the Blessed|60+ 62+,67030 66688|49.35 49.4|Himia, the Blessed",
+		[66690] = "The Nokhud Offensive: The Final Ancestor|60+ 62+,67030 66834 70374|41.63 56.74|Elder Nazuun|dungeon",
+
+		-- The Eternal Kurgans
+		[66651] = "Up to No-khud|60+ 62+,67030 -66652|40.93 61.61|Elder Yuvari", -- Breadcrumb for 66652
+		[66652] = "Return to Mender|60+ 62+,67030 ~66651|39.03 66.01|Initiate Zorig", -- Invalidates breadcrumb 66651
+		[66654] = "Desecrator Annihilator|60+ 62+,67030 66652|39.03 66.01|Initiate Zorig",
+		[66655] = "Reagents of De-Necromancy|60+ 62+,67030 66652|39.03 66.01|Initiate Zorig",
+		[69936] = "Zambul, Head Vandal|60+ 62+,67030 66654 66655|33.76 65.36|Initiate Zorig",
+		[66656] = "Definitely Eternal Slumber|60+ 62+,67030 69936|33.76 65.36|Initiate Zorig",
+		[66657] = "And Stay Dead!|60+ 62+,67030 66656|33.76 65.36|Initiate Zorig",
+		[66658] = "The Nokhud Offensive: Founders Keepers|60+ 62+,67030 66657|41 61.61|Initiate Zorig|dungeon",
+
+		-- Mudfin Village
 		[70319] = "Nergazurai|60+ 62+,67030|84.53 25.33|Muqur Rain-Touched",
 		[65950] = "Thieving Gorlocs|60+ 62+,67030|84.39 25.03|Farrier Roscha",
 		[65951] = "Sole Supplier|60+ 62+,67030|84.35 25.01|Apprentice Ehri",
+		[65953] = "The Ora-cull|60+ 62+,67030 65950 65951|80.54 30.73|Khasar",
+		[65954] = "Release the Hounds|60+ 62+,67030 65950 65951|80.54 30.73|Khasar",
+		[65955] = "A Centaur's Best Friend|60+ 62+,67030 65950 65951|80.54 30.73|Khasar",
+		[66005] = "Medallion of a Fallen Friend|60+ 62+,67030 65953 65954 65955|82.1 31.5|{1013266} [Medallion of a Fallen Friend]||Drops from [red]Chief Grrlgllmesh]",
+		[65952] = "A Chief of Legends|60+ 62+,67030 65953 65954 65955|83.43 32.33|Khasar",
+		[65949] = "The Sole Mender|60+ 62+,67030 66005|83.43 32.33|Khasar",
+		[66006] = "Return to Roscha|60+ 62+,67030 65952|83.43 32.33|Khasar",
+
+		-- Nelthazan Ruins
+		[70337] = "Emberwatch|60+ 62+,67030|62.13 36.43|Windsage Kven",
+		[65890] = "The Nelthazan Ruins|60+ 62+,67030 -65891|66 25.06|Telemancer Aerilyn", -- Breadcrumb for 65891
+		[65891] = "Tools of the Tirade|60+ 62+,67030 ~65890|64 18.29|Skyscribe Adenedal", -- Invalidates breadcrumb 65890
+		[65893] = "The Relic Inquiry|60+ 62+,67030 ~65890|64 18.29|Skyscribe Adenedal",
+		[65895] = "Competing Company|60+ 62+,67030 65891 65893|64 18.29|Skyscribe Adenedal",
+		[66719] = "One Step Backwards|60+ 62+,67030 65891 65893 evoker|64 18.29|Skyscribe Adenedal", -- double check on Evoker
+		[65898] = "Proto Problems|60+ 62+,67030 65895 -evoker,66719|62.14 16.31|Skyscribe Adenedal",
+		[66700] = "Proto Problems|60+ 62+,67030 65898|66.33 24.34|Skyscribe Adenedal",
+
+		-- The Fields of Ferocity
+		[70444] = "The Fields of Ferocity|60+ 62+,67030 -66459|62.33 42.3|Fields of Ferocity", -- Breadcrumb for 66459
+		[66459] = "The Field of Ferocity: Terror of the Swamp!|60+ 62+,67030 ~70444|53.16 37.32|Gurgthock", -- Invalidates breadcrumb 70444
+		[66460] = "The Field of Ferocity: Lord of Decay!|60+ 62+,67030 66459|53.16 37.32|Gurgthock",
+		[66461] = "The Field of Ferocity: Foe from the Volcano!|60+ 62+,67030 66460|53.16 37.32|Gurgthock",
+		[66462] = "The Field of Ferocity: Lost in the Dream!|60+ 62+,67030 66461|53.16 37.32|Gurgthock",
+		[66463] = "The Field of Ferocity: Elemental Revenge Round!|60+ 62+,67030 66462|53.16 37.32|Gurgthock",
+		[66464] = "The Field of Ferocity: Master of the Hunt!|60+ 62+,67030 66463|53.16 37.32|Gurgthock",
+
+		-- Enchanting
+		[70029] = {"Artisan's Supply: Runed Serevite Rods|60+ enchanting|41.35 61|Asarin|enchanting", "Artisan's Supply: Runed Serevite Rods|60+ enchanting|56.83 75.51|Solonga|enchanting",},
 	},
 
 
@@ -429,6 +521,7 @@ Data.Quests = {
 		-- Blacksmithing
 
 		-- Enchanting
+		[70029] = "Artisan's Supply: Runed Serevite Rods|60+ enchanting|75.8 33.2|Veeno|enchanting",
 
 		-- Engineering
 		--[70359] = "Dragon Isles Engineering|60+ alliance engineering|COORDS|Winnie Fingerspring|engineering", -- Alliance
