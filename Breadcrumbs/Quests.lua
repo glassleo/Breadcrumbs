@@ -186,15 +186,278 @@ Data.HiddenBonusObjectiveQuests = {
 		39799 - Death Knight, first zone chosen
 
 	Shadowlands
-		59770 - Maw Intro Completed (including through skip)
+		59770 - Maw Intro Completed (including skip)
 		62704 - Threads of Fate chosen
 		60293 - Pride or Unit, Phalynx chosen (Pelodis)
 		60294 - Pride or Unit, Larion chosen (Nemea)
 		-60259 -60260 -60261 -60262 -60263 - No Steward chosen
 		62704,57904,59609,62899,62921 - World Quests Unlocked
+
+	Dragonflight
+		67030 - Adventure Mode unlocked on account
+		71864 - Dreambloom looted this week (Herbalism)
 ]]--
 
 Data.Quests = {
+
+	--[[ Thaldraszus ]]--
+
+	-- Valdrakken
+	[2112] = {
+		-- The Spark of Ingenuity
+		[70180] = "Jump-Start? Jump-Starting!|60+ 67030,68+ 67030,66221 ~70846|84.22 54.41|Greyzik Cobblefinger|campaign", -- Requires either Adventure Mode unlocked or 67030, invalidates 70846
+		[70845] = "In Tyr's Footsteps|60+ 70180|84.33 53.55|Maiden of Inspiration|campaign",
+		[70181] = "First Challenge of Tyr: Finesse|60+ 70845|84.33 53.55|Ornamented Statue|campaign elsewhere link:2024",
+		[70182] = "The Sweet Taste of Victory|60+ 70181|84.33 53.55|Maiden of Inspiration|campaign elsewhere link:2024",
+		[70633] = "Fueling the Engine|60+ 70182|84.33 53.55|Maiden of Inspiration|campaign",
+		[72783] = "Crafting Orders|60+ 70633|85.02 54.45|Greyzik Cobblefinger|campaign",
+	},
+
+	-- Thaldraszus
+	[2025] = {
+		-- Valdrakken - The Spark of Ingenuity
+		[70180] = "Jump-Start? Jump-Starting!|60+ 67030,68+ 67030,66221 ~70846|44.88 60.51|Greyzik Cobblefinger|campaign link:2112", -- Requires either Adventure Mode unlocked or 67030, invalidates 70846
+		[70845] = "In Tyr's Footsteps|60+ 70180|44.9 60.39|Maiden of Inspiration|campaign link:2112",
+		[70181] = "First Challenge of Tyr: Finesse|60+ 70845|44.9 60.39|Ornamented Statue|campaign elsewhere link:2024",
+		[70182] = "The Sweet Taste of Victory|60+ 70181|44.9 60.39|Maiden of Inspiration|campaign elsewhere link:2024",
+		[70633] = "Fueling the Engine|60+ 70182|44.9 60.39|Maiden of Inspiration|campaign link:2112",
+		[72783] = "Crafting Orders|60+ 70633|45 60.52|Greyzik Cobblefinger|campaign link:2112",
+	},
+
+
+	--[[ The Azure Span ]]--
+	
+	[2024] = {
+		-- The Spark of Ingenuity
+		[70181] = "First Challenge of Tyr: Finesse|60+ 70845|67.18 30.72|Ornamented Statue|campaign",
+		[70182] = "The Sweet Taste of Victory|60+ 70181|67.13 30.92|Maiden of Inspiration|campaign",
+	},
+
+
+	--[[ Ohn'ahran Plains ]]--
+	
+	[2023] = {
+		-- Timberstep Outpost
+		[70319] = "Nergazurai|60+ 62+,67030|84.53 25.33|Muqur Rain-Touched",
+		[65950] = "Thieving Gorlocs|60+ 62+,67030|84.39 25.03|Farrier Roscha",
+		[65951] = "Sole Supplier|60+ 62+,67030|84.35 25.01|Apprentice Ehri",
+	},
+
+
+	--[[ The Waking Shores ]]--
+
+	[2022] = {
+		-- The Dragonscale Expedition
+		--[70122] = "Explorers in Peril|60+ 67700|COORDS|Toddy Whiskers|campaign", -- Alliance
+		[65452] = "Explorers in Peril|60+ 65444|80.62 27.61|Naleidea Rivergleam|campaign", -- Horde
+		--[70124] = "Practice Materials|60+ 67700|COORDS|Thaelin Darkanvil|campaign", -- Alliance
+		[65451] = "Practice Materials|60+ 65444|80.61 27.65|Boss Magor|campaign", -- Horde
+		--[70123] = "Primal Pests|60+ 67700|COORDS|Scalecommander Azurathel|campaign", -- Alliance
+		[65453] = "Primal Pests|60+ 65444|80.65 27.6|Scalecommander Cindrethresh|campaign", -- Horde
+		[69965] = "Quality Assurance|60+ 65452,70122|76.41 34.45|Haephesta",
+		[66101] = "From Such Great Heights|60+|75.84 33.49|Aster Cloudgaze",
+		[67053] = "Give Peace a Chance|60+ alliance|76.73 34.55|Captain Garrick", -- Alliance
+		[66110] = "Give Peace a Chance|60+ horde|76.36 33.08|Warlord Breka Grimaxe", -- Horde
+		[66111] = "Encroaching Elementals|60+ alliance 67053 -70135|76.36 33.08|Warlord Breka Grimaxe", -- Alliance
+		[70135] = "Encroaching Elementals|60+ horde 66110 -66111|76.73 34.55|Captain Garrick", -- Horde
+		[66112] = "Always Be Crafting|60+ 67053,66110|76.35 34.64|Grun Ashbeard",
+		--[70125] = "Where is Wrathion?|60+ 70122|COORDS|Toddy Whiskers|campaign", -- Alliance
+		[69910] = "Where is Wrathion?|60+ 65452|76.61 33.6|Naleidea Rivergleam|campaign", -- Horde
+		[72293] = "Adventuring in the Dragon Isles|60+ 67030 69910,70125 -69911 -72266|76.57 33.66|Sendrax",
+		-- 72266 - The Waking Shores (Adventure Mode)
+		[69911] = "Excuse the Mess|60+ 69910,70125 -67030,72266|76.57 33.66|Sendrax|campaign",
+		[69912] = "My First Real Emergency!|60+ 69911|76.57 33.66|Sendrax|campaign",
+		[69914] = "The Djaradin Have Awoken|60+ 69912|76.22 34.53|Majordomo Selistra|campaign",
+
+		-- Dragons in Distress
+		[65760] = "Reporting for Duty|60+ 69914|76.26 34.4|Sendrax|campaign",
+		[65989] = "Invader Djaradin|60+ 65760|71.2 40.77|Commander Lethanak|campaign",
+		[65990] = "Deliver Whelps From Evil|60+ 65760|71.2 40.77|Commander Lethanak|campaign",
+		[65991] = "Time for a Reckoning|60+ 65989 65990|71.2 40.77|Commander Lethanak|campaign",
+		[65993] = "Killjoy|60+ 65991|66.36 35|Wrathion|campaign",
+		[65992] = "Blacktalon Intel|60+ 65991|66.36 35|Wrathion|campaign",
+		[65995] = "The Obsidian Citadel|60+ 65991|62.92 29.42|{237451} [Qalashi Plans]|campaign|Drops from [red]Meatgrinder Sotok]",
+		[65996] = "Veteran Reinforcements|60+ 65993 65992 65995|62.75 33.11|Majordomo Selistra|campaign",
+		[66998] = "Fighting Fire with... Water|60+|59.1 34.84|Caretaker Ventraz", -- no prereqs?
+		[70179] = "A Two for One Deal|60+|54.43 30.84|Apprentice Caretaker Zefren", -- no prereqs?
+		[65997] = "Chasing Sendrax|60+ 65996|54.99 30.78|Caretaker Azkra|campaign",
+		[65998] = "Future of the Flights|60+ 65997|55.17 24.95|Sendrax|campaign",
+		[65999] = "Red in Tooth and Claw|60+ 65997|55.17 24.95|Sendrax|campaign",
+		[66000] = "Library of Alexstrasza|60+ 65997|55.26 24.69|On the Origin of Draconic Species|campaign",
+		[66001] = "A Last Hope|60+ 65998 65999 66000|55.17 24.95|Sendrax|campaign",
+
+		-- In Defense of Life
+		[66114] = "For the Benefit of the Queen|60+ 66001|55.09 31.02|Majordomo Selistra|campaign",
+		[66115] = "The Mandate of the Red|60+ 66114|62.34 73.02|Alexstrasza the Life-Binder|campaign",
+		[70061] = "Training Wings|60+ 66115|62.18 70.56|Amella|campaign",
+		[68795] = "Dragonriding|60+ 66114|62.34 73.02|Alexstrasza the Life-Binder|campaign",
+		[65118] = "How to Glide with Your Dragon|60+ 68795|57.66 66.89|Lord Andestrasz|campaign",
+		[65120] = "How to Dive with Your Dragon|6w0+ 65118|57.66 66.89|Lord Andestrasz|campaign",
+		[65133] = "How to Use Momentum with Your Dragon|60+ 65120|57.66 66.89|Lord Andestrasz|campaign",
+		[68796] = "The Skytop Observatory|60+ 65133|57.66 66.89|Lord Andestrasz|campaign",
+		[68797] = "A New Set of Horns|60+ 68796|75.18 54.97|Lord Andestrasz|campaign",
+		[68798] = "Dragon Glyphs and You|60+ 68797|75.18 54.97|Lord Andestrasz|campaign",
+		[68799] = "Return to the Ruby Lifeshrine|60+ 68798|75.18 54.97|Lord Andestrasz|campaign",
+		[66931] = "Who Brought the Ruckus?|60+ 70061 68799|62.34 73.02|Alexstrasza the Life-Binder|campaign",
+		[66116] = "The Primary Threat|60+ 66931|59.51 72.64|Majordomo Selistra|campaign",
+		[66118] = "Basalt Assault|60+ 66116|59.41 75.88|Commander Lethanak|campaign",
+		[66119] = "Ruby Life Pools: Primalist Invasion|60+ 66118|59.97 75.95|Kildrumeh|dungeon",
+		[66122] = "Proto-Fight|60+ 66118|59.41 75.88|Commander Lethanak|campaign",
+		[66121] = "Egg Evac|60+ 66118|59.48 76.14|Majordomo Selistra|campaign",
+		[66123] = "Cut Off the Head|60+ 66121|53.69 80.17|Majordomo Selistra|campaign", -- is 66122 req?
+		[66124] = "Exeunt, Triumphant|60+ 66123|53.69 80.17|Majordomo Selistra|campaign",
+
+		-- Wrathion's Gambit
+		[66079] = "Wrathion Awaits|60+ 66124|46.09 78.29|Alexstrasza the Life-Binder|campaign",
+		[72241] = "Lessons From Our Past|60+ 66079|42.47 66.79|Scalecommander Emberthal|campaign",
+		[66078] = "Sharp Practice|60+ 72241|42.47 66.84|Wrathion|campaign",
+		[66048] = "Best Plans and Intentions|60+ 72241|42.47 66.79|Scalecommander Emberthal|campaign",
+		[65956] = "Talon Strike|60+ 66078 66048|42.47 66.84|Wrathion|campaign",
+		[65957] = "No Time for Heroes|60+ 66078 66048|42.47 66.84|Wrathion|campaign",
+		[65939] = "The Courage of One's Convictions|60+ 65956 65957|33.99 61.29|Wrathion|campaign",
+		[66044] = "Taking the Walls|60+ +65939|29.15 58.83|Wrathion|campaign",
+		[66049] = "Obsidian Oathstone|60+ 65939 66044|26.43 58.77|Wrathion|campaign",
+		[66055] = "A Shattered Past|60+ 66049|27.26 62.8|Forgemaster Bazentus|campaign",
+		[66056] = "Forging a New Future|60+ 66055|27.26 62.8|Forgemaster Bazentus|campaign",
+		[66354] = "The Spark|60+ 66056|24.68 61.12|Forgemaster Bazentus|campaign",
+		[66057] = "Restoring the Faith|60+ 66354|24.68 61.12|Forgemaster Bazentus|campaign",
+		[72135] = "Neltharus: Secrets Within|60+ +66057|25.11 56.23|Archivist Edress|dungeon",
+
+		-- A Purpose Restored
+		[66779] = "Heir Apparent|60+ 66057|24.25 55.88|Sabellian|campaign",
+		[66780] = "Claimant to the Throne|60+ 66057|24.43 55.5|Wrathion|campaign",
+		[65793] = "Black Wagon Flight|60+ 66779 66780|24.25 55.88|Sabellian|campaign",
+		[66785] = "The Last Eggtender|60+ 65793|57.95 67.3|Sabellian|campaign",
+		[66788] = "Egg-cited for the Future|60+ 66785|61.6 68.71|Mother Elion|campaign",
+		[65791] = "Life-Binder on Duty|60+ 66788|61.6 68.71|Mother Elion|campaign",
+		[65794] = "A Charge of Care|60+ 65791|62.34 73.02|Alexstrasza the Life-Binder|campaign",
+
+		-- Save the Hippos!
+		[72122] = "Erstwhile Ecologists|60+ 65760 -66105|71.14 40.48|Mender Eskros", -- Check if 65760 is req - Breadcrumb for 66105
+		[66105] = "A Scalpel of a Solution|60+ ~72122|74.43 42.14|Ecologist Iskha", -- Invalidates 72122
+		[66107] = "Wildlife Rescue|60+|74.43 42.14|Ecologist Tharu",
+		[66104] = "Forensic Ecology|60+ 66105 66107|74.43 42.14|Ecologist Iskha",
+		[66108] = "A Sledgehammer of a Solution|60+ 66104|74.43 42.14|Ecologist Iskha",
+		[66106] = "Don't Be So Shellfish|60+ 66104|74.43 42.14|Ecologist Tharu",
+
+		-- Let's Get Quacking
+		[66196] = "A Quack For Help|60+ 66104|80.12 42.86|Bubbled Duckling", -- double check req
+		-- 70872 hidden weekly lockout
+		[70877] = "A Quack in Time|60+ 66196 -70872|80.09 39.88|Bubbled Duckling",
+		[70917] = "A Shoulder to Quack On|60+ 70877 -70872|81.63 45.42|Bubbled Duckling", -- confirm coords
+		[70918] = "Quack for Your Life|60+ 70917 -70872|79.33 42.77|Bubbled Duckling", -- confirm coords
+		[70919] = "Quacking Out for a Hero|60+ 70918 -70872|82.83 42.64|Bubbled Duckling", -- confirm coords
+
+		-- Ruby Lifecalling
+		[66825] = "A Ruby Lifecalling|60+|61.89 73.83|Lifecaller Tzadrak", -- no prereqs?
+		[66879] = "Hornstrider Havoc|60+ 66825|61.73 73.76|Dazakros",
+		[66892] = "Deluge Dilemma|60+ 66879|53.42 58.37|Dazakros",
+		[66893] = "Beaky Reclamation|60+ 66879|53.42 58.37|Dazakros",
+		[70351] = "Garden Party|60+ 66825|61.74 73.7|Akora",
+		[66827] = "Flowers of our Labor|60+ 70351|60.17 66.43|Akora",
+		[66828] = "Huddle at the Hollow|60+ 66827|60.19 66.4|Keshki",
+		[66830] = "Hornswoggled!|60+ 66828|65.33 63.68|Keshki",
+		[66997] = "Nursery Direction|60+ 66825|61.82 73.58|Vaeros",
+		[66734] = "Leave Bee Alone|60+ 66997|55.26 63.47|Vaeros",
+		[66735] = "Just a Trim|60+ 66997|55.26 63.47|Vaeros",
+		[66737] = "A Better Start|60+ 66734 66735|55.2 63.7|Adazius",
+		[70058] = "Friend on the Mend|60+|59.88 70.37|Lillistrasza",
+
+		-- Stay a While
+		[70132] = "Stay a While|60+|57.85 66.8|Veritistrasz",
+		-- 70206, 70543, 70544, 70217, 70546, 70547, 70219, 70548 -- Dialogs 1-8 complete
+		-- 70223 -- Final dialog complete
+		[70134] = "Memories|60+ 70132 70223|57.85 66.8|Veritistrasz", -- Must complete entire RP for this to be offered
+
+		-- Dragonscale Basecamp
+		[72397] = "Orientation: Dragonscale Basecamp|60+ 67030|47.88 82.42|Naleidea Rivergleam",
+
+		-- Professional Protographer
+		[66963] = "Out For Delivery|60+ -66524|48.48 78.85|Hauler Bennet", -- Breadcrumb for 66524
+		[66524] = "Amateur Protography|60+ ~66963|48.49 82.68|Cataloger Wulferd", -- Invalidates breadcrumb 66963
+		[66525] = "Competitive Protography|60+ 66524|39.02 83.24|Cataloger Wulferd",
+		[66526] = "Preserving the Wilds|60+ 66524|39.08 83.27|Dervishian",
+		[66527] = "Professional Protography|60+ 66525 66526|39.02 83.24|Cataloger Wulferd",
+		[66528] = "King Without a Crown|60+ 66527|39.08 83.27|Dervishian",
+		[66529] = "A Thousand Words|60+ 66528|39.08 83.27|Dervishian",
+
+		-- Brave Researchers
+		[69897] = "Behavior Analysis \"Homework\"|60+|45.91 81.45|Iyali",
+		[69898] = "Scientific Meat-thod|60+|45.91 81.45|Iyali",
+		[69899] = "Secret Research|60+ 69897 69898|45.91 81.45|Iyali",
+		[69900] = "Identifying the Source|60+ 69899|45.95 81.49|Tyrgon",
+		[69901] = "Bring In the Expert|60+ 69899|45.95 81.49|Tyrgon",
+		[69902] = "Theory in Practice|60+ 69900 69901|45.95 81.49|Tyrgon",
+
+		-- Beyond the Barrier
+		[69896] = "Disastrous Detour|60+ -66435|63.58 61.77|Scout Kuvaeth", -- Breadcrumb for 66435
+		[66435] = "Site Salvage|60+ ~69896|66.06 58.13|Elementalist Taiyang", -- Invalidates breadcrumb 66435
+		[66436] = "Unearthed Troublemakers|60+ ~69896|66.06 58.13|Elementalist Taiyang",
+		[66437] = "A Key Element|60+ ~69896|67.46 57.23|{1020373} [Orb of Primal Stone]||Drops from [red]Earth Elementals] in the area",
+		[66438] = "Lofty Goals|60+ 66435 66436 66437|66.57 56.11|Examiner Tae'shara Bloodwatcher",
+		[66439] = "Rapid Fire Plans|60+ 66435 66436 66437|66.62 56.05|Acadia Chistlestone",
+		[66441] = "Distilled Effort|60+ 66435 66436 66437|66.59 56.08|Elementalist Taiyang",
+		[70994] = "Drainage Solutions|60+ 66435 66436 66437|70.5 56.84|Zikkori", -- check reqs
+		[66442] = "Let's Get Theoretical|60+ 66438 66439 66441|66.59 56.08|Elementalist Taiyang",
+		[66447] = "Beyond the Barrier|60+ 66442|66.51 55.97|Elementalist Taiyang",
+
+		-- The Shadow of His Wing
+		[65687] = "Punching Up|60+|39.43 48.33|Ingot",
+		[65690] = "A Cultist's Misgivings|60+|39.43 48.33|Ingot",
+		[65782] = "Under Lock and Key|60+ 65690|37.43 46.62|Ayasanth",
+		[65691] = "The Shadow of His Wings|60+ 65687 65782|37.35 46.61|Ayasanth",
+
+		-- The Earthen Ward
+		[66003] = "Rings To Bind Them|60+|37.45 71.78|Earthcaller Yevaa", -- no prereq?
+		[66369] = "The Earthen Ward|60+ 66003|37.45 71.78|Earthcaller Yevaa",
+		[66368] = "Island In A Storm|60+ 66369|37.45 71.78|Earthcaller Yevaa",
+
+		-- Dragonriding
+		[72481] = "The Waking Shores Tour|60+ dragonriding|73.25 52.07|Celormu", -- prereqs?
+
+
+		-- TO DO: figure out what triggers the Artisan's Supply quests
+		-- Fishing
+		--[72252] = "Dragon Isles Fishing|60+ alliance|COORDS|Danielle Anglers|fishing", -- Alliance
+		[72253] = "Dragon Isles Fishing|60+ horde|81.11 29.11|Mora Cloudwalker|fishing", -- Horde
+
+		-- Cooking
+		[72251] = "Dragon Isles Cooking|60+ -72250|76.45 35.77|Head Chef Stacks|cooking", -- some characters get 72250 instead (Evokers?)
+
+		-- Alchemy
+
+		-- Blacksmithing
+
+		-- Enchanting
+
+		-- Engineering
+		--[70359] = "Dragon Isles Engineering|60+ alliance engineering|COORDS|Winnie Fingerspring|engineering", -- Alliance
+		[72242] = "Dragon Isles Engineering|60+ horde engineering|75.93 33.21|Quizla Blastcaps|engineering", -- Horde
+		[70030] = "Artisan's Supply: Quality-Assured Optics|60+ engineering|42.99 66.51|Winnie Fingerspring|engineering",
+
+		-- Herbalism
+		[72243] = "Dragon Isles Herbalism|60+ herbalism -70364|76.86 34.04|Feilin Kuan|herbalism",
+		[70026] = {"Artisan's Supply: Lava Beetles|60+ herbalism|76.86 34.04|Feilin Kuan|herbalism", "Artisan's Supply: Lava Beetles|60+ herbalism|57.44 65.92|Szarostrasza|herbalism",},
+
+		-- Inscription
+		[72244] = "Dragon Isles Inscription|60+ inscription -70361|76.17 35.56|Journalist Jessamine Spitz|inscription",
+
+		-- Jewelcrafting
+		[72247] = "Dragon Isles Jewelcrafting|60+ jewelcrafting|76.14 33.62|Misty Catseye|jewelcrafting", -- Alliance gets 70365?
+
+		-- Leatherworking
+
+		-- Mining
+
+		-- Skinning
+
+		-- Tailoring
+
+		-- Ohn'ahran Plains - Into the Plains
+		[65795] = "Next Steppes|60+ 65794|61.56 68.56|Alexstrasza the Life-Binder|campaign",
+		[65779] = "Into the Plains|60+ 62+,67030 65795,67030|48.27 88.67|Ambassador Taurasza|campaign", -- Adventure mode bypasses prereqs
+	},
+
 
 	--[[ Oribos ]]--
 
@@ -3675,6 +3938,12 @@ Data.Quests = {
 
 		-- Battle for Azeroth - The Stormwind Extraction
 		[51443] = "Battle for Azeroth: Mission Statement|10+ horde -60361 -59926|49.41 76.6|Warchief's Herald", -- 60361 is the Exile's Reach version
+		
+		-- Dragon Isles - The Dragonscale Expedition
+		[65435] = "The Dragon Isles Await|10+ horde|44.08 37.98|Ebyssian|campaign",
+		[65437] = "Aspectral Invitation|10+ horde 65435|44.08 37.98|Ebyssian|campaign",
+		[65443] = "Expeditionary Coordination|10+ horde 65437|44.19 37.79|Naleidea Rivergleam|campaign",
+		[72256] = "The Dark Talons|10+ horde 65437|44.04 38.27|Scalecommander Cindrethresh|campaign",
 	},
 
 	-- Cleft of Shadow, Orgrimmar
@@ -3899,6 +4168,10 @@ Data.Quests = {
 
 		-- Death Knight - The Four Horsemen
 		[42484] = "The Firstborn Rises|10+ deathknight 42449|47.32 17.67|Thassarian|artifact",
+
+		-- Dragon Isles - The Dragonscale Expedition
+		[65439] = "Whispers on the Winds|10+ horde 65443 72256|55.92 12.61|Archmage Khadgar|campaign",
+		[65444] = "To the Dragon Isles!|60+ horde 65439 ~70198|55.81 12.66|Naleidea Rivergleam|campaign",
 	},
 
 
