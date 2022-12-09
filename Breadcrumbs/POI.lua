@@ -45,8 +45,21 @@ local _, Data = ...
 Data.POI = {
 
 
-	--[[ Valdrakken ]]--
+	--[[ Algeth'ar Academy ]]--
 
+	-- Algeth'ar Academy
+	[2097] = {
+		"132533:objective|[friendly]Black Dragonflight Recruiter]|1+|45.84 71.15|tooltip||{132533} [spell]Black Dragonflight Pledge Pin]|[Critical Strike increased by 5%.]",
+		"132530:objective|[friendly]Bronze Dragonflight Recruiter]|1+|42.73 68.17|tooltip||{132530} [spell]Bronze Dragonflight Pledge Pin]|[Haste increased by 5%.]",
+		"132526:objective|[friendly]Blue Dragonflight Recruiter]|1+|43.02 61.67|tooltip||{132526} [spell]Blue Dragonflight Pledge Pin]|[Mastery increased.]",
+		"132529:objective|[friendly]Green Dragonflight Recruiter]|1+|46.56 56.37|tooltip||{132529} [spell]Green Dragonflight Pledge Pin]|[Healing taken increased by 10%.]",
+		"132532:objective|[friendly]Red Dragonflight Recruiter]|1+|48.48 59.08|tooltip||{132532} [spell]Red Dragonflight Pledge Pin]|[Versatility increased by 5%.]",
+	},
+
+
+	--[[ Thaldraszus ]]--
+
+	-- Valdrakken
 	[2112] = {
 		-- Portal
 		"POI/Portal|Portal to Orgrimmar|horde|56.64 38.3",
@@ -72,7 +85,7 @@ Data.POI = {
 		"POI/Fishing|[Fishing]|58+|43.7 74.5",
 
 		-- Rostrum of Transformation
-		"dragon-rostrum|[Rostrum of Transformation]|58+|25.05 50.64",
+		"dragon-rostrum|[Rostrum of Transformation]|dragonriding|25.05 50.64",
 
 		-- Pets
 		"WildBattlePet|[Pet Supplies]|1+|48.3 82.51",
@@ -80,15 +93,11 @@ Data.POI = {
 	},
 
 
-	--[[ Algeth'ar Academy ]]--
+	--[[ The Waking Shores ]]--
 
-	-- Algeth'ar Academy
-	[2097] = {
-		"132533:objective|[friendly]Black Dragonflight Recruiter]|1+|45.84 71.15|tooltip||{132533} [spell]Black Dragonflight Pledge Pin]|[Critical Strike increased by 5%.]",
-		"132530:objective|[friendly]Bronze Dragonflight Recruiter]|1+|42.73 68.17|tooltip||{132530} [spell]Bronze Dragonflight Pledge Pin]|[Haste increased by 5%.]",
-		"132526:objective|[friendly]Blue Dragonflight Recruiter]|1+|43.02 61.67|tooltip||{132526} [spell]Blue Dragonflight Pledge Pin]|[Mastery increased.]",
-		"132529:objective|[friendly]Green Dragonflight Recruiter]|1+|46.56 56.37|tooltip||{132529} [spell]Green Dragonflight Pledge Pin]|[Healing taken increased by 10%.]",
-		"132532:objective|[friendly]Red Dragonflight Recruiter]|1+|48.48 59.08|tooltip||{132532} [spell]Red Dragonflight Pledge Pin]|[Versatility increased by 5%.]",
+	[2022] = {
+		-- Rostrum of Transformation
+		"dragon-rostrum|[Rostrum of Transformation]|dragonriding|74.03 58.16",
 	},
 
 
