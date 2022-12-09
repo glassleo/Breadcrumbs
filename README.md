@@ -39,12 +39,12 @@ If you'd like to help, please [get in touch](mailto:hello@leo.glass)!
 
 So far, the following zones are entirely complete or in a near-complete state:
 
-### Dragon Isles
+### Dragon Isles (1/5 Complete)
 - The Waking Shores (including Adventure Mode)
 - Valdrakken POIs
 - Algeth'ar Academy POIs
 
-### Shadowlands
+### Shadowlands (6/8 Complete)
 - Zereth Mortis and the Secrets of the First Ones campaign
 - Oribos
 - Bastion (Threads of Fate only)
@@ -52,7 +52,7 @@ So far, the following zones are entirely complete or in a near-complete state:
 - Ardenweald (Threads of Fate only)
 - Revendreth (Threads of Fate only)
 
-### Broken Isles
+### Broken Isles (5/8 Complete)
 - Azsuna
 - Val'sharah
 - Highmountain
