@@ -87,8 +87,8 @@ Data.HiddenBonusObjectiveQuests = {
 		research:n		Must have researched GarrTalent ID n (see https://wow.tools/dbc/?dbc=garrtalent)
 		-research:n		Must not have researched GarrTalent ID n
 
-		renown:n		Must have attained renown level n with their current covenant
-		-renown:n		Must not have attained renown level n with their current covenant
+		renown:n		Must have attained renown level n with their current Shadowlands covenant
+		-renown:n		Must not have attained renown level n with their current Shadowlands covenant
 
 		toy:n			Must have learned toy with item ID n
 		-toy:n			Must not have learned toy with item ID n
@@ -107,9 +107,9 @@ Data.HiddenBonusObjectiveQuests = {
 		-art:x:n		Map with ID x must not currently have UiMapArtID n
 
 		reputation:n:x	Must have reached standing x or higher with reputation faction n
-						Major (renown) type reputations require renown x or higher (1 is Renown 1)
-						Friendship type reputation require standing x or higher (1 is Rank 1)
-						Traditional reputation require standing ID x or higher (4 is Neutral, 5 is Friendly... 8 is Exalted)
+						Major (renown) type reputations require renown level x or higher (1 is Renown 1)
+						Friendship type reputation require standing x or higher (for example, for Nat Pagle; 1 is Stranger, 2 is Pal, ... 6 is Best Friend)
+						Traditional reputation require standing ID x or higher (1 is Hated, ... 4 is Neutral, 5 is Friendly, ... 8 is Exalted)
 		-reputation:n:x	Must not have reached standing x or higher with reputation faction n
 
 		broken			Quest is broken and cannot be completed, it will be hidden unless the user has decided to display broken quests
