@@ -26,7 +26,7 @@ Data.Vignettes = {
 		[70609] = "Elegant Canvas Brush|60+|60.25 41.64||treasure item:203206|Contains|!{2103804} [poor]Elegant Canvas Brush]",
 		
 		-- Profession Master
-		[70258] = "[friendly]Bridgette Holdug]|60+ mining|61.43 76.87|[friendly]Master Miner]|vignette speak currency:2035|Available Knowledge|!{3615521} [rare]Dragon Isles Mining Knowledge] (10)|!{4643977} [rare]Artisan's Mettle] (50)",
+		[70258] = "[friendly]Bridgette Holdug]|60+ mining skill:2833:25|61.43 76.87|[friendly]Master Miner]|vignette speak currency:2035|Available Knowledge|!{3615521} [rare]Dragon Isles Mining Knowledge] (10)|!{4643977} [rare]Artisan's Mettle] (50)",
 	},
 
 
@@ -34,7 +34,7 @@ Data.Vignettes = {
 
 	[2024] = {
 		-- Profession Master
-		[70250] = "[friendly]Frizz Buzzcrank]|60+ engineering|17.76 21.68|[friendly]Master Engineer]|vignette speak currency:2027|Available Knowledge|!{4624728} [rare]Dragon Isles Engineering Knowledge] (5)|!{4643977} [rare]Artisan's Mettle] (25)",
+		[70250] = "[friendly]Frizz Buzzcrank]|60+ engineering skill:2827:25|17.76 21.68|[friendly]Master Engineer]|vignette speak currency:2027|Available Knowledge|!{4624728} [rare]Dragon Isles Engineering Knowledge] (5)|!{4643977} [rare]Artisan's Mettle] (25)",
 	},
 
 
@@ -42,7 +42,7 @@ Data.Vignettes = {
 
 	[2023] = {
 		-- Profession Master
-		[70253] = "[friendly]Hua Greenpaw]|60+ herbalism|58.38 50.01|[friendly]Master Herbalist]|vignette speak currency:2034|Available Knowledge|!{4624731} [rare]Dragon Isles Herbalism Knowledge] (10)|!{4643977} [rare]Artisan's Mettle] (50)",
+		[70253] = "[friendly]Hua Greenpaw]|60+ herbalism skill:2832:25|58.38 50.01|[friendly]Master Herbalist]|vignette speak currency:2034|Available Knowledge|!{4624731} [rare]Dragon Isles Herbalism Knowledge] (10)|!{4643977} [rare]Artisan's Mettle] (50)",
 	},
 
 
@@ -50,7 +50,7 @@ Data.Vignettes = {
 
 	[2022] = {
 		-- Profession Master
-		[70252] = "[friendly]Grekka Anvilsmash]|60+ blacksmithing|43.27 66.63|[friendly]Master Blacksmith]|vignette speak currency:2023|Available Knowledge|!{4624660} [rare]Dragon Isles Blacksmithing Knowledge] (5)|!{4643977} [rare]Artisan's Mettle] (25)",
+		[70252] = "[friendly]Grekka Anvilsmash]|60+ blacksmithing skill:2822:25|43.27 66.63|[friendly]Master Blacksmith]|vignette speak currency:2023|Available Knowledge|!{4624660} [rare]Dragon Isles Blacksmithing Knowledge] (5)|!{4643977} [rare]Artisan's Mettle] (25)",
 	},
 
 

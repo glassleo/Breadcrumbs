@@ -122,13 +122,13 @@ end
 
 -- Fix Bonus Objectives
 function Breadcrumbs:FixBonusObjectives()
-	-- Attempt to fix the Blizzard map bug preventing Legion leveling bonus objectives from hiding properly at level 50+
+	-- Attempt to fix the Blizzard map bug preventing Legion leveling bonus objectives from hiding properly at level 60+
 	if not WorldMapFrame then return end
 
 	-- We don't want to unregister the entire Data Provider since that would mess up bonus objectives on other maps
 	-- Instead we'll just hide all the BonusObjectivePinTemplate pins for specific zones
 	local map = WorldMapFrame:GetMapID() or 0
-	if (UnitLevel("player") or 1) >= 50 and (map == 630 or map == 641 or map == 650 or map == 657 or map == 634) then
+	if (UnitLevel("player") or 1) >= 60 and (map == 630 or map == 641 or map == 650 or map == 657 or map == 634) then
 		-- Azsuna, Val'sharah, Highmountain, Neltharion's Vault, Stormheim
 		WorldMapFrame:RemoveAllPinsByTemplate("BonusObjectivePinTemplate")
 	elseif Setting_DisableStorylineQuestDataProvider and Data and Data.HiddenBonusObjectiveQuests and WorldMapFrame:GetNumActivePinsByTemplate("BonusObjectivePinTemplate") >= 1 then
@@ -153,6 +153,7 @@ function Breadcrumbs:FormatTooltip(text, flags, varwrap)
 	local flags = flags or {}
 	local wrap = true
 
+	-- If the line begins with "!", it means wrapping should be disabled - remove the "!" and disable wrapping
 	if strsub(text, 1, 1) == "!" then
 		text = strsub(text, 2)
 		wrap = false
@@ -183,7 +184,7 @@ function Breadcrumbs:FormatTooltip(text, flags, varwrap)
 	text = string.gsub(text, "%[", "|cffffffff") -- white
 	text = string.gsub(text, "%]", "|r") -- close color
 
-	if varwrap then
+	if varwrap then -- Return all parameters for GameTooltip:AddLine if variable wrapping is wanted
 		return text, nil, nil, nil, wrap
 	else
 		return text
@@ -1147,12 +1148,9 @@ Breadcrumbs:RegisterEvent("COVENANT_SANCTUM_RENOWN_LEVEL_CHANGED", "UpdateMap")
 
 Breadcrumbs:RegisterEvent("QUEST_WATCH_LIST_CHANGED", "FixBonusObjectivesDelayed")
 
-
-function Breadcrumbs:CheckQuest(map, quest, datastring)
-	-- Check requirements
-	local title, requirements, coordinates, source, flags, help, help2, help3, help4, help5, help6, help7, help8, help9, help10, help11, help12 = strsplit("|", datastring)
-	local data = { strsplit(" ", strlower(requirements)) }
-	local x, y, xx, yy = strsplit(" ", coordinates or "")
+function Breadcrumbs:Validate(str)
+	local str = str or ""
+	local data = { strsplit(" ", strlower(str)) }
 
 	local class = select(2, UnitClass("player"))
 	class = strlower(class)
@@ -1230,6 +1228,12 @@ function Breadcrumbs:CheckQuest(map, quest, datastring)
 						end
 					end
 
+					-- skill:n:x
+					if string.match(v, "^skill:(%d+):(%d+)$") then
+						local info = C_TradeSkillUI.GetProfessionInfoBySkillLineID(tonumber(string.match(v, "skill:(%d+):%d+") or 0))
+						if info and info.skillLevel >= tonumber(string.match(v, "skill:%d+:(%d+)") or 0) then pass = true end
+					end
+
 					-- art:n
 					if string.match(v, "^art:(%d+)$") and (C_Map.GetMapArtID(map) == tonumber(string.match(v, "art:(%d+)") or 0)) then pass = true end
 
@@ -1294,6 +1298,12 @@ function Breadcrumbs:CheckQuest(map, quest, datastring)
 							elseif tonumber((select(3, GetFactionInfoByID(faction))) or 0) >= standing then
 								pass = false
 							end
+						end
+
+						-- -skill:n:x
+						if string.match(w, "^skill:(%d+):(%d+)$") then
+							local info = C_TradeSkillUI.GetProfessionInfoBySkillLineID(tonumber(string.match(w, "skill:(%d+):%d+") or 0))
+							if info and info.skillLevel >= tonumber(string.match(w, "skill:%d+:(%d+)") or 0) then pass = false end
 						end
 
 						-- -art:n
@@ -1350,6 +1360,15 @@ function Breadcrumbs:CheckQuest(map, quest, datastring)
 		end
 	end
 
+	return pass
+end
+
+function Breadcrumbs:CheckQuest(map, quest, datastring)
+	-- Check requirements
+	local title, requirements, coordinates, source, flags, help, help2, help3, help4, help5, help6, help7, help8, help9, help10, help11, help12 = strsplit("|", datastring)
+	local x, y, xx, yy = strsplit(" ", coordinates or "")
+	local pass = Breadcrumbs:Validate(requirements)
+
 	-- eligible, title, x, y, xx, yy, source, flags, help, ...
 	return pass, title, x, y, xx, yy, source, flags, help, help2, help3, help4, help5, help6, help7, help8, help9, help10, help11, help12
 end
@@ -1357,204 +1376,8 @@ end
 function Breadcrumbs:CheckPOI(map, datastring)
 	-- Check requirements
 	local texture, title, requirements, coordinates, flags, help, help2, help3, help4, help5, help6, help7, help8, help9, help10, help11, help12 = strsplit("|", datastring)
-	local data = { strsplit(" ", strlower(requirements)) }
 	local x, y = strsplit(" ", coordinates or "")
-
-	local class = select(2, UnitClass("player"))
-	class = strlower(class)
-	local race = strlower(select(2, UnitRace("player")))
-	local faction = strlower(UnitFactionGroup("player"))
-	local level = UnitLevel("player") or 1
-	local renown = C_CovenantSanctumUI.GetRenownLevel() or 1
-	local garrison = C_Garrison and C_Garrison.GetGarrisonInfo(Enum.GarrisonType.Type_6_0) or 0
-	local covenant = C_Covenants and C_Covenants.GetActiveCovenantID() or 0
-	if covenant == 1 then covenant = "kyrian" end
-	if covenant == 2 then covenant = "venthyr" end
-	if covenant == 3 then covenant = "nightfae" end
-	if covenant == 4 then covenant = "necrolord" end
-	prof1, prof2, archaeology, fishing, cooking = GetProfessions()
-	if prof1 then prof1 = strlower(GetProfessionInfo(prof1)) end -- This won't work on non-English clients
-	if prof2 then prof2 = strlower(GetProfessionInfo(prof2)) end
-	local flying = IsSpellKnown(34090) or IsSpellKnown(34091) or IsSpellKnown(90265) and true or false
-	local dragonriding = IsSpellKnown(376777) and true or false
-	local aldor = (select(3, GetFactionInfoByID(932))) or 0
-	local scryer = (select(3, GetFactionInfoByID(934))) or 0
-
-	local pass = true
-	for _, v in ipairs(data) do
-		if pass then
-			pass = false
-
-			if string.match(v, "(%d+)%+") and tonumber(string.match(v, "(%d+)%+") or 0) <= level then
-				pass = true -- Minimum level
-			elseif tonumber(string.match(v, "(%d+)%-") or 0) >= level then
-				pass = true -- Maximum level
-			else
-				local data = { strsplit(",", v) }
-
-				for _, v in ipairs(data) do
-					-- Must have completed quest (n)
-					if C_QuestLog.IsQuestFlaggedCompleted(tonumber(v) or 0) then pass = true end
-
-					-- Must have completed or picked up quest (+n)
-					if string.match(v, "%+(%d+)") and (C_QuestLog.IsQuestFlaggedCompleted(tonumber(string.match(v, "%+(%d+)") or 0)) or C_QuestLog.IsOnQuest(tonumber(string.match(v, "%+(%d+)") or 0))) then pass = true end
-
-					-- Must have completed quest or it is ready for turn in (!n)
-					if string.match(v, "!(%d+)") and (C_QuestLog.IsQuestFlaggedCompleted(tonumber(string.match(v, "!(%d+)") or 0)) or C_QuestLog.ReadyForTurnIn(tonumber(string.match(v, "!(%d+)") or 0))) then pass = true end
-
-					-- Must not have picked up quest (~n)
-					if string.match(v, "~(%d+)") and not C_QuestLog.IsOnQuest(tonumber(string.match(v, "~(%d+)") or 0)) then pass = true end
-
-					-- Must not have completed or picked up quest (-n)
-					if string.match(v, "%-(%d+)") and not C_QuestLog.IsQuestFlaggedCompleted(tonumber(string.match(v, "%-(%d+)") or 0)) and not C_QuestLog.IsOnQuest(tonumber(string.match(v, "%-(%d+)") or 0)) then pass = true end
-
-					-- Must have picked up quest but not completed it (§n)
-					if string.match(v, "§(%d+)") and not (C_QuestLog.IsQuestFlaggedCompleted(tonumber(string.match(v, "§(%d+)") or 0)) and C_QuestLog.IsOnQuest(tonumber(string.match(v, "§(%d+)") or 0))) then pass = true end
-
-					-- Must not have completed quest (_n)
-					if string.match(v, "^_(%d+)$") and not C_QuestLog.IsQuestFlaggedCompleted(tonumber(string.match(v, "_(%d+)") or 0)) then pass = true end
-
-					-- reset:n
-					if string.match(v, "^reset:(%d+)$") and not Breadcrumbs:WasQuestCompletedToday(tonumber(string.match(v, "reset:(%d+)") or 0)) then pass = true end
-
-					-- active:n
-					if string.match(v, "^active:(%d+)$") and C_TaskQuest.IsActive(tonumber(string.match(v, "active:(%d+)") or 0)) then pass = true end
-
-					-- research:n
-					if string.match(v, "^research:(%d+)$") and C_Garrison.GetTalentInfo(tonumber(string.match(v, "research:(%d+)") or 0)).researched then pass = true end
-
-					-- repuation:n:x
-					if string.match(v, "^reputation:(%d+):(%d+)$") then
-						local faction, standing = tonumber(string.match(v, "reputation:(%d+):%d+") or 0), tonumber(string.match(v, "reputation:%d+:(%d+)") or 0)
-						local major, friend = C_MajorFactions.GetMajorFactionData(faction), C_GossipInfo.GetFriendshipReputationRanks(faction)
-						if major then
-							if major.renownLevel >= standing then pass = true end
-						elseif friend and friend.maxLevel > 0 then
-							if friend.currentLevel >= standing then pass = true end
-						elseif tonumber((select(3, GetFactionInfoByID(faction))) or 0) >= standing then
-							pass = true
-						end
-					end
-
-					-- art:n
-					if string.match(v, "^art:(%d+)$") and (C_Map.GetMapArtID(map) == tonumber(string.match(v, "art:(%d+)") or 0)) then pass = true end
-
-					-- art:x:n
-					if string.match(v, "^art:(%d+):(%d+)$") and (C_Map.GetMapArtID(tonumber(string.match(v, "art:(%d+):%d+") or 0)) == tonumber(string.match(v, "art:%d+:(%d+)") or 0)) then pass = true end
-
-					-- renown:n
-					if string.match(v, "^renown:(%d+)$") and (renown >= tonumber(string.match(v, "renown:(%d+)") or 0)) then pass = true end
-
-					-- toy:n
-					if string.match(v, "^toy:(%d+)$") and PlayerHasToy(tonumber(string.match(v, "toy:(%d+)") or 0)) then pass = true end
-
-					-- item:n
-					if string.match(v, "^item:(%d+)$") and GetItemCount(tonumber(string.match(v, "item:(%d+)") or 0), true, false, true) >= 1 then pass = true end
-
-					-- item:n:x
-					if string.match(v, "^item:(%d+):(%d+)$") and GetItemCount(tonumber(string.match(v, "item:(%d+):%d+") or 0), true, false, true) >= (tonumber(string.match(v, "item:%d+:(%d+)") or 0)) then pass = true end
-
-					-- currency:n:x
-					if string.match(v, "^currency:(%d+):(%d+)$") and C_CurrencyInfo.GetCurrencyInfo(tonumber(string.match(v, "currency:(%d+):%d+") or 0)).quantity >= (tonumber(string.match(v, "currency:%d+:(%d+)") or 0)) then pass = true end
-
-					-- Mailbox
-					if v == "mailbox" and Setting_EnableMailboxes then pass = true end
-					if v == "mailboxdense" and Setting_EnableMailboxes and Setting_EnableMailboxesEverywhere then pass = true end
-
-					-- Must match...
-					if v == class or v == faction or v == covenant or v == prof1 or v == prof2 or v == race then pass = true end
-					if v == "garrison" and garrison >= 1 then pass = true end
-					if v == "garrison:1" and garrison == 1 then pass = true end
-					if v == "garrison:2" and garrison == 2 then pass = true end
-					if v == "garrison:3" and garrison == 3 then pass = true end
-					if v == "flying" and flying then pass = true end
-					if v == "dragonriding" and dragonriding then pass = true end
-					if v == "aldor" and aldor >= 4 then pass = true end
-					if v == "scryer" and scryer >= 4 then pass = true end
-					if archaeology and v == "archaeology" then pass = true end
-					if fishing and v == "fishing" then pass = true end
-					if cooking and v == "cooking" then pass = true end
-					if race == "scourge" and (v == "undead" or v == "forsaken") then pass = true end
-					if race == "highmountaintauren" and v == "highmountain" then pass = true end
-					if race == "darkirondwarf" and v == "darkiron" then pass = true end
-					if race == "magharorc" and v == "maghar" then pass = true end
-					if race == "lightforgeddraenei" and v == "lightforged" then pass = true end
-					if race == "kultiran" and v == "kultiranhuman" then pass = true end
-					if race == "zandalaritroll" and v == "zandalari" then pass = true end
-
-					-- Must not match...
-					if string.match(v, "%-(%a+)") then
-						pass = true -- We invert our logic
-						local w = string.gsub(v, "%-(%a+)", "%1")
-
-						-- -active:n
-						if string.match(w, "^active:(%d+)$") and C_TaskQuest.IsActive(tonumber(string.match(w, "active:(%d+)") or 0)) then pass = false end
-
-						-- -research:n
-						if string.match(w, "^research:(%d+)$") and C_Garrison.GetTalentInfo(tonumber(string.match(w, "research:(%d+)") or 0)).researched then pass = false end
-
-						-- -repuation:n:x
-						if string.match(w, "^reputation:(%d+):(%d+)$") then
-							local faction, standing = tonumber(string.match(w, "reputation:(%d+):%d+") or 0), tonumber(string.match(w, "reputation:%d+:(%d+)") or 0)
-							local major, friend = C_MajorFactions.GetMajorFactionData(faction), C_GossipInfo.GetFriendshipReputationRanks(faction)
-							if major then
-								if major.renownLevel >= standing then pass = false end
-							elseif friend and friend.maxLevel > 0 then
-								if friend.currentLevel >= standing then pass = false end
-							elseif tonumber((select(3, GetFactionInfoByID(faction))) or 0) >= standing then
-								pass = false
-							end
-						end
-
-						-- -art:n
-						if string.match(w, "^art:(%d+)$") and (C_Map.GetMapArtID(map) == tonumber(string.match(w, "art:(%d+)") or 0)) then pass = false end
-
-						-- -art:x:n
-						if string.match(w, "^art:(%d+):(%d+)$") and (C_Map.GetMapArtID(tonumber(string.match(w, "art:(%d+):%d+") or 0)) == tonumber(string.match(w, "art:%d+:(%d+)") or 0)) then pass = false end
-
-						-- -renown:n
-						if string.match(w, "^renown:(%d+)$") and (renown >= tonumber(string.match(w, "renown:(%d+)") or 0)) then pass = false end
-
-						-- -toy:n
-						if string.match(w, "^toy:(%d+)$") and PlayerHasToy(tonumber(string.match(w, "toy:(%d+)") or 0)) then pass = false end
-
-						-- -item:n
-						if string.match(w, "^item:(%d+)$") and GetItemCount(tonumber(string.match(w, "item:(%d+)") or 0), true, false, true) >= 1 then pass = false end
-
-						-- -item:n:x
-						if string.match(w, "^item:(%d+):(%d+)$") and GetItemCount(tonumber(string.match(w, "item:(%d+):%d+") or 0), true, false, true) >= (tonumber(string.match(w, "item:%d+:(%d+)") or 0)) then pass = false end
-
-						-- -currency:n:x
-						if string.match(w, "^currency:(%d+):(%d+)$") and C_CurrencyInfo.GetCurrencyInfo(tonumber(string.match(w, "currency:(%d+):%d+") or 0)).quantity >= (tonumber(string.match(w, "currency:%d+:(%d+)") or 0)) then pass = false end
-
-						if w == class or w == faction or w == covenant or w == prof1 or w == prof2 or w == race then pass = false end
-						if archaeology and w == "archaeology" then pass = false end
-						if fishing and w == "fishing" then pass = false end
-						if cooking and w == "cooking" then pass = false end
-						if flying and w == "flying" then pass = false end
-						if dragonriding and w == "dragonriding" then pass = false end
-						if aldor >= 4 and w == "aldor" then pass = false end
-						if scryer >= 4 and w == "scryer" then pass = false end
-						if race == "scourge" and (w == "undead" or w == "forsaken") then pass = false end
-						if race == "highmountaintauren" and w == "highmountain" then pass = false end
-						if race == "darkirondwarf" and w == "darkiron" then pass = false end
-						if race == "magharorc" and w == "maghar" then pass = false end
-						if race == "lightforgeddraenei" and w == "lightforged" then pass = false end
-						if race == "kultiran" and w == "kultiranhuman" then pass = false end
-						if race == "zandalaritroll" and w == "zandalari" then pass = false end
-					end
-
-					-- Broken
-					if v == "broken" and Setting_EnableBrokenQuests then pass = true end
-
-					if string.match(v, "broken:(%d+)") then
-						local brokenlevel = tonumber((string.gsub(v, "broken:(%d+)", "%1"))) or 0
-						if level < brokenlevel or Setting_EnableBrokenQuests then pass = true end
-					end
-				end
-			end
-		end
-	end
+	local pass = Breadcrumbs:Validate(requirements)
 
 	-- eligible, texture, title, x, y, help, ...
 	return pass, texture, title, tonumber(x), tonumber(y), flags, help, help2, help3, help4, help5, help6, help7, help8, help9, help10, help11, help12

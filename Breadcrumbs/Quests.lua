@@ -60,15 +60,12 @@ Data.HiddenBonusObjectiveQuests = {
 		§n				Must have picked up quest ID n but not completed it
 		_n				Must not have completed quest ID n (not turned in)
 
-		class			Must be any of following classes (deathknight, demonhunter, druid, evoker, hunter, mage, monk, paladin, priest, rogue, shaman, warlock, warrior)
-		profession		Must have any of the following professions learned (alchemy, blacksmithing, enchanting, engineering, herbalism, inscription, jewelcrafting, leatherworking, mining, skinning, tailoring, archaeology, cooking, fishing)
-		race			Must be any of the following races (bloodelf, draenei, darkiron, dracthyr, dwarf, gnome, goblin, highmountain, human, kultiran, lightforged, maghar, mechagnome, nightborne, nightelf, orc, pandaren, undead, tauren, troll, voidelf, vulpera, worgen, zandalari)
+		class			Must be class (deathknight, demonhunter, druid, evoker, hunter, mage, monk, paladin, priest, rogue, shaman, warlock, warrior)
+		profession		Must have learned profession (alchemy, blacksmithing, enchanting, engineering, herbalism, inscription, jewelcrafting, leatherworking, mining, skinning, tailoring, archaeology, cooking, fishing)
+		race			Must be race (bloodelf, draenei, darkiron, dracthyr, dwarf, gnome, goblin, highmountain, human, kultiran, lightforged, maghar, mechagnome, nightborne, nightelf, orc, pandaren, undead, tauren, troll, voidelf, vulpera, worgen, zandalari)
 		alliance		Must be Alliance
 		horde			Must be Horde
-		kyrian			Must currently belong to the Kyrian covenant
-		necrolord		Must currently belong to the Necrolord covenant
-		nightfae		Must currently belong to the Night Fae covenant
-		venthyr			Must currently belong to the Venthyr covenant
+		covenant		Must currently belong to covenant (kyrian, necrolord, nightfae, venthyr)
 		-x				Inverse of above
 
 		reset:n			Quest ID n must not have been completed during today's daily quest reset
@@ -110,7 +107,11 @@ Data.HiddenBonusObjectiveQuests = {
 						Major (renown) type reputations require renown level x or higher (1 is Renown 1)
 						Friendship type reputation require standing x or higher (for example, for Nat Pagle; 1 is Stranger, 2 is Pal, ... 6 is Best Friend)
 						Traditional reputation require standing ID x or higher (1 is Hated, ... 4 is Neutral, 5 is Friendly, ... 8 is Exalted)
-		-reputation:n:x	Must not have reached standing x or higher with reputation faction n
+		-reputation:n:x	 Must not have reached standing x or higher with reputation faction n
+
+		skill:n:x		Must have x or more skill in TradeSkillLineID n (see https://wowpedia.fandom.com/wiki/TradeSkillLineID)
+						For example, skill:2832:25 would require Dragon Isles Herbalism at skill level 25 or higher
+		-skill:n:x		Must not have x or more skill in TradeSkillLineID n
 
 		broken			Quest is broken and cannot be completed, it will be hidden unless the user has decided to display broken quests
 		broken:n		Quest is broken if you are level n or higher and cannot be completed, it will be hidden unless the user has decided to display broken quests
@@ -424,7 +425,7 @@ Data.Quests = {
 		[65837] = "Trouble In The Pines|60+ 62+,67030 -66681|61.99 41.81|Beastmaster Tirren", -- Breadcrumb for 66681
 		[66681] = "Tempests Abound|60+ 62+,67030 ~65837|81.03 58.94|Sentinel Olekk", -- Invalidates breadcrumb 65837
 		[66680] = "Counting Sheep|60+ 62+,67030 ~65837|81.02 58.97|Scout Watu",
-		[66689] = "More Than A Rock|60+ 62+,67030 ~65837|82.33 64.38|{4554450} [Stormtouched Shards]||Drops from any [red]Stormtouched beast] in Sagecrest Pines",
+		[66689] = "More Than A Rock|60+ 62+,67030 ~65837|82.33 64.38|{4554450} [Stormtouched Shards]||Drops from any [hostile]Stormtouched beast] in Sagecrest Pines",
 		[66683] = "Last Resort Analysis|60+ 62+,67030 66681 66680 66689|81.02 58.97|Scout Watu",
 		[65836] = "Show of Storm|60+ 62+,67030 66683|81.02 58.97|Scout Watu",
 		[66684] = "Storm Chasing|60+ 62+,67030 65836|83.98 60.73|Scout Watu",
@@ -453,7 +454,7 @@ Data.Quests = {
 		[65953] = "The Ora-cull|60+ 62+,67030 65950 65951|80.54 30.73|Khasar",
 		[65954] = "Release the Hounds|60+ 62+,67030 65950 65951|80.54 30.73|Khasar",
 		[65955] = "A Centaur's Best Friend|60+ 62+,67030 65950 65951|80.54 30.73|Khasar",
-		[66005] = "Medallion of a Fallen Friend|60+ 62+,67030 65953 65954 65955|82.1 31.5|{1013266} [Medallion of a Fallen Friend]||Drops from [red]Chief Grrlgllmesh]",
+		[66005] = "Medallion of a Fallen Friend|60+ 62+,67030 65953 65954 65955|82.1 31.5|{1013266} [Medallion of a Fallen Friend]||Drops from [hostile]Chief Grrlgllmesh]",
 		[65952] = "A Chief of Legends|60+ 62+,67030 65953 65954 65955|83.43 32.33|Khasar",
 		[65949] = "The Sole Mender|60+ 62+,67030 66005|83.43 32.33|Khasar",
 		[66006] = "Return to Roscha|60+ 62+,67030 65952|83.43 32.33|Khasar",
@@ -524,7 +525,7 @@ Data.Quests = {
 		[65991] = "Time for a Reckoning|60+ 65989 65990|71.2 40.77|Commander Lethanak|campaign",
 		[65993] = "Killjoy|60+ 65991|66.36 35|Wrathion|campaign",
 		[65992] = "Blacktalon Intel|60+ 65991|66.36 35|Wrathion|campaign",
-		[65995] = "The Obsidian Citadel|60+ 65991|62.92 29.42|{237451} [Qalashi Plans]|campaign|Drops from [red]Meatgrinder Sotok]",
+		[65995] = "The Obsidian Citadel|60+ 65991|62.92 29.42|{237451} [Qalashi Plans]|campaign|Drops from [hostile]Meatgrinder Sotok]",
 		[65996] = "Veteran Reinforcements|60+ 65993 65992 65995|62.75 33.11|Majordomo Selistra|campaign",
 		[66998] = "Fighting Fire with... Water|60+|59.1 34.84|Caretaker Ventraz", -- no prereqs?
 		[70179] = "A Two for One Deal|60+|54.43 30.84|Apprentice Caretaker Zefren", -- no prereqs?
@@ -641,7 +642,7 @@ Data.Quests = {
 		[69896] = "Disastrous Detour|60+ -66435|63.58 61.77|Scout Kuvaeth", -- Breadcrumb for 66435
 		[66435] = "Site Salvage|60+ ~69896|66.06 58.13|Elementalist Taiyang", -- Invalidates breadcrumb 66435
 		[66436] = "Unearthed Troublemakers|60+ ~69896|66.06 58.13|Elementalist Taiyang",
-		[66437] = "A Key Element|60+ ~69896|67.46 57.23|{1020373} [Orb of Primal Stone]||Drops from [red]Earth Elementals] in the area",
+		[66437] = "A Key Element|60+ ~69896|67.46 57.23|{1020373} [Orb of Primal Stone]||Drops from [hostile]Earth Elementals] in the area",
 		[66438] = "Lofty Goals|60+ 66435 66436 66437|66.57 56.11|Examiner Tae'shara Bloodwatcher",
 		[66439] = "Rapid Fire Plans|60+ 66435 66436 66437|66.62 56.05|Acadia Chistlestone",
 		[66441] = "Distilled Effort|60+ 66435 66436 66437|66.59 56.08|Elementalist Taiyang",
@@ -2675,7 +2676,7 @@ Data.Quests = {
 		[42694] = "Back from the Dead|10+ 42692 42693|53.39 45.43|Olothil Starlance",
 		
 		-- Against the Giants
-		[38407] = "Bottled Up|10+|50.6 34.9|{461806} [Okuna's Message]||Drops from [red]Salteye] Murlocs",
+		[38407] = "Bottled Up|10+|50.6 34.9|{461806} [Okuna's Message]||Drops from [hostile]Salteye Murlocs]",
 		[37496] = "Infiltrating Shipwreck Arena|10+ 38407|47.05 41.48|Lady Irisse",
 		[37507] = "Boss Whalebelly's in Charge|10+ 37496|50.01 48.56|Okuna Longtusk",
 		[37542] = "No Time for Tryouts|10+ 37507|50.01 48.56|Okuna Longtusk",
@@ -2804,7 +2805,7 @@ Data.Quests = {
 		[38455] = "Frenzied Furbolgs|10+ 38142|49.08 82.35|Rylissa Bearsong",
 		[38922] = "Littlefur|10+ 38142|48.4 84.65|Elder Sookh",
 		[38246] = "Totemic Call|10+ 38922|46.26 84.55|Littlefur",
-		[38146] = "The Chieftain's Beads|10+ 38922|48.78 88.45|{133306} [Chieftain's Beads]||Drops from [red]Chieftain Graw]",
+		[38146] = "The Chieftain's Beads|10+ 38922|48.78 88.45|{133306} [Chieftain's Beads]||Drops from [hostile]Chieftain Graw]",
 		[38143] = "Awakening the Archdruid|10+ 38455 38246|49.08 82.35|Rylissa Bearsong",
 		[38144] = "The Demons Below|10+ 38143|50.03 85.67|Koda Steelclaw|down link:643",
 		[38145] = "Out of the Dream|10+ 38143|50.03 85.67|Koda Steelclaw|down link:643",
@@ -2857,7 +2858,7 @@ Data.Quests = {
 		[38646] = "A Sight For Sore Eyes|10+ 38643,39149|38.8 61.4|Granny Marl",
 		[38647] = "For the Corn!|10+ 38643,39149|38.8 61.4|Granny Marl",
 		[39117] = "Shriek No More|10+ 38643,39149|37 58.4|Cecily Radcliffe",
-		[38711] = "The Warden's Signet|10+ 38643,39149|39.12 64.5|{1025252} [Warden's Signet]||Drops from [red]Lelyn Swiftshadow]",
+		[38711] = "The Warden's Signet|10+ 38643,39149|39.12 64.5|{1025252} [Warden's Signet]||Drops from [hostile]Lelyn Swiftshadow]",
 		[39015] = "Grumpy|10+|38.64 65.64|Grumpy||Available after walking through the fire to the top floor of Heathrow Manor",
 
 		-- Black Rook Hold
@@ -2876,14 +2877,14 @@ Data.Quests = {
 		-- Lunarwing Shallows
 		[40220] = "Thorny Dancing|10+|53.8 79.8|Saylanna Riverbreeze",
 		[40221] = "Spread Your Lunarwings and Fly|10+|53.8 79.8|Saylanna Riverbreeze",
-		[38862] = "Thieving Thistleleaf|10+|52.4 83.5|{132834} [Lunarwing Egg]||Drops from [red]Thistleleaf] Sprites",
+		[38862] = "Thieving Thistleleaf|10+|52.4 83.5|{132834} [Lunarwing Egg]||Drops from [hostile]Thistleleaf Sprites]",
 
 		-- Lostlight Grotto
 		[42748] = "Emerald Sisters|10+|59.4 84.1|Guviena Bladesong",
 		[42747] = "Where the Wildkin Are|10+|59.4 84.1|Guviena Bladesong",
 		[42751] = "Moon Reaver|10+ 42747|59.4 84.1|Guviena Bladesong",
 		[42750] = "Dreamcatcher|10+ +42748,+42747|59.5 82|Leirana",
-		[42786] = "Grotesque Remains|10+|60.2 81.75|{646670} [Grotesque Remains]||Drops from [red]Undulating Boneslime]",
+		[42786] = "Grotesque Remains|10+|60.2 81.75|{646670} [Grotesque Remains]||Drops from [hostile]Undulating Boneslime]",
 
 		-- Grizzleweald
 		[42883] = "All Grell Broke Loose|10+|66.7 77.3|Old Grizzleback",
@@ -2892,7 +2893,7 @@ Data.Quests = {
 		[42857] = "Moist Around the Hedges|10+|66.8 75.7|Moist Grizzlecomb",
 
 		-- Mark of the Demon
-		[38656] = "Mark of the Demon|10+|56.77 54.33|{133791} [Demonic Emblem]||Drops from [red]Gravax the Desecrator]",
+		[38656] = "Mark of the Demon|10+|56.77 54.33|{133791} [Demonic Emblem]||Drops from [hostile]Gravax the Desecrator]",
 
 		-- Sylvan Falls
 		[41094] = "Hatchlings of the Talon|10+|76.08 31.39|Aviana",
@@ -3345,7 +3346,7 @@ Data.Quests = {
 		[38459] = "The Ancient Trials|10+ 38362 horde|36.8 31.02|Huginn", -- Horde
 		[38331] = {"Havi's Test|10+ 38210 alliance|43.17 49.15|Havi", "Havi's Test|10+ 38459 horde|41.83 43.06|Havi",}, -- Havi's location changes depending on faction
 		[39590] = {"Ahead of the Game|10+ 38331 alliance|43.17 49.15|Havi", "Ahead of the Game|10+ 38331 horde|41.83 43.06|Havi",},
-		[39595] = "Blood and Gold|10+ 38331|44.32 44.53|{132594} [Challenger's Tribute]||Drops from [red]Bloodtotem], [red]Felskorn] and [red]Mightstone] Challengers in the area",
+		[39595] = "Blood and Gold|10+ 38331|44.32 44.53|{132594} [Challenger's Tribute]||Drops from [hostile]Bloodtotem], [hostile]Felskorn] and [hostile]Mightstone] Challengers in the area",
 		[39591] = "A Trial of Valor|10+ 39590|46.73 44.44|Yotnar's Head",
 		[39592] = "A Trial of Will|10+ 39590|46.73 44.44|Yotnar's Head",
 		[39593] = "The Shattered Watcher|10+ 39590|46.73 44.44|Yotnar's Head",
@@ -3353,8 +3354,8 @@ Data.Quests = {
 		[39597] = "The Blessing of the Watchers|10+ 39594|46.32 44.83|Yotnar",
 
 		-- The Trial of Will
-		[38337] = "Built to Scale|10+ alliance|44.45 64.34|{134308} [Storm Drake Scale]||Drops from [red]Stormwing Drake] in Hrydshal", -- Alliance
-		[38616] = "Built to Scale|10+ horde|44.45 64.34|{134308} [Storm Drake Scale]||Drops from [red]Stormwing Drake] in Hrydshal", -- Horde
+		[38337] = "Built to Scale|10+ alliance|44.45 64.34|{134308} [Storm Drake Scale]||Drops from [hostile]Stormwing Drake] in Hrydshal", -- Alliance
+		[38616] = "Built to Scale|10+ horde|44.45 64.34|{134308} [Storm Drake Scale]||Drops from [hostile]Stormwing Drake] in Hrydshal", -- Horde
 		[38473] = "Will of the Thorignir|10+ 39597 alliance|43.17 49.15|Havi", -- Alliance
 		[38611] = "Will of the Thorignir|10+ 39597 horde|41.83 43.06|Havi", -- Horde
 		[38312] = "A Grapple a Day|10+ 38473 alliance|37.38 63.85|Commander Lorna Crowley", -- Alliance
@@ -3967,7 +3968,7 @@ Data.Quests = {
 
 		-- Lake Al'Ameth
 		[930]   = "The Glowing Fruit|1+ alliance|57.64 63.02|Strange Fruited Plant",
-		[927]   = "The Moss-twined Heart|1+ alliance|52.04 63.68|{134339} [Moss-Twined Heart]||Drops from [red]Blackmoss the Fetid]",
+		[927]   = "The Moss-twined Heart|1+ alliance|52.04 63.68|{134339} [Moss-Twined Heart]||Drops from [hostile]Blackmoss the Fetid]",
 		[941]   = "Planting the Heart|1+ alliance 927|59.94 59.77|Denalan",
 		[918]   = "Timberling Seeds|1+ alliance 997|59.94 59.77|Denalan",
 		[919]   = "Timberling Sprouts|1+ alliance 997|59.94 59.77|Denalan",
@@ -4086,10 +4087,10 @@ Data.Quests = {
 
 		-- Azure Watch
 		[9612]  = "A Hearty Thanks!|1+ draenei alliance|1 GiftOfTheNaaru|Draenei Youngling|discovery tomtom|Cast {135923} [spell]Gift of the Naaru] on a [green]Draenei Youngling] who is in combat to obtain this quest",
-		[9616]  = "Bandits!|1+ broken:50 alliance|2 BloodElfCommunication|{133473} [Blood Elf Communication]|discovery chromietime tomtom|Drops from [red]Blood Elf Bandit] who is stealthed in a random location", -- Blizzard bug: as of 9.0 the drop is broken outside Chromie Time and will not drop at all for level 50+ characters, not even in Party Sync
+		[9616]  = "Bandits!|1+ broken:50 alliance|2 BloodElfCommunication|{133473} [Blood Elf Communication]|discovery chromietime tomtom|Drops from [hostile]Blood Elf Bandit] who is stealthed in a random location", -- Blizzard bug: as of 9.0 the drop is broken outside Chromie Time and will not drop at all for level 50+ characters, not even in Party Sync
 		[9454]  = "The Great Moongraze Hunt|1+ alliance|49.78 51.93|Acteon",
 		[10324] = "The Great Moongraze Hunt|1+ 9454 alliance|49.78 51.93|Acteon",
-		[9455]  = "Strange Findings|1+ alliance|43 38.6|{134072} [Faintly Glowing Crystal]||Drops from [red]Infected Nightstalker Runt]",
+		[9455]  = "Strange Findings|1+ alliance|43 38.6|{134072} [Faintly Glowing Crystal]||Drops from [hostile]Infected Nightstalker Runt]",
 		[9456]  = "Nightstalker Clean Up, Isle 2...|1+ 9455 alliance|47.12 50.61|Exarch Menelaous",
 		[9603]  = "Beds, Bandages, and Beyond|1+ draenei alliance|48.34 49.15|Caregiver Chellan", -- Draenei only
 		[9604]  = "On the Wings of a Hippogryph|1+ 9603 draenei alliance|49.71 49.11|Zaldaan", -- Draenei only
@@ -4112,7 +4113,7 @@ Data.Quests = {
 		[9512]  = "Cookie's Jumbo Gumbo|1+ alliance|46.68 70.54|\"Cookie\" McWeaksauce",
 		[9513]  = "Reclaiming the Ruins|1+ 9506 alliance|47.12 70.28|Priestess Kyleen Il'dinare",
 		[9523]  = "Precious and Fragile Things Need Special Handling|1+ 9506 alliance|47.24 69.99|Archaeologist Adamant Ironheart",
-		[9514]  = "Rune Covered Tablet|1+ 9506 alliance|34.7 77.3|{134462} [Rune Covered Tablet]||Drops from [red]Wrathscale] Naga",
+		[9514]  = "Rune Covered Tablet|1+ 9506 alliance|34.7 77.3|{134462} [Rune Covered Tablet]||Drops from [hostile]Wrathscale] Naga",
 		[9515]  = "Warlord Sriss'tiz|1+ 9514 alliance|47.12 70.28|Priestess Kyleen Il'dinare",
 
 		-- The Prophecy of Akida
@@ -4126,7 +4127,7 @@ Data.Quests = {
 
 		-- Stillpine Hold
 		[9562]  = "Murlocs... Why Here? Why Now?|1+ 9538 alliance|44.64 23.48|Gurf", -- Might require 9544?
-		[9564]  = "Gurf's Dignity|1+ +9562 alliance|34.6 15|{134350} [Gurf's Dignity]||Drops from [red]Murgurgula] who patrols the shore", -- Requires 9562 in log
+		[9564]  = "Gurf's Dignity|1+ +9562 alliance|34.6 15|{134350} [Gurf's Dignity]||Drops from [hostile]Murgurgula] who patrols the shore", -- Requires 9562 in log
 		[9560]  = "Beasts of the Apocalypse!|1+ 9538 alliance|44.77 23.89|Moordo", -- Might require 9544?
 		[9565]  = "Search Stillpine Hold|1+ 9560,9562 alliance|46.68 20.63|High Chief Stillpine", -- check if 9560 or 9560,9562 or 9560 9562
 		[9566]  = "Blood Crystals|1+ 9565 alliance|45.5 18.9|Blood Crystal|down link:99",
@@ -4181,7 +4182,7 @@ Data.Quests = {
 		[27203] = "The Maelstrom|30+ horde|50.48 38.38|Farseer Krogar",
 
 		-- Fishing
-		--[6608]  = "You Too Good.|15+ horde fishing:1:225|66.46 41.93|Lumak", -- Requires 225 skill in Classic Fishing
+		[6608]  = "You Too Good.|15+ horde fishing skill:2592:225|66.46 41.93|Lumak", -- Requires 225 skill in Classic Fishing
 
 		-- Legion
 		[43926] = "Legion: The Legion Returns|10+ -44663 horde|49.67 76.46|Warchief's Command Board",
@@ -4503,7 +4504,7 @@ Data.Quests = {
 		-- Camp Sungraze
 		[833]   = "A Sacred Burial|1+ horde|49.52 17.1|Lorekeeper Raintotem",
 		[744]   = "Preparation for Ceremony|1+ horde|49.59 17.59|Eyahn Eagletalon",
-		[770]   = "The Demon Scarred Cloak|1+ horde|43.28 14.84|{134358} [Demon Scarred Cloak]||Drops from [red]Ghost Howl] who roams the area",
+		[770]   = "The Demon Scarred Cloak|1+ horde|43.28 14.84|{134358} [Demon Scarred Cloak]||Drops from [hostile]Ghost Howl] who roams the area",
 		[773]   = "Rite of Wisdom|1+ horde tauren 20441|49.52 17.1|Lorekeeper Raintotem", -- Tauren only
 		[24523] = "Wildmane Totem|1+ horde tauren 24456|49.37 17.33|Una Wildmane", -- Tauren only
 		[24524] = "Wildmane Cleansing|1+ horde tauren 24523|49.37 17.33|Una Wildmane", -- Tauren only
@@ -5006,7 +5007,7 @@ Data.Quests = {
 		[52]    = "Protect the Frontier|1+ alliance|73.97 72.19|Guard Thomas",
 		[46]    = "Bounty on Murlocs|1+ alliance|74.03 72.31|Bounty Board",
 		[26152] = "WANTED: James Clark|1+ alliance|74.03 72.31|Bounty Board",
-		[123]   = "The Collector|1+ alliance|78.62 67.18|{134939} [Gold Pickup Schedule]||Drops from [red]James Clark]",
+		[123]   = "The Collector|1+ alliance|78.62 67.18|{134939} [Gold Pickup Schedule]||Drops from [neutral]James Clark]",
 		[147]   = "Manhunt|1+ alliance 123|81.86 66.04|Marshal Patterson",
 		[83]    = "Fine Linen Goods|1+ alliance|79.46 68.71|Sara Timberlain",
 		[5545]  = "A Bundle of Trouble|1+ alliance|81.38 66.11|Supervisor Raelen",
@@ -5045,7 +5046,7 @@ Data.Quests = {
 
 		-- Saldean's Farm
 		[26237] = "Times are Tough|5+ alliance 26236|56.04 31.23|Farmer Saldean",
-		[26252] = "Heart of the Watcher|5+ alliance 26236|54.12 32.43|{133862} [Harvest Watcher Heart]||Has a chance to drop from [red]Harvest Watcher]",
+		[26252] = "Heart of the Watcher|5+ alliance 26236|54.12 32.43|{133862} [Harvest Watcher Heart]||Has a chance to drop from [hostile]Harvest Watcher]",
 		[26257] = "It's Alive!|5+ alliance 26252|56.04 31.23|Farmer Saldean",
 		[26241] = "Westfall Stew|5+ alliance 26236|56.42 30.52|Salma Saldean",
 		[26270] = "You Have Our Thanks|5+ alliance 26237 26241|56.04 31.23|Farmer Saldean",
@@ -5073,7 +5074,7 @@ Data.Quests = {
 
 		-- Moonbrook
 		[26295] = "Propaganda|5+ alliance 26292|42.1 64.12|Captain Alpert",
-		[26296] = "Evidence Collection|5+ alliance 26292|42.86 69.17|{237277} [Red Bandana]||Drops from [red]Moonbrook Thug]",
+		[26296] = "Evidence Collection|5+ alliance 26292|42.86 69.17|{237277} [Red Bandana]||Drops from [hostile]Moonbrook Thug]",
 		[26297] = "The Dawning of a New Day|5+ alliance 26295|42.1 64.12|Captain Alpert",
 		[26319] = "Secrets Revealed|5+ alliance 26297|42.1 64.12|Captain Alpert",
 		[26320] = "A Vision of the Past|5+ alliance 26319|42.97 65.03|Thoralius the Wise",
@@ -5108,7 +5109,7 @@ Data.Quests = {
 		[26511] = "Lake Everstill Clean Up|7+ alliance|28.68 40.95|Bailiff Conacher",
 		[26512] = "Tuning the Gnomecorder|7+ alliance 26510|28.91 41.11|Magistrate Solomon",
 		[26513] = "Like a Fart in the Wind|7+ alliance 26510|31.86 44.89|Marshal Marris", -- 26511 might be prereq?
-		[26519] = "He Who Controls the Ettins|7+ alliance 26510|28.23 23.58|{134944} [uncommon]Dirt-Stained Scroll]||Has a chance to drop from [red]Redridge] Gnolls in the Redridge Canyons",
+		[26519] = "He Who Controls the Ettins|7+ alliance 26510|28.23 23.58|{134944} [uncommon]Dirt-Stained Scroll]||Has a chance to drop from [hostile]Redridge] Gnolls in the Redridge Canyons",
 		[26520] = "Saving Foreman Oslow|7+ alliance 26519|17.86 18.6|Ettin Control Orb|down|\"Inside Rethban Caverns\"",
 		[26514] = "Canyon Romp|7+ alliance 26512|28.91 41.11|Magistrate Solomon",
 		[26544] = "They've Wised Up...|7+ alliance 26514|28.91 41.11|Magistrate Solomon",
@@ -5234,7 +5235,7 @@ Data.Quests = {
 		[8895]  = "Delivery to the North Sanctum|1+ horde 8472|47.25 46.31|Magister Jaronis",
 		[9119]  = "Malfunction at the West Sanctum|1+ horde 8895|44.63 53.14|Ley-Keeper Caidanis",
 		[8486]  = "Arcane Instability|1+ horde 9119|36.7 57.44|Ley-Keeper Velania",
-		[8482]  = "Incriminating Documents|1+ horde|36.78 61|{133464} [Incriminating Documents]||Drops from [red]Darnassian Scout]",
+		[8482]  = "Incriminating Documents|1+ horde|36.78 61|{133464} [Incriminating Documents]||Drops from [hostile]Darnassian Scout]",
 		[8483]  = "The Dwarven Spy|1+ horde 8482|48.17 46|Aeldon Sunbrand",
 		[9256]  = "Fairbreeze Village|1+ horde 8483 -8892|48.17 46|Aeldon Sunbrand", -- Breadcrumb for 8892
 
@@ -5262,13 +5263,13 @@ Data.Quests = {
 		[8884]  = "Fish Heads, Fish Heads...|1+ horde|30.22 58.34|Hathvelion Sungaze",
 		[8885]  = "The Ring of Mmmrrrggglll|1+ horde 8884|30.22 58.34|Hathvelion Sungaze",
 		[8886]  = "Grimscale Pirates!|1+ horde|36.36 66.62|Captain Kelisendra",
-		[8887]  = "Captain Kelisendra's Lost Rutters|1+ horde|26.89 59.82|{134939} [Captain Kelisendra's Lost Rutters]||Has a chance to drop from [red]Grimscale] Murlocs",
+		[8887]  = "Captain Kelisendra's Lost Rutters|1+ horde|26.89 59.82|{134939} [Captain Kelisendra's Lost Rutters]||Has a chance to drop from [hostile]Grimscale Murlocs]",
 		[8480]  = "Lost Armaments|1+ horde|36.36 66.78|Velendris Whitemorn",
 		[9076]  = "Wretched Ringleader|1+ horde 8480|36.36 66.78|Velendris Whitemorn",
 
 		-- The Scorched Grove
 		[8473]  = "A Somber Task|1+ horde ~9258|34.06 80.02|Larianna Riverwind", -- Invalidates breadcrumb 9258
-		[8474]  = "Old Whitebark's Pendant|1+ horde|34.81 84.34|{133280} [Old Whitebark's Pendant]||Drops from [red]Old Whitebark]",
+		[8474]  = "Old Whitebark's Pendant|1+ horde|34.81 84.34|{133280} [Old Whitebark's Pendant]||Drops from [hostile]Old Whitebark]",
 		[10166] = "Whitebark's Memory|1+ horde 8474|34.06 80.02|Larianna Riverwind",
 
 		-- The Dead Scar
@@ -5292,7 +5293,7 @@ Data.Quests = {
 		[8477]  = "The Spearcrafter's Hammer|1+ horde|59.52 62.6|Arathel Sunforge",
 		[8888]  = "The Magister's Apprentice|1+ horde -8889|60.31 61.38|Magister Duskwither", -- Breadcrumb for 8889
 		[8479]  = "Zul'Marosh|1+ horde|70.53 72.34|Ven'jashi",
-		[9360]  = "Amani Invasion|1+ horde|62.4 79.6|{134946} [Amani Invasion Plans]||Drops from [red]Chieftain Zul'Marosh]",
+		[9360]  = "Amani Invasion|1+ horde|62.4 79.6|{134946} [Amani Invasion Plans]||Drops from [hostile]Chieftain Zul'Marosh]",
 		[9363]  = "Warning Fairbreeze Village|1+ horde 9360|60.32 62.77|Lieutenant Dawnrunner",
 
 		-- Ghostlands
@@ -5354,7 +5355,7 @@ Data.Quests = {
 		[24972] = "Vital Intelligence|1+ horde 24971|30.84 66.2|Shadow Priest Sarvis|link:465",
 
 		-- Calston Estate
-		[24979] = "A Scarlet Letter|1+ art:19 horde|34.21 48.05|{237451} [A Scarlet Letter]||Has a chance to drop from [red]Scarlet Warrior]",
+		[24979] = "A Scarlet Letter|1+ art:19 horde|34.21 48.05|{237451} [A Scarlet Letter]||Has a chance to drop from [hostile]Scarlet Warrior]",
 		[24974] = "Ever So Lonely|1+ art:19 horde|44.75 53.64|Sedrick Calston",
 		[24978] = "Reaping the Reapers|1+ art:19 horde|44.75 53.67|Deathguard Simmer",
 		[24980] = "The Scarlet Palisade|1+ art:19 horde 24978|44.75 53.67|Deathguard Simmer",
@@ -5372,7 +5373,7 @@ Data.Quests = {
 		[6323]  = "Ride to the Undercity|1+ art:19 horde undead 6321|58.84 51.94|Anette Williams", -- Undead only
 		[24983] = "Forsaken Duties|1+ art:19 horde ~24982|61 50.54|Magistrate Sevren", -- Invalidates breadcrumb 24982
 		[24990] = "Darkhound Pounding|1+ art:19 horde 24976|60.05 52.86|Junior Apothecary Holland",
-		[24992] = "Escaped From Gilneas|1+ art:19 horde +24990 -25039|1 WorgenInfiltrator|[red]Worgen Infiltrator]|discovery|Bring a [red]Darkhound] to low health to force a [red]Worgen Infiltrator] out of hiding", -- Mutually exclusive with 25039; triggering the Worgen Infiltrator completes HQT 25040
+		[24992] = "Escaped From Gilneas|1+ art:19 horde +24990 -25039|1 WorgenInfiltrator|[hostile]Worgen Infiltrator]|discovery|Bring a [hostile]Darkhound] to low health to force a [hostile]Worgen Infiltrator] out of hiding", -- Mutually exclusive with 25039; triggering the Worgen Infiltrator completes HQT 25040
 		[25039] = "Have You Seen Anything Weird Out There?|1+ art:19 horde 25040 -24992|61.88 51.96|Ratslin Maime", -- Requires HQT 25040; mutually exclusive with 24992
 		[24993] = "Annihilate the Worgen|1+ art:19 horde 24992,25039|60.54 51.86|Executor Zygand",
 		[24996] = "Holland's Experiment|1+ art:19 horde 24990|60.05 52.86|Junior Apothecary Holland",
@@ -5396,7 +5397,7 @@ Data.Quests = {
 
 		-- Agamand Mills
 		[25003] = "The Family Crypt|1+ art:19 horde ~25031|54.59 29.89|Coleman Farthing", -- Invalidates breadcrumb 25031
-		[25030] = "The Haunted Mills|1+ art:19 horde|52.83 26.35|{133730} [Dargol's Skull]|down|Drops from [red]Captain Dargol] inside the crypt",
+		[25030] = "The Haunted Mills|1+ art:19 horde|52.83 26.35|{133730} [Dargol's Skull]|down|Drops from [hostile]Captain Dargol] inside the crypt",
 		[25004] = "The Mills Overrun|1+ art:19 horde 25003|54.59 29.89|Coleman Farthing",
 		[25029] = "Deaths in the Family|1+ art:19 horde 25003|54.59 29.89|Coleman Farthing",
 		[25005] = "Speak with Sevren|1+ art:19 horde 25004 25029|54.59 29.89|Coleman Farthing",
