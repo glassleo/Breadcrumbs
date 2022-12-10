@@ -154,9 +154,9 @@ Data.HiddenBonusObjectiveQuests = {
 	
 		chromietime		Quest can only be picked up during a Timewalking Campaign (Chromie Time); adds a dynamic help tip depending on level and Chromie Time status
 		chromiesync		Quest can only be picked up during a Timewalking Campaign (Chromie Time) or in Party Sync; adds a dynamic help tip depending on level and Chromie Time status
-		partysync-warning			Adds a warning tooltip for players at level 50 or above: "You will likely need to Party Sync with a low level character to be able to pick up this quest" 
-		partysync-warning-turnin	Adds a warning tooltip for players at level 50 or above: "You will likely need to Party Sync with a low level character to be able to complete this quest" 
-		partysync-warning-chain		Adds a warning tooltip for players at level 50 or above: "You will likely need to Party Sync with a low level character to be able to complete parts of this quest chain" 
+		partysync-warning			Adds a warning tooltip for players at level 60 or above: "You will likely need to Party Sync with a low level character to be able to pick up this quest" 
+		partysync-warning-turnin	Adds a warning tooltip for players at level 60 or above: "You will likely need to Party Sync with a low level character to be able to complete this quest" 
+		partysync-warning-chain		Adds a warning tooltip for players at level 60 or above: "You will likely need to Party Sync with a low level character to be able to complete parts of this quest chain" 
 
 	Help: Tooltip help text
 		{!}				Quest bang

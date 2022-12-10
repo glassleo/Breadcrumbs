@@ -261,7 +261,7 @@ function Breadcrumbs:UpdateMap(event, ...)
 	local playerlevel = UnitLevel("player") or 1
 	local chromietime = false
 
-	if playerlevel < 50 then -- Chromie Time becomes unavailable at level 50
+	if playerlevel < 60 then -- Chromie Time becomes unavailable at level 60
 		local options = C_ChromieTime.GetChromieTimeExpansionOptions()
 
 		if options then
