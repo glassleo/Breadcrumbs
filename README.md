@@ -41,6 +41,7 @@ So far, the following zones are entirely complete or in a near-complete state:
 
 ### Dragon Isles (1/5 Complete)
 - The Waking Shores (including Adventure Mode)
+- Ohn'ahran Plains (including Adventure Mode)
 - Valdrakken POIs
 - Algeth'ar Academy POIs
 
