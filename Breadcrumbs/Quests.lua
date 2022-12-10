@@ -60,12 +60,15 @@ Data.HiddenBonusObjectiveQuests = {
 		§n				Must have picked up quest ID n but not completed it
 		_n				Must not have completed quest ID n (not turned in)
 
-		class			Must be any of following classes (deathknight demonhunter druid hunter mage monk paladin, priest, rogue, shaman, warlock, warrior)
+		class			Must be any of following classes (deathknight, demonhunter, druid, evoker, hunter, mage, monk, paladin, priest, rogue, shaman, warlock, warrior)
 		profession		Must have any of the following professions learned (alchemy, blacksmithing, enchanting, engineering, herbalism, inscription, jewelcrafting, leatherworking, mining, skinning, tailoring, archaeology, cooking, fishing)
-		race			Must be any of the following races (bloodelf, draenei darkiron dwarf gnome goblin highmountain human kultiran lightforged maghar mechagnome nightborne nightelf orc pandaren undead tauren troll voidelf vulpera worgen zandalari)
+		race			Must be any of the following races (bloodelf, draenei, darkiron, dracthyr, dwarf, gnome, goblin, highmountain, human, kultiran, lightforged, maghar, mechagnome, nightborne, nightelf, orc, pandaren, undead, tauren, troll, voidelf, vulpera, worgen, zandalari)
 		alliance		Must be Alliance
 		horde			Must be Horde
-		covenant		Must belong to any of the following covenants (kyrian, venthyr, nightfae, necrolord)
+		kyrian			Must currently belong to the Kyrian covenant
+		necrolord		Must currently belong to the Necrolord covenant
+		nightfae		Must currently belong to the Night Fae covenant
+		venthyr			Must currently belong to the Venthyr covenant
 		-x				Inverse of above
 
 		reset:n			Quest ID n must not have been completed during today's daily quest reset
@@ -98,10 +101,16 @@ Data.HiddenBonusObjectiveQuests = {
 		currency:n:x	Must have at least x or more of currency with ID n
 		-currency:n:x	Must not have x or more of currency with ID n
 
-		art:n			Map must currently have UiMapArtID n (see https://wow.tools/dbc/?dbc=uimapxmapart) - used to determine which phase of the map the player is currently on
+		art:n			Map must currently have UiMapArtID n (see https://wow.tools/dbc/?dbc=uimapxmapart)
 		-art:n			Map must not currently have UiMapArtID n
 		art:x:n			Map with ID x must currently have UiMapArtID n
 		-art:x:n		Map with ID x must not currently have UiMapArtID n
+
+		reputation:n:x	Must have reached standing x or higher with reputation faction n
+						Major (renown) type reputations require renown x or higher (1 is Renown 1)
+						Friendship type reputation require standing x or higher (1 is Rank 1)
+						Traditional reputation require standing ID x or higher (4 is Neutral, 5 is Friendly... 8 is Exalted)
+		-reputation:n:x	Must not have reached standing x or higher with reputation faction n
 
 		broken			Quest is broken and cannot be completed, it will be hidden unless the user has decided to display broken quests
 		broken:n		Quest is broken if you are level n or higher and cannot be completed, it will be hidden unless the user has decided to display broken quests
@@ -211,6 +220,12 @@ Data.Quests = {
 		[70182] = "The Sweet Taste of Victory|60+ 70181|84.33 53.55|Maiden of Inspiration|campaign elsewhere link:2024",
 		[70633] = "Fueling the Engine|60+ 70182|84.33 53.55|Maiden of Inspiration|campaign",
 		[72783] = "Crafting Orders|60+ 70633|85.02 54.45|Greyzik Cobblefinger|campaign",
+
+		-- Artisan's Consortium
+		-- TODO:: Figure out how the currently disabled profession skip interacts with these
+		[70221] = "Show Your Mettle|60+ 62+,67030 alchemy,blacksmithing,enchanting,engineering,inscription,jewelcrafting,leatherworking,tailoring,herbalism,mining,skinning reputation:2544:2|39.44 70.17|Miguel Bright|weekly",
+		[67295] = "That's My Specialty|60+ 62+,67030 alchemy,blacksmithing,enchanting,engineering,inscription,jewelcrafting,leatherworking,tailoring,herbalism,mining,skinning|39.37 70.16|Miguel Bright",
+		[69919] = "A Craft in Need|60+ 62+,67030 alchemy,blacksmithing,enchanting,engineering,inscription,jewelcrafting,leatherworking,tailoring,cooking,fishing|35.37 58.77|Azley",
 	},
 
 	-- Thaldraszus
@@ -244,6 +259,12 @@ Data.Quests = {
 		-- Serene Dreams Spa
 
 		-- Misty Vale
+
+		-- Artisan's Consortium
+		-- TODO:: Figure out how the currently disabled profession skip interacts with these
+		[70221] = "Show Your Mettle|60+ 62+,67030 alchemy,blacksmithing,enchanting,engineering,inscription,jewelcrafting,leatherworking,tailoring,herbalism,mining,skinning reputation:2544:2|38.41 62.79|Miguel Bright|weekly link:2112",
+		[67295] = "That's My Specialty|60+ 62+,67030 alchemy,blacksmithing,enchanting,engineering,inscription,jewelcrafting,leatherworking,tailoring,herbalism,mining,skinning|38.4 62.79|Miguel Bright|link:2112",
+		[69919] = "A Craft in Need|60+ 62+,67030 alchemy,blacksmithing,enchanting,engineering,inscription,jewelcrafting,leatherworking,tailoring,cooking,fishing|37.82 61.14|Azley|link:2112",
 	},
 
 
@@ -251,6 +272,7 @@ Data.Quests = {
 	
 	[2024] = {
 		-- Into the Archives
+		[65686] = "To the Azure Span|60+ 65+,67030|37.66 23.71|Masud the Wise|campaign",
 
 		-- Tuskarr Troubles
 
@@ -285,6 +307,12 @@ Data.Quests = {
 		-- Rustpine Den
 
 		-- Winterpelt Hollow
+
+		-- Artisan's Consortium
+		-- TODO:: Figure out how the currently disabled profession skip interacts with these
+		[67295] = "That's My Specialty|60+ 62+,67030 alchemy,blacksmithing,enchanting,engineering,inscription,jewelcrafting,leatherworking,tailoring,herbalism,mining,skinning|37.82 24|Miguel Bright",
+		[70444] = "Targeted Ads|60+ 62+,67030 alchemy,blacksmithing,enchanting,engineering,inscription,jewelcrafting,leatherworking,tailoring,cooking,fishing|37.94 24.1|Azley",
+		[69919] = "A Craft in Need|60+ 62+,67030 alchemy,blacksmithing,enchanting,engineering,inscription,jewelcrafting,leatherworking,tailoring,cooking,fishing|37.94 24.1|Azley",
 	},
 
 
@@ -359,7 +387,6 @@ Data.Quests = {
 		[66336] = "The Isle of Emerald|60+ 62+,67030 66337|25.65 48.4|Merithra|campaign",
 		[66783] = "Renewal of Vows|60+ 62+,67030 66336|22.14 50.98|Merithra|campaign",
 		[66339] = "The Nokhud Offensive: The Wind Belongs to the Sky|60+ 62+,67030 66783|22.14 50.98|Khanam Matra Sarest|dungeon",
-		[66340] = "Into the Azure|60+ 62+,67030 66783|22.14 50.98|Merithra|campaign",
 
 		-- Taivan's Purpose
 		[67772] = "The Trouble with Taivan|60+ 62+,67030 66327|61.21 40|Healer Selbekh",
@@ -452,6 +479,16 @@ Data.Quests = {
 
 		-- Enchanting
 		[70029] = {"Artisan's Supply: Runed Serevite Rods|60+ enchanting|41.35 61|Asarin|enchanting", "Artisan's Supply: Runed Serevite Rods|60+ enchanting|56.83 75.51|Solonga|enchanting",},
+		
+		-- Artisan's Consortium
+		-- TODO:: Figure out how the currently disabled profession skip interacts with these
+		[67295] = "That's My Specialty|60+ 62+,67030 alchemy,blacksmithing,enchanting,engineering,inscription,jewelcrafting,leatherworking,tailoring,herbalism,mining,skinning|71.88 80.99|Miguel Bright",
+		[70444] = "Targeted Ads|60+ 62+,67030 alchemy,blacksmithing,enchanting,engineering,inscription,jewelcrafting,leatherworking,tailoring,cooking,fishing|72.05 81.14|Azley",
+		[69919] = "A Craft in Need|60+ 62+,67030 alchemy,blacksmithing,enchanting,engineering,inscription,jewelcrafting,leatherworking,tailoring,cooking,fishing|72.05 81.14|Azley",
+
+		-- The Azure Span - Into the Archives
+		[66340] = "Into the Azure|60+ 62+,67030 66783|22.14 50.98|Merithra|campaign",
+		[65686] = "To the Azure Span|60+ 65+,67030|71.66 80.58|Masud the Wise|campaign",
 	},
 
 
@@ -2824,7 +2861,7 @@ Data.Quests = {
 		[39015] = "Grumpy|10+|38.64 65.64|Grumpy||Available after walking through the fire to the top floor of Heathrow Manor",
 
 		-- Black Rook Hold
-		-- Todo: check which quests can be picked up at the same time, and check 38721 coordinates
+		-- TODO:: check which quests can be picked up at the same time, and check 38721 coordinates
 		[38691] = "Jarod's Mission|10+ 38644 38645 38646 38647 39117|42.4 59|Commander Jarod Shadowsong",
 		[38718] = "Kur'talos Ravencrest|10+ 38691|40.8 53|Commander Jarod Shadowsong",
 		[38714] = "Maiev's Trail|10+ 38718|40.8 53|Commander Jarod Shadowsong",
