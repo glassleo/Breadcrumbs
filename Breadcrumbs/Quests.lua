@@ -215,22 +215,76 @@ Data.Quests = {
 
 	-- Thaldraszus
 	[2025] = {
-		-- Valdrakken - The Spark of Ingenuity
+		-- Valdrakken, City of Dragons
+
+		-- Time Management
+
+		-- Big Time Adventurer
+
+		-- The Spark of Ingenuity
 		[70180] = "Jump-Start? Jump-Starting!|60+ 67030,68+ 67030,66221 ~70846|44.88 60.51|Greyzik Cobblefinger|campaign link:2112", -- Requires either Adventure Mode unlocked or 67030, invalidates 70846
 		[70845] = "In Tyr's Footsteps|60+ 70180|44.9 60.39|Maiden of Inspiration|campaign link:2112",
 		[70181] = "First Challenge of Tyr: Finesse|60+ 70845|44.9 60.39|Ornamented Statue|campaign elsewhere link:2024",
 		[70182] = "The Sweet Taste of Victory|60+ 70181|44.9 60.39|Maiden of Inspiration|campaign elsewhere link:2024",
 		[70633] = "Fueling the Engine|60+ 70182|44.9 60.39|Maiden of Inspiration|campaign link:2112",
 		[72783] = "Crafting Orders|60+ 70633|45 60.52|Greyzik Cobblefinger|campaign link:2112",
+
+		-- Gelikyr Overlook
+
+		-- Drawing Conclusions
+
+		-- The Screechflight Scramble
+
+		-- Gardens of Unity
+
+		-- Tyrhold Reservoir
+
+		-- Bleeding Hearts
+
+		-- Serene Dreams Spa
+
+		-- Misty Vale
 	},
 
 
 	--[[ The Azure Span ]]--
 	
 	[2024] = {
+		-- Into the Archives
+
+		-- Tuskarr Troubles
+
+		-- Decayed Roots
+
+		-- Vakthros
+
 		-- The Spark of Ingenuity
 		[70181] = "First Challenge of Tyr: Finesse|60+ 70845|67.18 30.72|Ornamented Statue|campaign",
 		[70182] = "The Sweet Taste of Victory|60+ 70181|67.13 30.92|Maiden of Inspiration|campaign",
+
+		-- Grimtusk Hideaway
+
+		-- Gorloc Shore
+
+		-- Snowhide Camp
+
+		-- Slyvern Plunge
+
+		-- Brackenhide Water Hole
+
+		-- Creektooth Den
+
+		-- Shiverweb Vale
+
+		-- Kauriq Gleamlet
+
+		-- Lost Ruins
+
+		-- Ruins of Kanthar
+
+		-- Rustpine Den
+
+		-- Winterpelt Hollow
 	},
 
 
@@ -239,15 +293,86 @@ Data.Quests = {
 	[2023] = {
 		-- Into the Plains
 		[65779] = "Into the Plains|60+ 62+,67030 65795,67030|79.44 15.2|Ambassador Taurasza|campaign", -- Adventure mode bypasses prereqs
+		[65780] = "Proving Oneself|60+ 62+,67030 65779|77.72 23.93|Scout Tomul|campaign",
+		[65783] = "Welcome at Our Fire|60+ 62+,67030 65780|78.62 25.38|Scout Tomul|campaign",
+		[70174] = "The Shikaar|60+ 62+,67030 65783|85.31 25.41|Scout Tomul|campaign",
+		[65801] = "Making Introductions|60+ 62+,67030 70174|85.73 25.32|Sansok Khan|campaign",
+		[65802] = "Supplies for the Journey|60+ 62+,67030 70174|85.73 25.32|Sansok Khan|campaign",
+		[70319] = "Nergazurai|60+ 62+,67030|84.53 25.33|Muqur Rain-Touched",
+		[65803] = "Toward the City|60+ 62+,67030 65801 65802|84.69 22.81|Scout Tomul|campaign",
+		[65804] = "For Food and Rivalry|60+ 62+,67030 65803|75.67 31.67|Scout Tomul|campaign",
+		[70185] = "Mysterious Beast|60+ 62+,67030 65803|76.74 31.89|Mysterious Paw Print|campaign",
+		[65940] = "By Broken Road|60+ 62+,67030 65803 70185|75.67 31.67|Scout Tomul|campaign",
+		[65805] = "Connection to Ohn'ahra|60+ 62+,67030 65940|69.97 37.98|Ohn Seshteng|campaign",
+		[66848] = "Omens on the Wind|60+ 62+,67030 65805|69.97 37.98|Ohn Seshteng|campaign",
+		[65806] = "Maruukai|60+ 62+,67030 66848|70.01 38.03|Sansok Khan|campaign",
 
 		-- Maruukai
-		[72429] = "Orientation: Maruukai|60+ 67030|63.4 41.39|Sansok Khan",
+		[72429] = {"Orientation: Maruukai|60+ 67030 -65806,66783|63.4 41.39|Sansok Khan", "Orientation: Maruukai|60+ 67030 65806 -66022|61.44 39.52|Sansok Khan", "Orientation: Maruukai|60+ 67030 66022 -66783|60.08 37.45|Sansok Khan",},
+		-- 66783 - find correct quest when Sansok Khan moves back
 		[70739] = "Bloodlines, Sweets, and Teerai|60+ 62+,67030|63.61 40.46|Hunter Narman",
 		[70730] = "Shikaar Giver|60+ 62+,67030|62.81 35.45|Windsage Dawa",
 		[70721] = "After My Ohn Heart|60+ 62+,67030 70739 70730|62.81 35.45|Windsage Dawa",
+		[66016] = "Clan Teerai|60+ 62+,67030 66848|61.44 39.52|Sansok Khan|campaign",
+		[66019] = "Honoring Our Ancestors|60+ 62+,67030 66016|59.15 37.6|Qariin Dotur|campaign",
+		[66017] = "Clan Ohn'ir|60+ 62+,67030 66848|61.44 39.52|Sansok Khan|campaign",
+		[66020] = "Omens and Incense|60+ 62+,67030 66017|62.99 33.66|Ohn Seshteng|campaign",
+		[66018] = "Clan Nokhud|60+ 62+,67030 66848|61.44 39.52|Sansok Khan|campaign",
+		[66021] = "Unwelcome Outsider|60+ 62+,67030 66018|60.32 40.74|Guard Bahir|campaign",
+		[66969] = "Clans of the Plains|60+ 62+,67030 66019 66020 66021|62.44 41.58|Aru|campaign",
+		[66948] = "The Emissary's Arrival|60+ 62+,67030 66969|61.03 40.43|Gemisath|campaign",
+		[66022] = "The Khanam Matra|60+ 62+,67030 66948|61.03 40.43|Gemisath|campaign",
+		[66023] = "Trucebreakers|60+ 62+,67030 66022|60.36 38.05|Khansguard Akato|campaign",
+		[66024] = "Covering Their Tails|60+ 62+,67030 66022|59.5 38.75|Scout Tomul|campaign",
+		[66025] = "The Nokhud Threat|60+ 62+,67030 66023 66024|60.32 38.08|Khanam Matra Sarest|campaign",
+
+		-- Ohn'ahra's Blessing
+		[66201] = "Hooves of War|60+ 62+,67030 66025|60.01 37.49|Khanam Matra Sarest|campaign",
+		[66222] = "The Calm Before the Storm|60+ 62+,67030 66201|41.89 61.79|Khansguard Jebotai|campaign",
+		[70229] = "Boku the Mystic|60+ 62+,67030 66222|41.89 61.79|Khansguard Jebotai|campaign",
+		[66254] = "Pessimistic Mystic|60+ 62+,67030 70229|36.81 57.26|Initiate Boku|campaign",
+		[66224] = "Mystic Mystery|60+ 62+,67030 66254|36.81 57.26|Initiate Boku|campaign",
+		[66225] = "Toting Totems|60+ 62+,67030 66224|49.36 63.14|Tigari Khan|campaign",
+		[70195] = "Taken By Storm|60+ 62+,67030 66224|49.36 63.14|Tigari Khan|campaign",
+		[66236] = "Catching Wind|60+ 62+,67030 66225 70195|49.36 63.14|Tigari Khan|campaign",
+		[66242] = "Weather Control|60+ 62+,67030 66236|58.12 68.97|Initiate Boku|campaign",
+		[66256] = "Eagle-itarian|60+ 62+,67030 66236|58.12 68.97|Initiate Boku|campaign",
+		[66257] = "Fowl Sorcery|60+ 62+,67030 66236|58.12 68.97|Initiate Boku|campaign",
+		[66258] = "Oh No, Ohn'ahra!|60+ 62+,67030 66242 66256 66257|60.65 63.54|Initiate Boku|campaign",
+		[66259] = "A Storm of Ill Tidings|60+ 62+,67030 66258|61.41 62.78|Initiate Boku|campaign",
+
+		-- Bonds Renewed
+		[66327] = "Chasing the Wind|60+ 62+,67030 66259|60.01 37.49|Khanam Matra Sarest|campaign",
+		[70244] = "Nokhud Can Come of This|60+ 62+,67030 66327|73.04 40.59|Khanam Matra Sarest|campaign",
+		[66329] = "Blowing of the Horn|60+ 62+,67030 70244|76.7 40.95|Khanam Matra Sarest|campaign",
+		[66328] = "Green Dragon Down|60+ 62+,67030 66329|76.7 40.95|Khanam Matra Sarest|campaign",
+		[66344] = "With the Wind at Our Backs|60+ 62+,67030 66328|72.45 50.77|Merithra|campaign",
+		[70220] = "Shady Sanctuary|60+ 62+,67030 66344|28.26 57.69|Merithra|campaign",
+		[70062] = "Some Call Me Bug Catcher|60+ 62+,67030|29.68 58.63|Gracus||\"Gracus wanders around the Shady Sanctuary\"",
+		[70069] = "Others Call Me Duck Herder|60+ 62+,67030 70062|29.68 58.63|Gracus||\"Gracus wanders around the Shady Sanctuary\"",
+		[70070] = "But... I Am the Hero of Ducks|60+ 62+,67030 70069|29.68 58.63|Gracus||\"Gracus wanders around the Shady Sanctuary\"",
+		[66331] = "The Primalist Front|60+ 62+,67030 70220|28.26 57.69|Merithra|campaign",
+		[66333] = "Justice for Solethus|60+ 62+,67030 66331|25.63 40.52|Merithra|campaign",
+		[66335] = "Deconstruct Additional Pylons|60+ 62+,67030 66333|26.32 39.05|Khanam Matra Sarest|campaign",
+		[66784] = "Starve the Storm|60+ 62+,67030 66333|26.32 39.05|Khanam Matra Sarest|campaign",
+		[66337] = "Stormbreaker|60+ 62+,67030 66335 66784|26.32 39.05|Khanam Matra Sarest|campaign",
+		[66336] = "The Isle of Emerald|60+ 62+,67030 66337|25.65 48.4|Merithra|campaign",
+		[66783] = "Renewal of Vows|60+ 62+,67030 66336|22.14 50.98|Merithra|campaign",
+		[66339] = "The Nokhud Offensive: The Wind Belongs to the Sky|60+ 62+,67030 66783|22.14 50.98|Khanam Matra Sarest|dungeon",
+		[66340] = "Into the Azure|60+ 62+,67030 66783|22.14 50.98|Merithra|campaign",
 
 		-- Taivan's Purpose
-		--[67772] = "The Trouble with Taivan|60+ 62+,67030|61.21 40|Healer Selbekh",
+		[67772] = "The Trouble with Taivan|60+ 62+,67030 66327|61.21 40|Healer Selbekh",
+		[67921] = "The Hunting Hound|60+ 62+,67030 67772|71.42 49.59|Hunter Jadar",
+		[70989] = "Part of a Pack|60+ 62+,67030 67921|71.42 49.59|Hunter Jadar",
+		[68083] = "Try Again, Taivan!|60+ 62+,67030 70989|71.42 49.59|Hunter Jadar",
+		[68084] = "The Gentle Giant|60+ 62+,67030 68083|61.21 40|Healer Selbekh",
+		[68085] = "Shaping a Shepherd|60+ 62+,67030 68084|49.05 41.07|Shepherd Tevatei",
+		[71022] = "Reign of the Ram|60+ 62+,67030 68085|49.05 41.07|Shepherd Tevatei",
+		[68087] = "Danger in Daruukhan|60+ 62+,67030 71022|49.05 41.07|Shepherd Tevatei",
+		[69094] = "Saving Centaur|60+ 62+,67030 68087|52.83 29.85|Healer Selbekh",
+		[69095] = "Homeward Hound|60+ 62+,67030 69094|52.83 29.85|Healer Selbekh",
+		[69096] = "Taivan's Purpose|60+ 62+,67030 69095|61.21 40|Healer Selbekh",
 
 		-- Initiate's Day Out
 		[65906] = "A Disgruntled Initiate|60+ 62+,67030 -65901|63.12 34.05|Windsage Ordven", -- Breadcrumb for 65901
@@ -267,11 +392,6 @@ Data.Quests = {
 		[65937] = "Proof of Negligence|60+ 62+,67030 65902|24.44 63.01|Celina Crunchyleaves",
 		[65904] = "Enough Is Enough|60+ 62+,67030 65905 65937|24.44 63.01|Celina Crunchyleaves",
 		[66011] = "In Memory of Ysera|60+ 62+,67030 65904|24.54 63.97|Felina Starrunner",
-
-		-- Shady Sanctuary / Pilot
-		[70062] = "Some Call Me Bug Catcher|60+ 62+,67030|29.68 58.63|Gracus||\"Gracus wanders around the Shady Sanctuary\"",
-		[70069] = "Others Call Me Duck Herder|60+ 62+,67030 70062|29.68 58.63|Gracus||\"Gracus wanders around the Shady Sanctuary\"",
-		[70070] = "But... I Am the Hero of Ducks|60+ 62+,67030 70069|29.68 58.63|Gracus||\"Gracus wanders around the Shady Sanctuary\"",
 
 		-- Pinewood Post
 		[65837] = "Trouble In The Pines|60+ 62+,67030 -66681|61.99 41.81|Beastmaster Tirren", -- Breadcrumb for 66681
@@ -301,7 +421,6 @@ Data.Quests = {
 		[66658] = "The Nokhud Offensive: Founders Keepers|60+ 62+,67030 66657|41 61.61|Initiate Zorig|dungeon",
 
 		-- Mudfin Village
-		[70319] = "Nergazurai|60+ 62+,67030|84.53 25.33|Muqur Rain-Touched",
 		[65950] = "Thieving Gorlocs|60+ 62+,67030|84.39 25.03|Farrier Roscha",
 		[65951] = "Sole Supplier|60+ 62+,67030|84.35 25.01|Apprentice Ehri",
 		[65953] = "The Ora-cull|60+ 62+,67030 65950 65951|80.54 30.73|Khasar",
@@ -521,7 +640,8 @@ Data.Quests = {
 		-- Blacksmithing
 
 		-- Enchanting
-		[70029] = "Artisan's Supply: Runed Serevite Rods|60+ enchanting|75.8 33.2|Veeno|enchanting",
+		[70360] = "Dragon Isles Enchanting|60+ enchanting|75.83 33.27|Veeno|enchanting",
+		[70029] = "Artisan's Supply: Runed Serevite Rods|60+ enchanting|75.83 33.27|Veeno|enchanting",
 
 		-- Engineering
 		--[70359] = "Dragon Isles Engineering|60+ alliance engineering|COORDS|Winnie Fingerspring|engineering", -- Alliance
