@@ -30,6 +30,10 @@ local Setting_EnableUnitTooltips = true
 local Setting_EnableAutomapGravidRepose = true
 
 
+-- Constants
+local CHROMIETIME_MAXLEVEL = 60 -- Maximum level for Chromie Time
+
+
 -- Frame recycling pool
 local MapPool = {}
 local MapPoolBeans = 0
@@ -261,7 +265,7 @@ function Breadcrumbs:UpdateMap(event, ...)
 	local playerlevel = UnitLevel("player") or 1
 	local chromietime = false
 
-	if playerlevel < 60 then -- Chromie Time becomes unavailable at level 60
+	if playerlevel < CHROMIETIME_MAXLEVEL then -- Chromie Time becomes unavailable at level 60
 		local options = C_ChromieTime.GetChromieTimeExpansionOptions()
 
 		if options then
