@@ -1217,6 +1217,19 @@ function Breadcrumbs:CheckQuest(map, quest, datastring)
 					-- research:n
 					if string.match(v, "^research:(%d+)$") and C_Garrison.GetTalentInfo(tonumber(string.match(v, "research:(%d+)") or 0)).researched then pass = true end
 
+					-- repuation:n:x
+					if string.match(v, "^reputation:(%d+):(%d+)$") then
+						local faction, standing = tonumber(string.match(v, "reputation:(%d+):%d+") or 0), tonumber(string.match(v, "reputation:%d+:(%d+)") or 0)
+						local major, friend = C_MajorFactions.GetMajorFactionData(faction), C_GossipInfo.GetFriendshipReputationRanks(faction)
+						if major then
+							if major.renownLevel >= standing then pass = true end
+						elseif friend and friend.maxLevel > 0 then
+							if friend.currentLevel >= standing then pass = true end
+						elseif tonumber((select(3, GetFactionInfoByID(faction))) or 0) >= standing then
+							pass = true
+						end
+					end
+
 					-- art:n
 					if string.match(v, "^art:(%d+)$") and (C_Map.GetMapArtID(map) == tonumber(string.match(v, "art:(%d+)") or 0)) then pass = true end
 
@@ -1269,6 +1282,19 @@ function Breadcrumbs:CheckQuest(map, quest, datastring)
 
 						-- -research:n
 						if string.match(w, "^research:(%d+)$") and C_Garrison.GetTalentInfo(tonumber(string.match(w, "research:(%d+)") or 0)).researched then pass = false end
+
+						-- -repuation:n:x
+						if string.match(w, "^reputation:(%d+):(%d+)$") then
+							local faction, standing = tonumber(string.match(w, "reputation:(%d+):%d+") or 0), tonumber(string.match(w, "reputation:%d+:(%d+)") or 0)
+							local major, friend = C_MajorFactions.GetMajorFactionData(faction), C_GossipInfo.GetFriendshipReputationRanks(faction)
+							if major then
+								if major.renownLevel >= standing then pass = false end
+							elseif friend and friend.maxLevel > 0 then
+								if friend.currentLevel >= standing then pass = false end
+							elseif tonumber((select(3, GetFactionInfoByID(faction))) or 0) >= standing then
+								pass = false
+							end
+						end
 
 						-- -art:n
 						if string.match(w, "^art:(%d+)$") and (C_Map.GetMapArtID(map) == tonumber(string.match(w, "art:(%d+)") or 0)) then pass = false end
@@ -1397,6 +1423,19 @@ function Breadcrumbs:CheckPOI(map, datastring)
 					-- research:n
 					if string.match(v, "^research:(%d+)$") and C_Garrison.GetTalentInfo(tonumber(string.match(v, "research:(%d+)") or 0)).researched then pass = true end
 
+					-- repuation:n:x
+					if string.match(v, "^reputation:(%d+):(%d+)$") then
+						local faction, standing = tonumber(string.match(v, "reputation:(%d+):%d+") or 0), tonumber(string.match(v, "reputation:%d+:(%d+)") or 0)
+						local major, friend = C_MajorFactions.GetMajorFactionData(faction), C_GossipInfo.GetFriendshipReputationRanks(faction)
+						if major then
+							if major.renownLevel >= standing then pass = true end
+						elseif friend and friend.maxLevel > 0 then
+							if friend.currentLevel >= standing then pass = true end
+						elseif tonumber((select(3, GetFactionInfoByID(faction))) or 0) >= standing then
+							pass = true
+						end
+					end
+
 					-- art:n
 					if string.match(v, "^art:(%d+)$") and (C_Map.GetMapArtID(map) == tonumber(string.match(v, "art:(%d+)") or 0)) then pass = true end
 
@@ -1453,6 +1492,19 @@ function Breadcrumbs:CheckPOI(map, datastring)
 
 						-- -research:n
 						if string.match(w, "^research:(%d+)$") and C_Garrison.GetTalentInfo(tonumber(string.match(w, "research:(%d+)") or 0)).researched then pass = false end
+
+						-- -repuation:n:x
+						if string.match(w, "^reputation:(%d+):(%d+)$") then
+							local faction, standing = tonumber(string.match(w, "reputation:(%d+):%d+") or 0), tonumber(string.match(w, "reputation:%d+:(%d+)") or 0)
+							local major, friend = C_MajorFactions.GetMajorFactionData(faction), C_GossipInfo.GetFriendshipReputationRanks(faction)
+							if major then
+								if major.renownLevel >= standing then pass = false end
+							elseif friend and friend.maxLevel > 0 then
+								if friend.currentLevel >= standing then pass = false end
+							elseif tonumber((select(3, GetFactionInfoByID(faction))) or 0) >= standing then
+								pass = false
+							end
+						end
 
 						-- -art:n
 						if string.match(w, "^art:(%d+)$") and (C_Map.GetMapArtID(map) == tonumber(string.match(w, "art:(%d+)") or 0)) then pass = false end
