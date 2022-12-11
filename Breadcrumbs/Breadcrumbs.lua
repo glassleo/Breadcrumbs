@@ -117,7 +117,7 @@ end
 function Breadcrumbs:OnEnable()
 	Breadcrumbs:UpdateMap()
 
-	if TipTac then
+	if TipTac then -- Let TipTac skin our tooltips
 		TipTac:AddModifiedTip("BreadcrumbsItemTooltip", true)
 	end
 end
@@ -1279,6 +1279,7 @@ function Breadcrumbs:Validate(str)
 					if race == "lightforgeddraenei" and v == "lightforged" then pass = true end
 					if race == "kultiran" and v == "kultiranhuman" then pass = true end
 					if race == "zandalaritroll" and v == "zandalari" then pass = true end
+					if v == "mailbox" and Setting_EnableMailboxes then pass = true end
 
 					-- Must not match...
 					if string.match(v, "%-(%a+)") then
