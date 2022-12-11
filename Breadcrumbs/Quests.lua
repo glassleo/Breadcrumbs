@@ -224,8 +224,8 @@ Data.Quests = {
 
 		-- Artisan's Consortium
 		-- TODO:: Figure out how the currently disabled profession skip interacts with these
-		[70221] = "Show Your Mettle|60+ 62+,67030 alchemy,blacksmithing,enchanting,engineering,inscription,jewelcrafting,leatherworking,tailoring,herbalism,mining,skinning reputation:2544:2|39.44 70.17|Miguel Bright|weekly",
-		[67295] = "That's My Specialty|60+ 62+,67030 alchemy,blacksmithing,enchanting,engineering,inscription,jewelcrafting,leatherworking,tailoring,herbalism,mining,skinning|39.37 70.16|Miguel Bright",
+		[70221] = "Show Your Mettle|60+ 62+,67030 alchemy,blacksmithing,enchanting,engineering,inscription,jewelcrafting,leatherworking,tailoring,herbalism,mining,skinning reputation:2544:2|39.44 70.17|Miguel Bright|weekly", -- Requires Preferred (rank 2) or higher with Artisan's Consortium
+		[67295] = "That's My Specialty|60+ 62+,67030 skill:2823:25,skill:2822:25,skill:2825:25,skill:2827:25,skill:2832:25,skill:2828:25,skill:2829:25,skill:2830:25,skill:2833:25,skill:2834:25,skill:2831:25|39.37 70.16|Miguel Bright", -- Requires 25 skill in any Dragon Isles primary profession
 		[69919] = "A Craft in Need|60+ 62+,67030 alchemy,blacksmithing,enchanting,engineering,inscription,jewelcrafting,leatherworking,tailoring,cooking,fishing|35.37 58.77|Azley",
 	},
 
@@ -263,8 +263,8 @@ Data.Quests = {
 
 		-- Artisan's Consortium
 		-- TODO:: Figure out how the currently disabled profession skip interacts with these
-		[70221] = "Show Your Mettle|60+ 62+,67030 alchemy,blacksmithing,enchanting,engineering,inscription,jewelcrafting,leatherworking,tailoring,herbalism,mining,skinning reputation:2544:2|38.41 62.79|Miguel Bright|weekly link:2112",
-		[67295] = "That's My Specialty|60+ 62+,67030 alchemy,blacksmithing,enchanting,engineering,inscription,jewelcrafting,leatherworking,tailoring,herbalism,mining,skinning|38.4 62.79|Miguel Bright|link:2112",
+		[70221] = "Show Your Mettle|60+ 62+,67030 alchemy,blacksmithing,enchanting,engineering,inscription,jewelcrafting,leatherworking,tailoring,herbalism,mining,skinning reputation:2544:2|38.41 62.79|Miguel Bright|weekly link:2112", -- Requires Preferred (rank 2) or higher with Artisan's Consortium
+		[67295] = "That's My Specialty|60+ 62+,67030 skill:2823:25,skill:2822:25,skill:2825:25,skill:2827:25,skill:2832:25,skill:2828:25,skill:2829:25,skill:2830:25,skill:2833:25,skill:2834:25,skill:2831:25|38.4 62.79|Miguel Bright|link:2112", -- Requires 25 skill in any Dragon Isles primary profession
 		[69919] = "A Craft in Need|60+ 62+,67030 alchemy,blacksmithing,enchanting,engineering,inscription,jewelcrafting,leatherworking,tailoring,cooking,fishing|37.82 61.14|Azley|link:2112",
 	},
 
@@ -274,6 +274,10 @@ Data.Quests = {
 	[2024] = {
 		-- Into the Archives
 		[65686] = "To the Azure Span|60+ 65+,67030|37.66 23.71|Masud the Wise|campaign",
+		[66228] = "Camp Antonidas|60+ 65+,67030 65686|41.44 35.61|Glania of the Blessed Ones|campaign",
+		[66227] = "Some Good Fishing|60+ 65+,67030 65686|41.46 35.63|Khuri|fishing",
+		[67174] = "Arcane Detection|60+ 65+,67030 65686|41.22 35.88|Miva Star-Eye",
+		[67177] = "WANTED: Gorger|60+ 65+,67030 65686|41.42 36.42|Shala",
 
 		-- Tuskarr Troubles
 
@@ -285,6 +289,7 @@ Data.Quests = {
 		[70181] = "First Challenge of Tyr: Finesse|60+ 70845|67.18 30.72|Ornamented Statue|campaign",
 		[70182] = "The Sweet Taste of Victory|60+ 70181|67.13 30.92|Maiden of Inspiration|campaign",
 
+		---- SOJOURNER
 		-- Grimtusk Hideaway
 
 		-- Gorloc Shore
@@ -309,10 +314,28 @@ Data.Quests = {
 
 		-- Winterpelt Hollow
 
+		---- LEND A HELPING SPAN
+		-- Camp Antonidas
+
+		-- Iskaara
+
+		-- Three-Falls Lookout
+		[71233] = "Falling Water|60+ 65+,67030 -66837|28.46 35.11|Unkimi", -- Breadcrumb for 66837
+		[66837] = "Nothing for Breakfast|60+ 65+,67030 ~71233|18.73 24.48|Willa Stronghinge", -- Invalidates breadcrumb 71233
+		[66838] = "It's Cold Up Here|60+ 65+,67030|18.73 24.48|Willa Stronghinge",
+		[66839] = "It's Brew Time!|60+ 65+,67030|18.99 23.29|Modurun Sixtoes",
+		[66844] = "The Great Shokhari|60+ 65+,67030|19.05 23.97|Zon'Wogi",
+		[66843] = "Out of Lukh|60+ 65+,67030|19.26 26.9|Branor Broadbraw",
+		[66840] = "Water Safety|60+ 65+,67030 66837 66838|18.54 23.67|Manny Read", -- 66839 might be needed (probably not)
+		[66841] = "A Shard of the Past|60+ 65+,67030 66837 66838|19.16 24.73|Gannar Fullpack", -- 66839 might be needed (probably not)
+		[66845] = "Legendary Foil|60+ 65+,67030 66840 66841|18.74 24.43|Guo-Hee Calmwater",
+		[66846] = "The Heart of the Deck|60+ 65+,67030 66845|18.77 24.43|Mysterious Apparition",
+
 		-- Artisan's Consortium
 		-- TODO:: Figure out how the currently disabled profession skip interacts with these
-		[67295] = "That's My Specialty|60+ 62+,67030 alchemy,blacksmithing,enchanting,engineering,inscription,jewelcrafting,leatherworking,tailoring,herbalism,mining,skinning|37.82 24|Miguel Bright",
-		[70444] = "Targeted Ads|60+ 62+,67030 alchemy,blacksmithing,enchanting,engineering,inscription,jewelcrafting,leatherworking,tailoring,cooking,fishing|37.94 24.1|Azley",
+		[67295] = "That's My Specialty|60+ 62+,67030 skill:2823:25,skill:2822:25,skill:2825:25,skill:2827:25,skill:2832:25,skill:2828:25,skill:2829:25,skill:2830:25,skill:2833:25,skill:2834:25,skill:2831:25|37.82 24|Miguel Bright", -- Requires 25 skill in any Dragon Isles primary profession
+		[69915] = "Targeted Ads|60+ 62+,67030 alchemy,blacksmithing,enchanting,engineering,inscription,jewelcrafting,leatherworking,tailoring,cooking,fishing|37.94 24.1|Azley",
+		[69981] = "Customer Satisfaction|60+ 69915 alchemy,blacksmithing,enchanting,engineering,inscription,jewelcrafting,leatherworking,tailoring,cooking,fishing|37.94 24.1|Azley",
 		[69919] = "A Craft in Need|60+ 62+,67030 alchemy,blacksmithing,enchanting,engineering,inscription,jewelcrafting,leatherworking,tailoring,cooking,fishing|37.94 24.1|Azley",
 	},
 
@@ -483,8 +506,9 @@ Data.Quests = {
 		
 		-- Artisan's Consortium
 		-- TODO:: Figure out how the currently disabled profession skip interacts with these
-		[67295] = "That's My Specialty|60+ 62+,67030 alchemy,blacksmithing,enchanting,engineering,inscription,jewelcrafting,leatherworking,tailoring,herbalism,mining,skinning|71.88 80.99|Miguel Bright",
-		[70444] = "Targeted Ads|60+ 62+,67030 alchemy,blacksmithing,enchanting,engineering,inscription,jewelcrafting,leatherworking,tailoring,cooking,fishing|72.05 81.14|Azley",
+		[67295] = "That's My Specialty|60+ 62+,67030 skill:2823:25,skill:2822:25,skill:2825:25,skill:2827:25,skill:2832:25,skill:2828:25,skill:2829:25,skill:2830:25,skill:2833:25,skill:2834:25,skill:2831:25|71.88 80.99|Miguel Bright", -- Requires 25 skill in any Dragon Isles primary profession
+		[69915] = "Targeted Ads|60+ 62+,67030 alchemy,blacksmithing,enchanting,engineering,inscription,jewelcrafting,leatherworking,tailoring,cooking,fishing|72.05 81.14|Azley",
+		[69981] = "Customer Satisfaction|60+ 69915 alchemy,blacksmithing,enchanting,engineering,inscription,jewelcrafting,leatherworking,tailoring,cooking,fishing|72.05 81.14|Azley",
 		[69919] = "A Craft in Need|60+ 62+,67030 alchemy,blacksmithing,enchanting,engineering,inscription,jewelcrafting,leatherworking,tailoring,cooking,fishing|72.05 81.14|Azley",
 
 		-- The Azure Span - Into the Archives
@@ -665,7 +689,10 @@ Data.Quests = {
 		[72481] = "The Waking Shores Tour|60+ dragonriding|73.25 52.07|Celormu", -- prereqs?
 
 
-		-- TO DO: figure out what triggers the Artisan's Supply quests
+		-- TODO:: figure out what triggers the Artisan's Supply quests
+		-- Artisan's Consortium
+		[67564] = "Artisan's Courier|60+ alchemy,blacksmithing,enchanting,engineering,inscription,jewelcrafting,leatherworking,tailoring,herbalism,mining,skinning|57.93 68.25|Haephesta",
+
 		-- Fishing
 		--[72252] = "Dragon Isles Fishing|60+ alliance|COORDS|Danielle Anglers|fishing", -- Alliance
 		[72253] = "Dragon Isles Fishing|60+ horde|81.11 29.11|Mora Cloudwalker|fishing", -- Horde
