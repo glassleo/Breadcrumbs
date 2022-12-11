@@ -66,6 +66,12 @@ Data.POI = {
 		"POI/Portal|Portal to Stormwind|alliance|59.79 41.71",
 		"POI/Portal|Seasonal Portals|1+|53.95 55",
 
+		-- Mailbox
+		"mailbox:objective|Mailbox|mailbox|35.44 59.67", -- Artisan's Market
+		"mailbox:objective|Mailbox|mailbox|45.57 59.06", -- Auction House
+		"mailbox:objective|Mailbox|mailbox|37.66 49.52", -- Obsidian Enclave
+		"mailbox:objective|Mailbox|mailbox|48.45 51.03", -- The Roasted Ram
+
 		-- Crafting Orders
 		"Professions-Crafting-Orders-Icon|Crafting Orders|58+|34.72 62.47",
 
