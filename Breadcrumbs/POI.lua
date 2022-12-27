@@ -390,12 +390,18 @@ Data.POI = {
 
 		-- Profession
 		"POI/Archaeology|[Archaeology]|horde|31.75 35.36||Vault of Kings",
+
+		-- Mailbox
+		"mailbox:objective|Mailbox|mailbox|44.45 13.55",
 	},
 
 	-- Hall of Chroniclers
 	[1164] = {
 		-- Professions
 		"POI/Cooking|[Cooking]|horde|28.51 50.17||The Royal Meat Rack",
+
+		-- Mailbox
+		"mailbox:objective|Mailbox|mailbox|44.45 13.55",
 	},
 
 
