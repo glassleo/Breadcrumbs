@@ -50,7 +50,7 @@ Data.Vignettes = {
 
 	[2022] = {
 		-- Profession Master
-		[70252] = "[friendly]Grekka Anvilsmash]|60+ blacksmithing skill:2822:25|43.27 66.63|[friendly]Master Blacksmith]|vignette speak currency:2023|Available Knowledge|!{4624660} [rare]Dragon Isles Blacksmithing Knowledge] (5)|!{4643977} [rare]Artisan's Mettle] (25)",
+		--[70252] = "[friendly]Grekka Anvilsmash]|60+ blacksmithing skill:2822:25|43.27 66.63|[friendly]Master Blacksmith]|vignette speak currency:2023|Available Knowledge|!{4624660} [rare]Dragon Isles Blacksmithing Knowledge] (5)|!{4643977} [rare]Artisan's Mettle] (25)",
 	},
 
 
