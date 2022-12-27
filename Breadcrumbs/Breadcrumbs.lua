@@ -169,10 +169,11 @@ function Breadcrumbs:FormatTooltip(text, flags, varwrap)
 	text = string.gsub(text, "{!}", CreateAtlasMarkup(flags["warboard"] and "warboard" or flags["artifact"] and "questartifact" or flags["legendary"] and "questlegendary" or flags["campaign"] and "quest-campaign-available" or flags["dailycampaign"] and "quest-dailycampaign-available" or flags["daily"] and "questdaily" or "questnormal")) -- !
 	text = string.gsub(text, "{([%w%p]+)}", CreateAtlasMarkup("%1")) -- atlas
 	text = string.gsub(text, "%[Auto Accept", "|cff00ff00Auto Accept") -- Auto Accept green
-	text = string.gsub(text, "%[friendly%]", "|cff00ff00") -- friendly green
+	text = string.gsub(text, "%[friendly%]", "|cff1aff1a") -- friendly green
 	text = string.gsub(text, "%[green%]", "|cff00ff00") -- green
 	text = string.gsub(text, "%[neutral%]", "|cffffff00") -- neutral yellow
 	text = string.gsub(text, "%[yellow%]", "|cffffff00") -- yellow
+	text = string.gsub(text, "%[unfriendly%]", "|cffee6622") -- unfriendly orange
 	text = string.gsub(text, "%[hostile%]", "|cffff0000") -- hostile red
 	text = string.gsub(text, "%[red%]", "|cffff0000") -- red
 	text = string.gsub(text, "%[poor%]", "|cff9d9d9d") -- poor grey
