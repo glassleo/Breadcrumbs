@@ -6,7 +6,6 @@ local _, Data = ...
 -- This is used to remove broken bonus objectives or to replace them with our own quest pins
 Data.HiddenBonusObjectiveQuests = {
 	[57301] = true, -- Maldraxxus - Callous Concoctions
-	[65649] = true, -- Oribos - A New Deal
 	[66042] = true, -- Zereth Mortis - Patterns Within Patterns
 	[65749] = true, -- Zereth Mortis - The Necessity Of Equipment
 	[64641] = true, -- Zereth Mortis - Mysterious Greenery
@@ -261,6 +260,11 @@ Data.Quests = {
 
 		-- Misty Vale
 
+		-- Hearthstone Duel
+		[66929] = "Gotta Collect Them All|60+ 68+,67030|59.74 43.58|Yumadormu", -- no prereq?
+		[67167] = "It's Time To Duel!|60+ 68+,67030 66929|60.67 43.29|Yumadormu",
+		[67178] = "White Eyes, Blue Dragon|60+ 68+,67030 67167|58.12 40.34|Professor Dromokdormi",
+
 		-- Artisan's Consortium
 		-- TODO:: Figure out how the currently disabled profession skip interacts with these
 		[70221] = "Show Your Mettle|60+ 62+,67030 alchemy,blacksmithing,enchanting,engineering,inscription,jewelcrafting,leatherworking,tailoring,herbalism,mining,skinning reputation:2544:2|38.41 62.79|Miguel Bright|weekly link:2112", -- Requires Preferred (rank 2) or higher with Artisan's Consortium
@@ -297,14 +301,45 @@ Data.Quests = {
 		-- Snowhide Camp
 
 		-- Slyvern Plunge
+		[71235] = "Field Mages|60+ 65+,67030 -68639|65.81 25.32|Drok Scrollstabber", -- Breadcrumb for 68639 -- add prereq: "This quest only appeared for me after I had done the first part of Grimtusk's quests, where you free his friends."
+		[68639] = "Prowling Polar Predators|60+ 65+,67030 ~71235|63.58 28.9|Callisto Windsor", -- Invalidates breadcrumb 71235
+		[68641] = "Mossing the Mark|60+ 65+,67030|63.61 28.82|Steria Duskgrove",
+		[68643] = "Vitamins and Minerals|60+ 65+,67030 68639 68641|63.58 28.9|Callisto Windsor",
+		[68642] = "Needles to Say|60+ 65+,67030 68639 68641|63.61 28.82|Steria Duskgrove",
+		[68644] = "Sugar, Spice, and Everything Nice|60+ 65+,67030 68643 68642|63.61 28.82|Steria Duskgrove",
+		[69862] = "Save a Slyvern|60+ 65+,67030 68644|63.58 28.83|Steria Duskgrove",
+		[70338] = "They Took the Kits|60+ 65+,67030 69862|65.7 30.84|Steria Duskgrove",
 
 		-- Brackenhide Water Hole
+		[66261] = "A Minor Setback|60+ 65+,67030 -66262|21.01 38.91|Illusory Mage", -- Breadcrumb for 66262
+		[66262] = "Waste Water Cleanup|60+ 65+,67030 ~66261|22.73 41.68|Detry Hornswald", -- Invalidates breadcrumb 66261
+		[66263] = "A Precision Approach|60+ 65+,67030 66262|22.73 41.68|Detry Hornswald",
+		[66264] = "Disarmed and Docile|60+ 65+,67030 66262|22.73 41.68|Detry Hornswald",
+		[66265] = "Who's Next?|60+ 65+,67030 66263 66264|22.73 41.68|Detry Hornswald",
+		[66266] = "Filthy Mongrels|60+ 65+,67030 66263 66264|22.73 41.68|Detry Hornswald",
+		[66267] = "M.E.T.A.|60+ 65+,67030 66263 66264|23.46 41.85|Illusory Mage",
+		[66268] = "Third Try's the Charm|60+ 65+,67030 66265 66266 66267|22.73 41.68|Detry Hornswald",
+		[66269] = "Just To Be Sure|60+ 65+,67030 66265 66266 66267|22.73 41.68|Detry Hornswald",
+		[66270] = "Whack-a-Gnoll|60+ 65+,67030 66268 66269|22.73 41.68|Detry Hornswald",
 
 		-- Creektooth Den
+		[65279] = "By Royal Decree|60+ 65+,67030|16.2 20.88|Gnoll Mon-Ark",
+		[65306] = "Rot Rancher|60+ 65+,67030|16.2 20.88|Gnoll Mon-Ark",
+		[65302] = "Keys to the Kingdom|60+ 65+,67030 65279 65306|16.2 20.88|Gnoll Mon-Ark",
+		[65594] = "Making a Mountain Out of a Gnoll Hill|60+ 65+,67030 65302|16.2 20.88|Gnoll Mon-Ark", -- coords?
+		[65595] = "One Bad Apple|60+ 65+,67030 65594|12.87 22.01|Gnoll Mon-Ark",
 
 		-- Shiverweb Vale
 
 		-- Kauriq Gleamlet
+		[65914] = "Mammoths Matter|60+ 65+,67030|44.78 50.62|Ruriq",
+		[65925] = "Culling the Cullers|60+ 65+,67030|44.78 50.62|Ruriq",
+		[65926] = "Tackling the Falls|60+ 65+,67030 65914 65925|45.41 54.16|Ruriq",
+		[66724] = "The Gleamfisher|60+ 65+,67030 65926|45.51 54.18|Kauj",
+		[65929] = "Tackling the Falls|60+ 65+,67030 66724|45.45 54.17|Ruriq",
+		[65928] = "Wayward Winds|60+ 65+,67030 66724|45.51 54.18|Kauj",
+		[65930] = "A Wrestle of Wind and Water|60+ 65+,67030 65929 65928|45.51 54.18|Kauj",
+		[66155] = "A Wrestle of Wind and Water|60+ 65+,67030 65930|45 54.03|Ruriq",
 
 		-- Lost Ruins
 
@@ -330,6 +365,12 @@ Data.Quests = {
 		[66841] = "A Shard of the Past|60+ 65+,67030 66837 66838|19.16 24.73|Gannar Fullpack", -- 66839 might be needed (probably not)
 		[66845] = "Legendary Foil|60+ 65+,67030 66840 66841|18.74 24.43|Guo-Hee Calmwater",
 		[66846] = "The Heart of the Deck|60+ 65+,67030 66845|18.77 24.43|Mysterious Apparition",
+
+		-- A Helping Claw
+		[71094] = "Help Is Our Way!|70+|46.41 25.67|Heleth the Wise",
+		[71095] = "A Claw in Need|70+ 71094|45.9 25.98|Heleth the Wise",
+		[71096] = "Is A Claw Indeed|70+ 71095|45.94 25.96|[unfriendly]Venderthvan]",
+		[71097] = "A Helping Claw|70+ 71096|45.94 25.96|[unfriendly]Venderthvan]",
 
 		-- Artisan's Consortium
 		-- TODO:: Figure out how the currently disabled profession skip interacts with these
@@ -411,6 +452,7 @@ Data.Quests = {
 		[66336] = "The Isle of Emerald|60+ 62+,67030 66337|25.65 48.4|Merithra|campaign",
 		[66783] = "Renewal of Vows|60+ 62+,67030 66336|22.14 50.98|Merithra|campaign",
 		[66339] = "The Nokhud Offensive: The Wind Belongs to the Sky|60+ 62+,67030 66783|22.14 50.98|Khanam Matra Sarest|dungeon",
+		[70985] = "The Lonely Scout|60+ 62+,67030 66783|34.22 53.98|Scout Santuun",
 
 		-- Taivan's Purpose
 		[67772] = "The Trouble with Taivan|60+ 62+,67030 66327|61.21 40|Healer Selbekh",
@@ -433,6 +475,14 @@ Data.Quests = {
 		[65761] = "More Adventure Than Expected|60+ 62+,67030 65770|52.05 63.24|Godoloto",
 		[65711] = "Stealing Its Thunder|60+ 62+,67030 65761|47.5 54.13|Initiate Radiya",
 		[66676] = "Sneaking In|60+ 62+,67030 65711|48.27 56.5|Initiate Radiya",
+
+		-- To Tame A Thunderspine
+		[71196] = "To Tame A Thunderspine|70+ 66676 reputation:2503:9|56.2 77.11|Initiate Radiya", -- Requires Renown 9 with Maruuk Centaur
+		[71197] = "To Tame A Thunderspine|70+ 71196 reset:71196|56.2 77.11|Initiate Radiya",
+		[71198] = "To Tame A Thunderspine|70+ 71197 reset:71197|56.2 77.11|Initiate Radiya",
+		[71199] = "To Tame A Thunderspine|70+ 71198 reset:71198|56.2 77.11|Initiate Radiya",
+		[71195] = "To Tame A Thunderspine|70+ 71199 reset:71199|56.2 77.11|Initiate Radiya",
+		[71209] = "Beast of the Plains|70+ 71195|56.2 77.11|Initiate Radiya",
 
 		-- Lilac Ramble
 		[65899] = "Find Theramus|60+ 62+,67030|25.06 56.88|Celina Crunchyleaves",
@@ -552,8 +602,8 @@ Data.Quests = {
 		[65995] = "The Obsidian Citadel|60+ 65991|62.92 29.42|{237451} [Qalashi Plans]|campaign|Drops from [hostile]Meatgrinder Sotok]",
 		[65996] = "Veteran Reinforcements|60+ 65993 65992 65995|62.75 33.11|Majordomo Selistra|campaign",
 		[66998] = "Fighting Fire with... Water|60+|59.1 34.84|Caretaker Ventraz", -- no prereqs?
-		[70179] = "A Two for One Deal|60+|54.43 30.84|Apprentice Caretaker Zefren", -- no prereqs?
 		[65997] = "Chasing Sendrax|60+ 65996|54.99 30.78|Caretaker Azkra|campaign",
+		[70179] = "A Two for One Deal|60+ 65997|54.43 30.84|Apprentice Caretaker Zefren",
 		[65998] = "Future of the Flights|60+ 65997|55.17 24.95|Sendrax|campaign",
 		[65999] = "Red in Tooth and Claw|60+ 65997|55.17 24.95|Sendrax|campaign",
 		[66000] = "Library of Alexstrasza|60+ 65997|55.26 24.69|On the Origin of Draconic Species|campaign",
@@ -606,7 +656,7 @@ Data.Quests = {
 		[65794] = "A Charge of Care|60+ 65791|62.34 73.02|Alexstrasza the Life-Binder|campaign",
 
 		-- Save the Hippos!
-		[72122] = "Erstwhile Ecologists|60+ 65760 -66105|71.14 40.48|Mender Eskros", -- Check if 65760 is req - Breadcrumb for 66105
+		[72122] = "Erstwhile Ecologists|60+ 65989 -66105|71.14 40.48|Mender Eskros", -- Check if 65760 is req - Breadcrumb for 66105
 		[66105] = "A Scalpel of a Solution|60+ ~72122|74.43 42.14|Ecologist Iskha", -- Invalidates 72122
 		[66107] = "Wildlife Rescue|60+|74.43 42.14|Ecologist Tharu",
 		[66104] = "Forensic Ecology|60+ 66105 66107|74.43 42.14|Ecologist Iskha",
@@ -662,6 +712,10 @@ Data.Quests = {
 		[69901] = "Bring In the Expert|60+ 69899|45.95 81.49|Tyrgon",
 		[69902] = "Theory in Practice|60+ 69900 69901|45.95 81.49|Tyrgon",
 
+		-- Crabtender's Quandry
+		[66612] = "Crabtender's Quandry|60+|59.74 51.22|Crabtender Kad'irsza",
+		[71141] = "Gills with Gall|60+|59.7 51.21|Ru'kroszk",
+
 		-- Beyond the Barrier
 		[69896] = "Disastrous Detour|60+ -66435|63.58 61.77|Scout Kuvaeth", -- Breadcrumb for 66435
 		[66435] = "Site Salvage|60+ ~69896|66.06 58.13|Elementalist Taiyang", -- Invalidates breadcrumb 66435
@@ -680,13 +734,14 @@ Data.Quests = {
 		[65782] = "Under Lock and Key|60+ 65690|37.43 46.62|Ayasanth",
 		[65691] = "The Shadow of His Wings|60+ 65687 65782|37.35 46.61|Ayasanth",
 
-		-- The Earthen Ward
+		-- The Earthen Ring
 		[66003] = "Rings To Bind Them|60+|37.45 71.78|Earthcaller Yevaa", -- no prereq?
 		[66369] = "The Earthen Ward|60+ 66003|37.45 71.78|Earthcaller Yevaa",
 		[66368] = "Island In A Storm|60+ 66369|37.45 71.78|Earthcaller Yevaa",
+		[70414] = "Shaky Grounds|60+|37.1 56.05|Earthmender Govrum", -- no prereq?
 
 		-- Dragonriding
-		[72481] = "The Waking Shores Tour|60+ dragonriding|73.25 52.07|Celormu", -- prereqs?
+		[72481] = "The Waking Shores Tour|60+ dragonriding|73.25 52.07|Celormu", -- prereq: +68798 ?
 
 
 		-- TODO:: figure out what triggers the Artisan's Supply quests
@@ -701,6 +756,7 @@ Data.Quests = {
 		[72251] = "Dragon Isles Cooking|60+ -72250|76.45 35.77|Head Chef Stacks|cooking", -- some characters get 72250 instead (Evokers?)
 
 		-- Alchemy
+		[67080] = "Artisan's Supply: Dragon's Alchemical Solution|60+ alchemy|60.26 72.19|Zherrak|alchemy",
 
 		-- Blacksmithing
 
@@ -823,9 +879,6 @@ Data.Quests = {
 		-- Chains of Domination - Battle of Ardenweald
 		[63576] = "The First Move|60+ 60272|40.25 68.14|[Auto Accept]|campaign",
 		[63856] = "A Gathering of Covenants|60+ 63576|38.89 70|Tal-Inara|campaign",
-
-		-- Zereth Mortis
-		[65649] = "A New Deal|60+ 64958|34.46 57.46|Zo'sorg|weekly",
 
 		-- Zereth Mortis - Into the Unknown
 		--[64942] = "Call of the Primus|60+ ???|38.89 70|[Auto Accept]|campaign", -- Requires chapter 2 of Chains of Domination (incl skip)
