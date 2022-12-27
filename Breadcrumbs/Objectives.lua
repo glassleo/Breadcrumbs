@@ -197,6 +197,16 @@ Data.Objectives = {
 
 Data.ObjectiveSteps = {
 	
+	--[[ Ohn'ahran Plains ]]--
+
+	[2023] = {
+		[66658] = {
+			"questobjective|40.08 58.36|The Nokhud Offensive: Founders Keepers|Place Teera's Bow",
+			"questobjective|39.59 59.07|The Nokhud Offensive: Founders Keepers|Place Maruuk's Spear",
+		},
+	},
+
+	
 	--[[ Zereth Mortis ]]--
 
 	[1970] = {
