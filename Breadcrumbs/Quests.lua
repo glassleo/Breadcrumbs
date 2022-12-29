@@ -226,6 +226,16 @@ Data.Quests = {
 		[70221] = "Show Your Mettle|60+ 62+,67030 alchemy,blacksmithing,enchanting,engineering,inscription,jewelcrafting,leatherworking,tailoring,herbalism,mining,skinning reputation:2544:2|39.44 70.17|Miguel Bright|weekly", -- Requires Preferred (rank 2) or higher with Artisan's Consortium
 		[67295] = "That's My Specialty|60+ 62+,67030 skill:2823:25,skill:2822:25,skill:2825:25,skill:2827:25,skill:2832:25,skill:2828:25,skill:2829:25,skill:2830:25,skill:2833:25,skill:2834:25,skill:2831:25|39.37 70.16|Miguel Bright", -- Requires 25 skill in any Dragon Isles primary profession
 		[69919] = "A Craft in Need|60+ 62+,67030 alchemy,blacksmithing,enchanting,engineering,inscription,jewelcrafting,leatherworking,tailoring,cooking,fishing|35.37 58.77|Azley",
+		
+		-- The Emerald Enclave
+		[67094] = "A Dryad's Work Is Never Done|60+ 68+,67030|72.78 66.17|Thalendra",
+		[67606] = "A Dryadic Remedy|60+ 68+,67030 67094|72.78 66.17|Thalendra",
+
+		-- Gardens of Unity
+		[72189] = "Garden Variety|60+ 68+,67030 -66134|77.37 67.03|Tender Xina", -- Breadcrumb for 66134
+
+		-- Tyrhold Reservoir
+		[72190] = "Reservoir Reservations|60+, 68+,67030 -65913|25.49 40.95|Talikka", -- Breadcrumb for 65913
 	},
 
 	-- Thaldraszus
@@ -250,15 +260,45 @@ Data.Quests = {
 
 		-- The Screechflight Scramble
 
+		-- The Emerald Enclave
+		[67094] = "A Dryad's Work Is Never Done|60+ 68+,67030|43.23 62.21|Thalendra|link:2112",
+		[67606] = "A Dryadic Remedy|60+ 68+,67030 67094|43.23 62.21|Thalendra|link:2112",
+
 		-- Gardens of Unity
+		[72189] = "Garden Variety|60+ 68+,67030 -66134|43.89 62.34|Tender Xina|link:2112", -- Breadcrumb for 66134
+		[66134] = "Azeroth Pest Control|60+ 68+,67030 ~72189|37.86 75.47|Gryrmpech", -- Invalidates breadcrumb 72189
+		[66135] = "The Gardener's Apprentice|60+ 68+,67030 66134|37.86 75.47|Gryrmpech",
+		[66278] = "One Drakonid's Junk|60+ 68+,67030 66134 +66135|38.91 74.25|Bronze Stopwatch",
+		[66279] = "New Kid on the Clock|60+ 68+,67030 66278|37.86 75.47|Gryrmpech",
+		[66138] = "Like Sands Through the Hourglass|60+ 68+,67030 66279|35.23 72.64|Orizmu",
+		[66136] = "Elemental Extract|60+ 68+,67030 66135|37.86 75.47|Gryrmpech",
+		[66137] = "Lashing Out|60+ 68+,67030 66135|37.86 75.47|Gryrmpech",
+		[66139] = "Flame at Last|60+ 68+,67030 66136 66137|37.86 75.47|Gryrmpech",
+		[66412] = "Carry On, Basilton|60+ 68+,67030 66138 66139|37.86 75.47|Gryrmpech", -- is 66138 required?
 
 		-- Tyrhold Reservoir
+		[72190] = "Reservoir Reservations|60+ 68+,67030 -65913|36.4 58.57|Talikka|link:2112", -- Breadcrumb for 65913
+		[65913] = "Wotcher, Watcher?|60+ 68+,67030 ~72190|49.54 58.86|Zuttiki", -- Invalidates breadcrumb 72190
+		[65918] = "Preventative Maintenance|60+ 68+,67030 65913|49.54 58.86|Zuttiki",
+		[70139] = "Where There's a Ward, There's a Way|60+ 68+,67030 65913|49.61 58.76|Mara",
+		[65921] = "Refti Retribution|60+ 68+,67030 65918 70139|49.54 58.86|Zuttiki",
+		[65916] = "We Don't Negotiate with Primalists|60+ 68+,67030 65918 70139|49.61 58.76|Mara",
+		[65920] = "For the Ward!|60+ 68+,67030 65921 65916|49.61 58.76|Mara",
 
 		-- Bleeding Hearts
+		[72399] = "The Hermit's Garden|60+ 68+,67030 -69932|52.58 69.92|Agues", -- Breadcrumb for 69932
+		[69932] = "Every Life Counts|60+ 68+,67030 ~72399|50.17 67.66|Szareth", -- Invalidates breadcrumb 72399
+		[69933] = "Curiosity's Price|60+ 68+,67030|50.17 67.66|Szareth",
+		[69934] = "Bleeding Hearts|60+ 68+,67030 69932 69933|50.17 67.66|Szareth",
 
 		-- Serene Dreams Spa
 
 		-- Misty Vale
+		-- ...
+		[70878] = "Ring of Fire|60+ 68+,67030 70874|42.28 78.91|Maldra Flametongue",
+		[70875] = "Worst of the Worst|60+ 68+,67030 70874|42.45 78.85|Investigator Erima",
+		[70876] = "Fracture the Foci|60+ 68+,67030 70874|42.45 78.85|Investigator Erima",
+		[70879] = "Fracture the Foci|60+ 68+,67030 70878 70875 70876|42.45 78.85|Investigator Erima",
 
 		-- Hearthstone Duel
 		[66929] = "Gotta Collect Them All|60+ 68+,67030|59.74 43.58|Yumadormu", -- no prereq?
@@ -479,8 +519,8 @@ Data.Quests = {
 		-- To Tame A Thunderspine
 		[71196] = "To Tame A Thunderspine|70+ 66676 reputation:2503:9|56.2 77.11|Initiate Radiya", -- Requires Renown 9 with Maruuk Centaur
 		[71197] = "To Tame A Thunderspine|70+ 71196 reset:71196|56.2 77.11|Initiate Radiya",
-		[71198] = "To Tame A Thunderspine|70+ 71197 reset:71197|56.2 77.11|Initiate Radiya",
-		[71199] = "To Tame A Thunderspine|70+ 71198 reset:71198|56.2 77.11|Initiate Radiya",
+		[71198] = "To Tame A Thunderspine|70+ 71197 reset:71197|57.09 77.64|Initiate Radiya",
+		[71199] = "To Tame A Thunderspine|70+ 71198 reset:71198|56.73 76.3|Initiate Radiya",
 		[71195] = "To Tame A Thunderspine|70+ 71199 reset:71199|56.2 77.11|Initiate Radiya",
 		[71209] = "Beast of the Plains|70+ 71195|56.2 77.11|Initiate Radiya",
 
@@ -747,6 +787,7 @@ Data.Quests = {
 		-- TODO:: figure out what triggers the Artisan's Supply quests
 		-- Artisan's Consortium
 		[67564] = "Artisan's Courier|60+ alchemy,blacksmithing,enchanting,engineering,inscription,jewelcrafting,leatherworking,tailoring,herbalism,mining,skinning|57.93 68.25|Haephesta",
+		[70221] = "Show Your Mettle|60+ 62+,67030 alchemy,blacksmithing,enchanting,engineering,inscription,jewelcrafting,leatherworking,tailoring,herbalism,mining,skinning reputation:2544:2|60.23 72.19|Thomas Bright|weekly", -- Requires Preferred (rank 2) or higher with Artisan's Consortium
 
 		-- Fishing
 		--[72252] = "Dragon Isles Fishing|60+ alliance|COORDS|Danielle Anglers|fishing", -- Alliance
