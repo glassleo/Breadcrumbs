@@ -197,6 +197,13 @@ Data.Objectives = {
 
 Data.ObjectiveSteps = {
 	
+	--[[ Thaldraszus ]]--
+
+	[2025] = {
+		[67079] = "questobjective|57.81 53.64|Hard Lock Life|Primary Security Disc",
+	},
+
+	
 	--[[ Ohn'ahran Plains ]]--
 
 	[2023] = {
