@@ -226,6 +226,7 @@ Data.Quests = {
 		[70221] = "Show Your Mettle|60+ 62+,67030 alchemy,blacksmithing,enchanting,engineering,inscription,jewelcrafting,leatherworking,tailoring,herbalism,mining,skinning reputation:2544:2|39.44 70.17|Miguel Bright|weekly", -- Requires Preferred (rank 2) or higher with Artisan's Consortium
 		[67295] = "That's My Specialty|60+ 62+,67030 skill:2823:25,skill:2822:25,skill:2825:25,skill:2827:25,skill:2832:25,skill:2828:25,skill:2829:25,skill:2830:25,skill:2833:25,skill:2834:25,skill:2831:25|39.37 70.16|Miguel Bright", -- Requires 25 skill in any Dragon Isles primary profession
 		[69919] = "A Craft in Need|60+ 62+,67030 alchemy,blacksmithing,enchanting,engineering,inscription,jewelcrafting,leatherworking,tailoring,cooking,fishing|35.37 58.77|Azley",
+		[70033] = "Artisan's Supply: Pioneer's Leather Boots|60+ leatherworking|29 61|Samar|leatherworking",
 		
 		-- The Emerald Enclave
 		[67094] = "A Dryad's Work Is Never Done|60+ 68+,67030|72.78 66.17|Thalendra",
@@ -446,11 +447,11 @@ Data.Quests = {
 		[70739] = "Bloodlines, Sweets, and Teerai|60+ 62+,67030|63.61 40.46|Hunter Narman",
 		[70730] = "Shikaar Giver|60+ 62+,67030|62.81 35.45|Windsage Dawa",
 		[70721] = "After My Ohn Heart|60+ 62+,67030 70739 70730|62.81 35.45|Windsage Dawa",
-		[66016] = "Clan Teerai|60+ 62+,67030 66848|61.44 39.52|Sansok Khan|campaign",
+		[66016] = "Clan Teerai|60+ 62+,67030 65806|61.44 39.52|Sansok Khan|campaign",
 		[66019] = "Honoring Our Ancestors|60+ 62+,67030 66016|59.15 37.6|Qariin Dotur|campaign",
-		[66017] = "Clan Ohn'ir|60+ 62+,67030 66848|61.44 39.52|Sansok Khan|campaign",
+		[66017] = "Clan Ohn'ir|60+ 62+,67030 65806|61.44 39.52|Sansok Khan|campaign",
 		[66020] = "Omens and Incense|60+ 62+,67030 66017|62.99 33.66|Ohn Seshteng|campaign",
-		[66018] = "Clan Nokhud|60+ 62+,67030 66848|61.44 39.52|Sansok Khan|campaign",
+		[66018] = "Clan Nokhud|60+ 62+,67030 65806|61.44 39.52|Sansok Khan|campaign",
 		[66021] = "Unwelcome Outsider|60+ 62+,67030 66018|60.32 40.74|Guard Bahir|campaign",
 		[66969] = "Clans of the Plains|60+ 62+,67030 66019 66020 66021|62.44 41.58|Aru|campaign",
 		[66948] = "The Emissary's Arrival|60+ 62+,67030 66969|61.03 40.43|Gemisath|campaign",
@@ -467,6 +468,7 @@ Data.Quests = {
 		[66224] = "Mystic Mystery|60+ 62+,67030 66254|36.81 57.26|Initiate Boku|campaign",
 		[66225] = "Toting Totems|60+ 62+,67030 66224|49.36 63.14|Tigari Khan|campaign",
 		[70195] = "Taken By Storm|60+ 62+,67030 66224|49.36 63.14|Tigari Khan|campaign",
+		[66226] = "Emotional Support Companions|60+ 62+,67030|47.02 71.18|Initiate Kittileg",
 		[66236] = "Catching Wind|60+ 62+,67030 66225 70195|49.36 63.14|Tigari Khan|campaign",
 		[66242] = "Weather Control|60+ 62+,67030 66236|58.12 68.97|Initiate Boku|campaign",
 		[66256] = "Eagle-itarian|60+ 62+,67030 66236|58.12 68.97|Initiate Boku|campaign",
@@ -518,11 +520,11 @@ Data.Quests = {
 
 		-- To Tame A Thunderspine
 		[71196] = "To Tame A Thunderspine|70+ 66676 reputation:2503:9|56.2 77.11|Initiate Radiya", -- Requires Renown 9 with Maruuk Centaur
-		[71197] = "To Tame A Thunderspine|70+ 71196 reset:71196|56.2 77.11|Initiate Radiya",
+		[71197] = "To Tame A Thunderspine|70+ 71196 reset:71196|56.2 77.11|Initiate Radiya", -- check coords
 		[71198] = "To Tame A Thunderspine|70+ 71197 reset:71197|57.09 77.64|Initiate Radiya",
 		[71199] = "To Tame A Thunderspine|70+ 71198 reset:71198|56.73 76.3|Initiate Radiya",
-		[71195] = "To Tame A Thunderspine|70+ 71199 reset:71199|56.2 77.11|Initiate Radiya",
-		[71209] = "Beast of the Plains|70+ 71195|56.2 77.11|Initiate Radiya",
+		[71195] = "To Tame A Thunderspine|70+ 71199 reset:71199|57.66 72.31|Initiate Radiya",
+		[71209] = "Beast of the Plains|70+ 71195|57.66 72.31|Initiate Radiya",
 
 		-- Lilac Ramble
 		[65899] = "Find Theramus|60+ 62+,67030|25.06 56.88|Celina Crunchyleaves",
@@ -590,9 +592,6 @@ Data.Quests = {
 		[66462] = "The Field of Ferocity: Lost in the Dream!|60+ 62+,67030 66461|53.16 37.32|Gurgthock",
 		[66463] = "The Field of Ferocity: Elemental Revenge Round!|60+ 62+,67030 66462|53.16 37.32|Gurgthock",
 		[66464] = "The Field of Ferocity: Master of the Hunt!|60+ 62+,67030 66463|53.16 37.32|Gurgthock",
-
-		-- Enchanting
-		[70029] = {"Artisan's Supply: Runed Serevite Rods|60+ enchanting|41.35 61|Asarin|enchanting", "Artisan's Supply: Runed Serevite Rods|60+ enchanting|56.83 75.51|Solonga|enchanting",},
 		
 		-- Artisan's Consortium
 		-- TODO:: Figure out how the currently disabled profession skip interacts with these
@@ -600,6 +599,8 @@ Data.Quests = {
 		[69915] = "Targeted Ads|60+ 62+,67030 alchemy,blacksmithing,enchanting,engineering,inscription,jewelcrafting,leatherworking,tailoring,cooking,fishing|72.05 81.14|Azley",
 		[69981] = "Customer Satisfaction|60+ 69915 alchemy,blacksmithing,enchanting,engineering,inscription,jewelcrafting,leatherworking,tailoring,cooking,fishing|72.05 81.14|Azley",
 		[69919] = "A Craft in Need|60+ 62+,67030 alchemy,blacksmithing,enchanting,engineering,inscription,jewelcrafting,leatherworking,tailoring,cooking,fishing|72.05 81.14|Azley",
+		[70029] = {"Artisan's Supply: Runed Serevite Rods|60+ enchanting|41.35 61|Asarin|enchanting", "Artisan's Supply: Runed Serevite Rods|60+ enchanting|56.83 75.51|Solonga|enchanting",},
+		[70033] = {"Artisan's Supply: Pioneer's Leather Boots|60+ leatherworking|39.4 55.4|Ekhi|leatherworking", "Artisan's Supply: Pioneer's Leather Boots|60+ leatherworking|80.8 59.4|Dokhusek|leatherworking",},
 
 		-- The Azure Span - Into the Archives
 		[66340] = "Into the Azure|60+ 62+,67030 66783|22.14 50.98|Merithra|campaign",
@@ -684,7 +685,7 @@ Data.Quests = {
 		[66056] = "Forging a New Future|60+ 66055|27.26 62.8|Forgemaster Bazentus|campaign",
 		[66354] = "The Spark|60+ 66056|24.68 61.12|Forgemaster Bazentus|campaign",
 		[66057] = "Restoring the Faith|60+ 66354|24.68 61.12|Forgemaster Bazentus|campaign",
-		[72135] = "Neltharus: Secrets Within|60+ +66057|25.11 56.23|Archivist Edress|dungeon",
+		[72135] = "Neltharus: Secrets Within|60+ !66057|25.11 56.23|Archivist Edress|dungeon",
 
 		-- A Purpose Restored
 		[66779] = "Heir Apparent|60+ 66057|24.25 55.88|Sabellian|campaign",
@@ -780,53 +781,20 @@ Data.Quests = {
 		[66368] = "Island In A Storm|60+ 66369|37.45 71.78|Earthcaller Yevaa",
 		[70414] = "Shaky Grounds|60+|37.1 56.05|Earthmender Govrum", -- no prereq?
 
-		-- Dragonriding
-		[72481] = "The Waking Shores Tour|60+ dragonriding|73.25 52.07|Celormu", -- prereq: +68798 ?
+		-- Dragon Racing
+		[72481] = "The Waking Shores Tour|60+ dragonriding 67030|73.25 52.07|Celormu",
+		[72483] = "The Ohn'ahran Plains Tour|60+ dragonriding 72481|73.25 52.07|Celormu",
+		[72485] = "The Azure Span Tour|60+ dragonriding 72483|73.25 52.07|Celormu",
+		[72487] = "The Thaldraszus Tour|60+ dragonriding 72485|73.25 52.07|Celormu",
 
-
-		-- TODO:: figure out what triggers the Artisan's Supply quests
 		-- Artisan's Consortium
 		[67564] = "Artisan's Courier|60+ alchemy,blacksmithing,enchanting,engineering,inscription,jewelcrafting,leatherworking,tailoring,herbalism,mining,skinning|57.93 68.25|Haephesta",
 		[70221] = "Show Your Mettle|60+ 62+,67030 alchemy,blacksmithing,enchanting,engineering,inscription,jewelcrafting,leatherworking,tailoring,herbalism,mining,skinning reputation:2544:2|60.23 72.19|Thomas Bright|weekly", -- Requires Preferred (rank 2) or higher with Artisan's Consortium
-
-		-- Fishing
-		--[72252] = "Dragon Isles Fishing|60+ alliance|COORDS|Danielle Anglers|fishing", -- Alliance
-		[72253] = "Dragon Isles Fishing|60+ horde|81.11 29.11|Mora Cloudwalker|fishing", -- Horde
-
-		-- Cooking
-		[72251] = "Dragon Isles Cooking|60+ -72250|76.45 35.77|Head Chef Stacks|cooking", -- some characters get 72250 instead (Evokers?)
-
-		-- Alchemy
 		[67080] = "Artisan's Supply: Dragon's Alchemical Solution|60+ alchemy|60.26 72.19|Zherrak|alchemy",
-
-		-- Blacksmithing
-
-		-- Enchanting
-		[70360] = "Dragon Isles Enchanting|60+ enchanting|75.83 33.27|Veeno|enchanting",
 		[70029] = "Artisan's Supply: Runed Serevite Rods|60+ enchanting|75.83 33.27|Veeno|enchanting",
-
-		-- Engineering
-		--[70359] = "Dragon Isles Engineering|60+ alliance engineering|COORDS|Winnie Fingerspring|engineering", -- Alliance
-		[72242] = "Dragon Isles Engineering|60+ horde engineering|75.93 33.21|Quizla Blastcaps|engineering", -- Horde
 		[70030] = "Artisan's Supply: Quality-Assured Optics|60+ engineering|42.99 66.51|Winnie Fingerspring|engineering",
-
-		-- Herbalism
-		[72243] = "Dragon Isles Herbalism|60+ herbalism -70364|76.86 34.04|Feilin Kuan|herbalism",
 		[70026] = {"Artisan's Supply: Lava Beetles|60+ herbalism|76.86 34.04|Feilin Kuan|herbalism", "Artisan's Supply: Lava Beetles|60+ herbalism|57.44 65.92|Szarostrasza|herbalism",},
-
-		-- Inscription
-		[72244] = "Dragon Isles Inscription|60+ inscription -70361|76.17 35.56|Journalist Jessamine Spitz|inscription",
-
-		-- Jewelcrafting
-		[72247] = "Dragon Isles Jewelcrafting|60+ jewelcrafting|76.14 33.62|Misty Catseye|jewelcrafting", -- Alliance gets 70365?
-
-		-- Leatherworking
-
-		-- Mining
-
-		-- Skinning
-
-		-- Tailoring
+		[70033] = "Artisan's Supply: Pioneer's Leather Boots|60+ leatherworking|76.63 34.85|Deirdre Flemmin|leatherworking",
 
 		-- Ohn'ahran Plains - Into the Plains
 		[65795] = "Next Steppes|60+ 65794|61.56 68.56|Alexstrasza the Life-Binder|campaign",
