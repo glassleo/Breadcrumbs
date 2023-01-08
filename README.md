@@ -73,3 +73,4 @@ So far, the following zones are entirely complete or in a near-complete state:
 - Azuremyst Isle
 - Durotar
 - Mulgore
+- Azshara
