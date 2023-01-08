@@ -385,7 +385,7 @@ Data.POI = {
 		"POI/Portal|Portal to Silvermoon City|10+ horde 46931,zandalari|73.85 62.2",
 		"POI/Portal|Portal to Orgrimmar|10+ horde 46931,zandalari|73.85 69.92",
 		"POI/Portal|Portal to Thunder Bluff|10+ horde 46931,zandalari|73.85 77.38",
-		"POI/Portal|Portal to Silithus|50+ horde|73.85 85.35",
+		"POI/Portal|Portal to Silithus|50+ horde 46931|73.85 85.35",
 		"POI/Portal|Portal to Nazjatar|50+ horde 55053|62.97 85.44",
 
 		-- Profession
@@ -1078,6 +1078,14 @@ Data.POI = {
 	[1] = {
 		-- Legion Intro
 		"Speak:small|[Holgar Stormaxe]|10+ 43926 _40518 -44663 -44184 horde|46.01 13.78|tooltip|Skip the Legion introductory quests and begin your journey in Dalaran.",
+	},
+
+
+	--[[ Azshara ]]--
+
+	[76] = {
+		-- Quest
+		"questobjective:small|[spell]Ambitious Reach]|5+ horde 14389 -14391 -24467|25.73 37.97|tooltip|Xylem's Tower"
 	},
 
 

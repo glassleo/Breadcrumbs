@@ -124,6 +124,16 @@ Data.Objectives = {
 	},
 
 
+	--[[ Azshara ]]--
+
+	[76] = {
+		[14391] = {
+			"questobjective:override|27.1 40.86|Turning the Tables|[Portal to Xylem's Retreat]",
+			"questobjective:override|22.46 43.58|Turning the Tables|[Portal to Arcane Pinnacle]",
+		},
+	},
+
+
 	--[[ Elwynn Forest ]]--
 
 	-- Stormwind

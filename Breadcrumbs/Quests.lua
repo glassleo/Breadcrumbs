@@ -413,6 +413,11 @@ Data.Quests = {
 		[71096] = "Is A Claw Indeed|70+ 71095|45.94 25.96|[unfriendly]Venderthvan]",
 		[71097] = "A Helping Claw|70+ 71096|45.94 25.96|[unfriendly]Venderthvan]",
 
+		-- Happy Little Accidents
+		[70166] = "The Joy of Painting|60+ 65+,67030|22.14 36.76|Rauvros", -- need prereq
+		[70168] = "Sad Little Accidents|60+ 65+,67030 70166|7.87 53.45|Ranpiata|dungeon",
+		[70170] = "Beat the Demons Out of It|60+ 65+,67030 70168|7.87 53.45|Ranpiata|dungeon",
+
 		-- Artisan's Consortium
 		-- TODO:: Figure out how the currently disabled profession skip interacts with these
 		[67295] = "That's My Specialty|60+ 62+,67030 skill:2823:25,skill:2822:25,skill:2825:25,skill:2827:25,skill:2832:25,skill:2828:25,skill:2829:25,skill:2830:25,skill:2833:25,skill:2834:25,skill:2831:25|37.82 24|Miguel Bright", -- Requires 25 skill in any Dragon Isles primary profession
@@ -708,7 +713,7 @@ Data.Quests = {
 		[66196] = "A Quack For Help|60+ 66104|80.12 42.86|Bubbled Duckling", -- double check req
 		-- 70872 hidden weekly lockout
 		[70877] = "A Quack in Time|60+ 66196 -70872|80.09 39.88|Bubbled Duckling",
-		[70917] = "A Shoulder to Quack On|60+ 70877 -70872|81.63 45.42|Bubbled Duckling", -- confirm coords
+		[70917] = "A Shoulder to Quack On|60+ 70877 -70872|81.6 45.45|Bubbled Duckling",
 		[70918] = "Quack for Your Life|60+ 70917 -70872|79.33 42.77|Bubbled Duckling", -- confirm coords
 		[70919] = "Quacking Out for a Hero|60+ 70918 -70872|82.83 42.64|Bubbled Duckling", -- confirm coords
 
@@ -4175,7 +4180,7 @@ Data.Quests = {
 		[9453]  = "Find Acteon!|1+ 9452 alliance|61.06 54.24|Diktynna",
 
 		-- Azure Watch
-		[9612]  = "A Hearty Thanks!|1+ draenei alliance|1 GiftOfTheNaaru|Draenei Youngling|discovery tomtom|Cast {135923} [spell]Gift of the Naaru] on a [green]Draenei Youngling] who is in combat to obtain this quest",
+		[9612]  = "A Hearty Thanks!|1+ draenei alliance -rogue|1 GiftOfTheNaaru|Draenei Youngling|discovery tomtom|Cast {135923} [spell]Gift of the Naaru] on a [green]Draenei Youngling] who is in combat to obtain this quest",
 		[9616]  = "Bandits!|1+ broken:50 alliance|2 BloodElfCommunication|{133473} [Blood Elf Communication]|discovery chromietime tomtom|Drops from [hostile]Blood Elf Bandit] who is stealthed in a random location", -- Blizzard bug: as of 9.0 the drop is broken outside Chromie Time and will not drop at all for level 50+ characters, not even in Party Sync
 		[9454]  = "The Great Moongraze Hunt|1+ alliance|49.78 51.93|Acteon",
 		[10324] = "The Great Moongraze Hunt|1+ 9454 alliance|49.78 51.93|Acteon",
@@ -4515,6 +4520,136 @@ Data.Quests = {
 	},
 
 
+	--[[ Azshara ]]--
+
+	[76] = {
+		-- Defending Orgrimmar
+		[14117] = "The Eyes of Ashenvale|5+ horde|26.82 76.95|Ag'tor Bloodfist",
+		[14118] = "Venison for the Troops|5+ horde|26.82 76.95|Ag'tor Bloodfist",
+		[14129] = "Runaway Shredder!|5+ horde|27 77.08|Labor Captain Grabbit",
+		[14134] = "The Captain's Logs|5+ horde 14129|27 77.08|Labor Captain Grabbit",
+		[14135] = "Up a Tree|5+ horde 14134|27 77.08|Labor Captain Grabbit",
+		[14146] = "Defend the Gates!|5+ horde 14135|27 77.08|Labor Captain Grabbit",
+		[14155] = "Arborcide|5+ horde 14146|27 77.08|Labor Captain Grabbit",
+		[14162] = "Report to Horzak|5+ horde 14155 -14161|27 77.08|Labor Captain Grabbit", -- Breadcrumb for 14161
+
+		-- Mountainfoot Strip Mine
+		[14161] = "Basilisk Bashin'|5+ horde ~14162|29.15 66.24|Horzak Zignibble", -- Invalidates breadcrumb 14162
+		[14165] = "Stone Cold|5+ horde|29.15 66.24|Horzak Zignibble",
+		[14190] = "The Perfect Prism|5+ horde 14165|29.15 66.24|Horzak Zignibble",
+		[14192] = "Prismbreak|5+ horde 14190|20.26 70.4|Headquarters Radio",
+		[14194] = "Refleshification|5+ horde 14192|20.03 69.98|Weapons Cabinet",
+		[14197] = "A Quota to Meet|5+ horde|29.26 66.49|Foreman Fisk",
+		[14468] = "Another Warm Body|5+ horde 14161 14194 14197|29.53 66.84|Private Worcester",
+
+		-- Redirecting the Ley Lines
+		[14127] = "Return of the Highborne?|5+ horde|27.27 73.39|{133464} [Scout's Orders]||Has a chance to drop from [hostile]Talrendis Scout]",
+		[14128] = "Return of the Highborne?|5+ horde 14127|26.82 76.95|Ag'tor Bloodfist",
+		[14201] = "A Thousand Stories in the Sand|5+ horde 24453|29.68 66.88|Malynea Skyreaver",
+		[14215] = "Memories of the Dead|5+ horde 14201|29.68 66.88|Malynea Skyreaver",
+		[14216] = "Mystery of the Sarcen Stone|5+ horde 14215|29.68 66.88|Malynea Skyreaver",
+
+		-- Sisters of the Sea
+		[14258] = "Mortar the Point|5+ horde|52.22 74.24|Bombardier Captain Smooks",
+		[14262] = "To Gut a Fish|5+ horde 14258|50.68 75.29|Torg Twocrush",
+		[14267] = "Investigating the Sea Shrine|5+ horde 14258|50.68 75.29|Torg Twocrush",
+		[14270] = "The Keystone Shard|5+ horde 14267|59.01 71.85|Naga Power Stone",
+		[14271] = "Report to Twocrush|5+ horde 14270|59.01 71.85|Naga Power Stone",
+		[14295] = "Sisters of the Sea|5+ horde 14271|50.68 75.29|Torg Twocrush",
+
+		-- Subject Nine from Space!
+		[14322] = "Bad Science! Bad!|5+ horde|45.06 75.48|Twistex Happytongs", -- any prereq?
+		[14408] = "Nine's Plan|5+ horde|42.23 76.09|Subject Nine", -- any prereq?
+		[14422] = "Raptor Raptor Rocket|5+ horde 14408|42.23 76.09|Subject Nine",
+
+		-- The Rarest Substance on Azeroth
+		[14202] = "Survey the Lakeshore|5+ horde 24453|29.72 67.07|Custer Clubnik",
+		[14209] = "Gunk in the Trunk|5+ horde 14202|29.72 67.07|Custer Clubnik",
+		[14423] = "Dozercism|5+ horde 14209|29.72 67.07|Custer Clubnik",
+		[14424] = "Need More Science|5+ horde 14423 -14308|29.72 67.07|Custer Clubnik", -- Breadcrumb for 14308
+		[14308] = "When Science Attacks|5+ horde ~14424|50.41 74.29|Assistant Greely", -- Invalidates breadcrumb 14424
+		[14310] = "Segmentation Fault: Core Dumped|5+ horde 14308|43.81 77.36|Secret Lab Squawkbox",
+		[14370] = "Mysterious Azsharite|5+ horde 14310|50.41 74.29|Assistant Greely",
+		[14371] = "A Gigantic Snack|5+ horde 14310|50.41 74.29|Assistant Greely",
+		[14377] = "Befriending Giants|5+ horde 14370 14371|50.41 74.29|Assistant Greely",
+		[14385] = "Azsharite Experiment Number One|5+ horde 14377|50.41 74.29|Assistant Greely",
+		[14383] = "The Terrible Tinkers of the Ruined Reaches|5+ horde 14377|50.53 74.74|Hobart Grapplehammer",
+		[14388] = "Azsharite Experiment Number Two|5+ horde 14385|50.41 74.29|Assistant Greely",
+		[24458] = "A Hello to Arms|5+ horde 14388|50.53 74.74|Hobart Grapplehammer",
+
+		-- Heart of Arkkoroc
+		[14469] = "Hand-me-downs|5+ horde 14468|29.46 57.67|Commander Molotov",
+		[14470] = "Military Breakthrough|5+ horde 14468|29.38 57.62|Glix Grindlock",
+		[14471] = "First Degree Mortar|5+ horde 14468|29.11 57.93|Xiz \"The Eye\" Salvoblast",
+		[14472] = "In The Face!|5+ horde 14469 14470 14471|29.38 57.62|Glix Grindlock",
+		[24452] = "Profitability Scouting|5+ horde 14472|29.46 57.67|Commander Molotov",
+		[24453] = "Private Chat|5+ horde 24452|29.46 57.67|Commander Molotov",
+		[14478] = {"Operation Fishgut|5+ horde 24453|52.3 50.31|Wrenchmen Recruitment Poster", "Operation Fishgut|5+ horde 24453|56.05 48.26|Wrenchmen Recruitment Poster", "Operation Fishgut|5+ horde 24453|56.98 50.09|Wrenchmen Recruitment Poster",},
+		[24455] = "Rapid Deployment|5+ horde 14478|60.64 50.59|Commander Molotov",
+		[14479] = "There Are Many Like It|5+ horde 24455|58.1 52.31|Captain Desoto",
+		[24437] = "First Come, First Served|5+ horde|39.14 51.77|Ruckus", -- prereq?
+		[24435] = "Mop Up|5+ horde 14479|41.5 53.64|Lieutenant Drex",
+		[24436] = "Halo Drops|5+ horde 14479|41.38 53.93|Sergeant Hort",
+		[24448] = "Field Promotion|5+ horde 24435 24436|41.5 53.64|Lieutenant Drex",
+		[14487] = "Still Beating Heart|5+ horde 24448|34.31 44.9|Captain Tork",
+		[14480] = "Extermination|5+ horde 24448|34.31 44.9|Sergeant Zelks",
+		[14484] = "Head of the Snake|5+ horde 24448|34.31 44.9|Sergeant Zelks",
+		[14485] = "Ticker Required|5+ horde 24448|34.31 44.9|Sergeant Zelks",
+		[14486] = "Handling the Goods|5+ horde 24448|34.53 44.67|Tora Halotrix",
+		[24449] = "Shore Leave|5+ horde 14487 14480 14484 14485 14486|34.31 44.9|Captain Tork",
+
+		-- The Best Apprentice
+		[14407] = "Azshara Blues|5+ horde|59.33 50.75|Teemo",
+		[14130] = "Friends Come In All Colors|5+ horde 14407|55.5 52.13|Kalec",
+		[14131] = "A Little Pick-me-up|5+ horde 14130|70.36 36.25|Ergll",
+		[14132] = "That's Just Rude!|5+ horde 14130|70.36 36.25|Ergll",
+		[14323] = "Absorbent|5+ horde 14130|70.36 36.25|Ergll",
+		[14324] = "Full of Hot Water|5+ horde 14323|70.36 36.25|Ergll",
+		[14345] = "Wash Out|5+ horde 14131 14132 14324|70.36 36.25|Ergll",
+		[14340] = "Dressed to Impress|5+ horde 14345|42.71 25.11|Sorata Firespinner",
+		[14249] = "Shear Will|5+ horde 14340|47.15 21.07|Will Robotronic",
+		[14250] = "Renewable Resource|5+ horde 14340|47.29 21.2|Tharkul Ironskull",
+		[14263] = "Waste of Thyme|5+ horde 14340|47.01 21.05|Quarla Whistlebreak",
+		[14226] = "Trouble Under Foot|5+ horde 14249 14250 14263|47.23 20.85|Image of Archmage Xylem",
+		[14230] = "Manual Labor|5+ horde 14249 14250 14263|47.24 21.28|Teresa Spireleaf",
+		[14413] = "The Pinnacle of Learning|5+ horde 14226 14230|47.23 20.85|Image of Archmage Xylem",
+		[14296] = "Watch Your Step|5+ horde 14413|55.71 14.77|Image of Archmage Xylem",
+		[14300] = "The Trial of Fire|5+ horde 14296|55.95 12.16|Image of Archmage Xylem",
+		[24478] = "The Trial of Frost|5+ horde 14296|55.95 12.16|Image of Archmage Xylem",
+		[24479] = "The Trial of Shadow|5+ horde 14296|55.95 12.16|Image of Archmage Xylem",
+		[14299] = "Xylem's Asylum|5+ horde 14300 24478 24479|55.95 12.16|Image of Archmage Xylem",
+		[14389] = "Wasn't It Obvious?|5+ horde 14299|25.59 37.96|Joanna",
+		[14390] = "Easy is Boring|5+ horde 14389|27.94 40.04|[dead]Spirit of Azuregos]||Use [spell]Ambitious Reach] inside Xylem's Tower to enter the spirit realm",
+		[14391] = "Turning the Tables|5+ horde 14390 -24467|27.94 40.04|[dead]Spirit of Azuregos]||Use [spell]Ambitious Reach] inside Xylem's Tower to enter the spirit realm", -- Breadcrumb for 24467
+		[24467] = "Fade to Black|5+ horde 14390 ~14391|66.55 20.36|Kalec", -- Invalidates breadcrumb 14391
+		[14297] = "Pro-liberation|5+ horde 14390|66.34 20.26|Jellix Fuselighter",
+		[14261] = "Ice Cold|5+ horde 14390|66.54 19.6|Feno Blastnoggin",
+		[14392] = "Farewell, Minnow|5+ horde 24467 14297 14261|67.06 20.53|Azuregos",
+
+		-- Northern Rocketway Exchange
+		[14428] = "Amberwind's Journal|5+ horde|42.61 23.7|Andorel Sunsworn", -- prereq?
+		[14429] = "Arcane De-Construction|5+ horde 14428|49.5 28.82|Upper Scrying Stone",
+		[14430] = "Hacking the Construct|5+ horde 14429|52.99 29.03|Lower Scrying Stone",
+		[14431] = "The Blackmaw Scar|5+ horde|42.41 23.61|Haggrum Bloodfist", -- prereq?
+		[14432] = "A Pale Brew|5+ horde 14431|42.41 23.61|Haggrum Bloodfist",
+		[14433] = "Diplomacy by Another Means|5+ horde 14431|42.41 23.61|Haggrum Bloodfist",
+		[14435] = "The Blackmaw Doublecross|5+ horde 14432 14433|42.41 23.61|Haggrum Bloodfist",
+
+		-- The Conquest of Azshara
+		[24497] = "Airborne Again|5+ horde 24449 14392|52.97 49.77|Gurlorn",
+		[14475] = "Grounded!|5+ horde|14.35 65.03|Kroum", -- probably 24449 14392
+		[14476] = "Rigged to Blow|5+ horde 14475|14.46 75.57|Bombardier Captain Smooks",
+		[14477] = "Push the Button!|5+ horde 14476|14.46 75.57|Bombardier Captain Smooks",
+		[14462] = "Where's My Head?|5+ horde|14.01 64.84|Chawg", -- probably 24449 14392
+		[14464] = "Lightning Strike Assassination|5+ horde 14462|12.52 67.46|Slinky Sharpshiv",
+		[24433] = "Let Them Feast on Fear|5+ horde|14.01 64.84|Chawg", -- probably 24449 14392
+		[24434] = "Commando Drop|5+ horde|13.85 64.49|Andorel Sunsworn", -- probably 24449 14392
+		[24430] = "Blacken the Skies|5+ horde 14477 24434 24433 14464|14.47 65.72|Jr. Bombardier Hackel", -- confirm 24434 24433 14464
+		[24439] = "The Conquest of Azshara|5+ horde 24430|14.01 64.84|Chawg",
+		[24463] = "Probing into Ashenvale|7+ horde 24439 -13866 -28493|14.35 65.03|Kroum", -- Breadcrumb for 13866; mutually exclusive with 28493
+	},
+
+
 	--[[ Mulgore ]]--
 
 	-- Thunder Bluff
@@ -4608,6 +4743,24 @@ Data.Quests = {
 		[871]   = "In Defense of Far Watch|5+ horde ~840|67.67 39.39|Kargal Battlescar",
 
 		-- The Crossroads
+
+		-- The Mor'shan Rampart
+		[13612] = "Mor'shan Defense|7+ horde ~28493 ~13866|42.7 14.96|Kadrak", -- Invalidates breadcrumbs 28493 and 13866
+		[13618] = "Find Gorat!|7+ horde|42.7 14.96|Kadrak",
+		[13615] = "Empty Quivers|7+ horde|42.26 15.2|Truun",
+		[13613] = "Rescue the Fallen|7+ horde|42.43 15.77|Dinah Halfmoon",
+	},
+
+
+	--[[ Ashenvale ]]--
+
+	[63] = {
+		-- The Mor'shan Rampart
+		[13866] = "To The Ramparts!|7+ horde ~24463 -28493 -13612|94.4 46.82|Kulg Gorespatter", -- Invalidates breadcrumb 24463; mutually exclusive with 28493; breadcrumb for 13612
+		[13612] = "Mor'shan Defense|7+ horde ~28493 ~13866|68.52 89.39|Kadrak", -- Invalidates breadcrumbs 28493 and 13866
+		[13618] = "Find Gorat!|7+ horde|68.52 89.39|Kadrak",
+		[13615] = "Empty Quivers|7+ horde|68.09 89.62|Truun",
+		[13613] = "Rescue the Fallen|7+ horde|68.25 90.19|Dinah Halfmoon",
 	},
 
 
