@@ -4282,7 +4282,7 @@ Data.Quests = {
 		[43926] = "Legion: The Legion Returns|10+ -44663 horde|49.67 76.46|Warchief's Command Board",
 
 		-- Battle for Azeroth - The Stormwind Extraction
-		[51443] = "Battle for Azeroth: Mission Statement|10+ horde -60361 -59926|49.41 76.6|Warchief's Herald", -- 60361 is the Exile's Reach version
+		[51443] = {"Battle for Azeroth: Mission Statement|10+ horde -60361 -59926|66.69 49.23|Warchief's Herald", "Battle for Azeroth: Mission Statement|10+ horde -60361 -59926|49.41 76.6|Warchief's Herald",}, -- 60361 is the Exile's Reach version
 		
 		-- Dragon Isles - The Dragonscale Expedition
 		[65435] = "The Dragon Isles Await|10+ horde|44.08 37.98|Ebyssian|campaign",
@@ -4587,7 +4587,7 @@ Data.Quests = {
 		[14478] = {"Operation Fishgut|5+ horde 24453|52.3 50.31|Wrenchmen Recruitment Poster", "Operation Fishgut|5+ horde 24453|56.05 48.26|Wrenchmen Recruitment Poster", "Operation Fishgut|5+ horde 24453|56.98 50.09|Wrenchmen Recruitment Poster",},
 		[24455] = "Rapid Deployment|5+ horde 14478|60.64 50.59|Commander Molotov",
 		[14479] = "There Are Many Like It|5+ horde 24455|58.1 52.31|Captain Desoto",
-		[24437] = "First Come, First Served|5+ horde|39.14 51.77|Ruckus", -- prereq?
+		[24437] = "First Come, First Served|5+ horde|39.14 51.77|Ruckus",
 		[24435] = "Mop Up|5+ horde 14479|41.5 53.64|Lieutenant Drex",
 		[24436] = "Halo Drops|5+ horde 14479|41.38 53.93|Sergeant Hort",
 		[24448] = "Field Promotion|5+ horde 24435 24436|41.5 53.64|Lieutenant Drex",
@@ -4627,25 +4627,25 @@ Data.Quests = {
 		[14392] = "Farewell, Minnow|5+ horde 24467 14297 14261|67.06 20.53|Azuregos",
 
 		-- Northern Rocketway Exchange
-		[14428] = "Amberwind's Journal|5+ horde|42.61 23.7|Andorel Sunsworn", -- prereq?
+		[14428] = "Amberwind's Journal|5+ horde|42.61 23.7|Andorel Sunsworn",
 		[14429] = "Arcane De-Construction|5+ horde 14428|49.5 28.82|Upper Scrying Stone",
 		[14430] = "Hacking the Construct|5+ horde 14429|52.99 29.03|Lower Scrying Stone",
-		[14431] = "The Blackmaw Scar|5+ horde|42.41 23.61|Haggrum Bloodfist", -- prereq?
+		[14431] = "The Blackmaw Scar|5+ horde|42.41 23.61|Haggrum Bloodfist",
 		[14432] = "A Pale Brew|5+ horde 14431|42.41 23.61|Haggrum Bloodfist",
 		[14433] = "Diplomacy by Another Means|5+ horde 14431|42.41 23.61|Haggrum Bloodfist",
 		[14435] = "The Blackmaw Doublecross|5+ horde 14432 14433|42.41 23.61|Haggrum Bloodfist",
 
 		-- The Conquest of Azshara
 		[24497] = "Airborne Again|5+ horde 24449 14392|52.97 49.77|Gurlorn",
-		[14475] = "Grounded!|5+ horde|14.35 65.03|Kroum", -- probably 24449 14392
+		[14475] = "Grounded!|5+ horde|14.35 65.03|Kroum",
 		[14476] = "Rigged to Blow|5+ horde 14475|14.46 75.57|Bombardier Captain Smooks",
 		[14477] = "Push the Button!|5+ horde 14476|14.46 75.57|Bombardier Captain Smooks",
-		[14462] = "Where's My Head?|5+ horde|14.01 64.84|Chawg", -- probably 24449 14392
+		[24430] = "Blacken the Skies|5+ horde 14477|14.47 65.72|Jr. Bombardier Hackel",
+		[14462] = "Where's My Head?|5+ horde|14.01 64.84|Chawg",
 		[14464] = "Lightning Strike Assassination|5+ horde 14462|12.52 67.46|Slinky Sharpshiv",
-		[24433] = "Let Them Feast on Fear|5+ horde|14.01 64.84|Chawg", -- probably 24449 14392
-		[24434] = "Commando Drop|5+ horde|13.85 64.49|Andorel Sunsworn", -- probably 24449 14392
-		[24430] = "Blacken the Skies|5+ horde 14477 24434 24433 14464|14.47 65.72|Jr. Bombardier Hackel", -- confirm 24434 24433 14464
-		[24439] = "The Conquest of Azshara|5+ horde 24430|14.01 64.84|Chawg",
+		[24433] = "Let Them Feast on Fear|5+ horde|14.01 64.84|Chawg",
+		[24434] = "Commando Drop|5+ horde|13.85 64.49|Andorel Sunsworn",
+		[24439] = "The Conquest of Azshara|5+ horde 24430 14464 24433 24434|14.01 64.84|Chawg", -- confirm 14464 and 24433
 		[24463] = "Probing into Ashenvale|7+ horde 24439 -13866 -28493|14.35 65.03|Kroum", -- Breadcrumb for 13866; mutually exclusive with 28493
 	},
 
@@ -4739,16 +4739,57 @@ Data.Quests = {
 	--[[ Northern Barrens ]]--
 
 	[10] = {
-		-- Far Watch Post
-		[871]   = "In Defense of Far Watch|5+ horde ~840|67.67 39.39|Kargal Battlescar",
+		-- Far Watch
+		[871]   = "In Defense of Far Watch|5+ horde|67.67 39.39|Kargal Battlescar",
+		[844]   = "Plainstrider Menace|5+ horde|67.4 38.77|Halga Bloodeye",
+		[13878] = "Through Fire and Flames|5+ horde|66.49 45.45|Dorak",
+		[872]   = "The Far Watch Offensive|5+ horde 871|67.67 39.39|Kargal Battlescar",
+		[5041]  = "Supplies for the Crossroads|5+ horde 871|67.4 38.77|Halga Bloodeye",
+		[13949] = "Crossroads Caravan Pickup|5+ horde 872 5041|67.4 38.77|Halga Bloodeye",
+
+		-- Grol'dom Farm
+		[13961] = "Drag it Out of Them|5+ horde|56.58 40.28|Togrik",
+		[13963] = "By Hook Or By Crook|5+ horde 13961|56.58 40.28|Togrik",
+		[13968] = "The Tortusk Takedown|5+ horde 13963|56.58 40.28|Togrik",
+		[13969] = "Grol'dom's Missing Kodo|5+ horde 13963|56.37 40.33|Kranal Fiss",
+		[13970] = "Animal Services|5+ horde 13969|58.01 49.27|Grol'dom Kodo",
+		[13971] = "The Kodo's Return|5+ horde 13970|58.01 49.27|Grol'dom Kodo",
+		[899]   = "Consumed by Hatred|5+ horde|55.17 41.02|Mankrik",
+		[13973] = "The Grol'dom Militia|5+ horde|54.02 41.26|Una Wolfclaw",
+		[13975] = "Crossroads Caravan Delivery|5+ horde 13949|54.62 41.47|Rocco Whipshank",
 
 		-- The Crossroads
+		[845]   = "The Zhevra|5+ horde|49.99 59.85|Sergra Darkthorn",
+		[903]   = "Hunting the Huntress|5+ horde|49.99 59.85|Sergra Darkthorn",
+
+		-- Defeating the Kolkar
+		[848]   = "Fungal Spores|5+ horde|48.59 58.34|Apothecary Helbrim",
+
+		-- Mysteries of the Oases
+		[870]   = "The Forgotten Pools|5+ horde|49.49 58.66|Tonga Runetotem",
+
+		-- Ratchet
+		[14034] = "Club Foote|5+ horde|68.41 69.06|Gazlowe",
+		[14045] = "Find Baron Longshore|5+ horde|68.41 69.06|Gazlowe",
+		[895]   = "WANTED: Cap'n Garvey|5+|68.26 71.24|WANTED",
+		[865]   = "It's Gotta be the Horn|5+|67.86 71.49|Mebok Mizzyrix",
+		[14066] = "Investigate the Wreckage|5+ horde|66.86 72.79|Gazrog",
+		[891]   = "A Captain's Vengeance|5+ horde|67.72 74|Captain Thalo'thas Brightsun",
+		[887]   = "Southsea Freebooters|5+ horde|69.6 72.98|Wharfmaster Dizzywig",
+		[14052] = "Take it up with Tony|5+ horde|69.6 72.98|Wharfmaster Dizzywig",
+
+		-- Nozzlepot's Outpost
+
+		-- Inspiration and Hope
 
 		-- The Mor'shan Rampart
 		[13612] = "Mor'shan Defense|7+ horde ~28493 ~13866|42.7 14.96|Kadrak", -- Invalidates breadcrumbs 28493 and 13866
 		[13618] = "Find Gorat!|7+ horde|42.7 14.96|Kadrak",
 		[13615] = "Empty Quivers|7+ horde|42.26 15.2|Truun",
 		[13613] = "Rescue the Fallen|7+ horde|42.43 15.77|Dinah Halfmoon",
+
+		-- Wailing Caverns
+		[26878] = "Disciples of Naralex|8+ horde|49.49 58.66|Tonga Runetotem|dungeon",
 	},
 
 
