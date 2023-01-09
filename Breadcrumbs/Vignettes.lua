@@ -18,6 +18,9 @@ Data.Vignettes = {
 	[2112] = {
 		-- Treasure
 		[70731] = "Barrel of Tasty Treats|60+|9.6 56.35|\"Behind a bookshelf\"|treasure item:198106|Contains|!{1500865} [rare]Recipe: Tasty Hatchling's Treat]|!{1500918} [Tasty Hatchling's Treat] (2)",
+
+		-- Profession Master
+		[70260] = "[friendly]Elysa Raywinder]|60+ tailoring skill:2831:25|27.9 45.76|\"On top of a ledge on the western side of the large tower, underneath a black banner\"|vignette speak currency:2026|Master Seamstress|!{3615523} [rare]Dragon Isles Tailoring Knowledge] (5)|!{4643977} [rare]Artisan's Mettle] (25)",
 	},
 
 	-- Thaldraszus
@@ -26,7 +29,8 @@ Data.Vignettes = {
 		[70609] = "Elegant Canvas Brush|60+|60.25 41.64||treasure item:203206|Contains|!{2103804} [poor]Elegant Canvas Brush]",
 		
 		-- Profession Master
-		[70258] = "[friendly]Bridgette Holdug]|60+ mining skill:2833:25|61.43 76.87|[friendly]Master Miner]|vignette speak currency:2035|Available Knowledge|!{3615521} [rare]Dragon Isles Mining Knowledge] (10)|!{4643977} [rare]Artisan's Mettle] (50)",
+		[70258] = "[friendly]Bridgette Holdug]|60+ mining skill:2833:25|61.43 76.87||vignette speak currency:2035|Master Miner|!{3615521} [rare]Dragon Isles Mining Knowledge] (10)|!{4643977} [rare]Artisan's Mettle] (50)",
+		[70260] = "[friendly]Elysa Raywinder]|60+ tailoring skill:2831:25|36.75 59.26||vignette speak currency:2026 link:2112|Master Seamstress|!{3615523} [rare]Dragon Isles Tailoring Knowledge] (5)|!{4643977} [rare]Artisan's Mettle] (25)",
 	},
 
 
@@ -34,7 +38,9 @@ Data.Vignettes = {
 
 	[2024] = {
 		-- Profession Master
-		[70250] = "[friendly]Frizz Buzzcrank]|60+ engineering skill:2827:25|17.76 21.68|[friendly]Master Engineer]|vignette speak currency:2027|Available Knowledge|!{4624728} [rare]Dragon Isles Engineering Knowledge] (5)|!{4643977} [rare]Artisan's Mettle] (25)",
+		[70252] = "[friendly]Frizz Buzzcrank]|60+ engineering skill:2827:25|17.76 21.68||vignette speak currency:2027|Master Engineer|!{4624728} [rare]Dragon Isles Engineering Knowledge] (5)|!{4643977} [rare]Artisan's Mettle] (25)",
+		[70254] = "[friendly]Lydiara Whisperfeather]|60+ inscription skill:2828:25|40.18 64.39||vignette speak currency:2028|Master Scribe|!{4624734} [rare]Dragon Isles Inscription Knowledge] (5)|!{4643977} [rare]Artisan's Mettle] (25)",
+		[70255] = "[friendly]Pluutar]|60+ jewelcrafting skill:2829:25|46.22 40.76||vignette speak currency:2029|Master Jewelcrafter|!{4624793} [rare]Dragon Isles Jewelcrafting Knowledge] (5)|!{4643977} [rare]Artisan's Mettle] (25)",
 	},
 
 
@@ -42,15 +48,22 @@ Data.Vignettes = {
 
 	[2023] = {
 		-- Profession Master
-		[70253] = "[friendly]Hua Greenpaw]|60+ herbalism skill:2832:25|58.38 50.01|[friendly]Master Herbalist]|vignette speak currency:2034|Available Knowledge|!{4624731} [rare]Dragon Isles Herbalism Knowledge] (10)|!{4643977} [rare]Artisan's Mettle] (50)",
+		[70251] = "[friendly]Shalasar Glimmerdusk]|60+ enchanting skill:2825:25|62.42 18.7|\"On top of the building\"|vignette speak currency:2030|Master Enchantress|!{3615911} [rare]Dragon Isles Enchanting Knowledge] (5)|!{4643977} [rare]Artisan's Mettle] (25)",
+		[70253] = "[friendly]Hua Greenpaw]|60+ herbalism skill:2832:25|58.38 50.01||vignette speak currency:2034|Master Herbalist|!{4624731} [rare]Dragon Isles Herbalism Knowledge] (10)|!{4643977} [rare]Artisan's Mettle] (50)",
+		[70259] = "[friendly]Zenzi]|60+ skinning skill:2834:25|73.27 69.71||vignette speak currency:2033|Masta Skinna|!{4625106} [rare]Dragon Isles Skinning Knowledge] (10)|!{4643977} [rare]Artisan's Mettle] (50)",
+		[70256] = "[friendly]Erden]|60+ leatherworking skill:2830:25|82.43 50.65||vignette speak currency:2025|Master Leatherworker|!{4624911} [rare]Dragon Isles Leatherworking Knowledge] (5)|!{4643977} [rare]Artisan's Mettle] (25)",
 	},
 
 
 	--[[ The Waking Shores ]]--
 
 	[2022] = {
+		-- Treasure
+		[65646] = "Misty Treasure Chest|60+|58.54 53.03|\"Inside a small cave behind the waterfall\"|treasure item:202194|Contains|!{133660} [rare]Misty Satchel]|!{2065578} [Dragon Isles Supplies]",
+
 		-- Profession Master
-		--[70252] = "[friendly]Grekka Anvilsmash]|60+ blacksmithing skill:2822:25|43.27 66.63|[friendly]Master Blacksmith]|vignette speak currency:2023|Available Knowledge|!{4624660} [rare]Dragon Isles Blacksmithing Knowledge] (5)|!{4643977} [rare]Artisan's Mettle] (25)",
+		[70247] = "[friendly]Grigori Vialtry]|60+ alchemy skill:2823:25|60.83 75.9||vignette speak currency:2024|Master Alchemist|!{4624656} [rare]Dragon Isles Alchemy Knowledge] (5)|!{4643977} [rare]Artisan's Mettle] (25)",
+		[70250] = "[friendly]Grekka Anvilsmash]|60+ blacksmithing skill:2822:25|43.27 66.63||vignette speak currency:2023|Master Blacksmith|!{4624660} [rare]Dragon Isles Blacksmithing Knowledge] (5)|!{4643977} [rare]Artisan's Mettle] (25)",
 	},
 
 
