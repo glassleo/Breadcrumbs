@@ -112,6 +112,9 @@ Data.HiddenBonusObjectiveQuests = {
 						For example, skill:2832:25 would require Dragon Isles Herbalism at skill level 25 or higher
 		-skill:n:x		Must not have x or more skill in TradeSkillLineID n
 
+		spell:n			Must know spell with ID n
+		-spell:n		Must not know spell with ID n
+
 		broken			Quest is broken and cannot be completed, it will be hidden unless the user has decided to display broken quests
 		broken:n		Quest is broken if you are level n or higher and cannot be completed, it will be hidden unless the user has decided to display broken quests
 
@@ -4273,9 +4276,6 @@ Data.Quests = {
 		-- Deepholm
 		[27203] = "The Maelstrom|30+ horde|50.48 38.38|Farseer Krogar",
 
-		-- Fishing
-		[6608]  = "You Too Good.|15+ horde fishing skill:2592:225|66.46 41.93|Lumak", -- Requires 225 skill in Classic Fishing
-
 		-- Legion
 		[43926] = "Legion: The Legion Returns|10+ -44663 horde|49.67 76.46|Warchief's Command Board",
 
@@ -4287,6 +4287,13 @@ Data.Quests = {
 		[65437] = "Aspectral Invitation|10+ horde 65435|44.08 37.98|Ebyssian|campaign",
 		[65443] = "Expeditionary Coordination|10+ horde 65437|44.19 37.79|Naleidea Rivergleam|campaign",
 		[72256] = "The Dark Talons|10+ horde 65437|44.04 38.27|Scalecommander Cindrethresh|campaign",
+
+		-- Engineering
+		[29477] = "Gnomish Engineering|20+ horde engineering skill:2506:200 -spell:20219 -spell:20222|56.8 56.4|Roxxik|engineering", -- Requires 200 skill in Classic Engineering
+		[29475] = "Goblin Engineering|20+ horde engineering skill:2506:200 -spell:20219 -spell:20222|56.8 56.4|Roxxik|engineering", -- Requires 200 skill in Classic Engineering
+
+		-- Fishing
+		[6608]  = "You Too Good.|15+ horde fishing skill:2592:225|66.46 41.93|Lumak|fishing", -- Requires 225 skill in Classic Fishing
 	},
 
 	-- Cleft of Shadow, Orgrimmar
@@ -4664,6 +4671,10 @@ Data.Quests = {
 
 		-- Battle for Azeroth - The Stormwind Extraction
 		[51443] = "Battle for Azeroth: Mission Statement|10+ horde -60361 -59926|42.41 58.31|Warchief's Herald", -- 60361 is the Exile's Reach version
+
+		-- Engineering
+		[29477] = "Gnomish Engineering|20+ horde engineering skill:2506:200 -spell:20219 -spell:20222|36.4 59.6|Engineer Palehoof|engineering", -- Requires 200 skill in Classic Engineering
+		[29475] = "Goblin Engineering|20+ horde engineering skill:2506:200 -spell:20219 -spell:20222|36.4 59.6|Engineer Palehoof|engineering", -- Requires 200 skill in Classic Engineering
 	},
 
 	-- Camp Narache
@@ -4880,6 +4891,10 @@ Data.Quests = {
 
 		-- Loch Modan
 		[26131] = "Reinforcements for Loch Modan|5+ alliance -28567|41.43 52.29|Mountaineer Barleybrew", -- Exclusive with 28567 (Hero's Call: Loch Modan)
+
+		-- Engineering
+		[29477] = "Gnomish Engineering|20+ alliance engineering skill:2506:200 -spell:20219 -spell:20222|68.4 44.2|Springspindle Fizzlegear|engineering", -- Requires 200 skill in Classic Engineering
+		[29475] = "Goblin Engineering|20+ alliance engineering skill:2506:200 -spell:20219 -spell:20222|68.4 44.2|Springspindle Fizzlegear|engineering", -- Requires 200 skill in Classic Engineering
 	},
 
 	-- Coldridge Valley
@@ -5216,6 +5231,10 @@ Data.Quests = {
 			"Tides of War|10+ alliance -58983 -56775|62.17 30.14|Hero's Herald",
 		},
 		[46728] = "The Nation of Kul Tiras|10+ alliance 46727 -59641 -56775|80.26 33.13|Anduin Wrynn", -- 59641 is Exile's Reach version
+
+		-- Engineering
+		[29477] = "Gnomish Engineering|20+ alliance engineering skill:2506:200 -spell:20219 -spell:20222|62.85 31.96|Lilliam Sparkspindle|engineering", -- Requires 200 skill in Classic Engineering
+		[29475] = "Goblin Engineering|20+ alliance engineering skill:2506:200 -spell:20219 -spell:20222|62.85 31.96|Lilliam Sparkspindle|engineering", -- Requires 200 skill in Classic Engineering
 	},
 
 	-- Northshire
