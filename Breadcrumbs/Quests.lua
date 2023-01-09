@@ -4175,11 +4175,9 @@ Data.Quests = {
 		[9313]  = "Travel to Azure Watch|1+ 9312 alliance|79.42 51.24|Technician Zhanaa|link:468",
 		[9314]  = "Word from Azure Watch|1+ alliance|64.5 54.04|Aeun",
 
-		-- Ammen Ford
+		-- Azure Watch
 		[9452]  = "Red Snapper - Very Tasty!|1+ alliance|61.06 54.24|Diktynna",
 		[9453]  = "Find Acteon!|1+ 9452 alliance|61.06 54.24|Diktynna",
-
-		-- Azure Watch
 		[9612]  = "A Hearty Thanks!|1+ draenei alliance -rogue|1 GiftOfTheNaaru|Draenei Youngling|discovery tomtom|Cast {135923} [spell]Gift of the Naaru] on a [green]Draenei Youngling] who is in combat to obtain this quest",
 		[9616]  = "Bandits!|1+ broken:50 alliance|2 BloodElfCommunication|{133473} [Blood Elf Communication]|discovery chromietime tomtom|Drops from [hostile]Blood Elf Bandit] who is stealthed in a random location", -- Blizzard bug: as of 9.0 the drop is broken outside Chromie Time and will not drop at all for level 50+ characters, not even in Party Sync
 		[9454]  = "The Great Moongraze Hunt|1+ alliance|49.78 51.93|Acteon",
@@ -4483,11 +4481,9 @@ Data.Quests = {
 		[25194] = "Unbidden Visitors|1+ horde +25188|35.85 41.38|Zen'Taji",
 		[25195] = "That's the End of That Raptor|1+ horde 25194 +25188|35.85 41.38|Zen'Taji",
 
-		-- Drygulch Ravine
+		-- The Dranosh'ar Blockade
 		[834]   = "Winds in the Desert|1+ horde|46.38 22.93|Rezlak",
 		[835]   = "Securing the Lines|1+ horde|46.38 22.93|Rezlak",
-
-		-- The Dranosh'ar Blockade
 		[25260] = "Fizzled|1+ horde 25196|45 14.77|Gor the Enforcer",
 		[25261] = "Margoz|1+ horde 25260|45 14.77|Gor the Enforcer",
 		[25236] = "Thunder Down Under|1+ horde|45 14.77|Gor the Enforcer",
