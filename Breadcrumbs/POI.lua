@@ -103,7 +103,7 @@ Data.POI = {
 
 	[2022] = {
 		-- Rostrum of Transformation
-		"dragon-rostrum|[Rostrum of Transformation]|dragonriding|74.03 58.16",
+		"dragon-rostrum:small|[Rostrum of Transformation]|dragonriding|74.03 58.16",
 	},
 
 
