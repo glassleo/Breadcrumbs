@@ -305,7 +305,7 @@ Data.Quests = {
 		[70879] = "Fracture the Foci|60+ 68+,67030 70878 70875 70876|42.45 78.85|Investigator Erima",
 
 		-- Hearthstone Duel
-		[66929] = "Gotta Collect Them All|60+ 68+,67030|59.74 43.58|Yumadormu", -- no prereq?
+		[66929] = "Gotta Collect Them All|60+ 68+,67030|59.74 43.58|Yumadormu",
 		[67167] = "It's Time To Duel!|60+ 68+,67030 66929|60.67 43.29|Yumadormu",
 		[67178] = "White Eyes, Blue Dragon|60+ 68+,67030 67167|58.12 40.34|Professor Dromokdormi",
 
@@ -5194,7 +5194,7 @@ Data.Quests = {
 		[66420] = "Happy Hour|1+ alliance 66390|51.53 70.41|Onnesa",
 		[29412] = "Blown Away|10+ alliance|58.89 52.74|Vin",
 
-		-- Goldshire
+		-- Elwynn Forest
 		[26395] = "Dungar Longdrink|1+ alliance human,kultiran 26394|77.17 60.99|Osric Strang", -- Human/Kul Tiran only
 		[26396] = "Return to Argus|1+ alliance human,kultiran 26395|70.94 72.47|Dungar Longdrink", -- Human/Kul Tiran only
 
