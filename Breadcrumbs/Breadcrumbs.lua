@@ -459,7 +459,7 @@ function Breadcrumbs:UpdateMap(event, ...)
 		Breadcrumbs:UpdateQuestHistory(event, ...)
 	end
 
-	if event and event ~= "QUEST_ACCEPTED" then
+	if event and event ~= "QUEST_ACCEPTED" and event ~= "WorldMapFrame_OnMapChanged" and event ~= "WorldMapFrame_OnShow" then
 		if Throttle[event] then
 			return
 		elseif event == "PLAYER_LEVEL_UP" or event == "BAG_UPDATE" then
@@ -1703,6 +1703,10 @@ WorldMapFrame:HookScript("OnShow", function(...)
 		end
 	end
 	Breadcrumbs:UpdateMap("WorldMapFrame_OnShow")
+end)
+
+hooksecurefunc(WorldMapFrame, "OnMapChanged", function(...)
+	Breadcrumbs:UpdateMap("WorldMapFrame_OnMapChanged")
 end)
 
 -- Handle empty quest logs
