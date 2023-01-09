@@ -1194,6 +1194,11 @@ function Breadcrumbs:UpdateMap(event, ...)
 										ItemTooltip:SetHyperlink(hyperlink)
 										ItemTooltip:SetScale(1)
 										ItemTooltip:Show()
+										C_Timer.After(0.25, function()
+											if ItemTooltip:IsShown() then
+												ItemTooltip:SetHyperlink(hyperlink)
+											end
+										end)
 									end
 								end)
 
@@ -1237,12 +1242,16 @@ function Breadcrumbs:UpdateMap(event, ...)
 					local size = (texturesize == "objective") and Setting_ObjectivesPinSize or (texturesize == "small") and Setting_POISmallPinSize or (texturesize == "large") and (Setting_POIPinSize*1.5) or Setting_POIPinSize
 
 					-- Build the flags table
-					local link = nil
+					local link, hyperlink = nil, nil
 					flags = flags and { strsplit(" ", flags) } or {}
 					for _, v in ipairs(flags) do
 						if string.match(v, "link:([%d]+)") then
 							link = tonumber(string.match(v, "link:([%d]+)"))
 							flags["link"] = true
+						elseif string.match(v, "item:([%d:]+)") or string.match(v, "spell:([%d:]+)") then
+							hyperlink = v
+						elseif Setting_ShowCurrencyTooltips and string.match(v, "currency:([%d]+)") then
+							hyperlink = v
 						else
 							flags[v] = true
 						end
@@ -1283,6 +1292,7 @@ function Breadcrumbs:UpdateMap(event, ...)
 
 					Pin:SetScript("OnEnter", function(self, motion)
 						GameTooltip:Hide()
+						ItemTooltip:Hide()
 
 						if flags["tooltip"] or flags["combo"] then
 							GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
@@ -1329,6 +1339,23 @@ function Breadcrumbs:UpdateMap(event, ...)
 							end
 
 							GameTooltip:Show()
+
+							if Setting_ShowItemTooltips and hyperlink then
+								ItemTooltip:SetOwner(GameTooltip, "ANCHOR_NONE")
+								if Setting_ItemTooltipPosition == "bottom" then
+									ItemTooltip:SetPoint("TOPLEFT", GameTooltip, "BOTTOMLEFT", 0, -2)
+								else
+									ItemTooltip:SetPoint("TOPLEFT", GameTooltip, "TOPRIGHT")
+								end
+								ItemTooltip:SetHyperlink(hyperlink)
+								ItemTooltip:SetScale(1)
+								ItemTooltip:Show()
+								C_Timer.After(0.25, function()
+									if ItemTooltip:IsShown() then
+										ItemTooltip:SetHyperlink(hyperlink)
+									end
+								end)
+							end
 						end
 						if not flags["tooltip"] then
 							WorldMapFrame:TriggerEvent("SetAreaLabel", 4, Breadcrumbs:FormatTooltip(title), Breadcrumbs:FormatTooltip(tip1))
