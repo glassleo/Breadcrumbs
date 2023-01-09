@@ -1496,6 +1496,9 @@ function Breadcrumbs:Validate(str)
 						if skill and skill >= tonumber(string.match(v, "skill:%d+:(%d+)") or 0) then pass = true end
 					end
 
+					-- spell:n
+					if string.match(v, "^spell:(%d+)$") and (IsPlayerSpell(tonumber(string.match(v, "spell:(%d+)") or 0)) or IsSpellKnown(tonumber(string.match(v, "spell:(%d+)") or 0), true)) then pass = true end
+
 					-- art:n
 					if string.match(v, "^art:(%d+)$") and (C_Map.GetMapArtID(map) == tonumber(string.match(v, "art:(%d+)") or 0)) then pass = true end
 
@@ -1568,6 +1571,9 @@ function Breadcrumbs:Validate(str)
 							local skill = Breadcrumbs:GetSkillLine(tonumber(string.match(w, "skill:(%d+):%d+") or 0))
 							if skill and skill >= tonumber(string.match(w, "skill:%d+:(%d+)") or 0) then pass = false end
 						end
+
+						-- -spell:n
+						if string.match(w, "^spell:(%d+)$") and (IsPlayerSpell(tonumber(string.match(w, "spell:(%d+)") or 0)) or IsSpellKnown(tonumber(string.match(w, "spell:(%d+)") or 0), true)) then pass = false end
 
 						-- -art:n
 						if string.match(w, "^art:(%d+)$") and (C_Map.GetMapArtID(map) == tonumber(string.match(w, "art:(%d+)") or 0)) then pass = false end
