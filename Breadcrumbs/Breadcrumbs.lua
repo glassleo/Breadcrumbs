@@ -103,6 +103,7 @@ end
 -- Initialization
 function Breadcrumbs:OnInitialize()
 	if not BreadcrumbsQuestHistory then BreadcrumbsQuestHistory = {} end
+	if not BreadcrumbsSkillLines then BreadcrumbsSkillLines = {} end
 
 	if Setting_DisableStorylineQuestDataProvider then
 		-- Remove StorylineQuestDataProvider
@@ -219,6 +220,233 @@ function Breadcrumbs:WasQuestCompletedToday(quest)
 		if BreadcrumbsQuestHistory[name.."-"..realm][quest] >= today then
 			return true
 		end
+	end
+
+	return false
+end
+
+
+-- Skill Lines
+local SkillLines = {
+	[164] = { -- Blacksmithing
+		[2477] = true, -- Classic
+		[2476] = true, -- Outland
+		[2475] = true, -- Northrend
+		[2474] = true, -- Cataclysm
+		[2473] = true, -- Pandaria
+		[2472] = true, -- Draenor
+		[2454] = true, -- Legion
+		[2437] = true, -- Kul Tiran/Zandalari
+		[2751] = true, -- Shadowlands
+		[2822] = true, -- Dragon Isles
+	},
+	[165] = { -- Leatherworking
+		[2532] = true, -- Classic
+		[2531] = true, -- Outland
+		[2530] = true, -- Northrend
+		[2529] = true, -- Cataclysm
+		[2528] = true, -- Pandaria
+		[2527] = true, -- Draenor
+		[2526] = true, -- Legion
+		[2525] = true, -- Kul Tiran/Zandalari
+		[2758] = true, -- Shadowlands
+		[2830] = true, -- Dragon Isles
+	},
+	[171] = { -- Alchemy
+		[2485] = true, -- Classic
+		[2484] = true, -- Outland
+		[2483] = true, -- Northrend
+		[2482] = true, -- Cataclysm
+		[2481] = true, -- Pandaria
+		[2480] = true, -- Draenor
+		[2479] = true, -- Legion
+		[2478] = true, -- Kul Tiran/Zandalari
+		[2750] = true, -- Shadowlands
+		[2823] = true, -- Dragon Isles
+	},
+	[182] = { -- Herbalism
+		[2556] = true, -- Classic
+		[2555] = true, -- Outland
+		[2554] = true, -- Northrend
+		[2553] = true, -- Cataclysm
+		[2552] = true, -- Pandaria
+		[2551] = true, -- Draenor
+		[2550] = true, -- Legion
+		[2549] = true, -- Kul Tiran/Zandalari
+		[2760] = true, -- Shadowlands
+		[2832] = true, -- Dragon Isles
+	},
+	[185] = { -- Cooking
+		[2548] = true, -- Classic
+		[2547] = true, -- Outland
+		[2546] = true, -- Northrend
+		[2545] = true, -- Cataclysm
+		[2544] = true, -- Pandaria
+		[2543] = true, -- Draenor
+		[2542] = true, -- Legion
+		[2541] = true, -- Kul Tiran/Zandalari
+		[2752] = true, -- Shadowlands
+		[2824] = true, -- Dragon Isles
+	},
+	[186] = { -- Mining
+		[2572] = true, -- Classic
+		[2571] = true, -- Outland
+		[2570] = true, -- Northrend
+		[2569] = true, -- Cataclysm
+		[2568] = true, -- Pandaria
+		[2567] = true, -- Draenor
+		[2566] = true, -- Legion
+		[2565] = true, -- Kul Tiran/Zandalari
+		[2761] = true, -- Shadowlands
+		[2833] = true, -- Dragon Isles
+	},
+	[197] = { -- Tailoring
+		[2540] = true, -- Classic
+		[2539] = true, -- Outland
+		[2538] = true, -- Northrend
+		[2537] = true, -- Cataclysm
+		[2536] = true, -- Pandaria
+		[2535] = true, -- Draenor
+		[2534] = true, -- Legion
+		[2533] = true, -- Kul Tiran/Zandalari
+		[2759] = true, -- Shadowlands
+		[2831] = true, -- Dragon Isles
+	},
+	[202] = { -- Engineering
+		[2506] = true, -- Classic
+		[2505] = true, -- Outland
+		[2504] = true, -- Northrend
+		[2503] = true, -- Cataclysm
+		[2502] = true, -- Pandaria
+		[2501] = true, -- Draenor
+		[2500] = true, -- Legion
+		[2499] = true, -- Kul Tiran/Zandalari
+		[2755] = true, -- Shadowlands
+		[2827] = true, -- Dragon Isles
+	},
+	[333] = { -- Enchanting
+		[2494] = true, -- Classic
+		[2493] = true, -- Outland
+		[2492] = true, -- Northrend
+		[2491] = true, -- Cataclysm
+		[2489] = true, -- Pandaria
+		[2488] = true, -- Draenor
+		[2487] = true, -- Legion
+		[2486] = true, -- Kul Tiran/Zandalari
+		[2753] = true, -- Shadowlands
+		[2825] = true, -- Dragon Isles
+	},
+	[356] = { -- Fishing
+		[2592] = true, -- Classic
+		[2591] = true, -- Outland
+		[2590] = true, -- Northrend
+		[2589] = true, -- Cataclysm
+		[2588] = true, -- Pandaria
+		[2587] = true, -- Draenor
+		[2586] = true, -- Legion
+		[2585] = true, -- Kul Tiran/Zandalari
+		[2754] = true, -- Shadowlands
+		[2826] = true, -- Dragon Isles
+	},
+	[393] = { -- Skinning
+		[2564] = true, -- Classic
+		[2563] = true, -- Outland
+		[2562] = true, -- Northrend
+		[2561] = true, -- Cataclysm
+		[2560] = true, -- Pandaria
+		[2559] = true, -- Draenor
+		[2558] = true, -- Legion
+		[2557] = true, -- Kul Tiran/Zandalari
+		[2762] = true, -- Shadowlands
+		[2834] = true, -- Dragon Isles
+	},
+	[755] = { -- Jewelcrafting
+		[2524] = true, -- Classic
+		[2523] = true, -- Outland
+		[2522] = true, -- Northrend
+		[2521] = true, -- Cataclysm
+		[2520] = true, -- Pandaria
+		[2519] = true, -- Draenor
+		[2518] = true, -- Legion
+		[2517] = true, -- Kul Tiran/Zandalari
+		[2757] = true, -- Shadowlands
+		[2829] = true, -- Dragon Isles
+	},
+	[773] = { -- Inscription
+		[2514] = true, -- Classic
+		[2513] = true, -- Outland
+		[2512] = true, -- Northrend
+		[2511] = true, -- Cataclysm
+		[2510] = true, -- Pandaria
+		[2509] = true, -- Draenor
+		[2508] = true, -- Legion
+		[2507] = true, -- Kul Tiran/Zandalari
+		[2756] = true, -- Shadowlands
+		[2828] = true, -- Dragon Isles
+	},
+	[794] = { -- Archaeology
+		[794] = true, -- Archaeology
+	},
+}
+
+function Breadcrumbs:UpdateSkillLines(event, message)
+	local name, realm = UnitFullName("player")
+	if not name or not realm then return end
+
+	if not BreadcrumbsSkillLines[name.."-"..realm] then BreadcrumbsSkillLines[name.."-"..realm] = {} end
+
+	if event == "CONSOLE_MESSAGE" and message then
+		-- "Skill 123 increased from 4 to 5"
+		local skill, level = string.match(message, "Skill (%d+) increased from %d+ to (%d+)")
+		skill = tonumber(skill or 0) or 0
+		level = tonumber(level or 0) or 0
+
+		if skill > 0 and level > 0 then
+			for prof, lines in pairs(SkillLines) do
+				for id, _ in pairs(lines) do
+					if id == skill then
+						if ZA and ZA.DebugMode then print(id, level) end
+						BreadcrumbsSkillLines[name.."-"..realm][id] = level
+					end
+				end
+			end
+		end
+	else
+		-- Update all professions
+		local prof1, prof2 = GetProfessions()
+		if prof1 then
+			prof1 = select(7, GetProfessionInfo(prof1)) or nil -- SkillLine
+		end
+		if prof2 then
+			prof2 = select(7, GetProfessionInfo(prof2)) or nil -- SkillLine
+		end
+
+		for prof, lines in pairs(SkillLines) do
+			-- Only check learned professions as well as cooking, fishing and archaeology
+			if prof == prof1 or prof == prof2 or prof == 185 or prof == 356 or prof == 794 then
+				for id, _ in pairs(lines) do
+					local info = C_TradeSkillUI.GetProfessionInfoBySkillLineID(id)
+
+					if info and info.skillLevel > 0 and info.maxSkillLevel > 0 then
+						if ZA and ZA.DebugMode then print(id, info.professionName, info.skillLevel) end
+						BreadcrumbsSkillLines[name.."-"..realm][id] = tonumber(info.skillLevel or 1) or 1
+					end
+				end
+			end
+		end
+	end
+end
+
+function Breadcrumbs:GetSkillLine(id)
+	if not id then return end
+
+	local name, realm = UnitFullName("player")
+	if not name or not realm then return end
+
+	Breadcrumbs:UpdateSkillLines()
+
+	if BreadcrumbsSkillLines[name.."-"..realm] then
+		return BreadcrumbsSkillLines[name.."-"..realm][id] or false
 	end
 
 	return false
@@ -1134,6 +1362,7 @@ function Breadcrumbs:UpdateMap(event, ...)
 	Breadcrumbs:FixBonusObjectives()
 end
 
+-- Register Events
 Breadcrumbs:RegisterEvent("QUEST_ACCEPTED", "UpdateMap")
 Breadcrumbs:RegisterEvent("QUEST_AUTOCOMPLETE", "UpdateMap")
 Breadcrumbs:RegisterEvent("QUEST_COMPLETE", "UpdateMap")
@@ -1153,6 +1382,28 @@ Breadcrumbs:RegisterEvent("COVENANT_SANCTUM_RENOWN_LEVEL_CHANGED", "UpdateMap")
 
 Breadcrumbs:RegisterEvent("QUEST_WATCH_LIST_CHANGED", "FixBonusObjectivesDelayed")
 
+Breadcrumbs:RegisterEvent("CONSOLE_MESSAGE", "UpdateSkillLines")
+Breadcrumbs:RegisterEvent("TRADE_SKILL_SHOW", "UpdateSkillLines")
+
+
+-- Validation
+local SkillLineToEnglish = {
+	[164] = "blacksmithing",
+	[165] = "leatherworking",
+	[171] = "alchemy",
+	[182] = "herbalism",
+	[185] = "cooking",
+	[186] = "mining",
+	[197] = "tailoring",
+	[202] = "engineering",
+	[333] = "enchanting",
+	[356] = "fishing",
+	[393] = "skinning",
+	[755] = "jewelcrafting",
+	[773] = "inscription",
+	[794] = "archaeology",
+}
+
 function Breadcrumbs:Validate(str)
 	local str = str or ""
 	local data = { strsplit(" ", strlower(str)) }
@@ -1169,9 +1420,15 @@ function Breadcrumbs:Validate(str)
 	if covenant == 2 then covenant = "venthyr" end
 	if covenant == 3 then covenant = "nightfae" end
 	if covenant == 4 then covenant = "necrolord" end
-	prof1, prof2, archaeology, fishing, cooking = GetProfessions()
-	if prof1 then prof1 = strlower(GetProfessionInfo(prof1)) end -- This won't work on non-English clients
-	if prof2 then prof2 = strlower(GetProfessionInfo(prof2)) end
+	local prof1, prof2, archaeology, fishing, cooking = GetProfessions()
+	if prof1 then
+		prof1 = select(7, GetProfessionInfo(prof1)) or nil -- SkillLine
+		if prof1 then prof1 = SkillLineToEnglish[prof1] or nil end
+	end
+	if prof2 then
+		prof2 = select(7, GetProfessionInfo(prof2)) or nil -- SkillLine
+		if prof2 then prof2 = SkillLineToEnglish[prof2] or nil end
+	end
 	local flying = IsSpellKnown(34090) or IsSpellKnown(34091) or IsSpellKnown(90265) and true or false
 	local dragonriding = IsSpellKnown(376777) and true or false
 	local aldor = (select(3, GetFactionInfoByID(932))) or 0
@@ -1235,8 +1492,8 @@ function Breadcrumbs:Validate(str)
 
 					-- skill:n:x
 					if string.match(v, "^skill:(%d+):(%d+)$") then
-						local info = C_TradeSkillUI.GetProfessionInfoBySkillLineID(tonumber(string.match(v, "skill:(%d+):%d+") or 0))
-						if info and info.skillLevel >= tonumber(string.match(v, "skill:%d+:(%d+)") or 0) then pass = true end
+						local skill = Breadcrumbs:GetSkillLine(tonumber(string.match(v, "skill:(%d+):%d+") or 0))
+						if skill and skill >= tonumber(string.match(v, "skill:%d+:(%d+)") or 0) then pass = true end
 					end
 
 					-- art:n
@@ -1308,8 +1565,8 @@ function Breadcrumbs:Validate(str)
 
 						-- -skill:n:x
 						if string.match(w, "^skill:(%d+):(%d+)$") then
-							local info = C_TradeSkillUI.GetProfessionInfoBySkillLineID(tonumber(string.match(w, "skill:(%d+):%d+") or 0))
-							if info and info.skillLevel >= tonumber(string.match(w, "skill:%d+:(%d+)") or 0) then pass = false end
+							local skill = Breadcrumbs:GetSkillLine(tonumber(string.match(w, "skill:(%d+):%d+") or 0))
+							if skill and skill >= tonumber(string.match(w, "skill:%d+:(%d+)") or 0) then pass = false end
 						end
 
 						-- -art:n

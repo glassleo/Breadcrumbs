@@ -5,7 +5,7 @@
 ## Author: Leo <hello@leo.glass>
 ## OptionalDeps: TomTom, TipTac
 
-## SavedVariables: BreadcrumbsQuestHistory
+## SavedVariables: BreadcrumbsQuestHistory, BreadcrumbsSkillLines
 
 # Libraries
 Libs\LibStub\LibStub.lua
