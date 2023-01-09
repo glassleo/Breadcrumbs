@@ -311,8 +311,11 @@ Data.POI = {
 
 	-- Revendreth
 	[1525] = {
-		-- NPC
-		"banker:objective|Deadfoot|item:182744 -item:182746|48.73 68.52|tooltip|\"Purchase an All-In-One Belt Repair Kit from Deadfoot to repair your Ornate Belt Buckle\"",
+		-- Vendor
+		"banker:objective|Deadfoot|mage,priest,warlock item:182744 -item:182746|48.73 68.52|tooltip item:182741|\"Deadfoot might have something to repair your [uncommon]Ornate Belt Buckle]\"||Sells|!{133875} [All-In-One Belt Repair Kit]",
+		"banker:objective|Deadfoot|demonhunter,druid,monk,rogue item:182744 -item:182746|48.73 68.52|tooltip item:182742|\"Deadfoot might have something to repair your [uncommon]Ornate Belt Buckle]\"||Sells|!{133875} [All-In-One Belt Repair Kit]",
+		"banker:objective|Deadfoot|evoker,hunter,shaman item:182744 -item:182746|48.73 68.52|tooltip item:182739|\"Deadfoot might have something to repair your [uncommon]Ornate Belt Buckle]\"||Sells|!{133875} [All-In-One Belt Repair Kit]",
+		"banker:objective|Deadfoot|deathknight,paladin,warrior item:182744 -item:182746|48.73 68.52|tooltip item:182740|\"Deadfoot might have something to repair your [uncommon]Ornate Belt Buckle]\"||Sells|!{133875} [All-In-One Belt Repair Kit]",
 	},
 
 
@@ -912,7 +915,7 @@ Data.POI = {
 
 	--[[ Terokkar Forest ]]--
 
-	-- Shattrath
+	-- Shattrath City
 	[111] = {
 		-- Portal
 		"POI/Portal|Portal to Stormwind|alliance|57.21 48.27",
