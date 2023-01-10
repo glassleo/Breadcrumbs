@@ -255,7 +255,7 @@ Data.POI = {
 	-- Maldraxxus
 	[1536] = {
 		-- Vendor
-		"Scroll:objective|One-Eyed Joby|-item:181163|53.14 41.31|tooltip||Sells|{134943} [Scroll of Teleport: Theater of Pain]",
+		"Scroll:objective|One-Eyed Joby|-item:181163|53.14 41.31|tooltip item:181163||Sells|{134943} [Scroll of Teleport: Theater of Pain]",
 	},
 
 
