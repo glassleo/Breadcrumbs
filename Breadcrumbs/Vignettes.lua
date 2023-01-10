@@ -34,7 +34,9 @@ Data.Vignettes = {
 		[71222] = "High Peak|60+ research:2164|34.05 84.85||vignette atlas:Warfronts-FieldMapIcons-Empty-Banner-Minimap large|Grants Reputation|!{4687628} [Dragonscale Expedition] (250)",
 		[71223] = "High Peak|60+ research:2164|65.72 74.98||vignette atlas:Warfronts-FieldMapIcons-Empty-Banner-Minimap large|Grants Reputation|!{4687628} [Dragonscale Expedition] (250)",
 		[71224] = "High Peak|60+ research:2164|64.64 56.72||vignette atlas:Warfronts-FieldMapIcons-Empty-Banner-Minimap large|Grants Reputation|!{4687628} [Dragonscale Expedition] (250)",
-		
+		[71217] = "High Peak|60+ research:2164|59.81 95.81||vignette atlas:Warfronts-FieldMapIcons-Empty-Banner-Minimap large|Grants Reputation|!{4687628} [Dragonscale Expedition] (250)",
+		[71208] = "High Peak|60+ research:2164|28 70.63||vignette atlas:Warfronts-FieldMapIcons-Empty-Banner-Minimap large|Grants Reputation|!{4687628} [Dragonscale Expedition] (250)",
+
 		-- Profession Master
 		[70258] = "[friendly]Bridgette Holdug]|60+ mining skill:2833:25|61.43 76.87||vignette speak currency:2035|Master Miner|!{3615521} [rare]Dragon Isles Mining Knowledge] (10)|!{4643977} [rare]Artisan's Mettle] (50)",
 		[70260] = "[friendly]Elysa Raywinder]|60+ tailoring skill:2831:25|36.75 59.26||vignette speak currency:2026 link:2112|Master Seamstress|!{3615523} [rare]Dragon Isles Tailoring Knowledge] (5)|!{4643977} [rare]Artisan's Mettle] (25)",
@@ -67,7 +69,8 @@ Data.Vignettes = {
 		[70827] = "High Peak|60+ research:2164|57.75 30.81||vignette atlas:Warfronts-FieldMapIcons-Empty-Banner-Minimap large|Grants Reputation|!{4687628} [Dragonscale Expedition] (250)",
 		[71207] = "High Peak|60+ research:2164|30.39 36.46||vignette atlas:Warfronts-FieldMapIcons-Empty-Banner-Minimap large|Grants Reputation|!{4687628} [Dragonscale Expedition] (250)",
 		[71200] = "High Peak|60+ research:2164|28.32 77.64||vignette atlas:Warfronts-FieldMapIcons-Empty-Banner-Minimap large|Grants Reputation|!{4687628} [Dragonscale Expedition] (250)",
-		
+		[71218] = "High Peak|60+ research:2164|83.85 82.42||vignette atlas:Warfronts-FieldMapIcons-Empty-Banner-Minimap large|Grants Reputation|!{4687628} [Dragonscale Expedition] (250)",
+
 		-- Profession Master
 		[70251] = "[friendly]Shalasar Glimmerdusk]|60+ enchanting skill:2825:25|62.42 18.7|\"On top of the building\"|vignette speak currency:2030|Master Enchantress|!{3615911} [rare]Dragon Isles Enchanting Knowledge] (5)|!{4643977} [rare]Artisan's Mettle] (25)",
 		[70253] = "[friendly]Hua Greenpaw]|60+ herbalism skill:2832:25|58.38 50.01||vignette speak currency:2034|Master Herbalist|!{4624731} [rare]Dragon Isles Herbalism Knowledge] (10)|!{4643977} [rare]Artisan's Mettle] (50)",
