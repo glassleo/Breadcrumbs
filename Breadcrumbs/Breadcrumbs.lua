@@ -1067,7 +1067,7 @@ function Breadcrumbs:UpdateMap(event, ...)
 						
 						if eligible and x and y then
 							-- Build the flags table
-							local link, flag_icon, hyperlink = nil, nil, nil
+							local link, hyperlink, flag_icon, flag_atlas = nil, nil, nil, nil
 							flags = flags and { strsplit(" ", flags) } or {}
 							for _, v in ipairs(flags) do
 								if string.match(v, "link:([%d]+)") then
@@ -1076,6 +1076,9 @@ function Breadcrumbs:UpdateMap(event, ...)
 								elseif string.match(v, "icon:([%d]+)") then
 									flag_icon = tonumber(string.match(v, "icon:([%d]+)"))
 									flags["icon"] = true
+								elseif string.match(v, "atlas:([%a%d%-_]+)") then
+									flag_atlas = string.match(v, "atlas:([%a%d%-_]+)")
+									flags["atlas"] = true
 								elseif string.match(v, "item:([%d:]+)") or string.match(v, "spell:([%d:]+)") then
 									hyperlink = v
 								elseif Setting_ShowCurrencyTooltips and string.match(v, "currency:([%d]+)") then
@@ -1088,7 +1091,9 @@ function Breadcrumbs:UpdateMap(event, ...)
 							if (flags["treasure"] and Setting_EnableTreasures) or (flags["vignette"] and Setting_EnableVignettes) then
 								-- Pin size
 								local size = Setting_VignettePinSize
-								if flags["vignette"] and not flags["elsewhere"] and not flags["interact"] and not flags["speak"] and not flags["icon"] then
+								if flags["large"] then
+									size = size * 1.5
+								elseif flags["vignette"] and not flags["elsewhere"] and not flags["interact"] and not flags["speak"] and not flags["icon"] then
 									size = size * 1.25
 								elseif flags["interact"] or flags["speak"] and not flags["icon"] then
 									size = size * 1.15
@@ -1101,6 +1106,9 @@ function Breadcrumbs:UpdateMap(event, ...)
 								if flags["icon"] and flag_icon then
 									Pin:SetNormalTexture(flag_icon)
 									Pin:SetHighlightTexture(flag_icon)
+								elseif flags["atlas"] and flag_atlas then
+									Pin:SetNormalAtlas(flag_atlas)
+									Pin:SetHighlightAtlas(flag_atlas)
 								elseif flags["speak"] then
 									Pin:SetNormalTexture("Interface/AddOns/Breadcrumbs/Textures/Speak")
 									Pin:SetHighlightTexture("Interface/AddOns/Breadcrumbs/Textures/Speak")
