@@ -28,6 +28,13 @@ Data.Vignettes = {
 		-- Treasure
 		[70609] = "Elegant Canvas Brush|60+|60.25 41.64||treasure item:203206|Contains|!{2103804} [poor]Elegant Canvas Brush]",
 		
+		-- High Peak
+		[70039] = "High Peak|60+ research:2164|50.16 81.63||vignette atlas:Warfronts-FieldMapIcons-Empty-Banner-Minimap large|Grants Reputation|!{4687628} [Dragonscale Expedition] (250)",
+		[70024] = "High Peak|60+ research:2164|46.11 73.98||vignette atlas:Warfronts-FieldMapIcons-Empty-Banner-Minimap large|Grants Reputation|!{4687628} [Dragonscale Expedition] (250)",
+		[71222] = "High Peak|60+ research:2164|34.05 84.85||vignette atlas:Warfronts-FieldMapIcons-Empty-Banner-Minimap large|Grants Reputation|!{4687628} [Dragonscale Expedition] (250)",
+		[71223] = "High Peak|60+ research:2164|65.72 74.98||vignette atlas:Warfronts-FieldMapIcons-Empty-Banner-Minimap large|Grants Reputation|!{4687628} [Dragonscale Expedition] (250)",
+		[71224] = "High Peak|60+ research:2164|64.64 56.72||vignette atlas:Warfronts-FieldMapIcons-Empty-Banner-Minimap large|Grants Reputation|!{4687628} [Dragonscale Expedition] (250)",
+		
 		-- Profession Master
 		[70258] = "[friendly]Bridgette Holdug]|60+ mining skill:2833:25|61.43 76.87||vignette speak currency:2035|Master Miner|!{3615521} [rare]Dragon Isles Mining Knowledge] (10)|!{4643977} [rare]Artisan's Mettle] (50)",
 		[70260] = "[friendly]Elysa Raywinder]|60+ tailoring skill:2831:25|36.75 59.26||vignette speak currency:2026 link:2112|Master Seamstress|!{3615523} [rare]Dragon Isles Tailoring Knowledge] (5)|!{4643977} [rare]Artisan's Mettle] (25)",
@@ -37,6 +44,14 @@ Data.Vignettes = {
 	--[[ The Azure Span ]]--
 
 	[2024] = {
+		-- High Peak
+		[71215] = "High Peak|60+ research:2164|31.91 27.03||vignette atlas:Warfronts-FieldMapIcons-Empty-Banner-Minimap large|Grants Reputation|!{4687628} [Dragonscale Expedition] (250)",
+		[71218] = "High Peak|60+ research:2164|46.14 24.99||vignette atlas:Warfronts-FieldMapIcons-Empty-Banner-Minimap large|Grants Reputation|!{4687628} [Dragonscale Expedition] (250)",
+		[71216] = "High Peak|60+ research:2164|37.47 66.21||vignette atlas:Warfronts-FieldMapIcons-Empty-Banner-Minimap large|Grants Reputation|!{4687628} [Dragonscale Expedition] (250)",
+		[71220] = "High Peak|60+ research:2164|63.08 48.66||vignette atlas:Warfronts-FieldMapIcons-Empty-Banner-Minimap large|Grants Reputation|!{4687628} [Dragonscale Expedition] (250)",
+		[71221] = "High Peak|60+ research:2164|74.85 43.24||vignette atlas:Warfronts-FieldMapIcons-Empty-Banner-Minimap large|Grants Reputation|!{4687628} [Dragonscale Expedition] (250)",
+		[71217] = "High Peak|60+ research:2164|77.44 18.38||vignette atlas:Warfronts-FieldMapIcons-Empty-Banner-Minimap large|Grants Reputation|!{4687628} [Dragonscale Expedition] (250)",
+
 		-- Profession Master
 		[70252] = "[friendly]Frizz Buzzcrank]|60+ engineering skill:2827:25|17.76 21.68||vignette speak currency:2027|Master Engineer|!{4624728} [rare]Dragon Isles Engineering Knowledge] (5)|!{4643977} [rare]Artisan's Mettle] (25)",
 		[70254] = "[friendly]Lydiara Whisperfeather]|60+ inscription skill:2828:25|40.18 64.39||vignette speak currency:2028|Master Scribe|!{4624734} [rare]Dragon Isles Inscription Knowledge] (5)|!{4643977} [rare]Artisan's Mettle] (25)",
@@ -47,6 +62,12 @@ Data.Vignettes = {
 	--[[ Ohn'ahran Plains ]]--
 
 	[2023] = {
+		-- High Peak
+		[71208] = "High Peak|60+ research:2164|86.31 39.28||vignette atlas:Warfronts-FieldMapIcons-Empty-Banner-Minimap large|Grants Reputation|!{4687628} [Dragonscale Expedition] (250)",
+		[70827] = "High Peak|60+ research:2164|57.75 30.81||vignette atlas:Warfronts-FieldMapIcons-Empty-Banner-Minimap large|Grants Reputation|!{4687628} [Dragonscale Expedition] (250)",
+		[71207] = "High Peak|60+ research:2164|30.39 36.46||vignette atlas:Warfronts-FieldMapIcons-Empty-Banner-Minimap large|Grants Reputation|!{4687628} [Dragonscale Expedition] (250)",
+		[71200] = "High Peak|60+ research:2164|28.32 77.64||vignette atlas:Warfronts-FieldMapIcons-Empty-Banner-Minimap large|Grants Reputation|!{4687628} [Dragonscale Expedition] (250)",
+		
 		-- Profession Master
 		[70251] = "[friendly]Shalasar Glimmerdusk]|60+ enchanting skill:2825:25|62.42 18.7|\"On top of the building\"|vignette speak currency:2030|Master Enchantress|!{3615911} [rare]Dragon Isles Enchanting Knowledge] (5)|!{4643977} [rare]Artisan's Mettle] (25)",
 		[70253] = "[friendly]Hua Greenpaw]|60+ herbalism skill:2832:25|58.38 50.01||vignette speak currency:2034|Master Herbalist|!{4624731} [rare]Dragon Isles Herbalism Knowledge] (10)|!{4643977} [rare]Artisan's Mettle] (50)",
@@ -60,6 +81,13 @@ Data.Vignettes = {
 	[2022] = {
 		-- Treasure
 		[65646] = "Misty Treasure Chest|60+|58.54 53.03|\"Inside a small cave behind the waterfall\"|treasure item:202194|Contains|!{133660} [rare]Misty Satchel]|!{2065578} [Dragon Isles Supplies]",
+
+		-- High Peak
+		[70824] = "High Peak|60+ research:2164|73.35 38.85||vignette atlas:Warfronts-FieldMapIcons-Empty-Banner-Minimap large|Grants Reputation|!{4687628} [Dragonscale Expedition] (250)",
+		[70823] = "High Peak|60+ research:2164|56.02 45.41||vignette atlas:Warfronts-FieldMapIcons-Empty-Banner-Minimap large|Grants Reputation|!{4687628} [Dragonscale Expedition] (250)",
+		[70825] = "High Peak|60+ research:2164|43.97 62.95||vignette atlas:Warfronts-FieldMapIcons-Empty-Banner-Minimap large|Grants Reputation|!{4687628} [Dragonscale Expedition] (250)",
+		[70826] = "High Peak|60+ research:2164|28.71 47.73||vignette atlas:Warfronts-FieldMapIcons-Empty-Banner-Minimap large|Grants Reputation|!{4687628} [Dragonscale Expedition] (250)",
+		[71204] = "High Peak|60+ research:2164|54.80 74.12||vignette atlas:Warfronts-FieldMapIcons-Empty-Banner-Minimap large|Grants Reputation|!{4687628} [Dragonscale Expedition] (250)",
 
 		-- Profession Master
 		[70247] = "[friendly]Grigori Vialtry]|60+ alchemy skill:2823:25|60.83 75.9||vignette speak currency:2024|Master Alchemist|!{4624656} [rare]Dragon Isles Alchemy Knowledge] (5)|!{4643977} [rare]Artisan's Mettle] (25)",
