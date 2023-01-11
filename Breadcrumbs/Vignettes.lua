@@ -47,7 +47,7 @@ Data.Vignettes = {
 
 	[2024] = {
 		-- High Peak
-		[71215] = "High Peak|60+ research:2164|31.91 27.03||vignette atlas:Warfronts-FieldMapIcons-Empty-Banner-Minimap large|Grants Reputation|!{4687628} [Dragonscale Expedition] (250)",
+		[71215] = "High Peak|60+ research:2164|31.92 27.03||vignette atlas:Warfronts-FieldMapIcons-Empty-Banner-Minimap large|Grants Reputation|!{4687628} [Dragonscale Expedition] (250)",
 		[71218] = "High Peak|60+ research:2164|46.14 24.99||vignette atlas:Warfronts-FieldMapIcons-Empty-Banner-Minimap large|Grants Reputation|!{4687628} [Dragonscale Expedition] (250)",
 		[71216] = "High Peak|60+ research:2164|37.47 66.21||vignette atlas:Warfronts-FieldMapIcons-Empty-Banner-Minimap large|Grants Reputation|!{4687628} [Dragonscale Expedition] (250)",
 		[71220] = "High Peak|60+ research:2164|63.08 48.66||vignette atlas:Warfronts-FieldMapIcons-Empty-Banner-Minimap large|Grants Reputation|!{4687628} [Dragonscale Expedition] (250)",
@@ -70,7 +70,8 @@ Data.Vignettes = {
 		[71207] = "High Peak|60+ research:2164|30.39 36.46||vignette atlas:Warfronts-FieldMapIcons-Empty-Banner-Minimap large|Grants Reputation|!{4687628} [Dragonscale Expedition] (250)",
 		[71200] = "High Peak|60+ research:2164|28.32 77.64||vignette atlas:Warfronts-FieldMapIcons-Empty-Banner-Minimap large|Grants Reputation|!{4687628} [Dragonscale Expedition] (250)",
 		[71218] = "High Peak|60+ research:2164|83.85 82.42||vignette atlas:Warfronts-FieldMapIcons-Empty-Banner-Minimap large|Grants Reputation|!{4687628} [Dragonscale Expedition] (250)",
-
+		[71215] = "High Peak|60+ research:2164|63.4 85.35||vignette atlas:Warfronts-FieldMapIcons-Empty-Banner-Minimap large|Grants Reputation|!{4687628} [Dragonscale Expedition] (250)",
+		
 		-- Profession Master
 		[70251] = "[friendly]Shalasar Glimmerdusk]|60+ enchanting skill:2825:25|62.42 18.7|\"On top of the building\"|vignette speak currency:2030|Master Enchantress|!{3615911} [rare]Dragon Isles Enchanting Knowledge] (5)|!{4643977} [rare]Artisan's Mettle] (25)",
 		[70253] = "[friendly]Hua Greenpaw]|60+ herbalism skill:2832:25|58.38 50.01||vignette speak currency:2034|Master Herbalist|!{4624731} [rare]Dragon Isles Herbalism Knowledge] (10)|!{4643977} [rare]Artisan's Mettle] (50)",
@@ -84,6 +85,15 @@ Data.Vignettes = {
 	[2022] = {
 		-- Treasure
 		[65646] = "Misty Treasure Chest|60+|58.54 53.03|\"Inside a small cave behind the waterfall\"|treasure item:202194|Contains|!{133660} [rare]Misty Satchel]|!{2065578} [Dragon Isles Supplies]",
+		[67048] = {
+			"Well-Preserved Bone|60+ -item:200066|66.17 55.3|\"On top of the tower\"|treasure item:200066|Contains|!{133718} [Well-Preserved Bone]",
+			"Marmoni's Prize|60+ -item:200064|47.72 83.6|\"Inside a box behind the tent\"|treasure item:200064|Contains|!{133980} [Marmoni's Prize]",
+			"Adventurer's Lost Soap Bar|60+ -item:200065|39.64 84.68|\"In a tub of water\"|treasure item:200065|Contains|!{512902} [Adventurer's Lost Soap Bar]",
+			"Hidden Hornswog Hostage|60+ -70864 -item:200063|64.93 69.59|\"Find the [Adventurer's Lost Soap Bar], [Marmoni's Prize] and a [Well-Preserved Bone], then combine the three items near the [neutral]Possesive Hornswog] to gain access to the treasure\"|treasure item:199916|Contains|!{2399259} [rare]Roseate Hopper]",
+			"Hidden Hornswog Hostage|60+ -70864 item:200063|64.93 69.59|\"Use your [Observant Riddle \"Treat\"] on the [neutral]Possesive Hornswog] to gain access to the treasure\"|treasure item:199916|Contains|!{2399259} [rare]Roseate Hopper]",
+			"Hidden Hornswog Hostage|60+ 70864|64.93 69.59||treasure item:199916|Contains|!{2399259} [rare]Roseate Hopper]",
+			-- 70864 frog moved
+		},
 
 		-- High Peak
 		[70824] = "High Peak|60+ research:2164|73.35 38.85||vignette atlas:Warfronts-FieldMapIcons-Empty-Banner-Minimap large|Grants Reputation|!{4687628} [Dragonscale Expedition] (250)",
