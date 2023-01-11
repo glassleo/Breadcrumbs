@@ -170,6 +170,19 @@ function Breadcrumbs:FormatTooltip(text, flags, varwrap)
 	text = string.gsub(text, "{!}", CreateAtlasMarkup(flags["warboard"] and "warboard" or flags["artifact"] and "questartifact" or flags["legendary"] and "questlegendary" or flags["campaign"] and "quest-campaign-available" or flags["dailycampaign"] and "quest-dailycampaign-available" or flags["daily"] and "questdaily" or "questnormal")) -- !
 	text = string.gsub(text, "{([%w%p]+)}", CreateAtlasMarkup("%1")) -- atlas
 	text = string.gsub(text, "%[Auto Accept", "|cff00ff00Auto Accept") -- Auto Accept green
+	text = string.gsub(text, "%[hasitem:([%d]+):([%d]+)%]", function(item, count)
+		item = tonumber(item or 0) or 0
+		count = tonumber(count or 0) or 0
+		return (GetItemCount(item, true, false, true) >= count) and "|cff00ff00" or (GetItemCount(item, true, false, true) >= 1) and "|cffff6500" or "|cffff0000"
+	end)
+	text = string.gsub(text, "%[hasitem:([%d]+)%]", function(item)
+		item = tonumber(item or 0) or 0
+		return (GetItemCount(item, true, false, true) >= 1) and "|cff00ff00" or "|cffff0000"
+	end)
+	text = string.gsub(text, "<itemcount:([%d]+)>", function(item)
+		item = tonumber(item or 0) or 0
+		return tostring(GetItemCount(item, true, false, true) or 0)
+	end)
 	text = string.gsub(text, "%[friendly%]", "|cff1aff1a") -- friendly green
 	text = string.gsub(text, "%[green%]", "|cff00ff00") -- green
 	text = string.gsub(text, "%[neutral%]", "|cffffff00") -- neutral yellow
@@ -1581,9 +1594,9 @@ function Breadcrumbs:Validate(str)
 					if v == "mailbox" and Setting_EnableMailboxes then pass = true end
 
 					-- Must not match...
-					if string.match(v, "%-(%a+)") then
+					if string.match(v, "%-(.+)") and not pass then
 						pass = true -- We invert our logic
-						local w = string.gsub(v, "%-(%a+)", "%1")
+						local w = string.gsub(v, "%-(.+)", "%1")
 
 						-- -active:n
 						if string.match(w, "^active:(%d+)$") and C_TaskQuest.IsActive(tonumber(string.match(w, "active:(%d+)") or 0)) then pass = false end
@@ -1629,7 +1642,7 @@ function Breadcrumbs:Validate(str)
 						if string.match(w, "^toy:(%d+)$") and PlayerHasToy(tonumber(string.match(w, "toy:(%d+)") or 0)) then pass = false end
 
 						-- -item:n
-						if string.match(w, "^item:(%d+)$") and GetItemCount(tonumber(string.match(w, "item:(%d+)") or 0), true, false, true) >= 1 then pass = false end
+						if string.match(w, "^item:(%d+)$") and (GetItemCount(tonumber(string.match(w, "item:(%d+)") or 0), true, false, true) >= 1) then pass = false end
 
 						-- -item:n:x
 						if string.match(w, "^item:(%d+):(%d+)$") and GetItemCount(tonumber(string.match(w, "item:(%d+):%d+") or 0), true, false, true) >= (tonumber(string.match(w, "item:%d+:(%d+)") or 0)) then pass = false end
