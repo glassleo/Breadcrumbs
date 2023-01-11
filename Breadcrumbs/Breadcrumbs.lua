@@ -1531,6 +1531,9 @@ function Breadcrumbs:Validate(str)
 						if skill and skill >= tonumber(string.match(v, "skill:%d+:(%d+)") or 0) then pass = true end
 					end
 
+					-- profperk:x:n
+					if string.match(v, "^profperk:(%d+):(%d+)$") and tonumber(C_ProfSpecs.GetStateForPerk(tonumber(string.match(v, "profperk:%d+:(%d+)") or 0), C_ProfSpecs.GetConfigIDForSkillLine(tonumber(string.match(v, "profperk:(%d+):%d+") or 0))) or 0) >= 2 then pass = true end
+
 					-- spell:n
 					if string.match(v, "^spell:(%d+)$") and (IsPlayerSpell(tonumber(string.match(v, "spell:(%d+)") or 0)) or IsSpellKnown(tonumber(string.match(v, "spell:(%d+)") or 0), true)) then pass = true end
 
@@ -1606,6 +1609,9 @@ function Breadcrumbs:Validate(str)
 							local skill = Breadcrumbs:GetSkillLine(tonumber(string.match(w, "skill:(%d+):%d+") or 0))
 							if skill and skill >= tonumber(string.match(w, "skill:%d+:(%d+)") or 0) then pass = false end
 						end
+
+						-- -profperk:x:n
+						if string.match(w, "^profperk:(%d+):(%d+)$") and tonumber(C_ProfSpecs.GetStateForPerk(tonumber(string.match(w, "profperk:%d+:(%d+)") or 0), C_ProfSpecs.GetConfigIDForSkillLine(tonumber(string.match(w, "profperk:(%d+):%d+") or 0))) or 0) >= 2 then pass = false end
 
 						-- -spell:n
 						if string.match(w, "^spell:(%d+)$") and (IsPlayerSpell(tonumber(string.match(w, "spell:(%d+)") or 0)) or IsSpellKnown(tonumber(string.match(w, "spell:(%d+)") or 0), true)) then pass = false end

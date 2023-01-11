@@ -108,9 +108,12 @@ Data.HiddenBonusObjectiveQuests = {
 						Traditional reputation require standing ID x or higher (1 is Hated, ... 4 is Neutral, 5 is Friendly, ... 8 is Exalted)
 		-reputation:n:x	 Must not have reached standing x or higher with reputation faction n
 
-		skill:n:x		Must have x or more skill in TradeSkillLineID n (see https://wowpedia.fandom.com/wiki/TradeSkillLineID)
+		skill:n:x		Must have x or more skill in TradeSkillLine ID n (see https://wowpedia.fandom.com/wiki/TradeSkillLineID)
 						For example, skill:2832:25 would require Dragon Isles Herbalism at skill level 25 or higher
-		-skill:n:x		Must not have x or more skill in TradeSkillLineID n
+		-skill:n:x		Must not have x or more skill in TradeSkillLine ID n
+
+		profperk:x:n	Must have earned specialization perk n in profession with TradeSkillLine ID x
+		-profperk:x:n	Must not have earned specialization perk n for profession with TradeSkillLine ID x
 
 		spell:n			Must know spell with ID n
 		-spell:n		Must not know spell with ID n
@@ -309,6 +312,11 @@ Data.Quests = {
 		[67167] = "It's Time To Duel!|60+ 68+,67030 66929|60.67 43.29|Yumadormu",
 		[67178] = "White Eyes, Blue Dragon|60+ 68+,67030 67167|58.12 40.34|Professor Dromokdormi",
 
+		-- Dragon Racing
+		[72485] = "The Azure Span Tour|60+ dragonriding 72483|29.34 68.39|Celormu",
+		[72487] = "The Thaldraszus Tour|60+ dragonriding 72485|44.47 90.73|Celormu",
+		[72482] = "The Waking Shores Advanced Tour|60+ dragonriding 72487|46.04 63.03|Celormu",
+
 		-- Artisan's Consortium
 		-- TODO:: Figure out how the currently disabled profession skip interacts with these
 		[70221] = "Show Your Mettle|60+ 62+,67030 alchemy,blacksmithing,enchanting,engineering,inscription,jewelcrafting,leatherworking,tailoring,herbalism,mining,skinning reputation:2544:2|38.41 62.79|Miguel Bright|weekly link:2112", -- Requires Preferred (rank 2) or higher with Artisan's Consortium
@@ -420,6 +428,9 @@ Data.Quests = {
 		[70166] = "The Joy of Painting|60+ 65+,67030|22.14 36.76|Rauvros", -- need prereq
 		[70168] = "Sad Little Accidents|60+ 65+,67030 70166|7.87 53.45|Ranpiata|dungeon",
 		[70170] = "Beat the Demons Out of It|60+ 65+,67030 70168|7.87 53.45|Ranpiata|dungeon",
+
+		-- Dragon Racing
+		[72487] = "The Thaldraszus Tour|60+ dragonriding 72485|63.17 13.65|Celormu",
 
 		-- Artisan's Consortium
 		-- TODO:: Figure out how the currently disabled profession skip interacts with these
@@ -600,6 +611,9 @@ Data.Quests = {
 		[66462] = "The Field of Ferocity: Lost in the Dream!|60+ 62+,67030 66461|53.16 37.32|Gurgthock",
 		[66463] = "The Field of Ferocity: Elemental Revenge Round!|60+ 62+,67030 66462|53.16 37.32|Gurgthock",
 		[66464] = "The Field of Ferocity: Master of the Hunt!|60+ 62+,67030 66463|53.16 37.32|Gurgthock",
+
+		-- Dragon Racing
+		[72485] = "The Azure Span Tour|60+ dragonriding 72483|88.09 36.28|Celormu",
 		
 		-- Artisan's Consortium
 		-- TODO:: Figure out how the currently disabled profession skip interacts with these
@@ -784,16 +798,16 @@ Data.Quests = {
 		[65691] = "The Shadow of His Wings|60+ 65687 65782|37.35 46.61|Ayasanth",
 
 		-- The Earthen Ring
-		[66003] = "Rings To Bind Them|60+|37.45 71.78|Earthcaller Yevaa", -- no prereq?
+		[66003] = "Rings To Bind Them|60+|37.45 71.78|Earthcaller Yevaa",
 		[66369] = "The Earthen Ward|60+ 66003|37.45 71.78|Earthcaller Yevaa",
-		[66368] = "Island In A Storm|60+ 66369|37.45 71.78|Earthcaller Yevaa",
-		[70414] = "Shaky Grounds|60+|37.1 56.05|Earthmender Govrum", -- no prereq?
+		[66368] = "Island In A Storm|60+ 66369|37.45 71.78|Earthcaller Yevaa|weekly",
+		[70414] = "Shaky Grounds|60+|37.1 56.05|Earthmender Govrum",
 
 		-- Dragon Racing
 		[72481] = "The Waking Shores Tour|60+ dragonriding 67030|73.25 52.07|Celormu",
 		[72483] = "The Ohn'ahran Plains Tour|60+ dragonriding 72481|73.25 52.07|Celormu",
-		[72485] = "The Azure Span Tour|60+ dragonriding 72483|73.25 52.07|Celormu",
-		[72487] = "The Thaldraszus Tour|60+ dragonriding 72485|73.25 52.07|Celormu",
+		[72482] = "The Waking Shores Advanced Tour|60+ dragonriding 72487|73.25 52.07|Celormu",
+		[72484] = "The Ohn'ahran Plains Advanced Tour|60+ dragonriding 72482|73.25 52.07|Celormu",
 
 		-- Artisan's Consortium
 		[67564] = "Artisan's Courier|60+ alchemy,blacksmithing,enchanting,engineering,inscription,jewelcrafting,leatherworking,tailoring,herbalism,mining,skinning|57.93 68.25|Haephesta",
