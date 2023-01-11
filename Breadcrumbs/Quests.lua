@@ -634,21 +634,21 @@ Data.Quests = {
 
 	[2022] = {
 		-- The Dragonscale Expedition
-		--[70122] = "Explorers in Peril|60+ 67700|COORDS|Toddy Whiskers|campaign", -- Alliance
-		[65452] = "Explorers in Peril|60+ 65444|80.62 27.61|Naleidea Rivergleam|campaign", -- Horde
-		--[70124] = "Practice Materials|60+ 67700|COORDS|Thaelin Darkanvil|campaign", -- Alliance
-		[65451] = "Practice Materials|60+ 65444|80.61 27.65|Boss Magor|campaign", -- Horde
-		--[70123] = "Primal Pests|60+ 67700|COORDS|Scalecommander Azurathel|campaign", -- Alliance
-		[65453] = "Primal Pests|60+ 65444|80.65 27.6|Scalecommander Cindrethresh|campaign", -- Horde
+		[70122] = "Explorers in Peril|60+ alliance 67700|82.13 31.88|Toddy Whiskers|campaign", -- Alliance
+		[65452] = "Explorers in Peril|60+ horde 65444|80.62 27.61|Naleidea Rivergleam|campaign", -- Horde
+		[70124] = "Practice Materials|60+ alliance 67700|82.09 31.88|Thaelin Darkanvil|campaign", -- Alliance
+		[65451] = "Practice Materials|60+ horde 65444|80.61 27.65|Boss Magor|campaign", -- Horde
+		[70123] = "Primal Pests|60+ alliance 67700|82.16 31.85|Scalecommander Azurathel|campaign", -- Alliance
+		[65453] = "Primal Pests|60+ horde 65444|80.65 27.6|Scalecommander Cindrethresh|campaign", -- Horde
 		[69965] = "Quality Assurance|60+ 65452,70122|76.41 34.45|Haephesta",
 		[66101] = "From Such Great Heights|60+|75.84 33.49|Aster Cloudgaze",
 		[67053] = "Give Peace a Chance|60+ alliance|76.73 34.55|Captain Garrick", -- Alliance
 		[66110] = "Give Peace a Chance|60+ horde|76.36 33.08|Warlord Breka Grimaxe", -- Horde
-		[66111] = "Encroaching Elementals|60+ alliance 67053 -70135|76.36 33.08|Warlord Breka Grimaxe", -- Alliance
-		[70135] = "Encroaching Elementals|60+ horde 66110 -66111|76.73 34.55|Captain Garrick", -- Horde
+		[70135] = "Encroaching Elementals|60+ alliance 67053 -66111|76.36 33.08|Warlord Breka Grimaxe", -- Alliance
+		[66111] = "Encroaching Elementals|60+ horde 66110 -70135|76.73 34.55|Captain Garrick", -- Horde
 		[66112] = "Always Be Crafting|60+ 67053,66110|76.35 34.64|Grun Ashbeard",
-		--[70125] = "Where is Wrathion?|60+ 70122|COORDS|Toddy Whiskers|campaign", -- Alliance
-		[69910] = "Where is Wrathion?|60+ 65452|76.61 33.6|Naleidea Rivergleam|campaign", -- Horde
+		[70125] = "Where is Wrathion?|60+ alliance 70122|76.63 33.63|Toddy Whiskers|campaign", -- Alliance
+		[69910] = "Where is Wrathion?|60+ horde 65452|76.61 33.6|Naleidea Rivergleam|campaign", -- Horde
 		[72293] = "Adventuring in the Dragon Isles|60+ 67030 69910,70125 -69911 -72266|76.57 33.66|Sendrax",
 		-- 72266 - The Waking Shores (Adventure Mode)
 		[69911] = "Excuse the Mess|60+ 69910,70125 -67030,72266|76.57 33.66|Sendrax|campaign",
@@ -5245,6 +5245,14 @@ Data.Quests = {
 			"Tides of War|10+ alliance -58983 -56775|62.17 30.14|Hero's Herald",
 		},
 		[46728] = "The Nation of Kul Tiras|10+ alliance 46727 -59641 -56775|80.26 33.13|Anduin Wrynn", -- 59641 is Exile's Reach version
+
+		-- Dragon Isles - The Dragonscale Expedition
+		[65436] = "The Dragon Isles Await|10+ alliance|79.8 27.02|Wrathion|campaign",
+		[66577] = "Aspectral Invitation|10+ alliance 65436|79.8 27.02|Wrathion|campaign",
+		[66589] = "Expeditionary Coordination|10+ alliance 66577|79.72 27.32|Toddy Whiskers|campaign",
+		[72240] = "The Obsidian Warders|10+ alliance 66577|79.75 27.97|Scalecommander Azurathel|campaign",
+		[66596] = "Whispers on the Winds|10+ alliance 66589 72240|23.01 56.15|Archmage Khadgar|campaign",
+		[67700] = "To the Dragon Isles!|10+ alliance 66596|22.72 55.66|Toddy Whiskers|campaign",
 
 		-- Engineering
 		[29477] = "Gnomish Engineering|20+ alliance engineering skill:2506:200 -spell:20219 -spell:20222|62.85 31.96|Lilliam Sparkspindle|engineering", -- Requires 200 skill in Classic Engineering
