@@ -37,6 +37,11 @@ Data.Vignettes = {
 		[71217] = "High Peak|60+ research:2164|59.81 95.81||vignette atlas:Warfronts-FieldMapIcons-Empty-Banner-Minimap large|Grants Reputation|!{4687628} [Dragonscale Expedition] (250)",
 		[71208] = "High Peak|60+ research:2164|28 70.63||vignette atlas:Warfronts-FieldMapIcons-Empty-Banner-Minimap large|Grants Reputation|!{4687628} [Dragonscale Expedition] (250)",
 
+		-- Signal Transmitter
+		[70583] = "Deactivated Signal Transmitter|engineering skill:2827:25 profperk:2827:50930|50.63 55.6||treasure atlas:FlightMasterArgus large|Activate all three Signal Transmittors in Thaldraszus to add the zone as an option for your Wyrmhole Generator",
+		[70584] = "Deactivated Signal Transmitter|engineering skill:2827:25 profperk:2827:50930|70.3 44.3||treasure atlas:FlightMasterArgus large|Activate all three Signal Transmittors in Thaldraszus to add the zone as an option for your Wyrmhole Generator",
+		[70585] = "Deactivated Signal Transmitter|engineering skill:2827:25 profperk:2827:50930|63.67 77.1||treasure atlas:FlightMasterArgus large|Activate all three Signal Transmittors in Thaldraszus to add the zone as an option for your Wyrmhole Generator",
+
 		-- Profession Master
 		[70258] = "[friendly]Bridgette Holdug]|60+ mining skill:2833:25|61.43 76.87||vignette speak currency:2035|Master Miner|!{3615521} [rare]Dragon Isles Mining Knowledge] (10)|!{4643977} [rare]Artisan's Mettle] (50)",
 		[70260] = "[friendly]Elysa Raywinder]|60+ tailoring skill:2831:25|36.75 59.26||vignette speak currency:2026 link:2112|Master Seamstress|!{3615523} [rare]Dragon Isles Tailoring Knowledge] (5)|!{4643977} [rare]Artisan's Mettle] (25)",
@@ -53,6 +58,19 @@ Data.Vignettes = {
 		[71220] = "High Peak|60+ research:2164|63.08 48.66||vignette atlas:Warfronts-FieldMapIcons-Empty-Banner-Minimap large|Grants Reputation|!{4687628} [Dragonscale Expedition] (250)",
 		[71221] = "High Peak|60+ research:2164|74.85 43.24||vignette atlas:Warfronts-FieldMapIcons-Empty-Banner-Minimap large|Grants Reputation|!{4687628} [Dragonscale Expedition] (250)",
 		[71217] = "High Peak|60+ research:2164|77.44 18.38||vignette atlas:Warfronts-FieldMapIcons-Empty-Banner-Minimap large|Grants Reputation|!{4687628} [Dragonscale Expedition] (250)",
+		
+		-- Misaligned Ley Crystal
+		[72138] = "Misaligned Ley Crystal|60+|43.48 62.24||vignette atlas:AzeriteReady|Grants Reputation|!{4687630} [Valdrakken Accord] (20)",
+		[72139] = "Misaligned Ley Crystal|60+|26.53 35.91||vignette atlas:AzeriteReady|Grants Reputation|!{4687630} [Valdrakken Accord] (20)",
+		[72140] = "Misaligned Ley Crystal|60+|65.73 28.14||vignette atlas:AzeriteReady|Grants Reputation|!{4687630} [Valdrakken Accord] (20)",
+		[72141] = "Misaligned Ley Crystal|60+|66.39 59.51||vignette atlas:AzeriteReady|Grants Reputation|!{4687630} [Valdrakken Accord] (20)",
+		--[?] = "Misaligned Ley Crystal|60+|65.88 50.66||vignette atlas:AzeriteReady|Grants Reputation|!{4687630} [Valdrakken Accord] (20)",
+
+		-- Signal Transmitter
+		[70578] = "Deactivated Signal Transmitter|engineering skill:2827:25 profperk:2827:50930|34.91 26.77||treasure atlas:FlightMasterArgus large|Activate all three Signal Transmittors in Ohn'ahran Plains to add the zone as an option for your Wyrmhole Generator",
+		[70579] = "Deactivated Signal Transmitter|engineering skill:2827:25 profperk:2827:50930|27.56 26.45||treasure atlas:FlightMasterArgus large|Activate all three Signal Transmittors in the Azure Span to add the zone as an option for your Wyrmhole Generator",
+		[70580] = "Deactivated Signal Transmitter|engineering skill:2827:25 profperk:2827:50930|45.77 65.25||treasure atlas:FlightMasterArgus large|Activate all three Signal Transmittors in the Azure Span to add the zone as an option for your Wyrmhole Generator",
+		[70581] = "Deactivated Signal Transmitter|engineering skill:2827:25 profperk:2827:50930|71.04 47.82||treasure atlas:FlightMasterArgus large|Activate all three Signal Transmittors in the Azure Span to add the zone as an option for your Wyrmhole Generator",
 
 		-- Profession Master
 		[70252] = "[friendly]Frizz Buzzcrank]|60+ engineering skill:2827:25|17.76 21.68||vignette speak currency:2027|Master Engineer|!{4624728} [rare]Dragon Isles Engineering Knowledge] (5)|!{4643977} [rare]Artisan's Mettle] (25)",
@@ -72,6 +90,12 @@ Data.Vignettes = {
 		[71218] = "High Peak|60+ research:2164|83.85 82.42||vignette atlas:Warfronts-FieldMapIcons-Empty-Banner-Minimap large|Grants Reputation|!{4687628} [Dragonscale Expedition] (250)",
 		[71215] = "High Peak|60+ research:2164|63.4 85.35||vignette atlas:Warfronts-FieldMapIcons-Empty-Banner-Minimap large|Grants Reputation|!{4687628} [Dragonscale Expedition] (250)",
 		
+		-- Signal Transmitter
+		[70576] = "Deactivated Signal Transmitter|engineering skill:2827:25 profperk:2827:50930|28.02 35.67||treasure atlas:FlightMasterArgus large|Activate all three Signal Transmittors in Ohn'ahran Plains to add the zone as an option for your Wyrmhole Generator",
+		[70577] = "Deactivated Signal Transmitter|engineering skill:2827:25 profperk:2827:50930|56.89 28.91||treasure atlas:FlightMasterArgus large|Activate all three Signal Transmittors in Ohn'ahran Plains to add the zone as an option for your Wyrmhole Generator",
+		[70578] = "Deactivated Signal Transmitter|engineering skill:2827:25 profperk:2827:50930|67.7 84.97||treasure atlas:FlightMasterArgus large|Activate all three Signal Transmittors in Ohn'ahran Plains to add the zone as an option for your Wyrmhole Generator",
+		[70579] = "Deactivated Signal Transmitter|engineering skill:2827:25 profperk:2827:50930|57.14 84.52||treasure atlas:FlightMasterArgus large|Activate all three Signal Transmittors in the Azure Span to add the zone as an option for your Wyrmhole Generator",
+
 		-- Profession Master
 		[70251] = "[friendly]Shalasar Glimmerdusk]|60+ enchanting skill:2825:25|62.42 18.7|\"On top of the building\"|vignette speak currency:2030|Master Enchantress|!{3615911} [rare]Dragon Isles Enchanting Knowledge] (5)|!{4643977} [rare]Artisan's Mettle] (25)",
 		[70253] = "[friendly]Hua Greenpaw]|60+ herbalism skill:2832:25|58.38 50.01||vignette speak currency:2034|Master Herbalist|!{4624731} [rare]Dragon Isles Herbalism Knowledge] (10)|!{4643977} [rare]Artisan's Mettle] (50)",
@@ -85,22 +109,35 @@ Data.Vignettes = {
 	[2022] = {
 		-- Treasure
 		[65646] = "Misty Treasure Chest|60+|58.54 53.03|\"Inside a small cave behind the waterfall\"|treasure item:202194|Contains|!{133660} [rare]Misty Satchel]|!{2065578} [Dragon Isles Supplies]",
-		[67048] = {
+		[67048] = { -- 70864 Possesive Hornswog moved
+			"Hidden Hornswog Hostage|60+ -70864 -item:200063 -item:200066,-item:200064,-item:200065|64.93 69.59|\"To access the treasure, you must collect three items to craft a treat for the Possesive Hornswog\"|treasure atlas:vignetteloot-locked item:199916|Required Items|!{133718} [hasitem:200066]Well-Preserved Bone]|!{133980} [hasitem:200064]Marmoni's Prize]|!{512902} [hasitem:200065]Adventurer's Lost Soap Bar]||Contains|!{2399259} [rare]Roseate Hopper]",
+			"Hidden Hornswog Hostage|60+ -70864 -item:200063 item:200066 item:200064 item:200065|64.93 69.59|\"Combine the three items near the Possesive Hornswog to create the treat\"|treasure atlas:vignetteloot-locked item:199916|Required Items|!{133718} [hasitem:200066]Well-Preserved Bone]|!{133980} [hasitem:200064]Marmoni's Prize]|!{512902} [hasitem:200065]Adventurer's Lost Soap Bar]||Contains|!{2399259} [rare]Roseate Hopper]",
+			"Hidden Hornswog Hostage|60+ -70864 item:200063|64.93 69.59|\"Throw the [Observant Riddle \"Treat\"] on the Possesive Hornswog to gain access to the treasure\"|treasure atlas:vignetteloot-locked item:199916|Contains|!{2399259} [rare]Roseate Hopper]",
+			"Hidden Hornswog Hostage|60+ 70864|64.93 69.59||treasure item:199916|Contains|!{2399259} [rare]Roseate Hopper]",
 			"Well-Preserved Bone|60+ -item:200066|66.17 55.3|\"On top of the tower\"|treasure item:200066|Contains|!{133718} [Well-Preserved Bone]",
 			"Marmoni's Prize|60+ -item:200064|47.72 83.6|\"Inside a box behind the tent\"|treasure item:200064|Contains|!{133980} [Marmoni's Prize]",
 			"Adventurer's Lost Soap Bar|60+ -item:200065|39.64 84.68|\"In a tub of water\"|treasure item:200065|Contains|!{512902} [Adventurer's Lost Soap Bar]",
-			"Hidden Hornswog Hostage|60+ -70864 -item:200063|64.93 69.59|\"Find the [Adventurer's Lost Soap Bar], [Marmoni's Prize] and a [Well-Preserved Bone], then combine the three items near the [neutral]Possesive Hornswog] to gain access to the treasure\"|treasure item:199916|Contains|!{2399259} [rare]Roseate Hopper]",
-			"Hidden Hornswog Hostage|60+ -70864 item:200063|64.93 69.59|\"Use your [Observant Riddle \"Treat\"] on the [neutral]Possesive Hornswog] to gain access to the treasure\"|treasure item:199916|Contains|!{2399259} [rare]Roseate Hopper]",
-			"Hidden Hornswog Hostage|60+ 70864|64.93 69.59||treasure item:199916|Contains|!{2399259} [rare]Roseate Hopper]",
-			-- 70864 frog moved
 		},
-
+		[70270] = {
+			"Boomthyr Rocket|60+ engineering skill:2827:25 -item:198815 -item:198816,-item:198814,-item:198817|56.02 44.82|\"Collect four items nearby to repair the Boomthyr Rocket\"|treasure atlas:vignetteloot-locked item:201014|\"[Ash] can be found in the same room as the Rocket and the rest can be found in the building on the opposite side\"||Required Items|!{133218} [hasitem:198816]Aerospace Grade Draconium]|!{443368} [hasitem:198815]Ash]|!{4497570} [hasitem:198814]Boom Fumes]|!{132781} [hasitem:198817]Durable Crystal]||Rewards|!{511727} [epic]Boomthyr Rocket]",
+			"Boomthyr Rocket|60+ engineering skill:2827:25 item:198815 -item:198816,-item:198814,-item:198817|56.02 44.82|\"Collect four items nearby to repair the Boomthyr Rocket\"|treasure atlas:vignetteloot-locked item:201014|Required Items|!{133218} [hasitem:198816]Aerospace Grade Draconium]|!{443368} [hasitem:198815]Ash]|!{4497570} [hasitem:198814]Boom Fumes]|!{132781} [hasitem:198817]Durable Crystal]||Rewards|!{511727} [epic]Boomthyr Rocket]",
+			"Boomthyr Rocket|60+ engineering skill:2827:25 item:198815 item:198816 item:198814 item:198817|56.02 44.82|\"Collect four items nearby to repair the Boomthyr Rocket\"|treasure item:201014|Required Items|!{133218} [hasitem:198816]Aerospace Grade Draconium]|!{443368} [hasitem:198815]Ash]|!{4497570} [hasitem:198814]Boom Fumes]|!{132781} [hasitem:198817]Durable Crystal]||Rewards|!{511727} [epic]Boomthyr Rocket]",
+			"Aerospace Grade Draconium|60+ engineering skill:2827:25 -item:198816|57.99 44.35||treasure item:198816|Contains|!{133218} [Aerospace Grade Draconium]",
+			"Boom Fumes|60+ engineering skill:2827:25 -item:198814|57.83 44.58||treasure item:198814|Contains|!{4497570} [Boom Fumes]",
+			"Durable Crystal|60+ engineering skill:2827:25 -item:198817|58.13 44.54||treasure item:198817|Contains|!{132781} [Durable Crystal]",
+		},
+		
 		-- High Peak
 		[70824] = "High Peak|60+ research:2164|73.35 38.85||vignette atlas:Warfronts-FieldMapIcons-Empty-Banner-Minimap large|Grants Reputation|!{4687628} [Dragonscale Expedition] (250)",
 		[70823] = "High Peak|60+ research:2164|56.02 45.41||vignette atlas:Warfronts-FieldMapIcons-Empty-Banner-Minimap large|Grants Reputation|!{4687628} [Dragonscale Expedition] (250)",
 		[70825] = "High Peak|60+ research:2164|43.97 62.95||vignette atlas:Warfronts-FieldMapIcons-Empty-Banner-Minimap large|Grants Reputation|!{4687628} [Dragonscale Expedition] (250)",
 		[70826] = "High Peak|60+ research:2164|28.71 47.73||vignette atlas:Warfronts-FieldMapIcons-Empty-Banner-Minimap large|Grants Reputation|!{4687628} [Dragonscale Expedition] (250)",
 		[71204] = "High Peak|60+ research:2164|54.80 74.12||vignette atlas:Warfronts-FieldMapIcons-Empty-Banner-Minimap large|Grants Reputation|!{4687628} [Dragonscale Expedition] (250)",
+
+		-- Signal Transmitter
+		[70573] = "Deactivated Signal Transmitter|engineering skill:2827:25 profperk:2827:50930|74.6 25.51||treasure atlas:FlightMasterArgus large|Activate all three Signal Transmittors in the Waking Shores to add the zone as an option for your Wyrmhole Generator",
+		[70574] = "Deactivated Signal Transmitter|engineering skill:2827:25 profperk:2827:50930|62.2 78.97||treasure atlas:FlightMasterArgus large|Activate all three Signal Transmittors in the Waking Shores to add the zone as an option for your Wyrmhole Generator",
+		[70575] = "Deactivated Signal Transmitter|engineering skill:2827:25 profperk:2827:50930|23.43 43.83||treasure atlas:FlightMasterArgus large|Activate all three Signal Transmittors in the Waking Shores to add the zone as an option for your Wyrmhole Generator",
 
 		-- Profession Master
 		[70247] = "[friendly]Grigori Vialtry]|60+ alchemy skill:2823:25|60.83 75.9||vignette speak currency:2024|Master Alchemist|!{4624656} [rare]Dragon Isles Alchemy Knowledge] (5)|!{4643977} [rare]Artisan's Mettle] (25)",
@@ -112,7 +149,7 @@ Data.Vignettes = {
 
 	[1533] = {
 		-- Treasure
-		[58298] = {"Purians|48+ -58293,-58294 -item:173973|54.37 81.87||treasure interact", "Purians|48+ -58293,-58294 -item:173973|54.37 82.66||treasure interact", "Tribute|48+ -58293 item:173973|56.17 83.06||treasure interact", "Tribute|48+ -58294 item:173973|54.43 83.87||treasure interact", "Scroll of Aeons|48+ -58293,-58294|53.5 80.38|\"Loot nearby Purians and place them in two separate Tribute bowls in order to unlock this treasure\"|treasure locked item:173984|Contains|!{1392955} [rare]Scroll of Aeons]", "Scroll of Aeons|48+ 58293 58294|53.5 80.38||treasure item:173984|Contains|!{1392955} [rare]Scroll of Aeons]",},
+		[58298] = {"Purians|48+ -58293,-58294 -item:173973|54.37 81.87||treasure interact", "Purians|48+ -58293,-58294 -item:173973|54.37 82.66||treasure interact", "Tribute|48+ -58293 item:173973|56.17 83.06||treasure interact", "Tribute|48+ -58294 item:173973|54.43 83.87||treasure interact", "Scroll of Aeons|48+ -58293,-58294|53.5 80.38|\"Loot nearby Purians and place them in two separate Tribute bowls in order to unlock this treasure\"|treasure atlas:vignetteloot-locked item:173984|Contains|!{1392955} [rare]Scroll of Aeons]", "Scroll of Aeons|48+ 58293 58294|53.5 80.38||treasure item:173984|Contains|!{1392955} [rare]Scroll of Aeons]",},
 		[58329] = "Purifying Draught|48+|52.04 86.07||treasure item:174007|Contains|!{1528676} [Purifying Draught]",
 		[60478] = "Vesper of Virtues|48+ 57037|58.66 71.35||treasure item:179982|Contains|!{133706} [rare]Kyrian Bell]",
 		[61044] = "Stolen Equipment|48+|40.51 49.81||treasure item:182561::::::::60::512::1:6706:60|Contains|!{3386277} [rare]Fallen Disciple's Cloak]",
@@ -262,7 +299,7 @@ Data.Vignettes = {
 		[65393] = "Protoform Schematic|60+ 64953 64952 65178 65427 -item:189469|66.97 69.42||treasure scroll item:189469|Contains|!{4217590} [rare]Schematic: Prototype Leaper]",
 		[65401] = "Protoform Schematic|60+ 64953 64952 65545 65427 -item:189478|36.95 78.26||treasure scroll item:189478|Contains|!{4217590} [rare]Schematic: Adorned Vombata]",
 		[65447] = "Stolen Relic|60+ 64953 64952|37.9 65.2||treasure|Contains|!{/Random} [rare]Random Jewelry (236+)]|!{4381149} [legendary]Cosmic Flux] (200)",
-		[65465] = {"Domination Cache|60+ 64953 64952 item:189704|60.02 18.98|\"The key is a rare drop from elites in the Endless Sands\"|treasure item:190638|Requires|!{134245} [green]Dominance Key]||Contains|!{3734530} [epic]Tormented Mawsteel Greatsword]|!{4038106} [rare]Spatial Opener]|!{4381149} [legendary]Cosmic Flux] (200)", "Domination Cache|60+ 64953 64952 -item:189704|60.02 18.98|\"The key is a rare drop from elites in the Endless Sands\"|treasure locked item:190638|Requires|!{134245} [red]Dominance Key]||Contains|!{3734530} [epic]Tormented Mawsteel Greatsword]|!{4038106} [rare]Spatial Opener]|!{4381149} [legendary]Cosmic Flux] (200)",},
+		[65465] = {"Domination Cache|60+ 64953 64952 item:189704|60.02 18.98|\"The key is a rare drop from elites in the Endless Sands\"|treasure item:190638|Requires|!{134245} [green]Dominance Key]||Contains|!{3734530} [epic]Tormented Mawsteel Greatsword]|!{4038106} [rare]Spatial Opener]|!{4381149} [legendary]Cosmic Flux] (200)", "Domination Cache|60+ 64953 64952 -item:189704|60.02 18.98|\"The key is a rare drop from elites in the Endless Sands\"|treasure atlas:vignetteloot-locked item:190638|Requires|!{134245} [red]Dominance Key]||Contains|!{3734530} [epic]Tormented Mawsteel Greatsword]|!{4038106} [rare]Spatial Opener]|!{4381149} [legendary]Cosmic Flux] (200)",},
 		[65480] = "Gnawed Valise|60+ 64953 64952|38.98 73.21||treasure item:188054::::::::60:::27:3:6652:8108:1482:1:28:2057|Contains|!{4096872} [rare]Antecedent Drape]|!{4381149} [legendary]Cosmic Flux] (200)",
 		[65487] = "Fallen Vault|60+ 64953 64952|51.56 9.9||treasure|Contains|!{4038106} [rare]Spatial Opener]|!{/Random} [uncommon]Random Equipment (229)]|!{4381149} [legendary]Cosmic Flux] (200)",
 		[65489] = {
@@ -287,7 +324,7 @@ Data.Vignettes = {
 		[65545] = {"Grateful Boon|60+ 64953 64952 _65427|37.18 78.31|\"Pet all the agitated animals nearby to unlock the treasure\"|treasure|Contains|!{4381149} [legendary]Cosmic Flux] (200)||Unlocks|!{4217590} [rare]Schematic: Adorned Vombata]", "Grateful Boon|60+ 64953 64952 65427|37.18 78.31|\"Pet all the agitated animals nearby to unlock the treasure\"|treasure item:189478|Contains|!{4217590} [rare]Schematic: Adorned Vombata]|!{4381149} [legendary]Cosmic Flux] (200)",},
 		[65546] = "Protoflora Harvester|60+ 64953 64952|52.57 71.47|\"Takes up to 5 minutes to respawn after someone loots it\"|treasure item:190952|Contains|!{4284644} [epic]Protoflora Harvester]|!{4381149} [legendary]Cosmic Flux] (200)",
 		[65566] = "Protopear|60+ 64953 64952 64645|66.71 76.8||treasure down link:2027 item:190058|Contains|!{1658612} [rare]Peaceful Pocopoc]|!{4381149} [legendary]Cosmic Flux] (200)",
-		[65572] = {"Undulating Foliage|60+ 64953 64952 65589 65590 65591 65592|51.69 79.61|\"Open the four Teleporter Locks to unlock this treasure\"|treasure down link:2066 item:190926|Contains|!{3950360} [rare]Infested Automa Core]|!{4038106} [rare]Spatial Opener]|!{4381149} [legendary]Cosmic Flux] (200)", "Undulating Foliage|60+ 64953 64952 -65589,-65590,-65591,-65592|51.69 79.61|\"Open the four Teleporter Locks to unlock this treasure\"|treasure locked down link:2066 item:190926|Contains|!{3950360} [rare]Infested Automa Core]|!{4038106} [rare]Spatial Opener]|!{4381149} [legendary]Cosmic Flux] (200)",},
+		[65572] = {"Undulating Foliage|60+ 64953 64952 65589 65590 65591 65592|51.69 79.61|\"Open the four Teleporter Locks to unlock this treasure\"|treasure down link:2066 item:190926|Contains|!{3950360} [rare]Infested Automa Core]|!{4038106} [rare]Spatial Opener]|!{4381149} [legendary]Cosmic Flux] (200)", "Undulating Foliage|60+ 64953 64952 -65589,-65590,-65591,-65592|51.69 79.61|\"Open the four Teleporter Locks to unlock this treasure\"|treasure atlas:vignetteloot-locked down link:2066 item:190926|Contains|!{3950360} [rare]Infested Automa Core]|!{4038106} [rare]Spatial Opener]|!{4381149} [legendary]Cosmic Flux] (200)",},
 		[65573] = "Bushel of Progenitor Produce|60+ 64953 64952|47.44 95.23|\"Defeating Nascent Servitors will give you a stacking buff required to open the door\"|treasure item:190853|Requires|!{4038102} [spell]Creation Catalyst Overcharge] (5)||Contains|!{237269} [rare]Bushel of Mysterious Fruit]|!{236571} [rare]Chef Pocopoc]|!{4381149} [legendary]Cosmic Flux] (200)",
 		[65592] = "Teleporter Lock|60+ 64953 64952|50.01 76.71|\"Underneath a Bloomthorn Vine\"|treasure interact",
 		[65381] = "Protoform Schematic|60+ 64953 64952 65427 -item:189458|62.03 43.53|\"On top of a pillar\"|treasure scroll item:189458|Contains|!{4217590} [rare]Schematic: Desertwing Hunter]",
@@ -316,7 +353,7 @@ Data.Vignettes = {
 	-- Crystal Wards
 	[2066] = {
 		-- Treasure
-		[65572] = {"Undulating Foliage|60+ 64953 64952 65589 65590 65591 65592|49.14 34.57|\"Use the unlocked Teleporter\"|treasure item:190926|Contains|!{3950360} [rare]Infested Automa Core]|!{4038106} [rare]Spatial Opener]|!{4381149} [legendary]Cosmic Flux] (200)", "Undulating Foliage|60+ 64953 64952 -65589,-65590,-65591,-65592|49.14 34.57|\"Open the four Teleporter Locks to unlock this treasure\"|treasure locked item:190926|Contains|!{3950360} [rare]Infested Automa Core]|!{4038106} [rare]Spatial Opener]|!{4381149} [legendary]Cosmic Flux] (200)",},
+		[65572] = {"Undulating Foliage|60+ 64953 64952 65589 65590 65591 65592|49.14 34.57|\"Use the unlocked Teleporter\"|treasure item:190926|Contains|!{3950360} [rare]Infested Automa Core]|!{4038106} [rare]Spatial Opener]|!{4381149} [legendary]Cosmic Flux] (200)", "Undulating Foliage|60+ 64953 64952 -65589,-65590,-65591,-65592|49.14 34.57|\"Open the four Teleporter Locks to unlock this treasure\"|treasure atlas:vignetteloot-locked item:190926|Contains|!{3950360} [rare]Infested Automa Core]|!{4038106} [rare]Spatial Opener]|!{4381149} [legendary]Cosmic Flux] (200)",},
 		[65589] = "Teleporter Lock|60+ 64953 64952|39.5 68.65|\"In a bush\"|treasure interact",
 		[65590] = "Teleporter Lock|60+ 64953 64952|60.22 87.14|\"Underneath a Bloomthorn Vine\"|treasure interact",
 		[65591] = "Teleporter Lock|60+ 64953 64952|69.79 52.57|\"Underneath a Bloomthorn Vine\"|treasure interact",
@@ -339,68 +376,68 @@ Data.Vignettes = {
 		-- Treasure
 		[65396] = "Protoform Schematic|60+ 64953 64952 65427 -item:189473|48.99 40.49|\"Hidden in a container\"|treasure scroll item:189473|Contains|!{4217590} [rare]Schematic: Bronzewing Vespoid]",
 		[65650] = {
-			"Inert Prototype|60+ 64953 64952 65427 65328 -65343 -item:189463|51.94 79.56|Camber Alcove|treasure locked|\"Retrieve the Camber Arrangement to unlock the Locus Shift to this location.\"",
+			"Inert Prototype|60+ 64953 64952 65427 65328 -65343 -item:189463|51.94 79.56|Camber Alcove|treasure atlas:vignetteloot-locked|\"Retrieve the Camber Arrangement to unlock the Locus Shift to this location.\"",
 			"Inert Prototype|60+ 64953 64952 65427 65328 65343 -item:189463|51.94 79.56|Camber Alcove|treasure interact|\"Starts the Inert Protoype mini game. Collect five golden rings without hitting too many dust piles to unlock the Prototype Schematic.\"",
 		},
 		[65386] = {
-			"Prototype Schematic|60+ 64953 64952 65427 65328 -65650 -item:189463|49.68 72.03|Camber Alcove|treasure locked item:189463|Contains|!{4217590} [rare]Schematic: Unsuccessful Prototype Fleetpod]|!{4381149} [legendary]Cosmic Flux] (200)",
+			"Prototype Schematic|60+ 64953 64952 65427 65328 -65650 -item:189463|49.68 72.03|Camber Alcove|treasure atlas:vignetteloot-locked item:189463|Contains|!{4217590} [rare]Schematic: Unsuccessful Prototype Fleetpod]|!{4381149} [legendary]Cosmic Flux] (200)",
 			"Prototype Schematic|60+ 64953 64952 65427 65328 65650 -item:189463|49.68 72.03|Camber Alcove|treasure item:189463|Contains|!{4217590} [rare]Schematic: Unsuccessful Prototype Fleetpod]|!{4381149} [legendary]Cosmic Flux] (200)",
 		},
 		[65643] = {
-			"Torn Ethereal Drape|60+ 64953 64952 65328 -65347|28 88|Fulgor Alcove|treasure locked item:188054::::::::60:::27:3:6652:8108:1482:1:28:2057|\"Retrieve the Fulgore Arrangement to unlock the Locus Shift to this location.\"||Contains|!{4096872} [rare]Antecedent Drape]|!{4381149} [legendary]Cosmic Flux] (200)",
+			"Torn Ethereal Drape|60+ 64953 64952 65328 -65347|28 88|Fulgor Alcove|treasure atlas:vignetteloot-locked item:188054::::::::60:::27:3:6652:8108:1482:1:28:2057|\"Retrieve the Fulgore Arrangement to unlock the Locus Shift to this location.\"||Contains|!{4096872} [rare]Antecedent Drape]|!{4381149} [legendary]Cosmic Flux] (200)",
 			"Torn Ethereal Drape|60+ 64953 64952 65328 65347|28 88|Fulgor Alcove|treasure item:188054::::::::60:::27:3:6652:8108:1482:1:28:2057|\"Activate the Automa Console directly opposite of the Locus Shift to spawn a Progenitor Orb that can carry you to the treasure\"||Contains|!{4096872} [rare]Antecedent Drape]|!{4381149} [legendary]Cosmic Flux] (200)",
 		},
 		[65567] = {
-			"Rondure Cache|60+ 64953 64952 65328 -65345|10 88|Rondure Alcove|treasure locked item:190096|\"Retrieve the Rondure Alcove Arrangement to unlock the Locus Shift to this location.\"||Contains|!{2061718} [rare]Pocobold]|!{/Random} [epic]Random Cypher Equipment]|!{4381149} [legendary]Cosmic Flux] (200)",
+			"Rondure Cache|60+ 64953 64952 65328 -65345|10 88|Rondure Alcove|treasure atlas:vignetteloot-locked item:190096|\"Retrieve the Rondure Alcove Arrangement to unlock the Locus Shift to this location.\"||Contains|!{2061718} [rare]Pocobold]|!{/Random} [epic]Random Cypher Equipment]|!{4381149} [legendary]Cosmic Flux] (200)",
 			"Rondure Cache|60+ 64953 64952 65328 65345|10 88|Rondure Alcove|treasure item:190096|\"A diabolical jumping puzzle. Having any sort of movement speed increase usually makes it more difficult.\"||Contains|!{2061718} [rare]Pocobold]|!{/Random} [epic]Random Cypher Equipment]|!{4381149} [legendary]Cosmic Flux] (200)",
 		},
 		[65348] = {
-			"Protoform Schematic|60+ 64953 64952 65419 65328 -65345 -item:189440|12.5 88|Rondure Alcove|treasure locked item:189440|\"Retrieve the Rondure Alcove Arrangement to unlock the Locus Shift to this location.\"||Contains|!{4217590} [rare]Schematic: Omnipotential Core]",
+			"Protoform Schematic|60+ 64953 64952 65419 65328 -65345 -item:189440|12.5 88|Rondure Alcove|treasure atlas:vignetteloot-locked item:189440|\"Retrieve the Rondure Alcove Arrangement to unlock the Locus Shift to this location.\"||Contains|!{4217590} [rare]Schematic: Omnipotential Core]",
 			"Protoform Schematic|60+ 64953 64952 65419 65328 65345 -item:189440|12.5 88|Rondure Alcove|treasure scroll item:189440|\"Hidden on top of the large arch near one of the walls.\"||Contains|!{4217590} [rare]Schematic: Omnipotential Core]",
 		},
 		-- Rondure Cache 65567
 		-- Schematic: Omnipotential Core 65348
 
 		[65498] = {
-			"Misshapen Sand Pile|60+ 64953 64952 65328 -65346 -item:189863|10 40|Dormant Alcove|treasure locked|\"Retrieve the Dormant Arrangement to unlock the Locus Shift to this location.\"||Requires|!{4038106} [red]Spatial Opener]||Contains|!{/Random} [epic]Random Cypher Trinket (242+)]|!{4381149} [legendary]Cosmic Flux] (200)",
-			"Misshapen Sand Pile|60+ 64953 64952 65328 65346 -item:189863|10 40|Dormant Alcove|treasure locked|Requires|!{4038106} [red]Spatial Opener]||Contains|!{/Random} [epic]Random Cypher Trinket (242+)]|!{4381149} [legendary]Cosmic Flux] (200)",
-			"Misshapen Sand Pile|60+ 64953 64952 65328 -65346 item:189863|10 40|Dormant Alcove|treasure locked|\"Retrieve the Dormant Arrangement to unlock the Locus Shift to this location.\"||Requires|!{4038106} [green]Spatial Opener]||Contains|!{/Random} [epic]Random Cypher Trinket (242+)]|!{4381149} [legendary]Cosmic Flux] (200)",
+			"Misshapen Sand Pile|60+ 64953 64952 65328 -65346 -item:189863|10 40|Dormant Alcove|treasure atlas:vignetteloot-locked|\"Retrieve the Dormant Arrangement to unlock the Locus Shift to this location.\"||Requires|!{4038106} [red]Spatial Opener]||Contains|!{/Random} [epic]Random Cypher Trinket (242+)]|!{4381149} [legendary]Cosmic Flux] (200)",
+			"Misshapen Sand Pile|60+ 64953 64952 65328 65346 -item:189863|10 40|Dormant Alcove|treasure atlas:vignetteloot-locked|Requires|!{4038106} [red]Spatial Opener]||Contains|!{/Random} [epic]Random Cypher Trinket (242+)]|!{4381149} [legendary]Cosmic Flux] (200)",
+			"Misshapen Sand Pile|60+ 64953 64952 65328 -65346 item:189863|10 40|Dormant Alcove|treasure atlas:vignetteloot-locked|\"Retrieve the Dormant Arrangement to unlock the Locus Shift to this location.\"||Requires|!{4038106} [green]Spatial Opener]||Contains|!{/Random} [epic]Random Cypher Trinket (242+)]|!{4381149} [legendary]Cosmic Flux] (200)",
 			"Misshapen Sand Pile|60+ 64953 64952 65328 65346 item:189863|10 40|Dormant Alcove|treasure|Requires|!{4038106} [green]Spatial Opener]||Contains|!{/Random} [epic]Random Cypher Trinket (242+)]|!{4381149} [legendary]Cosmic Flux] (200)",
 		},
 		[65499] = {
-			"Sparkling Sand Pile|60+ 64953 64952 65328 -65346 -item:189863|12.5 40|Dormant Alcove|treasure locked item:190374::::::::60::::1:0|\"Retrieve the Dormant Arrangement to unlock the Locus Shift to this location.\"||Requires|!{4038106} [red]Spatial Opener]||Contains|!{237185} [epic]Gemstone of Prismatic Brilliance]|!{4381149} [legendary]Cosmic Flux] (200)",
-			"Sparkling Sand Pile|60+ 64953 64952 65328 65346 -item:189863|12.5 40|Dormant Alcove|treasure locked item:190374::::::::60::::1:0|Requires|!{4038106} [red]Spatial Opener]||Contains|!{237185} [epic]Gemstone of Prismatic Brilliance]|!{4381149} [legendary]Cosmic Flux] (200)",
-			"Sparkling Sand Pile|60+ 64953 64952 65328 -65346 item:189863|12.5 40|Dormant Alcove|treasure locked item:190374::::::::60::::1:0|\"Retrieve the Dormant Arrangement to unlock the Locus Shift to this location.\"||Requires|!{4038106} [green]Spatial Opener]||Contains|!{237185} [epic]Gemstone of Prismatic Brilliance]|!{4381149} [legendary]Cosmic Flux] (200)",
+			"Sparkling Sand Pile|60+ 64953 64952 65328 -65346 -item:189863|12.5 40|Dormant Alcove|treasure atlas:vignetteloot-locked item:190374::::::::60::::1:0|\"Retrieve the Dormant Arrangement to unlock the Locus Shift to this location.\"||Requires|!{4038106} [red]Spatial Opener]||Contains|!{237185} [epic]Gemstone of Prismatic Brilliance]|!{4381149} [legendary]Cosmic Flux] (200)",
+			"Sparkling Sand Pile|60+ 64953 64952 65328 65346 -item:189863|12.5 40|Dormant Alcove|treasure atlas:vignetteloot-locked item:190374::::::::60::::1:0|Requires|!{4038106} [red]Spatial Opener]||Contains|!{237185} [epic]Gemstone of Prismatic Brilliance]|!{4381149} [legendary]Cosmic Flux] (200)",
+			"Sparkling Sand Pile|60+ 64953 64952 65328 -65346 item:189863|12.5 40|Dormant Alcove|treasure atlas:vignetteloot-locked item:190374::::::::60::::1:0|\"Retrieve the Dormant Arrangement to unlock the Locus Shift to this location.\"||Requires|!{4038106} [green]Spatial Opener]||Contains|!{237185} [epic]Gemstone of Prismatic Brilliance]|!{4381149} [legendary]Cosmic Flux] (200)",
 			"Sparkling Sand Pile|60+ 64953 64952 65328 65346 item:189863|12.5 40|Dormant Alcove|treasure item:190374::::::::60::::1:0|Requires|!{4038106} [green]Spatial Opener]||Contains|!{237185} [epic]Gemstone of Prismatic Brilliance]|!{4381149} [legendary]Cosmic Flux] (200)",
 		},
 		[65494] = {
-			"Lumpy Sand Pile|60+ 64953 64952 65328 -65346 -item:189863|10 43.5|Dormant Alcove|treasure locked item:188045::::::::60::::2:1492:8093|\"Retrieve the Dormant Arrangement to unlock the Locus Shift to this location.\"||Requires|!{4038106} [red]Spatial Opener]||Contains|!{3950347} [epic]Salvaged Viperid Band]|!{4381149} [legendary]Cosmic Flux] (200)",
-			"Lumpy Sand Pile|60+ 64953 64952 65328 65346 -item:189863|10 43.5|Dormant Alcove|treasure locked item:188045::::::::60::::2:1492:8093|Requires|!{4038106} [red]Spatial Opener]||Contains|!{3950347} [epic]Salvaged Viperid Band]|!{4381149} [legendary]Cosmic Flux] (200)",
-			"Lumpy Sand Pile|60+ 64953 64952 65328 -65346 item:189863|10 43.5|Dormant Alcove|treasure locked item:188045::::::::60::::2:1492:8093|\"Retrieve the Dormant Arrangement to unlock the Locus Shift to this location.\"||Requires|!{4038106} [green]Spatial Opener]||Contains|!{3950347} [epic]Salvaged Viperid Band]|!{4381149} [legendary]Cosmic Flux] (200)",
+			"Lumpy Sand Pile|60+ 64953 64952 65328 -65346 -item:189863|10 43.5|Dormant Alcove|treasure atlas:vignetteloot-locked item:188045::::::::60::::2:1492:8093|\"Retrieve the Dormant Arrangement to unlock the Locus Shift to this location.\"||Requires|!{4038106} [red]Spatial Opener]||Contains|!{3950347} [epic]Salvaged Viperid Band]|!{4381149} [legendary]Cosmic Flux] (200)",
+			"Lumpy Sand Pile|60+ 64953 64952 65328 65346 -item:189863|10 43.5|Dormant Alcove|treasure atlas:vignetteloot-locked item:188045::::::::60::::2:1492:8093|Requires|!{4038106} [red]Spatial Opener]||Contains|!{3950347} [epic]Salvaged Viperid Band]|!{4381149} [legendary]Cosmic Flux] (200)",
+			"Lumpy Sand Pile|60+ 64953 64952 65328 -65346 item:189863|10 43.5|Dormant Alcove|treasure atlas:vignetteloot-locked item:188045::::::::60::::2:1492:8093|\"Retrieve the Dormant Arrangement to unlock the Locus Shift to this location.\"||Requires|!{4038106} [green]Spatial Opener]||Contains|!{3950347} [epic]Salvaged Viperid Band]|!{4381149} [legendary]Cosmic Flux] (200)",
 			"Lumpy Sand Pile|60+ 64953 64952 65328 65346 item:189863|10 43.5|Dormant Alcove|treasure item:188045::::::::60::::2:1492:8093|Requires|!{4038106} [green]Spatial Opener]||Contains|!{3950347} [epic]Salvaged Viperid Band]|!{4381149} [legendary]Cosmic Flux] (200)",
 		},
 		[65495] = {
-			"Glinting Sand Pile|60+ 64953 64952 65328 -65346 -item:189863|12.5 43.5|Dormant Alcove|treasure locked item:188055::::::::60::::2:1492:8093|\"Retrieve the Dormant Arrangement to unlock the Locus Shift to this location.\"||Requires|!{4038106} [red]Spatial Opener]||Contains|!{3950354} [epic]Impossibly Ancient Band]|!{4381149} [legendary]Cosmic Flux] (200)",
-			"Glinting Sand Pile|60+ 64953 64952 65328 65346 -item:189863|12.5 43.5|Dormant Alcove|treasure locked item:188055::::::::60::::2:1492:8093|Requires|!{4038106} [red]Spatial Opener]||Contains|!{3950354} [epic]Impossibly Ancient Band]|!{4381149} [legendary]Cosmic Flux] (200)",
-			"Glinting Sand Pile|60+ 64953 64952 65328 -65346 item:189863|12.5 43.5|Dormant Alcove|treasure locked item:188055::::::::60::::2:1492:8093|\"Retrieve the Dormant Arrangement to unlock the Locus Shift to this location.\"||Requires|!{4038106} [green]Spatial Opener]||Contains|!{3950354} [epic]Impossibly Ancient Band]|!{4381149} [legendary]Cosmic Flux] (200)",
+			"Glinting Sand Pile|60+ 64953 64952 65328 -65346 -item:189863|12.5 43.5|Dormant Alcove|treasure atlas:vignetteloot-locked item:188055::::::::60::::2:1492:8093|\"Retrieve the Dormant Arrangement to unlock the Locus Shift to this location.\"||Requires|!{4038106} [red]Spatial Opener]||Contains|!{3950354} [epic]Impossibly Ancient Band]|!{4381149} [legendary]Cosmic Flux] (200)",
+			"Glinting Sand Pile|60+ 64953 64952 65328 65346 -item:189863|12.5 43.5|Dormant Alcove|treasure atlas:vignetteloot-locked item:188055::::::::60::::2:1492:8093|Requires|!{4038106} [red]Spatial Opener]||Contains|!{3950354} [epic]Impossibly Ancient Band]|!{4381149} [legendary]Cosmic Flux] (200)",
+			"Glinting Sand Pile|60+ 64953 64952 65328 -65346 item:189863|12.5 43.5|Dormant Alcove|treasure atlas:vignetteloot-locked item:188055::::::::60::::2:1492:8093|\"Retrieve the Dormant Arrangement to unlock the Locus Shift to this location.\"||Requires|!{4038106} [green]Spatial Opener]||Contains|!{3950354} [epic]Impossibly Ancient Band]|!{4381149} [legendary]Cosmic Flux] (200)",
 			"Glinting Sand Pile|60+ 64953 64952 65328 65346 item:189863|12.5 43.5|Dormant Alcove|treasure item:188055::::::::60::::2:1492:8093|Requires|!{4038106} [green]Spatial Opener]||Contains|!{3950354} [epic]Impossibly Ancient Band]|!{4381149} [legendary]Cosmic Flux] (200)",
 		},
 		[65497] = {
-			"Humming Sand Pile|60+ 64953 64952 65328 -65346 -item:189863|10 47|Dormant Alcove|treasure locked item:188053::::::::60::::2:1492:8093|\"Retrieve the Dormant Arrangement to unlock the Locus Shift to this location.\"||Requires|!{4038106} [red]Spatial Opener]||Contains|!{3950351} [epic]Abandoned Automa Loop]|!{4381149} [legendary]Cosmic Flux] (200)",
-			"Humming Sand Pile|60+ 64953 64952 65328 65346 -item:189863|10 47|Dormant Alcove|treasure locked item:188053::::::::60::::2:1492:8093|Requires|!{4038106} [red]Spatial Opener]||Contains|!{3950351} [epic]Abandoned Automa Loop]|!{4381149} [legendary]Cosmic Flux] (200)",
-			"Humming Sand Pile|60+ 64953 64952 65328 -65346 item:189863|10 47|Dormant Alcove|treasure locked item:188053::::::::60::::2:1492:8093|\"Retrieve the Dormant Arrangement to unlock the Locus Shift to this location.\"||Requires|!{4038106} [green]Spatial Opener]||Contains|!{3950351} [epic]Abandoned Automa Loop]|!{4381149} [legendary]Cosmic Flux] (200)",
+			"Humming Sand Pile|60+ 64953 64952 65328 -65346 -item:189863|10 47|Dormant Alcove|treasure atlas:vignetteloot-locked item:188053::::::::60::::2:1492:8093|\"Retrieve the Dormant Arrangement to unlock the Locus Shift to this location.\"||Requires|!{4038106} [red]Spatial Opener]||Contains|!{3950351} [epic]Abandoned Automa Loop]|!{4381149} [legendary]Cosmic Flux] (200)",
+			"Humming Sand Pile|60+ 64953 64952 65328 65346 -item:189863|10 47|Dormant Alcove|treasure atlas:vignetteloot-locked item:188053::::::::60::::2:1492:8093|Requires|!{4038106} [red]Spatial Opener]||Contains|!{3950351} [epic]Abandoned Automa Loop]|!{4381149} [legendary]Cosmic Flux] (200)",
+			"Humming Sand Pile|60+ 64953 64952 65328 -65346 item:189863|10 47|Dormant Alcove|treasure atlas:vignetteloot-locked item:188053::::::::60::::2:1492:8093|\"Retrieve the Dormant Arrangement to unlock the Locus Shift to this location.\"||Requires|!{4038106} [green]Spatial Opener]||Contains|!{3950351} [epic]Abandoned Automa Loop]|!{4381149} [legendary]Cosmic Flux] (200)",
 			"Humming Sand Pile|60+ 64953 64952 65328 65346 item:189863|10 47|Dormant Alcove|treasure item:188053::::::::60::::2:1492:8093|Requires|!{4038106} [green]Spatial Opener]||Contains|!{3950351} [epic]Abandoned Automa Loop]|!{4381149} [legendary]Cosmic Flux] (200)",
 		},
 		[65496] = {
-			"Shifting Sand Pile|60+ 64953 64952 65328 -65346 -item:189863|12.5 47|Dormant Alcove|treasure locked item:188044::::::::60::::2:1492:8093|\"Retrieve the Dormant Arrangement to unlock the Locus Shift to this location.\"||Requires|!{4038106} [red]Spatial Opener]||Contains|!{3536115} [epic]Discarded Cartel Al Signet]|!{4381149} [legendary]Cosmic Flux] (200)",
-			"Shifting Sand Pile|60+ 64953 64952 65328 65346 -item:189863|12.5 47|Dormant Alcove|treasure locked item:188044::::::::60::::2:1492:8093|Requires|!{4038106} [red]Spatial Opener]||Contains|!{3536115} [epic]Discarded Cartel Al Signet]|!{4381149} [legendary]Cosmic Flux] (200)",
-			"Shifting Sand Pile|60+ 64953 64952 65328 -65346 item:189863|12.5 47|Dormant Alcove|treasure locked item:188044::::::::60::::2:1492:8093|\"Retrieve the Dormant Arrangement to unlock the Locus Shift to this location.\"||Requires|!{4038106} [green]Spatial Opener]||Contains|!{3536115} [epic]Discarded Cartel Al Signet]|!{4381149} [legendary]Cosmic Flux] (200)",
+			"Shifting Sand Pile|60+ 64953 64952 65328 -65346 -item:189863|12.5 47|Dormant Alcove|treasure atlas:vignetteloot-locked item:188044::::::::60::::2:1492:8093|\"Retrieve the Dormant Arrangement to unlock the Locus Shift to this location.\"||Requires|!{4038106} [red]Spatial Opener]||Contains|!{3536115} [epic]Discarded Cartel Al Signet]|!{4381149} [legendary]Cosmic Flux] (200)",
+			"Shifting Sand Pile|60+ 64953 64952 65328 65346 -item:189863|12.5 47|Dormant Alcove|treasure atlas:vignetteloot-locked item:188044::::::::60::::2:1492:8093|Requires|!{4038106} [red]Spatial Opener]||Contains|!{3536115} [epic]Discarded Cartel Al Signet]|!{4381149} [legendary]Cosmic Flux] (200)",
+			"Shifting Sand Pile|60+ 64953 64952 65328 -65346 item:189863|12.5 47|Dormant Alcove|treasure atlas:vignetteloot-locked item:188044::::::::60::::2:1492:8093|\"Retrieve the Dormant Arrangement to unlock the Locus Shift to this location.\"||Requires|!{4038106} [green]Spatial Opener]||Contains|!{3536115} [epic]Discarded Cartel Al Signet]|!{4381149} [legendary]Cosmic Flux] (200)",
 			"Shifting Sand Pile|60+ 64953 64952 65328 65346 item:189863|12.5 47|Dormant Alcove|treasure item:188044::::::::60::::2:1492:8093|Requires|!{4038106} [green]Spatial Opener]||Contains|!{3536115} [epic]Discarded Cartel Al Signet]|!{4381149} [legendary]Cosmic Flux] (200)",
 		},
 		[65500] = {
-			"Ticking Sand Pile|60+ 64953 64952 65328 -65346 -item:189863|10 50.5|Dormant Alcove|treasure locked item:188106::::::::60::::2:1492:8093|\"Retrieve the Dormant Arrangement to unlock the Locus Shift to this location.\"||Requires|!{4038106} [red]Spatial Opener]||Contains|!{3950338} [epic]Unfathomable Pendant]|!{4381149} [legendary]Cosmic Flux] (200)",
-			"Ticking Sand Pile|60+ 64953 64952 65328 65346 -item:189863|10 50.5|Dormant Alcove|treasure locked item:188106::::::::60::::2:1492:8093|Requires|!{4038106} [red]Spatial Opener]||Contains|!{3950338} [epic]Unfathomable Pendant]|!{4381149} [legendary]Cosmic Flux] (200)",
-			"Ticking Sand Pile|60+ 64953 64952 65328 -65346 item:189863|10 50.5|Dormant Alcove|treasure locked item:188106::::::::60::::2:1492:8093|\"Retrieve the Dormant Arrangement to unlock the Locus Shift to this location.\"||Requires|!{4038106} [green]Spatial Opener]||Contains|!{3950338} [epic]Unfathomable Pendant]|!{4381149} [legendary]Cosmic Flux] (200)",
+			"Ticking Sand Pile|60+ 64953 64952 65328 -65346 -item:189863|10 50.5|Dormant Alcove|treasure atlas:vignetteloot-locked item:188106::::::::60::::2:1492:8093|\"Retrieve the Dormant Arrangement to unlock the Locus Shift to this location.\"||Requires|!{4038106} [red]Spatial Opener]||Contains|!{3950338} [epic]Unfathomable Pendant]|!{4381149} [legendary]Cosmic Flux] (200)",
+			"Ticking Sand Pile|60+ 64953 64952 65328 65346 -item:189863|10 50.5|Dormant Alcove|treasure atlas:vignetteloot-locked item:188106::::::::60::::2:1492:8093|Requires|!{4038106} [red]Spatial Opener]||Contains|!{3950338} [epic]Unfathomable Pendant]|!{4381149} [legendary]Cosmic Flux] (200)",
+			"Ticking Sand Pile|60+ 64953 64952 65328 -65346 item:189863|10 50.5|Dormant Alcove|treasure atlas:vignetteloot-locked item:188106::::::::60::::2:1492:8093|\"Retrieve the Dormant Arrangement to unlock the Locus Shift to this location.\"||Requires|!{4038106} [green]Spatial Opener]||Contains|!{3950338} [epic]Unfathomable Pendant]|!{4381149} [legendary]Cosmic Flux] (200)",
 			"Ticking Sand Pile|60+ 64953 64952 65328 65346 item:189863|10 50.5|Dormant Alcove|treasure item:188106::::::::60::::2:1492:8093|Requires|!{4038106} [green]Spatial Opener]||Contains|!{3950338} [epic]Unfathomable Pendant]|!{4381149} [legendary]Cosmic Flux] (200)",
 		},
 		-- Lumpy 65494
@@ -441,7 +478,7 @@ Data.Vignettes = {
 	[896] = {
 		-- Treasure
 		[53356] = "Web-Covered Chest|10+|33.71 30.08||treasure|Contains|!{2032600} [War Resources]",
-		[53357] = {"Merchant's Chest|10+ item:163710|25.75 19.94|\"Nearby Gorging Ravens have a chance to drop the key\"|treasure|Requires|!{136058} [green]Merchant's Key]||Contains|!{2004597} [Polished Pet Charm] (5)|!{2032600} [War Resources]", "Merchant's Chest|10+ -item:163710|25.75 19.94|\"Nearby Gorging Ravens have a chance to drop the key\"|treasure locked|Requires|!{136058} [red]Merchant's Key]||Contains|!{2004597} [Polished Pet Charm] (5)|!{2032600} [War Resources]",},
+		[53357] = {"Merchant's Chest|10+ item:163710|25.75 19.94|\"Nearby Gorging Ravens have a chance to drop the key\"|treasure|Requires|!{136058} [green]Merchant's Key]||Contains|!{2004597} [Polished Pet Charm] (5)|!{2032600} [War Resources]", "Merchant's Chest|10+ -item:163710|25.75 19.94|\"Nearby Gorging Ravens have a chance to drop the key\"|treasure atlas:vignetteloot-locked|Requires|!{136058} [red]Merchant's Key]||Contains|!{2004597} [Polished Pet Charm] (5)|!{2032600} [War Resources]",},
 		[53385] = "Runebound Cache|10+|63.3 65.85||treasure item:163743|Unlock Sequence|!{1323037} [spell]Left]|!{1323035} [spell]Bottom]|!{1323038} [spell]Top]|!{1323039} [spell]Right]||Contains|!{896907} [rare]Drust Soulcatcher]|!{2032600} [War Resources]",
 		[53386] = "Runebound Chest|10+|44.22 27.7||treasure item:163742|Unlock Sequence|!{1323038} [spell]Left]|!{1323037} [spell]Right]|!{1323035} [spell]Bottom]|!{1323039} [spell]Top]||Contains|!{2101967} [rare]Heartsbane Grimoire]|!{2032600} [War Resources]",
 		[53387] = "Runebound Coffer|10+|33.69 71.73||treasure item:163740|Unlock Sequence|!{1323035} [spell]Right]|!{1323039} [spell]Top]|!{1323038} [spell]Left]|!{1323037} [spell]Bottom]||Contains|!{940537} [rare]Drust Ritual Knife]|!{2032600} [War Resources]",
