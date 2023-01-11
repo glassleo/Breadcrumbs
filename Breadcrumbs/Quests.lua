@@ -731,7 +731,7 @@ Data.Quests = {
 		-- 70872 hidden weekly lockout
 		[70877] = "A Quack in Time|60+ 66196 -70872|80.09 39.88|Bubbled Duckling",
 		[70917] = "A Shoulder to Quack On|60+ 70877 -70872|81.6 45.45|Bubbled Duckling",
-		[70918] = "Quack for Your Life|60+ 70917 -70872|79.33 42.77|Bubbled Duckling", -- confirm coords
+		[70918] = "Quack for Your Life|60+ 70917 -70872|79.33 42.76|Bubbled Duckling",
 		[70919] = "Quacking Out for a Hero|60+ 70918 -70872|82.83 42.64|Bubbled Duckling", -- confirm coords
 
 		-- Ruby Lifecalling
