@@ -1594,9 +1594,9 @@ function Breadcrumbs:Validate(str)
 					if v == "mailbox" and Setting_EnableMailboxes then pass = true end
 
 					-- Must not match...
-					if string.match(v, "%-(.+)") and not pass then
+					if string.match(v, "%-(%a+)") and not pass then
 						pass = true -- We invert our logic
-						local w = string.gsub(v, "%-(.+)", "%1")
+						local w = string.gsub(v, "%-(%a+)", "%1")
 
 						-- -active:n
 						if string.match(w, "^active:(%d+)$") and C_TaskQuest.IsActive(tonumber(string.match(w, "active:(%d+)") or 0)) then pass = false end
