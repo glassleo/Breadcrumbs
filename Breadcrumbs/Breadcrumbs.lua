@@ -35,286 +35,23 @@ local Setting_Debug_QuestListener = true
 -- Constants
 local CHROMIETIME_MAXLEVEL = 60 -- Maximum level for Chromie Time
 
+local SkillLineToKeyword = {
+	[164] = "blacksmithing",
+	[165] = "leatherworking",
+	[171] = "alchemy",
+	[182] = "herbalism",
+	[185] = "cooking",
+	[186] = "mining",
+	[197] = "tailoring",
+	[202] = "engineering",
+	[333] = "enchanting",
+	[356] = "fishing",
+	[393] = "skinning",
+	[755] = "jewelcrafting",
+	[773] = "inscription",
+	[794] = "archaeology",
+}
 
--- Debug
-local Debug_CharacterQuestCache = nil
-
-
--- Frame recycling pool
-local MapPool = {}
-local MapPoolBeans = 0
-
-local function RecycleAllPins()
-	if MapPoolBeans > 0 then
-		for i = 1, MapPoolBeans do
-			local Pin = _G["BreadcrumbsMapPin"..i]
-			
-			Pin:SetParent(WorldMapFrame)
-			Pin:SetPoint("CENTER", WorldMapFrame)
-			Pin.Arrow:SetDesaturated(false)
-			Pin.Arrow:SetTexture("Interface/AddOns/Breadcrumbs/Textures/Empty")
-			Pin.Arrow:Hide()
-			if Pin:GetNormalTexture() then
-				Pin:GetNormalTexture():SetDesaturated(false)
-				Pin:GetNormalTexture():SetVertexColor(1, 1, 1)
-				Pin:GetNormalTexture():SetTexCoord(0, 1, 0, 1)
-			end
-			Pin:SetNormalTexture("Interface/AddOns/Breadcrumbs/Textures/Empty")
-			if Pin:GetHighlightTexture() then
-				Pin:GetHighlightTexture():SetDesaturated(false)
-				Pin:GetHighlightTexture():SetVertexColor(1, 1, 1)
-				Pin:GetHighlightTexture():SetTexCoord(0, 1, 0, 1)
-			end
-			Pin:SetHighlightTexture("Interface/AddOns/Breadcrumbs/Textures/Empty")
-			Pin:UnregisterAllEvents()
-			Pin:SetScript("OnEnter", nil)
-			Pin:SetScript("OnLeave", nil)
-			Pin:SetScript("OnMouseUp", nil)
-			Pin:Hide()
-			MapPool[Pin] = true
-		end
-	end
-end
-
-local function NewPin()
-	local Pin = next(MapPool)
-
-	if Pin then
-		MapPool[Pin] = nil -- remove it from the pool
-		Pin:SetParent(WorldMapFrame)
-		Pin:ClearAllPoints()
-		return Pin
-	end
-
-	-- Create a new Pin frame
-	MapPoolBeans = MapPoolBeans + 1
-	Pin = CreateFrame("Button", "BreadcrumbsMapPin"..MapPoolBeans, WorldMapFrame)
-
-	local Arrow = Pin:CreateTexture(nil, "OVERLAY")
-	Pin.Arrow = Arrow
-	Arrow:SetPoint("CENTER", Pin)
-	Arrow:Hide()
-
-	return Pin
-end
-
-
--- Item Tooltip
-local ItemTooltip = _G["BreadcrumbsItemTooltip"]
-if not ItemTooltip then
-    ItemTooltip = CreateFrame("GameTooltip", "BreadcrumbsItemTooltip", GameTooltip, "GameTooltipTemplate")
-end
-
-
--- Debug
-function Breadcrumbs:Debug_UpdateQuestCache()
-	verbose = verbose and true or false
-	local data = C_QuestLog.GetAllCompletedQuestIDs() or nil
-	local quests = {}
-	if type(data) == "table" and #data > 0 then
-		-- Rebuild the table
-		for i, id in pairs(data) do
-			quests[tonumber(id or 0)] = true
-		end
-
-		if type(Debug_CharacterQuestCache) == "table" then
-			for id, _ in pairs(quests) do
-				if not Debug_CharacterQuestCache[id] then
-					local name, atlas, color = Breadcrumbs:GetQuestName(id)
-					print("|cffffd100Quest completed:|r", "|cff71d5ff"..id.."|r", CreateAtlasMarkup(atlas or "QuestTrivial"), "|cff" .. color .. name .. "|r")
-				end
-			end
-
-			for id, _ in pairs(Debug_CharacterQuestCache) do
-				if not quests[id] then
-					local name, atlas, color = Breadcrumbs:GetQuestName(id)
-					print("|cffff2020Quest flagged incomplete:|r", "|cff71d5ff"..id.."|r", CreateAtlasMarkup(atlas or "QuestTrivial"), "|cff" .. color .. name .. "|r")
-				end
-			end
-		end
-
-		Debug_CharacterQuestCache = quests
-	end
-end
-
-function Breadcrumbs:GetQuestName(id)
-	id = tonumber(id or 0) or 0
-
-	if Data.Quests then
-		for map, zone in pairs(Data.Quests) do
-			if zone[id] then
-				local name, _, _, _, flags = strsplit("|", (type(zone[id]) == "string") and zone[id] or (type(zone[id][1]) == "string") and zone[id][1] or "")
-				if flags then
-					flags = { strsplit(" ", flags) }
-					for _, v in ipairs(flags) do flags[v] = true end
-				else
-					flags = {}
-				end
-				return name, flags["campaign"] and (flags["daily"] and "Quest-DailyCampaign-Available" or "Quest-Campaign-Available") or flags["legendary"] and "QuestLegendary" or flags["artifact"] and "QuestLegendary" or flags["daily"] and "QuestDaily" or "QuestNormal", flags["legendary"] and "ff8000" or flags["artifact"] and "ff8000" or "ffd100"
-			end
-		end
-	end
-
-	if Data.Vignettes then
-		for map, zone in pairs(Data.Vignettes) do
-			if zone[id] then
-				local name, _, _, _, flags = strsplit("|", (type(zone[id]) == "string") and zone[id] or (type(zone[id][1]) == "string") and zone[id][1] or "")
-				if flags then
-					flags = { strsplit(" ", flags) }
-					for _, v in ipairs(flags) do flags[v] = true end
-				else
-					flags = {}
-				end
-				return name, flags["treasure"] and "VignetteLoot" or "VignetteEvent", flags["legendary"] and "ff8000" or "ffd100"
-			end
-		end
-	end
-
-	-- name, atlas, color
-	return "(Unknown)", "TrivialQuests", "808080"
-end
-
-
--- Initialization
-function Breadcrumbs:OnInitialize()
-	if not BreadcrumbsQuestHistory then BreadcrumbsQuestHistory = {} end
-	if not BreadcrumbsSkillLines then BreadcrumbsSkillLines = {} end
-
-	if Setting_DisableStorylineQuestDataProvider then
-		-- Remove StorylineQuestDataProvider
-		for provider in next, WorldMapFrame.dataProviders do
-		    if(provider.RequestQuestLinesForMap) then
-		    	WorldMapFrame:RemoveDataProvider(provider)
-		    end
-		end
-	end
-end
-
-function Breadcrumbs:OnEnable()
-	Breadcrumbs:UpdateMap()
-
-	if TipTac then -- Let TipTac skin our tooltips
-		TipTac:AddModifiedTip("BreadcrumbsItemTooltip", true)
-	end
-end
---/run for o, _ in pairs(WorldMapFrame.pinPools["BonusObjectivePinTemplate"].activeObjects) do for k, v in pairs(o) do if k == "questID" and v == 64641 then WorldMapFrame:RemovePin(o) end end end
-
-
--- Fix Bonus Objectives
-function Breadcrumbs:FixBonusObjectives()
-	-- Attempt to fix the Blizzard map bug preventing Legion leveling bonus objectives from hiding properly at level 60+
-	if not WorldMapFrame then return end
-
-	-- We don't want to unregister the entire Data Provider since that would mess up bonus objectives on other maps
-	-- Instead we'll just hide all the BonusObjectivePinTemplate pins for specific zones
-	local map = WorldMapFrame:GetMapID() or 0
-	if (UnitLevel("player") or 1) >= 60 and (map == 630 or map == 641 or map == 650 or map == 657 or map == 634) then
-		-- Azsuna, Val'sharah, Highmountain, Neltharion's Vault, Stormheim
-		WorldMapFrame:RemoveAllPinsByTemplate("BonusObjectivePinTemplate")
-	elseif Setting_DisableStorylineQuestDataProvider and Data and Data.HiddenBonusObjectiveQuests and WorldMapFrame:GetNumActivePinsByTemplate("BonusObjectivePinTemplate") >= 1 then
-		-- Remove specific quest pins
-		for Pin in WorldMapFrame:EnumeratePinsByTemplate("BonusObjectivePinTemplate") do
-			if Pin.questID and Data.HiddenBonusObjectiveQuests[Pin.questID] then
-				WorldMapFrame:RemovePin(Pin)
-			end
-		end
-	end
-end
-
-function Breadcrumbs:FixBonusObjectivesDelayed()
-	-- Ugly hack to prevent the Bonus Objective pins from reappearing after tracking a world quest
-	C_Timer.After(0.01, function() Breadcrumbs:FixBonusObjectives() end)
-end
-
-
--- Format Tooltip Text
-function Breadcrumbs:FormatTooltip(text, flags, varwrap)
-	local text = text or ""
-	local flags = flags or {}
-	local wrap = true
-
-	-- If the line begins with "!", it means wrapping should be disabled - remove the "!" and disable wrapping
-	if strsub(text, 1, 1) == "!" then
-		text = strsub(text, 2)
-		wrap = false
-	end
-
-	text = string.gsub(text, "{([%d]+)}", "|T%1:18:18|t") -- texture id
-	text = string.gsub(text, "{(Interface/)([%w%p]+)}", "|T%1%2:16:16|t") -- texture path
-	text = string.gsub(text, "{(/)([%w%p]+)}", "|TInterface/AddOns/Breadcrumbs/Textures/%2:16:16|t") -- relative texture path
-	text = string.gsub(text, "{!}", CreateAtlasMarkup(flags["warboard"] and "warboard" or flags["artifact"] and "questartifact" or flags["legendary"] and "questlegendary" or flags["campaign"] and "quest-campaign-available" or flags["dailycampaign"] and "quest-dailycampaign-available" or flags["daily"] and "questdaily" or "questnormal")) -- !
-	text = string.gsub(text, "{([%w%p]+)}", CreateAtlasMarkup("%1")) -- atlas
-	text = string.gsub(text, "%[Auto Accept", "|cff00ff00Auto Accept") -- Auto Accept green
-	text = string.gsub(text, "%[hasitem:([%d]+):([%d]+)%]", function(item, count)
-		item = tonumber(item or 0) or 0
-		count = tonumber(count or 0) or 0
-		return (GetItemCount(item, true, false, true) >= count) and "|cff00ff00" or (GetItemCount(item, true, false, true) >= 1) and "|cffff6500" or "|cffff0000"
-	end)
-	text = string.gsub(text, "%[hasitem:([%d]+)%]", function(item)
-		item = tonumber(item or 0) or 0
-		return (GetItemCount(item, true, false, true) >= 1) and "|cff00ff00" or "|cffff0000"
-	end)
-	text = string.gsub(text, "<itemcount:([%d]+)>", function(item)
-		item = tonumber(item or 0) or 0
-		return tostring(GetItemCount(item, true, false, true) or 0)
-	end)
-	text = string.gsub(text, "%[friendly%]", "|cff1aff1a") -- friendly green
-	text = string.gsub(text, "%[green%]", "|cff00ff00") -- green
-	text = string.gsub(text, "%[neutral%]", "|cffffff00") -- neutral yellow
-	text = string.gsub(text, "%[yellow%]", "|cffffff00") -- yellow
-	text = string.gsub(text, "%[unfriendly%]", "|cffee6622") -- unfriendly orange
-	text = string.gsub(text, "%[hostile%]", "|cffff0000") -- hostile red
-	text = string.gsub(text, "%[red%]", "|cffff0000") -- red
-	text = string.gsub(text, "%[poor%]", "|cff9d9d9d") -- poor grey
-	text = string.gsub(text, "%[dead%]", "|cff999999") -- dead grey
-	text = string.gsub(text, "%[uncommon%]", "|cff1eff00") -- uncommon green
-	text = string.gsub(text, "%[rare%]", "|cff0070dd") -- rare blue
-	text = string.gsub(text, "%[epic%]", "|cffa335ee") -- epic purple
-	text = string.gsub(text, "%[legendary%]", "|cffff8000") -- legendary orange
-	text = string.gsub(text, "%[artifact%]", "|cffe6cc80") -- artifact beige
-	text = string.gsub(text, "%[heirloom%]", "|cff00ccff") -- heirloom cyan
-	text = string.gsub(text, "%[spell%]", "|cff71d5ff") -- light blue used for spell links
-	text = string.gsub(text, "%[(%x%x%x%x%x%x)%]", "|cff%1") -- color
-	text = string.gsub(text, "%[", "|cffffffff") -- white
-	text = string.gsub(text, "%]", "|r") -- close color
-
-	if varwrap then -- Return all parameters for GameTooltip:AddLine if variable wrapping is wanted
-		return text, nil, nil, nil, wrap
-	else
-		return text
-	end
-end
-
-
--- Quest History
-function Breadcrumbs:UpdateQuestHistory(event, quest)
-	if not quest then return end
-
-	local name, realm = UnitFullName("player")
-	if not name or not realm then return end
-
-	if not BreadcrumbsQuestHistory[name.."-"..realm] then BreadcrumbsQuestHistory[name.."-"..realm] = {} end
-	BreadcrumbsQuestHistory[name.."-"..realm][quest] = time()
-end
-
-function Breadcrumbs:WasQuestCompletedToday(quest)
-	if not quest then return end
-
-	local name, realm = UnitFullName("player")
-	if not name or not realm then return end
-
-	if BreadcrumbsQuestHistory[name.."-"..realm] and BreadcrumbsQuestHistory[name.."-"..realm][quest] then
-		local today = time() + GetQuestResetTime() - 3600*24
-		if BreadcrumbsQuestHistory[name.."-"..realm][quest] >= today then
-			return true
-		end
-	end
-
-	return false
-end
-
-
--- Skill Lines
 local SkillLines = {
 	[164] = { -- Blacksmithing
 		[2477] = true, -- Classic
@@ -477,6 +214,293 @@ local SkillLines = {
 	},
 }
 
+
+-- Debug
+local Debug_CharacterQuestCache = nil
+
+
+-- Frame recycling pool
+local MapPool = {}
+local MapPoolBeans = 0
+
+local function RecycleAllPins()
+	if MapPoolBeans > 0 then
+		for i = 1, MapPoolBeans do
+			local Pin = _G["BreadcrumbsMapPin"..i]
+			
+			Pin:SetParent(WorldMapFrame)
+			Pin:SetPoint("CENTER", WorldMapFrame)
+			Pin.Arrow:SetDesaturated(false)
+			Pin.Arrow:SetTexture("Interface/AddOns/Breadcrumbs/Textures/Empty")
+			Pin.Arrow:Hide()
+			if Pin:GetNormalTexture() then
+				Pin:GetNormalTexture():SetDesaturated(false)
+				Pin:GetNormalTexture():SetVertexColor(1, 1, 1)
+				Pin:GetNormalTexture():SetTexCoord(0, 1, 0, 1)
+			end
+			Pin:SetNormalTexture("Interface/AddOns/Breadcrumbs/Textures/Empty")
+			if Pin:GetHighlightTexture() then
+				Pin:GetHighlightTexture():SetDesaturated(false)
+				Pin:GetHighlightTexture():SetVertexColor(1, 1, 1)
+				Pin:GetHighlightTexture():SetTexCoord(0, 1, 0, 1)
+			end
+			Pin:SetHighlightTexture("Interface/AddOns/Breadcrumbs/Textures/Empty")
+			Pin:UnregisterAllEvents()
+			Pin:SetScript("OnEnter", nil)
+			Pin:SetScript("OnLeave", nil)
+			Pin:SetScript("OnMouseUp", nil)
+			Pin:Hide()
+			MapPool[Pin] = true
+		end
+	end
+end
+
+local function NewPin()
+	local Pin = next(MapPool)
+
+	if Pin then
+		MapPool[Pin] = nil -- remove it from the pool
+		Pin:SetParent(WorldMapFrame)
+		Pin:ClearAllPoints()
+		return Pin
+	end
+
+	-- Create a new Pin frame
+	MapPoolBeans = MapPoolBeans + 1
+	Pin = CreateFrame("Button", "BreadcrumbsMapPin"..MapPoolBeans, WorldMapFrame)
+
+	local Arrow = Pin:CreateTexture(nil, "OVERLAY")
+	Pin.Arrow = Arrow
+	Arrow:SetPoint("CENTER", Pin)
+	Arrow:Hide()
+
+	return Pin
+end
+
+
+-- Item Tooltip
+local ItemTooltip = _G["BreadcrumbsItemTooltip"]
+if not ItemTooltip then
+    ItemTooltip = CreateFrame("GameTooltip", "BreadcrumbsItemTooltip", GameTooltip, "GameTooltipTemplate")
+end
+
+
+-- Debug
+function Breadcrumbs:Debug_UpdateQuestCache()
+	local data = C_QuestLog.GetAllCompletedQuestIDs() or nil
+	local quests = {}
+	if type(data) == "table" and #data > 0 then
+		-- Rebuild the table
+		for _, id in pairs(data) do
+			quests[id] = true
+		end
+
+		if type(Debug_CharacterQuestCache) == "table" then
+			for id, _ in pairs(quests) do
+				if not Debug_CharacterQuestCache[id] then
+					local name, atlas, color = Breadcrumbs:GetQuestName(id)
+					print("|cffffff00Quest completed:|r", "|cff71d5ff"..id.."|r", CreateAtlasMarkup(atlas or "QuestTrivial"), "|cff" .. color .. name .. "|r")
+				end
+			end
+
+			for id, _ in pairs(Debug_CharacterQuestCache) do
+				if not quests[id] then
+					local name, atlas, color = Breadcrumbs:GetQuestName(id)
+					print("|cffff2020Quest flagged incomplete:|r", "|cff71d5ff"..id.."|r", CreateAtlasMarkup(atlas or "QuestTrivial"), "|cff" .. color .. name .. "|r")
+				end
+			end
+		end
+
+		Debug_CharacterQuestCache = quests
+	end
+end
+
+function Breadcrumbs:GetQuestName(id)
+	id = tonumber(id or 0) or 0
+
+	if Data.Quests then
+		for map, zone in pairs(Data.Quests) do
+			if zone[id] then
+				local name, _, _, _, flags = strsplit("|", (type(zone[id]) == "string") and zone[id] or (type(zone[id][1]) == "string") and zone[id][1] or "")
+				if flags then
+					flags = { strsplit(" ", flags) }
+					for _, v in ipairs(flags) do flags[v] = true end
+				else
+					flags = {}
+				end
+				return name, flags["campaign"] and (flags["daily"] and "Quest-DailyCampaign-Available" or "Quest-Campaign-Available") or flags["legendary"] and "QuestLegendary" or flags["artifact"] and "QuestLegendary" or flags["daily"] and "QuestDaily" or "QuestNormal", flags["legendary"] and "ff8000" or flags["artifact"] and "ff8000" or "ffd100"
+			end
+		end
+	end
+
+	if Data.Vignettes then
+		for map, zone in pairs(Data.Vignettes) do
+			if zone[id] then
+				local name, _, _, _, flags = strsplit("|", (type(zone[id]) == "string") and zone[id] or (type(zone[id][1]) == "string") and zone[id][1] or "")
+				local flag_atlas = nil
+				if flags then
+					flags = { strsplit(" ", flags) }
+					for _, v in ipairs(flags) do
+						if string.match(v, "atlas:([%a%d%-_]+)") then
+							flag_atlas = string.match(v, "atlas:([%a%d%-_]+)")
+							flags["atlas"] = true
+						else
+							flags[v] = true
+						end
+					end
+				else
+					flags = {}
+				end
+				return name, flags["atlas"] and flag_atlas or flags["treasure"] and "VignetteLoot" or "VignetteEvent", flags["legendary"] and "ff8000" or "ffd100"
+			end
+		end
+	end
+
+	-- name, atlas, color
+	return "Unknown", "TrivialQuests", "808080"
+end
+
+
+-- Initialization
+function Breadcrumbs:OnInitialize()
+	if not BreadcrumbsQuestHistory then BreadcrumbsQuestHistory = {} end
+	if not BreadcrumbsSkillLines then BreadcrumbsSkillLines = {} end
+
+	if Setting_DisableStorylineQuestDataProvider then
+		-- Remove StorylineQuestDataProvider
+		for provider in next, WorldMapFrame.dataProviders do
+		    if(provider.RequestQuestLinesForMap) then
+		    	WorldMapFrame:RemoveDataProvider(provider)
+		    end
+		end
+	end
+end
+
+function Breadcrumbs:OnEnable()
+	Breadcrumbs:UpdateMap()
+
+	if TipTac then -- Let TipTac skin our tooltips
+		TipTac:AddModifiedTip("BreadcrumbsItemTooltip", true)
+	end
+end
+--/run for o, _ in pairs(WorldMapFrame.pinPools["BonusObjectivePinTemplate"].activeObjects) do for k, v in pairs(o) do if k == "questID" and v == 64641 then WorldMapFrame:RemovePin(o) end end end
+
+
+-- Fix Bonus Objectives
+function Breadcrumbs:FixBonusObjectives()
+	-- Attempt to fix the Blizzard map bug preventing Legion leveling bonus objectives from hiding properly at level 60+
+	if not WorldMapFrame then return end
+
+	-- We don't want to unregister the entire Data Provider since that would mess up bonus objectives on other maps
+	-- Instead we'll just hide all the BonusObjectivePinTemplate pins for specific zones
+	local map = WorldMapFrame:GetMapID() or 0
+	if (UnitLevel("player") or 1) >= CHROMIETIME_MAXLEVEL and (map == 630 or map == 641 or map == 650 or map == 657 or map == 634) then
+		-- Azsuna, Val'sharah, Highmountain, Neltharion's Vault, Stormheim
+		WorldMapFrame:RemoveAllPinsByTemplate("BonusObjectivePinTemplate")
+	elseif Setting_DisableStorylineQuestDataProvider and Data and Data.HiddenBonusObjectiveQuests and WorldMapFrame:GetNumActivePinsByTemplate("BonusObjectivePinTemplate") >= 1 then
+		-- Remove specific quest pins
+		for Pin in WorldMapFrame:EnumeratePinsByTemplate("BonusObjectivePinTemplate") do
+			if Pin.questID and Data.HiddenBonusObjectiveQuests[Pin.questID] then
+				WorldMapFrame:RemovePin(Pin)
+			end
+		end
+	end
+end
+
+function Breadcrumbs:FixBonusObjectivesDelayed()
+	-- Ugly hack to prevent the Bonus Objective pins from reappearing after tracking a world quest
+	C_Timer.After(0.01, function() Breadcrumbs:FixBonusObjectives() end)
+end
+
+
+-- Format Tooltip Text
+function Breadcrumbs:FormatTooltip(text, flags, varwrap)
+	local text = text or ""
+	local flags = flags or {}
+	local wrap = true
+
+	-- If the line begins with "!", it means wrapping should be disabled - remove the "!" and disable wrapping
+	if strsub(text, 1, 1) == "!" then
+		text = strsub(text, 2)
+		wrap = false
+	end
+
+	text = string.gsub(text, "{([%d]+)}", "|T%1:18:18|t") -- texture id
+	text = string.gsub(text, "{(Interface/)([%w%p]+)}", "|T%1%2:16:16|t") -- texture path
+	text = string.gsub(text, "{(/)([%w%p]+)}", "|TInterface/AddOns/Breadcrumbs/Textures/%2:16:16|t") -- relative texture path
+	text = string.gsub(text, "{!}", CreateAtlasMarkup(flags["warboard"] and "warboard" or flags["artifact"] and "questartifact" or flags["legendary"] and "questlegendary" or flags["campaign"] and "quest-campaign-available" or flags["dailycampaign"] and "quest-dailycampaign-available" or flags["daily"] and "questdaily" or "questnormal")) -- !
+	text = string.gsub(text, "{([%w%p]+)}", CreateAtlasMarkup("%1")) -- atlas
+	text = string.gsub(text, "%[Auto Accept", "|cff00ff00Auto Accept") -- Auto Accept green
+	text = string.gsub(text, "%[hasitem:([%d]+):([%d]+)%]", function(item, count)
+		item = tonumber(item or 0) or 0
+		count = tonumber(count or 0) or 0
+		return (GetItemCount(item, true, false, true) >= count) and "|cff00ff00" or (GetItemCount(item, true, false, true) >= 1) and "|cffff6500" or "|cffff0000"
+	end)
+	text = string.gsub(text, "%[hasitem:([%d]+)%]", function(item)
+		item = tonumber(item or 0) or 0
+		return (GetItemCount(item, true, false, true) >= 1) and "|cff00ff00" or "|cffff0000"
+	end)
+	text = string.gsub(text, "<itemcount:([%d]+)>", function(item)
+		item = tonumber(item or 0) or 0
+		return tostring(GetItemCount(item, true, false, true) or 0)
+	end)
+	text = string.gsub(text, "%[friendly%]", "|cff1aff1a") -- friendly green
+	text = string.gsub(text, "%[green%]", "|cff00ff00") -- green
+	text = string.gsub(text, "%[neutral%]", "|cffffff00") -- neutral yellow
+	text = string.gsub(text, "%[yellow%]", "|cffffff00") -- yellow
+	text = string.gsub(text, "%[unfriendly%]", "|cffee6622") -- unfriendly orange
+	text = string.gsub(text, "%[hostile%]", "|cffff0000") -- hostile red
+	text = string.gsub(text, "%[red%]", "|cffff0000") -- red
+	text = string.gsub(text, "%[poor%]", "|cff9d9d9d") -- poor grey
+	text = string.gsub(text, "%[dead%]", "|cff999999") -- dead grey
+	text = string.gsub(text, "%[uncommon%]", "|cff1eff00") -- uncommon green
+	text = string.gsub(text, "%[rare%]", "|cff0070dd") -- rare blue
+	text = string.gsub(text, "%[epic%]", "|cffa335ee") -- epic purple
+	text = string.gsub(text, "%[legendary%]", "|cffff8000") -- legendary orange
+	text = string.gsub(text, "%[artifact%]", "|cffe6cc80") -- artifact beige
+	text = string.gsub(text, "%[heirloom%]", "|cff00ccff") -- heirloom cyan
+	text = string.gsub(text, "%[spell%]", "|cff71d5ff") -- light blue used for spell links
+	text = string.gsub(text, "%[(%x%x%x%x%x%x)%]", "|cff%1") -- color
+	text = string.gsub(text, "%[", "|cffffffff") -- white
+	text = string.gsub(text, "%]", "|r") -- close color tag
+
+	if varwrap then -- Return all parameters for GameTooltip:AddLine if variable wrapping is desired
+		return text, nil, nil, nil, wrap
+	else
+		return text
+	end
+end
+
+
+-- Quest History
+function Breadcrumbs:UpdateQuestHistory(event, quest)
+	if not quest then return end
+
+	local name, realm = UnitFullName("player")
+	if not name or not realm then return end
+
+	if not BreadcrumbsQuestHistory[name.."-"..realm] then BreadcrumbsQuestHistory[name.."-"..realm] = {} end
+	BreadcrumbsQuestHistory[name.."-"..realm][quest] = time()
+end
+
+function Breadcrumbs:WasQuestCompletedToday(quest)
+	if not quest then return end
+
+	local name, realm = UnitFullName("player")
+	if not name or not realm then return end
+
+	if BreadcrumbsQuestHistory[name.."-"..realm] and BreadcrumbsQuestHistory[name.."-"..realm][quest] then
+		local today = time() + GetQuestResetTime() - 3600*24
+		if BreadcrumbsQuestHistory[name.."-"..realm][quest] >= today then
+			return true
+		end
+	end
+
+	return false
+end
+
+
+-- Skill Lines
 function Breadcrumbs:UpdateSkillLines(event, message)
 	local name, realm = UnitFullName("player")
 	if not name or not realm then return end
@@ -586,7 +610,7 @@ function Breadcrumbs:UpdateMap(event, ...)
 	local playerlevel = UnitLevel("player") or 1
 	local chromietime = false
 
-	if playerlevel < CHROMIETIME_MAXLEVEL then -- Chromie Time becomes unavailable at level 60
+	if playerlevel < CHROMIETIME_MAXLEVEL then
 		local options = C_ChromieTime.GetChromieTimeExpansionOptions()
 
 		if options then
@@ -1514,23 +1538,6 @@ Breadcrumbs:RegisterEvent("TRADE_SKILL_SHOW", "UpdateSkillLines")
 
 
 -- Validation
-local SkillLineToEnglish = {
-	[164] = "blacksmithing",
-	[165] = "leatherworking",
-	[171] = "alchemy",
-	[182] = "herbalism",
-	[185] = "cooking",
-	[186] = "mining",
-	[197] = "tailoring",
-	[202] = "engineering",
-	[333] = "enchanting",
-	[356] = "fishing",
-	[393] = "skinning",
-	[755] = "jewelcrafting",
-	[773] = "inscription",
-	[794] = "archaeology",
-}
-
 function Breadcrumbs:Validate(str)
 	local str = str or ""
 	local data = { strsplit(" ", strlower(str)) }
@@ -1550,11 +1557,11 @@ function Breadcrumbs:Validate(str)
 	local prof1, prof2, archaeology, fishing, cooking = GetProfessions()
 	if prof1 then
 		prof1 = select(7, GetProfessionInfo(prof1)) or nil -- SkillLine
-		if prof1 then prof1 = SkillLineToEnglish[prof1] or nil end
+		if prof1 then prof1 = SkillLineToKeyword[prof1] or nil end
 	end
 	if prof2 then
 		prof2 = select(7, GetProfessionInfo(prof2)) or nil -- SkillLine
-		if prof2 then prof2 = SkillLineToEnglish[prof2] or nil end
+		if prof2 then prof2 = SkillLineToKeyword[prof2] or nil end
 	end
 	local flying = IsSpellKnown(34090) or IsSpellKnown(34091) or IsSpellKnown(90265) and true or false
 	local dragonriding = IsSpellKnown(376777) and true or false
