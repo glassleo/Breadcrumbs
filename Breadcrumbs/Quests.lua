@@ -228,9 +228,8 @@ Data.Quests = {
 		[72783] = "Crafting Orders|60+ 70633|85.02 54.45|Greyzik Cobblefinger|campaign",
 
 		-- Artisan's Consortium
-		-- TODO:: Figure out how the currently disabled profession skip interacts with these
 		[70221] = "Show Your Mettle|60+ 62+,67030 alchemy,blacksmithing,enchanting,engineering,inscription,jewelcrafting,leatherworking,tailoring,herbalism,mining,skinning reputation:2544:2|39.44 70.17|Miguel Bright|weekly", -- Requires Preferred (rank 2) or higher with Artisan's Consortium
-		[67295] = "That's My Specialty|60+ 62+,67030 skill:2823:25,skill:2822:25,skill:2825:25,skill:2827:25,skill:2832:25,skill:2828:25,skill:2829:25,skill:2830:25,skill:2833:25,skill:2834:25,skill:2831:25|39.37 70.16|Miguel Bright", -- Requires 25 skill in any Dragon Isles primary profession
+		[67295] = "That's My Specialty|60+ 62+,67030 66340 skill:2823:25,skill:2822:25,skill:2825:25,skill:2827:25,skill:2832:25,skill:2828:25,skill:2829:25,skill:2830:25,skill:2833:25,skill:2834:25,skill:2831:25|39.37 70.16|Miguel Bright", -- Requires 25 skill in any Dragon Isles primary profession
 		[69919] = "A Craft in Need|60+ 62+,67030 alchemy,blacksmithing,enchanting,engineering,inscription,jewelcrafting,leatherworking,tailoring,cooking,fishing|35.37 58.77|Azley",
 		[70033] = "Artisan's Supply: Pioneer's Leather Boots|60+ leatherworking|29 61|Samar|leatherworking",
 		
@@ -318,9 +317,8 @@ Data.Quests = {
 		[72482] = "The Waking Shores Advanced Tour|60+ dragonriding 72487|46.04 63.03|Celormu",
 
 		-- Artisan's Consortium
-		-- TODO:: Figure out how the currently disabled profession skip interacts with these
 		[70221] = "Show Your Mettle|60+ 62+,67030 alchemy,blacksmithing,enchanting,engineering,inscription,jewelcrafting,leatherworking,tailoring,herbalism,mining,skinning reputation:2544:2|38.41 62.79|Miguel Bright|weekly link:2112", -- Requires Preferred (rank 2) or higher with Artisan's Consortium
-		[67295] = "That's My Specialty|60+ 62+,67030 skill:2823:25,skill:2822:25,skill:2825:25,skill:2827:25,skill:2832:25,skill:2828:25,skill:2829:25,skill:2830:25,skill:2833:25,skill:2834:25,skill:2831:25|38.4 62.79|Miguel Bright|link:2112", -- Requires 25 skill in any Dragon Isles primary profession
+		[67295] = "That's My Specialty|60+ 62+,67030 66340 skill:2823:25,skill:2822:25,skill:2825:25,skill:2827:25,skill:2832:25,skill:2828:25,skill:2829:25,skill:2830:25,skill:2833:25,skill:2834:25,skill:2831:25|38.4 62.79|Miguel Bright|link:2112", -- Requires 25 skill in any Dragon Isles primary profession
 		[69919] = "A Craft in Need|60+ 62+,67030 alchemy,blacksmithing,enchanting,engineering,inscription,jewelcrafting,leatherworking,tailoring,cooking,fishing|37.82 61.14|Azley|link:2112",
 	},
 
@@ -433,8 +431,7 @@ Data.Quests = {
 		[72487] = "The Thaldraszus Tour|60+ dragonriding 72485|63.17 13.65|Celormu",
 
 		-- Artisan's Consortium
-		-- TODO:: Figure out how the currently disabled profession skip interacts with these
-		[67295] = "That's My Specialty|60+ 62+,67030 skill:2823:25,skill:2822:25,skill:2825:25,skill:2827:25,skill:2832:25,skill:2828:25,skill:2829:25,skill:2830:25,skill:2833:25,skill:2834:25,skill:2831:25|37.82 24|Miguel Bright", -- Requires 25 skill in any Dragon Isles primary profession
+		[67295] = "That's My Specialty|60+ 62+,67030 66340 skill:2823:25,skill:2822:25,skill:2825:25,skill:2827:25,skill:2832:25,skill:2828:25,skill:2829:25,skill:2830:25,skill:2833:25,skill:2834:25,skill:2831:25|37.82 24|Miguel Bright", -- Requires 25 skill in any Dragon Isles primary profession
 		[69915] = "Targeted Ads|60+ 62+,67030 alchemy,blacksmithing,enchanting,engineering,inscription,jewelcrafting,leatherworking,tailoring,cooking,fishing|37.94 24.1|Azley",
 		[69981] = "Customer Satisfaction|60+ 69915 alchemy,blacksmithing,enchanting,engineering,inscription,jewelcrafting,leatherworking,tailoring,cooking,fishing|37.94 24.1|Azley",
 		[69919] = "A Craft in Need|60+ 62+,67030 alchemy,blacksmithing,enchanting,engineering,inscription,jewelcrafting,leatherworking,tailoring,cooking,fishing|37.94 24.1|Azley",
@@ -616,8 +613,7 @@ Data.Quests = {
 		[72485] = "The Azure Span Tour|60+ dragonriding 72483|88.09 36.28|Celormu",
 		
 		-- Artisan's Consortium
-		-- TODO:: Figure out how the currently disabled profession skip interacts with these
-		[67295] = "That's My Specialty|60+ 62+,67030 skill:2823:25,skill:2822:25,skill:2825:25,skill:2827:25,skill:2832:25,skill:2828:25,skill:2829:25,skill:2830:25,skill:2833:25,skill:2834:25,skill:2831:25|71.88 80.99|Miguel Bright", -- Requires 25 skill in any Dragon Isles primary profession
+		[67295] = "That's My Specialty|60+ 62+,67030 66340 skill:2823:25,skill:2822:25,skill:2825:25,skill:2827:25,skill:2832:25,skill:2828:25,skill:2829:25,skill:2830:25,skill:2833:25,skill:2834:25,skill:2831:25|71.88 80.99|Miguel Bright", -- Requires 25 skill in any Dragon Isles primary profession
 		[69915] = "Targeted Ads|60+ 62+,67030 alchemy,blacksmithing,enchanting,engineering,inscription,jewelcrafting,leatherworking,tailoring,cooking,fishing|72.05 81.14|Azley",
 		[69981] = "Customer Satisfaction|60+ 69915 alchemy,blacksmithing,enchanting,engineering,inscription,jewelcrafting,leatherworking,tailoring,cooking,fishing|72.05 81.14|Azley",
 		[69919] = "A Craft in Need|60+ 62+,67030 alchemy,blacksmithing,enchanting,engineering,inscription,jewelcrafting,leatherworking,tailoring,cooking,fishing|72.05 81.14|Azley",
@@ -807,7 +803,7 @@ Data.Quests = {
 		-- Dragon Racing
 		[72481] = "The Waking Shores Tour|60+ dragonriding 67030|73.25 52.07|Celormu",
 		[72483] = "The Ohn'ahran Plains Tour|60+ dragonriding 72481|73.25 52.07|Celormu",
-		[72482] = "The Waking Shores Advanced Tour|60+ dragonriding 72487|73.25 52.07|Celormu",
+		[72482] = "The Waking Shores Advanced Tour|60+ dragonriding 72487|73.25 52.07|Celormu", -- need to find acc-wide unlock trigger
 		[72484] = "The Ohn'ahran Plains Advanced Tour|60+ dragonriding 72482|73.25 52.07|Celormu",
 
 		-- Artisan's Consortium
@@ -818,6 +814,7 @@ Data.Quests = {
 		[70030] = "Artisan's Supply: Quality-Assured Optics|60+ engineering|42.99 66.51|Winnie Fingerspring|engineering",
 		[70026] = {"Artisan's Supply: Lava Beetles|60+ herbalism|76.86 34.04|Feilin Kuan|herbalism", "Artisan's Supply: Lava Beetles|60+ herbalism|57.44 65.92|Szarostrasza|herbalism",},
 		[70033] = "Artisan's Supply: Pioneer's Leather Boots|60+ leatherworking|76.63 34.85|Deirdre Flemmin|leatherworking",
+		[70028] = "Artisan's Supply: Salt Deposits|60+ mining|76.35 34.64|Grun Ashbeard|mining",
 
 		-- Ohn'ahran Plains - Into the Plains
 		[65795] = "Next Steppes|60+ 65794|61.56 68.56|Alexstrasza the Life-Binder|campaign",
