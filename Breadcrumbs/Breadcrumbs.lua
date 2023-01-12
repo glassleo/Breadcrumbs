@@ -28,10 +28,16 @@ local Setting_EnableMailboxesEverywhere = false
 --local Setting_EnableMailboxToggleButton = true -- NYI
 local Setting_EnableUnitTooltips = true
 local Setting_EnableAutomapGravidRepose = true
+-- Debug
+local Setting_Debug_QuestListener = true
 
 
 -- Constants
 local CHROMIETIME_MAXLEVEL = 60 -- Maximum level for Chromie Time
+
+
+-- Debug
+local Debug_CharacterQuestCache = nil
 
 
 -- Frame recycling pool
@@ -97,6 +103,36 @@ end
 local ItemTooltip = _G["BreadcrumbsItemTooltip"]
 if not ItemTooltip then
     ItemTooltip = CreateFrame("GameTooltip", "BreadcrumbsItemTooltip", GameTooltip, "GameTooltipTemplate")
+end
+
+
+-- Debug
+function Breadcrumbs:Debug_UpdateQuestCache()
+	verbose = verbose and true or false
+	local data = C_QuestLog.GetAllCompletedQuestIDs() or nil
+	local quests = {}
+	if type(data) == "table" and #data > 0 then
+		-- Rebuild the table
+		for i, id in pairs(data) do
+			quests[tonumber(id or 0)] = true
+		end
+
+		if type(Debug_CharacterQuestCache) == "table" then
+			for id, _ in pairs(quests) do
+				if not Debug_CharacterQuestCache[id] then
+					print("|cffffd100Quest|r", "|cff71d5ff"..id.."|r", "|cff1eff00Completed|r")
+				end
+			end
+
+			for id, _ in pairs(Debug_CharacterQuestCache) do
+				if not quests[id] then
+					print("|cffffd100Quest|r", "|cff71d5ff"..id.."|r", "|cffff2020Flagged incomplete|r")
+				end
+			end
+		end
+
+		Debug_CharacterQuestCache = quests
+	end
 end
 
 
@@ -468,6 +504,10 @@ end
 
 -- Update Map
 function Breadcrumbs:UpdateMap(event, ...)
+	if Setting_Debug_QuestListener then
+		Breadcrumbs:Debug_UpdateQuestCache()
+	end
+
 	if event == "QUEST_TURNED_IN" or event == "QUEST_AUTOCOMPLETE" then
 		Breadcrumbs:UpdateQuestHistory(event, ...)
 	end
