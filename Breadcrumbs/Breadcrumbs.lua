@@ -143,7 +143,7 @@ function Breadcrumbs:GetQuestName(id)
 	if Data.Quests then
 		for map, zone in pairs(Data.Quests) do
 			if zone[id] then
-				local name, _, _, _, flags = strsplit("|", zone[id])
+				local name, _, _, _, flags = strsplit("|", (type(zone[id]) == "string") and zone[id] or (type(zone[id][1]) == "string") and zone[id][1] or "")
 				if flags then
 					flags = { strsplit(" ", flags) }
 					for _, v in ipairs(flags) do flags[v] = true end
@@ -151,6 +151,21 @@ function Breadcrumbs:GetQuestName(id)
 					flags = {}
 				end
 				return name, flags["campaign"] and (flags["daily"] and "Quest-DailyCampaign-Available" or "Quest-Campaign-Available") or flags["legendary"] and "QuestLegendary" or flags["artifact"] and "QuestLegendary" or flags["daily"] and "QuestDaily" or "QuestNormal", flags["legendary"] and "ff8000" or flags["artifact"] and "ff8000" or "ffd100"
+			end
+		end
+	end
+
+	if Data.Vignettes then
+		for map, zone in pairs(Data.Vignettes) do
+			if zone[id] then
+				local name, _, _, _, flags = strsplit("|", (type(zone[id]) == "string") and zone[id] or (type(zone[id][1]) == "string") and zone[id][1] or "")
+				if flags then
+					flags = { strsplit(" ", flags) }
+					for _, v in ipairs(flags) do flags[v] = true end
+				else
+					flags = {}
+				end
+				return name, flags["treasure"] and "VignetteLoot" or "VignetteEvent", flags["legendary"] and "ff8000" or "ffd100"
 			end
 		end
 	end
