@@ -20,7 +20,7 @@ Data.Vignettes = {
 		[70731] = "Barrel of Tasty Treats|60+|9.6 56.35|\"Behind a bookshelf\"|treasure item:198106|Contains|!{1500865} [rare]Recipe: Tasty Hatchling's Treat]|!{1500918} [Tasty Hatchling's Treat] (2)",
 
 		-- Profession Master
-		[70260] = "[friendly]Elysa Raywinder]|60+ tailoring skill:2831:25|27.9 45.76|\"On top of a ledge on the western side of the large tower, underneath a black banner\"|vignette speak currency:2026|Master Seamstress|!{3615523} [rare]Dragon Isles Tailoring Knowledge] (5)|!{4643977} [rare]Artisan's Mettle] (25)",
+		[70260] = "Elysa Raywinder|60+ tailoring skill:2831:25|27.9 45.76|\"On top of a ledge on the western side of the large tower, underneath a black banner\"|vignette speak currency:2026|Master Seamstress|!{3615523} [rare]Dragon Isles Tailoring Knowledge] (5)|!{4643977} [rare]Artisan's Mettle] (25)",
 	},
 
 	-- Thaldraszus
@@ -43,8 +43,8 @@ Data.Vignettes = {
 		[70585] = "Deactivated Signal Transmitter|engineering skill:2827:25 profperk:2827:50930|63.67 77.1||treasure atlas:FlightMasterArgus large|Activate all three Signal Transmittors in Thaldraszus to add the zone as an option for your Wyrmhole Generator",
 
 		-- Profession Master
-		[70258] = "[friendly]Bridgette Holdug]|60+ mining skill:2833:25|61.43 76.87||vignette speak currency:2035|Master Miner|!{3615521} [rare]Dragon Isles Mining Knowledge] (10)|!{4643977} [rare]Artisan's Mettle] (50)",
-		[70260] = "[friendly]Elysa Raywinder]|60+ tailoring skill:2831:25|36.75 59.26||vignette speak currency:2026 link:2112|Master Seamstress|!{3615523} [rare]Dragon Isles Tailoring Knowledge] (5)|!{4643977} [rare]Artisan's Mettle] (25)",
+		[70258] = "Bridgette Holdug|60+ mining skill:2833:25|61.43 76.87||vignette speak currency:2035|Master Miner|!{3615521} [rare]Dragon Isles Mining Knowledge] (10)|!{4643977} [rare]Artisan's Mettle] (50)",
+		[70260] = "Elysa Raywinder|60+ tailoring skill:2831:25|36.75 59.26||vignette speak currency:2026 link:2112|Master Seamstress|!{3615523} [rare]Dragon Isles Tailoring Knowledge] (5)|!{4643977} [rare]Artisan's Mettle] (25)",
 	},
 
 
@@ -73,9 +73,9 @@ Data.Vignettes = {
 		[70581] = "Deactivated Signal Transmitter|engineering skill:2827:25 profperk:2827:50930|71.04 47.82||treasure atlas:FlightMasterArgus large|Activate all three Signal Transmittors in the Azure Span to add the zone as an option for your Wyrmhole Generator",
 
 		-- Profession Master
-		[70252] = "[friendly]Frizz Buzzcrank]|60+ engineering skill:2827:25|17.76 21.68||vignette speak currency:2027|Master Engineer|!{4624728} [rare]Dragon Isles Engineering Knowledge] (5)|!{4643977} [rare]Artisan's Mettle] (25)",
-		[70254] = "[friendly]Lydiara Whisperfeather]|60+ inscription skill:2828:25|40.18 64.39||vignette speak currency:2028|Master Scribe|!{4624734} [rare]Dragon Isles Inscription Knowledge] (5)|!{4643977} [rare]Artisan's Mettle] (25)",
-		[70255] = "[friendly]Pluutar]|60+ jewelcrafting skill:2829:25|46.22 40.76||vignette speak currency:2029|Master Jewelcrafter|!{4624793} [rare]Dragon Isles Jewelcrafting Knowledge] (5)|!{4643977} [rare]Artisan's Mettle] (25)",
+		[70252] = "Frizz Buzzcrank|60+ engineering skill:2827:25|17.76 21.68||vignette speak currency:2027|Master Engineer|!{4624728} [rare]Dragon Isles Engineering Knowledge] (5)|!{4643977} [rare]Artisan's Mettle] (25)",
+		[70254] = "Lydiara Whisperfeather|60+ inscription skill:2828:25|40.18 64.39||vignette speak currency:2028|Master Scribe|!{4624734} [rare]Dragon Isles Inscription Knowledge] (5)|!{4643977} [rare]Artisan's Mettle] (25)",
+		[70255] = "Pluutar|60+ jewelcrafting skill:2829:25|46.22 40.76||vignette speak currency:2029|Master Jewelcrafter|!{4624793} [rare]Dragon Isles Jewelcrafting Knowledge] (5)|!{4643977} [rare]Artisan's Mettle] (25)",
 	},
 
 
@@ -97,10 +97,10 @@ Data.Vignettes = {
 		[70579] = "Deactivated Signal Transmitter|engineering skill:2827:25 profperk:2827:50930|57.14 84.52||treasure atlas:FlightMasterArgus large|Activate all three Signal Transmittors in the Azure Span to add the zone as an option for your Wyrmhole Generator",
 
 		-- Profession Master
-		[70251] = "[friendly]Shalasar Glimmerdusk]|60+ enchanting skill:2825:25|62.42 18.7|\"On top of the building\"|vignette speak currency:2030|Master Enchantress|!{3615911} [rare]Dragon Isles Enchanting Knowledge] (5)|!{4643977} [rare]Artisan's Mettle] (25)",
-		[70253] = "[friendly]Hua Greenpaw]|60+ herbalism skill:2832:25|58.38 50.01||vignette speak currency:2034|Master Herbalist|!{4624731} [rare]Dragon Isles Herbalism Knowledge] (10)|!{4643977} [rare]Artisan's Mettle] (50)",
-		[70259] = "[friendly]Zenzi]|60+ skinning skill:2834:25|73.27 69.71||vignette speak currency:2033|Masta Skinna|!{4625106} [rare]Dragon Isles Skinning Knowledge] (10)|!{4643977} [rare]Artisan's Mettle] (50)",
-		[70256] = "[friendly]Erden]|60+ leatherworking skill:2830:25|82.43 50.65||vignette speak currency:2025|Master Leatherworker|!{4624911} [rare]Dragon Isles Leatherworking Knowledge] (5)|!{4643977} [rare]Artisan's Mettle] (25)",
+		[70251] = "Shalasar Glimmerdusk|60+ enchanting skill:2825:25|62.42 18.7|\"On top of the building\"|vignette speak currency:2030|Master Enchantress|!{3615911} [rare]Dragon Isles Enchanting Knowledge] (5)|!{4643977} [rare]Artisan's Mettle] (25)",
+		[70253] = "Hua Greenpaw|60+ herbalism skill:2832:25|58.38 50.01||vignette speak currency:2034|Master Herbalist|!{4624731} [rare]Dragon Isles Herbalism Knowledge] (10)|!{4643977} [rare]Artisan's Mettle] (50)",
+		[70259] = "Zenzi|60+ skinning skill:2834:25|73.27 69.71||vignette speak currency:2033|Masta Skinna|!{4625106} [rare]Dragon Isles Skinning Knowledge] (10)|!{4643977} [rare]Artisan's Mettle] (50)",
+		[70256] = "Erden|60+ leatherworking skill:2830:25|82.43 50.65||vignette speak currency:2025|Master Leatherworker|!{4624911} [rare]Dragon Isles Leatherworking Knowledge] (5)|!{4643977} [rare]Artisan's Mettle] (25)",
 	},
 
 
@@ -140,8 +140,8 @@ Data.Vignettes = {
 		[70575] = "Deactivated Signal Transmitter|engineering skill:2827:25 profperk:2827:50930|23.43 43.83||treasure atlas:FlightMasterArgus large|Activate all three Signal Transmittors in the Waking Shores to add the zone as an option for your Wyrmhole Generator",
 
 		-- Profession Master
-		[70247] = "[friendly]Grigori Vialtry]|60+ alchemy skill:2823:25|60.83 75.9||vignette speak currency:2024|Master Alchemist|!{4624656} [rare]Dragon Isles Alchemy Knowledge] (5)|!{4643977} [rare]Artisan's Mettle] (25)",
-		[70250] = "[friendly]Grekka Anvilsmash]|60+ blacksmithing skill:2822:25|43.27 66.63||vignette speak currency:2023|Master Blacksmith|!{4624660} [rare]Dragon Isles Blacksmithing Knowledge] (5)|!{4643977} [rare]Artisan's Mettle] (25)",
+		[70247] = "Grigori Vialtry|60+ alchemy skill:2823:25|60.83 75.9||vignette speak currency:2024|Master Alchemist|!{4624656} [rare]Dragon Isles Alchemy Knowledge] (5)|!{4643977} [rare]Artisan's Mettle] (25)",
+		[70250] = "Grekka Anvilsmash|60+ blacksmithing skill:2822:25|43.27 66.63||vignette speak currency:2023|Master Blacksmith|!{4624660} [rare]Dragon Isles Blacksmithing Knowledge] (5)|!{4643977} [rare]Artisan's Mettle] (25)",
 	},
 
 
@@ -149,7 +149,14 @@ Data.Vignettes = {
 
 	[1533] = {
 		-- Treasure
-		[58298] = {"Purians|48+ -58293,-58294 -item:173973|54.37 81.87||treasure interact", "Purians|48+ -58293,-58294 -item:173973|54.37 82.66||treasure interact", "Tribute|48+ -58293 item:173973|56.17 83.06||treasure interact", "Tribute|48+ -58294 item:173973|54.43 83.87||treasure interact", "Scroll of Aeons|48+ -58293,-58294|53.5 80.38|\"Loot nearby Purians and place them in two separate Tribute bowls in order to unlock this treasure\"|treasure atlas:vignetteloot-locked item:173984|Contains|!{1392955} [rare]Scroll of Aeons]", "Scroll of Aeons|48+ 58293 58294|53.5 80.38||treasure item:173984|Contains|!{1392955} [rare]Scroll of Aeons]",},
+		[58298] = {
+			"Scroll of Aeons|48+ -58293,-58294|53.5 80.38|\"Loot nearby Purians and place them in two separate Tribute bowls in order to unlock this treasure\"|treasure atlas:vignetteloot-locked item:173984|Contains|!{1392955} [rare]Scroll of Aeons]",
+			"Scroll of Aeons|48+ 58293 58294|53.5 80.38||treasure item:173984|Contains|!{1392955} [rare]Scroll of Aeons]",
+			"Purians|48+ -58293,-58294 -item:173973|54.37 81.87||treasure interact",
+			"Purians|48+ -58293,-58294 -item:173973|54.37 82.66||treasure interact",
+			"Tribute|48+ -58293 item:173973|56.17 83.06||treasure interact",
+			"Tribute|48+ -58294 item:173973|54.43 83.87||treasure interact",
+		},
 		[58329] = "Purifying Draught|48+|52.04 86.07||treasure item:174007|Contains|!{1528676} [Purifying Draught]",
 		[60478] = "Vesper of Virtues|48+ 57037|58.66 71.35||treasure item:179982|Contains|!{133706} [rare]Kyrian Bell]",
 		[61044] = "Stolen Equipment|48+|40.51 49.81||treasure item:182561::::::::60::512::1:6706:60|Contains|!{3386277} [rare]Fallen Disciple's Cloak]",
@@ -166,7 +173,10 @@ Data.Vignettes = {
 		[59429] = "Strange Growth|48+|55.89 38.97||treasure item:182607|Contains|!{134430} [uncommon]Hairy Egg]", -- 59428 completed after pulling the growth
 		[60587] = "Kyrian Corpse|48+ -item:180085|32.74 21.28||treasure item:175708|!{134344} [rare]Kyrian Keepsake]||Contains|!{3536074} [rare]Reconstructed Family Locket]|!{133471} [Handwritten Note]", -- Quest completes when Kyrian Keepsake is opened
 		[60730] = "Halis's Lunch Pail|48+|30.79 28.75||treasure|Contains|!{134028} [Finger Food] (7)|!{1509635} [Tasty Toes] (2)|!{132810} [Corpse Reanimator]",
-		[61470] = {"The Necronom-i-nom|48+ -toy:182732|42.35 23.34||treasure item:182732|Contains|!{133737} [rare]The Necronom-i-nom]", "The Necronom-i-nom|48+ toy:182732|42.35 23.34||treasure item:183120|Contains|!{3087534} [rare]Partially Digested Encyclopedia]",},
+		[61470] = {
+			"The Necronom-i-nom|48+ -toy:182732|42.35 23.34||treasure item:182732|Contains|!{133737} [rare]The Necronom-i-nom]",
+			"The Necronom-i-nom|48+ toy:182732|42.35 23.34||treasure item:183120|Contains|!{3087534} [rare]Partially Digested Encyclopedia]",
+		},
 		[61451] = "Stolen Jar|48+|66.29 49.9|\"Only the Fungrets know the exact location of the Stolen Jar, but it can probably be found inside one of their many small caves in Glutharn's Decay\"|treasure item:182618|Contains|!{237058} [uncommon]Reclaimed Vessel]",
 	},
 
@@ -194,7 +204,10 @@ Data.Vignettes = {
 		[59885] = "Remlate's Hidden Cache|48+|61.53 58.65||treasure|Contains|!{/Random} [uncommon]Random Equipment] (2)|!{133250} [Infused Ruby] (5)",
 		[59888] = "Abandoned Curios|57159|51.85 59.55||treasure item:182744|Contains|!{1450755} [uncommon]Ornate Belt Buckle]|!{133250} [Infused Ruby] (5)",
 		[59889] = "Smuggled Cache|48+|31.05 55.06||treasure item:182738|Contains|!{133640} [uncommon]Bundle of Smuggled Parasol Components]|!{/Random} [Random Food] (5)|!{133250} [Infused Ruby] (5)||\"There is a high chance that you will be ambushed after looting this treasure\"",
-		[62199] = {"Ingress and Egress Rites|48+|63.01 72.36||treasure interact", "Taskmaster's Trove|48+|62.82 75.3|\"Use the nearby Ingress and Egress Rites to reveal this treasure\"|treasure item:183986|Contains|!{1311628} [rare]Bondable Sinstone]",},
+		[62199] = {
+			"Taskmaster's Trove|48+|62.82 75.3|\"Use the nearby Ingress and Egress Rites to reveal this treasure\"|treasure item:183986|Contains|!{1311628} [rare]Bondable Sinstone]",
+			"Ingress and Egress Rites|48+|63.01 72.36||treasure interact",
+		},
 		[62164] = "Vyrtha's Dredglaive|48+|70.17 60.06||treasure item:177807|Contains|!{3150768} [rare]Vyrtha's Dredglaive]",
 		[59886] = "Fleeing Soul's Bundle|48+|46.39 58.16||treasure item:182737|Contains|!{134044} [Deep Fried Seraph Tenders] (8)|!{133250} [Infused Ruby] (5)",
 		
