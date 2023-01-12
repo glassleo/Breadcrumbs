@@ -120,19 +120,43 @@ function Breadcrumbs:Debug_UpdateQuestCache()
 		if type(Debug_CharacterQuestCache) == "table" then
 			for id, _ in pairs(quests) do
 				if not Debug_CharacterQuestCache[id] then
-					print("|cffffd100Quest|r", "|cff71d5ff"..id.."|r", "|cff1eff00Completed|r")
+					local name, atlas, color = Breadcrumbs:GetQuestName(id)
+					print("|cffffd100Quest completed:|r", "|cff71d5ff"..id.."|r", CreateAtlasMarkup(atlas or "QuestTrivial"), "|cff" .. color .. name .. "|r")
 				end
 			end
 
 			for id, _ in pairs(Debug_CharacterQuestCache) do
 				if not quests[id] then
-					print("|cffffd100Quest|r", "|cff71d5ff"..id.."|r", "|cffff2020Flagged incomplete|r")
+					local name, atlas, color = Breadcrumbs:GetQuestName(id)
+					print("|cffff2020Quest flagged incomplete:|r", "|cff71d5ff"..id.."|r", CreateAtlasMarkup(atlas or "QuestTrivial"), "|cff" .. color .. name .. "|r")
 				end
 			end
 		end
 
 		Debug_CharacterQuestCache = quests
 	end
+end
+
+function Breadcrumbs:GetQuestName(id)
+	id = tonumber(id or 0) or 0
+
+	if Data.Quests then
+		for map, zone in pairs(Data.Quests) do
+			if zone[id] then
+				local name, _, _, _, flags = strsplit("|", zone[id])
+				if flags then
+					flags = { strsplit(" ", flags) }
+					for _, v in ipairs(flags) do flags[v] = true end
+				else
+					flags = {}
+				end
+				return name, flags["campaign"] and (flags["daily"] and "Quest-DailyCampaign-Available" or "Quest-Campaign-Available") or flags["legendary"] and "QuestLegendary" or flags["artifact"] and "QuestLegendary" or flags["daily"] and "QuestDaily" or "QuestNormal", flags["legendary"] and "ff8000" or flags["artifact"] and "ff8000" or "ffd100"
+			end
+		end
+	end
+
+	-- name, atlas, color
+	return "(Unknown)", "TrivialQuests", "808080"
 end
 
 
