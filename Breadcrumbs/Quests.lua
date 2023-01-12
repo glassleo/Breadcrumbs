@@ -640,6 +640,7 @@ Data.Quests = {
 		[65451] = "Practice Materials|60+ horde 65444|80.61 27.65|Boss Magor|campaign", -- Horde
 		[70123] = "Primal Pests|60+ alliance 67700|82.16 31.85|Scalecommander Azurathel|campaign", -- Alliance
 		[65453] = "Primal Pests|60+ horde 65444|80.65 27.6|Scalecommander Cindrethresh|campaign", -- Horde
+		[70148] = "Without Purpose|60+ 65452,70122 dracthyr|76.41 34.45|Haephesta",
 		[69965] = "Quality Assurance|60+ 65452,70122|76.41 34.45|Haephesta",
 		[66101] = "From Such Great Heights|60+|75.84 33.49|Aster Cloudgaze",
 		[67053] = "Give Peace a Chance|60+ alliance|76.73 34.55|Captain Garrick", -- Alliance
