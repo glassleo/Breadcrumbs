@@ -1550,10 +1550,7 @@ function Breadcrumbs:Validate(str)
 	local renown = C_CovenantSanctumUI.GetRenownLevel() or 1
 	local garrison = C_Garrison and C_Garrison.GetGarrisonInfo(Enum.GarrisonType.Type_6_0) or 0
 	local covenant = C_Covenants and C_Covenants.GetActiveCovenantID() or 0
-	if covenant == 1 then covenant = "kyrian" end
-	if covenant == 2 then covenant = "venthyr" end
-	if covenant == 3 then covenant = "nightfae" end
-	if covenant == 4 then covenant = "necrolord" end
+	covenant = (covenant == 1) and "kyrian" or (covenant == 2) and "venthyr" or (covenant == 3) and "nightfae" or (covenant == 4) and "necrolord" or nil
 	local prof1, prof2, archaeology, fishing, cooking = GetProfessions()
 	if prof1 then
 		prof1 = select(7, GetProfessionInfo(prof1)) or nil -- SkillLine
@@ -1657,6 +1654,12 @@ function Breadcrumbs:Validate(str)
 					-- currency:n:x
 					if string.match(v, "^currency:(%d+):(%d+)$") and C_CurrencyInfo.GetCurrencyInfo(tonumber(string.match(v, "currency:(%d+):%d+") or 0)).quantity >= (tonumber(string.match(v, "currency:%d+:(%d+)") or 0)) then pass = true end
 
+					-- achievement:n
+					if string.match(v, "^achievement:(%d+)$") and select(13, GetAchievementInfo(tonumber(string.match(v, "achievement:(%d+)") or 0))) then pass = true end
+
+					-- accachievement:n
+					if string.match(v, "^accachievement:(%d+)$") and select(4, GetAchievementInfo(tonumber(string.match(v, "accachievement:(%d+)") or 0))) then pass = true end
+
 					-- Must match...
 					if v == class or v == faction or v == covenant or v == prof1 or v == prof2 or v == race then pass = true end
 					if v == "garrison" and garrison >= 1 then pass = true end
@@ -1735,6 +1738,12 @@ function Breadcrumbs:Validate(str)
 
 						-- -currency:n:x
 						if string.match(w, "^currency:(%d+):(%d+)$") and C_CurrencyInfo.GetCurrencyInfo(tonumber(string.match(w, "currency:(%d+):%d+") or 0)).quantity >= (tonumber(string.match(w, "currency:%d+:(%d+)") or 0)) then pass = false end
+
+						-- -achievement:n
+						if string.match(w, "^achievement:(%d+)$") and select(13, GetAchievementInfo(tonumber(string.match(w, "achievement:(%d+)") or 0))) then pass = false end
+
+						-- -accachievement:n
+						if string.match(w, "^accachievement:(%d+)$") and select(4, GetAchievementInfo(tonumber(string.match(w, "accachievement:(%d+)") or 0))) then pass = false end
 
 						if w == class or w == faction or w == covenant or w == prof1 or w == prof2 or w == race then pass = false end
 						if w == "garrison" and garrison >= 1 then pass = false end

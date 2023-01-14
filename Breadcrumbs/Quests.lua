@@ -314,7 +314,7 @@ Data.Quests = {
 		-- Dragon Racing
 		[72485] = "The Azure Span Tour|60+ dragonriding 72483|29.34 68.39|Celormu",
 		[72487] = "The Thaldraszus Tour|60+ dragonriding 72485|44.47 90.73|Celormu",
-		[72482] = "The Waking Shores Advanced Tour|60+ dragonriding 72487|46.04 63.03|Celormu",
+		[72482] = "The Waking Shores Advanced Tour|60+ dragonriding accachievement:15915 accachievement:15918 accachievement:15921 accachievement:15924|46.04 63.03|Celormu", -- Requires all normal races completed on account
 
 		-- Artisan's Consortium
 		[70221] = "Show Your Mettle|60+ 62+,67030 alchemy,blacksmithing,enchanting,engineering,inscription,jewelcrafting,leatherworking,tailoring,herbalism,mining,skinning reputation:2544:2|38.41 62.79|Miguel Bright|weekly link:2112", -- Requires Preferred (rank 2) or higher with Artisan's Consortium
@@ -619,6 +619,7 @@ Data.Quests = {
 		[69919] = "A Craft in Need|60+ 62+,67030 alchemy,blacksmithing,enchanting,engineering,inscription,jewelcrafting,leatherworking,tailoring,cooking,fishing|72.05 81.14|Azley",
 		[70029] = {"Artisan's Supply: Runed Serevite Rods|60+ enchanting|41.35 61|Asarin|enchanting", "Artisan's Supply: Runed Serevite Rods|60+ enchanting|56.83 75.51|Solonga|enchanting",},
 		[70033] = {"Artisan's Supply: Pioneer's Leather Boots|60+ leatherworking|39.4 55.4|Ekhi|leatherworking", "Artisan's Supply: Pioneer's Leather Boots|60+ leatherworking|80.8 59.4|Dokhusek|leatherworking",},
+		[70034] = "Artisan's Supply: Salamanther Scale|60+ skinning|84.6 23.2|Makhul|skinning",
 
 		-- The Azure Span - Into the Archives
 		[66340] = "Into the Azure|60+ 62+,67030 66783|22.14 50.98|Merithra|campaign",
@@ -636,7 +637,8 @@ Data.Quests = {
 		[65451] = "Practice Materials|60+ horde 65444|80.61 27.65|Boss Magor|campaign", -- Horde
 		[70123] = "Primal Pests|60+ alliance 67700|82.16 31.85|Scalecommander Azurathel|campaign", -- Alliance
 		[65453] = "Primal Pests|60+ horde 65444|80.65 27.6|Scalecommander Cindrethresh|campaign", -- Horde
-		[70148] = "Without Purpose|60+ 65452,70122 dracthyr|76.41 34.45|Haephesta",
+		[70148] = "Without Purpose|60+ 65452,70122 dracthyr|76.41 34.45|Haephesta", -- Dracthyr only
+		[70042] = "Opportunities Abound|60+ 65452,70122 rogue|76.3 34.34|Vish the Sneak", -- Rogue only
 		[69965] = "Quality Assurance|60+ 65452,70122|76.41 34.45|Haephesta",
 		[66101] = "From Such Great Heights|60+|75.84 33.49|Aster Cloudgaze",
 		[67053] = "Give Peace a Chance|60+ alliance|76.73 34.55|Captain Garrick", -- Alliance
@@ -801,9 +803,9 @@ Data.Quests = {
 		[70414] = "Shaky Grounds|60+|37.1 56.05|Earthmender Govrum",
 
 		-- Dragon Racing
-		[72481] = "The Waking Shores Tour|60+ dragonriding 67030|73.25 52.07|Celormu",
+		[72481] = "The Waking Shores Tour|60+ dragonriding achievement:16978 67030|73.25 52.07|Celormu", -- Requires Valdrakken Accord renown 7 obtained on account
 		[72483] = "The Ohn'ahran Plains Tour|60+ dragonriding 72481|73.25 52.07|Celormu",
-		[72482] = "The Waking Shores Advanced Tour|60+ dragonriding 72487|73.25 52.07|Celormu", -- need to find acc-wide unlock trigger
+		[72482] = "The Waking Shores Advanced Tour|60+ dragonriding accachievement:15915 accachievement:15918 accachievement:15921 accachievement:15924|73.25 52.07|Celormu", -- Requires all normal races completed on account
 		[72484] = "The Ohn'ahran Plains Advanced Tour|60+ dragonriding 72482|73.25 52.07|Celormu",
 
 		-- Artisan's Consortium
@@ -815,6 +817,7 @@ Data.Quests = {
 		[70026] = {"Artisan's Supply: Lava Beetles|60+ herbalism|76.86 34.04|Feilin Kuan|herbalism", "Artisan's Supply: Lava Beetles|60+ herbalism|57.44 65.92|Szarostrasza|herbalism",},
 		[70033] = "Artisan's Supply: Pioneer's Leather Boots|60+ leatherworking|76.63 34.85|Deirdre Flemmin|leatherworking",
 		[70028] = "Artisan's Supply: Salt Deposits|60+ mining|76.35 34.64|Grun Ashbeard|mining",
+		[70034] = "Artisan's Supply: Salamanther Scale|60+ skinning|76.69 34.78|Toninaar|skinning",
 
 		-- Ohn'ahran Plains - Into the Plains
 		[65795] = "Next Steppes|60+ 65794|61.56 68.56|Alexstrasza the Life-Binder|campaign",
@@ -4295,10 +4298,10 @@ Data.Quests = {
 		[51443] = {"Battle for Azeroth: Mission Statement|10+ horde -60361 -59926|66.69 49.23|Warchief's Herald", "Battle for Azeroth: Mission Statement|10+ horde -60361 -59926|49.41 76.6|Warchief's Herald",}, -- 60361 is the Exile's Reach version
 		
 		-- Dragon Isles - The Dragonscale Expedition
-		[65435] = "The Dragon Isles Await|10+ horde|44.08 37.98|Ebyssian|campaign",
-		[65437] = "Aspectral Invitation|10+ horde 65435|44.08 37.98|Ebyssian|campaign",
-		[65443] = "Expeditionary Coordination|10+ horde 65437|44.19 37.79|Naleidea Rivergleam|campaign",
-		[72256] = "The Dark Talons|10+ horde 65437|44.04 38.27|Scalecommander Cindrethresh|campaign",
+		[65435] = "The Dragon Isles Await|10+ horde -70198|44.08 37.98|Ebyssian|campaign",
+		[65437] = "Aspectral Invitation|10+ horde 65435 -70198|44.08 37.98|Ebyssian|campaign",
+		[65443] = "Expeditionary Coordination|10+ horde 65437  -70198|44.19 37.79|Naleidea Rivergleam|campaign",
+		[72256] = "The Dark Talons|10+ horde 65437  -70198|44.04 38.27|Scalecommander Cindrethresh|campaign",
 
 		-- Engineering
 		[29477] = "Gnomish Engineering|20+ horde engineering skill:2506:200 -spell:20219 -spell:20222|56.8 56.4|Roxxik|engineering", -- Requires 200 skill in Classic Engineering
@@ -4530,8 +4533,8 @@ Data.Quests = {
 		[42484] = "The Firstborn Rises|10+ deathknight 42449|47.32 17.67|Thassarian|artifact",
 
 		-- Dragon Isles - The Dragonscale Expedition
-		[65439] = "Whispers on the Winds|10+ horde 65443 72256|55.92 12.61|Archmage Khadgar|campaign",
-		[65444] = "To the Dragon Isles!|60+ horde 65439 ~70198|55.81 12.66|Naleidea Rivergleam|campaign",
+		[65439] = "Whispers on the Winds|10+ horde 65443 72256 -70198|55.92 12.61|Archmage Khadgar|campaign",
+		[65444] = "To the Dragon Isles!|60+ horde 65439,70198 ~70198|55.81 12.66|Naleidea Rivergleam|campaign",
 	},
 
 
@@ -5245,12 +5248,12 @@ Data.Quests = {
 		[46728] = "The Nation of Kul Tiras|10+ alliance 46727 -59641 -56775|80.26 33.13|Anduin Wrynn", -- 59641 is Exile's Reach version
 
 		-- Dragon Isles - The Dragonscale Expedition
-		[65436] = "The Dragon Isles Await|10+ alliance|79.8 27.02|Wrathion|campaign",
-		[66577] = "Aspectral Invitation|10+ alliance 65436|79.8 27.02|Wrathion|campaign",
-		[66589] = "Expeditionary Coordination|10+ alliance 66577|79.72 27.32|Toddy Whiskers|campaign",
-		[72240] = "The Obsidian Warders|10+ alliance 66577|79.75 27.97|Scalecommander Azurathel|campaign",
-		[66596] = "Whispers on the Winds|10+ alliance 66589 72240|23.01 56.15|Archmage Khadgar|campaign",
-		[67700] = "To the Dragon Isles!|10+ alliance 66596|22.72 55.66|Toddy Whiskers|campaign",
+		[65436] = "The Dragon Isles Await|10+ alliance -70197|79.8 27.02|Wrathion|campaign",
+		[66577] = "Aspectral Invitation|10+ alliance 65436 -70197|79.8 27.02|Wrathion|campaign",
+		[66589] = "Expeditionary Coordination|10+ alliance 66577 -70197|79.72 27.32|Toddy Whiskers|campaign",
+		[72240] = "The Obsidian Warders|10+ alliance 66577 -70197|79.75 27.97|Scalecommander Azurathel|campaign",
+		[66596] = "Whispers on the Winds|10+ alliance 66589 72240 -70197|23.01 56.15|Archmage Khadgar|campaign",
+		[67700] = "To the Dragon Isles!|10+ alliance 66596,70197|22.72 55.66|Toddy Whiskers|campaign",
 
 		-- Engineering
 		[29477] = "Gnomish Engineering|20+ alliance engineering skill:2506:200 -spell:20219 -spell:20222|62.85 31.96|Lilliam Sparkspindle|engineering", -- Requires 200 skill in Classic Engineering
