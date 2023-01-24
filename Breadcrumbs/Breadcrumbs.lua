@@ -3,6 +3,7 @@ Breadcrumbs = LibStub("AceAddon-3.0"):NewAddon("Breadcrumbs", "AceConsole-3.0", 
 local HBD = LibStub("HereBeDragons-2.0")
 local Pins = LibStub("HereBeDragons-Pins-2.0")
 local Throttle = {}
+local LoginThrottle = true
 
 
 -- User settings (GUI NYI)
@@ -29,11 +30,12 @@ local Setting_EnableMailboxesEverywhere = false
 local Setting_EnableUnitTooltips = true
 local Setting_EnableAutomapGravidRepose = true
 -- Debug
-local Setting_Debug_QuestListener = true
+local Setting_Debug_QuestWatcher = true
 
 
 -- Constants
 local CHROMIETIME_MAXLEVEL = 60 -- Maximum level for Chromie Time
+local QUEST_ICONS_FILE = QUEST_ICONS_FILE -- "Interface\\QuestFrame\\QuestTypeIcons"
 
 local SkillLineToKeyword = {
 	[164] = "blacksmithing",
@@ -287,6 +289,8 @@ end
 
 -- Debug
 function Breadcrumbs:Debug_UpdateQuestCache()
+	if LoginThrottle then return end
+
 	local data = C_QuestLog.GetAllCompletedQuestIDs() or nil
 	local quests = {}
 	if type(data) == "table" and #data > 0 then
@@ -299,14 +303,14 @@ function Breadcrumbs:Debug_UpdateQuestCache()
 			for id, _ in pairs(quests) do
 				if not Debug_CharacterQuestCache[id] then
 					local name, atlas, color = Breadcrumbs:GetQuestName(id)
-					print("|cffffff00Quest completed:|r", "|cff71d5ff"..id.."|r", CreateAtlasMarkup(atlas or "QuestTrivial"), "|cff" .. color .. name .. "|r")
+					print("|cffffff00Quest completed:|r", "|cff71d5ff"..id.."|r" .. (name and (" " .. CreateAtlasMarkup(atlas or "QuestTrivial") .. " |cff" .. color .. name .. "|r") or ""))
 				end
 			end
 
 			for id, _ in pairs(Debug_CharacterQuestCache) do
 				if not quests[id] then
 					local name, atlas, color = Breadcrumbs:GetQuestName(id)
-					print("|cffff2020Quest flagged incomplete:|r", "|cff71d5ff"..id.."|r", CreateAtlasMarkup(atlas or "QuestTrivial"), "|cff" .. color .. name .. "|r")
+					print("|cffff2020Quest flagged incomplete:|r", "|cff71d5ff"..id.."|r" .. (name and (" " .. CreateAtlasMarkup(atlas or "QuestTrivial") .. " |cff" .. color .. name .. "|r") or ""))
 				end
 			end
 		end
@@ -357,7 +361,7 @@ function Breadcrumbs:GetQuestName(id)
 	end
 
 	-- name, atlas, color
-	return "Unknown", "TrivialQuests", "808080"
+	return false, false, "808080"
 end
 
 
@@ -373,6 +377,15 @@ function Breadcrumbs:OnInitialize()
 		    	WorldMapFrame:RemoveDataProvider(provider)
 		    end
 		end
+	end
+
+	if Setting_Debug_QuestWatcher then
+		-- Delay Quest Listener for the first 10 seconds after logging in
+		C_Timer.After(10, function()
+			LoginThrottle = false
+			print("|cffffff00Breadcrumbs Quest Watcher is enabled|r")
+			Breadcrumbs:Debug_UpdateQuestCache()
+		end)
 	end
 end
 
@@ -567,7 +580,7 @@ end
 
 -- Update Map
 function Breadcrumbs:UpdateMap(event, ...)
-	if Setting_Debug_QuestListener then
+	if Setting_Debug_QuestWatcher then
 		Breadcrumbs:Debug_UpdateQuestCache()
 	end
 
@@ -1662,6 +1675,10 @@ function Breadcrumbs:Validate(str)
 
 					-- Must match...
 					if v == class or v == faction or v == covenant or v == prof1 or v == prof2 or v == race then pass = true end
+					if v == "cloth" and (class == "priest" or class == "mage" or class == "warlock") then pass = true end
+					if v == "leather" and (class == "demonhunter"  or class == "druid" or class == "monk" or class == "rogue") then pass = true end
+					if v == "mail" and (class == "evoker" or class == "hunter" or class == "shaman") then pass = true end
+					if v == "plate" and (class == "deathknight" or class == "paladin" or class == "warrior") then pass = true end
 					if v == "garrison" and garrison >= 1 then pass = true end
 					if v == "garrison:1" and garrison == 1 then pass = true end
 					if v == "garrison:2" and garrison == 2 then pass = true end
@@ -1746,6 +1763,10 @@ function Breadcrumbs:Validate(str)
 						if string.match(w, "^accachievement:(%d+)$") and select(4, GetAchievementInfo(tonumber(string.match(w, "accachievement:(%d+)") or 0))) then pass = false end
 
 						if w == class or w == faction or w == covenant or w == prof1 or w == prof2 or w == race then pass = false end
+						if w == "cloth" and (class == "priest" or class == "mage" or class == "warlock") then pass = false end
+						if w == "leather" and (class == "demonhunter"  or class == "druid" or class == "monk" or class == "rogue") then pass = false end
+						if w == "mail" and (class == "evoker" or class == "hunter" or class == "shaman") then pass = false end
+						if w == "plate" and (class == "deathknight" or class == "paladin" or class == "warrior") then pass = false end
 						if w == "garrison" and garrison >= 1 then pass = false end
 						if w == "garrison:1" and garrison == 1 then pass = false end
 						if w == "garrison:2" and garrison == 2 then pass = false end
