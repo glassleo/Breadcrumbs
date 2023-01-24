@@ -5,10 +5,18 @@ local _, Data = ...
 -- Pins for quests in this table are removed from Blizzard's Bonus Objective Data Provider if the "Hide Storylines" setting is enabled
 -- This is used to remove broken bonus objectives or to replace them with our own quest pins
 Data.HiddenBonusObjectiveQuests = {
+	-- Shadowlands
 	[57301] = true, -- Maldraxxus - Callous Concoctions
 	[66042] = true, -- Zereth Mortis - Patterns Within Patterns
 	[65749] = true, -- Zereth Mortis - The Necessity Of Equipment
 	[64641] = true, -- Zereth Mortis - Mysterious Greenery
+
+	-- Dragonflight
+	[70750] = true, -- Aiding the Accord
+	[72068] = true, -- Aiding the Accord: A Feast For All
+	[72373] = true, -- Aiding the Accord: The Hunt is On
+	[72374] = true, -- Aiding the Accord: Dragonbane Keep
+	[72375] = true, -- Aiding the Accord: The Isles Call
 }
 
 
@@ -215,10 +223,21 @@ Data.HiddenBonusObjectiveQuests = {
 
 Data.Quests = {
 
+	--[[ Dragon Isles ]]--
+
+	[1978] = {
+		-- Dragonscale Expedition - In the Halls of Titans
+		[69097] = "A Vault Unsealed|70+ reputation:2507:24|1 DocNannersCampaign|Doc Nanners|discovery campaign", -- Requires Renown 24 with Dragonscale Expedition
+	},
+
+
 	--[[ Thaldraszus ]]--
 
 	-- Valdrakken
 	[2112] = {
+		-- Aiding the Accord
+		[70750] = "Aiding the Accord|60+ 67030 -72374 -72068 -72373 -72375|50.17 56.22|Therazal|campaign weekly", -- You get one of 5 random weeklies, we consolidate them into one pin
+
 		-- The Spark of Ingenuity
 		[70180] = "Jump-Start? Jump-Starting!|60+ 67030,68+ 67030,66221 ~70846|84.22 54.41|Greyzik Cobblefinger|campaign", -- Requires either Adventure Mode unlocked or 67030, invalidates 70846
 		[70845] = "In Tyr's Footsteps|60+ 70180|84.33 53.55|Maiden of Inspiration|campaign",
@@ -226,6 +245,14 @@ Data.Quests = {
 		[70182] = "The Sweet Taste of Victory|60+ 70181|84.33 53.55|Maiden of Inspiration|campaign elsewhere link:2024",
 		[70633] = "Fueling the Engine|60+ 70182|84.33 53.55|Maiden of Inspiration|campaign",
 		[72783] = "Crafting Orders|60+ 70633|85.02 54.45|Greyzik Cobblefinger|campaign",
+		[70339] = "In Tyr's Footsteps: The Ohn'ahran Plains|60+ 70633|84.33 53.55|Maiden of Inspiration|campaign",
+		[70376] = "Second Challenge of Tyr: Might|60+ 70339|84.33 53.55|Ornamented Statue|campaign elsewhere link:2023",
+		[70341] = "Well Earned Victory|60+ 70376|84.33 53.55|Maiden of Inspiration|campaign elsewhere link:2023",
+		[70650] = "In Tyr's Footsteps: The Waking Shores|60+ 70341|84.33 53.55|Maiden of Inspiration|campaign",
+		[70509] = "Third Challenge of Tyr: Persistence|60+ 70650|84.33 53.55|Broken Ornamented Statue|campaign elsewhere link:2022",
+		[70621] = "Third Challenge of Tyr: Persistence Embodied|60+ 70509|84.33 53.55|Maiden of Inspiration|campaign elsewhere link:2022",
+		[70510] = "Victorious|60+ 70621|84.33 53.55|Maiden of Inspiration|campaign elsewhere link:2022",
+		[70881] = "Fourth Challenge of Tyr: Resourcefulness|60+ 70510|84.33 53.55|Maiden of Inspiration|campaign dungeon",
 
 		-- Artisan's Consortium
 		[70221] = "Show Your Mettle|60+ 62+,67030 alchemy,blacksmithing,enchanting,engineering,inscription,jewelcrafting,leatherworking,tailoring,herbalism,mining,skinning reputation:2544:2|39.44 70.17|Miguel Bright|weekly", -- Requires Preferred (rank 2) or higher with Artisan's Consortium
@@ -242,6 +269,9 @@ Data.Quests = {
 
 		-- Tyrhold Reservoir
 		[72190] = "Reservoir Reservations|60+, 68+,67030 -65913|25.49 40.95|Talikka", -- Breadcrumb for 65913
+		
+		-- Dragonscale Expedition - In the Halls of Titans
+		[69097] = "A Vault Unsealed|70+ reputation:2507:24|1 DocNannersCampaign|Doc Nanners|discovery campaign", -- Requires Renown 24 with Dragonscale Expedition
 	},
 
 	-- Thaldraszus
@@ -259,6 +289,14 @@ Data.Quests = {
 		[70182] = "The Sweet Taste of Victory|60+ 70181|44.9 60.39|Maiden of Inspiration|campaign elsewhere link:2024",
 		[70633] = "Fueling the Engine|60+ 70182|44.9 60.39|Maiden of Inspiration|campaign link:2112",
 		[72783] = "Crafting Orders|60+ 70633|45 60.52|Greyzik Cobblefinger|campaign link:2112",
+		[70339] = "In Tyr's Footsteps: The Ohn'ahran Plains|60+ 70633|44.9 60.39|Maiden of Inspiration|campaign",
+		[70376] = "Second Challenge of Tyr: Might|60+ 70339|44.9 60.39|Ornamented Statue|campaign elsewhere link:2023",
+		[70341] = "Well Earned Victory|60+ 70376|44.9 60.39|Maiden of Inspiration|campaign elsewhere link:2023",
+		[70650] = "In Tyr's Footsteps: The Waking Shores|60+ 70341|44.9 60.39|Maiden of Inspiration|campaign",
+		[70509] = "Third Challenge of Tyr: Persistence|60+ 70650|44.9 60.39|Broken Ornamented Statue|campaign elsewhere link:2022",
+		[70621] = "Third Challenge of Tyr: Persistence Embodied|60+ 70509|44.9 60.39|Maiden of Inspiration|campaign elsewhere link:2022",
+		[70510] = "Victorious|60+ 70621|44.9 60.39|Maiden of Inspiration|campaign elsewhere link:2022",
+		[70881] = "Fourth Challenge of Tyr: Resourcefulness|60+ 70510|44.9 60.39|Maiden of Inspiration|campaign dungeon",
 
 		-- Gelikyr Overlook
 
@@ -315,11 +353,27 @@ Data.Quests = {
 		[72485] = "The Azure Span Tour|60+ dragonriding 72483|29.34 68.39|Celormu",
 		[72487] = "The Thaldraszus Tour|60+ dragonriding 72485|44.47 90.73|Celormu",
 		[72482] = "The Waking Shores Advanced Tour|60+ dragonriding accachievement:15915 accachievement:15918 accachievement:15921 accachievement:15924|46.04 63.03|Celormu", -- Requires all normal races completed on account
+		[72488] = "The Thaldraszus Advanced Tour|60+ dragonriding 72486|44.47 90.73|Celormu",
 
 		-- Artisan's Consortium
 		[70221] = "Show Your Mettle|60+ 62+,67030 alchemy,blacksmithing,enchanting,engineering,inscription,jewelcrafting,leatherworking,tailoring,herbalism,mining,skinning reputation:2544:2|38.41 62.79|Miguel Bright|weekly link:2112", -- Requires Preferred (rank 2) or higher with Artisan's Consortium
 		[67295] = "That's My Specialty|60+ 62+,67030 66340 skill:2823:25,skill:2822:25,skill:2825:25,skill:2827:25,skill:2832:25,skill:2828:25,skill:2829:25,skill:2830:25,skill:2833:25,skill:2834:25,skill:2831:25|38.4 62.79|Miguel Bright|link:2112", -- Requires 25 skill in any Dragon Isles primary profession
 		[69919] = "A Craft in Need|60+ 62+,67030 alchemy,blacksmithing,enchanting,engineering,inscription,jewelcrafting,leatherworking,tailoring,cooking,fishing|37.82 61.14|Azley|link:2112",
+		
+		-- Dragonscale Expedition - In the Halls of Titans
+		[69097] = "A Vault Unsealed|70+ reputation:2507:24|1 DocNannersCampaign|Doc Nanners|discovery campaign", -- Requires Renown 24 with Dragonscale Expedition
+		[66636] = "The Other Side|70+ 67722|54.27 55.41|Toddy Whiskers|campaign",
+		[66173] = "Hall of Samples|70+ 66636|55.13 56.34|Toddy Whiskers|campaign",
+		[66174] = "Hall of the Aspects|70+ 66636|55.13 56.34|Toddy Whiskers|campaign",
+		[71152] = "Back to the Main Hall|70+ 66173 66174|54.83 55.93|Toddy Whiskers|campaign|\"Use any of the two teleports to either Hall of Samples or Hall of Aspects to get back to Toddy Whiskers\"",
+		[66546] = "Retrieve the Discs|70+ 71152|55.13 56.34|Toddy Whiskers|campaign",
+		[66547] = "It Belongs in a Museum... Eventually|70+ 66546|54.45 55.55|Toddy Whiskers|campaign",
+	},
+
+	-- Primalist Tomorrow
+	[2085] = {
+		-- Dragonscale Expedition - In the Halls of Titans
+		[69097] = "A Vault Unsealed|70+ reputation:2507:24|1 DocNannersCampaign|Doc Nanners|discovery campaign", -- Requires Renown 24 with Dragonscale Expedition
 	},
 
 
@@ -427,14 +481,21 @@ Data.Quests = {
 		[70168] = "Sad Little Accidents|60+ 65+,67030 70166|7.87 53.45|Ranpiata|dungeon",
 		[70170] = "Beat the Demons Out of It|60+ 65+,67030 70168|7.87 53.45|Ranpiata|dungeon",
 
+		-- Cobalt Assembly
+		[70550] = "Welcome to the Assembly|70+|49.05 23.15|Venthi",
+
 		-- Dragon Racing
 		[72487] = "The Thaldraszus Tour|60+ dragonriding 72485|63.17 13.65|Celormu",
+		[72488] = "The Thaldraszus Advanced Tour|60+ dragonriding 72486|63.17 13.65|Celormu",
 
 		-- Artisan's Consortium
 		[67295] = "That's My Specialty|60+ 62+,67030 66340 skill:2823:25,skill:2822:25,skill:2825:25,skill:2827:25,skill:2832:25,skill:2828:25,skill:2829:25,skill:2830:25,skill:2833:25,skill:2834:25,skill:2831:25|37.82 24|Miguel Bright", -- Requires 25 skill in any Dragon Isles primary profession
 		[69915] = "Targeted Ads|60+ 62+,67030 alchemy,blacksmithing,enchanting,engineering,inscription,jewelcrafting,leatherworking,tailoring,cooking,fishing|37.94 24.1|Azley",
 		[69981] = "Customer Satisfaction|60+ 69915 alchemy,blacksmithing,enchanting,engineering,inscription,jewelcrafting,leatherworking,tailoring,cooking,fishing|37.94 24.1|Azley",
 		[69919] = "A Craft in Need|60+ 62+,67030 alchemy,blacksmithing,enchanting,engineering,inscription,jewelcrafting,leatherworking,tailoring,cooking,fishing|37.94 24.1|Azley",
+		
+		-- Dragonscale Expedition - In the Halls of Titans
+		[69097] = "A Vault Unsealed|70+ reputation:2507:24|1 DocNannersCampaign|Doc Nanners|discovery campaign", -- Requires Renown 24 with Dragonscale Expedition
 	},
 
 
@@ -611,6 +672,10 @@ Data.Quests = {
 
 		-- Dragon Racing
 		[72485] = "The Azure Span Tour|60+ dragonriding 72483|88.09 36.28|Celormu",
+		[72486] = "The Azure Span Advanced Tour|60+ dragonriding 72484|88.09 36.28|Celormu",
+
+		-- Grand Hunts
+		[70501] = "License to Hunt|70+ accachievement:17044|64.01 41.02|Hunt Instructor Basku", -- Requires Renown 5 with Maruuk Centaur unlocked on account
 		
 		-- Artisan's Consortium
 		[67295] = "That's My Specialty|60+ 62+,67030 66340 skill:2823:25,skill:2822:25,skill:2825:25,skill:2827:25,skill:2832:25,skill:2828:25,skill:2829:25,skill:2830:25,skill:2833:25,skill:2834:25,skill:2831:25|71.88 80.99|Miguel Bright", -- Requires 25 skill in any Dragon Isles primary profession
@@ -624,6 +689,13 @@ Data.Quests = {
 		-- The Azure Span - Into the Archives
 		[66340] = "Into the Azure|60+ 62+,67030 66783|22.14 50.98|Merithra|campaign",
 		[65686] = "To the Azure Span|60+ 65+,67030|71.66 80.58|Masud the Wise|campaign",
+
+		-- The Spark of Ingenuity
+		[70376] = "Second Challenge of Tyr: Might|60+ 70339|66.14 55.2|Ornamented Statue|campaign",
+		[70341] = "Well Earned Victory|60+ 70376|66.28 55.33|Maiden of Inspiration|campaign",
+		
+		-- Dragonscale Expedition - In the Halls of Titans
+		[69097] = "A Vault Unsealed|70+ reputation:2507:24|1 DocNannersCampaign|Doc Nanners|discovery campaign", -- Requires Renown 24 with Dragonscale Expedition
 	},
 
 
@@ -637,15 +709,15 @@ Data.Quests = {
 		[65451] = "Practice Materials|60+ horde 65444|80.61 27.65|Boss Magor|campaign", -- Horde
 		[70123] = "Primal Pests|60+ alliance 67700|82.16 31.85|Scalecommander Azurathel|campaign", -- Alliance
 		[65453] = "Primal Pests|60+ horde 65444|80.65 27.6|Scalecommander Cindrethresh|campaign", -- Horde
-		[70148] = "Without Purpose|60+ 65452,70122 dracthyr|76.41 34.45|Haephesta", -- Dracthyr only
-		[70042] = "Opportunities Abound|60+ 65452,70122 rogue|76.3 34.34|Vish the Sneak", -- Rogue only
-		[69965] = "Quality Assurance|60+ 65452,70122|76.41 34.45|Haephesta",
+		[70148] = "Without Purpose|60+ dracthyr|76.41 34.45|Haephesta", -- Dracthyr only
+		[70042] = "Opportunities Abound|60+ rogue|76.3 34.34|Vish the Sneak", -- Rogue only
 		[66101] = "From Such Great Heights|60+|75.84 33.49|Aster Cloudgaze",
 		[67053] = "Give Peace a Chance|60+ alliance|76.73 34.55|Captain Garrick", -- Alliance
 		[66110] = "Give Peace a Chance|60+ horde|76.36 33.08|Warlord Breka Grimaxe", -- Horde
 		[70135] = "Encroaching Elementals|60+ alliance 67053 -66111|76.36 33.08|Warlord Breka Grimaxe", -- Alliance
 		[66111] = "Encroaching Elementals|60+ horde 66110 -70135|76.73 34.55|Captain Garrick", -- Horde
 		[66112] = "Always Be Crafting|60+ 67053,66110|76.35 34.64|Grun Ashbeard",
+		[69965] = "Quality Assurance|60+ 67053,66110|76.41 34.45|Haephesta",
 		[70125] = "Where is Wrathion?|60+ alliance 70122|76.63 33.63|Toddy Whiskers|campaign", -- Alliance
 		[69910] = "Where is Wrathion?|60+ horde 65452|76.61 33.6|Naleidea Rivergleam|campaign", -- Horde
 		[72293] = "Adventuring in the Dragon Isles|60+ 67030 69910,70125 -69911 -72266|76.57 33.66|Sendrax",
@@ -822,6 +894,20 @@ Data.Quests = {
 		-- Ohn'ahran Plains - Into the Plains
 		[65795] = "Next Steppes|60+ 65794|61.56 68.56|Alexstrasza the Life-Binder|campaign",
 		[65779] = "Into the Plains|60+ 62+,67030 65795,67030|48.27 88.67|Ambassador Taurasza|campaign", -- Adventure mode bypasses prereqs
+
+		-- Aiding the Accord
+		[70750] = "Aiding the Accord|60+ 67030 -72374 -72068 -72373 -72375|76.51 34.29|Kerazal|campaign weekly", -- You get one of 5 random weeklies, we consolidate them into one pin
+		
+		-- The Spark of Ingenuity
+		[70509] = "Third Challenge of Tyr: Persistence|60+ 70650|64.02 41.47|Broken Ornamented Statue|campaign",
+		[70621] = "Third Challenge of Tyr: Persistence Embodied|60+ 70509|64.1 41.39|Maiden of Inspiration|campaign",
+		[70510] = "Victorious|60+ 70621|64.1 41.39|Maiden of Inspiration|campaign",
+
+		-- Dragonscale Expedition - In the Halls of Titans
+		[69097] = "A Vault Unsealed|70+ reputation:2507:24|1 DocNannersCampaign|Doc Nanners|discovery campaign", -- Requires Renown 24 with Dragonscale Expedition
+		[67722] = "Break on Through|70+ 69097|47.1 82.58|Cataloger Jakes|campaign",
+		-- hidden tracking quests: 72752, 72822
+		[69888] = "Unusual Suspects|70+ 66547 -72822|47.21 82.73|Toddy Whiskers", -- Available the following weekly reset after completing 66547 (72822 is hidden weekly tracking quest)
 	},
 
 
@@ -1178,12 +1264,12 @@ Data.Quests = {
 		[62883] = "Keeper of Great Renown|60+ nightfae 58160|51.2 27.72|Winter Queen|campaign",
 
 		-- Da Boss
-		[59809] = "On De Other Side|60+ nightfae renown:8 59242|1 MaskOfBwonsamdi|Mask of Bwonsamdi|discovery campaign",
-		[59811] = "Taking Inventory|60+ nightfae renown:8 59809|1 MaskOfBwonsamdi|Bwonsamdi|discovery campaign|\"Mask of Bwonsamdi can take you to the Other Side\"",
-		[59812] = "Following the Trail|60+ nightfae 59811|1 MaskOfBwonsamdi|Mask of Bwonsamdi|discovery campaign",
-		[59813] = "Minions of Mueh'zala|60+ nightfae 59812|1 MaskOfBwonsamdi|Mask of Bwonsamdi|discovery campaign",
-		[59815] = "Stolen Loa|60+ nightfae 59812|2 MaskOfBwonsamdi|Mask of Bwonsamdi|discovery campaign",
-		[59817] = "Winter Be Comin'|60+ nightfae 59813 59815|1 MaskOfBwonsamdi|Mask of Bwonsamdi|discovery campaign",
+		[59809] = "On De Other Side|60+ nightfae renown:8 59242|1 MaskOfBwonsamdiCampaign|Mask of Bwonsamdi|discovery campaign",
+		[59811] = "Taking Inventory|60+ nightfae renown:8 59809|1 MaskOfBwonsamdiCampaign|Bwonsamdi|discovery campaign|\"Mask of Bwonsamdi can take you to the Other Side\"",
+		[59812] = "Following the Trail|60+ nightfae 59811|1 MaskOfBwonsamdiCampaign|Mask of Bwonsamdi|discovery campaign",
+		[59813] = "Minions of Mueh'zala|60+ nightfae 59812|1 MaskOfBwonsamdiCampaign|Mask of Bwonsamdi|discovery campaign",
+		[59815] = "Stolen Loa|60+ nightfae 59812|2 MaskOfBwonsamdiCampaign|Mask of Bwonsamdi|discovery campaign",
+		[59817] = "Winter Be Comin'|60+ nightfae 59813 59815|1 MaskOfBwonsamdiCampaign|Mask of Bwonsamdi|discovery campaign",
 		[59818] = "Gathering The Hunt|60+ nightfae 59817|51.2 27.72|Winter Queen|campaign",
 	},
 
@@ -1233,12 +1319,12 @@ Data.Quests = {
 		[59242] = "Their New Home|60+ nightfae 59189|44.77 38.98|Shandris Feathermoon|campaign elsewhere link:1543",
 
 		-- Da Boss
-		[59809] = "On De Other Side|60+ nightfae renown:8 59242|1 MaskOfBwonsamdi|Mask of Bwonsamdi|discovery campaign",
-		[59811] = "Taking Inventory|60+ nightfae renown:8 59809|1 MaskOfBwonsamdi|Bwonsamdi|discovery campaign|\"Mask of Bwonsamdi can take you to the Other Side\"",
-		[59812] = "Following the Trail|60+ nightfae 59811|1 MaskOfBwonsamdi|Mask of Bwonsamdi|discovery campaign",
-		[59813] = "Minions of Mueh'zala|60+ nightfae 59812|1 MaskOfBwonsamdi|Mask of Bwonsamdi|discovery campaign",
-		[59815] = "Stolen Loa|60+ nightfae 59812|2 MaskOfBwonsamdi|Mask of Bwonsamdi|discovery campaign",
-		[59817] = "Winter Be Comin'|60+ nightfae 59813 59815|1 MaskOfBwonsamdi|Mask of Bwonsamdi|discovery campaign",
+		[59809] = "On De Other Side|60+ nightfae renown:8 59242|1 MaskOfBwonsamdiCampaign|Mask of Bwonsamdi|discovery campaign",
+		[59811] = "Taking Inventory|60+ nightfae renown:8 59809|1 MaskOfBwonsamdiCampaign|Bwonsamdi|discovery campaign|\"Mask of Bwonsamdi can take you to the Other Side\"",
+		[59812] = "Following the Trail|60+ nightfae 59811|1 MaskOfBwonsamdiCampaign|Mask of Bwonsamdi|discovery campaign",
+		[59813] = "Minions of Mueh'zala|60+ nightfae 59812|1 MaskOfBwonsamdiCampaign|Mask of Bwonsamdi|discovery campaign",
+		[59815] = "Stolen Loa|60+ nightfae 59812|2 MaskOfBwonsamdiCampaign|Mask of Bwonsamdi|discovery campaign",
+		[59817] = "Winter Be Comin'|60+ nightfae 59813 59815|1 MaskOfBwonsamdiCampaign|Mask of Bwonsamdi|discovery campaign",
 		[59818] = "Gathering The Hunt|60+ nightfae 59817|53.71 38.36|Winter Queen|campaign elsewhere link:1703|\"Attendant Sparkledew can take you to the Queen's audience chamber\"",
 
 		-- Night Warrior's Curse
@@ -1282,12 +1368,12 @@ Data.Quests = {
 		[61984] = "Replenish the Reservoir|60+ 62899|50.6 62.63|Sesselie|campaign weekly",
 
 		-- Da Boss
-		[59809] = "On De Other Side|60+ nightfae renown:8 59242|1 MaskOfBwonsamdi|Mask of Bwonsamdi|discovery campaign",
-		[59811] = "Taking Inventory|60+ nightfae renown:8 59809|1 MaskOfBwonsamdi|Bwonsamdi|discovery campaign|\"Mask of Bwonsamdi can take you to the Other Side\"",
-		[59812] = "Following the Trail|60+ nightfae 59811|1 MaskOfBwonsamdi|Mask of Bwonsamdi|discovery campaign",
-		[59813] = "Minions of Mueh'zala|60+ nightfae 59812|1 MaskOfBwonsamdi|Mask of Bwonsamdi|discovery campaign",
-		[59815] = "Stolen Loa|60+ nightfae 59812|2 MaskOfBwonsamdi|Mask of Bwonsamdi|discovery campaign",
-		[59817] = "Winter Be Comin'|60+ nightfae 59813 59815|1 MaskOfBwonsamdi|Mask of Bwonsamdi|discovery campaign",
+		[59809] = "On De Other Side|60+ nightfae renown:8 59242|1 MaskOfBwonsamdiCampaign|Mask of Bwonsamdi|discovery campaign",
+		[59811] = "Taking Inventory|60+ nightfae renown:8 59809|1 MaskOfBwonsamdiCampaign|Bwonsamdi|discovery campaign|\"Mask of Bwonsamdi can take you to the Other Side\"",
+		[59812] = "Following the Trail|60+ nightfae 59811|1 MaskOfBwonsamdiCampaign|Mask of Bwonsamdi|discovery campaign",
+		[59813] = "Minions of Mueh'zala|60+ nightfae 59812|1 MaskOfBwonsamdiCampaign|Mask of Bwonsamdi|discovery campaign",
+		[59815] = "Stolen Loa|60+ nightfae 59812|2 MaskOfBwonsamdiCampaign|Mask of Bwonsamdi|discovery campaign",
+		[59817] = "Winter Be Comin'|60+ nightfae 59813 59815|1 MaskOfBwonsamdiCampaign|Mask of Bwonsamdi|discovery campaign",
 
 		-- Command Table
 		[61552] = "The Hunt Watches|60+ nightfae research:1074|39.36 54.38|Zayhad, The Builder", -- Requires Tactical Insight
@@ -1345,12 +1431,12 @@ Data.Quests = {
 		[59242] = "Their New Home|60+ nightfae 59189|45.78 53.12|Shandris Feathermoon|campaign elsewhere link:1543",
 
 		-- Night Fae - Da Boss
-		[59809] = "On De Other Side|60+ nightfae renown:8 59242|1 MaskOfBwonsamdi|Mask of Bwonsamdi|discovery campaign",
-		[59811] = "Taking Inventory|60+ nightfae 59809|1 MaskOfBwonsamdi|Bwonsamdi|discovery campaign|\"Mask of Bwonsamdi can take you to the Other Side\"",
-		[59812] = "Following the Trail|60+ nightfae 59811|1 MaskOfBwonsamdi|Mask of Bwonsamdi|discovery campaign",
-		[59813] = "Minions of Mueh'zala|60+ nightfae 59812|1 MaskOfBwonsamdi|Mask of Bwonsamdi|discovery campaign",
-		[59815] = "Stolen Loa|60+ nightfae 59812|2 MaskOfBwonsamdi|Mask of Bwonsamdi|discovery campaign",
-		[59817] = "Winter Be Comin'|60+ nightfae 59813 59815|1 MaskOfBwonsamdi|Mask of Bwonsamdi|discovery campaign",
+		[59809] = "On De Other Side|60+ nightfae renown:8 59242|1 MaskOfBwonsamdiCampaign|Mask of Bwonsamdi|discovery campaign",
+		[59811] = "Taking Inventory|60+ nightfae 59809|1 MaskOfBwonsamdiCampaign|Bwonsamdi|discovery campaign|\"Mask of Bwonsamdi can take you to the Other Side\"",
+		[59812] = "Following the Trail|60+ nightfae 59811|1 MaskOfBwonsamdiCampaign|Mask of Bwonsamdi|discovery campaign",
+		[59813] = "Minions of Mueh'zala|60+ nightfae 59812|1 MaskOfBwonsamdiCampaign|Mask of Bwonsamdi|discovery campaign",
+		[59815] = "Stolen Loa|60+ nightfae 59812|2 MaskOfBwonsamdiCampaign|Mask of Bwonsamdi|discovery campaign",
+		[59817] = "Winter Be Comin'|60+ nightfae 59813 59815|1 MaskOfBwonsamdiCampaign|Mask of Bwonsamdi|discovery campaign",
 		[59818] = "Gathering The Hunt|60+ nightfae 59817|46.44 53.07|Winter Queen|campaign elsewhere link:1703|\"Attendant Sparkledew can take you to the Queen's audience chamber\"",
 		[59819] = "Cleansing the Forest|60+ nightfae 59818|66.66 55.6|Lady Moonberry|campaign",
 		[59821] = "Report to the Queen|60+ nightfae 59819|68.37 65.07|Lady Moonberry|campaign",
