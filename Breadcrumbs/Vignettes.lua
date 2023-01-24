@@ -64,7 +64,7 @@ Data.Vignettes = {
 		[72139] = "Misaligned Ley Crystal|60+|26.53 35.91||vignette atlas:AzeriteReady|Grants Reputation|!{4687630} [Valdrakken Accord] (20)",
 		[72140] = "Misaligned Ley Crystal|60+|65.73 28.14||vignette atlas:AzeriteReady|Grants Reputation|!{4687630} [Valdrakken Accord] (20)",
 		[72141] = "Misaligned Ley Crystal|60+|66.39 59.51||vignette atlas:AzeriteReady|Grants Reputation|!{4687630} [Valdrakken Accord] (20)",
-		--[?] = "Misaligned Ley Crystal|60+|65.88 50.66||vignette atlas:AzeriteReady|Grants Reputation|!{4687630} [Valdrakken Accord] (20)",
+		[72136] = {"Misaligned Ley Crystal|60+ -mining|65.88 50.66|\"You may need [hasitem:198727]Expedition Explosives] to break open the cave wall.\n\nThey can be bought from the Dragonscale Expedition quartermaster in the Waking Shores.\"|vignette atlas:AzeriteReady item:198727|Grants Reputation|!{4687630} [Valdrakken Accord] (20)", "Misaligned Ley Crystal|60+ mining|65.88 50.66|\"You may need to break the cave wall using your Mining skill\"|vignette atlas:AzeriteReady|Grants Reputation|!{4687630} [Valdrakken Accord] (20)",},
 
 		-- Signal Transmitter
 		[70578] = "Deactivated Signal Transmitter|engineering skill:2827:25 profperk:2827:50930|34.91 26.77||treasure atlas:FlightMasterArgus large|Activate all three Signal Transmittors in Ohn'ahran Plains to add the zone as an option for your Wyrmhole Generator",
@@ -82,6 +82,9 @@ Data.Vignettes = {
 	--[[ Ohn'ahran Plains ]]--
 
 	[2023] = {
+		-- Treasure
+		[70300] = "Wind-Blessed Hide|60+ leatherworking skill:2830:25|86.3 53.63||treasure item:198696|Contains|!{4559248} [epic]Wind-Blessed Hide]",
+		
 		-- High Peak
 		[71208] = "High Peak|60+ research:2164|86.31 39.28||vignette atlas:Warfronts-FieldMapIcons-Empty-Banner-Minimap large|Grants Reputation|!{4687628} [Dragonscale Expedition] (250)",
 		[70827] = "High Peak|60+ research:2164|57.75 30.81||vignette atlas:Warfronts-FieldMapIcons-Empty-Banner-Minimap large|Grants Reputation|!{4687628} [Dragonscale Expedition] (250)",
@@ -100,7 +103,7 @@ Data.Vignettes = {
 		[70251] = "Shalasar Glimmerdusk|60+ enchanting skill:2825:25|62.42 18.7|\"On top of the building\"|vignette speak currency:2030|Master Enchantress|!{3615911} [rare]Dragon Isles Enchanting Knowledge] (5)|!{4643977} [rare]Artisan's Mettle] (25)",
 		[70253] = "Hua Greenpaw|60+ herbalism skill:2832:25|58.38 50.01||vignette speak currency:2034|Master Herbalist|!{4624731} [rare]Dragon Isles Herbalism Knowledge] (10)|!{4643977} [rare]Artisan's Mettle] (50)",
 		[70259] = "Zenzi|60+ skinning skill:2834:25|73.27 69.71||vignette speak currency:2033|Masta Skinna|!{4625106} [rare]Dragon Isles Skinning Knowledge] (10)|!{4643977} [rare]Artisan's Mettle] (50)",
-		[70256] = "Erden|60+ leatherworking skill:2830:25|82.43 50.65||vignette speak currency:2025|Master Leatherworker|!{4624911} [rare]Dragon Isles Leatherworking Knowledge] (5)|!{4643977} [rare]Artisan's Mettle] (25)",
+		[70256] = "Erden|60+ leatherworking skill:2830:25|82.42 50.64||vignette speak currency:2025|Master Leatherworker|!{4624911} [rare]Dragon Isles Leatherworking Knowledge] (5)|!{4643977} [rare]Artisan's Mettle] (25)",
 	},
 
 
@@ -111,8 +114,8 @@ Data.Vignettes = {
 		[65646] = "Misty Treasure Chest|60+|58.54 53.03|\"Inside a small cave behind the waterfall\"|treasure item:202194|Contains|!{133660} [rare]Misty Satchel]|!{2065578} [Dragon Isles Supplies]",
 		[67048] = { -- 70864 Possesive Hornswog moved
 			"Hidden Hornswog Hostage|60+ -70864 -item:200063 -item:200066,-item:200064,-item:200065|64.93 69.59|\"To access the treasure, you must collect three items to craft a treat for the Possesive Hornswog\"|treasure atlas:vignetteloot-locked item:199916|Required Items|!{133718} [hasitem:200066]Well-Preserved Bone]|!{133980} [hasitem:200064]Marmoni's Prize]|!{512902} [hasitem:200065]Adventurer's Lost Soap Bar]||Contains|!{2399259} [rare]Roseate Hopper]",
-			"Hidden Hornswog Hostage|60+ -70864 -item:200063 item:200066 item:200064 item:200065|64.93 69.59|\"Combine the three items near the Possesive Hornswog to create the treat\"|treasure atlas:vignetteloot-locked item:199916|Required Items|!{133718} [hasitem:200066]Well-Preserved Bone]|!{133980} [hasitem:200064]Marmoni's Prize]|!{512902} [hasitem:200065]Adventurer's Lost Soap Bar]||Contains|!{2399259} [rare]Roseate Hopper]",
-			"Hidden Hornswog Hostage|60+ -70864 item:200063|64.93 69.59|\"Throw the [Observant Riddle \"Treat\"] on the Possesive Hornswog to gain access to the treasure\"|treasure atlas:vignetteloot-locked item:199916|Contains|!{2399259} [rare]Roseate Hopper]",
+			"Hidden Hornswog Hostage|60+ -70864 -item:200063 item:200066 item:200064 item:200065|64.47 69.12|\"Combine the three items near the hostage notes to create the treat\"|treasure item:199916|Required Items|!{133718} [hasitem:200066]Well-Preserved Bone]|!{133980} [hasitem:200064]Marmoni's Prize]|!{512902} [hasitem:200065]Adventurer's Lost Soap Bar]||Contains|!{2399259} [rare]Roseate Hopper]",
+			"Hidden Hornswog Hostage|60+ -70864 item:200063|64.93 69.59|\"Throw the [Observant Riddle \"Treat\"] on the Possesive Hornswog to gain access to the treasure\"|treasure item:199916|Contains|!{2399259} [rare]Roseate Hopper]",
 			"Hidden Hornswog Hostage|60+ 70864|64.93 69.59||treasure item:199916|Contains|!{2399259} [rare]Roseate Hopper]",
 			"Well-Preserved Bone|60+ -item:200066|66.17 55.3|\"On top of the tower\"|treasure item:200066|Contains|!{133718} [Well-Preserved Bone]",
 			"Marmoni's Prize|60+ -item:200064|47.72 83.6|\"Inside a box behind the tent\"|treasure item:200064|Contains|!{133980} [Marmoni's Prize]",
@@ -126,6 +129,7 @@ Data.Vignettes = {
 			"Boom Fumes|60+ engineering skill:2827:25 -item:198814|57.83 44.58||treasure item:198814|Contains|!{4497570} [Boom Fumes]",
 			"Durable Crystal|60+ engineering skill:2827:25 -item:198817|58.13 44.54||treasure item:198817|Contains|!{132781} [Durable Crystal]",
 		},
+		[70308] = "Poacher's Pack|60+ leatherworking skill:2830:25|39.38 86.39||treasure item:198711|Contains|!{3056991} [epic]Poacher's Pack]",
 		
 		-- High Peak
 		[70824] = "High Peak|60+ research:2164|73.35 38.85||vignette atlas:Warfronts-FieldMapIcons-Empty-Banner-Minimap large|Grants Reputation|!{4687628} [Dragonscale Expedition] (250)",
@@ -622,6 +626,9 @@ Data.Vignettes = {
 		[42293] = "Small Treasure Chest|10+|63.64 39.17||treasure|Contains|!{1397630} [Order Resources]",
 		[44104] = "Small Treasure Chest|10+|53.61 18.14||treasure down|Contains|!{1397630} [Order Resources]",
 		[42294] = "Small Treasure Chest|10+|62.81 44.8||treasure down|Contains|!{1397630} [Order Resources]",
+
+		-- Vignette
+		[38061] = {"Pridelord Meowl|10+ leather|56.1 29.08||vignette item:138395|Drops|!{1115106} [rare]Meowl's Mane]|!{1397630} [Order Resources]", "Pridelord Meowl|10+ -leather|56.1 29.08||vignette|Drops|!{1397630} [Order Resources]", },
 	},
 
 	-- Nar'thalas Academy
@@ -741,6 +748,19 @@ Data.Vignettes = {
 	},
 
 
+	--[[ Suramar ]]--
+
+	-- Suramar
+	[680] = {
+		-- Vignette
+		[43580] = {
+			"Apothecary Faldren|45+ cloth|42.29 56.62||vignette item:121754|Drops|!{1134730} [rare]Mana-Flecked Mantle]|!{1397630} [Order Resources]",
+			"Apothecary Faldren|45+ -cloth|42.29 56.62||vignette|Drops|!{1397630} [Order Resources]",
+		},
+		[43954] = "Anax|45+|42.29 56.62||vignette item:140934|Drops|!{804967} [rare]Benax]|!{1397630} [Order Resources]",
+	},
+
+
 	--[[ Frostfire Ridge ]]--
 
 	-- Frostfire Ridge
@@ -755,6 +775,12 @@ Data.Vignettes = {
 	[582] = {
 		-- Treasure
 		[35383] = "Pipper's Buried Supplies|10+ alliance garrison:1|30.9 27.7||treasure|Contains|!{1005027} [Garrison Resources]",
+	},
+
+	-- Shadowmoon Valley
+	[539] = {
+		-- Vignette
+		[35847] = "Voidseer Kalurg|10+|32.67 41.37|\"Kill the nearby [hostile]Shadowmoon Channellers] to remove the barrier\"|vignette item:109074|Drops|!{937854} [rare]Fine Void-Chain Cinch]|!{1005027} [Garrison Resources]",
 	},
 
 
