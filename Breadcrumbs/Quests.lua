@@ -228,6 +228,9 @@ Data.Quests = {
 	[1978] = {
 		-- Dragonscale Expedition - In the Halls of Titans
 		[69097] = "A Vault Unsealed|70+ reputation:2507:24|1 DocNannersCampaign|Doc Nanners|discovery campaign", -- Requires Renown 24 with Dragonscale Expedition
+	
+		-- Iskaara Tuskarr - The Chieftain's Duty
+		[68863] = "A Lost Tribe|70+ reputation:2511:11|3 RowieCampaign|Rowie|discovery campaign", -- Requires Renown 11 with Iskaara Tuskarr
 	},
 
 
@@ -253,6 +256,8 @@ Data.Quests = {
 		[70621] = "Third Challenge of Tyr: Persistence Embodied|60+ 70509|84.33 53.55|Maiden of Inspiration|campaign elsewhere link:2022",
 		[70510] = "Victorious|60+ 70621|84.33 53.55|Maiden of Inspiration|campaign elsewhere link:2022",
 		[70881] = "Fourth Challenge of Tyr: Resourcefulness|60+ 70510|84.33 53.55|Maiden of Inspiration|campaign dungeon",
+		[70899] = "Fifth Challenge of Tyr: Ingenuity|60+ 70881|84.33 53.55|Maiden of Inspiration|campaign",
+		[70900] = "Innovating the Engine|60+ 70899|84.33 53.55|Maiden of Inspiration|campaign",
 
 		-- Artisan's Consortium
 		[70221] = "Show Your Mettle|60+ 62+,67030 alchemy,blacksmithing,enchanting,engineering,inscription,jewelcrafting,leatherworking,tailoring,herbalism,mining,skinning reputation:2544:2|39.44 70.17|Miguel Bright|weekly", -- Requires Preferred (rank 2) or higher with Artisan's Consortium
@@ -272,6 +277,9 @@ Data.Quests = {
 		
 		-- Dragonscale Expedition - In the Halls of Titans
 		[69097] = "A Vault Unsealed|70+ reputation:2507:24|1 DocNannersCampaign|Doc Nanners|discovery campaign", -- Requires Renown 24 with Dragonscale Expedition
+	
+		-- Iskaara Tuskarr - The Chieftain's Duty
+		[68863] = "A Lost Tribe|70+ reputation:2511:11|3 RowieCampaign|Rowie|discovery campaign", -- Requires Renown 11 with Iskaara Tuskarr
 	},
 
 	-- Thaldraszus
@@ -297,6 +305,8 @@ Data.Quests = {
 		[70621] = "Third Challenge of Tyr: Persistence Embodied|60+ 70509|44.9 60.39|Maiden of Inspiration|campaign elsewhere link:2022",
 		[70510] = "Victorious|60+ 70621|44.9 60.39|Maiden of Inspiration|campaign elsewhere link:2022",
 		[70881] = "Fourth Challenge of Tyr: Resourcefulness|60+ 70510|44.9 60.39|Maiden of Inspiration|campaign dungeon",
+		[70899] = "Fifth Challenge of Tyr: Ingenuity|60+ 70881|44.9 60.39|Maiden of Inspiration|campaign",
+		[70900] = "Innovating the Engine|60+ 70899|44.9 60.39|Maiden of Inspiration|campaign",
 
 		-- Gelikyr Overlook
 
@@ -368,12 +378,18 @@ Data.Quests = {
 		[71152] = "Back to the Main Hall|70+ 66173 66174|54.83 55.93|Toddy Whiskers|campaign|\"Use any of the two teleports to either Hall of Samples or Hall of Aspects to get back to Toddy Whiskers\"",
 		[66546] = "Retrieve the Discs|70+ 71152|55.13 56.34|Toddy Whiskers|campaign",
 		[66547] = "It Belongs in a Museum... Eventually|70+ 66546|54.45 55.55|Toddy Whiskers|campaign",
+	
+		-- Iskaara Tuskarr - The Chieftain's Duty
+		[68863] = "A Lost Tribe|70+ reputation:2511:11|3 RowieCampaign|Rowie|discovery campaign", -- Requires Renown 11 with Iskaara Tuskarr
 	},
 
 	-- Primalist Tomorrow
 	[2085] = {
 		-- Dragonscale Expedition - In the Halls of Titans
 		[69097] = "A Vault Unsealed|70+ reputation:2507:24|1 DocNannersCampaign|Doc Nanners|discovery campaign", -- Requires Renown 24 with Dragonscale Expedition
+	
+		-- Iskaara Tuskarr - The Chieftain's Duty
+		[68863] = "A Lost Tribe|70+ reputation:2511:11|3 RowieCampaign|Rowie|discovery campaign", -- Requires Renown 11 with Iskaara Tuskarr
 	},
 
 
@@ -496,6 +512,10 @@ Data.Quests = {
 		
 		-- Dragonscale Expedition - In the Halls of Titans
 		[69097] = "A Vault Unsealed|70+ reputation:2507:24|1 DocNannersCampaign|Doc Nanners|discovery campaign", -- Requires Renown 24 with Dragonscale Expedition
+	
+		-- Iskaara Tuskarr - The Chieftain's Duty
+		[68863] = "A Lost Tribe|70+ reputation:2511:11|3 RowieCampaign|Rowie|discovery campaign", -- Requires Renown 11 with Iskaara Tuskarr
+		[68640] = "Sudden Isolation|70+ reputation:2511:11 68863|13.14 49.26|Murik|campaign", -- Requires Renown 11 with Iskaara Tuskarr
 	},
 
 
@@ -696,6 +716,9 @@ Data.Quests = {
 		
 		-- Dragonscale Expedition - In the Halls of Titans
 		[69097] = "A Vault Unsealed|70+ reputation:2507:24|1 DocNannersCampaign|Doc Nanners|discovery campaign", -- Requires Renown 24 with Dragonscale Expedition
+	
+		-- Iskaara Tuskarr - The Chieftain's Duty
+		[68863] = "A Lost Tribe|70+ reputation:2511:11|3 RowieCampaign|Rowie|discovery campaign", -- Requires Renown 11 with Iskaara Tuskarr
 	},
 
 
@@ -790,7 +813,7 @@ Data.Quests = {
 		[65794] = "A Charge of Care|60+ 65791|62.34 73.02|Alexstrasza the Life-Binder|campaign",
 
 		-- Save the Hippos!
-		[72122] = "Erstwhile Ecologists|60+ 65989 -66105|71.14 40.48|Mender Eskros", -- Check if 65760 is req - Breadcrumb for 66105
+		[72122] = "Erstwhile Ecologists|60+ 65989 -66105|71.14 40.48|Mender Eskros",
 		[66105] = "A Scalpel of a Solution|60+ ~72122|74.43 42.14|Ecologist Iskha", -- Invalidates 72122
 		[66107] = "Wildlife Rescue|60+|74.43 42.14|Ecologist Tharu",
 		[66104] = "Forensic Ecology|60+ 66105 66107|74.43 42.14|Ecologist Iskha",
@@ -798,12 +821,12 @@ Data.Quests = {
 		[66106] = "Don't Be So Shellfish|60+ 66104|74.43 42.14|Ecologist Tharu",
 
 		-- Let's Get Quacking
-		[66196] = "A Quack For Help|60+ 66104|80.12 42.86|Bubbled Duckling", -- double check req
+		[66196] = "A Quack For Help|60+ 66104|80.12 42.86|Bubbled Duckling",
 		-- 70872 hidden weekly lockout
 		[70877] = "A Quack in Time|60+ 66196 -70872|80.09 39.88|Bubbled Duckling",
 		[70917] = "A Shoulder to Quack On|60+ 70877 -70872|81.6 45.45|Bubbled Duckling",
 		[70918] = "Quack for Your Life|60+ 70917 -70872|79.33 42.76|Bubbled Duckling",
-		[70919] = "Quacking Out for a Hero|60+ 70918 -70872|82.83 42.64|Bubbled Duckling", -- confirm coords
+		[70919] = "Quacking Out for a Hero|60+ 70918 -70872|82.85 42.62|Bubbled Duckling",
 
 		-- Ruby Lifecalling
 		[66825] = "A Ruby Lifecalling|60+|61.89 73.83|Lifecaller Tzadrak", -- no prereqs?
@@ -905,9 +928,12 @@ Data.Quests = {
 
 		-- Dragonscale Expedition - In the Halls of Titans
 		[69097] = "A Vault Unsealed|70+ reputation:2507:24|1 DocNannersCampaign|Doc Nanners|discovery campaign", -- Requires Renown 24 with Dragonscale Expedition
-		[67722] = "Break on Through|70+ 69097|47.1 82.58|Cataloger Jakes|campaign",
+		[67722] = "Break on Through|70+ reputation:2507:24 69097|47.1 82.58|Cataloger Jakes|campaign", -- Requires Renown 24 with Dragonscale Expedition
 		-- hidden tracking quests: 72752, 72822
 		[69888] = "Unusual Suspects|70+ 66547 -72822|47.21 82.73|Toddy Whiskers", -- Available the following weekly reset after completing 66547 (72822 is hidden weekly tracking quest)
+	
+		-- Iskaara Tuskarr - The Chieftain's Duty
+		[68863] = "A Lost Tribe|70+ reputation:2511:11|3 RowieCampaign|Rowie|discovery campaign", -- Requires Renown 11 with Iskaara Tuskarr
 	},
 
 
