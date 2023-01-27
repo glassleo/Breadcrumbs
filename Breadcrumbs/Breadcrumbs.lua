@@ -1329,7 +1329,7 @@ function Breadcrumbs:UpdateMap(event, ...)
 											ItemTooltip:SetPoint("TOPLEFT", GameTooltip, "TOPRIGHT")
 										end
 										ItemTooltip:SetHyperlink(hyperlink)
-										ItemTooltip:SetScale(1)
+										--ItemTooltip:SetScale(1)
 										ItemTooltip:Show()
 										C_Timer.After(0.25, function()
 											if ItemTooltip:IsShown() then
@@ -1485,7 +1485,7 @@ function Breadcrumbs:UpdateMap(event, ...)
 									ItemTooltip:SetPoint("TOPLEFT", GameTooltip, "TOPRIGHT")
 								end
 								ItemTooltip:SetHyperlink(hyperlink)
-								ItemTooltip:SetScale(1)
+								--ItemTooltip:SetScale(1)
 								ItemTooltip:Show()
 								C_Timer.After(0.25, function()
 									if ItemTooltip:IsShown() then
