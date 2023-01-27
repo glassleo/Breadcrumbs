@@ -401,7 +401,18 @@ Data.Quests = {
 		[66228] = "Camp Antonidas|60+ 65+,67030 65686|41.44 35.61|Glania of the Blessed Ones|campaign",
 		[66227] = "Some Good Fishing|60+ 65+,67030 65686|41.46 35.63|Khuri|fishing",
 		[67174] = "Arcane Detection|60+ 65+,67030 65686|41.22 35.88|Miva Star-Eye",
+		[67175] = "How To Stop An Exploding Toy Boat|60+ 65+,67030 67174|41.22 35.88|Miva Star-Eye",
 		[67177] = "WANTED: Gorger|60+ 65+,67030 65686|41.42 36.42|Shala",
+		[67035] = "Preservation of Knowledge|60+ 65+,67030 66228|46.67 39.74|Althanus|campaign",
+		[67033] = "Assemble the Defenses|60+ 65+,67030 66228|46.69 39.77|Noriko the All-Remembering|campaign",
+		[67036] = "Wrath of the Kirin Tor|60+ 65+,67030 67035 67033|46.69 39.77|Noriko the All-Remembering|campaign",
+		[65688] = "Meeting Kalecgos|60+ 65+,67030 67036|46.64 40.19|Archmage Khadgar|campaign",
+		[72784] = "Supporting the Cobalt Assembly|68+ 67036-70550|46.67 39.74|Althanus", -- Breadcrumb for 70550
+		[66488] = "WANTED: Frigellus|60+ 65+,67030 67036|46.16 39.62|WANTED: Frigellus",
+		[66489] = "Setting the Defense|60+ 65+,67030 66488|45.99 38.41|Arch Enchanter Celeste",
+		[66671] = "Path to Nowhere|60+ 65+,67030 67036|45.69 39.78|Caddy Scattershot",
+		[66523] = "Tending the Forge|60+ 65+,67030 67036|46.12 40.98|Custodian Vernagos",
+		[66493] = "Send It!|60+ 65+,67030 66523|45.99 38.79|Supply Portal",
 
 		-- Tuskarr Troubles
 
@@ -463,16 +474,38 @@ Data.Quests = {
 
 		-- Lost Ruins
 
-		-- Ruins of Kanthar
+		-- Ruins of Karnthar
+		[66391] = "To the Ruins!|60+ 65+,67030|63.44 57.99|Rannan Korren",
+		[66353] = "R.A.D. Anomalies|60+ 65+,67030 66391|65.02 58.61|Rannan Korren",
+		[66352] = "What the Enemy Knows|60+ 65+,67030 66391|65 58.62|Lathos Sunband",
+		[66422] = "The Expedition Continues!|60+ 65+,67030 66353 66352|65 58.62|Lathos Sunband",
+		[66423] = "Worries and Validations|60+ 65+,67030 66422|65.64 60.79|Lathos Sunband",
+		[66425] = "Arcane Overload|60+ 65+,67030 66423|65.63 60.76|Rannan Korren",
+		[66426] = "Running Out of Time|60+ 65+,67030 66425|65.64 60.79|Lathos Sunband",
+		[66427] = "A Looming Menace|60+ 65+,67030 66426|68.46 60.5|Lathos Sunband",
+		[66428] = "Friendship For Granted|60+ 65+,67030 66427|68.48 60.43|Rannan Korren",
+		[66429] = "I Will Remember|60+ 65+,67030 66428|68.48 60.43|Rannan Korren",
 
 		-- Rustpine Den
+		[66141] = "Broken Traditions, Broken Bodies|60+ 65+,67030 ~66557|63.21 58.63|Garz", -- Invalidates breadcrumb 66557
+		[66148] = "Former Furbolg Family|60+ 65+,67030 66141|63.5 52.97|Garz",
+		[66149] = "Elemental Influence|60+ 65+,67030 66141|63.5 52.97|Garz",
+		[66150] = "Rescuing Radza|60+ 65+,67030 66141|63.5 52.97|Garz",
+		[66151] = "His Stone Heart|60+ 65+,67030 66148 66149 66150|60.91 50.51|Radza Thunderclaw",
+		[66152] = "Nowhere to Go|60+ 65+,67030 66151|60.98 50.56|Garz",
+		[70627] = "What of the Winterpelt Clan?|60+ 65+,67030 66152|63.17 58.69|Radza Thunderclaw", -- Invalidated by ?
 
 		-- Winterpelt Hollow
-
-		---- LEND A HELPING SPAN
-		-- Camp Antonidas
+		[66622] = "Wayward Tools|60+ 65+,67030|65.57 16.18|Tyrnokos Sunstrike",
+		[66553] = "Hollow Up|60+ 65+,67030|65.39 15.95|Sonova Snowden",
+		[66554] = "Aggressive Self-Defence|60+ 65+,67030|65.39 15.95|Sonova Snowden",
+		[66555] = "Bear With Me|60+ 65+,67030 66553 66554|65.39 15.95|Sonova Snowden",
+		[66556] = "Ice Cave Ya Got There|60+ 65+,67030 66555|65.39 15.95|Sonova Snowden",
+		[66557] = "Academic Acquaintances|60+ 65+,67030 66556 -66141|65.39 15.95|Sonova Snowden", -- Breadcrumb for 66141
 
 		-- Iskaara
+		[70871] = "Iskaaran Fishing Net|60+ accachievement:16924|12.82 49.18|Tavio", -- Requires Renown 5 with Iskaara Tuskarr on account
+		[70940] = "Tuskarr Champion's Tales|60+ reputation:2511:5|12.41 49.34|Elder Poa", -- Requires Renown 5 with Iskaara Tuskarr
 
 		-- Three-Falls Lookout
 		[71233] = "Falling Water|60+ 65+,67030 -66837|28.46 35.11|Unkimi", -- Breadcrumb for 66837
@@ -487,10 +520,18 @@ Data.Quests = {
 		[66846] = "The Heart of the Deck|60+ 65+,67030 66845|18.77 24.43|Mysterious Apparition",
 
 		-- A Helping Claw
-		[71094] = "Help Is Our Way!|70+|46.41 25.67|Heleth the Wise",
-		[71095] = "A Claw in Need|70+ 71094|45.9 25.98|Heleth the Wise",
-		[71096] = "Is A Claw Indeed|70+ 71095|45.94 25.96|[unfriendly]Venderthvan]",
-		[71097] = "A Helping Claw|70+ 71096|45.94 25.96|[unfriendly]Venderthvan]",
+		[71094] = "Help Is Our Way!|68+|46.41 25.67|Heleth the Wise",
+		[71095] = "A Claw in Need|68+ 71094|45.9 25.98|Heleth the Wise",
+		[71096] = "Is A Claw Indeed|68+ 71095|45.94 25.96|[unfriendly]Venderthvan]",
+		[71097] = "A Helping Claw|68+ 71096|45.94 25.96|[unfriendly]Venderthvan]",
+
+		-- Hemet Nesingwary
+		[66972] = "Old Stonetusk|60+ 65+,67030|45 40.5|Hemet Nesingwary||\"Available while Hemet is at Camp Antonidas heading towards Iskaara or Camp Nowhere\"",
+		[66958] = "Protect And Herd|60+ 65+,67030|14.16 46.82|Hemet Nesingwary||\"Available while Hemet is at Iskaara, and also while travelling through Camp Antonidas after arriving from Theron's Watch\"",
+		[66957] = "A Shadow In The Ice|60+ 65+,67030|46.66 38.65|Hemet Nesingwary||\"Available while Hemet is at Camp Antonidas heading towards Rhonin's Shield\"",
+		[66968] = "Pruning The Pack|60+ 65+,67030|65.45 25.89|Hemet Nesingwary||\"Available while Hemet is at Rhonin's Shield heading towards Theron's Watch\"",
+		[66971] = "The Face of Death|60+ 65+,67030|63.5 15.65|Hemet Nesingwary||\"Available while Hemet is at Theron's Watch heading towards Camp Antonidas\"",
+		[66939] = "Hunting the Huntmaster|60+ 65+,67030|63.83 59.08|Hemet Nesingwary||\"Available while Hemet is at Camp Nowhere\"",
 
 		-- Happy Little Accidents
 		[70166] = "The Joy of Painting|60+ 65+,67030|22.14 36.76|Rauvros", -- need prereq
@@ -498,7 +539,7 @@ Data.Quests = {
 		[70170] = "Beat the Demons Out of It|60+ 65+,67030 70168|7.87 53.45|Ranpiata|dungeon",
 
 		-- Cobalt Assembly
-		[70550] = "Welcome to the Assembly|70+|49.05 23.15|Venthi",
+		[70550] = "Welcome to the Assembly|68+ ~72784|49.05 23.15|Venthi", -- Invalidates breadcrumb 72784
 
 		-- Dragon Racing
 		[72487] = "The Thaldraszus Tour|60+ dragonriding 72485|63.17 13.65|Celormu",
