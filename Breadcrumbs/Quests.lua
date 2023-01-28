@@ -375,7 +375,7 @@ Data.Quests = {
 		[66636] = "The Other Side|70+ 67722|54.27 55.41|Toddy Whiskers|campaign",
 		[66173] = "Hall of Samples|70+ 66636|55.13 56.34|Toddy Whiskers|campaign",
 		[66174] = "Hall of the Aspects|70+ 66636|55.13 56.34|Toddy Whiskers|campaign",
-		[71152] = "Back to the Main Hall|70+ 66173 66174|54.83 55.93|Toddy Whiskers|campaign|\"Use any of the two teleports to either Hall of Samples or Hall of Aspects to get back to Toddy Whiskers\"",
+		[71152] = "Back to the Main Hall|70+ 66173 66174|54.83 55.93|Toddy Whiskers|campaign|\"Use any of the two teleporers to either Hall of Samples or Hall of Aspects to get back to Toddy Whiskers\"",
 		[66546] = "Retrieve the Discs|70+ 71152|55.13 56.34|Toddy Whiskers|campaign",
 		[66547] = "It Belongs in a Museum... Eventually|70+ 66546|54.45 55.55|Toddy Whiskers|campaign",
 	
@@ -413,21 +413,67 @@ Data.Quests = {
 		[66671] = "Path to Nowhere|60+ 65+,67030 67036|45.69 39.78|Caddy Scattershot",
 		[66523] = "Tending the Forge|60+ 65+,67030 67036|46.12 40.98|Custodian Vernagos",
 		[66493] = "Send It!|60+ 65+,67030 66523|45.99 38.79|Supply Portal",
+		[65689] = "The Many Images of Kalecgos|60+ 65+,67030 65688|40.92 55|Kalecgos|campaign",
+		[65702] = "Driven Mad|60+ 65+,67030 65689|40.74 59.04|Kalecgos|campaign",
+		[65709] = "Arcane Pruning|60+ 65+,67030 65689|40.69 59.1|Kalecgos|campaign",
+		[65852] = "Straight to the Top|60+ 65+,67030 65702 65709|40.74 59.04|Kalecgos|campaign",
+		[65751] = "Platform Adjustments|60+ 65+,67030 65852|39.97 61.46|Kalecgos|campaign|\"Use one of the four Arcane currents if you need to get back up to Kalecgos atop the Archives\"",
+		[65752] = "Arcane Annoyances|60+ 65+,67030 65852|39.97 61.46|Kalecgos|campaign|\"Use one of the four Arcane currents if you need to get back up to Kalecgos atop the Archives\"",
+		[65854] = "Reclaiming the Oathstone|60+ 65+,67030 65751 65752|39.97 61.46|Kalecgos|campaign|\"Use one of the four Arcane currents if you need to get back up to Kalecgos atop the Archives\"",
+		[65855] = "Aiding Azure Span|60+ 65+,67030 65854|39.48 63.07|Sindragosa|campaign",
 
 		-- Tuskarr Troubles
+		[66699] = "Ask the Locals|60+ 65+,67030 65855|46.69 39.77|Noriko the All-Remembering|campaign",
+		[69904] = "Suspiciously Quiet|60+ 65+,67030 65855 -66500|46.69 39.77|Noriko the All-Remembering", -- Breadcrumb for 66500
+		[66500] = "Ways of Seeing|60+ 65+,67030 65855 ~69904|47.67 40.23|Apprentice Scrumpy", -- Invalidates breadcrumb 69904
+		[66503] = "For The Love of Others|60+ 65+,67030 66500|46.69 39.77|Noriko the All-Remembering",
+		[65864] = "Catch the Caravan|60+ 65+,67030 66699|45.72 38.84|Babunituk|campaign",
+		[65867] = "Howling in the Big Tree Hills|60+ 65+,67030 65864|35.28 36.94|Brena|campaign",
+		[65866] = "Snap the Traps|60+ 65+,67030 65864|35.28 36.94|Brena|campaign",
+		[65868] = "Those Aren't for Chewing|60+ 65+,67030 65864|35.37 36.94|Elder Poa|campaign",
+		[65870] = "Supplies!|60+ 65+,67030 65867 65866 65868|34.34 31.01|Elder Poa|campaign",
+		[65872] = "Ill Gnolls with Ill Intent|60+ 65+,67030 65867 65866 65868|34.37 31.03|Brena|campaign",
+		[65873] = "Leader of the Shadepaw Pack|60+ 65+,67030 65867 65866 65868|34.37 31.03|Brena|campaign",
+		[65871] = "Gnoll Way Out|60+ 65+,67030 65867 65866 65868|34.41 31.1|Hanu|campaign",
+		[66239] = "Spreading Decay|60+ 65+,67030 65870 65872 65873 65871|34.37 31.03|Brena|campaign",
+		[65869] = "Another Ambush|60+ 65+,67030 66239|28.69 34.82|Brena|campaign",
+		[66026] = "Urgent Action Required|60+ 65+,67030 65869|28.69 34.82|Brena|campaign",
 
 		-- Decayed Roots
+		[65838] = "Breaching the Brackenhide|60+ 65+,67030 66026|20.54 35.69|Kalecgos|campaign",
+		[65846] = "Ley Litter|60+ 65+,67030 65838|16.75 37.31|Kalecgos|campaign",
+		[65844] = "Cut Out the Rot|60+ 65+,67030 65838|16.76 37.25|Norukk|campaign",
+		[65845] = "Echoes of the Fallen|60+ 65+,67030 65838|16.75 37.22|Brena|campaign",
+		[65848] = "Tome-ward Bound|60+ 65+,67030 65846 65844 65845|16.75 37.31|Kalecgos|campaign",
+		[65847] = "Realignment|60+ 65+,67030 65848|15.3 39.43|Kalecgos|campaign",
+		[65849] = "To Iskaara|60+ 65+,67030 65847|16.08 41.45|Brena|campaign",
+		[66210] = "Gather the Family|60+ 65+,67030 65849|13.24 49.56|Brena|campaign",
+		[66211] = "Brackenhide Hollow: To the Source|60+ 65+,67030 65849|13.24 49.56|Brena|dungeon",
 
 		-- Vakthros
 
-		-- The Spark of Ingenuity
-		[70181] = "First Challenge of Tyr: Finesse|60+ 70845|67.18 30.72|Ornamented Statue|campaign",
-		[70182] = "The Sweet Taste of Victory|60+ 70181|67.13 30.92|Maiden of Inspiration|campaign",
+		-- Iskaara
+		[66212] = "Fishing: Aileron Seamoth|60+ 65+,67030 65849 fishing|14.07 49.45|Lukoturukk|fishing",
+		[66217] = "WANTED: Krojek the Shoreprowler|60+ 65+,67030 65849|13.19 48.76|Bukarakikk",
+		[66218] = "Scampering Scamps|60+ 65+,67030 65849|12.9 48.7|Hanu",
+		[66223] = "Can We Keep It?|60+ 65+,67030 66218|10.59 46.87|Neelo",
+		[66558] = "Rowie|60+ 65+,67030 65849|13.76 47.61|Auntie Kaunnie",
+		[70129] = "Toejam the Terrible|60+ 65+,67030 66558|16.11 50.42|Rowie",
 
-		---- SOJOURNER
 		-- Grimtusk Hideaway
 
 		-- Gorloc Shore
+		[66213] = "The Weave of a Tale|60+ 65+,67030 65849|12.4 49.4|Elder Nappa",
+		[71234] = "Nook News|60+ 65+,67030 66213|14.07 49.45|Lukoturukk", -- check if 66213 is the only req
+		[66781] = "A Matter of Taste|60+ 65+,67030 71234|7.62 44.33|Mordigan Ironjaw",
+		[66147] = "Crystals in the Water|60+ 65+,67030 66781|7.64 44.23|Aelnara",
+		[66154] = "Salivatory Samples|60+ 65+,67030 66781|7.67 44.27|Examiner Rowe",
+		[66164] = "Fishy Fingers|60+ 65+,67030 66781|7.65 44.33|LOU-C Fitzcog",
+		[66175] = "Field Experiment|60+ 65+,67030 66147 66154 66164|7.65 44.33|LOU-C Fitzcog",
+		[66177] = "No Dwarf Left Behind|60+ 65+,67030 66175|7.65 44.33|LOU-C Fitzcog",
+		[66232] = "Afront 'Till A Salt|60+ 65+,67030 66175|7.46 44.28|Wayun",
+		[66187] = "Mad Mordigan & The Crystal King|60+ 65+,67030 66177|10.77 41.18|Aelnara",
+		[66559] = "Back To Camp|60+ 65+,67030 66187|10.77 41.18|Aelnara",
 
 		-- Snowhide Camp
 
@@ -503,10 +549,6 @@ Data.Quests = {
 		[66556] = "Ice Cave Ya Got There|60+ 65+,67030 66555|65.39 15.95|Sonova Snowden",
 		[66557] = "Academic Acquaintances|60+ 65+,67030 66556 -66141|65.39 15.95|Sonova Snowden", -- Breadcrumb for 66141
 
-		-- Iskaara
-		[70871] = "Iskaaran Fishing Net|60+ accachievement:16924|12.82 49.18|Tavio", -- Requires Renown 5 with Iskaara Tuskarr on account
-		[70940] = "Tuskarr Champion's Tales|60+ reputation:2511:5|12.41 49.34|Elder Poa", -- Requires Renown 5 with Iskaara Tuskarr
-
 		-- Three-Falls Lookout
 		[71233] = "Falling Water|60+ 65+,67030 -66837|28.46 35.11|Unkimi", -- Breadcrumb for 66837
 		[66837] = "Nothing for Breakfast|60+ 65+,67030 ~71233|18.73 24.48|Willa Stronghinge", -- Invalidates breadcrumb 71233
@@ -534,7 +576,7 @@ Data.Quests = {
 		[66939] = "Hunting the Huntmaster|60+ 65+,67030|63.83 59.08|Hemet Nesingwary||\"Available while Hemet is at Camp Nowhere\"",
 
 		-- Happy Little Accidents
-		[70166] = "The Joy of Painting|60+ 65+,67030|22.14 36.76|Rauvros", -- need prereq
+		[70166] = "The Joy of Painting|60+ 65+,67030 65849|22.14 36.76|Rauvros",
 		[70168] = "Sad Little Accidents|60+ 65+,67030 70166|7.87 53.45|Ranpiata|dungeon",
 		[70170] = "Beat the Demons Out of It|60+ 65+,67030 70168|7.87 53.45|Ranpiata|dungeon",
 
@@ -551,6 +593,15 @@ Data.Quests = {
 		[69981] = "Customer Satisfaction|60+ 69915 alchemy,blacksmithing,enchanting,engineering,inscription,jewelcrafting,leatherworking,tailoring,cooking,fishing|37.94 24.1|Azley",
 		[69919] = "A Craft in Need|60+ 62+,67030 alchemy,blacksmithing,enchanting,engineering,inscription,jewelcrafting,leatherworking,tailoring,cooking,fishing|37.94 24.1|Azley",
 		
+		-- Iskaara Tuskarr Renown
+		[70871] = "Iskaaran Fishing Net|60+ accachievement:16924|12.82 49.18|Tavio", -- Requires Renown 5 with Iskaara Tuskarr on account
+		[70940] = "Tuskarr Champion's Tales|60+ reputation:2511:5|12.41 49.34|Elder Poa", -- Requires Renown 5 with Iskaara Tuskarr
+		[70963] = "Wrist Support|60+ reputation:2511:14|13.17 48.52|Arvik", -- Requires Renown 14 with Iskaara Tuskarr
+
+		-- The Spark of Ingenuity
+		[70181] = "First Challenge of Tyr: Finesse|60+ 70845|67.18 30.72|Ornamented Statue|campaign",
+		[70182] = "The Sweet Taste of Victory|60+ 70181|67.13 30.92|Maiden of Inspiration|campaign",
+
 		-- Dragonscale Expedition - In the Halls of Titans
 		[69097] = "A Vault Unsealed|70+ reputation:2507:24|1 DocNannersCampaign|Doc Nanners|discovery campaign", -- Requires Renown 24 with Dragonscale Expedition
 	
