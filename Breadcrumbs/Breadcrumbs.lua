@@ -438,6 +438,7 @@ function Breadcrumbs:FormatTooltip(text, flags, varwrap)
 		wrap = false
 	end
 
+	text = string.gsub(text, "§", "|") -- replace § with |
 	text = string.gsub(text, "{([%d]+)}", "|T%1:18:18|t") -- texture id
 	text = string.gsub(text, "{(Interface/)([%w%p]+)}", "|T%1%2:16:16|t") -- texture path
 	text = string.gsub(text, "{(/)([%w%p]+)}", "|TInterface/AddOns/Breadcrumbs/Textures/%2:16:16|t") -- relative texture path
@@ -453,9 +454,14 @@ function Breadcrumbs:FormatTooltip(text, flags, varwrap)
 		item = tonumber(item or 0) or 0
 		return (GetItemCount(item, true, false, true) >= 1) and "|cff00ff00" or "|cffff0000"
 	end)
-	text = string.gsub(text, "<itemcount:([%d]+)>", function(item)
-		item = tonumber(item or 0) or 0
-		return tostring(GetItemCount(item, true, false, true) or 0)
+	text = string.gsub(text, "<itemcount:([%d]+)>", function(id)
+		id = tonumber(id or 0) or 0
+		return tostring(GetItemCount(id, true, false, true) or 0)
+	end)
+	text = string.gsub(text, "<currencycount:([%d]+)>", function(id)
+		id = tonumber(id or 0) or 0
+		local currency = C_CurrencyInfo.GetCurrencyInfo(id)
+		return tostring(currency and currency.quantity or 0)
 	end)
 	text = string.gsub(text, "%[friendly%]", "|cff1aff1a") -- friendly green
 	text = string.gsub(text, "%[green%]", "|cff00ff00") -- green
@@ -464,8 +470,9 @@ function Breadcrumbs:FormatTooltip(text, flags, varwrap)
 	text = string.gsub(text, "%[unfriendly%]", "|cffee6622") -- unfriendly orange
 	text = string.gsub(text, "%[hostile%]", "|cffff0000") -- hostile red
 	text = string.gsub(text, "%[red%]", "|cffff0000") -- red
-	text = string.gsub(text, "%[poor%]", "|cff9d9d9d") -- poor grey
-	text = string.gsub(text, "%[dead%]", "|cff999999") -- dead grey
+	text = string.gsub(text, "%[gray%]", "|cffa3a3a3") -- gray
+	text = string.gsub(text, "%[poor%]", "|cff9d9d9d") -- poor gray
+	text = string.gsub(text, "%[dead%]", "|cff999999") -- dead gray
 	text = string.gsub(text, "%[uncommon%]", "|cff1eff00") -- uncommon green
 	text = string.gsub(text, "%[rare%]", "|cff0070dd") -- rare blue
 	text = string.gsub(text, "%[epic%]", "|cffa335ee") -- epic purple
