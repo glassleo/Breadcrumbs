@@ -240,6 +240,7 @@ Data.Quests = {
 	[2112] = {
 		-- Aiding the Accord
 		[70750] = "Aiding the Accord|60+ 67030 -72374 -72068 -72373 -72375|50.17 56.22|Therazal|campaign weekly", -- You get one of 5 random weeklies, we consolidate them into one pin
+		[72354] = "The Great Vault|70+|50.17 56.22|Therazal",
 
 		-- The Spark of Ingenuity
 		[70180] = "Jump-Start? Jump-Starting!|60+ 67030,68+ 67030,66221 ~70846|84.22 54.41|Greyzik Cobblefinger|campaign", -- Requires either Adventure Mode unlocked or 67030, invalidates 70846
@@ -258,13 +259,23 @@ Data.Quests = {
 		[70881] = "Fourth Challenge of Tyr: Resourcefulness|60+ 70510|84.33 53.55|Maiden of Inspiration|campaign dungeon",
 		[70899] = "Fifth Challenge of Tyr: Ingenuity|60+ 70881|84.33 53.55|Maiden of Inspiration|campaign",
 		[70900] = "Innovating the Engine|60+ 70899|84.33 53.55|Maiden of Inspiration|campaign",
+		-- Skip completes 72340
+		[72339] = "Engine of Innovation|60+ 72340|84.33 53.55|Maiden of Inspiration",
+
+		-- The Revival Catalyst
+		[72360] = "Reviving the Machine|70+|54.38 40.92|Watcher Koranos",
 
 		-- Artisan's Consortium
-		[70221] = "Show Your Mettle|60+ 62+,67030 alchemy,blacksmithing,enchanting,engineering,inscription,jewelcrafting,leatherworking,tailoring,herbalism,mining,skinning reputation:2544:2|39.44 70.17|Miguel Bright|weekly", -- Requires Preferred (rank 2) or higher with Artisan's Consortium
+		[70221] = "Show Your Mettle|60+ 62+,67030 alchemy,blacksmithing,enchanting,engineering,inscription,jewelcrafting,leatherworking,tailoring,herbalism,mining,skinning reputation:2544:2|39.44 70.17|Thomas Bright|weekly", -- Requires Preferred (rank 2) or higher with Artisan's Consortium
 		[67295] = "That's My Specialty|60+ 62+,67030 66340 skill:2823:25,skill:2822:25,skill:2825:25,skill:2827:25,skill:2832:25,skill:2828:25,skill:2829:25,skill:2830:25,skill:2833:25,skill:2834:25,skill:2831:25|39.37 70.16|Miguel Bright", -- Requires 25 skill in any Dragon Isles primary profession
 		[69919] = "A Craft in Need|60+ 62+,67030 alchemy,blacksmithing,enchanting,engineering,inscription,jewelcrafting,leatherworking,tailoring,cooking,fishing|35.37 58.77|Azley",
+		[69946] = "The Master of Their Craft|60+ 62+,67030 67564 65686 alchemy,blacksmithing,enchanting,engineering,inscription,jewelcrafting,leatherworking,tailoring,herbalism,mining,skinning|39.44 70.17|Thomas Bright",
 		[70033] = "Artisan's Supply: Pioneer's Leather Boots|60+ leatherworking|29 61|Samar|leatherworking",
-		
+
+		-- The Ruby Feast
+		--[70930] = "All Tea, No Shadeleaf|70+|61.63 11.54|Rumiastrasza",
+		[67047] = "Warm Away These Shivers|70+ 70930|61.63 11.54|Lilial Dawnburst|elsewhere link:2024",
+
 		-- The Emerald Enclave
 		[67094] = "A Dryad's Work Is Never Done|60+ 68+,67030|72.78 66.17|Thalendra",
 		[67606] = "A Dryadic Remedy|60+ 68+,67030 67094|72.78 66.17|Thalendra",
@@ -290,6 +301,10 @@ Data.Quests = {
 
 		-- Big Time Adventurer
 
+		-- Aiding the Accord
+		[70750] = "Aiding the Accord|60+ 67030 -72374 -72068 -72373 -72375|39.96 60.78|Therazal|campaign weekly link:2112", -- You get one of 5 random weeklies, we consolidate them into one pin
+		[72354] = "The Great Vault|70+|39.96 60.78|Therazal|link:2112",
+
 		-- The Spark of Ingenuity
 		[70180] = "Jump-Start? Jump-Starting!|60+ 67030,68+ 67030,66221 ~70846|44.88 60.51|Greyzik Cobblefinger|campaign link:2112", -- Requires either Adventure Mode unlocked or 67030, invalidates 70846
 		[70845] = "In Tyr's Footsteps|60+ 70180|44.9 60.39|Maiden of Inspiration|campaign link:2112",
@@ -304,15 +319,24 @@ Data.Quests = {
 		[70509] = "Third Challenge of Tyr: Persistence|60+ 70650|44.9 60.39|Broken Ornamented Statue|campaign elsewhere link:2022",
 		[70621] = "Third Challenge of Tyr: Persistence Embodied|60+ 70509|44.9 60.39|Maiden of Inspiration|campaign elsewhere link:2022",
 		[70510] = "Victorious|60+ 70621|44.9 60.39|Maiden of Inspiration|campaign elsewhere link:2022",
-		[70881] = "Fourth Challenge of Tyr: Resourcefulness|60+ 70510|44.9 60.39|Maiden of Inspiration|campaign dungeon",
-		[70899] = "Fifth Challenge of Tyr: Ingenuity|60+ 70881|44.9 60.39|Maiden of Inspiration|campaign",
-		[70900] = "Innovating the Engine|60+ 70899|44.9 60.39|Maiden of Inspiration|campaign",
+		[70881] = "Fourth Challenge of Tyr: Resourcefulness|60+ 70510|44.9 60.39|Maiden of Inspiration|campaign dungeon link:2112",
+		[70899] = "Fifth Challenge of Tyr: Ingenuity|60+ 70881|44.9 60.39|Maiden of Inspiration|campaign link:2112",
+		[70900] = "Innovating the Engine|60+ 70899|44.9 60.39|Maiden of Inspiration|campaign link:2112",
+		-- Skip completes 72340
+		[72339] = "Engine of Innovation|60+ 72340|44.9 60.39|Maiden of Inspiration|link:2112",
+
+		-- The Revival Catalyst
+		[72360] = "Reviving the Machine|70+|40.57 58.57|Watcher Koranos|link:2112",
 
 		-- Gelikyr Overlook
 
 		-- Drawing Conclusions
 
 		-- The Screechflight Scramble
+
+		-- The Ruby Feast
+		--[70930] = "All Tea, No Shadeleaf|70+|COORDS|Rumiastrasza|link:2112",
+		--[67047] = "Warm Away These Shivers|70+ 70930|COORDS|Lilial Dawnburst|elsewhere link:2024",
 
 		-- The Emerald Enclave
 		[67094] = "A Dryad's Work Is Never Done|60+ 68+,67030|43.23 62.21|Thalendra|link:2112",
@@ -461,6 +485,16 @@ Data.Quests = {
 		[70129] = "Toejam the Terrible|60+ 65+,67030 66558|16.11 50.42|Rowie",
 
 		-- Grimtusk Hideaway
+		[71013] = "No Vengeance on an Empty Stomach|60+ 65+,67030 66730|58.79 34.91|Old Grimtusk|fishing",
+		[71014] = "A Far Furbolg Friend|60+ 65+,67030 71013|58.79 34.91|Old Grimtusk",
+		[70996] = "A Little Kelp for My Friends|60+ 65+,67030 71014|1.18 39.25|Barst",
+		[71000] = "Barst Recruited|60+ 65+,67030 70996|1.18 39.25|Barst",
+		[71015] = "All Brawn, No Brains|60+ 65+,67030 71013|58.79 34.91|Old Grimtusk",
+		[71009] = "Elementary, My Dear Drakonid|60+ 65+,67030 71015|21.05 35.09|Varsek",
+		[71012] = "Varsek Recruited|60+ 65+,67030 71009|21.51 35.47|Varsek",
+		[71016] = "Grimtusk's Sister|60+ 65+,67030 71013|58.79 34.91|Old Grimtusk",
+		[71017] = "Naluki's Letter|60+ 65+,67030 71016|12.47 49.23|Naluki",
+		[71135] = "Loose Ends|60+ 65+,67030 71000 71012 71017|58.79 34.91|Old Grimtusk",
 
 		-- Gorloc Shore
 		[66213] = "The Weave of a Tale|60+ 65+,67030 65849|12.4 49.4|Elder Nappa",
@@ -476,9 +510,15 @@ Data.Quests = {
 		[66559] = "Back To Camp|60+ 65+,67030 66187|10.77 41.18|Aelnara",
 
 		-- Snowhide Camp
+		[66708] = "Riders in the Snow|60+ 65+,67030 -66709|65.9 25.48|Tuskarr Elder", -- Breadcrumb for 66709
+		[66709] = "Field Medic 101|60+ 65+,67030 ~66708|59.26 39.73|Old Grimtusk", -- Invalidates breadcrumb 66708
+		[66715] = "The Extraction|60+ 65+,67030 66709|59.26 39.73|Old Grimtusk",
+		[66703] = "Snowball Effect|60+ 65+,67030 66715|58.39 42.03|Frostbite",
+		[67050] = "Frostbite: Causes and Symptoms|60+ 65+,67030 66703|58.39 42.03|Frostbite",
+		[66730] = "True Survivors|60+ 65+,67030 67050|58.47 40.53|Old Grimtusk",
 
 		-- Slyvern Plunge
-		[71235] = "Field Mages|60+ 65+,67030 -68639|65.81 25.32|Drok Scrollstabber", -- Breadcrumb for 68639 -- add prereq: "This quest only appeared for me after I had done the first part of Grimtusk's quests, where you free his friends."
+		[71235] = "Field Mages|60+ 65+,67030 66709 -68639|65.81 25.32|Drok Scrollstabber", -- Breadcrumb for 68639
 		[68639] = "Prowling Polar Predators|60+ 65+,67030 ~71235|63.58 28.9|Callisto Windsor", -- Invalidates breadcrumb 71235
 		[68641] = "Mossing the Mark|60+ 65+,67030|63.61 28.82|Steria Duskgrove",
 		[68643] = "Vitamins and Minerals|60+ 65+,67030 68639 68641|63.58 28.9|Callisto Windsor",
@@ -507,6 +547,12 @@ Data.Quests = {
 		[65595] = "One Bad Apple|60+ 65+,67030 65594|12.87 22.01|Gnoll Mon-Ark",
 
 		-- Shiverweb Vale
+		[65750] = "Eight-Legged Menace|60+ 65+,67030|51.73 61.98|Lilial Dawnburst",
+		[65769] = "Icy Webs|60+ 65+,67030|51.73 61.98|Lilial Dawnburst",
+		[65758] = "Grungir the Explorer|60+ 65+,67030 65750 65769|51.73 61.98|Lilial Dawnburst",
+		[65832] = "Dwarven Antifreeze|60+ 65+,67030 65758|49.01 64.21|Grungir Ironspout",
+		[65833] = "Primalist Tampering|60+ 65+,67030 65758|49.01 64.21|Grungir Ironspout",
+		[65834] = "Kill the Queen|60+ 65+,67030 65832 65833|49.01 64.21|Grungir Ironspout",
 
 		-- Kauriq Gleamlet
 		[65914] = "Mammoths Matter|60+ 65+,67030|44.78 50.62|Ruriq",
@@ -516,9 +562,19 @@ Data.Quests = {
 		[65929] = "Tackling the Falls|60+ 65+,67030 66724|45.45 54.17|Ruriq",
 		[65928] = "Wayward Winds|60+ 65+,67030 66724|45.51 54.18|Kauj",
 		[65930] = "A Wrestle of Wind and Water|60+ 65+,67030 65929 65928|45.51 54.18|Kauj",
-		[66155] = "A Wrestle of Wind and Water|60+ 65+,67030 65930|45 54.03|Ruriq",
+		[66155] = "Ruriq's River Rapids Ride|60+ 65+,67030 65930|45 54.03|Ruriq",
 
 		-- Lost Ruins
+		[66964] = "Artifacts in the Wrong Hands|60+ 65+,67030 -67111|65.94 25.27|Polky Cogzapper", -- Breadcrumb for 67111
+		[67111] = "The Ailing Apprentice|60+ 65+,67030 ~66964|67.22 44.41|Kattigat", -- Invalidates breadcrumb 66964
+		[67724] = "The Fending Flames|60+ 65+,67030 ~66964|67.34 44.34|To'tik",
+		[70856] = "Kill it with Fire|60+ 65+,67030 ~66964|67.34 44.34|To'tik",
+		[70858] = "Back into the Action|60+ 65+,67030 67111 67724 70856|67.22 44.41|Kattigat",
+		[70859] = "What the Guardian Beholds|60+ 65+,67030 70858|67.3 44.34|Alia Sunsoar",
+		[70931] = "Whispered Fragments|60+ 65+,67030 70859|67.3 44.34|Alia Sunsoar",
+		[70937] = "What Valthrux Once Was|60+ 65+,67030 70859|67.34 44.34|To'tik",
+		[70946] = "No One May Wield It|60+ 65+,67030 70931 70937|67.34 44.34|To'tik",
+		[70970] = "Good Intentions|60+ 65+,67030 70946|67.32 44.39|Kattigat",
 
 		-- Ruins of Karnthar
 		[66391] = "To the Ruins!|60+ 65+,67030|63.44 57.99|Rannan Korren",
@@ -579,6 +635,7 @@ Data.Quests = {
 		[70166] = "The Joy of Painting|60+ 65+,67030 65849|22.14 36.76|Rauvros",
 		[70168] = "Sad Little Accidents|60+ 65+,67030 70166|7.87 53.45|Ranpiata|dungeon",
 		[70170] = "Beat the Demons Out of It|60+ 65+,67030 70168|7.87 53.45|Ranpiata|dungeon",
+		[70171] = "Happy Little Accidents|60+ 65+,67030 70170|7.87 53.45|Ranpiata",
 
 		-- Cobalt Assembly
 		[70550] = "Welcome to the Assembly|68+ ~72784|49.05 23.15|Venthi", -- Invalidates breadcrumb 72784
@@ -587,27 +644,31 @@ Data.Quests = {
 		[72487] = "The Thaldraszus Tour|60+ dragonriding 72485|63.17 13.65|Celormu",
 		[72488] = "The Thaldraszus Advanced Tour|60+ dragonriding 72486|63.17 13.65|Celormu",
 
+		-- The Ruby Feast
+		[67047] = "Warm Away These Shivers|70+ 70930|51.73 61.98|Lilial Dawnburst",
+
 		-- Artisan's Consortium
 		[67295] = "That's My Specialty|60+ 62+,67030 66340 skill:2823:25,skill:2822:25,skill:2825:25,skill:2827:25,skill:2832:25,skill:2828:25,skill:2829:25,skill:2830:25,skill:2833:25,skill:2834:25,skill:2831:25|37.82 24|Miguel Bright", -- Requires 25 skill in any Dragon Isles primary profession
 		[69915] = "Targeted Ads|60+ 62+,67030 alchemy,blacksmithing,enchanting,engineering,inscription,jewelcrafting,leatherworking,tailoring,cooking,fishing|37.94 24.1|Azley",
 		[69981] = "Customer Satisfaction|60+ 69915 alchemy,blacksmithing,enchanting,engineering,inscription,jewelcrafting,leatherworking,tailoring,cooking,fishing|37.94 24.1|Azley",
 		[69919] = "A Craft in Need|60+ 62+,67030 alchemy,blacksmithing,enchanting,engineering,inscription,jewelcrafting,leatherworking,tailoring,cooking,fishing|37.94 24.1|Azley",
 		
-		-- Iskaara Tuskarr Renown
+		-- Dragonscale Expedition - In the Halls of Titans
+		[69097] = "A Vault Unsealed|70+ reputation:2507:24|1 DocNannersCampaign|Doc Nanners|discovery campaign", -- Requires Renown 24 with Dragonscale Expedition
+
+		-- Iskaara Tuskarr - Renown
 		[70871] = "Iskaaran Fishing Net|60+ accachievement:16924|12.82 49.18|Tavio", -- Requires Renown 5 with Iskaara Tuskarr on account
 		[70940] = "Tuskarr Champion's Tales|60+ reputation:2511:5|12.41 49.34|Elder Poa", -- Requires Renown 5 with Iskaara Tuskarr
 		[70963] = "Wrist Support|60+ reputation:2511:14|13.17 48.52|Arvik", -- Requires Renown 14 with Iskaara Tuskarr
-
-		-- The Spark of Ingenuity
-		[70181] = "First Challenge of Tyr: Finesse|60+ 70845|67.18 30.72|Ornamented Statue|campaign",
-		[70182] = "The Sweet Taste of Victory|60+ 70181|67.13 30.92|Maiden of Inspiration|campaign",
-
-		-- Dragonscale Expedition - In the Halls of Titans
-		[69097] = "A Vault Unsealed|70+ reputation:2507:24|1 DocNannersCampaign|Doc Nanners|discovery campaign", -- Requires Renown 24 with Dragonscale Expedition
+		[70978] = "Dragon Isles Champion's Tales|60+ reputation:2511:15|12.41 49.34|Elder Poa", -- Requires Renown 15 with Iskaara Tuskarr
 	
 		-- Iskaara Tuskarr - The Chieftain's Duty
 		[68863] = "A Lost Tribe|70+ reputation:2511:11|3 RowieCampaign|Rowie|discovery campaign", -- Requires Renown 11 with Iskaara Tuskarr
 		[68640] = "Sudden Isolation|70+ reputation:2511:11 68863|13.14 49.26|Murik|campaign", -- Requires Renown 11 with Iskaara Tuskarr
+
+		-- The Spark of Ingenuity
+		[70181] = "First Challenge of Tyr: Finesse|60+ 70845|67.18 30.72|Ornamented Statue|campaign",
+		[70182] = "The Sweet Taste of Victory|60+ 70181|67.13 30.92|Maiden of Inspiration|campaign",
 	},
 
 
@@ -797,6 +858,7 @@ Data.Quests = {
 		[70029] = {"Artisan's Supply: Runed Serevite Rods|60+ enchanting|41.35 61|Asarin|enchanting", "Artisan's Supply: Runed Serevite Rods|60+ enchanting|56.83 75.51|Solonga|enchanting",},
 		[70033] = {"Artisan's Supply: Pioneer's Leather Boots|60+ leatherworking|39.4 55.4|Ekhi|leatherworking", "Artisan's Supply: Pioneer's Leather Boots|60+ leatherworking|80.8 59.4|Dokhusek|leatherworking",},
 		[70034] = "Artisan's Supply: Salamanther Scale|60+ skinning|84.6 23.2|Makhul|skinning",
+		[69979] = "A Worthy Hunt|60+ 62+,67030 69946|51.77 33.02|Khadin",
 
 		-- The Azure Span - Into the Archives
 		[66340] = "Into the Azure|60+ 62+,67030 66783|22.14 50.98|Merithra|campaign",
@@ -1005,6 +1067,7 @@ Data.Quests = {
 		[70033] = "Artisan's Supply: Pioneer's Leather Boots|60+ leatherworking|76.63 34.85|Deirdre Flemmin|leatherworking",
 		[70028] = "Artisan's Supply: Salt Deposits|60+ mining|76.35 34.64|Grun Ashbeard|mining",
 		[70034] = "Artisan's Supply: Salamanther Scale|60+ skinning|76.69 34.78|Toninaar|skinning",
+		[69946] = "The Master of Their Craft|60+ 62+,67030 67564 65686 alchemy,blacksmithing,enchanting,engineering,inscription,jewelcrafting,leatherworking,tailoring,herbalism,mining,skinning|60.23 72.19|Thomas Bright",
 
 		-- Ohn'ahran Plains - Into the Plains
 		[65795] = "Next Steppes|60+ 65794|61.56 68.56|Alexstrasza the Life-Binder|campaign",
@@ -1012,6 +1075,7 @@ Data.Quests = {
 
 		-- Aiding the Accord
 		[70750] = "Aiding the Accord|60+ 67030 -72374 -72068 -72373 -72375|76.51 34.29|Kerazal|campaign weekly", -- You get one of 5 random weeklies, we consolidate them into one pin
+		[72354] = "The Great Vault|70+|76.51 34.29|Kerazal",
 		
 		-- The Spark of Ingenuity
 		[70509] = "Third Challenge of Tyr: Persistence|60+ 70650|64.02 41.47|Broken Ornamented Statue|campaign",
@@ -4506,6 +4570,9 @@ Data.Quests = {
 		[65437] = "Aspectral Invitation|10+ horde 65435 -70198|44.08 37.98|Ebyssian|campaign",
 		[65443] = "Expeditionary Coordination|10+ horde 65437  -70198|44.19 37.79|Naleidea Rivergleam|campaign",
 		[72256] = "The Dark Talons|10+ horde 65437  -70198|44.04 38.27|Scalecommander Cindrethresh|campaign",
+
+		-- Blacksmithing
+		[2751]  = "Barbaric Battlements|15+ horde blacksmithing skill:2477:140|76.76 37.74|Orokk Omosh|blacksmithing", -- Requires 140 skill in Classic Blacksmithing
 
 		-- Engineering
 		[29477] = "Gnomish Engineering|20+ horde engineering skill:2506:200 -spell:20219 -spell:20222|56.8 56.4|Roxxik|engineering", -- Requires 200 skill in Classic Engineering
