@@ -98,6 +98,13 @@ Data.POI = {
 		"Stablemaster|[Stable Master]|1+|46.65 78.95",
 	},
 
+	-- Thaldraszus
+	[2025] = {
+		-- Revival Catalyst
+		"creationcatalyst-32x32|[Revival Catalyst]|70+ currency:2167:1|60.69 53.71|tooltip|Transform an item from Dragonflight Season 1 into a set item.||[green]<currencycount:2167> §4Charge:Charges; Available]",
+		"creationcatalyst-32x32|[Revival Catalyst]|70+ -currency:2167:1|60.69 53.71|tooltip|Transform an item from Dragonflight Season 1 into a set item.||[gray]No Charges Remain]",
+	},
+
 
 	--[[ Ohn'ahran Plains ]]--
 
