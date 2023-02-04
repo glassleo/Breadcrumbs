@@ -73,61 +73,73 @@ Data.HiddenBonusObjectiveQuests = {
 		alliance		Must be Alliance
 		horde			Must be Horde
 		covenant		Must currently belong to covenant (kyrian, necrolord, nightfae, venthyr)
+		cloth			Primary armor type is cloth (future-proof equivalent to "priest,mage,warlock")
+		leather			Primary armor type is leather (future-proof equivalent to "demonhunter,druid,monk,rogue")
+		mail			Primary armor type is mail (future-proof equivalent to "evoker,hunter,shaman")
+		plate			Primary armor type is plate (future-proof equivalent to "deathknight,paladin,warrior")
 		-x				Inverse of above
 
 		reset:n			Quest ID n must not have been completed during today's daily quest reset
 
 		active:n		World Quest/Task Quest with ID n must be active
-		-active:n		World Quest/Task Quest with ID n must not be active
 
 		flying			Must have learned flying
-		-flying			Must not have learned flying
+		dragonriding	Must have learned flying
 
 		garrison		Must have unlocked WoD Garrison (any tier)
-		-garrison		Must not have unlocked WoD Garrison
 		garrison:n		Must have a WoD Garrison at tier n
-		-garrison:n		Must not have WoD Garrison at tier n
 
-		research:n		Must have researched GarrTalent ID n (see https://wow.tools/dbc/?dbc=garrtalent)
-		-research:n		Must not have researched GarrTalent ID n
+		research:x		Must have researched GarrTalent ID x (see https://wow.tools/dbc/?dbc=garrtalent)
 
-		renown:n		Must have attained renown level n with their current Shadowlands covenant
-		-renown:n		Must not have attained renown level n with their current Shadowlands covenant
+		renown:n		Must have attained renown level n with their currently chosen Shadowlands covenant
 
-		toy:n			Must have learned toy with item ID n
-		-toy:n			Must not have learned toy with item ID n
+		mount:x			Must have collected mount with ID x (see https://wowpedia.fandom.com/wiki/MountID)
 
-		item:n			Must have at least one item with ID n in bags (includes bank)
-		-item:n			Must not have any items with ID n in bags (includes bank)
-		item:n:x		Must have at least x items with ID n in bags (includes bank)
-		-item:n:x		Must not have x or more items with ID n in bags (includes bank)
+		toy:x			Must have learned toy with item ID x
+
+		item:x			Must have at least one item with ID x in bags (includes bank)
+		item:x:n		Must have at least n items with ID x in bags (includes bank)
 
 		currency:n:x	Must have at least x or more of currency with ID n
-		-currency:n:x	Must not have x or more of currency with ID n
 
-		art:n			Map must currently have UiMapArtID n (see https://wow.tools/dbc/?dbc=uimapxmapart)
-		-art:n			Map must not currently have UiMapArtID n
-		art:x:n			Map with ID x must currently have UiMapArtID n
-		-art:x:n		Map with ID x must not currently have UiMapArtID n
+		art:x			Map (where this pin is located) must currently have UiMapArtID x (see https://wow.tools/dbc/?dbc=uimapxmapart)
+		art:y:x			Map with ID y must currently have UiMapArtID x
 
-		reputation:n:x	Must have reached standing x or higher with reputation faction n
-						Major (renown) type reputations require renown level x or higher (1 is Renown 1)
-						Friendship type reputation require standing x or higher (for example, for Nat Pagle; 1 is Stranger, 2 is Pal, ... 6 is Best Friend)
-						Traditional reputation require standing ID x or higher (1 is Hated, ... 4 is Neutral, 5 is Friendly, ... 8 is Exalted)
-		-reputation:n:x	 Must not have reached standing x or higher with reputation faction n
+		reputation:x:n	Must have reached standing n or higher with reputation faction x
+						Major (renown) type reputations require renown level n or higher (1 is Renown 1)
+						Friendship type reputation require standing n or higher (for example, for Nat Pagle; 1 is Stranger, 2 is Pal, ... 6 is Best Friend)
+						Traditional reputation require standing ID n or higher (1 is Hated, ... 4 is Neutral, 5 is Friendly, ... 8 is Exalted)
 
-		skill:n:x		Must have x or more skill in TradeSkillLine ID n (see https://wowpedia.fandom.com/wiki/TradeSkillLineID)
+		skill:x:n		Must have n or more skill in TradeSkillLine ID x (see https://wowpedia.fandom.com/wiki/TradeSkillLineID)
 						For example, skill:2832:25 would require Dragon Isles Herbalism at skill level 25 or higher
-		-skill:n:x		Must not have x or more skill in TradeSkillLine ID n
+		skill:profX:n	Shorthand for TradeSkillLine ID, where prof is the name of the profession and X is the expansion number (Classic is 1, Burning Crusade is 2, ... Dragonflight is 10)
+						For example, skill:herbalism10:25 is equivalent to skill:2832:25
+						Archaeology does not have expansion categories, so in this case skill:archaeology:525 is equivalent to skill:794:525
 
-		profperk:x:n	Must have earned specialization perk n in profession with TradeSkillLine ID x
-		-profperk:x:n	Must not have earned specialization perk n for profession with TradeSkillLine ID x
+		profperk:x:y	Must have earned specialization perk y in profession with TradeSkillLine ID x
+		profperk:profX:y  See skill shorthand above
 
-		spell:n			Must know spell with ID n
-		-spell:n		Must not know spell with ID n
+		spell:x			Must know spell with ID x
+
+		achievement:x	Must have earned achievement with ID x on this character
+		accachievement:x  Must have earned achievement with ID x on any character
 
 		broken			Quest is broken and cannot be completed, it will be hidden unless the user has decided to display broken quests
-		broken:n		Quest is broken if you are level n or higher and cannot be completed, it will be hidden unless the user has decided to display broken quests
+		broken:n		Quest is broken if you are level n or higher and cannot be completed, it will be hidden when above this level unless the user has decided to display broken quests
+
+	Almost all conditions can be inverted by adding - in front of them
+	Some examples:
+		dwarf			Must be a dwarf
+		-dwarf			Must not be a dwarf
+		10+ gnome mage	Must be a level 10 or higher gnome mage
+		mage,warlock	Must be either a mage or a warlock
+		10+ gnome,dwarf mage,warlock   Must be a level 10 or higher gnome or dwarf who is also a mage or warlock
+		10+ 123			Must be level 10 or higher and have completed quest with ID 123
+		10+ 123,456		Must be level 10 or higher and have completed either quest 123 or 456
+		10+ 123 -456	Must be level 10 or higher and have completed quest 123 but not 456
+		20+ skill:engineering1:200 -spell:20219 -spell:20222    Must be level 20 or higher, have 200 or more skill in Classic Engineering, have not learned the Gnomish Engineering spell and have not learned the Goblin Engineering spell
+
+
 
 	Coordinates: Coordinates for the map pin(s)
 		X Y				Coordinates for the map pin indicating where to pick up the quest
@@ -149,6 +161,7 @@ Data.HiddenBonusObjectiveQuests = {
 		legendary		Legendary quest, changes the pin icon to an orange bang and the tooltip header color to orange
 		artifact		Artifact quest, changes the pin icon to an orange bang and the tooltip header color to orange
 		daily			Daily quest, changes the pin icon to a blue bang
+		account			Account quest
 		red				Quest is started by killing a mob, changes the pin icon to a red bang
 		warboard		Quest is obtained from a Warboard, changes the pin icon to a warboard
 		elsewhere		Quest is obtained in a different location, changes the pin icon to an arrow - a link flag should always be provided with this flag
@@ -159,11 +172,13 @@ Data.HiddenBonusObjectiveQuests = {
 		petbattle		Pet Battle quest
 		
 		link:n			Pin becomes clickable to open map with ID n, should be used if the quest takes place on a different map
+						Replaces the Source text with the name of the linked map
 		
 		up				Quest is on a different map above the current map, also changes the XX YY pin to an exit marker if provided
 		down			Quest is on a different map below the current map, also changes the XX YY pin to an entrance marker if provided
 
-		discovery		Quest can be discovered from a non-fixed location in the zone, for example by mining a node; places the pin in the Discovery Quest list (top left corner of the map) sorted by other flags and priority number
+		discovery		Quest can be discovered from a non-fixed location in the zone, for example by mining a node
+						Places the pin in the Discovery Quest list (top left corner of the map) sorted by other flags and priority number
 	
 		chromietime		Quest can only be picked up during a Timewalking Campaign (Chromie Time); adds a dynamic help tip depending on level and Chromie Time status
 		chromiesync		Quest can only be picked up during a Timewalking Campaign (Chromie Time) or in Party Sync; adds a dynamic help tip depending on level and Chromie Time status
@@ -171,12 +186,21 @@ Data.HiddenBonusObjectiveQuests = {
 		partysync-warning-turnin	Adds a warning tooltip for players at level 60 or above: "You will likely need to Party Sync with a low level character to be able to complete this quest" 
 		partysync-warning-chain		Adds a warning tooltip for players at level 60 or above: "You will likely need to Party Sync with a low level character to be able to complete parts of this quest chain" 
 
-	Help: Tooltip help text
-		{!}				Quest bang
-		{n}				Texture/icon with ID n
-		{atlas}			Atlas
-		[text]			White text
-		[color]text]	Colored text where color is either a hex (like ff0800) or a named color (spell, friendly, neutral, hostile, daily, poor, uncommon, rare, epic, legendary, artifact, heirloom)
+	Help: Tooltip help text formatting
+		{x}				Atlas texture named x
+		{/x}			Texture with name/path x inside the Breadcrumbs/Textures folder
+		{n}				Texture/icon with texture ID n
+		{!}				Equivalent to {QuestNormal}
+		[				White text color opening tag
+		[color]			Colored text opening tag where color a named color: 
+							spell, friendly, neutral, unfriendly, hostile, dead, daily, poor, uncommon, rare, epic, legendary, artifact, heirloom, green, yellow, red, gray
+		[hex]			Colored text opening tag where hex is a hex color, for example [ffffff] would be white
+		]				Close color tag
+		§				|
+		[hasitem:x]		Dynamic color opening tag - green if the character has at least one item with ID x in their inventory, otherwise red
+		[hasitem:x:n]	Dynamic color opening tag - green if the character has n or more items with ID x in their inventory, otherwise red
+		<itemcount:x>	Number of items with ID x
+		<currencycount:x>  Amount of currency with ID x
 
 	--------------------------------------------------
 
@@ -264,6 +288,7 @@ Data.Quests = {
 
 		-- The Revival Catalyst
 		[72360] = "Reviving the Machine|70+|54.38 40.92|Watcher Koranos",
+		[72528] = "Revival Catalyst|70+ 72360|56.61 57.86|Antuka|weekly account",
 
 		-- Artisan's Consortium
 		[70221] = "Show Your Mettle|60+ 62+,67030 alchemy,blacksmithing,enchanting,engineering,inscription,jewelcrafting,leatherworking,tailoring,herbalism,mining,skinning reputation:2544:2|39.44 70.17|Thomas Bright|weekly", -- Requires Preferred (rank 2) or higher with Artisan's Consortium
@@ -327,6 +352,7 @@ Data.Quests = {
 
 		-- The Revival Catalyst
 		[72360] = "Reviving the Machine|70+|40.57 58.57|Watcher Koranos|link:2112",
+		[72528] = {"Revival Catalyst|70+ 72360|58.7 53.82|Antuka|weekly account", "Revival Catalyst|70+ 72360|41.18 61.01|Antuka|weekly account link:2112",},
 
 		-- Gelikyr Overlook
 
@@ -387,7 +413,9 @@ Data.Quests = {
 		[72485] = "The Azure Span Tour|60+ dragonriding 72483|29.34 68.39|Celormu",
 		[72487] = "The Thaldraszus Tour|60+ dragonriding 72485|44.47 90.73|Celormu",
 		[72482] = "The Waking Shores Advanced Tour|60+ dragonriding accachievement:15915 accachievement:15918 accachievement:15921 accachievement:15924|46.04 63.03|Celormu", -- Requires all normal races completed on account
+		[72972] = "The Waking Shores Reverse Tour|60+ dragonriding accachievement:15915 accachievement:15918 accachievement:15921 accachievement:15924|46.04 63.03|Celormu", -- Requires all normal races completed on account
 		[72488] = "The Thaldraszus Advanced Tour|60+ dragonriding 72486|44.47 90.73|Celormu",
+		[72985] = "The Thaldraszus Reverse Tour|60+ dragonriding 72984|44.47 90.73|Celormu",
 
 		-- Artisan's Consortium
 		[70221] = "Show Your Mettle|60+ 62+,67030 alchemy,blacksmithing,enchanting,engineering,inscription,jewelcrafting,leatherworking,tailoring,herbalism,mining,skinning reputation:2544:2|38.41 62.79|Miguel Bright|weekly link:2112", -- Requires Preferred (rank 2) or higher with Artisan's Consortium
@@ -643,6 +671,7 @@ Data.Quests = {
 		-- Dragon Racing
 		[72487] = "The Thaldraszus Tour|60+ dragonriding 72485|63.17 13.65|Celormu",
 		[72488] = "The Thaldraszus Advanced Tour|60+ dragonriding 72486|63.17 13.65|Celormu",
+		[72985] = "The Thaldraszus Reverse Tour|60+ dragonriding 72984|63.17 13.65|Celormu",
 
 		-- The Ruby Feast
 		[67047] = "Warm Away These Shivers|70+ 70930|51.73 61.98|Lilial Dawnburst",
@@ -846,6 +875,7 @@ Data.Quests = {
 		-- Dragon Racing
 		[72485] = "The Azure Span Tour|60+ dragonriding 72483|88.09 36.28|Celormu",
 		[72486] = "The Azure Span Advanced Tour|60+ dragonriding 72484|88.09 36.28|Celormu",
+		[72486] = "The Azure Span Reverse Tour|60+ dragonriding 72982|88.09 36.28|Celormu",
 
 		-- Grand Hunts
 		[70501] = "License to Hunt|70+ accachievement:17044|64.01 41.02|Hunt Instructor Basku", -- Requires Renown 5 with Maruuk Centaur unlocked on account
@@ -1055,7 +1085,9 @@ Data.Quests = {
 		[72481] = "The Waking Shores Tour|60+ dragonriding achievement:16978 67030|73.25 52.07|Celormu", -- Requires Valdrakken Accord renown 7 obtained on account
 		[72483] = "The Ohn'ahran Plains Tour|60+ dragonriding 72481|73.25 52.07|Celormu",
 		[72482] = "The Waking Shores Advanced Tour|60+ dragonriding accachievement:15915 accachievement:15918 accachievement:15921 accachievement:15924|73.25 52.07|Celormu", -- Requires all normal races completed on account
+		[72972] = "The Waking Shores Reverse Tour|60+ dragonriding accachievement:15915 accachievement:15918 accachievement:15921 accachievement:15924|73.25 52.07|Celormu", -- Requires all normal races completed on account
 		[72484] = "The Ohn'ahran Plains Advanced Tour|60+ dragonriding 72482|73.25 52.07|Celormu",
+		[72982] = "The Ohn'ahran Plains Reverse Tour|60+ dragonriding 72972|73.25 52.07|Celormu",
 
 		-- Artisan's Consortium
 		[67564] = "Artisan's Courier|60+ alchemy,blacksmithing,enchanting,engineering,inscription,jewelcrafting,leatherworking,tailoring,herbalism,mining,skinning|57.93 68.25|Haephesta",
@@ -2316,6 +2348,10 @@ Data.Quests = {
 		[40955] = "Oath of Service|10+ hunter 40954|72.83 41.19|Emmarel Shadewarden|artifact elsewhere link:739|Visit {!}Emmarel Shadewarden in Trueshot Lodge to continue the Hunter Campaign",
 		[40958] = "Tactical Matters|10+ hunter 40955|72.83 41.19|Emmarel Shadewarden|artifact elsewhere link:739|Visit {!}Emmarel Shadewarden in Trueshot Lodge to continue the Hunter Campaign",
 		[40959] = "The Campaign Begins|10+ hunter 40958|72.83 41.19|Tactician Tinderfell|artifact elsewhere link:739|Visit {!}Tactician Tinderfell in Trueshot Lodge to continue the Hunter Campaign",
+
+		-- Other classes
+		[72129] = "Aiding Khadgar|10+ -deathknight -demonhunter -druid -hunter -mage -monk -paladin -priest -rogue -shaman -warlock -warrior 44184,44663|28.49 48.34|Archmage Khadgar|artifact", -- Auto Accept
+		[72134] = "An Adventurer's Aid|10+ -deathknight -demonhunter -druid -hunter -mage -monk -paladin -priest -rogue -shaman -warlock -warrior 72129|28.49 48.34|Archmage Khadgar|artifact",
 
 		-- Azsuna - Behind Legion Lines
 		[41220] = "Down to Azsuna|10+ 39718 -38834 -44137|72.5 45.63|Archmage Khadgar",
@@ -4530,8 +4566,8 @@ Data.Quests = {
 
 	-- Orgrimmar
 	[85] = {
-		[66253] = "Stolen Shipments|1+ horde|48.54 75.91|Zaa'je",
-		[66323] = "Idling Pie|1+ horde 66253|48.54 75.91|Zaa'je",
+		--[66253] = "Stolen Shipments|1+ horde|48.54 75.91|Zaa'je", -- Removed in 10.0.5
+		--[66323] = "Idling Pie|1+ horde 66253|48.54 75.91|Zaa'je", -- Removed in 10.0.5
 		[29401] = "Blown Away|10+ horde|48.13 46.85|Jaga",
 
 		-- Durotar
@@ -4572,14 +4608,14 @@ Data.Quests = {
 		[72256] = "The Dark Talons|10+ horde 65437  -70198|44.04 38.27|Scalecommander Cindrethresh|campaign",
 
 		-- Blacksmithing
-		[2751]  = "Barbaric Battlements|15+ horde blacksmithing skill:2477:140|76.76 37.74|Orokk Omosh|blacksmithing", -- Requires 140 skill in Classic Blacksmithing
+		[2751]  = "Barbaric Battlements|15+ horde blacksmithing skill:blacksmithing1:140|76.76 37.74|Orokk Omosh|blacksmithing", -- Requires 140 skill in Classic Blacksmithing
 
 		-- Engineering
-		[29477] = "Gnomish Engineering|20+ horde engineering skill:2506:200 -spell:20219 -spell:20222|56.8 56.4|Roxxik|engineering", -- Requires 200 skill in Classic Engineering
-		[29475] = "Goblin Engineering|20+ horde engineering skill:2506:200 -spell:20219 -spell:20222|56.8 56.4|Roxxik|engineering", -- Requires 200 skill in Classic Engineering
+		[29477] = "Gnomish Engineering|20+ horde engineering skill:engineering1:200 -spell:20219 -spell:20222|56.8 56.4|Roxxik|engineering", -- Requires 200 skill in Classic Engineering
+		[29475] = "Goblin Engineering|20+ horde engineering skill:engineering1:200 -spell:20219 -spell:20222|56.8 56.4|Roxxik|engineering", -- Requires 200 skill in Classic Engineering
 
 		-- Fishing
-		[6608]  = "You Too Good.|15+ horde fishing skill:2592:225|66.46 41.93|Lumak|fishing", -- Requires 225 skill in Classic Fishing
+		[6608]  = "You Too Good.|15+ horde fishing skill:fishing1:225|66.46 41.93|Lumak|fishing", -- Requires 225 skill in Classic Fishing
 	},
 
 	-- Cleft of Shadow, Orgrimmar
@@ -4959,8 +4995,8 @@ Data.Quests = {
 		[51443] = "Battle for Azeroth: Mission Statement|10+ horde -60361 -59926|42.41 58.31|Warchief's Herald", -- 60361 is the Exile's Reach version
 
 		-- Engineering
-		[29477] = "Gnomish Engineering|20+ horde engineering skill:2506:200 -spell:20219 -spell:20222|36.4 59.6|Engineer Palehoof|engineering", -- Requires 200 skill in Classic Engineering
-		[29475] = "Goblin Engineering|20+ horde engineering skill:2506:200 -spell:20219 -spell:20222|36.4 59.6|Engineer Palehoof|engineering", -- Requires 200 skill in Classic Engineering
+		[29477] = "Gnomish Engineering|20+ horde engineering skill:engineering1:200 -spell:20219 -spell:20222|36.4 59.6|Engineer Palehoof|engineering", -- Requires 200 skill in Classic Engineering
+		[29475] = "Goblin Engineering|20+ horde engineering skill:engineering1:200 -spell:20219 -spell:20222|36.4 59.6|Engineer Palehoof|engineering", -- Requires 200 skill in Classic Engineering
 	},
 
 	-- Camp Narache
@@ -5179,8 +5215,8 @@ Data.Quests = {
 		[26131] = "Reinforcements for Loch Modan|5+ alliance -28567|41.43 52.29|Mountaineer Barleybrew", -- Exclusive with 28567 (Hero's Call: Loch Modan)
 
 		-- Engineering
-		[29477] = "Gnomish Engineering|20+ alliance engineering skill:2506:200 -spell:20219 -spell:20222|68.4 44.2|Springspindle Fizzlegear|engineering", -- Requires 200 skill in Classic Engineering
-		[29475] = "Goblin Engineering|20+ alliance engineering skill:2506:200 -spell:20219 -spell:20222|68.4 44.2|Springspindle Fizzlegear|engineering", -- Requires 200 skill in Classic Engineering
+		[29477] = "Gnomish Engineering|20+ alliance engineering skill:engineering1:200 -spell:20219 -spell:20222|68.4 44.2|Springspindle Fizzlegear|engineering", -- Requires 200 skill in Classic Engineering
+		[29475] = "Goblin Engineering|20+ alliance engineering skill:engineering1:200 -spell:20219 -spell:20222|68.4 44.2|Springspindle Fizzlegear|engineering", -- Requires 200 skill in Classic Engineering
 	},
 
 	-- Coldridge Valley
@@ -5476,8 +5512,8 @@ Data.Quests = {
 		[332]   = "Wine Shop Advert|1+ alliance|63.77 73.59|Renato Gallina",
 		[333]   = "Harlan Needs a Resupply|1+ alliance|62.32 67.94|Harlan Bagley",
 		[334]   = "Package for Thurman|1+ alliance|58.09 67.49|Rema Schneider",
-		[66390] = "Missing Merchandise|1+ alliance|51.53 70.41|Onnesa",
-		[66420] = "Happy Hour|1+ alliance 66390|51.53 70.41|Onnesa",
+		--[66390] = "Missing Merchandise|1+ alliance|51.53 70.41|Onnesa", -- Removed in 10.0.5
+		--[66420] = "Happy Hour|1+ alliance 66390|51.53 70.41|Onnesa", -- Removed in 10.0.5
 		[29412] = "Blown Away|10+ alliance|58.89 52.74|Vin",
 
 		-- Elwynn Forest
@@ -5524,11 +5560,11 @@ Data.Quests = {
 		[66589] = "Expeditionary Coordination|10+ alliance 66577 -70197|79.72 27.32|Toddy Whiskers|campaign",
 		[72240] = "The Obsidian Warders|10+ alliance 66577 -70197|79.75 27.97|Scalecommander Azurathel|campaign",
 		[66596] = "Whispers on the Winds|10+ alliance 66589 72240 -70197|23.01 56.15|Archmage Khadgar|campaign",
-		[67700] = "To the Dragon Isles!|10+ alliance 66596,70197|22.72 55.66|Toddy Whiskers|campaign",
+		[67700] = "To the Dragon Isles!|10+ alliance 66596,70197 ~70197|22.72 55.66|Toddy Whiskers|campaign",
 
 		-- Engineering
-		[29477] = "Gnomish Engineering|20+ alliance engineering skill:2506:200 -spell:20219 -spell:20222|62.85 31.96|Lilliam Sparkspindle|engineering", -- Requires 200 skill in Classic Engineering
-		[29475] = "Goblin Engineering|20+ alliance engineering skill:2506:200 -spell:20219 -spell:20222|62.85 31.96|Lilliam Sparkspindle|engineering", -- Requires 200 skill in Classic Engineering
+		[29477] = "Gnomish Engineering|20+ alliance engineering skill:engineering1:200 -spell:20219 -spell:20222|62.85 31.96|Lilliam Sparkspindle|engineering", -- Requires 200 skill in Classic Engineering
+		[29475] = "Goblin Engineering|20+ alliance engineering skill:engineering1:200 -spell:20219 -spell:20222|62.85 31.96|Lilliam Sparkspindle|engineering", -- Requires 200 skill in Classic Engineering
 	},
 
 	-- Northshire
