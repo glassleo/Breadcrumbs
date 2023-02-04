@@ -75,6 +75,9 @@ Data.POI = {
 		-- Crafting Orders
 		"Professions-Crafting-Orders-Icon|Crafting Orders|58+|34.72 62.47",
 
+		-- Item Upgrades
+		"upgradeitem-32x32|[Item Upgrades]|60+|45.73 38.2",
+
 		-- Professions
 		"POI/Alchemy|[Alchemy]|58+ alchemy|36.39 71.73",
 		"POI/Blacksmithing|[Blacksmithing]|58+ blacksmithing|36.97 47.1",
@@ -101,8 +104,8 @@ Data.POI = {
 	-- Thaldraszus
 	[2025] = {
 		-- Revival Catalyst
-		"creationcatalyst-32x32|[Revival Catalyst]|70+ currency:2167:1|60.69 53.71|tooltip|Transform an item from Dragonflight Season 1 into a set item.||[green]<currencycount:2167> §4Charge:Charges; Available]",
-		"creationcatalyst-32x32|[Revival Catalyst]|70+ -currency:2167:1|60.69 53.71|tooltip|Transform an item from Dragonflight Season 1 into a set item.||[gray]No Charges Remain]",
+		"creationcatalyst-32x32|[Revival Catalyst Console]|70+ currency:2167:1|60.69 53.71|tooltip|Transform an item from Dragonflight Season 1 into a set item.||[green]<currencycount:2167> §4Charge:Charges; Available]",
+		"creationcatalyst-32x32|[Revival Catalyst Console]|70+ -currency:2167:1|60.69 53.71|tooltip|Transform an item from Dragonflight Season 1 into a set item.||[gray]No Charges Remain]",
 	},
 
 
@@ -950,33 +953,33 @@ Data.POI = {
 		"POI/Portal|Portal to Isle of Quel'Danas|25+|48.59 42.02",
 
 		-- Mailbox
-		"mailbox:objective|Mailbox|mailbox scryer|55.41 80.62",
-		"mailbox:objective|Mailbox|mailbox scryer|60.07 65.05",
-		"mailbox:objective|Mailbox|mailbox scryer|61.15 64.24",
+		"mailbox:objective|Mailbox|mailbox reputation:934:4|55.41 80.62", -- Scryer
+		"mailbox:objective|Mailbox|mailbox reputation:934:4|60.07 65.05", -- Scryer
+		"mailbox:objective|Mailbox|mailbox reputation:934:4|61.15 64.24", -- Scryer
 
 		-- Professions
-		"POI/Alchemy|[Alchemy]|5+ aldor alchemy -herbalism|38.46 30.11||Aldor Rise",
-		"POI/Alchemy|[Alchemy and Herbalism]|5+ aldor alchemy herbalism|38.46 30.11||Aldor Rise",
-		"POI/Herbalism|[Herbalism]|5+ aldor herbalism -alchemy|38.46 30.11||Aldor Rise",
-		"POI/Blacksmithing|[Blacksmithing]|5+ aldor blacksmithing -engineering|37.49 31.72||Aldor Rise",
-		"POI/Blacksmithing|[Engineering and Blacksmithing]|5+ aldor blacksmithing engineering|37.49 31.72||Aldor Rise",
-		"POI/Engineering|[Engineering]|5+ aldor engineering -blacksmithing|37.49 31.72||Aldor Rise",
-		"POI/Enchanting|[Enchanting]|5+ aldor enchanting -inscription|36.28 43.95||Aldor Rise",
-		"POI/Enchanting|[Enchanting and Inscription]|5+ aldor enchanting inscription|36.28 43.95||Aldor Rise",
-		"POI/Inscription|[Inscription]|5+ aldor inscription -enchanting|36.28 43.95||Aldor Rise",
-		"POI/Jewelcrafting|[Jewelcrafting]|5+ aldor jewelcrafting|35.86 20.09||Aldor Rise",
-		"POI/Mining|[Mining]|5+ aldor mining|35.89 48.38||Aldor Rise",
-		"POI/Skinning|[Skinning]|5+ aldor skinning -leatherworking -tailoring|37.47 27.21||Aldor Rise",
-		"POI/Leatherworking|[Leatherworking]|5+ aldor leatherworking -skinning -tailoring|37.47 27.21||Aldor Rise",
-		"POI/Leatherworking|[Leatherworking and Skinning]|5+ aldor leatherworking skinning|37.47 27.21||Aldor Rise",
-		"POI/Tailoring|[Tailoring]|5+ aldor tailoring -leatherwokring -skinning|37.47 27.21||Aldor Rise",
-		"POI/Tailoring|[Tailoring and Leatherworking]|5+ aldor tailoring leatherwokring|37.47 27.21||Aldor Rise",
-		"POI/Tailoring|[Tailoring and Skinning]|5+ aldor tailoring skinning|37.47 27.21||Aldor Rise",
-		"POI/Bandage|[Bandage Trainer]|5+ aldor tailoring|66.5 13.44||Shattrath Infirmary",
-		--"POI/Cooking|[Cooking]|5+ aldor|35.12 76.19||Aldor Rise",
-		--"POI/Fishing|[Fishing]|5+ aldor|55.47 78.48||Aldor Rise",
-		--"POI/Archaeology|[Archaeology]|10+ aldor|48.84 33.39||Aldor Rise",
-		"profession|[Profession Trainers]|10+ scryer|43.65 90.87||The Seer's Library",
+		"POI/Alchemy|[Alchemy]|5+ reputation:932:4 alchemy -herbalism|38.46 30.11||Aldor Rise", -- Aldor
+		"POI/Alchemy|[Alchemy and Herbalism]|5+ reputation:932:4 alchemy herbalism|38.46 30.11||Aldor Rise", -- Aldor
+		"POI/Herbalism|[Herbalism]|5+ reputation:932:4 herbalism -alchemy|38.46 30.11||Aldor Rise", -- Aldor
+		"POI/Blacksmithing|[Blacksmithing]|5+ reputation:932:4 blacksmithing -engineering|37.49 31.72||Aldor Rise", -- Aldor
+		"POI/Blacksmithing|[Engineering and Blacksmithing]|5+ reputation:932:4 blacksmithing engineering|37.49 31.72||Aldor Rise", -- Aldor
+		"POI/Engineering|[Engineering]|5+ reputation:932:4 engineering -blacksmithing|37.49 31.72||Aldor Rise", -- Aldor
+		"POI/Enchanting|[Enchanting]|5+ reputation:932:4 enchanting -inscription|36.28 43.95||Aldor Rise", -- Aldor
+		"POI/Enchanting|[Enchanting and Inscription]|5+ reputation:932:4 enchanting inscription|36.28 43.95||Aldor Rise", -- Aldor
+		"POI/Inscription|[Inscription]|5+ reputation:932:4 inscription -enchanting|36.28 43.95||Aldor Rise", -- Aldor
+		"POI/Jewelcrafting|[Jewelcrafting]|5+ reputation:932:4 jewelcrafting|35.86 20.09||Aldor Rise", -- Aldor
+		"POI/Mining|[Mining]|5+ reputation:932:4 mining|35.89 48.38||Aldor Rise", -- Aldor
+		"POI/Skinning|[Skinning]|5+ reputation:932:4 skinning -leatherworking -tailoring|37.47 27.21||Aldor Rise", -- Aldor
+		"POI/Leatherworking|[Leatherworking]|5+ reputation:932:4 leatherworking -skinning -tailoring|37.47 27.21||Aldor Rise", -- Aldor
+		"POI/Leatherworking|[Leatherworking and Skinning]|5+ reputation:932:4 leatherworking skinning|37.47 27.21||Aldor Rise", -- Aldor
+		"POI/Tailoring|[Tailoring]|5+ reputation:932:4 tailoring -leatherwokring -skinning|37.47 27.21||Aldor Rise", -- Aldor
+		"POI/Tailoring|[Tailoring and Leatherworking]|5+ reputation:932:4 tailoring leatherwokring|37.47 27.21||Aldor Rise", -- Aldor
+		"POI/Tailoring|[Tailoring and Skinning]|5+ reputation:932:4 tailoring skinning|37.47 27.21||Aldor Rise", -- Aldor
+		"POI/Bandage|[Bandage Trainer]|5+ reputation:932:4 tailoring|66.5 13.44||Shattrath Infirmary", -- Aldor
+		--"POI/Cooking|[Cooking]|5+ reputation:932:4|35.12 76.19||Aldor Rise", -- Aldor
+		--"POI/Fishing|[Fishing]|5+ reputation:932:4|55.47 78.48||Aldor Rise", -- Aldor
+		--"POI/Archaeology|[Archaeology]|10+ reputation:932:4|48.84 33.39||Aldor Rise", -- Aldor
+		"profession|[Profession Trainers]|10+ reputation:934:4|43.65 90.87||The Seer's Library", -- Scryer
 	},
 
 
