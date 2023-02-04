@@ -35,7 +35,16 @@ local Setting_Debug_QuestWatcher = true
 
 -- Constants
 local CHROMIETIME_MAXLEVEL = 60 -- Maximum level for Chromie Time
+-- https://www.townlong-yak.com/framexml/live/GlobalStrings.lua
 local QUEST_ICONS_FILE = QUEST_ICONS_FILE -- "Interface\\QuestFrame\\QuestTypeIcons"
+local AVAILABLE_QUEST = AVAILABLE_QUEST -- Available quest
+local WEEKLY = WEEKLY -- Weekly
+local PROFESSIONS_COOKING = PROFESSIONS_COOKING -- Cooking
+local PROFESSIONS_FISHING = PROFESSIONS_FISHING -- Fishing
+local PROFESSIONS_ARCHAEOLOGY = PROFESSIONS_ARCHAEOLOGY -- Archaeology
+local RAID = RAID -- Raid
+local DUNGEON = CALENDAR_TYPE_DUNGEON -- Dungeon
+local PET_BATTLE = BATTLE_PET_SOURCE_5 -- Pet Battle
 
 local SkillLineToKeyword = {
 	[164] = "blacksmithing",
@@ -56,160 +65,160 @@ local SkillLineToKeyword = {
 
 local SkillLines = {
 	[164] = { -- Blacksmithing
-		[2477] = true, -- Classic
-		[2476] = true, -- Outland
-		[2475] = true, -- Northrend
-		[2474] = true, -- Cataclysm
-		[2473] = true, -- Pandaria
-		[2472] = true, -- Draenor
-		[2454] = true, -- Legion
-		[2437] = true, -- Kul Tiran/Zandalari
-		[2751] = true, -- Shadowlands
-		[2822] = true, -- Dragon Isles
+		[2477] = 1, -- Classic
+		[2476] = 2, -- Outland
+		[2475] = 3, -- Northrend
+		[2474] = 4, -- Cataclysm
+		[2473] = 5, -- Pandaria
+		[2472] = 6, -- Draenor
+		[2454] = 7, -- Legion
+		[2437] = 8, -- Kul Tiran/Zandalari
+		[2751] = 9, -- Shadowlands
+		[2822] = 10, -- Dragon Isles
 	},
 	[165] = { -- Leatherworking
-		[2532] = true, -- Classic
-		[2531] = true, -- Outland
-		[2530] = true, -- Northrend
-		[2529] = true, -- Cataclysm
-		[2528] = true, -- Pandaria
-		[2527] = true, -- Draenor
-		[2526] = true, -- Legion
-		[2525] = true, -- Kul Tiran/Zandalari
-		[2758] = true, -- Shadowlands
-		[2830] = true, -- Dragon Isles
+		[2532] = 1, -- Classic
+		[2531] = 2, -- Outland
+		[2530] = 3, -- Northrend
+		[2529] = 4, -- Cataclysm
+		[2528] = 5, -- Pandaria
+		[2527] = 6, -- Draenor
+		[2526] = 7, -- Legion
+		[2525] = 8, -- Kul Tiran/Zandalari
+		[2758] = 9, -- Shadowlands
+		[2830] = 10, -- Dragon Isles
 	},
 	[171] = { -- Alchemy
-		[2485] = true, -- Classic
-		[2484] = true, -- Outland
-		[2483] = true, -- Northrend
-		[2482] = true, -- Cataclysm
-		[2481] = true, -- Pandaria
-		[2480] = true, -- Draenor
-		[2479] = true, -- Legion
-		[2478] = true, -- Kul Tiran/Zandalari
-		[2750] = true, -- Shadowlands
-		[2823] = true, -- Dragon Isles
+		[2485] = 1, -- Classic
+		[2484] = 2, -- Outland
+		[2483] = 3, -- Northrend
+		[2482] = 4, -- Cataclysm
+		[2481] = 5, -- Pandaria
+		[2480] = 6, -- Draenor
+		[2479] = 7, -- Legion
+		[2478] = 8, -- Kul Tiran/Zandalari
+		[2750] = 9, -- Shadowlands
+		[2823] = 10, -- Dragon Isles
 	},
 	[182] = { -- Herbalism
-		[2556] = true, -- Classic
-		[2555] = true, -- Outland
-		[2554] = true, -- Northrend
-		[2553] = true, -- Cataclysm
-		[2552] = true, -- Pandaria
-		[2551] = true, -- Draenor
-		[2550] = true, -- Legion
-		[2549] = true, -- Kul Tiran/Zandalari
-		[2760] = true, -- Shadowlands
-		[2832] = true, -- Dragon Isles
+		[2556] = 1, -- Classic
+		[2555] = 2, -- Outland
+		[2554] = 3, -- Northrend
+		[2553] = 4, -- Cataclysm
+		[2552] = 5, -- Pandaria
+		[2551] = 6, -- Draenor
+		[2550] = 7, -- Legion
+		[2549] = 8, -- Kul Tiran/Zandalari
+		[2760] = 9, -- Shadowlands
+		[2832] = 10, -- Dragon Isles
 	},
 	[185] = { -- Cooking
-		[2548] = true, -- Classic
-		[2547] = true, -- Outland
-		[2546] = true, -- Northrend
-		[2545] = true, -- Cataclysm
-		[2544] = true, -- Pandaria
-		[2543] = true, -- Draenor
-		[2542] = true, -- Legion
-		[2541] = true, -- Kul Tiran/Zandalari
-		[2752] = true, -- Shadowlands
-		[2824] = true, -- Dragon Isles
+		[2548] = 1, -- Classic
+		[2547] = 2, -- Outland
+		[2546] = 3, -- Northrend
+		[2545] = 4, -- Cataclysm
+		[2544] = 5, -- Pandaria
+		[2543] = 6, -- Draenor
+		[2542] = 7, -- Legion
+		[2541] = 8, -- Kul Tiran/Zandalari
+		[2752] = 9, -- Shadowlands
+		[2824] = 10, -- Dragon Isles
 	},
 	[186] = { -- Mining
-		[2572] = true, -- Classic
-		[2571] = true, -- Outland
-		[2570] = true, -- Northrend
-		[2569] = true, -- Cataclysm
-		[2568] = true, -- Pandaria
-		[2567] = true, -- Draenor
-		[2566] = true, -- Legion
-		[2565] = true, -- Kul Tiran/Zandalari
-		[2761] = true, -- Shadowlands
-		[2833] = true, -- Dragon Isles
+		[2572] = 1, -- Classic
+		[2571] = 2, -- Outland
+		[2570] = 3, -- Northrend
+		[2569] = 4, -- Cataclysm
+		[2568] = 5, -- Pandaria
+		[2567] = 6, -- Draenor
+		[2566] = 7, -- Legion
+		[2565] = 8, -- Kul Tiran/Zandalari
+		[2761] = 9, -- Shadowlands
+		[2833] = 10, -- Dragon Isles
 	},
 	[197] = { -- Tailoring
-		[2540] = true, -- Classic
-		[2539] = true, -- Outland
-		[2538] = true, -- Northrend
-		[2537] = true, -- Cataclysm
-		[2536] = true, -- Pandaria
-		[2535] = true, -- Draenor
-		[2534] = true, -- Legion
-		[2533] = true, -- Kul Tiran/Zandalari
-		[2759] = true, -- Shadowlands
-		[2831] = true, -- Dragon Isles
+		[2540] = 1, -- Classic
+		[2539] = 2, -- Outland
+		[2538] = 3, -- Northrend
+		[2537] = 4, -- Cataclysm
+		[2536] = 5, -- Pandaria
+		[2535] = 6, -- Draenor
+		[2534] = 7, -- Legion
+		[2533] = 8, -- Kul Tiran/Zandalari
+		[2759] = 9, -- Shadowlands
+		[2831] = 10, -- Dragon Isles
 	},
 	[202] = { -- Engineering
-		[2506] = true, -- Classic
-		[2505] = true, -- Outland
-		[2504] = true, -- Northrend
-		[2503] = true, -- Cataclysm
-		[2502] = true, -- Pandaria
-		[2501] = true, -- Draenor
-		[2500] = true, -- Legion
-		[2499] = true, -- Kul Tiran/Zandalari
-		[2755] = true, -- Shadowlands
-		[2827] = true, -- Dragon Isles
+		[2506] = 1, -- Classic
+		[2505] = 2, -- Outland
+		[2504] = 3, -- Northrend
+		[2503] = 4, -- Cataclysm
+		[2502] = 5, -- Pandaria
+		[2501] = 6, -- Draenor
+		[2500] = 7, -- Legion
+		[2499] = 8, -- Kul Tiran/Zandalari
+		[2755] = 9, -- Shadowlands
+		[2827] = 10, -- Dragon Isles
 	},
 	[333] = { -- Enchanting
-		[2494] = true, -- Classic
-		[2493] = true, -- Outland
-		[2492] = true, -- Northrend
-		[2491] = true, -- Cataclysm
-		[2489] = true, -- Pandaria
-		[2488] = true, -- Draenor
-		[2487] = true, -- Legion
-		[2486] = true, -- Kul Tiran/Zandalari
-		[2753] = true, -- Shadowlands
-		[2825] = true, -- Dragon Isles
+		[2494] = 1, -- Classic
+		[2493] = 2, -- Outland
+		[2492] = 3, -- Northrend
+		[2491] = 4, -- Cataclysm
+		[2489] = 5, -- Pandaria
+		[2488] = 6, -- Draenor
+		[2487] = 7, -- Legion
+		[2486] = 8, -- Kul Tiran/Zandalari
+		[2753] = 9, -- Shadowlands
+		[2825] = 10, -- Dragon Isles
 	},
 	[356] = { -- Fishing
-		[2592] = true, -- Classic
-		[2591] = true, -- Outland
-		[2590] = true, -- Northrend
-		[2589] = true, -- Cataclysm
-		[2588] = true, -- Pandaria
-		[2587] = true, -- Draenor
-		[2586] = true, -- Legion
-		[2585] = true, -- Kul Tiran/Zandalari
-		[2754] = true, -- Shadowlands
-		[2826] = true, -- Dragon Isles
+		[2592] = 1, -- Classic
+		[2591] = 2, -- Outland
+		[2590] = 3, -- Northrend
+		[2589] = 4, -- Cataclysm
+		[2588] = 5, -- Pandaria
+		[2587] = 6, -- Draenor
+		[2586] = 7, -- Legion
+		[2585] = 8, -- Kul Tiran/Zandalari
+		[2754] = 9, -- Shadowlands
+		[2826] = 10, -- Dragon Isles
 	},
 	[393] = { -- Skinning
-		[2564] = true, -- Classic
-		[2563] = true, -- Outland
-		[2562] = true, -- Northrend
-		[2561] = true, -- Cataclysm
-		[2560] = true, -- Pandaria
-		[2559] = true, -- Draenor
-		[2558] = true, -- Legion
-		[2557] = true, -- Kul Tiran/Zandalari
-		[2762] = true, -- Shadowlands
-		[2834] = true, -- Dragon Isles
+		[2564] = 1, -- Classic
+		[2563] = 2, -- Outland
+		[2562] = 3, -- Northrend
+		[2561] = 4, -- Cataclysm
+		[2560] = 5, -- Pandaria
+		[2559] = 6, -- Draenor
+		[2558] = 7, -- Legion
+		[2557] = 8, -- Kul Tiran/Zandalari
+		[2762] = 9, -- Shadowlands
+		[2834] = 10, -- Dragon Isles
 	},
 	[755] = { -- Jewelcrafting
-		[2524] = true, -- Classic
-		[2523] = true, -- Outland
-		[2522] = true, -- Northrend
-		[2521] = true, -- Cataclysm
-		[2520] = true, -- Pandaria
-		[2519] = true, -- Draenor
-		[2518] = true, -- Legion
-		[2517] = true, -- Kul Tiran/Zandalari
-		[2757] = true, -- Shadowlands
-		[2829] = true, -- Dragon Isles
+		[2524] = 1, -- Classic
+		[2523] = 2, -- Outland
+		[2522] = 3, -- Northrend
+		[2521] = 4, -- Cataclysm
+		[2520] = 5, -- Pandaria
+		[2519] = 6, -- Draenor
+		[2518] = 7, -- Legion
+		[2517] = 8, -- Kul Tiran/Zandalari
+		[2757] = 9, -- Shadowlands
+		[2829] = 10, -- Dragon Isles
 	},
 	[773] = { -- Inscription
-		[2514] = true, -- Classic
-		[2513] = true, -- Outland
-		[2512] = true, -- Northrend
-		[2511] = true, -- Cataclysm
-		[2510] = true, -- Pandaria
-		[2509] = true, -- Draenor
-		[2508] = true, -- Legion
-		[2507] = true, -- Kul Tiran/Zandalari
-		[2756] = true, -- Shadowlands
-		[2828] = true, -- Dragon Isles
+		[2514] = 1, -- Classic
+		[2513] = 2, -- Outland
+		[2512] = 3, -- Northrend
+		[2511] = 4, -- Cataclysm
+		[2510] = 5, -- Pandaria
+		[2509] = 6, -- Draenor
+		[2508] = 7, -- Legion
+		[2507] = 8, -- Kul Tiran/Zandalari
+		[2756] = 9, -- Shadowlands
+		[2828] = 10, -- Dragon Isles
 	},
 	[794] = { -- Archaeology
 		[794] = true, -- Archaeology
@@ -470,7 +479,7 @@ function Breadcrumbs:FormatTooltip(text, flags, varwrap)
 	text = string.gsub(text, "%[unfriendly%]", "|cffee6622") -- unfriendly orange
 	text = string.gsub(text, "%[hostile%]", "|cffff0000") -- hostile red
 	text = string.gsub(text, "%[red%]", "|cffff0000") -- red
-	text = string.gsub(text, "%[gray%]", "|cffa3a3a3") -- gray
+	text = string.gsub(text, "%[gray%]", "|cff9d9d9d") -- gray
 	text = string.gsub(text, "%[poor%]", "|cff9d9d9d") -- poor gray
 	text = string.gsub(text, "%[dead%]", "|cff999999") -- dead gray
 	text = string.gsub(text, "%[uncommon%]", "|cff1eff00") -- uncommon green
@@ -730,9 +739,8 @@ function Breadcrumbs:UpdateMap(event, ...)
 								else -- Normal quest
 									GameTooltip:AddLine(title)
 								end
-								if flags["weekly"] then GameTooltip:AddLine("|T" .. QUEST_ICONS_FILE .. ":18:18:0:0:128:64:36:54:36:54|t Weekly") end
-								if flags["dungeon"] then GameTooltip:AddLine(CreateAtlasMarkup("dungeon") .. " Dungeon") end
-								if flags["raid"] then GameTooltip:AddLine(CreateAtlasMarkup("raid") .. " Raid") end
+								if flags["dungeon"] then GameTooltip:AddLine(CreateAtlasMarkup("dungeon") .. " " .. DUNGEON) end
+								if flags["raid"] then GameTooltip:AddLine(CreateAtlasMarkup("raid") .. " " .. RAID) end
 								if flags["alchemy"] then GameTooltip:AddLine(CreateAtlasMarkup("worldquest-icon-alchemy") .. " Alchemy") end
 								if flags["blacksmithing"] then GameTooltip:AddLine(CreateAtlasMarkup("worldquest-icon-blacksmithing") .. " Blacksmithing") end
 								if flags["enchanting"] then GameTooltip:AddLine(CreateAtlasMarkup("worldquest-icon-enchanting") .. " Enchanting") end
@@ -744,16 +752,28 @@ function Breadcrumbs:UpdateMap(event, ...)
 								if flags["mining"] then GameTooltip:AddLine(CreateAtlasMarkup("worldquest-icon-mining") .. " Mining") end
 								if flags["skinning"] then GameTooltip:AddLine(CreateAtlasMarkup("worldquest-icon-skinning") .. " Skinning") end
 								if flags["tailoring"] then GameTooltip:AddLine(CreateAtlasMarkup("worldquest-icon-tailoring") .. " Tailoring") end
-								if flags["cooking"] then GameTooltip:AddLine(CreateAtlasMarkup("worldquest-icon-cooking") .. " Cooking") end
-								if flags["fishing"] then GameTooltip:AddLine(CreateAtlasMarkup("worldquest-icon-fishing") .. " Fishing") end
-								if flags["archaeology"] then GameTooltip:AddLine(CreateAtlasMarkup("worldquest-icon-archaeology") .. " Archaeology") end
-								if flags["petbattle"] then GameTooltip:AddLine(CreateAtlasMarkup("worldquest-icon-petbattle") .. " Archaeology") end
+								if flags["cooking"] then GameTooltip:AddLine(CreateAtlasMarkup("worldquest-icon-cooking") .. " " .. PROFESSIONS_COOKING) end
+								if flags["fishing"] then GameTooltip:AddLine(CreateAtlasMarkup("worldquest-icon-fishing") .. " " .. PROFESSIONS_FISHING) end
+								if flags["archaeology"] then GameTooltip:AddLine(CreateAtlasMarkup("worldquest-icon-archaeology") .. " " .. PROFESSIONS_ARCHAEOLOGY) end
+								if flags["petbattle"] then GameTooltip:AddLine(CreateAtlasMarkup("worldquest-icon-petbattle") .. " " .. PET_BATTLE) end
+								
 								if flags["link"] and link then -- The pin is a link, indicate where it takes us
 									local mapinfo = C_Map.GetMapInfo(link)
 									GameTooltip:AddDoubleLine(AVAILABLE_QUEST, Breadcrumbs:FormatTooltip("{newplayertutorial-icon-mouse-leftbutton} ") .. (mapinfo.name or link), 1, 1, 1, 1, 1, 1)
 								else -- It's a quest, show source
 									GameTooltip:AddDoubleLine(AVAILABLE_QUEST, Breadcrumbs:FormatTooltip(source and "{!}" .. source or "", flags) or "", 1, 1, 1)
 								end
+
+								if flags["weekly"] then
+									if flags["account"] then
+										GameTooltip:AddLine("|T" .. QUEST_ICONS_FILE .. ":18:18:0:0:128:64:36:54:36:54|t Account " .. WEEKLY, 0, 0.8, 1)
+									else
+										GameTooltip:AddLine("|T" .. QUEST_ICONS_FILE .. ":18:18:0:0:128:64:36:54:36:54|t " .. WEEKLY)
+									end
+								elseif flags["account"] then
+									GameTooltip:AddLine("|T" .. QUEST_ICONS_FILE .. ":18:18:0:0:128:64:108:126:0:18|t Account", 0, 0.8, 1)
+								end
+
 								if Setting_HumanTooltips then -- Help tip
 									if help and strlen(help) > 0 then
 										GameTooltip:AddLine(" ")
@@ -1560,6 +1580,16 @@ Breadcrumbs:RegisterEvent("TRADE_SKILL_SHOW", "UpdateSkillLines")
 -- Validation
 function Breadcrumbs:Validate(str)
 	local str = str or ""
+
+	for profession, skills in pairs(SkillLines) do
+		for skill, expansion in pairs(skills) do
+			if SkillLineToKeyword[profession] then
+				if type(expansion) == "boolean" then expansion = "" else expansion = tostring(expansion) end
+				str = string.gsub(str, ":" .. SkillLineToKeyword[profession] .. expansion, ":" .. tostring(skill))
+			end
+		end
+	end
+
 	local data = { strsplit(" ", strlower(str)) }
 
 	local class = select(2, UnitClass("player"))
@@ -1582,8 +1612,6 @@ function Breadcrumbs:Validate(str)
 	end
 	local flying = IsSpellKnown(34090) or IsSpellKnown(34091) or IsSpellKnown(90265) and true or false
 	local dragonriding = IsSpellKnown(376777) and true or false
-	local aldor = (select(3, GetFactionInfoByID(932))) or 0
-	local scryer = (select(3, GetFactionInfoByID(934))) or 0
 
 	local pass = true
 	for _, v in ipairs(data) do
@@ -1625,10 +1653,10 @@ function Breadcrumbs:Validate(str)
 					-- active:n
 					if string.match(v, "^active:(%d+)$") and C_TaskQuest.IsActive(tonumber(string.match(v, "active:(%d+)") or 0)) then pass = true end
 
-					-- research:n
+					-- research:x
 					if string.match(v, "^research:(%d+)$") and C_Garrison.GetTalentInfo(tonumber(string.match(v, "research:(%d+)") or 0)).researched then pass = true end
 
-					-- repuation:n:x
+					-- repuation:x:n
 					if string.match(v, "^reputation:(%d+):(%d+)$") then
 						local faction, standing = tonumber(string.match(v, "reputation:(%d+):%d+") or 0), tonumber(string.match(v, "reputation:%d+:(%d+)") or 0)
 						local major, friend = C_MajorFactions.GetMajorFactionData(faction), C_GossipInfo.GetFriendshipReputationRanks(faction)
@@ -1641,43 +1669,46 @@ function Breadcrumbs:Validate(str)
 						end
 					end
 
-					-- skill:n:x
+					-- skill:x:n
 					if string.match(v, "^skill:(%d+):(%d+)$") then
 						local skill = Breadcrumbs:GetSkillLine(tonumber(string.match(v, "skill:(%d+):%d+") or 0))
 						if skill and skill >= tonumber(string.match(v, "skill:%d+:(%d+)") or 0) then pass = true end
 					end
 
-					-- profperk:x:n
+					-- profperk:x:y
 					if string.match(v, "^profperk:(%d+):(%d+)$") and tonumber(C_ProfSpecs.GetStateForPerk(tonumber(string.match(v, "profperk:%d+:(%d+)") or 0), C_ProfSpecs.GetConfigIDForSkillLine(tonumber(string.match(v, "profperk:(%d+):%d+") or 0))) or 0) >= 2 then pass = true end
 
-					-- spell:n
+					-- spell:x
 					if string.match(v, "^spell:(%d+)$") and (IsPlayerSpell(tonumber(string.match(v, "spell:(%d+)") or 0)) or IsSpellKnown(tonumber(string.match(v, "spell:(%d+)") or 0), true)) then pass = true end
 
-					-- art:n
+					-- art:x
 					if string.match(v, "^art:(%d+)$") and (C_Map.GetMapArtID(map) == tonumber(string.match(v, "art:(%d+)") or 0)) then pass = true end
 
-					-- art:x:n
+					-- art:y:x
 					if string.match(v, "^art:(%d+):(%d+)$") and (C_Map.GetMapArtID(tonumber(string.match(v, "art:(%d+):%d+") or 0)) == tonumber(string.match(v, "art:%d+:(%d+)") or 0)) then pass = true end
 
 					-- renown:n
 					if string.match(v, "^renown:(%d+)$") and (renown >= tonumber(string.match(v, "renown:(%d+)") or 0)) then pass = true end
 
-					-- toy:n
+					-- toy:x
 					if string.match(v, "^toy:(%d+)$") and PlayerHasToy(tonumber(string.match(v, "toy:(%d+)") or 0)) then pass = true end
 
-					-- item:n
+					-- mount:x
+					if string.match(v, "^mount:(%d+)$") and select(11, C_MountJournal.GetMountInfoByID(tonumber(string.match(v, "mount:(%d+)") or 0))) then pass = true end
+
+					-- item:x
 					if string.match(v, "^item:(%d+)$") and GetItemCount(tonumber(string.match(v, "item:(%d+)") or 0), true, false, true) >= 1 then pass = true end
 
-					-- item:n:x
+					-- item:x:n
 					if string.match(v, "^item:(%d+):(%d+)$") and GetItemCount(tonumber(string.match(v, "item:(%d+):%d+") or 0), true, false, true) >= (tonumber(string.match(v, "item:%d+:(%d+)") or 0)) then pass = true end
 
-					-- currency:n:x
+					-- currency:x:n
 					if string.match(v, "^currency:(%d+):(%d+)$") and C_CurrencyInfo.GetCurrencyInfo(tonumber(string.match(v, "currency:(%d+):%d+") or 0)).quantity >= (tonumber(string.match(v, "currency:%d+:(%d+)") or 0)) then pass = true end
 
-					-- achievement:n
+					-- achievement:x
 					if string.match(v, "^achievement:(%d+)$") and select(13, GetAchievementInfo(tonumber(string.match(v, "achievement:(%d+)") or 0))) then pass = true end
 
-					-- accachievement:n
+					-- accachievement:x
 					if string.match(v, "^accachievement:(%d+)$") and select(4, GetAchievementInfo(tonumber(string.match(v, "accachievement:(%d+)") or 0))) then pass = true end
 
 					-- Must match...
@@ -1692,8 +1723,6 @@ function Breadcrumbs:Validate(str)
 					if v == "garrison:3" and garrison == 3 then pass = true end
 					if v == "flying" and flying then pass = true end
 					if v == "dragonriding" and dragonriding then pass = true end
-					if v == "aldor" and aldor >= 4 then pass = true end
-					if v == "scryer" and scryer >= 4 then pass = true end
 					if archaeology and v == "archaeology" then pass = true end
 					if fishing and v == "fishing" then pass = true end
 					if cooking and v == "cooking" then pass = true end
@@ -1754,6 +1783,9 @@ function Breadcrumbs:Validate(str)
 						-- -toy:n
 						if string.match(w, "^toy:(%d+)$") and PlayerHasToy(tonumber(string.match(w, "toy:(%d+)") or 0)) then pass = false end
 
+						-- -mount:x
+						if string.match(v, "^mount:(%d+)$") and select(11, C_MountJournal.GetMountInfoByID(tonumber(string.match(w, "mount:(%d+)") or 0))) then pass = false end
+
 						-- -item:n
 						if string.match(w, "^item:(%d+)$") and (GetItemCount(tonumber(string.match(w, "item:(%d+)") or 0), true, false, true) >= 1) then pass = false end
 
@@ -1780,8 +1812,6 @@ function Breadcrumbs:Validate(str)
 						if w == "garrison:3" and garrison == 3 then pass = false end
 						if flying and w == "flying" then pass = false end
 						if dragonriding and w == "dragonriding" then pass = false end
-						if aldor >= 4 and w == "aldor" then pass = false end
-						if scryer >= 4 and w == "scryer" then pass = false end
 						if archaeology and w == "archaeology" then pass = false end
 						if fishing and w == "fishing" then pass = false end
 						if cooking and w == "cooking" then pass = false end
