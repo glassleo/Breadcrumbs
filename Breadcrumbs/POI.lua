@@ -953,9 +953,12 @@ Data.POI = {
 		"POI/Portal|Portal to Isle of Quel'Danas|25+|48.59 42.02",
 
 		-- Mailbox
-		"mailbox:objective|Mailbox|mailbox reputation:934:4|55.41 80.62", -- Scryer
-		"mailbox:objective|Mailbox|mailbox reputation:934:4|60.07 65.05", -- Scryer
-		"mailbox:objective|Mailbox|mailbox reputation:934:4|61.15 64.24", -- Scryer
+		"mailbox:objective|Mailbox|mailbox reputation:932:4|28.92 47.52", -- Aldor Rise Inn
+		"mailbox:objective|Mailbox|mailbox reputation:932:4|46.96 25.43", -- Aldor Bank
+		"mailbox:objective|Mailbox|mailbox reputation:932:4|48 24.64", -- Aldor Bank
+		"mailbox:objective|Mailbox|mailbox reputation:934:4|55.41 80.62", -- Scryer's Tier Inn
+		"mailbox:objective|Mailbox|mailbox reputation:934:4|60.07 65.05", -- Scryer Bank
+		"mailbox:objective|Mailbox|mailbox reputation:934:4|61.15 64.24", -- Scryer Bank
 
 		-- Professions
 		"POI/Alchemy|[Alchemy]|5+ reputation:932:4 alchemy -herbalism|38.46 30.11||Aldor Rise", -- Aldor
@@ -1309,7 +1312,9 @@ Data.POI = {
 	[407] = {
 		-- Portal
 		"mageportalhorde|Portal to Elwynn Forest|alliance|50.56 90.7",
+		"mageportalhorde|Portal to Elwynn Forest|alliance|51.22 23.1",
 		"mageportalhorde|Portal to Mulgore|horde|50.56 90.7",
+		"mageportalhorde|Portal to Mulgore|horde|51.22 23.1",
 	},
 
 
