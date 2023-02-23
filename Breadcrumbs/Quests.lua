@@ -956,7 +956,7 @@ Data.Quests = {
 		[70061] = "Training Wings|60+ 66115|62.18 70.56|Amella|campaign",
 		[68795] = "Dragonriding|60+ 66114|62.34 73.02|Alexstrasza the Life-Binder|campaign",
 		[65118] = "How to Glide with Your Dragon|60+ 68795|57.66 66.89|Lord Andestrasz|campaign",
-		[65120] = "How to Dive with Your Dragon|6w0+ 65118|57.66 66.89|Lord Andestrasz|campaign",
+		[65120] = "How to Dive with Your Dragon|60+ 65118|57.66 66.89|Lord Andestrasz|campaign",
 		[65133] = "How to Use Momentum with Your Dragon|60+ 65120|57.66 66.89|Lord Andestrasz|campaign",
 		[68796] = "The Skytop Observatory|60+ 65133|57.66 66.89|Lord Andestrasz|campaign",
 		[68797] = "A New Set of Horns|60+ 68796|75.18 54.97|Lord Andestrasz|campaign",
@@ -5406,9 +5406,9 @@ Data.Quests = {
 		[26112] = "Demanding Answers|1+ alliance 26102|78.25 20.51|Commander Stonebreaker||\"You can use Mathel's Flying Machine in Gol'Bolar Quarry if you need to get back to the Airfield.\"",
 
 		-- South Gate Outpost
-		[26854] = "The Lost Pilot|5+ alliance|92.23 48.55|Pilot Hammerfoot|link:48",
+		[26854] = "The Lost Pilot|5+ alliance|92.23 48.55|Pilot Hammerfoot",
 		[26855] = "A Pilot's Revenge|5+ alliance 26854|87.64 50.14|A Dwarven Corpse",
-		[13635] = "South Gate Status Report|5+ alliance 26855|92.23 48.55|Pilot Hammerfoot|link:48",
+		[13635] = "South Gate Status Report|5+ alliance 26855|92.23 48.55|Pilot Hammerfoot",
 	},
 
 
@@ -6070,6 +6070,29 @@ Data.Quests = {
 	[26] = {
 		-- OOX-17/HL
 		[485] = "Find OOX-22/HL!|10+|1 OOXDistressBeacon|{132836} [uncommon]OOX-17/HL Distress Beacon]|discovery|Zone Drop",
+	},
+
+
+	--[[ Darkmoon Island ]]--
+
+	[407] = {
+		[29433] = "Test Your Strength|1+|47.89 67.13|Kerri Hicks",
+
+		-- Profession
+		[29506] = "A Fizzy Fusion|1+ alchemy|50.53 69.56|Sylannia|alchemy",
+		[29508] = "Baby Needs Two Pair of Shoes|1+ blacksmithing|51.09 82.04|Yebb Neblegear|blacksmithing",
+		[29510] = "Putting Trash to Good Use|1+ enchanting|53.24 75.84|Sayge|enchanting",
+		[29511] = "Talkin' Tonks|1+ engineering|49.25 60.78|Rinling|engineering",
+		[29515] = "Writing the Future|1+ inscription|53.24 75.84|Sayge|inscription",
+		[29514] = "Herbs for Healing|1+ herbalism|55 70.77|Chronos|herbalism",
+		[29516] = "Keeping the Faire Sparkling|1+ jewelcrafting|55 70.77|Chronos|jewelcrafting",
+		[29517] = "Eyes on the Prizes|1+ leatherworking|49.25 60.78|Rinling|leatherworking",
+		[29518] = "Rearm, Reuse, Recycle|1+ mining|49.25 60.78|Rinling|mining",
+		[29519] = "Tan My Hide|1+ skinning|55 70.77|Chronos|skinning",
+		[29520] = "Banners, Banners Everywhere!|1+ tailoring|55.56 55.01|Selina Dourman|tailoring",
+		[29509] = "Putting the Crunch in the Frog|1+ cooking|52.88 67.94|Stamp Thunderhorn|cooking",
+		[29513] = "Spoilin' for Salty Sea Dogs|1+ fishing|52.88 67.94|Stamp Thunderhorn|fishing",
+		[29507] = "Fun for the Little Ones|1+ archaeology|51.89 60.93|Professor Thaddeus Paleo|archaeology",
 	},
 }
 
