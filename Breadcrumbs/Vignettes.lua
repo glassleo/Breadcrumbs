@@ -27,6 +27,11 @@ Data.Vignettes = {
 	[2025] = {
 		-- Treasure
 		[70609] = "Elegant Canvas Brush|60+|60.25 41.64||treasure item:203206|Contains|!{2103804} [poor]Elegant Canvas Brush]",
+		[70294] = "Bag of Decayed Scales|60+ leatherworking skill:2830:25|56.82 30.57||treasure item:198690|Contains|!{4631333} [epic]Decayed Scales]",
+		[70372] = "Ancient Dragonweave Loom|60+ tailoring skill:tailoring10:25|58.69 45.9|\"Solve a series of puzzles to unlock the treasure\"|treasure item:201019|Contains|!{4549298} [epic]Ancient Dragonweave Bolt]",
+		[70288] = "Miniature Bronze Dragonflight Banner|60+ tailoring skill:tailoring10:25|60.41 79.66|\"On top of the platform in a pile of sand\"|treasure item:198684|Contains|!{4624621} [epic]Miniature Bronze Dragonflight Banner]",
+		[70261] = "Painter's Pretty Jewel|60+ jewelcrafting skill:jewelcrafting10:25|56.91 43.68|\"Use [spell]Anomaly Detection Mark I] to reveal the treasure inside an urn with a lantern on top\"|treasure item:198656|Contains|!{4555548} [epic]Painter's Pretty Jewel]",
+		[70285] = "Erupted Alexstraszite Cluster|60+ jewelcrafting skill:jewelcrafting10:25|59.85 65.17||treasure item:198682|Contains|!{133238} [epic]Alexstraszite Cluster]|!{4555569} [rare]Alexstraszite] (2)",
 		
 		-- High Peak
 		[70039] = "High Peak|60+ research:2164|50.16 81.63||vignette atlas:Warfronts-FieldMapIcons-Empty-Banner-Minimap large|Grants Reputation|!{4687628} [Dragonscale Expedition] (250)",
@@ -38,9 +43,9 @@ Data.Vignettes = {
 		[71208] = "High Peak|60+ research:2164|28 70.63||vignette atlas:Warfronts-FieldMapIcons-Empty-Banner-Minimap large|Grants Reputation|!{4687628} [Dragonscale Expedition] (250)",
 
 		-- Signal Transmitter
-		[70583] = "Deactivated Signal Transmitter|engineering skill:2827:25 profperk:2827:50930|50.63 55.6||treasure atlas:FlightMasterArgus large|Activate all three Signal Transmittors in Thaldraszus to add the zone as an option for your Wyrmhole Generator",
-		[70584] = "Deactivated Signal Transmitter|engineering skill:2827:25 profperk:2827:50930|70.3 44.3||treasure atlas:FlightMasterArgus large|Activate all three Signal Transmittors in Thaldraszus to add the zone as an option for your Wyrmhole Generator",
-		[70585] = "Deactivated Signal Transmitter|engineering skill:2827:25 profperk:2827:50930|63.67 77.1||treasure atlas:FlightMasterArgus large|Activate all three Signal Transmittors in Thaldraszus to add the zone as an option for your Wyrmhole Generator",
+		[70583] = "Deactivated Signal Transmitter|engineering skill:engineering10:25 profperk:2827:50930|50.63 55.6||treasure atlas:FlightMasterArgus large|Activate all three Signal Transmittors in Thaldraszus to add the zone as an option for your Wyrmhole Generator",
+		[70584] = "Deactivated Signal Transmitter|engineering skill:engineering10:25 profperk:2827:50930|70.3 44.3||treasure atlas:FlightMasterArgus large|Activate all three Signal Transmittors in Thaldraszus to add the zone as an option for your Wyrmhole Generator",
+		[70585] = "Deactivated Signal Transmitter|engineering skill:engineering10:25 profperk:2827:50930|63.67 77.1||treasure atlas:FlightMasterArgus large|Activate all three Signal Transmittors in Thaldraszus to add the zone as an option for your Wyrmhole Generator",
 
 		-- Profession Master
 		[70258] = "Bridgette Holdug|60+ mining skill:2833:25|61.43 76.87||vignette speak currency:2035|Master Miner|!{3615521} [rare]Dragon Isles Mining Knowledge] (10)|!{4643977} [rare]Artisan's Mettle] (50)",
@@ -51,6 +56,15 @@ Data.Vignettes = {
 	--[[ The Azure Span ]]--
 
 	[2024] = {
+		-- Treasure
+		[70266] = "Decay-Infused Tanning Oil|60+ leatherworking skill:2830:25|16.73 38.79||treasure item:198658|Contains|!{650640} [epic]Decay-Infused Tanning Oil]",
+		[70269] = "Broken Drum|60+ leatherworking skill:2830:25|12.51 49.41|\"Repair the Broken Drum for Raq inside The Filled Bowl\"|treasure item:201018|Rewards|!{1001627} [epic]Well-Danced Drum]",
+		[70286] = "Crate of Treated Hides|60+ leatherworking skill:2830:25|57.51 41.35||treasure item:198683|Contains|!{4559254} [epic]Treated Hides]",
+		[70267] = "Intriguing Bolt of Blue Cloth|60+ tailoring skill:tailoring10:25|40.67 54.93||treasure item:198662|Contains|!{132909} [epic]Intriguing Bolt of Blue Cloth]",
+		[70284] = "Decaying Brackenhide Blanket|60+ tailoring skill:tailoring10:25|16.2 38.94||treasure item:198680|Contains|!{237277} [epic]Decaying Brackenhide Blanket]",
+		[70277] = "Crystalline Overgrowth|60+ jewelcrafting skill:jewelcrafting10:25|45.06 61.22||treasure item:198664|Contains|!{132778} [epic]Crystalline Overgrowth]",
+		[70271] = "Harmonic Chest|60+ jewelcrafting skill:jewelcrafting10:25|44.65 61.38|\"Pick up the nearby [Resonant Key] and then activate three [Humming Crystals] scattered throughout the lake to unlock the chest\"|treasure item:201016|Contains|!{1060568} [epic]Harmonic Crystal Harmonizer]",
+
 		-- High Peak
 		[71215] = "High Peak|60+ research:2164|31.92 27.03||vignette atlas:Warfronts-FieldMapIcons-Empty-Banner-Minimap large|Grants Reputation|!{4687628} [Dragonscale Expedition] (250)",
 		[71218] = "High Peak|60+ research:2164|46.14 24.99||vignette atlas:Warfronts-FieldMapIcons-Empty-Banner-Minimap large|Grants Reputation|!{4687628} [Dragonscale Expedition] (250)",
@@ -67,13 +81,13 @@ Data.Vignettes = {
 		[72136] = {"Misaligned Ley Crystal|60+ -mining|65.88 50.66|\"You may need [hasitem:198727]Expedition Explosives] to break open the cave wall.\n\nThey can be bought from the Dragonscale Expedition quartermaster in the Waking Shores.\"|vignette atlas:AzeriteReady item:198727|Grants Reputation|!{4687630} [Valdrakken Accord] (20)", "Misaligned Ley Crystal|60+ mining|65.88 50.66|\"You may need to break the cave wall using your Mining skill\"|vignette atlas:AzeriteReady|Grants Reputation|!{4687630} [Valdrakken Accord] (20)",},
 
 		-- Signal Transmitter
-		[70578] = "Deactivated Signal Transmitter|engineering skill:2827:25 profperk:2827:50930|34.91 26.77||treasure atlas:FlightMasterArgus large|Activate all three Signal Transmittors in Ohn'ahran Plains to add the zone as an option for your Wyrmhole Generator",
-		[70579] = "Deactivated Signal Transmitter|engineering skill:2827:25 profperk:2827:50930|27.56 26.45||treasure atlas:FlightMasterArgus large|Activate all three Signal Transmittors in the Azure Span to add the zone as an option for your Wyrmhole Generator",
-		[70580] = "Deactivated Signal Transmitter|engineering skill:2827:25 profperk:2827:50930|45.77 65.25||treasure atlas:FlightMasterArgus large|Activate all three Signal Transmittors in the Azure Span to add the zone as an option for your Wyrmhole Generator",
-		[70581] = "Deactivated Signal Transmitter|engineering skill:2827:25 profperk:2827:50930|71.04 47.82||treasure atlas:FlightMasterArgus large|Activate all three Signal Transmittors in the Azure Span to add the zone as an option for your Wyrmhole Generator",
+		[70578] = "Deactivated Signal Transmitter|engineering skill:engineering10:25 profperk:2827:50930|34.91 26.77||treasure atlas:FlightMasterArgus large|Activate all three Signal Transmittors in Ohn'ahran Plains to add the zone as an option for your Wyrmhole Generator",
+		[70579] = "Deactivated Signal Transmitter|engineering skill:engineering10:25 profperk:2827:50930|27.56 26.45||treasure atlas:FlightMasterArgus large|Activate all three Signal Transmittors in the Azure Span to add the zone as an option for your Wyrmhole Generator",
+		[70580] = "Deactivated Signal Transmitter|engineering skill:engineering10:25 profperk:2827:50930|45.77 65.25||treasure atlas:FlightMasterArgus large|Activate all three Signal Transmittors in the Azure Span to add the zone as an option for your Wyrmhole Generator",
+		[70581] = "Deactivated Signal Transmitter|engineering skill:engineering10:25 profperk:2827:50930|71.04 47.82||treasure atlas:FlightMasterArgus large|Activate all three Signal Transmittors in the Azure Span to add the zone as an option for your Wyrmhole Generator",
 
 		-- Profession Master
-		[70252] = "Frizz Buzzcrank|60+ engineering skill:2827:25|17.76 21.68||vignette speak currency:2027|Master Engineer|!{4624728} [rare]Dragon Isles Engineering Knowledge] (5)|!{4643977} [rare]Artisan's Mettle] (25)",
+		[70252] = "Frizz Buzzcrank|60+ engineering skill:engineering10:25|17.76 21.68||vignette speak currency:2027|Master Engineer|!{4624728} [rare]Dragon Isles Engineering Knowledge] (5)|!{4643977} [rare]Artisan's Mettle] (25)",
 		[70254] = "Lydiara Whisperfeather|60+ inscription skill:2828:25|40.18 64.39||vignette speak currency:2028|Master Scribe|!{4624734} [rare]Dragon Isles Inscription Knowledge] (5)|!{4643977} [rare]Artisan's Mettle] (25)",
 		[70255] = "Pluutar|60+ jewelcrafting skill:2829:25|46.22 40.76||vignette speak currency:2029|Master Jewelcrafter|!{4624793} [rare]Dragon Isles Jewelcrafting Knowledge] (5)|!{4643977} [rare]Artisan's Mettle] (25)",
 	},
@@ -83,7 +97,11 @@ Data.Vignettes = {
 
 	[2023] = {
 		-- Treasure
-		[70300] = "Wind-Blessed Hide|60+ leatherworking skill:2830:25|86.3 53.63||treasure item:198696|Contains|!{4559248} [epic]Wind-Blessed Hide]",
+		[70300] = "Wind-Blessed Hide|60+ leatherworking skill:2830:25|86.28 53.63||treasure item:198696|Contains|!{4559248} [epic]Wind-Blessed Hide]",
+		[70295] = "Battle Hardened Centaur Carpet|60+ tailoring skill:tailoring10:25|35.34 40.12||treasure item:198692|Contains|!{134517} [epic]Noteworthy Scrap of Carpet]",
+		[70303] = "Catnip Frond|60+ tailoring skill:tailoring10:25|65.65 53|\"Gather five Catnip Leaves, then throw them at the [friendly]Playful Prowler] to reveal the treasure\"|treasure item:201020|Requires|{3387975} [hasitem:198688:5]Catnip Leaf] (<itemcount:198688>/5)||Rewards|!{4549280} [epic]Silky Surprise]",
+		[70282] = "Lofty Malygite|60+ jewelcrafting skill:jewelcrafting10:25|25.12 34.86||treasure item:198670|Contains|!{4555596} [epic]Lofty Malygite]|!{4555644} [rare]Stormy Malygite]|!{4555566} [rare]Malygite]",
+		[70263] = "Forgotten Jewelry Box|60+ jewelcrafting skill:jewelcrafting10:25|61.76 13.03||treasure item:198660|Contains|!{4555596} [epic]Fragmented Key]|!{647735} [epic]Forgotten Jewelry Box]",
 		
 		-- High Peak
 		[71208] = "High Peak|60+ research:2164|86.31 39.28||vignette atlas:Warfronts-FieldMapIcons-Empty-Banner-Minimap large|Grants Reputation|!{4687628} [Dragonscale Expedition] (250)",
@@ -94,16 +112,16 @@ Data.Vignettes = {
 		[71215] = "High Peak|60+ research:2164|63.4 85.35||vignette atlas:Warfronts-FieldMapIcons-Empty-Banner-Minimap large|Grants Reputation|!{4687628} [Dragonscale Expedition] (250)",
 		
 		-- Signal Transmitter
-		[70576] = "Deactivated Signal Transmitter|engineering skill:2827:25 profperk:2827:50930|28.02 35.67||treasure atlas:FlightMasterArgus large|Activate all three Signal Transmittors in Ohn'ahran Plains to add the zone as an option for your Wyrmhole Generator",
-		[70577] = "Deactivated Signal Transmitter|engineering skill:2827:25 profperk:2827:50930|56.89 28.91||treasure atlas:FlightMasterArgus large|Activate all three Signal Transmittors in Ohn'ahran Plains to add the zone as an option for your Wyrmhole Generator",
-		[70578] = "Deactivated Signal Transmitter|engineering skill:2827:25 profperk:2827:50930|67.7 84.97||treasure atlas:FlightMasterArgus large|Activate all three Signal Transmittors in Ohn'ahran Plains to add the zone as an option for your Wyrmhole Generator",
-		[70579] = "Deactivated Signal Transmitter|engineering skill:2827:25 profperk:2827:50930|57.14 84.52||treasure atlas:FlightMasterArgus large|Activate all three Signal Transmittors in the Azure Span to add the zone as an option for your Wyrmhole Generator",
+		[70576] = "Deactivated Signal Transmitter|engineering skill:engineering10:25 profperk:2827:50930|28.02 35.67||treasure atlas:FlightMasterArgus large|Activate all three Signal Transmittors in Ohn'ahran Plains to add the zone as an option for your Wyrmhole Generator",
+		[70577] = "Deactivated Signal Transmitter|engineering skill:engineering10:25 profperk:2827:50930|56.89 28.91||treasure atlas:FlightMasterArgus large|Activate all three Signal Transmittors in Ohn'ahran Plains to add the zone as an option for your Wyrmhole Generator",
+		[70578] = "Deactivated Signal Transmitter|engineering skill:engineering10:25 profperk:2827:50930|67.7 84.97||treasure atlas:FlightMasterArgus large|Activate all three Signal Transmittors in Ohn'ahran Plains to add the zone as an option for your Wyrmhole Generator",
+		[70579] = "Deactivated Signal Transmitter|engineering skill:engineering10:25 profperk:2827:50930|57.14 84.52||treasure atlas:FlightMasterArgus large|Activate all three Signal Transmittors in the Azure Span to add the zone as an option for your Wyrmhole Generator",
 
 		-- Profession Master
 		[70251] = "Shalasar Glimmerdusk|60+ enchanting skill:2825:25|62.42 18.7|\"On top of the building\"|vignette speak currency:2030|Master Enchantress|!{3615911} [rare]Dragon Isles Enchanting Knowledge] (5)|!{4643977} [rare]Artisan's Mettle] (25)",
 		[70253] = "Hua Greenpaw|60+ herbalism skill:2832:25|58.38 50.01||vignette speak currency:2034|Master Herbalist|!{4624731} [rare]Dragon Isles Herbalism Knowledge] (10)|!{4643977} [rare]Artisan's Mettle] (50)",
 		[70259] = "Zenzi|60+ skinning skill:2834:25|73.28 69.72||vignette speak currency:2033|Masta Skinna|!{4625106} [rare]Dragon Isles Skinning Knowledge] (10)|!{4643977} [rare]Artisan's Mettle] (50)",
-		[70256] = "Erden|60+ leatherworking skill:2830:25|82.42 50.64||vignette speak currency:2025|Master Leatherworker|!{4624911} [rare]Dragon Isles Leatherworking Knowledge] (5)|!{4643977} [rare]Artisan's Mettle] (25)",
+		[70256] = "Erden|60+ leatherworking skill:2830:25|82.43 50.64||vignette speak currency:2025|Master Leatherworker|!{4624911} [rare]Dragon Isles Leatherworking Knowledge] (5)|!{4643977} [rare]Artisan's Mettle] (25)",
 	},
 
 
@@ -116,20 +134,26 @@ Data.Vignettes = {
 			"Hidden Hornswog Hostage|60+ -70864 -item:200063 -item:200066,-item:200064,-item:200065|64.93 69.59|\"To access the treasure, you must collect three items to craft a treat for the Possesive Hornswog\"|treasure atlas:vignetteloot-locked item:199916|Required Items|!{133718} [hasitem:200066]Well-Preserved Bone]|!{133980} [hasitem:200064]Marmoni's Prize]|!{512902} [hasitem:200065]Adventurer's Lost Soap Bar]||Contains|!{2399259} [rare]Roseate Hopper]",
 			"Hidden Hornswog Hostage|60+ -70864 -item:200063 item:200066 item:200064 item:200065|64.47 69.12|\"Combine the three items near the hostage notes to create the treat\"|treasure item:199916|Required Items|!{133718} [hasitem:200066]Well-Preserved Bone]|!{133980} [hasitem:200064]Marmoni's Prize]|!{512902} [hasitem:200065]Adventurer's Lost Soap Bar]||Contains|!{2399259} [rare]Roseate Hopper]",
 			"Hidden Hornswog Hostage|60+ -70864 item:200063|64.93 69.59|\"Throw the [Observant Riddle \"Treat\"] on the Possesive Hornswog to gain access to the treasure\"|treasure item:199916|Contains|!{2399259} [rare]Roseate Hopper]",
-			"Hidden Hornswog Hostage|60+ 70864|64.93 69.59||treasure item:199916|Contains|!{2399259} [rare]Roseate Hopper]",
-			"Well-Preserved Bone|60+ -item:200066|66.17 55.3|\"On top of the tower\"|treasure item:200066|Contains|!{133718} [Well-Preserved Bone]",
-			"Marmoni's Prize|60+ -item:200064|47.72 83.6|\"Inside a box behind the tent\"|treasure item:200064|Contains|!{133980} [Marmoni's Prize]",
-			"Adventurer's Lost Soap Bar|60+ -item:200065|39.64 84.68|\"In a tub of water\"|treasure item:200065|Contains|!{512902} [Adventurer's Lost Soap Bar]",
+			"Hidden Hornswog Hostage|60+ 70864|64.93 69.59|\"May take up to five minutes to respawn after someone else has looted it\"|treasure item:199916|Contains|!{2399259} [rare]Roseate Hopper]",
+			"Well-Preserved Bone|60+ -item:200066 -70864|66.17 55.3|\"On top of the tower\"|treasure item:200066|Contains|!{133718} [Well-Preserved Bone]",
+			"Marmoni's Prize|60+ -item:200064 -70864|47.72 83.6|\"Inside a box behind the tent\"|treasure item:200064|Contains|!{133980} [Marmoni's Prize]",
+			"Adventurer's Lost Soap Bar|60+ -item:200065 -70864|39.64 84.68|\"In a tub of water\"|treasure item:200065|Contains|!{512902} [Adventurer's Lost Soap Bar]",
 		},
 		[70270] = {
-			"Boomthyr Rocket|60+ engineering skill:2827:25 -item:198815 -item:198816,-item:198814,-item:198817|56.02 44.82|\"Click on the notes and then collect four items nearby to restore the treasure\"|treasure atlas:vignetteloot-locked item:201014|\"[Ash] can be found in the same room as the Rocket and the rest can be found in the building on the opposite side\"||Required Items|!{133218} [hasitem:198816]Aerospace Grade Draconium]|!{443368} [hasitem:198815]Ash]|!{4497570} [hasitem:198814]Boom Fumes]|!{132781} [hasitem:198817]Durable Crystal]||Rewards|!{511727} [epic]Boomthyr Rocket]",
-			"Boomthyr Rocket|60+ engineering skill:2827:25 item:198815 -item:198816,-item:198814,-item:198817|56.02 44.82|\"Click on the notes and then collect four items nearby to restore the treasure\"|treasure atlas:vignetteloot-locked item:201014|Required Items|!{133218} [hasitem:198816]Aerospace Grade Draconium]|!{443368} [hasitem:198815]Ash]|!{4497570} [hasitem:198814]Boom Fumes]|!{132781} [hasitem:198817]Durable Crystal]||Rewards|!{511727} [epic]Boomthyr Rocket]",
-			"Boomthyr Rocket|60+ engineering skill:2827:25 item:198815 item:198816 item:198814 item:198817|56.02 44.82||treasure item:201014|Required Items|!{133218} [hasitem:198816]Aerospace Grade Draconium]|!{443368} [hasitem:198815]Ash]|!{4497570} [hasitem:198814]Boom Fumes]|!{132781} [hasitem:198817]Durable Crystal]||Rewards|!{511727} [epic]Boomthyr Rocket]",
-			"Aerospace Grade Draconium|60+ engineering skill:2827:25 -item:198816|57.99 44.35||treasure item:198816|Contains|!{133218} [Aerospace Grade Draconium]",
-			"Boom Fumes|60+ engineering skill:2827:25 -item:198814|57.83 44.58||treasure item:198814|Contains|!{4497570} [Boom Fumes]",
-			"Durable Crystal|60+ engineering skill:2827:25 -item:198817|58.13 44.54||treasure item:198817|Contains|!{132781} [Durable Crystal]",
+			"Boomthyr Rocket|60+ engineering skill:engineering10:25 -item:198815 -item:198816,-item:198814,-item:198817|56.02 44.82|\"Click on the notes and then collect four items nearby to restore the treasure\"|treasure atlas:vignetteloot-locked item:201014|\"[Ash] can be found in the same room as the Rocket and the rest can be found in the building on the opposite side\"||Required Items|!{133218} [hasitem:198816]Aerospace Grade Draconium]|!{443368} [hasitem:198815]Ash]|!{4497570} [hasitem:198814]Boom Fumes]|!{132781} [hasitem:198817]Durable Crystal]||Rewards|!{511727} [epic]Boomthyr Rocket]",
+			"Boomthyr Rocket|60+ engineering skill:engineering10:25 item:198815 -item:198816,-item:198814,-item:198817|56.02 44.82|\"Click on the notes and then collect four items nearby to restore the treasure\"|treasure atlas:vignetteloot-locked item:201014|Required Items|!{133218} [hasitem:198816]Aerospace Grade Draconium]|!{443368} [hasitem:198815]Ash]|!{4497570} [hasitem:198814]Boom Fumes]|!{132781} [hasitem:198817]Durable Crystal]||Rewards|!{511727} [epic]Boomthyr Rocket]",
+			"Boomthyr Rocket|60+ engineering skill:engineering10:25 item:198815 item:198816 item:198814 item:198817|56.02 44.82||treasure item:201014|Required Items|!{133218} [hasitem:198816]Aerospace Grade Draconium]|!{443368} [hasitem:198815]Ash]|!{4497570} [hasitem:198814]Boom Fumes]|!{132781} [hasitem:198817]Durable Crystal]||Rewards|!{511727} [epic]Boomthyr Rocket]",
+			"Aerospace Grade Draconium|60+ engineering skill:engineering10:25 -item:198816|57.99 44.35||treasure item:198816|Contains|!{133218} [Aerospace Grade Draconium]",
+			"Boom Fumes|60+ engineering skill:engineering10:25 -item:198814|57.83 44.58||treasure item:198814|Contains|!{4497570} [Boom Fumes]",
+			"Durable Crystal|60+ engineering skill:engineering10:25 -item:198817|58.13 44.54||treasure item:198817|Contains|!{132781} [Durable Crystal]",
 		},
-		[70308] = "Poacher's Pack|60+ leatherworking skill:2830:25|39.38 86.39||treasure item:198711|Contains|!{3056991} [epic]Poacher's Pack]",
+		[70275] = "Disabled Tesla Coil|60+ engineering skill:engineering10:25|49.11 77.51|\"Activate three nearby [Exposed Wires] to unlock the treasure\"|treasure item:198789|Contains|!{133870} [epic]Intact Coil Capacitor]",
+		[70292] = "Closely Guarded Shiny|60+ jewelcrafting skill:jewelcrafting10:25|50.36 45.06|\"Hidden inside a tree trunk\"|treasure item:198687|Contains|!{317243} [epic]Closely Guarded Shiny]",
+		[70273] = "Igneous Gem|60+ jewelcrafting skill:jewelcrafting10:25|33.94 63.67|\"Activate three [Focusing Crystals] nearby to reveal the treasure\"|treasure item:201017|Contains|!{237200} [epic]Igneous Gem]",
+		[70308] = "Poacher's Pack|60+ leatherworking skill:leatherworking10:25|39.36 86.38||treasure item:198711|Contains|!{3056991} [epic]Poacher's Pack]",
+		[70280] = "Spare Djaradin Tools|60+ leatherworking skill:leatherworking10:25|64.37 25.77||treasure item:198667|Contains|!{4615799} [epic]Spare Djaradin Tools]",
+		[70304] = "Itinerant Singed Fabric|60+ tailoring skill:tailoring10:25|25.09 69.73||treasure item:198702|Contains|!{134266} [epic]Itinerant Singed Fabric]",
+		[70302] = "Mysterious Banner|60+ tailoring skill:tailoring10:25|74.74 37.92||treasure item:198699|Contains|!{4624620} [epic]Mysterious Banner]",
 		
 		-- High Peak
 		[70824] = "High Peak|60+ research:2164|73.35 38.85||vignette atlas:Warfronts-FieldMapIcons-Empty-Banner-Minimap large|Grants Reputation|!{4687628} [Dragonscale Expedition] (250)",
@@ -139,9 +163,9 @@ Data.Vignettes = {
 		[71204] = "High Peak|60+ research:2164|54.80 74.12||vignette atlas:Warfronts-FieldMapIcons-Empty-Banner-Minimap large|Grants Reputation|!{4687628} [Dragonscale Expedition] (250)",
 
 		-- Signal Transmitter
-		[70573] = "Deactivated Signal Transmitter|engineering skill:2827:25 profperk:2827:50930|74.6 25.51||treasure atlas:FlightMasterArgus large|Activate all three Signal Transmittors in the Waking Shores to add the zone as an option for your Wyrmhole Generator",
-		[70574] = "Deactivated Signal Transmitter|engineering skill:2827:25 profperk:2827:50930|62.2 78.97||treasure atlas:FlightMasterArgus large|Activate all three Signal Transmittors in the Waking Shores to add the zone as an option for your Wyrmhole Generator",
-		[70575] = "Deactivated Signal Transmitter|engineering skill:2827:25 profperk:2827:50930|23.43 43.83||treasure atlas:FlightMasterArgus large|Activate all three Signal Transmittors in the Waking Shores to add the zone as an option for your Wyrmhole Generator",
+		[70573] = "Deactivated Signal Transmitter|engineering skill:engineering10:25 profperk:2827:50930|74.6 25.51||treasure atlas:FlightMasterArgus large|Activate all three Signal Transmittors in the Waking Shores to add the zone as an option for your Wyrmhole Generator",
+		[70574] = "Deactivated Signal Transmitter|engineering skill:engineering10:25 profperk:2827:50930|62.2 78.97||treasure atlas:FlightMasterArgus large|Activate all three Signal Transmittors in the Waking Shores to add the zone as an option for your Wyrmhole Generator",
+		[70575] = "Deactivated Signal Transmitter|engineering skill:engineering10:25 profperk:2827:50930|23.43 43.83||treasure atlas:FlightMasterArgus large|Activate all three Signal Transmittors in the Waking Shores to add the zone as an option for your Wyrmhole Generator",
 
 		-- Profession Master
 		[70247] = "Grigori Vialtry|60+ alchemy skill:2823:25|60.83 75.9||vignette speak currency:2024|Master Alchemist|!{4624656} [rare]Dragon Isles Alchemy Knowledge] (5)|!{4643977} [rare]Artisan's Mettle] (25)",
@@ -328,10 +352,10 @@ Data.Vignettes = {
 		[65503] = "Filched Artifact|60+ 64953 64952|49.77 87.23||treasure|Contains|!{/Random} [rare]Random Jewelry (236+)]|!{4038106} [rare]Spatial Opener]|!{4381149} [legendary]Cosmic Flux] (200)",
 		[65520] = "Architect's Reserve|60+ 64953 64952 65426|61.16 37.15||treasure item:187833|Contains|!{133146} [rare]Dapper Pocopoc]|!{4381149} [legendary]Cosmic Flux] (200)", -- maybe only requires 65420
 		[65522] = {
-			"Mistaken Ovoid|60+ 64953 64952 65419 item:190239:5|53.66 72.62|\"Lost Ovoids are tiny orbs that can be found all around Zereth Mortis\"|treasure down item:189435|Requires|!{651737} [green]Lost Ovoid] (5)||Contains|!{4217590} [rare]Schematic: Multichicken]|!{4381149} [legendary]Cosmic Flux] (200)",
-			"Mistaken Ovoid|60+ 64953 64952 _65419 item:190239:5|53.66 72.62|\"Lost Ovoids are tiny orbs that can be found all around Zereth Mortis\"|treasure down|Requires|!{651737} [green]Lost Ovoid] (5)||Contains|!{4381149} [legendary]Cosmic Flux] (200)||Unlocks|!{4217590} [rare]Schematic: Multichicken]",
-			"Mistaken Ovoid|60+ 64953 64952 65419 -item:190239:5|53.66 72.62|\"Lost Ovoids are tiny orbs that can be found all around Zereth Mortis\"|treasure down locked item:189435|Requires|!{651737} [red]Lost Ovoid] (5)||Contains|!{4217590} [rare]Schematic: Multichicken]|!{4381149} [legendary]Cosmic Flux] (200)",
-			"Mistaken Ovoid|60+ 64953 64952 _65419 -item:190239:5|53.66 72.62|\"Lost Ovoids are tiny orbs that can be found all around Zereth Mortis\"|treasure down locked|Requires|!{651737} [red]Lost Ovoid] (5)||Contains|!{4381149} [legendary]Cosmic Flux] (200)||Unlocks|!{4217590} [rare]Schematic: Multichicken]",},
+			"Mistaken Ovoid|60+ 64953 64952 65419 item:190239:5|53.66 72.62|\"Lost Ovoids are tiny orbs that can be found all around Zereth Mortis\"|treasure down item:189435|Requires|!{651737} [hasitem:190239:5]Lost Ovoid] (<itemcount:190239>/5)||Contains|!{4217590} [rare]Schematic: Multichicken]|!{4381149} [legendary]Cosmic Flux] (200)",
+			"Mistaken Ovoid|60+ 64953 64952 _65419 item:190239:5|53.66 72.62|\"Lost Ovoids are tiny orbs that can be found all around Zereth Mortis\"|treasure down|Requires|!{651737} [hasitem:190239:5]Lost Ovoid] (<itemcount:190239>/5)||Contains|!{4381149} [legendary]Cosmic Flux] (200)||Unlocks|!{4217590} [rare]Schematic: Multichicken]",
+			"Mistaken Ovoid|60+ 64953 64952 65419 -item:190239:5|53.66 72.62|\"Lost Ovoids are tiny orbs that can be found all around Zereth Mortis\"|treasure down atlas:vignetteloot-locked item:189435|Requires|!{651737} [hasitem:190239:5]Lost Ovoid] (<itemcount:190239>/5)||Contains|!{4217590} [rare]Schematic: Multichicken]|!{4381149} [legendary]Cosmic Flux] (200)",
+			"Mistaken Ovoid|60+ 64953 64952 _65419 -item:190239:5|53.66 72.62|\"Lost Ovoids are tiny orbs that can be found all around Zereth Mortis\"|treasure down atlas:vignetteloot-locked|Requires|!{651737} [hasitem:190239:5]Lost Ovoid] (<itemcount:190239>/5)||Contains|!{4381149} [legendary]Cosmic Flux] (200)||Unlocks|!{4217590} [rare]Schematic: Multichicken]",},
 		[65523] = "Drowned Broker Supplies|60+ 64953 64952 research:1932|34.96 69.96|\"Encourage Pocopoc to control the nearby Coreless Aurelid in order to retrieve the treasure\"|treasure item:190059|Contains|!{2055035} [rare]Pirate Pocopoc]|!{4381149} [legendary]Cosmic Flux] (200)",
 		[65536] = "Overgrown Protofruit|60+ 64953 64952|35.25 44.12||treasure item:190953|Contains|!{645345} [Protofruit Flesh] (20)|!{4381149} [legendary]Cosmic Flux] (200)",
 		[65537] = "Offering to the First Ones|60+ 64953 64952|34.81 56.04|\"Takes up to 5 minutes to respawn after someone loots it\"|treasure item:190339|Contains|!{4254041} [rare]Enlightened Offering]",
