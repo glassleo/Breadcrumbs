@@ -64,6 +64,7 @@ Data.Vignettes = {
 		[70284] = "Decaying Brackenhide Blanket|60+ tailoring skill:tailoring10:25|16.2 38.94||treasure item:198680|Contains|!{237277} [epic]Decaying Brackenhide Blanket]",
 		[70277] = "Crystalline Overgrowth|60+ jewelcrafting skill:jewelcrafting10:25|45.06 61.22||treasure item:198664|Contains|!{132778} [epic]Crystalline Overgrowth]",
 		[70271] = "Harmonic Chest|60+ jewelcrafting skill:jewelcrafting10:25|44.65 61.38|\"Pick up the nearby [Resonant Key] and then activate three [Humming Crystals] scattered throughout the lake to unlock the chest\"|treasure item:201016|Contains|!{1060568} [epic]Harmonic Crystal Harmonizer]",
+		[70237] = "Snow Covered Scroll|60+ cooking skill:cooking10:1|58.02 42.02||treasure item:198103|Contains|!{1500865} [rare]Recipe: Snow in a Cone]|!{132387} [Snowball] (8-18)",
 
 		-- High Peak
 		[71215] = "High Peak|60+ research:2164|31.92 27.03||vignette atlas:Warfronts-FieldMapIcons-Empty-Banner-Minimap large|Grants Reputation|!{4687628} [Dragonscale Expedition] (250)",
@@ -154,6 +155,7 @@ Data.Vignettes = {
 		[70280] = "Spare Djaradin Tools|60+ leatherworking skill:leatherworking10:25|64.37 25.77||treasure item:198667|Contains|!{4615799} [epic]Spare Djaradin Tools]",
 		[70304] = "Itinerant Singed Fabric|60+ tailoring skill:tailoring10:25|25.09 69.73||treasure item:198702|Contains|!{134266} [epic]Itinerant Singed Fabric]",
 		[70302] = "Mysterious Banner|60+ tailoring skill:tailoring10:25|74.74 37.92||treasure item:198699|Contains|!{4624620} [epic]Mysterious Banner]",
+		[70263] = "Forgotten Jewelry Box|60+ jewelcrafting skill:jewelcrafting10:25|31.48 86.61||treasure item:198660|Contains|!{4555596} [epic]Fragmented Key]|!{647735} [epic]Forgotten Jewelry Box]",
 		
 		-- High Peak
 		[70824] = "High Peak|60+ research:2164|73.35 38.85||vignette atlas:Warfronts-FieldMapIcons-Empty-Banner-Minimap large|Grants Reputation|!{4687628} [Dragonscale Expedition] (250)",
