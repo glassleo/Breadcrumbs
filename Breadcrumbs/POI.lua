@@ -112,12 +112,6 @@ Data.POI = {
 	--[[ Ohn'ahran Plains ]]--
 
 	[2023] = {
-		-- Cymre Brightblade (only available while WQ 66070 is up)
-		"Speak:small|[friendly]Cymre Brightblade]|60+ research:2221 active:66070,66070 -item:202082 -item:202084|52.61 21.99|tooltip item:202085||Wants|!{4509429} [red]Petrified Dragon Egg]|!{1516577} [red]Eroded Fossil]||Rewards|!{1738683} [rare]Bugbiter Tortoise]",
-		"Speak:small|[friendly]Cymre Brightblade]|60+ research:2221 active:66070,66070 item:202082 -item:202084|52.61 21.99|tooltip item:202085||Wants|!{4509429} [green]Petrified Dragon Egg]|!{1516577} [red]Eroded Fossil]||Rewards|!{1738683} [rare]Bugbiter Tortoise]",
-		"Speak:small|[friendly]Cymre Brightblade]|60+ research:2221 active:66070,66070 -item:202082 item:202084|52.61 21.99|tooltip item:202085||Wants|!{4509429} [red]Petrified Dragon Egg]|!{1516577} [green]Eroded Fossil]||Rewards|!{1738683} [rare]Bugbiter Tortoise]",
-		"Speak:small|[friendly]Cymre Brightblade]|60+ research:2221 active:66070,66070 item:202082 item:202084|52.61 21.99|tooltip item:202085||Wants|!{4509429} [green]Petrified Dragon Egg]|!{1516577} [green]Eroded Fossil]||Rewards|!{1738683} [rare]Bugbiter Tortoise]",
-
 		-- Khadin
 		"QuestRepeatableTurnin:small|Khadin|60+ 69979 item:191784|51.77 33.02|tooltip item:190456|{QuestRepeatableTurnin} Specialized Secrets (<itemcount:191784>)||Required Item|!{4643982} [epic]Dragon Shard of Knowledge]||Rewards|!{4643977} [rare]Artisan's Mettle] (50)|!{4624728} [Dragon Isles Knowledge]",
 	},
@@ -126,12 +120,6 @@ Data.POI = {
 	--[[ The Waking Shores ]]--
 
 	[2022] = {
-		-- Cymre Brightblade (only available while WQ 66070 is up)
-		"Speak:small|[friendly]Cymre Brightblade]|60+ research:2221 active:66070,66070 -item:202082 -item:202084|22.8 95.11|tooltip item:202085||Wants|!{4509429} [red]Petrified Dragon Egg]|!{1516577} [red]Eroded Fossil]||Rewards|!{1738683} [rare]Bugbiter Tortoise]",
-		"Speak:small|[friendly]Cymre Brightblade]|60+ research:2221 active:66070,66070 item:202082 -item:202084|22.8 95.11|tooltip item:202085||Wants|!{4509429} [green]Petrified Dragon Egg]|!{1516577} [red]Eroded Fossil]||Rewards|!{1738683} [rare]Bugbiter Tortoise]",
-		"Speak:small|[friendly]Cymre Brightblade]|60+ research:2221 active:66070,66070 -item:202082 item:202084|22.8 95.11|tooltip item:202085||Wants|!{4509429} [red]Petrified Dragon Egg]|!{1516577} [green]Eroded Fossil]||Rewards|!{1738683} [rare]Bugbiter Tortoise]",
-		"Speak:small|[friendly]Cymre Brightblade]|60+ research:2221 active:66070,66070 item:202082 item:202084|22.8 95.11|tooltip item:202085||Wants|!{4509429} [green]Petrified Dragon Egg]|!{1516577} [green]Eroded Fossil]||Rewards|!{1738683} [rare]Bugbiter Tortoise]",
-
 		-- Rostrum of Transformation
 		"dragon-rostrum:small|[Rostrum of Transformation]|dragonriding|74.03 58.16",
 	},
