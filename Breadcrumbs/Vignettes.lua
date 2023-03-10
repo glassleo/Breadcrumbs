@@ -17,7 +17,11 @@ Data.Vignettes = {
 	-- Valdrakken
 	[2112] = {
 		-- Treasure
-		[70731] = "Barrel of Tasty Treats|60+|9.6 56.35|\"Behind a bookshelf\"|treasure item:198106|Contains|!{1500865} [rare]Recipe: Tasty Hatchling's Treat]|!{1500918} [Tasty Hatchling's Treat] (2)",
+		[70731] = "Barrel of Confiscated Treats|60+|9.6 56.34|\"Behind a bookshelf\"|treasure item:198106|Contains|!{1500865} [rare]Recipe: Tasty Hatchling's Treat]|!{1500918} [Tasty Hatchling's Treat] (2)",
+		[70281] = {
+			"[red]How to Train Your Whelpling]|60+ inscription skill:inscription10:25 -70306|13.43 63.29||treasure item:198669 atlas:vignetteloot-locked link:2022|{services-icon-warning} [red]Warning: There is currently a bug with this treasure which makes it drop the wrong item if you have not yet looted Pulsing Earth Rune.]||[red]You should loot [epic]Pulsing Earth Rune] in the Waking Shores before looting this treasure.||[poor]Contains]|!{4549132} [poor]How to Train Your Whelpling]",
+			"How to Train Your Whelpling|60+ inscription skill:inscription10:25 70306|13.43 63.29||treasure item:198669|Contains|!{4549132} [epic]How to Train Your Whelpling]",
+		},
 
 		-- Profession Master
 		[70260] = "Elysa Raywinder|60+ tailoring skill:2831:25|27.9 45.76|\"On top of a ledge on the western side of the large tower, underneath a black banner\"|vignette speak currency:2026|Master Seamstress|!{3615523} [rare]Dragon Isles Tailoring Knowledge] (5)|!{4643977} [rare]Artisan's Mettle] (25)",
@@ -26,12 +30,25 @@ Data.Vignettes = {
 	-- Thaldraszus
 	[2025] = {
 		-- Treasure
+		[70731] = "Barrel of Confiscated Treats|60+|34.1 60.79||treasure item:198106 link:2112|Contains|!{1500865} [rare]Recipe: Tasty Hatchling's Treat]|!{1500918} [Tasty Hatchling's Treat] (2)",
 		[70609] = "Elegant Canvas Brush|60+|60.25 41.64||treasure item:203206|Contains|!{2103804} [poor]Elegant Canvas Brush]",
 		[70294] = "Bag of Decayed Scales|60+ leatherworking skill:2830:25|56.82 30.57||treasure item:198690|Contains|!{4631333} [epic]Decayed Scales]",
 		[70372] = "Ancient Dragonweave Loom|60+ tailoring skill:tailoring10:25|58.69 45.9|\"Solve a series of puzzles to unlock the treasure\"|treasure item:201019|Contains|!{4549298} [epic]Ancient Dragonweave Bolt]",
 		[70288] = "Miniature Bronze Dragonflight Banner|60+ tailoring skill:tailoring10:25|60.41 79.66|\"On top of the platform in a pile of sand\"|treasure item:198684|Contains|!{4624621} [epic]Miniature Bronze Dragonflight Banner]",
 		[70261] = "Painter's Pretty Jewel|60+ jewelcrafting skill:jewelcrafting10:25|56.91 43.68|\"Use [spell]Anomaly Detection Mark I] to reveal the treasure inside an urn with a lantern on top\"|treasure item:198656|Contains|!{4555548} [epic]Painter's Pretty Jewel]",
 		[70285] = "Erupted Alexstraszite Cluster|60+ jewelcrafting skill:jewelcrafting10:25|59.85 65.17||treasure item:198682|Contains|!{133238} [epic]Alexstraszite Cluster]|!{4555569} [rare]Alexstraszite] (2)",
+		[70281] = {
+			"[red]How to Train Your Whelpling]|60+ inscription skill:inscription10:25 -70306|34.66 61.8||treasure item:198669 atlas:vignetteloot-locked link:2022|{services-icon-warning} [red]Warning: There is currently a bug with this treasure which makes it drop the wrong item if you have not yet looted Pulsing Earth Rune.]||[red]You should loot [epic]Pulsing Earth Rune] in the Waking Shores before looting this treasure.||[poor]Contains]|!{4549132} [poor]How to Train Your Whelpling]",
+			"How to Train Your Whelpling|60+ inscription skill:inscription10:25 70306|34.66 61.8||treasure item:198669 link:2112|Contains|!{4549132} [epic]How to Train Your Whelpling]",
+		},
+		[70248] = {
+			"Curious Glyph|68+ inscription skill:inscription10:25 -item:198672|47.09 40.07|\"Interact with the [Curious Glyph] and then kill the [neutral]Confusion Manifest] across the bridge to obtain the key.\"|treasure item:198659 atlas:vignetteloot-locked|Requires|{4638737} [hasitem:198672]Decryption Key]||Contains|!{1499566} [epic]Forgetful Apprentice's Tome]",
+			"Curious Glyph|67- inscription skill:inscription10:25 -item:198672|47.09 40.07|\"Interact with the [Curious Glyph] and then kill the [neutral]Confusion Manifest] across the bridge to obtain the key.\"|treasure item:198659 atlas:vignetteloot-locked|\"The [neutral]Confusion Manifest] is level 70 so you might need to bring a friend or come back when you are higher level.\"||Requires|{4638737} [hasitem:198672]Decryption Key]||Contains|!{1499566} [epic]Forgetful Apprentice's Tome]",
+			"Curious Glyph|60+ inscription skill:inscription10:25 item:198672|47.09 40.07|\"Return the key to the [Curious Glyph], then interact with it another time to loot the treasure.\"|treasure item:198659 atlas:vignetteloot-locked|Requires|{4638737} [hasitem:198672]Decryption Key]||Contains|!{1499566} [epic]Forgetful Apprentice's Tome]",
+		},
+		[70287] = "Siennagosa|60+ inscription skill:inscription10:25|56.08 41.02|\"Help Siennagosa gather her Darkmoon cards. Make sure you pick them up in order or she might drop them again.\"|treasure speak item:201015|Rewards|!{4644010} [epic]Counterfeit Darkmoon Deck]",
+		[70264] = "Forgetful Apprentice's Tome|60+ inscription skill:inscription10:25|56.26 41.18||treasure item:198659|Contains|!{1499566} [epic]Forgetful Apprentice's Tome]",
+		[70342] = "Fractured Titanic Sphere|60+ enchanting skill:enchanting10:25|59.89 70.33||treasure item:198800|Contains|!{442739} [epic]Fractured Titanic Sphere]",
 		
 		-- High Peak
 		[70039] = "High Peak|60+ research:2164|50.16 81.63||vignette atlas:Warfronts-FieldMapIcons-Empty-Banner-Minimap large|Grants Reputation|!{4687628} [Dragonscale Expedition] (250)",
@@ -64,7 +81,12 @@ Data.Vignettes = {
 		[70284] = "Decaying Brackenhide Blanket|60+ tailoring skill:tailoring10:25|16.2 38.94||treasure item:198680|Contains|!{237277} [epic]Decaying Brackenhide Blanket]",
 		[70277] = "Crystalline Overgrowth|60+ jewelcrafting skill:jewelcrafting10:25|45.06 61.22||treasure item:198664|Contains|!{132778} [epic]Crystalline Overgrowth]",
 		[70271] = "Harmonic Chest|60+ jewelcrafting skill:jewelcrafting10:25|44.65 61.38|\"Pick up the nearby [Resonant Key] and then activate three [Humming Crystals] scattered throughout the lake to unlock the chest\"|treasure item:201016|Contains|!{1060568} [epic]Harmonic Crystal Harmonizer]",
-		[70237] = "Snow Covered Scroll|60+ cooking skill:cooking10:1|58.02 42.02||treasure item:198103|Contains|!{1500865} [rare]Recipe: Snow in a Cone]|!{132387} [Snowball] (8-18)",
+		[70237] = "Snow Covered Scroll|60+ cooking skill:cooking10:1|58.02 42.02||treasure scroll item:198103|Contains|!{1500865} [rare]Recipe: Snow in a Cone]|!{132387} [Snowball] (8-18)",
+		[70293] = "Frosted Parchment|60+ inscription skill:inscription10:1|43.64 30.82||treasure item:198686|Contains|!{1392956} [epic]Frosted Parchment]",
+		[70297] = "Dusty Darkmoon Card|60+ inscription skill:inscription10:1|46.19 24|\"On the upper ledge inside the building\"|treasure item:198693|Contains|!{1392956} [epic]Dusty Darkmoon Card]",
+		[70298] = "Enriched Earthen Shard|60+ enchanting skill:enchanting10:25|21.56 45.54||treasure item:198694|Contains|!{1016245} [epic]Enriched Earthen Shard]",
+		[70336] = "Forgotten Arcane Tome|60+ enchanting skill:enchanting10:25|38.51 59.13||treasure item:198799|Contains|!{134544} [epic]Forgotten Arcane Tome]",
+		[70290] = "Mana-Starved Crystal Cluster|60+ enchanting skill:enchanting10:25|45.16 61.12|\"Defeat an [hostile]Enchanted Crystalline Construct] to reveal the treasure\"|treasure item:201013|Contains|!{1016245} [epic]Faintly Enchanted Remains]",
 
 		-- High Peak
 		[71215] = "High Peak|60+ research:2164|31.92 27.03||vignette atlas:Warfronts-FieldMapIcons-Empty-Banner-Minimap large|Grants Reputation|!{4687628} [Dragonscale Expedition] (250)",
@@ -89,7 +111,7 @@ Data.Vignettes = {
 
 		-- Profession Master
 		[70252] = "Frizz Buzzcrank|60+ engineering skill:engineering10:25|17.76 21.68||vignette speak currency:2027|Master Engineer|!{4624728} [rare]Dragon Isles Engineering Knowledge] (5)|!{4643977} [rare]Artisan's Mettle] (25)",
-		[70254] = "Lydiara Whisperfeather|60+ inscription skill:2828:25|40.18 64.39||vignette speak currency:2028|Master Scribe|!{4624734} [rare]Dragon Isles Inscription Knowledge] (5)|!{4643977} [rare]Artisan's Mettle] (25)",
+		[70254] = "Lydiara Whisperfeather|60+ inscription skill:2828:25|40.14 64.34||vignette speak currency:2028|Master Scribe|!{4624734} [rare]Dragon Isles Inscription Knowledge] (5)|!{4643977} [rare]Artisan's Mettle] (25)",
 		[70255] = "Pluutar|60+ jewelcrafting skill:2829:25|46.22 40.76||vignette speak currency:2029|Master Jewelcrafter|!{4624793} [rare]Dragon Isles Jewelcrafting Knowledge] (5)|!{4643977} [rare]Artisan's Mettle] (25)",
 	},
 
@@ -103,6 +125,8 @@ Data.Vignettes = {
 		[70303] = "Catnip Frond|60+ tailoring skill:tailoring10:25|65.65 53|\"Gather five Catnip Leaves, then throw them at the [friendly]Playful Prowler] to reveal the treasure\"|treasure item:201020|Requires|{3387975} [hasitem:198688:5]Catnip Leaf] (<itemcount:198688>/5)||Rewards|!{4549280} [epic]Silky Surprise]",
 		[70282] = "Lofty Malygite|60+ jewelcrafting skill:jewelcrafting10:25|25.12 34.86||treasure item:198670|Contains|!{4555596} [epic]Lofty Malygite]|!{4555644} [rare]Stormy Malygite]|!{4555566} [rare]Malygite]",
 		[70263] = "Forgotten Jewelry Box|60+ jewelcrafting skill:jewelcrafting10:25|61.76 13.03||treasure item:198660|Contains|!{4555596} [epic]Fragmented Key]|!{647735} [epic]Forgotten Jewelry Box]",
+		[70307] = "Sign Language Reference Sheet|60+ inscription skill:inscription10:25|85.75 25.2||treasure item:198703|Contains|!{134329} [epic]Sign Language Reference Sheet]",
+		[70291] = "Stormbound Horn|60+ enchanting skill:enchanting10:25|61.55 67.7||treasure item:198689|Contains|!{134229} [epic]Stormbound Horn]",
 		
 		-- High Peak
 		[71208] = "High Peak|60+ research:2164|86.31 39.28||vignette atlas:Warfronts-FieldMapIcons-Empty-Banner-Minimap large|Grants Reputation|!{4687628} [Dragonscale Expedition] (250)",
@@ -121,7 +145,6 @@ Data.Vignettes = {
 		-- Profession Master
 		[70251] = "Shalasar Glimmerdusk|60+ enchanting skill:2825:25|62.42 18.7|\"On top of the building\"|vignette speak currency:2030|Master Enchantress|!{3615911} [rare]Dragon Isles Enchanting Knowledge] (5)|!{4643977} [rare]Artisan's Mettle] (25)",
 		[70253] = "Hua Greenpaw|60+ herbalism skill:2832:25|58.38 50.01||vignette speak currency:2034|Master Herbalist|!{4624731} [rare]Dragon Isles Herbalism Knowledge] (10)|!{4643977} [rare]Artisan's Mettle] (50)",
-		[70259] = "Zenzi|60+ skinning skill:2834:25|73.28 69.72||vignette speak currency:2033|Masta Skinna|!{4625106} [rare]Dragon Isles Skinning Knowledge] (10)|!{4643977} [rare]Artisan's Mettle] (50)",
 		[70256] = "Erden|60+ leatherworking skill:2830:25|82.43 50.64||vignette speak currency:2025|Master Leatherworker|!{4624911} [rare]Dragon Isles Leatherworking Knowledge] (5)|!{4643977} [rare]Artisan's Mettle] (25)",
 	},
 
@@ -156,6 +179,13 @@ Data.Vignettes = {
 		[70304] = "Itinerant Singed Fabric|60+ tailoring skill:tailoring10:25|25.09 69.73||treasure item:198702|Contains|!{134266} [epic]Itinerant Singed Fabric]",
 		[70302] = "Mysterious Banner|60+ tailoring skill:tailoring10:25|74.74 37.92||treasure item:198699|Contains|!{4624620} [epic]Mysterious Banner]",
 		[70263] = "Forgotten Jewelry Box|60+ jewelcrafting skill:jewelcrafting10:25|31.48 86.61||treasure item:198660|Contains|!{4555596} [epic]Fragmented Key]|!{647735} [epic]Forgotten Jewelry Box]",
+		[70306] = "Pulsing Earth Rune|60+ inscription skill:inscription10:25|67.87 57.95||treasure item:198704|Contains|!{2491064} [epic]Pulsing Earth Rune]",
+		[70320] = "Flashfrozen Scroll|60+ enchanting skill:enchanting10:25|57.46 83.65|\"There is a bug that might prevent you from interacting with this treasure - work around it by using your interact key when standing near it.\"|treasure item:198798|Contains|!{4549198} [epic]Flashfrozen Scroll]",
+		[70272] = {
+			"Enchanted Debris|60+ enchanting skill:enchanting10:25|59.87 57.09|\"Find the nearby [Enchanted Broom] to unlock the treasure\"|treasure item:201012|Contains|!{2451603} [epic]Enchanted Debris]",
+			"Enchanted Broom|60+ enchanting skill:enchanting10:25|57.49 58.46||treasure interact",
+		},
+		[70283] = "Lava-Infused Seed|60+ enchanting skill:enchanting10:25|57.46 83.65|\"Inside a flower\"|treasure item:198675|Contains|!{4554352} [epic]Lava-Infused Seed]",
 		
 		-- High Peak
 		[70824] = "High Peak|60+ research:2164|73.35 38.85||vignette atlas:Warfronts-FieldMapIcons-Empty-Banner-Minimap large|Grants Reputation|!{4687628} [Dragonscale Expedition] (250)",
@@ -166,12 +196,13 @@ Data.Vignettes = {
 
 		-- Signal Transmitter
 		[70573] = "Deactivated Signal Transmitter|engineering skill:engineering10:25 profperk:2827:50930|74.6 25.51||treasure atlas:FlightMasterArgus large|Activate all three Signal Transmittors in the Waking Shores to add the zone as an option for your Wyrmhole Generator",
-		[70574] = "Deactivated Signal Transmitter|engineering skill:engineering10:25 profperk:2827:50930|62.2 78.97||treasure atlas:FlightMasterArgus large|Activate all three Signal Transmittors in the Waking Shores to add the zone as an option for your Wyrmhole Generator",
+		[70574] = "Deactivated Signal Transmitter|engineering skill:engineering10:25 profperk:2827:50930|62.2 78.97|\"Hidden on top of a ledge underneath two tree canopies.\"|treasure atlas:FlightMasterArgus large|Activate all three Signal Transmittors in the Waking Shores to add the zone as an option for your Wyrmhole Generator",
 		[70575] = "Deactivated Signal Transmitter|engineering skill:engineering10:25 profperk:2827:50930|23.43 43.83||treasure atlas:FlightMasterArgus large|Activate all three Signal Transmittors in the Waking Shores to add the zone as an option for your Wyrmhole Generator",
 
 		-- Profession Master
 		[70247] = "Grigori Vialtry|60+ alchemy skill:2823:25|60.83 75.9||vignette speak currency:2024|Master Alchemist|!{4624656} [rare]Dragon Isles Alchemy Knowledge] (5)|!{4643977} [rare]Artisan's Mettle] (25)",
 		[70250] = "Grekka Anvilsmash|60+ blacksmithing skill:2822:25|43.27 66.63||vignette speak currency:2023|Master Blacksmith|!{4624660} [rare]Dragon Isles Blacksmithing Knowledge] (5)|!{4643977} [rare]Artisan's Mettle] (25)",
+		[70259] = "Zenzi|60+ skinning skill:2834:25|73.28 69.73||vignette speak currency:2033|Masta Skinna|!{4625106} [rare]Dragon Isles Skinning Knowledge] (10)|!{4643977} [rare]Artisan's Mettle] (50)",
 	},
 
 
@@ -244,69 +275,59 @@ Data.Vignettes = {
 		-- Thanks to Wowhead users Raapnaap, Frimlin and Emerno for all the details on Broken Mirrors
 		-- Broken Mirror "Group 1"
 		[61833] = { -- Repaired: 61818
-			"Forgotten Chest|60+ venthyr research:1049 active:61879,61879 -61818 -item:181363|29.43 37.29|[green]Mirror Network]|treasure|\"Repair Broken Mirror inside the Outcast room with the pot to access the Forgotten Chamber\"||Requires|!{133617} [red]Handcrafted Mirror Repair Kit]||\"You can buy a Repair Kit from Simone in Sinfall.\"",
-			"Forgotten Chest|60+ venthyr research:1049 active:61879,61879 -61818 item:181363|29.43 37.29|[green]Mirror Network]|treasure|\"Repair Broken Mirror inside the Outcast room with the pot to access the Forgotten Chamber\"||Requires|!{133617} [green]Handcrafted Mirror Repair Kit]",
+			"Forgotten Chest|60+ venthyr research:1049 active:61879,61879 -61818|29.43 37.29|[green]Mirror Network]|treasure|\"Repair Broken Mirror inside the Outcast room with the pot to access the Forgotten Chamber\"||Requires|!{133617} [hasitem:181363]Handcrafted Mirror Repair Kit] (<itemcount:181363>)||\"You can buy Repair Kits from Simone in Sinfall.\"",
 			"Forgotten Chest|60+ venthyr research:1049 active:61879,61879 61818|29.43 37.29|[green]Mirror Network]|treasure|\"Repair Broken Mirror inside the Outcast room with the pot to access the Forgotten Chamber\"||[green]Repaired]",
 		},
 		[61834] = { -- Repaired: 61822
-			"Forgotten Chest|60+ venthyr research:1049 active:61879,61879 -61822 -item:181363|40.41 73.34|[green]Mirror Network]|treasure|\"Repair the Broken Mirror inside the house to access the Forgotten Chamber\"||Requires|!{133617} [red]Handcrafted Mirror Repair Kit]||\"You can buy a Repair Kit from Simone in Sinfall.\"",
-			"Forgotten Chest|60+ venthyr research:1049 active:61879,61879 -61822 item:181363|40.41 73.34|[green]Mirror Network]|treasure|\"Repair the Broken Mirror inside the house to access the Forgotten Chamber\"||Requires|!{133617} [green]Handcrafted Mirror Repair Kit]",
+			"Forgotten Chest|60+ venthyr research:1049 active:61879,61879 -61822|40.41 73.34|[green]Mirror Network]|treasure|\"Repair the Broken Mirror inside the house to access the Forgotten Chamber\"||Requires|!{133617} [hasitem:181363]Handcrafted Mirror Repair Kit] (<itemcount:181363>)||\"You can buy Repair Kits from Simone in Sinfall.\"",
 			"Forgotten Chest|60+ venthyr research:1049 active:61879,61879 61822|40.41 73.34|[green]Mirror Network]|treasure|\"Repair the Broken Mirror inside the house to access the Forgotten Chamber\"||[green]Repaired]",
 		},
 		[61835] = { -- Repaired: 61826
-			"Forgotten Chest|60+ venthyr research:1049 active:61879,61879 -61826 -item:181363|27.12 21.6|[green]Mirror Network]|treasure|\"Repair the Broken Mirror in the spider infested room to gain access to the Forgotten Chamber\"||Requires|!{133617} [red]Handcrafted Mirror Repair Kit]||\"You can buy a Repair Kit from Simone in Sinfall.\"",
-			"Forgotten Chest|60+ venthyr research:1049 active:61879,61879 -61826 item:181363|27.12 21.6|[green]Mirror Network]|treasure|\"Repair the Broken Mirror in the spider infested room to gain access to the Forgotten Chamber\"||Requires|!{133617} [green]Handcrafted Mirror Repair Kit]",
+			"Forgotten Chest|60+ venthyr research:1049 active:61879,61879 -61826|27.12 21.6|[green]Mirror Network]|treasure|\"Repair the Broken Mirror in the spider infested room to gain access to the Forgotten Chamber\"||Requires|!{133617} [hasitem:181363]Handcrafted Mirror Repair Kit] (<itemcount:181363>)||\"You can buy Repair Kits from Simone in Sinfall.\"",
 			"Forgotten Chest|60+ venthyr research:1049 active:61879,61879 61826|27.12 21.6|[green]Mirror Network]|treasure|\"Repair the Broken Mirror in the spider infested room to gain access to the Forgotten Chamber\"||[green]Repaired]",
 		},
 
 		-- Broken Mirror "Group 2"
 		[61836] = { -- Repaired: 61819
-			"Forgotten Chest|60+ venthyr research:1049 active:61883,61883 -61819 -item:181363|39.11 52.22|[green]Mirror Network]|treasure|\"Repair the Broken Mirror on the ground floor to gain access to the Forgotten Chamber\"||Requires|!{133617} [red]Handcrafted Mirror Repair Kit]||\"You can buy a Repair Kit from Simone in Sinfall.\"",
-			"Forgotten Chest|60+ venthyr research:1049 active:61883,61883 -61819 item:181363|39.11 52.22|[green]Mirror Network]|treasure|\"Repair the Broken Mirror on the ground floor to gain access to the Forgotten Chamber\"||Requires|!{133617} [green]Handcrafted Mirror Repair Kit]",
+			"Forgotten Chest|60+ venthyr research:1049 active:61883,61883 -61819|39.11 52.22|[green]Mirror Network]|treasure|\"Repair the Broken Mirror on the ground floor to gain access to the Forgotten Chamber\"||Requires|!{133617} [hasitem:181363]Handcrafted Mirror Repair Kit] (<itemcount:181363>)||\"You can buy Repair Kits from Simone in Sinfall.\"",
 			"Forgotten Chest|60+ venthyr research:1049 active:61883,61883 61819|39.11 52.22|[green]Mirror Network]|treasure|\"Repair the Broken Mirror on the ground floor to gain access to the Forgotten Chamber\"||[green]Repaired]",
 		},
 		[61837] = { -- Repaired: 61823
-			"Forgotten Chest|60+ venthyr research:1049 active:61883,61883 -61823 -item:181363|58.8 67.8|[green]Mirror Network]|treasure|\"Repair the Broken Mirror inside the house to gain access to the Forgotten Chamber\"||Requires|!{133617} [red]Handcrafted Mirror Repair Kit]||\"You can buy a Repair Kit from Simone in Sinfall.\"",
-			"Forgotten Chest|60+ venthyr research:1049 active:61883,61883 -61823 item:181363|58.8 67.8|[green]Mirror Network]|treasure|\"Repair the Broken Mirror inside the house to gain access to the Forgotten Chamber\"||Requires|!{133617} [green]Handcrafted Mirror Repair Kit]",
+			"Forgotten Chest|60+ venthyr research:1049 active:61883,61883 -61823|58.8 67.8|[green]Mirror Network]|treasure|\"Repair the Broken Mirror inside the house to gain access to the Forgotten Chamber\"||Requires|!{133617} [hasitem:181363]Handcrafted Mirror Repair Kit] (<itemcount:181363>)||\"You can buy Repair Kits from Simone in Sinfall.\"",
 			"Forgotten Chest|60+ venthyr research:1049 active:61883,61883 61823|58.8 67.8|[green]Mirror Network]|treasure|\"Repair the Broken Mirror inside the house to gain access to the Forgotten Chamber\"||[green]Repaired]",
 		},
 		[61838] = { -- Repaired: 61827
-			"Forgotten Chest|60+ venthyr research:1049 active:61883,61883 -61827 -item:181363|70.94 43.61|[green]Mirror Network]|treasure|\"Repair the Broken Mirror to gain access to the Forgotten Chamber\"||Requires|!{133617} [red]Handcrafted Mirror Repair Kit]||\"You can buy a Repair Kit from Simone in Sinfall.\"",
-			"Forgotten Chest|60+ venthyr research:1049 active:61883,61883 -61827 item:181363|70.94 43.61|[green]Mirror Network]|treasure|\"Repair the Broken Mirror to gain access to the Forgotten Chamber\"||Requires|!{133617} [green]Handcrafted Mirror Repair Kit]",
+			"Forgotten Chest|60+ venthyr research:1049 active:61883,61883 -61827|70.94 43.61|[green]Mirror Network]|treasure|\"Repair the Broken Mirror to gain access to the Forgotten Chamber\"||Requires|!{133617} [hasitem:181363]Handcrafted Mirror Repair Kit] (<itemcount:181363>)||\"You can buy Repair Kits from Simone in Sinfall.\"",
 			"Forgotten Chest|60+ venthyr research:1049 active:61883,61883 61827|70.94 43.61|[green]Mirror Network]|treasure|\"Repair the Broken Mirror to gain access to the Forgotten Chamber\"||[green]Repaired]",
 		},
 
 		-- Broken Mirror "Group 3"
 		[61830] = { -- Repaired: 61817
-			"Forgotten Chest|60+ venthyr research:1049 active:61885,61885 -61817 -item:181363|72.55 43.64|[green]Mirror Network]|treasure|\"Repair the Broken Mirror inside the Depraved crypt to access the Forgotten Chamber\"||Requires|!{133617} [red]Handcrafted Mirror Repair Kit]||\"You can buy a Repair Kit from Simone in Sinfall.\"",
-			"Forgotten Chest|60+ venthyr research:1049 active:61885,61885 -61817 item:181363|72.55 43.64|[green]Mirror Network]|treasure|\"Repair the Broken Mirror inside the Depraved crypt to access the Forgotten Chamber\"||Requires|!{133617} [green]Handcrafted Mirror Repair Kit]",
+			"Forgotten Chest|60+ venthyr research:1049 active:61885,61885 -61817|72.55 43.64|[green]Mirror Network]|treasure|\"Repair the Broken Mirror inside the Depraved crypt to access the Forgotten Chamber\"||Requires|!{133617} [hasitem:181363]Handcrafted Mirror Repair Kit] (<itemcount:181363>)||\"You can buy Repair Kits from Simone in Sinfall.\"",
 			"Forgotten Chest|60+ venthyr research:1049 active:61885,61885 61817|72.55 43.64|[green]Mirror Network]|treasure|\"Repair the Broken Mirror inside the Depraved crypt to access the Forgotten Chamber\"||[green]Repaired]",
 		},
 		[61831] = { -- Repaired: 61821
-			"Forgotten Chest|60+ venthyr research:1049 active:61885,61885 -61821 -item:181363|40.33 77.18|[green]Mirror Network]|treasure|\"Repair the Broken Mirror inside the house to access the Forgotten Chamber\"||Requires|!{133617} [red]Handcrafted Mirror Repair Kit]||\"You can buy a Repair Kit from Simone in Sinfall.\"",
-			"Forgotten Chest|60+ venthyr research:1049 active:61885,61885 -61821 item:181363|40.33 77.18|[green]Mirror Network]|treasure|\"Repair the Broken Mirror inside the house to access the Forgotten Chamber\"||Requires|!{133617} [green]Handcrafted Mirror Repair Kit]",
+			"Forgotten Chest|60+ venthyr research:1049 active:61885,61885 -61821|40.33 77.18|[green]Mirror Network]|treasure|\"Repair the Broken Mirror inside the house to access the Forgotten Chamber\"||Requires|!{133617} [hasitem:181363]Handcrafted Mirror Repair Kit] (<itemcount:181363>)||\"You can buy Repair Kits from Simone in Sinfall.\"",
 			"Forgotten Chest|60+ venthyr research:1049 active:61885,61885 61821|40.33 77.18|[green]Mirror Network]|treasure|\"Repair the Broken Mirror inside the house to access the Forgotten Chamber\"||[green]Repaired]",
 		},
 		[61832] = { -- Repaired: 61825
-			"Forgotten Chest|60+ venthyr research:1049 active:61885,61885 -61825 -item:181363|77.15 65.49|[green]Mirror Network]|treasure|\"Repair the Broken Mirror inside Caretaker's Manor to access the Forgotten Chamber\"||Requires|!{133617} [red]Handcrafted Mirror Repair Kit]||\"You can buy a Repair Kit from Simone in Sinfall.\"",
-			"Forgotten Chest|60+ venthyr research:1049 active:61885,61885 -61825 item:181363|77.15 65.49|[green]Mirror Network]|treasure|\"Repair the Broken Mirror inside Caretaker's Manor to access the Forgotten Chamber\"||Requires|!{133617} [green]Handcrafted Mirror Repair Kit]",
+			"Forgotten Chest|60+ venthyr research:1049 active:61885,61885 -61825|77.15 65.49|[green]Mirror Network]|treasure|\"Repair the Broken Mirror inside Caretaker's Manor to access the Forgotten Chamber\"||Requires|!{133617} [hasitem:181363]Handcrafted Mirror Repair Kit] (<itemcount:181363>)||\"You can buy Repair Kits from Simone in Sinfall.\"",
 			"Forgotten Chest|60+ venthyr research:1049 active:61885,61885 61825|77.15 65.49|[green]Mirror Network]|treasure|\"Repair the Broken Mirror inside Caretaker's Manor to access the Forgotten Chamber\"||[green]Repaired]",
 		},
 
 		-- Broken Mirror "Group 4"
 		[60297] = { -- Repaired: 59236
-			"Forgotten Chest|60+ venthyr research:1049 active:61886,61886 -59236 -item:181363|20.75 54.26|[green]Mirror Network]|treasure|\"Repair the Broken Mirror inside the building to access the Forgotten Chamber\"||Requires|!{133617} [red]Handcrafted Mirror Repair Kit]||\"You can buy a Repair Kit from Simone in Sinfall.\"",
+			"Forgotten Chest|60+ venthyr research:1049 active:61886,61886 -59236|20.75 54.26|[green]Mirror Network]|treasure|\"Repair the Broken Mirror inside the building to access the Forgotten Chamber\"||Requires|!{133617} [hasitem:181363]Handcrafted Mirror Repair Kit] (<itemcount:181363>)||\"You can buy Repair Kits from Simone in Sinfall.\"",
 			"Forgotten Chest|60+ venthyr research:1049 active:61886,61886 -59236 item:181363|20.75 54.26|[green]Mirror Network]|treasure|\"Repair the Broken Mirror inside the building to access the Forgotten Chamber\"||Requires|!{133617} [green]Handcrafted Mirror Repair Kit]",
 			"Forgotten Chest|60+ venthyr research:1049 active:61886,61886 59236|20.75 54.26|[green]Mirror Network]|treasure|\"Repair the Broken Mirror inside the building to access the Forgotten Chamber\"||[green]]Repaired]",
 		},
 		[61828] = { -- Repaired: 61820
-			"Forgotten Chest|60+ venthyr research:1049 active:61886,61886 -61820 -item:181363|55.12 35.67|[green]Mirror Network]|treasure|\"Repair the Broken Mirror inside Redelav Hall to access the Forgotten Chamber\"||Requires|!{133617} [red]Handcrafted Mirror Repair Kit]||\"You can buy a Repair Kit from Simone in Sinfall.\"",
+			"Forgotten Chest|60+ venthyr research:1049 active:61886,61886 -61820|55.12 35.67|[green]Mirror Network]|treasure|\"Repair the Broken Mirror inside Redelav Hall to access the Forgotten Chamber\"||Requires|!{133617} [hasitem:181363]Handcrafted Mirror Repair Kit] (<itemcount:181363>)||\"You can buy Repair Kits from Simone in Sinfall.\"",
 			"Forgotten Chest|60+ venthyr research:1049 active:61886,61886 -61820 item:181363|55.12 35.67|[green]Mirror Network]|treasure|\"Repair the Broken Mirror inside Redelav Hall to access the Forgotten Chamber\"||Requires|!{133617} [green]Handcrafted Mirror Repair Kit]",
 			"Forgotten Chest|60+ venthyr research:1049 active:61886,61886 61820|55.12 35.67|[green]Mirror Network]|treasure|\"Repair the Broken Mirror inside Redelav Hall to access the Forgotten Chamber\"||[green]Repaired]",
 		},
 		[61829] = { -- Repaired: 61824
-			"Forgotten Chest|60+ venthyr research:1049 active:61886,61886 -61824 -item:181363|29.6 25.89|[green]Mirror Network]|treasure|\"Repair the Broken Mirror to access the Forgotten Chamber\"||Requires|!{133617} [red]Handcrafted Mirror Repair Kit]||\"You can buy a Repair Kit from Simone in Sinfall.\"",
-			"Forgotten Chest|60+ venthyr research:1049 active:61886,61886 -61824 item:181363|29.6 25.89|[green]Mirror Network]|treasure|\"Repair the Broken Mirror to access the Forgotten Chamber\"||Requires|!{133617} [green]Handcrafted Mirror Repair Kit]",
+			"Forgotten Chest|60+ venthyr research:1049 active:61886,61886 -61824|29.6 25.89|[green]Mirror Network]|treasure|\"Repair the Broken Mirror to access the Forgotten Chamber\"||Requires|!{133617} [hasitem:181363]Handcrafted Mirror Repair Kit] (<itemcount:181363>)||\"You can buy Repair Kit from Simones in Sinfall.\"",
 			"Forgotten Chest|60+ venthyr research:1049 active:61886,61886 61824|29.6 25.89|[green]Mirror Network]|treasure|\"Repair the Broken Mirror to access the Forgotten Chamber\"||[green]Repaired]",
 		}, 
 	},
@@ -342,7 +363,10 @@ Data.Vignettes = {
 		[65393] = "Protoform Schematic|60+ 64953 64952 65178 65427 -item:189469|66.97 69.42||treasure scroll item:189469|Contains|!{4217590} [rare]Schematic: Prototype Leaper]",
 		[65401] = "Protoform Schematic|60+ 64953 64952 65545 65427 -item:189478|36.95 78.26||treasure scroll item:189478|Contains|!{4217590} [rare]Schematic: Adorned Vombata]",
 		[65447] = "Stolen Relic|60+ 64953 64952|37.9 65.2||treasure|Contains|!{/Random} [rare]Random Jewelry (236+)]|!{4381149} [legendary]Cosmic Flux] (200)",
-		[65465] = {"Domination Cache|60+ 64953 64952 item:189704|60.02 18.98|\"The key is a rare drop from elites in the Endless Sands\"|treasure item:190638|Requires|!{134245} [green]Dominance Key]||Contains|!{3734530} [epic]Tormented Mawsteel Greatsword]|!{4038106} [rare]Spatial Opener]|!{4381149} [legendary]Cosmic Flux] (200)", "Domination Cache|60+ 64953 64952 -item:189704|60.02 18.98|\"The key is a rare drop from elites in the Endless Sands\"|treasure atlas:vignetteloot-locked item:190638|Requires|!{134245} [red]Dominance Key]||Contains|!{3734530} [epic]Tormented Mawsteel Greatsword]|!{4038106} [rare]Spatial Opener]|!{4381149} [legendary]Cosmic Flux] (200)",},
+		[65465] = {
+			"Domination Cache|60+ 64953 64952 item:189704|60.02 18.98|\"The key is a rare drop from elites in the Endless Sands\"|treasure item:190638|Requires|!{134245} [hasitem:189704]Dominance Key]||Contains|!{3734530} [epic]Tormented Mawsteel Greatsword]|!{4038106} [rare]Spatial Opener]|!{4381149} [legendary]Cosmic Flux] (200)",
+			"Domination Cache|60+ 64953 64952 -item:189704|60.02 18.98|\"The key is a rare drop from elites in the Endless Sands\"|treasure atlas:vignetteloot-locked item:190638|Requires|!{134245} [hasitem:189704]Dominance Key]||Contains|!{3734530} [epic]Tormented Mawsteel Greatsword]|!{4038106} [rare]Spatial Opener]|!{4381149} [legendary]Cosmic Flux] (200)",
+		},
 		[65480] = "Gnawed Valise|60+ 64953 64952|38.98 73.21||treasure item:188054::::::::60:::27:3:6652:8108:1482:1:28:2057|Contains|!{4096872} [rare]Antecedent Drape]|!{4381149} [legendary]Cosmic Flux] (200)",
 		[65487] = "Fallen Vault|60+ 64953 64952|51.56 9.9||treasure|Contains|!{4038106} [rare]Spatial Opener]|!{/Random} [uncommon]Random Equipment (229)]|!{4381149} [legendary]Cosmic Flux] (200)",
 		[65489] = {
@@ -442,45 +466,45 @@ Data.Vignettes = {
 		-- Schematic: Omnipotential Core 65348
 
 		[65498] = {
-			"Misshapen Sand Pile|60+ 64953 64952 65328 -65346 -item:189863|10 40|Dormant Alcove|treasure atlas:vignetteloot-locked|\"Retrieve the Dormant Arrangement to unlock the Locus Shift to this location.\"||Requires|!{4038106} [red]Spatial Opener]||Contains|!{/Random} [epic]Random Cypher Trinket (242+)]|!{4381149} [legendary]Cosmic Flux] (200)",
+			"Misshapen Sand Pile|60+ 64953 64952 65328 -65346 -item:189863|10 40|Dormant Alcove|treasure atlas:vignetteloot-locked|\"Retrieve the Dormant Arrangement to unlock the Locus Shift to this location.\"||Requires|!{4038106} [hasitem:189863]Spatial Opener]||Contains|!{/Random} [epic]Random Cypher Trinket (242+)]|!{4381149} [legendary]Cosmic Flux] (200)",
 			"Misshapen Sand Pile|60+ 64953 64952 65328 65346 -item:189863|10 40|Dormant Alcove|treasure atlas:vignetteloot-locked|Requires|!{4038106} [red]Spatial Opener]||Contains|!{/Random} [epic]Random Cypher Trinket (242+)]|!{4381149} [legendary]Cosmic Flux] (200)",
-			"Misshapen Sand Pile|60+ 64953 64952 65328 -65346 item:189863|10 40|Dormant Alcove|treasure atlas:vignetteloot-locked|\"Retrieve the Dormant Arrangement to unlock the Locus Shift to this location.\"||Requires|!{4038106} [green]Spatial Opener]||Contains|!{/Random} [epic]Random Cypher Trinket (242+)]|!{4381149} [legendary]Cosmic Flux] (200)",
+			"Misshapen Sand Pile|60+ 64953 64952 65328 -65346 item:189863|10 40|Dormant Alcove|treasure atlas:vignetteloot-locked|\"Retrieve the Dormant Arrangement to unlock the Locus Shift to this location.\"||Requires|!{4038106} [hasitem:189863]Spatial Opener]||Contains|!{/Random} [epic]Random Cypher Trinket (242+)]|!{4381149} [legendary]Cosmic Flux] (200)",
 			"Misshapen Sand Pile|60+ 64953 64952 65328 65346 item:189863|10 40|Dormant Alcove|treasure|Requires|!{4038106} [green]Spatial Opener]||Contains|!{/Random} [epic]Random Cypher Trinket (242+)]|!{4381149} [legendary]Cosmic Flux] (200)",
 		},
 		[65499] = {
-			"Sparkling Sand Pile|60+ 64953 64952 65328 -65346 -item:189863|12.5 40|Dormant Alcove|treasure atlas:vignetteloot-locked item:190374::::::::60::::1:0|\"Retrieve the Dormant Arrangement to unlock the Locus Shift to this location.\"||Requires|!{4038106} [red]Spatial Opener]||Contains|!{237185} [epic]Gemstone of Prismatic Brilliance]|!{4381149} [legendary]Cosmic Flux] (200)",
+			"Sparkling Sand Pile|60+ 64953 64952 65328 -65346 -item:189863|12.5 40|Dormant Alcove|treasure atlas:vignetteloot-locked item:190374::::::::60::::1:0|\"Retrieve the Dormant Arrangement to unlock the Locus Shift to this location.\"||Requires|!{4038106} [hasitem:189863]Spatial Opener]||Contains|!{237185} [epic]Gemstone of Prismatic Brilliance]|!{4381149} [legendary]Cosmic Flux] (200)",
 			"Sparkling Sand Pile|60+ 64953 64952 65328 65346 -item:189863|12.5 40|Dormant Alcove|treasure atlas:vignetteloot-locked item:190374::::::::60::::1:0|Requires|!{4038106} [red]Spatial Opener]||Contains|!{237185} [epic]Gemstone of Prismatic Brilliance]|!{4381149} [legendary]Cosmic Flux] (200)",
-			"Sparkling Sand Pile|60+ 64953 64952 65328 -65346 item:189863|12.5 40|Dormant Alcove|treasure atlas:vignetteloot-locked item:190374::::::::60::::1:0|\"Retrieve the Dormant Arrangement to unlock the Locus Shift to this location.\"||Requires|!{4038106} [green]Spatial Opener]||Contains|!{237185} [epic]Gemstone of Prismatic Brilliance]|!{4381149} [legendary]Cosmic Flux] (200)",
+			"Sparkling Sand Pile|60+ 64953 64952 65328 -65346 item:189863|12.5 40|Dormant Alcove|treasure atlas:vignetteloot-locked item:190374::::::::60::::1:0|\"Retrieve the Dormant Arrangement to unlock the Locus Shift to this location.\"||Requires|!{4038106} [hasitem:189863]Spatial Opener]||Contains|!{237185} [epic]Gemstone of Prismatic Brilliance]|!{4381149} [legendary]Cosmic Flux] (200)",
 			"Sparkling Sand Pile|60+ 64953 64952 65328 65346 item:189863|12.5 40|Dormant Alcove|treasure item:190374::::::::60::::1:0|Requires|!{4038106} [green]Spatial Opener]||Contains|!{237185} [epic]Gemstone of Prismatic Brilliance]|!{4381149} [legendary]Cosmic Flux] (200)",
 		},
 		[65494] = {
-			"Lumpy Sand Pile|60+ 64953 64952 65328 -65346 -item:189863|10 43.5|Dormant Alcove|treasure atlas:vignetteloot-locked item:188045::::::::60::::2:1492:8093|\"Retrieve the Dormant Arrangement to unlock the Locus Shift to this location.\"||Requires|!{4038106} [red]Spatial Opener]||Contains|!{3950347} [epic]Salvaged Viperid Band]|!{4381149} [legendary]Cosmic Flux] (200)",
+			"Lumpy Sand Pile|60+ 64953 64952 65328 -65346 -item:189863|10 43.5|Dormant Alcove|treasure atlas:vignetteloot-locked item:188045::::::::60::::2:1492:8093|\"Retrieve the Dormant Arrangement to unlock the Locus Shift to this location.\"||Requires|!{4038106} [hasitem:189863]Spatial Opener]||Contains|!{3950347} [epic]Salvaged Viperid Band]|!{4381149} [legendary]Cosmic Flux] (200)",
 			"Lumpy Sand Pile|60+ 64953 64952 65328 65346 -item:189863|10 43.5|Dormant Alcove|treasure atlas:vignetteloot-locked item:188045::::::::60::::2:1492:8093|Requires|!{4038106} [red]Spatial Opener]||Contains|!{3950347} [epic]Salvaged Viperid Band]|!{4381149} [legendary]Cosmic Flux] (200)",
-			"Lumpy Sand Pile|60+ 64953 64952 65328 -65346 item:189863|10 43.5|Dormant Alcove|treasure atlas:vignetteloot-locked item:188045::::::::60::::2:1492:8093|\"Retrieve the Dormant Arrangement to unlock the Locus Shift to this location.\"||Requires|!{4038106} [green]Spatial Opener]||Contains|!{3950347} [epic]Salvaged Viperid Band]|!{4381149} [legendary]Cosmic Flux] (200)",
+			"Lumpy Sand Pile|60+ 64953 64952 65328 -65346 item:189863|10 43.5|Dormant Alcove|treasure atlas:vignetteloot-locked item:188045::::::::60::::2:1492:8093|\"Retrieve the Dormant Arrangement to unlock the Locus Shift to this location.\"||Requires|!{4038106} [hasitem:189863]Spatial Opener]||Contains|!{3950347} [epic]Salvaged Viperid Band]|!{4381149} [legendary]Cosmic Flux] (200)",
 			"Lumpy Sand Pile|60+ 64953 64952 65328 65346 item:189863|10 43.5|Dormant Alcove|treasure item:188045::::::::60::::2:1492:8093|Requires|!{4038106} [green]Spatial Opener]||Contains|!{3950347} [epic]Salvaged Viperid Band]|!{4381149} [legendary]Cosmic Flux] (200)",
 		},
 		[65495] = {
-			"Glinting Sand Pile|60+ 64953 64952 65328 -65346 -item:189863|12.5 43.5|Dormant Alcove|treasure atlas:vignetteloot-locked item:188055::::::::60::::2:1492:8093|\"Retrieve the Dormant Arrangement to unlock the Locus Shift to this location.\"||Requires|!{4038106} [red]Spatial Opener]||Contains|!{3950354} [epic]Impossibly Ancient Band]|!{4381149} [legendary]Cosmic Flux] (200)",
+			"Glinting Sand Pile|60+ 64953 64952 65328 -65346 -item:189863|12.5 43.5|Dormant Alcove|treasure atlas:vignetteloot-locked item:188055::::::::60::::2:1492:8093|\"Retrieve the Dormant Arrangement to unlock the Locus Shift to this location.\"||Requires|!{4038106} [hasitem:189863]Spatial Opener]||Contains|!{3950354} [epic]Impossibly Ancient Band]|!{4381149} [legendary]Cosmic Flux] (200)",
 			"Glinting Sand Pile|60+ 64953 64952 65328 65346 -item:189863|12.5 43.5|Dormant Alcove|treasure atlas:vignetteloot-locked item:188055::::::::60::::2:1492:8093|Requires|!{4038106} [red]Spatial Opener]||Contains|!{3950354} [epic]Impossibly Ancient Band]|!{4381149} [legendary]Cosmic Flux] (200)",
-			"Glinting Sand Pile|60+ 64953 64952 65328 -65346 item:189863|12.5 43.5|Dormant Alcove|treasure atlas:vignetteloot-locked item:188055::::::::60::::2:1492:8093|\"Retrieve the Dormant Arrangement to unlock the Locus Shift to this location.\"||Requires|!{4038106} [green]Spatial Opener]||Contains|!{3950354} [epic]Impossibly Ancient Band]|!{4381149} [legendary]Cosmic Flux] (200)",
+			"Glinting Sand Pile|60+ 64953 64952 65328 -65346 item:189863|12.5 43.5|Dormant Alcove|treasure atlas:vignetteloot-locked item:188055::::::::60::::2:1492:8093|\"Retrieve the Dormant Arrangement to unlock the Locus Shift to this location.\"||Requires|!{4038106} [hasitem:189863]Spatial Opener]||Contains|!{3950354} [epic]Impossibly Ancient Band]|!{4381149} [legendary]Cosmic Flux] (200)",
 			"Glinting Sand Pile|60+ 64953 64952 65328 65346 item:189863|12.5 43.5|Dormant Alcove|treasure item:188055::::::::60::::2:1492:8093|Requires|!{4038106} [green]Spatial Opener]||Contains|!{3950354} [epic]Impossibly Ancient Band]|!{4381149} [legendary]Cosmic Flux] (200)",
 		},
 		[65497] = {
-			"Humming Sand Pile|60+ 64953 64952 65328 -65346 -item:189863|10 47|Dormant Alcove|treasure atlas:vignetteloot-locked item:188053::::::::60::::2:1492:8093|\"Retrieve the Dormant Arrangement to unlock the Locus Shift to this location.\"||Requires|!{4038106} [red]Spatial Opener]||Contains|!{3950351} [epic]Abandoned Automa Loop]|!{4381149} [legendary]Cosmic Flux] (200)",
+			"Humming Sand Pile|60+ 64953 64952 65328 -65346 -item:189863|10 47|Dormant Alcove|treasure atlas:vignetteloot-locked item:188053::::::::60::::2:1492:8093|\"Retrieve the Dormant Arrangement to unlock the Locus Shift to this location.\"||Requires|!{4038106} [hasitem:189863]Spatial Opener]||Contains|!{3950351} [epic]Abandoned Automa Loop]|!{4381149} [legendary]Cosmic Flux] (200)",
 			"Humming Sand Pile|60+ 64953 64952 65328 65346 -item:189863|10 47|Dormant Alcove|treasure atlas:vignetteloot-locked item:188053::::::::60::::2:1492:8093|Requires|!{4038106} [red]Spatial Opener]||Contains|!{3950351} [epic]Abandoned Automa Loop]|!{4381149} [legendary]Cosmic Flux] (200)",
-			"Humming Sand Pile|60+ 64953 64952 65328 -65346 item:189863|10 47|Dormant Alcove|treasure atlas:vignetteloot-locked item:188053::::::::60::::2:1492:8093|\"Retrieve the Dormant Arrangement to unlock the Locus Shift to this location.\"||Requires|!{4038106} [green]Spatial Opener]||Contains|!{3950351} [epic]Abandoned Automa Loop]|!{4381149} [legendary]Cosmic Flux] (200)",
+			"Humming Sand Pile|60+ 64953 64952 65328 -65346 item:189863|10 47|Dormant Alcove|treasure atlas:vignetteloot-locked item:188053::::::::60::::2:1492:8093|\"Retrieve the Dormant Arrangement to unlock the Locus Shift to this location.\"||Requires|!{4038106} [hasitem:189863]Spatial Opener]||Contains|!{3950351} [epic]Abandoned Automa Loop]|!{4381149} [legendary]Cosmic Flux] (200)",
 			"Humming Sand Pile|60+ 64953 64952 65328 65346 item:189863|10 47|Dormant Alcove|treasure item:188053::::::::60::::2:1492:8093|Requires|!{4038106} [green]Spatial Opener]||Contains|!{3950351} [epic]Abandoned Automa Loop]|!{4381149} [legendary]Cosmic Flux] (200)",
 		},
 		[65496] = {
-			"Shifting Sand Pile|60+ 64953 64952 65328 -65346 -item:189863|12.5 47|Dormant Alcove|treasure atlas:vignetteloot-locked item:188044::::::::60::::2:1492:8093|\"Retrieve the Dormant Arrangement to unlock the Locus Shift to this location.\"||Requires|!{4038106} [red]Spatial Opener]||Contains|!{3536115} [epic]Discarded Cartel Al Signet]|!{4381149} [legendary]Cosmic Flux] (200)",
+			"Shifting Sand Pile|60+ 64953 64952 65328 -65346 -item:189863|12.5 47|Dormant Alcove|treasure atlas:vignetteloot-locked item:188044::::::::60::::2:1492:8093|\"Retrieve the Dormant Arrangement to unlock the Locus Shift to this location.\"||Requires|!{4038106} [hasitem:189863]Spatial Opener]||Contains|!{3536115} [epic]Discarded Cartel Al Signet]|!{4381149} [legendary]Cosmic Flux] (200)",
 			"Shifting Sand Pile|60+ 64953 64952 65328 65346 -item:189863|12.5 47|Dormant Alcove|treasure atlas:vignetteloot-locked item:188044::::::::60::::2:1492:8093|Requires|!{4038106} [red]Spatial Opener]||Contains|!{3536115} [epic]Discarded Cartel Al Signet]|!{4381149} [legendary]Cosmic Flux] (200)",
-			"Shifting Sand Pile|60+ 64953 64952 65328 -65346 item:189863|12.5 47|Dormant Alcove|treasure atlas:vignetteloot-locked item:188044::::::::60::::2:1492:8093|\"Retrieve the Dormant Arrangement to unlock the Locus Shift to this location.\"||Requires|!{4038106} [green]Spatial Opener]||Contains|!{3536115} [epic]Discarded Cartel Al Signet]|!{4381149} [legendary]Cosmic Flux] (200)",
+			"Shifting Sand Pile|60+ 64953 64952 65328 -65346 item:189863|12.5 47|Dormant Alcove|treasure atlas:vignetteloot-locked item:188044::::::::60::::2:1492:8093|\"Retrieve the Dormant Arrangement to unlock the Locus Shift to this location.\"||Requires|!{4038106} [hasitem:189863]Spatial Opener]||Contains|!{3536115} [epic]Discarded Cartel Al Signet]|!{4381149} [legendary]Cosmic Flux] (200)",
 			"Shifting Sand Pile|60+ 64953 64952 65328 65346 item:189863|12.5 47|Dormant Alcove|treasure item:188044::::::::60::::2:1492:8093|Requires|!{4038106} [green]Spatial Opener]||Contains|!{3536115} [epic]Discarded Cartel Al Signet]|!{4381149} [legendary]Cosmic Flux] (200)",
 		},
 		[65500] = {
-			"Ticking Sand Pile|60+ 64953 64952 65328 -65346 -item:189863|10 50.5|Dormant Alcove|treasure atlas:vignetteloot-locked item:188106::::::::60::::2:1492:8093|\"Retrieve the Dormant Arrangement to unlock the Locus Shift to this location.\"||Requires|!{4038106} [red]Spatial Opener]||Contains|!{3950338} [epic]Unfathomable Pendant]|!{4381149} [legendary]Cosmic Flux] (200)",
+			"Ticking Sand Pile|60+ 64953 64952 65328 -65346 -item:189863|10 50.5|Dormant Alcove|treasure atlas:vignetteloot-locked item:188106::::::::60::::2:1492:8093|\"Retrieve the Dormant Arrangement to unlock the Locus Shift to this location.\"||Requires|!{4038106} [hasitem:189863]Spatial Opener]||Contains|!{3950338} [epic]Unfathomable Pendant]|!{4381149} [legendary]Cosmic Flux] (200)",
 			"Ticking Sand Pile|60+ 64953 64952 65328 65346 -item:189863|10 50.5|Dormant Alcove|treasure atlas:vignetteloot-locked item:188106::::::::60::::2:1492:8093|Requires|!{4038106} [red]Spatial Opener]||Contains|!{3950338} [epic]Unfathomable Pendant]|!{4381149} [legendary]Cosmic Flux] (200)",
-			"Ticking Sand Pile|60+ 64953 64952 65328 -65346 item:189863|10 50.5|Dormant Alcove|treasure atlas:vignetteloot-locked item:188106::::::::60::::2:1492:8093|\"Retrieve the Dormant Arrangement to unlock the Locus Shift to this location.\"||Requires|!{4038106} [green]Spatial Opener]||Contains|!{3950338} [epic]Unfathomable Pendant]|!{4381149} [legendary]Cosmic Flux] (200)",
+			"Ticking Sand Pile|60+ 64953 64952 65328 -65346 item:189863|10 50.5|Dormant Alcove|treasure atlas:vignetteloot-locked item:188106::::::::60::::2:1492:8093|\"Retrieve the Dormant Arrangement to unlock the Locus Shift to this location.\"||Requires|!{4038106} [hasitem:189863]Spatial Opener]||Contains|!{3950338} [epic]Unfathomable Pendant]|!{4381149} [legendary]Cosmic Flux] (200)",
 			"Ticking Sand Pile|60+ 64953 64952 65328 65346 item:189863|10 50.5|Dormant Alcove|treasure item:188106::::::::60::::2:1492:8093|Requires|!{4038106} [green]Spatial Opener]||Contains|!{3950338} [epic]Unfathomable Pendant]|!{4381149} [legendary]Cosmic Flux] (200)",
 		},
 		-- Lumpy 65494
@@ -521,7 +545,7 @@ Data.Vignettes = {
 	[896] = {
 		-- Treasure
 		[53356] = "Web-Covered Chest|10+|33.71 30.08||treasure|Contains|!{2032600} [War Resources]",
-		[53357] = {"Merchant's Chest|10+ item:163710|25.75 19.94|\"Nearby Gorging Ravens have a chance to drop the key\"|treasure|Requires|!{136058} [green]Merchant's Key]||Contains|!{2004597} [Polished Pet Charm] (5)|!{2032600} [War Resources]", "Merchant's Chest|10+ -item:163710|25.75 19.94|\"Nearby Gorging Ravens have a chance to drop the key\"|treasure atlas:vignetteloot-locked|Requires|!{136058} [red]Merchant's Key]||Contains|!{2004597} [Polished Pet Charm] (5)|!{2032600} [War Resources]",},
+		[53357] = {"Merchant's Chest|10+ item:163710|25.75 19.94|\"Nearby Gorging Ravens have a chance to drop the key\"|treasure|Requires|!{136058} [hasitem:163710]Merchant's Key]||Contains|!{2004597} [Polished Pet Charm] (5)|!{2032600} [War Resources]", "Merchant's Chest|10+ -item:163710|25.75 19.94|\"Nearby Gorging Ravens have a chance to drop the key\"|treasure atlas:vignetteloot-locked|Requires|!{136058} [hasitem:163710]Merchant's Key]||Contains|!{2004597} [Polished Pet Charm] (5)|!{2032600} [War Resources]",},
 		[53385] = "Runebound Cache|10+|63.3 65.85||treasure item:163743|Unlock Sequence|!{1323037} [spell]Left]|!{1323035} [spell]Bottom]|!{1323038} [spell]Top]|!{1323039} [spell]Right]||Contains|!{896907} [rare]Drust Soulcatcher]|!{2032600} [War Resources]",
 		[53386] = "Runebound Chest|10+|44.22 27.7||treasure item:163742|Unlock Sequence|!{1323038} [spell]Left]|!{1323037} [spell]Right]|!{1323035} [spell]Bottom]|!{1323039} [spell]Top]||Contains|!{2101967} [rare]Heartsbane Grimoire]|!{2032600} [War Resources]",
 		[53387] = "Runebound Coffer|10+|33.69 71.73||treasure item:163740|Unlock Sequence|!{1323035} [spell]Right]|!{1323039} [spell]Top]|!{1323038} [spell]Left]|!{1323037} [spell]Bottom]||Contains|!{940537} [rare]Drust Ritual Knife]|!{2032600} [War Resources]",
