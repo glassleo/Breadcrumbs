@@ -2348,6 +2348,12 @@ Data.Quests = {
 		[40955] = "Oath of Service|10+ hunter 40954|72.83 41.19|Emmarel Shadewarden|artifact elsewhere link:739|Visit {!}Emmarel Shadewarden in Trueshot Lodge to continue the Hunter Campaign",
 		[40958] = "Tactical Matters|10+ hunter 40955|72.83 41.19|Emmarel Shadewarden|artifact elsewhere link:739|Visit {!}Emmarel Shadewarden in Trueshot Lodge to continue the Hunter Campaign",
 		[40959] = "The Campaign Begins|10+ hunter 40958|72.83 41.19|Tactician Tinderfell|artifact elsewhere link:739|Visit {!}Tactician Tinderfell in Trueshot Lodge to continue the Hunter Campaign",
+		
+		-- Warrior - Becoming Valarjar
+		[42814] = "An Important Mission|10+ warrior alliance 44184,44663|0 QuestionMark|Sergeant Dalton|discovery artifact", -- Alliance
+		[41052] = "A Desperate Plea|10+ warrior horde 44184,44663|0 QuestionMark|Eitrigg|discovery artifact", -- Horde
+		[42815] = "Return to the Broken Shore|10+ warrior alliance 42814|74.59 44.98|Danath Trollbane|artifact", -- Alliance
+		--[38904] = "Return to the Broken Shore|10+ warrior alliance 41052|COORDS|High Overlord Saurfang|artifact", -- Horde
 
 		-- Other classes
 		[72129] = "Aiding Khadgar|10+ -deathknight -demonhunter -druid -hunter -mage -monk -paladin -priest -rogue -shaman -warlock -warrior 44184,44663|28.49 48.34|Archmage Khadgar|artifact", -- Auto Accept
