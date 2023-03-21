@@ -49,6 +49,9 @@ Data.Vignettes = {
 		[70287] = "Siennagosa|60+ inscription skill:inscription10:25|56.08 41.02|\"Help Siennagosa gather her Darkmoon cards. Make sure you pick them up in order or she might drop them again.\"|treasure speak item:201015|Rewards|!{4644010} [epic]Counterfeit Darkmoon Deck]",
 		[70264] = "Forgetful Apprentice's Tome|60+ inscription skill:inscription10:25|56.26 41.18||treasure item:198659|Contains|!{1499566} [epic]Forgetful Apprentice's Tome]",
 		[70342] = "Fractured Titanic Sphere|60+ enchanting skill:enchanting10:25|59.89 70.33||treasure item:198800|Contains|!{442739} [epic]Fractured Titanic Sphere]",
+		[70301] = "Contraband Concoction|60+ alchemy skill:alchemy10:25|59.53 38.46||treasure item:198697|Contains|!{1416156} [epic]Contraband Concoction]",
+		[70278] = "Mysterious Cauldrons|60+ alchemy skill:alchemy10:25|55.23 30.54|\"Find three [Discarded Toys] on the ground nearby and bring one to each cauldron to unlock the treasure\"|treasure item:203471|Rewards|!{236546} [epic]Tasty Candy]",
+		[70311] = "Draconic Flux|60+ blacksmithing skill:blacksmithing10:25|52.22 80.55||treasure item:201006|Rewards|!{1387609} [epic]Draconic Flux]",
 		
 		-- High Peak
 		[70039] = "High Peak|60+ research:2164|50.16 81.63||vignette atlas:Warfronts-FieldMapIcons-Empty-Banner-Minimap large|Grants Reputation|!{4687628} [Dragonscale Expedition] (250)",
@@ -87,6 +90,12 @@ Data.Vignettes = {
 		[70298] = "Enriched Earthen Shard|60+ enchanting skill:enchanting10:25|21.56 45.54||treasure item:198694|Contains|!{1016245} [epic]Enriched Earthen Shard]",
 		[70336] = "Forgotten Arcane Tome|60+ enchanting skill:enchanting10:25|38.51 59.13||treasure item:198799|Contains|!{134544} [epic]Forgotten Arcane Tome]",
 		[70290] = "Mana-Starved Crystal Cluster|60+ enchanting skill:enchanting10:25|45.16 61.12|\"Defeat an [hostile]Enchanted Crystalline Construct] to reveal the treasure\"|treasure item:201013|Contains|!{1016245} [epic]Faintly Enchanted Remains]",
+		[70309] = "Small Basket of Firewater Powder|60+ alchemy skill:alchemy10:25|67.06 13.16||treasure item:198712|Contains|!{133850} [epic]Firewater Powder Sample]",
+		[70208] = "Experimental Decay Cauldron|60+ alchemy skill:alchemy10:25|16.31 38.5||treasure item:198599|Contains|!{650637} [epic]Experimental Decay Sample]",
+		[70314] = {
+			"Spelltouched Tongs|60+ blacksmithing skill:blacksmithing10:25 -mining|53.14 66.14|\"You may need [hasitem:198727]Expedition Explosives] to break open the rock wall.\n\nThey can be bought from the Dragonscale Expedition quartermaster in the Waking Shores.\"|treasure item:201011|Contains|!{1020378} [epic]Spelltouched Tongs]",
+			"Spelltouched Tongs|60+ blacksmithing skill:blacksmithing10:25 mining|53.14 66.14|\"You may need to break the rock wall using your Mining skill\"|treasure item:201011|Contains|!{1020378} [epic]Spelltouched Tongs]",
+		},
 
 		-- High Peak
 		[71215] = "High Peak|60+ research:2164|31.92 27.03||vignette atlas:Warfronts-FieldMapIcons-Empty-Banner-Minimap large|Grants Reputation|!{4687628} [Dragonscale Expedition] (250)",
@@ -101,7 +110,7 @@ Data.Vignettes = {
 		[72139] = "Misaligned Ley Crystal|60+|26.53 35.91||vignette atlas:AzeriteReady|Grants Reputation|!{4687630} [Valdrakken Accord] (20)",
 		[72140] = "Misaligned Ley Crystal|60+|65.73 28.14||vignette atlas:AzeriteReady|Grants Reputation|!{4687630} [Valdrakken Accord] (20)",
 		[72141] = "Misaligned Ley Crystal|60+|66.39 59.51||vignette atlas:AzeriteReady|Grants Reputation|!{4687630} [Valdrakken Accord] (20)",
-		[72136] = {"Misaligned Ley Crystal|60+ -mining|65.88 50.66|\"You may need [hasitem:198727]Expedition Explosives] to break open the cave wall.\n\nThey can be bought from the Dragonscale Expedition quartermaster in the Waking Shores.\"|vignette atlas:AzeriteReady item:198727|Grants Reputation|!{4687630} [Valdrakken Accord] (20)", "Misaligned Ley Crystal|60+ mining|65.88 50.66|\"You may need to break the cave wall using your Mining skill\"|vignette atlas:AzeriteReady|Grants Reputation|!{4687630} [Valdrakken Accord] (20)",},
+		[72136] = {"Misaligned Ley Crystal|60+ -mining|65.88 50.66|\"You may need [hasitem:198727]Expedition Explosives] to break open the rock wall.\n\nThey can be bought from the Dragonscale Expedition quartermaster in the Waking Shores.\"|vignette atlas:AzeriteReady item:198727|Grants Reputation|!{4687630} [Valdrakken Accord] (20)", "Misaligned Ley Crystal|60+ mining|65.88 50.66|\"You may need to break the rock wall using your Mining skill\"|vignette atlas:AzeriteReady|Grants Reputation|!{4687630} [Valdrakken Accord] (20)",},
 
 		-- Signal Transmitter
 		[70578] = "Deactivated Signal Transmitter|engineering skill:engineering10:25 profperk:2827:50930|34.91 26.77||treasure atlas:FlightMasterArgus large|Activate all three Signal Transmittors in Ohn'ahran Plains to add the zone as an option for your Wyrmhole Generator",
@@ -127,7 +136,14 @@ Data.Vignettes = {
 		[70263] = "Forgotten Jewelry Box|60+ jewelcrafting skill:jewelcrafting10:25|61.76 13.03||treasure item:198660|Contains|!{4555596} [epic]Fragmented Key]|!{647735} [epic]Forgotten Jewelry Box]",
 		[70307] = "Sign Language Reference Sheet|60+ inscription skill:inscription10:25|85.75 25.2||treasure item:198703|Contains|!{134329} [epic]Sign Language Reference Sheet]",
 		[70291] = "Stormbound Horn|60+ enchanting skill:enchanting10:25|61.55 67.7||treasure item:198689|Contains|!{134229} [epic]Stormbound Horn]",
-		
+		[70305] = "Canteen of Suspicious Water|60+ alchemy skill:alchemy10:25|79.24 83.75|\"Inside the Roaring Dragonsprings cavern\"|treasure item:198710|Contains|!{4621580} [epic]Canteen of Suspicious Water]",
+		[70246] = "Ancient Monument|60+ blacksmithing skill:blacksmithing10:25|52.03 14.1|\"Defeat the four [neutral]Enchanted Bulwarks] to reveal the treasure\"|treasure item:201007 link:2022|Contains|!{135418} [epic]Ancient Monument]",
+		[70353] = "Falconer Gauntlet Drawings|60+ blacksmithing skill:blacksmithing10:25|50.91 66.48|\"Inside a hut\"|treasure item:201009|Contains|!{1505931} [epic]Falconer Gauntlet Drawings]",
+		[70313] = {
+			"Ancient Spear Shards|60+ blacksmithing skill:blacksmithing10:25|81.11 37.88|\"Inside a cave\"|treasure item:201004 down|Contains|!{1717146} [epic]Ancient Spear Shards]",
+			"Cave Entrance|60+ blacksmithing skill:blacksmithing10:25|79.39 36.47|Ancient Spear Shards|treasure atlas:questobjective",
+		},
+
 		-- High Peak
 		[71208] = "High Peak|60+ research:2164|86.31 39.28||vignette atlas:Warfronts-FieldMapIcons-Empty-Banner-Minimap large|Grants Reputation|!{4687628} [Dragonscale Expedition] (250)",
 		[70827] = "High Peak|60+ research:2164|57.75 30.81||vignette atlas:Warfronts-FieldMapIcons-Empty-Banner-Minimap large|Grants Reputation|!{4687628} [Dragonscale Expedition] (250)",
@@ -186,11 +202,19 @@ Data.Vignettes = {
 			"Enchanted Broom|60+ enchanting skill:enchanting10:25|57.49 58.46||treasure interact",
 		},
 		[70283] = "Lava-Infused Seed|60+ enchanting skill:enchanting10:25|57.46 83.65|\"Inside a flower\"|treasure item:198675|Contains|!{4554352} [epic]Lava-Infused Seed]",
+		[70289] = "Well Insulated Mug|60+ alchemy skill:alchemy10:25|25.11 74.11||treasure item:198685|Contains|!{1385153} [epic]Well Insulated Mug]",
+		[70274] = "Frostforged Potion|60+ alchemy skill:alchemy10:25|55.16 81.12||treasure item:198663|Contains|!{134791} [epic]Frostforged Potion]",
+		[70296] = "Singed Chest|60+ blacksmithing skill:blacksmithing10:25|35.45 64.48|\"Kick three ingots into the lava pool and then defeat the [hostile]Hungry Hungry Lava] to reveal the treasure\"|treasure item:201008|Contains|!{576649} [epic]Molten Ingot]",
+		[70232] = "Dim Forge|60+ blacksmithing skill:blacksmithing10:25|56.33 19.52|\"Craft a {4622288} [rare]Primal Molten Alloy] near the [Dim Forge] to reveal the treasure\"|treasure item:198791|Rewards|!{132877} [rare]Glimmer of Blacksmithing Wisdom]",
+		[70230] = "Glimmer of Wisdom|60+ blacksmithing skill:blacksmithing10:25 70232|56.35 19.5|\"Inside the [Slack Tub] in front of the [Dim Forge]\"|treasure item:198791|Contains|!{132877} [rare]Glimmer of Blacksmithing Wisdom]",
+		[70312] = "Curious Ingots|60+ blacksmithing skill:blacksmithing10:25|65.6 25.69||treasure item:201005|Contains|!{133218} [epic]Curious Ingots]",
+		[70246] = "Ancient Monument|60+ blacksmithing skill:blacksmithing10:25|22.25 87.62|\"Defeat the four [neutral]Enchanted Bulwarks] to reveal the treasure\"|treasure item:201007|Contains|!{135418} [epic]Ancient Monument]",
+		[70310] = "Qalashi Weapon Diagram|60+ blacksmithing skill:blacksmithing10:25|34.52 67.14||treasure item:201010|Contains|!{1505957} [epic]Qalashi Weapon Diagram]",
 		
 		-- High Peak
 		[70824] = "High Peak|60+ research:2164|73.35 38.85||vignette atlas:Warfronts-FieldMapIcons-Empty-Banner-Minimap large|Grants Reputation|!{4687628} [Dragonscale Expedition] (250)",
 		[70823] = "High Peak|60+ research:2164|56.02 45.41||vignette atlas:Warfronts-FieldMapIcons-Empty-Banner-Minimap large|Grants Reputation|!{4687628} [Dragonscale Expedition] (250)",
-		[70825] = "High Peak|60+ research:2164|43.97 62.95||vignette atlas:Warfronts-FieldMapIcons-Empty-Banner-Minimap large|Grants Reputation|!{4687628} [Dragonscale Expedition] (250)",
+		[70825] = "High Peak|60+ research:2164|43.45 61.96||vignette atlas:Warfronts-FieldMapIcons-Empty-Banner-Minimap large|Grants Reputation|!{4687628} [Dragonscale Expedition] (250)",
 		[70826] = "High Peak|60+ research:2164|28.71 47.73||vignette atlas:Warfronts-FieldMapIcons-Empty-Banner-Minimap large|Grants Reputation|!{4687628} [Dragonscale Expedition] (250)",
 		[71204] = "High Peak|60+ research:2164|54.80 74.12||vignette atlas:Warfronts-FieldMapIcons-Empty-Banner-Minimap large|Grants Reputation|!{4687628} [Dragonscale Expedition] (250)",
 
@@ -203,6 +227,7 @@ Data.Vignettes = {
 		[70247] = "Grigori Vialtry|60+ alchemy skill:2823:25|60.83 75.9||vignette speak currency:2024|Master Alchemist|!{4624656} [rare]Dragon Isles Alchemy Knowledge] (5)|!{4643977} [rare]Artisan's Mettle] (25)",
 		[70250] = "Grekka Anvilsmash|60+ blacksmithing skill:2822:25|43.27 66.63||vignette speak currency:2023|Master Blacksmith|!{4624660} [rare]Dragon Isles Blacksmithing Knowledge] (5)|!{4643977} [rare]Artisan's Mettle] (25)",
 		[70259] = "Zenzi|60+ skinning skill:2834:25|73.28 69.73||vignette speak currency:2033|Masta Skinna|!{4625106} [rare]Dragon Isles Skinning Knowledge] (10)|!{4643977} [rare]Artisan's Mettle] (50)",
+		[70251] = "Shalasar Glimmerdusk|60+ enchanting skill:2825:25|32.13 91.98|\"On top of the building\"|vignette speak currency:2030 link:2023|Master Enchantress|!{3615911} [rare]Dragon Isles Enchanting Knowledge] (5)|!{4643977} [rare]Artisan's Mettle] (25)",
 	},
 
 
