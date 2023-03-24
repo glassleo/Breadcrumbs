@@ -17,6 +17,7 @@ Data.HiddenBonusObjectiveQuests = {
 	[72373] = true, -- Aiding the Accord: The Hunt is On
 	[72374] = true, -- Aiding the Accord: Dragonbane Keep
 	[72375] = true, -- Aiding the Accord: The Isles Call
+	[72369] = true, -- Aiding the Accord: Zskera Vaults
 }
 
 
@@ -263,7 +264,7 @@ Data.Quests = {
 	-- Valdrakken
 	[2112] = {
 		-- Aiding the Accord
-		[70750] = "Aiding the Accord|60+ 67030 -72374 -72068 -72373 -72375|50.17 56.22|Therazal|campaign weekly", -- You get one of 5 random weeklies, we consolidate them into one pin
+		[70750] = "Aiding the Accord|60+ 67030 -72374 -72068 -72373 -72375 -72369|50.17 56.22|Therazal|campaign weekly", -- You get one of 5 random weeklies, we consolidate them into one pin
 		[72354] = "The Great Vault|70+|50.17 56.22|Therazal",
 
 		-- The Spark of Ingenuity
