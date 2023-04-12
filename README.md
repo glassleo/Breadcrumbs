@@ -43,7 +43,6 @@ So far, the following zones are entirely complete or in a near-complete state:
 - The Waking Shores (including Adventure Mode)
 - Ohn'ahran Plains (including Adventure Mode)
 - Valdrakken POIs
-- Algeth'ar Academy POIs
 
 ### Shadowlands (6/8 Complete)
 - Zereth Mortis and the Secrets of the First Ones campaign
