@@ -83,7 +83,7 @@ Data.POI = {
 		"POI/Blacksmithing|[Blacksmithing]|58+ blacksmithing|36.97 47.1",
 		"POI/Enchanting|[Enchanting]|58+ enchanting|31.17 61.19",
 		"POI/Engineering|[Engineering]|58+ engineering|42.26 48.8",
-		"POI/Herbalism|[Herbalism]|58+ herbalism|36.89 65.4",
+		"POI/Herbalism|[Herbalism]|58+ herbalism|37.69 67.99",
 		"POI/Inscription|[Inscription]|58+ inscription|38.85 73.39",
 		"POI/Jewelcrafting|[Jewelcrafting]|58+ jewelcrafting|40.27 61.57",
 		"POI/Leatherworking|[Leatherworking]|58+ leatherworking|28.83 62.12",
