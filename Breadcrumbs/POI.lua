@@ -71,12 +71,17 @@ Data.POI = {
 		"mailbox:objective|Mailbox|mailbox|45.57 59.06", -- Auction House
 		"mailbox:objective|Mailbox|mailbox|37.66 49.52", -- Obsidian Enclave
 		"mailbox:objective|Mailbox|mailbox|48.45 51.03", -- The Roasted Ram
+		"mailbox:objective|Mailbox|mailbox|54.58 59.5", -- Bank of Valdrakken
 
 		-- Crafting Orders
 		"Professions-Crafting-Orders-Icon|Crafting Orders|58+|34.72 62.47",
 
 		-- Item Upgrades
-		"upgradeitem-32x32|[Item Upgrades]|60+|45.73 38.2",
+		"upgradeitem-32x32|[Item Upgrades]|60+|38.65 37.11",
+
+		-- PvP
+		"poi-alliance|[Conquest & Honor Quartermaster]|70+ alliance|43.89 39.52",
+		"poi-horde|[Conquest & Honor Quartermaster]|70+ horde|43.89 39.52",
 
 		-- Professions
 		"POI/Alchemy|[Alchemy]|58+ alchemy|36.39 71.73",
