@@ -18,6 +18,9 @@ Data.HiddenBonusObjectiveQuests = {
 	[72374] = true, -- Aiding the Accord: Dragonbane Keep
 	[72375] = true, -- Aiding the Accord: The Isles Call
 	[72369] = true, -- Aiding the Accord: Zskera Vaults
+	[75859] = true, -- Aiding the Accord: Sniffenseeking
+	[75860] = true, -- Aiding the Accord: Researchers Under Fire
+	[75861] = true, -- Aiding the Accord: Suffusion Camp
 }
 
 
@@ -1169,15 +1172,15 @@ Data.Quests = {
 
 		-- Threads of Fate: Battlegrounds
 		-- 65030 Battlegrounds chosen - Also given optional breadcrumb 65031 (Battlegrounds)
-		[65032] = "Battleground Observers|65030 ~65031|38.89 70|Tal-Inara|campaign",
+		[65032] = "Battleground Observers|65030 ~65031 -60|38.89 70|Tal-Inara|campaign",
 		-- 65033 Observing Victory - this daily quest is displayed by the Bonus Objectives Data Provider so we don't have to
 		-- HQT 53409 resets with daily
-		[65034] = "Return to Oribos|65032 65033|34.24 55.9|Strategist Zo'rak|campaign",
+		[65034] = "Return to Oribos|65032 65033 -60|34.24 55.9|Strategist Zo'rak|campaign",
 
 		-- Threads of Fate: Torghast
 		-- 64848 Torghast chosen - Also given optional breadcrumb 64846 (Torghast)
 		-- Also autocompletes 64557 (In Darkness, Found), 64210 (The Box of Many Things), 64216 (Tower Knowledge)
-		[64849] = "Tower of the Damned|64848 ~64846|38.89 70|Tal-Inara|campaign",
+		[64849] = "Tower of the Damned|64848 ~64846 -60|38.89 70|Tal-Inara|campaign",
 
 		-- Kyrian - Among the Kyrian
 		[63211] = "Report to Adrestes|60+ kyrian -60491|38.89 70|Tal-Inara|campaign", -- Breadcrumb for 60491

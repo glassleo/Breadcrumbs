@@ -45,15 +45,21 @@ local _, Data = ...
 Data.POI = {
 
 
-	--[[ Algeth'ar Academy ]]--
+	--[[ Zaralek Cavern ]]--
 
-	-- Algeth'ar Academy
-	[2097] = {
-		"132533:objective|[friendly]Black Dragonflight Recruiter]|1+|45.84 71.15|tooltip||{132533} [spell]Black Dragonflight Pledge Pin]|[Critical Strike increased by 5%.]",
-		"132530:objective|[friendly]Bronze Dragonflight Recruiter]|1+|42.73 68.17|tooltip||{132530} [spell]Bronze Dragonflight Pledge Pin]|[Haste increased by 5%.]",
-		"132526:objective|[friendly]Blue Dragonflight Recruiter]|1+|43.02 61.67|tooltip||{132526} [spell]Blue Dragonflight Pledge Pin]|[Mastery increased.]",
-		"132529:objective|[friendly]Green Dragonflight Recruiter]|1+|46.56 56.37|tooltip||{132529} [spell]Green Dragonflight Pledge Pin]|[Healing taken increased by 10%.]",
-		"132532:objective|[friendly]Red Dragonflight Recruiter]|1+|48.48 59.08|tooltip||{132532} [spell]Red Dragonflight Pledge Pin]|[Versatility increased by 5%.]",
+	--[2133] = {},
+
+
+	--[[ The Forbidden Reach ]]--
+
+	-- The War Creche
+	[2102] = {
+		-- Teleport Pad
+		"Vehicle-TempleofKotmogu-PurpleBall|Gemstone of Return|1+|65.32 62.52",
+		"Vehicle-TempleofKotmogu-PurpleBall|Gemstone of Return|1+|47.82 81.5",
+		"flightmaster_ancientwaygate-taxinode_neutral:small|Spellsworn Gateway|1+|46.99 47.34",
+		"flightmaster_ancientwaygate-taxinode_neutral:small|Spellsworn Gateway|1+|49.91 54.24",
+		"dragonriding-winds:small|Updraft|1+|67.92 49.48",
 	},
 
 

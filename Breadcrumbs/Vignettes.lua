@@ -12,6 +12,17 @@ local _, Data = ...
 
 Data.Vignettes = {
 
+	
+	--[[ Zaralek Cavern ]]--
+
+	[2133] = {
+		-- Treasure
+		[76078] = "Well-Worn Kiln|60+ blacksmithing skill:blacksmithing10:25|57.15 54.67||treasure item:205986|Rewards|!{5140835} [epic]Well-Worn Kiln]",
+		
+		-- Signal Transmitter
+	},
+
+
 	--[[ The Forbidden Reach ]]--
 
 	[2151] = {
