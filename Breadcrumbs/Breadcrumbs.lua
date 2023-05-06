@@ -36,7 +36,7 @@ local Setting_Debug_QuestWatcher = true
 -- Constants
 local CHROMIETIME_MAXLEVEL = 60 -- Maximum level for Chromie Time
 -- https://www.townlong-yak.com/framexml/live/GlobalStrings.lua
-local QUEST_ICONS_FILE = QUEST_ICONS_FILE -- "Interface\\QuestFrame\\QuestTypeIcons"
+local QUEST_ICONS_FILE = "Interface\\QuestFrame\\QuestTypeIcons"
 local AVAILABLE_QUEST = AVAILABLE_QUEST -- Available quest
 local WEEKLY = WEEKLY -- Weekly
 local PROFESSIONS_COOKING = PROFESSIONS_COOKING -- Cooking
