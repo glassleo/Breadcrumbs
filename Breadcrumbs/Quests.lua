@@ -30,6 +30,7 @@ Data.HiddenBonusObjectiveQuests = {
 -- Quests
 
 --[[
+
 	Data Structure
 	
 	-- Quest
@@ -206,7 +207,9 @@ Data.HiddenBonusObjectiveQuests = {
 		<itemcount:x>	Number of items with ID x
 		<currencycount:x>  Amount of currency with ID x
 
+
 	--------------------------------------------------
+
 
 	Notes
 
@@ -246,7 +249,8 @@ Data.HiddenBonusObjectiveQuests = {
 
 	Dragonflight
 		67030 - Adventure Mode unlocked on account
-		71864 - Dreambloom looted this week (Herbalism)
+
+
 ]]--
 
 Data.Quests = {
