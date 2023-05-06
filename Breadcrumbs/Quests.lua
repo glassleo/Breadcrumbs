@@ -354,8 +354,7 @@ Data.Quests = {
 		[72339] = "Engine of Innovation|60+ 72340|44.9 60.39|Maiden of Inspiration|link:2112",
 
 		-- The Revival Catalyst
-		[72360] = "Reviving the Machine|70+|40.57 58.57|Watcher Koranos|link:2112",
-		[72528] = {"Revival Catalyst|70+ 72360|58.7 53.82|Antuka|weekly account", "Revival Catalyst|70+ 72360|41.18 61.01|Antuka|weekly account link:2112",},
+		--[72360] = "Reviving the Machine|70+|40.57 58.57|Watcher Koranos|link:2112",
 
 		-- Gelikyr Overlook
 
@@ -462,7 +461,7 @@ Data.Quests = {
 		[67033] = "Assemble the Defenses|60+ 65+,67030 66228|46.69 39.77|Noriko the All-Remembering|campaign",
 		[67036] = "Wrath of the Kirin Tor|60+ 65+,67030 67035 67033|46.69 39.77|Noriko the All-Remembering|campaign",
 		[65688] = "Meeting Kalecgos|60+ 65+,67030 67036|46.64 40.19|Archmage Khadgar|campaign",
-		[72784] = "Supporting the Cobalt Assembly|68+ 67036-70550|46.67 39.74|Althanus", -- Breadcrumb for 70550
+		[72784] = "Supporting the Cobalt Assembly|68+ 67036 -70550|46.67 39.74|Althanus", -- Breadcrumb for 70550
 		[66488] = "WANTED: Frigellus|60+ 65+,67030 67036|46.16 39.62|WANTED: Frigellus",
 		[66489] = "Setting the Defense|60+ 65+,67030 66488|45.99 38.41|Arch Enchanter Celeste",
 		[66671] = "Path to Nowhere|60+ 65+,67030 67036|45.69 39.78|Caddy Scattershot",
@@ -626,7 +625,7 @@ Data.Quests = {
 		[66150] = "Rescuing Radza|60+ 65+,67030 66141|63.5 52.97|Garz",
 		[66151] = "His Stone Heart|60+ 65+,67030 66148 66149 66150|60.91 50.51|Radza Thunderclaw",
 		[66152] = "Nowhere to Go|60+ 65+,67030 66151|60.98 50.56|Garz",
-		[70627] = "What of the Winterpelt Clan?|60+ 65+,67030 66152|63.17 58.69|Radza Thunderclaw", -- Invalidated by ?
+		[70627] = "What of the Winterpelt Clan?|60+ 65+,67030 66152 -66557|63.17 58.69|Radza Thunderclaw", -- Mutually exclusive with 66557
 
 		-- Winterpelt Hollow
 		[66622] = "Wayward Tools|60+ 65+,67030|65.57 16.18|Tyrnokos Sunstrike",
@@ -634,7 +633,7 @@ Data.Quests = {
 		[66554] = "Aggressive Self-Defence|60+ 65+,67030|65.39 15.95|Sonova Snowden",
 		[66555] = "Bear With Me|60+ 65+,67030 66553 66554|65.39 15.95|Sonova Snowden",
 		[66556] = "Ice Cave Ya Got There|60+ 65+,67030 66555|65.39 15.95|Sonova Snowden",
-		[66557] = "Academic Acquaintances|60+ 65+,67030 66556 -66141|65.39 15.95|Sonova Snowden", -- Breadcrumb for 66141
+		[66557] = "Academic Acquaintances|60+ 65+,67030 66556 -66141 -70627|65.39 15.95|Sonova Snowden", -- Breadcrumb for 66141; mutually exclusive with 70627
 
 		-- Three-Falls Lookout
 		[71233] = "Falling Water|60+ 65+,67030 -66837|28.46 35.11|Unkimi", -- Breadcrumb for 66837
