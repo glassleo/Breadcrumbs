@@ -115,8 +115,8 @@ Data.POI = {
 	-- Thaldraszus
 	[2025] = {
 		-- Revival Catalyst
-		"creationcatalyst-32x32|[Revival Catalyst Console]|70+ currency:2167:1|60.69 53.71|tooltip|Transform an item from Dragonflight Season 1 into a set item.||[green]<currencycount:2167> §4Charge:Charges; Available]",
-		"creationcatalyst-32x32|[Revival Catalyst Console]|70+ -currency:2167:1|60.69 53.71|tooltip|Transform an item from Dragonflight Season 1 into a set item.||[gray]No Charges Remain]",
+		"creationcatalyst-32x32|[Revival Catalyst Console]|70+ currency:2533:1|60.69 53.71|tooltip|Transform an item from Dragonflight Season 2 into a set item.||[green]<currencycount:2167> §4Charge:Charges; Available]",
+		"creationcatalyst-32x32|[Revival Catalyst Console]|70+ -currency:2533:1|60.69 53.71|tooltip|Transform an item from Dragonflight Season 2 into a set item.||[gray]No Charges Available]",
 	},
 
 
