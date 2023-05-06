@@ -291,8 +291,7 @@ Data.Quests = {
 		[72339] = "Engine of Innovation|60+ 72340|84.33 53.55|Maiden of Inspiration",
 
 		-- The Revival Catalyst
-		[72360] = "Reviving the Machine|70+|54.38 40.92|Watcher Koranos",
-		[72528] = "Revival Catalyst|70+ 72360|56.61 57.86|Antuka|weekly account",
+		--[72360] = "Reviving the Machine|70+|54.38 40.92|Watcher Koranos", -- Does it still exist in 10.1?
 
 		-- Artisan's Consortium
 		[70221] = "Show Your Mettle|60+ 62+,67030 alchemy,blacksmithing,enchanting,engineering,inscription,jewelcrafting,leatherworking,tailoring,herbalism,mining,skinning reputation:2544:2|39.44 70.17|Thomas Bright|weekly", -- Requires Preferred (rank 2) or higher with Artisan's Consortium
