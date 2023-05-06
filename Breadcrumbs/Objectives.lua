@@ -11,7 +11,7 @@ local _, Data = ...
 	},
 
 	Icon: Texture or Atlas to use as the pin's icon (use "questobjective" for a yellow dot)
-	https://www.townlong-yak.com/framexml/9.1.0/Helix/AtlasInfo.lua
+	https://www.townlong-yak.com/framexml/live/Helix/AtlasInfo.lua
 		questobjective	Yellow dot
 		poi-door-down	Entrance (above)
 		poi-door-up		Exit (below)
