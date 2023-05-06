@@ -201,8 +201,8 @@ Data.HiddenBonusObjectiveQuests = {
 		[hex]			Colored text opening tag where hex is a hex color, for example [ffffff] would be white
 		]				Close color tag
 		§				|
-		[hasitem:x]		Dynamic color opening tag - green if the character has at least one item with ID x in their inventory, otherwise red
-		[hasitem:x:n]	Dynamic color opening tag - green if the character has n or more items with ID x in their inventory, otherwise red
+		[hasitem:x]		Dynamic color opening tag - beige if the character has at least one item with ID x in their inventory, otherwise gray
+		[hasitem:x:n]	Dynamic color opening tag - beige if the character has n or more items with ID x in their inventory, otherwise gray
 		<itemcount:x>	Number of items with ID x
 		<currencycount:x>  Amount of currency with ID x
 
