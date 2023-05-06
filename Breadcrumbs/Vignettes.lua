@@ -21,6 +21,11 @@ Data.Vignettes = {
 		[76079] = "Brimstone Rescue Ring|60+ blacksmithing skill:blacksmithing10:25|48.31 22.01||treasure item:205987|Contains|!{2000808} [epic]Brimstone Rescue Ring]",
 		[76080] = "Zaqali Elder Spear|60+ blacksmithing skill:blacksmithing10:25|27.51 42.88||treasure item:205988|Contains|!{135124} [epic]Zaqali Elder Spear]",
 		
+		-- Enchanting Treasure
+		[75508] = "Lava-Drenched Shadow Crystal|60+ enchanting skill:enchanting10:25|48.25 17.02|\"Inside the lava sewage outflow cave underneath Brimstone Garrison\"|treasure item:204990|Contains|!{1003588} [epic]Lava-Drenched Shadow Crystal]",
+		[75509] = "Shimmering Aqueous Orb|60+ enchanting skill:enchanting10:25|62.38 53.79||treasure item:204999|Contains|!{132852} [epic]Shimmering Aqueous Orb]",
+		[75510] = "Resonating Arcane Crystal|60+ enchanting skill:enchanting10:25|36.65 69.34||treasure item:205001|Contains|!{237013} [epic]Resonating Arcane Crystal]",
+		
 		-- Engineering Treasure
 		[75186] = "Busted Wyrmhole Generator|60+ engineering skill:engineering10:25|37.83 58.85||treasure item:205954|Contains|!{4548860} [epic]Busted Wyrmhole Generator]|!{4635196} [rare]Three-Dimensional Compass]",
 		[75183] = "Haphazardly Discarded Bombs|60+ engineering skill:engineering10:25|48.15 27.89||treasure item:204470|Contains|!{133710} [epic]Haphazardly Discarded Bomb]",
@@ -32,9 +37,22 @@ Data.Vignettes = {
 		[75430] = "Bolts and Brass|60+ engineering skill:engineering10:25|57.65 73.94||treasure item:204850|Contains|!{4548875} [epic]Handful of Khaz'gorite Bolts]",
 		
 		-- Treasure
-		[73706] = "Charred Egg|70+|30.05 41.93||treasure item:204075|Contains|!{5062636} [rare]Whelpling's Shadowflame Crest Fragment] (6)|!{5172976} [Flightstones]|!{2065578} [Dragon Isles Supplies]",
+		[73706] = "Charred Egg|70+|30.05 41.93||treasure item:204075|Contains|!{5062636} [rare]Whelpling's Shadowflame Crest Fragment]|!{5172976} [Flightstones]|!{2065578} [Dragon Isles Supplies]",
 		[73395] = "Well-Chewed Chest|70+|29.77 40.55|\"The key can be found underneath the dead [dead]Massive Corebeast] inside the cave\"|treasure item:204075|Requires|{2032583} [hasitem:202869]Scorching Key]||Contains|!{5062636} [rare]Whelpling's Shadowflame Crest Fragment] (6)|!{5172976} [Flightstones]|!{2065578} [Dragon Isles Supplies]",
 		[75515] = "Molten Hoard|70+|48.42 16.35|\"Inside the lava sewage outflow cave underneath Brimstone Garrison\"|treasure item:205981|Contains|!{5148757} [epic]Molten Primal Fang]",
+		[75302] = "Stolen Stash|70+|60.66 46.23||treasure item:204075|Contains|!{5062636} [rare]Whelpling's Shadowflame Crest Fragment]|!{5172976} [Flightstones]|!{2065578} [Dragon Isles Supplies]",
+		[75559] = "Attunement Crystal|70+|39.41 73.28||treasure interact",
+		[74987] = "Attunement Crystal|70+|37.75 68.86||treasure interact",
+		[74986] = {
+			"Crystal-encased Chest|70+ -75559,-74987|36.4 74.26|\"Find two [Attunement Crystals] nearby in order to unlock the treasure\"|treasure item:204075 atlas:vignetteloot-locked|Contains|!{5062636} [rare]Whelpling's Shadowflame Crest Fragment] (6)|!{5172976} [Flightstones]|!{2065578} [Dragon Isles Supplies]",
+			"Crystal-encased Chest|70+ 75559 74987|36.4 74.26||treasure item:204075|Contains|!{5062636} [rare]Whelpling's Shadowflame Crest Fragment]|!{5172976} [Flightstones]|!{2065578} [Dragon Isles Supplies]",
+		},
+		[75019] = "Long-Lost Cache|70+|62.71 53.75||treasure item:204075|Contains|!{5062636} [rare]Whelpling's Shadowflame Crest Fragment]|!{5172976} [Flightstones]|!{2065578} [Dragon Isles Supplies]",
+		[75514] = {
+			"Fealty's Reward|70+|48.45 10.83|\"To open the chest you must first kneel before the statue of Neltharion in the nearby area\"|treasure item:204075|Contains|!{5062636} [rare]Whelpling's Shadowflame Crest Fragment]|!{5172976} [Flightstones]|!{2065578} [Dragon Isles Supplies]",
+			"Statue of Neltharion|70+|43.37 23.07|treasure interact",
+		},
+		
 	},
 
 
