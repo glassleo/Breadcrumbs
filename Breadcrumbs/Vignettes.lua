@@ -16,10 +16,25 @@ Data.Vignettes = {
 	--[[ Zaralek Cavern ]]--
 
 	[2133] = {
-		-- Treasure
-		[76078] = "Well-Worn Kiln|60+ blacksmithing skill:blacksmithing10:25|57.15 54.67||treasure item:205986|Rewards|!{5140835} [epic]Well-Worn Kiln]",
+		-- Blacksmithing Treasure
+		[76078] = "Well-Worn Kiln|60+ blacksmithing skill:blacksmithing10:25|57.15 54.67||treasure item:205986|Contains|!{5140835} [epic]Well-Worn Kiln]",
+		[76079] = "Brimstone Rescue Ring|60+ blacksmithing skill:blacksmithing10:25|48.31 22.01||treasure item:205987|Contains|!{2000808} [epic]Brimstone Rescue Ring]",
+		[76080] = "Zaqali Elder Spear|60+ blacksmithing skill:blacksmithing10:25|27.51 42.88||treasure item:205988|Contains|!{135124} [epic]Zaqali Elder Spear]",
 		
-		-- Signal Transmitter
+		-- Engineering Treasure
+		[75186] = "Busted Wyrmhole Generator|60+ engineering skill:engineering10:25|37.83 58.85||treasure item:205954|Contains|!{4548860} [epic]Busted Wyrmhole Generator]|!{4635196} [rare]Three-Dimensional Compass]",
+		[75183] = "Haphazardly Discarded Bombs|60+ engineering skill:engineering10:25|48.15 27.89||treasure item:204470|Contains|!{133710} [epic]Haphazardly Discarded Bomb]",
+		[75433] = "Molten Scoutbot|60+ engineering skill:engineering10:25|48.12 16.6|\"Inside the lava sewage outflow cave underneath Brimstone Garrison\"|treasure item:204855|Contains|!{2735923} [epic]Overclocked Determination Core]",
+		[75180] = "Misplaced Aberrus Outflow Blueprints|60+ engineering skill:engineering10:25|48.48 48.64||treasure item:204469|Contains|!{1392956} [epic]Misplaced Aberrus Outflow Blueprints]",
+		[75184] = "Defective Survival Pack|60+ engineering skill:engineering10:25|50.51 47.95||treasure item:204471|Contains|!{1405807} [epic]Defective Survival Pack]",
+		[75188] = "Inconspicuous Data Miner|60+ engineering skill:engineering10:25|49.89 59.26||treasure item:204480|Contains|!{892830} [epic]Inconspicuous Data Miner]",
+		[75431] = "Discarded Dracothyst Drill|60+ engineering skill:engineering10:25|49.47 79.02||treasure item:204853|Contains|!{893841} [epic]Discarded Dracothyst Drill]",
+		[75430] = "Bolts and Brass|60+ engineering skill:engineering10:25|57.65 73.94||treasure item:204850|Contains|!{4548875} [epic]Handful of Khaz'gorite Bolts]",
+		
+		-- Treasure
+		[73706] = "Charred Egg|70+|30.05 41.93||treasure item:204075|Contains|!{5062636} [rare]Whelpling's Shadowflame Crest Fragment] (6)|!{5172976} [Flightstones]|!{2065578} [Dragon Isles Supplies]",
+		[73395] = "Well-Chewed Chest|70+|29.77 40.55|\"The key can be found underneath the dead [dead]Massive Corebeast] inside the cave\"|treasure item:204075|Requires|{2032583} [hasitem:202869]Scorching Key]||Contains|!{5062636} [rare]Whelpling's Shadowflame Crest Fragment] (6)|!{5172976} [Flightstones]|!{2065578} [Dragon Isles Supplies]",
+		[75515] = "Molten Hoard|70+|48.42 16.35|\"Inside the lava sewage outflow cave underneath Brimstone Garrison\"|treasure item:205981|Contains|!{5148757} [epic]Molten Primal Fang]",
 	},
 
 
