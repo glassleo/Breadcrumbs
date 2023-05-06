@@ -88,12 +88,12 @@ Data.HiddenBonusObjectiveQuests = {
 		active:n		World Quest/Task Quest with ID n must be active
 
 		flying			Must have learned flying
-		dragonriding	Must have learned flying
+		dragonriding	Must have learned dragonriding
 
 		garrison		Must have unlocked WoD Garrison (any tier)
 		garrison:n		Must have a WoD Garrison at tier n
 
-		research:x		Must have researched GarrTalent ID x (see https://wow.tools/dbc/?dbc=garrtalent)
+		research:x		Must have researched GarrTalent ID x (see https://wago.tools/db2/GarrTalent)
 
 		renown:n		Must have attained renown level n with their currently chosen Shadowlands covenant
 
@@ -106,7 +106,7 @@ Data.HiddenBonusObjectiveQuests = {
 
 		currency:n:x	Must have at least x or more of currency with ID n
 
-		art:x			Map (where this pin is located) must currently have UiMapArtID x (see https://wow.tools/dbc/?dbc=uimapxmapart)
+		art:x			Map (where this pin is located) must currently have UiMapArtID x (see https://wago.tools/db2/UiMapXMapArt)
 		art:y:x			Map with ID y must currently have UiMapArtID x
 
 		reputation:x:n	Must have reached standing n or higher with reputation faction x
