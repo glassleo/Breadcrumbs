@@ -16,6 +16,9 @@ Data.Vignettes = {
 	--[[ Zaralek Cavern ]]--
 
 	[2133] = {
+		-- Alchemy Treasure
+		[75649] = "Marrow-Ripened Slime|60+ alchemy skill:alchemy10:25|62.12 41.12||treasure item:205212|Contains|!{3459153} [epic]Marrow-Ripened Slime]",
+		
 		-- Blacksmithing Treasure
 		[76078] = "Well-Worn Kiln|60+ blacksmithing skill:blacksmithing10:25|57.15 54.67||treasure item:205986|Contains|!{5140835} [epic]Well-Worn Kiln]",
 		[76079] = "Brimstone Rescue Ring|60+ blacksmithing skill:blacksmithing10:25|48.31 22.01||treasure item:205987|Contains|!{2000808} [epic]Brimstone Rescue Ring]",
@@ -36,11 +39,15 @@ Data.Vignettes = {
 		[75431] = "Discarded Dracothyst Drill|60+ engineering skill:engineering10:25|49.47 79.02||treasure item:204853|Contains|!{893841} [epic]Discarded Dracothyst Drill]",
 		[75430] = "Bolts and Brass|60+ engineering skill:engineering10:25|57.65 73.94||treasure item:204850|Contains|!{4548875} [epic]Handful of Khaz'gorite Bolts]",
 		
+		-- Leatherworking Treasure
+		[75502] = "Sulfur-Soaked Skins|60+ leatherworking skill:leatherworking10:25|49.52 54.67|\"Inside a broken cart\"|treasure item:204988|Contains|!{4635271} [epic]Sulfur-Soaked Skins]",
+		[75495] = "Flame-Infused Scale Oil|60+ leatherworking skill:leatherworking10:25|41.16 48.81||treasure item:204986|Contains|!{252176} [epic]Flame-Infused Scale Oil]",
+
 		-- Treasure
 		[73706] = "Charred Egg|70+|30.05 41.93||treasure item:204075|Contains|!{5062636} [rare]Whelpling's Shadowflame Crest Fragment]|!{5172976} [Flightstones]|!{2065578} [Dragon Isles Supplies]",
 		[73395] = "Well-Chewed Chest|70+|29.77 40.55|\"The key can be found underneath the dead [dead]Massive Corebeast] inside the cave\"|treasure item:204075|Requires|{2032583} [hasitem:202869]Scorching Key]||Contains|!{5062636} [rare]Whelpling's Shadowflame Crest Fragment] (6)|!{5172976} [Flightstones]|!{2065578} [Dragon Isles Supplies]",
 		[75515] = "Molten Hoard|70+|48.42 16.35|\"Inside the lava sewage outflow cave underneath Brimstone Garrison\"|treasure item:205981|Contains|!{5148757} [epic]Molten Primal Fang]",
-		[75302] = "Stolen Stash|70+|60.66 46.23||treasure item:204075|Contains|!{5062636} [rare]Whelpling's Shadowflame Crest Fragment]|!{5172976} [Flightstones]|!{2065578} [Dragon Isles Supplies]",
+		--[75302] = "Stolen Stash|70+|60.66 46.23||treasure item:204075|Contains|!{5062636} [rare]Whelpling's Shadowflame Crest Fragment]|!{5172976} [Flightstones]|!{2065578} [Dragon Isles Supplies]",
 		[75559] = "Attunement Crystal|70+|39.41 73.28||treasure interact",
 		[74987] = "Attunement Crystal|70+|37.75 68.86||treasure interact",
 		[74986] = {
@@ -50,7 +57,7 @@ Data.Vignettes = {
 		[75019] = "Long-Lost Cache|70+|62.71 53.75||treasure item:204075|Contains|!{5062636} [rare]Whelpling's Shadowflame Crest Fragment]|!{5172976} [Flightstones]|!{2065578} [Dragon Isles Supplies]",
 		[75514] = {
 			"Fealty's Reward|70+|48.45 10.83|\"To open the chest you must first kneel before the statue of Neltharion in the nearby area\"|treasure item:204075|Contains|!{5062636} [rare]Whelpling's Shadowflame Crest Fragment]|!{5172976} [Flightstones]|!{2065578} [Dragon Isles Supplies]",
-			"Statue of Neltharion|70+|43.37 23.07|treasure interact",
+			"Statue of Neltharion|70+|43.54 23.02||treasure interact",
 		},
 		
 	},
@@ -220,6 +227,7 @@ Data.Vignettes = {
 		[70251] = "Shalasar Glimmerdusk|60+ enchanting skill:2825:25|62.42 18.7|\"On top of the building\"|vignette speak currency:2030|Master Enchantress|!{3615911} [rare]Dragon Isles Enchanting Knowledge] (5)|!{4643977} [rare]Artisan's Mettle] (25)",
 		[70253] = "Hua Greenpaw|60+ herbalism skill:2832:25|58.38 50.01||vignette speak currency:2034|Master Herbalist|!{4624731} [rare]Dragon Isles Herbalism Knowledge] (10)|!{4643977} [rare]Artisan's Mettle] (50)",
 		[70256] = "Erden|60+ leatherworking skill:2830:25|82.43 50.64||vignette speak currency:2025|Master Leatherworker|!{4624911} [rare]Dragon Isles Leatherworking Knowledge] (5)|!{4643977} [rare]Artisan's Mettle] (25)",
+		[70252] = "Frizz Buzzcrank|60+ engineering skill:engineering10:25|43.07 77.66||vignette speak currency:2027 link:2024|Master Engineer|!{4624728} [rare]Dragon Isles Engineering Knowledge] (5)|!{4643977} [rare]Artisan's Mettle] (25)",
 	},
 
 
