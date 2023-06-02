@@ -341,7 +341,7 @@ function Breadcrumbs:GetQuestName(id)
 				else
 					flags = {}
 				end
-				return name, flags["campaign"] and (flags["daily"] and "Quest-DailyCampaign-Available" or "Quest-Campaign-Available") or flags["legendary"] and "QuestLegendary" or flags["artifact"] and "QuestLegendary" or flags["daily"] and "QuestDaily" or "QuestNormal", flags["legendary"] and "ff8000" or flags["artifact"] and "ff8000" or "ffd100"
+				return name, flags["campaign"] and (flags["daily"] and "Quest-DailyCampaign-Available" or "Quest-Campaign-Available") or flags["legendary"] and "quest-legendary-available" or flags["artifact"] and "quest-legendary-available" or flags["daily"] and "QuestDaily" or "QuestNormal", flags["legendary"] and "ff8000" or flags["artifact"] and "ff8000" or "ffd100"
 			end
 		end
 	end
@@ -451,7 +451,7 @@ function Breadcrumbs:FormatTooltip(text, flags, varwrap)
 	text = string.gsub(text, "{([%d]+)}", "|T%1:18:18|t") -- texture id
 	text = string.gsub(text, "{(Interface/)([%w%p]+)}", "|T%1%2:16:16|t") -- texture path
 	text = string.gsub(text, "{(/)([%w%p]+)}", "|TInterface/AddOns/Breadcrumbs/Textures/%2:16:16|t") -- relative texture path
-	text = string.gsub(text, "{!}", CreateAtlasMarkup(flags["warboard"] and "warboard" or flags["artifact"] and "questartifact" or flags["legendary"] and "questlegendary" or flags["campaign"] and "quest-campaign-available" or flags["dailycampaign"] and "quest-dailycampaign-available" or flags["daily"] and "questdaily" or "questnormal")) -- !
+	text = string.gsub(text, "{!}", CreateAtlasMarkup(flags["warboard"] and "warboard" or flags["artifact"] and "quest-legendary-available" or flags["legendary"] and "quest-legendary-available" or flags["campaign"] and "quest-campaign-available" or flags["dailycampaign"] and "quest-dailycampaign-available" or flags["daily"] and "questdaily" or "questnormal")) -- !
 	text = string.gsub(text, "{([%w%p]+)}", CreateAtlasMarkup("%1")) -- atlas
 	text = string.gsub(text, "%[Auto Accept", "|cff00ff00Auto Accept") -- Auto Accept green
 	text = string.gsub(text, "%[hasitem:([%d]+):([%d]+)%]", function(item, count)
@@ -719,7 +719,7 @@ function Breadcrumbs:UpdateMap(event, ...)
 							--elseif flags["weekly"] then
 							--	Pin:SetNormalTexture("Interface/AddOns/Breadcrumbs/Textures/QuestWeekly")
 							else
-								Pin:SetNormalAtlas(flags["elsewhere"] and "poi-traveldirections-arrow" or flags["warboard"] and "warboard" or flags["campaign"] and "quest-campaign-available" or flags["dailycampaign"] and "quest-dailycampaign-available" or flags["up"] and "questnormal" or flags["down"] and "questnormal" or flags["artifact"] and "questartifact" or flags["legendary"] and "questlegendary" or flags["daily"] and "questdaily" or "questnormal")
+								Pin:SetNormalAtlas(flags["elsewhere"] and "poi-traveldirections-arrow" or flags["warboard"] and "warboard" or flags["campaign"] and "quest-campaign-available" or flags["dailycampaign"] and "quest-dailycampaign-available" or flags["up"] and "questnormal" or flags["down"] and "questnormal" or flags["artifact"] and "quest-legendary-available" or flags["legendary"] and "quest-legendary-available" or flags["daily"] and "questdaily" or "questnormal")
 							end
 
 							if flags["down"] or flags["up"] then
