@@ -70,6 +70,7 @@ Data.POI = {
 		-- Portal
 		"POI/Portal|Portal to Orgrimmar|horde|56.64 38.3",
 		"POI/Portal|Portal to Stormwind|alliance|59.79 41.71",
+		"POI/Portal|Portal to Badlands|1+|26.09 40.98",
 		"POI/Portal|Seasonal Portals|1+|53.95 55",
 
 		-- Mailbox
@@ -1089,6 +1090,9 @@ Data.POI = {
 		"POI/Portal:small|Portal to Tirisfal Glades|art:18:1136 horde|50.75 55.59",
 		"POI/Portal:small|Portal to Tol Barad|30+ horde|47.39 39.26",
 		"POI/Portal:small|Portal to Thunder Totem|horde Highmountain|40.09 76.83", -- Highmountain Tauren only
+
+		-- Heirloom Vendor
+		"timewalkingvendor-32x32|[Heirloom Vendor]|59770|57.1 89.95|tooltip",
 
 		-- Professions
 		"POI/Alchemy|[Alchemy]|5+ horde alchemy|55.68 45.75||Yelmak's Alchemy and Potions",
