@@ -39,10 +39,20 @@ Data.Vignettes = {
 		[75431] = "Discarded Dracothyst Drill|60+ engineering skill:engineering10:25|49.47 79.02||treasure item:204853|Contains|!{893841} [epic]Discarded Dracothyst Drill]",
 		[75430] = "Bolts and Brass|60+ engineering skill:engineering10:25|57.65 73.94||treasure item:204850|Contains|!{4548875} [epic]Handful of Khaz'gorite Bolts]",
 		
+		-- Jewelcrafting Treasure
+		[75652] = "Snubbed Snail Shells|60+ jewelcrafting skill:jewelcrafting10:25|40.38 80.65||treasure item:205214|Contains|!{4632789} [epic]Snubbed Snail Shells]",
+		[75653] = "Gently Jostled Jewels|60+ jewelcrafting skill:jewelcrafting10:25|34.5 45.42||treasure item:205216|Contains|!{1379185} [epic]Gently Jostled Jewels]",
+		[75654] = "Broken Barter Boulder|60+ jewelcrafting skill:jewelcrafting10:25|54.39 32.45|\"Inside a small cave\"|treasure item:205219|Contains|!{2066015} [epic]Broken Barter Boulder]",
+		
 		-- Leatherworking Treasure
 		[75502] = "Sulfur-Soaked Skins|60+ leatherworking skill:leatherworking10:25|49.52 54.67|\"Inside a broken cart\"|treasure item:204988|Contains|!{4635271} [epic]Sulfur-Soaked Skins]",
 		[75495] = "Flame-Infused Scale Oil|60+ leatherworking skill:leatherworking10:25|41.16 48.81||treasure item:204986|Contains|!{252176} [epic]Flame-Infused Scale Oil]",
 
+		-- Tailoring Treasure
+		[76110] = "Used Medical Wrap Kit|60+ tailoring skill:tailoring10:25|59.11 73.18||treasure item:206025|Contains|!{1387611} [epic]Used Medical Wrap Kit]",
+		[76102] = "Abandoned Reserve Chute|60+ tailoring skill:tailoring10:25|47.21 48.55|\"On a ledge on top of the tower\"|treasure item:206019|Contains|!{133633} [epic]Abandoned Reserve Chute]",
+		[76116] = "Exquisitely Embroidered Banner|60+ tailoring skill:tailoring10:25|44.55 15.67||treasure item:206030|Contains|!{4624616} [epic]Exquisitely Embroidered Banner]",
+		
 		-- Treasure
 		[73706] = "Charred Egg|70+|30.05 41.93||treasure item:204075|Contains|!{5062636} [rare]Whelpling's Shadowflame Crest Fragment]|!{5172976} [Flightstones]|!{2065578} [Dragon Isles Supplies]",
 		[73395] = "Well-Chewed Chest|70+|29.77 40.55|\"The key can be found underneath the dead [dead]Massive Corebeast] inside the cave\"|treasure item:204075|Requires|{2032583} [hasitem:202869]Scorching Key]||Contains|!{5062636} [rare]Whelpling's Shadowflame Crest Fragment] (6)|!{5172976} [Flightstones]|!{2065578} [Dragon Isles Supplies]",
