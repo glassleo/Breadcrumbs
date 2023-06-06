@@ -17,7 +17,9 @@ Data.Vignettes = {
 
 	[2133] = {
 		-- Alchemy Treasure
+		[75646] = "Malnourished Specimen|60+ alchemy skill:alchemy10:25|52.68 18.3||treasure item:205211|Contains|!{1001622} [epic]Nutrient Diluted Protofluid]",
 		[75649] = "Marrow-Ripened Slime|60+ alchemy skill:alchemy10:25|62.12 41.12||treasure item:205212|Contains|!{3459153} [epic]Marrow-Ripened Slime]",
+		[75651] = "Suspicious Mold|60+ alchemy skill:alchemy10:25|40.48 59.18||treasure item:205213|Contains|!{959835} [epic]Suspicious Mold]",
 		
 		-- Blacksmithing Treasure
 		[76078] = "Well-Worn Kiln|60+ blacksmithing skill:blacksmithing10:25|57.15 54.67||treasure item:205986|Contains|!{5140835} [epic]Well-Worn Kiln]",
@@ -39,6 +41,14 @@ Data.Vignettes = {
 		[75431] = "Discarded Dracothyst Drill|60+ engineering skill:engineering10:25|49.47 79.02||treasure item:204853|Contains|!{893841} [epic]Discarded Dracothyst Drill]",
 		[75430] = "Bolts and Brass|60+ engineering skill:engineering10:25|57.65 73.94||treasure item:204850|Contains|!{4548875} [epic]Handful of Khaz'gorite Bolts]",
 		
+		-- Inscription Treasure
+		[76120] = "Hissing Rune Draft|60+ inscription skill:inscription10:25|53.02 74.26||treasure item:206034|Contains|!{237450} [epic]Hissing Rune Draft]",
+		[76121] = {
+			"Ancient Research|60+ inscription skill:inscription10:25|54.57 20.21|\"Inside a building, under a table\"|treasure item:206035|Contains|!{4549134} [epic]Ancient Research]",
+			"Building Entrance|60+ inscription skill:inscription10:25|52.78 18.85|Ancient Research|treasure atlas:questobjective",
+		},
+		[76117] = "Intricate Zaqali Runes|60+ inscription skill:inscription10:25|36.67 46.15||treasure item:206031|Contains|!{1029027} [epic]Intricate Zaqali Runes]",
+		
 		-- Jewelcrafting Treasure
 		[75652] = "Snubbed Snail Shells|60+ jewelcrafting skill:jewelcrafting10:25|40.38 80.65||treasure item:205214|Contains|!{4632789} [epic]Snubbed Snail Shells]",
 		[75653] = "Gently Jostled Jewels|60+ jewelcrafting skill:jewelcrafting10:25|34.5 45.42||treasure item:205216|Contains|!{1379185} [epic]Gently Jostled Jewels]",
@@ -47,6 +57,7 @@ Data.Vignettes = {
 		-- Leatherworking Treasure
 		[75502] = "Sulfur-Soaked Skins|60+ leatherworking skill:leatherworking10:25|49.52 54.67|\"Inside a broken cart\"|treasure item:204988|Contains|!{4635271} [epic]Sulfur-Soaked Skins]",
 		[75495] = "Flame-Infused Scale Oil|60+ leatherworking skill:leatherworking10:25|41.16 48.81||treasure item:204986|Contains|!{252176} [epic]Flame-Infused Scale Oil]",
+		[75496] = "Lava-Forged Leatherworker's \"Knife\"|60+ leatherworking skill:leatherworking10:25|45.24 21.09||treasure item:204987|Contains|!{4732313} [epic]Lava-Forged Leatherworker's \"Knife\"]",
 
 		-- Tailoring Treasure
 		[76110] = "Used Medical Wrap Kit|60+ tailoring skill:tailoring10:25|59.11 73.18||treasure item:206025|Contains|!{1387611} [epic]Used Medical Wrap Kit]",
@@ -54,6 +65,10 @@ Data.Vignettes = {
 		[76116] = "Exquisitely Embroidered Banner|60+ tailoring skill:tailoring10:25|44.55 15.67||treasure item:206030|Contains|!{4624616} [epic]Exquisitely Embroidered Banner]",
 		
 		-- Treasure
+		[72986] = {
+			"Blazing Shadowflame Chest|70+ item:15138|28.53 47.94|\"You must equip an Onyxia Scale Cloak to be able to open the chest\"|treasure item:205418|Requires|{133757} [hasitem:15138]Onyxia Scale Cloak]||Contains|!{4914678} [rare]Blazing Shadowflame Cinder]|!{5062636} [rare]Whelpling's Shadowflame Crest Fragment]|!{5172976} [Flightstones]|!{2065578} [Dragon Isles Supplies]",
+			"Blazing Shadowflame Chest|70+ -item:15138|28.53 47.94|\"You must equip an Onyxia Scale Cloak to be able to open the chest\"|treasure item:205418 atlas:vignetteloot-locked|Requires|{133757} [hasitem:15138]Onyxia Scale Cloak]||Contains|!{4914678} [rare]Blazing Shadowflame Cinder]|!{5062636} [rare]Whelpling's Shadowflame Crest Fragment]|!{5172976} [Flightstones]|!{2065578} [Dragon Isles Supplies]",
+		},
 		[73706] = "Charred Egg|70+|30.05 41.93||treasure item:204075|Contains|!{5062636} [rare]Whelpling's Shadowflame Crest Fragment]|!{5172976} [Flightstones]|!{2065578} [Dragon Isles Supplies]",
 		[73395] = "Well-Chewed Chest|70+|29.77 40.55|\"The key can be found underneath the dead [dead]Massive Corebeast] inside the cave\"|treasure item:204075|Requires|{2032583} [hasitem:202869]Scorching Key]||Contains|!{5062636} [rare]Whelpling's Shadowflame Crest Fragment] (6)|!{5172976} [Flightstones]|!{2065578} [Dragon Isles Supplies]",
 		[75515] = "Molten Hoard|70+|48.42 16.35|\"Inside the lava sewage outflow cave underneath Brimstone Garrison\"|treasure item:205981|Contains|!{5148757} [epic]Molten Primal Fang]",
@@ -61,13 +76,14 @@ Data.Vignettes = {
 		[75559] = "Attunement Crystal|70+|39.41 73.28||treasure interact",
 		[74987] = "Attunement Crystal|70+|37.75 68.86||treasure interact",
 		[74986] = {
-			"Crystal-encased Chest|70+ -75559,-74987|36.4 74.26|\"Find two [Attunement Crystals] nearby in order to unlock the treasure\"|treasure item:204075 atlas:vignetteloot-locked|Contains|!{5062636} [rare]Whelpling's Shadowflame Crest Fragment] (6)|!{5172976} [Flightstones]|!{2065578} [Dragon Isles Supplies]",
-			"Crystal-encased Chest|70+ 75559 74987|36.4 74.26||treasure item:204075|Contains|!{5062636} [rare]Whelpling's Shadowflame Crest Fragment]|!{5172976} [Flightstones]|!{2065578} [Dragon Isles Supplies]",
+			"Crystal-encased Chest|70+ -75559,-74987|36.4 74.26|\"Find two [Attunement Crystals] nearby in order to unlock the treasure\"|treasure item:204075 atlas:vignetteloot-locked|Contains|!{/Random} [rare]Random Trinket]|!{5062636} [rare]Whelpling's Shadowflame Crest Fragment] (6)|!{5172976} [Flightstones]|!{2065578} [Dragon Isles Supplies]",
+			"Crystal-encased Chest|70+ 75559 74987|36.4 74.26||treasure item:204075|Contains|!{/Random} [rare]Random Trinket]|!{5062636} [rare]Whelpling's Shadowflame Crest Fragment]|!{5172976} [Flightstones]|!{2065578} [Dragon Isles Supplies]",
 		},
 		[75019] = "Long-Lost Cache|70+|62.71 53.75||treasure item:204075|Contains|!{5062636} [rare]Whelpling's Shadowflame Crest Fragment]|!{5172976} [Flightstones]|!{2065578} [Dragon Isles Supplies]",
+		[75814] = "Waterlogged Bundle|70+|62.07 55.33||treasure item:204075|Contains|!{5062636} [rare]Whelpling's Shadowflame Crest Fragment]|!{5172976} [Flightstones]|!{2065578} [Dragon Isles Supplies]", -- also flags 75015
 		[75514] = {
-			"Fealty's Reward|70+|48.45 10.83|\"To open the chest you must first kneel before the statue of Neltharion in the nearby area\"|treasure item:204075|Contains|!{5062636} [rare]Whelpling's Shadowflame Crest Fragment]|!{5172976} [Flightstones]|!{2065578} [Dragon Isles Supplies]",
-			"Statue of Neltharion|70+|43.54 23.02||treasure interact",
+			"Fealty's Reward|70+|48.45 10.83|\"To open the chest you must first kneel before the statue of Neltharion in the western part of Brimstone Garrison\"|treasure item:204075|Contains|!{/Random} [rare]Random Trinket]|!{5062636} [rare]Whelpling's Shadowflame Crest Fragment]|!{5172976} [Flightstones]|!{2065578} [Dragon Isles Supplies]",
+			"Statue of Neltharion|70+|43.54 23.02|Fealty's Reward|treasure atlas:questobjective",
 		},
 		
 	},
@@ -93,12 +109,14 @@ Data.Vignettes = {
 	[2112] = {
 		-- Treasure
 		[70731] = "Barrel of Confiscated Treats|60+|9.6 56.34|\"Behind a bookshelf\"|treasure item:198106|Contains|!{1500865} [rare]Recipe: Tasty Hatchling's Treat]|!{1500918} [Tasty Hatchling's Treat] (2)",
+		
+		-- Inscription Treasure
 		[70281] = {
 			"[red]How to Train Your Whelpling]|60+ inscription skill:inscription10:25 -70306|13.43 63.29||treasure item:198669 atlas:vignetteloot-locked link:2022|{services-icon-warning} [red]Warning: There is currently a bug with this treasure which makes it drop the wrong item if you have not yet looted Pulsing Earth Rune.]||[red]You should loot [epic]Pulsing Earth Rune] in the Waking Shores before looting this treasure.||[poor]Contains]|!{4549132} [poor]How to Train Your Whelpling]",
 			"How to Train Your Whelpling|60+ inscription skill:inscription10:25 70306|13.43 63.29||treasure item:198669|Contains|!{4549132} [epic]How to Train Your Whelpling]",
 		},
 
-		-- Profession Master
+		-- Tailoring Master
 		[70260] = "Elysa Raywinder|60+ tailoring skill:2831:25|27.9 45.76|\"On top of a ledge on the western side of the large tower, underneath a black banner\"|vignette speak currency:2026|Master Seamstress|!{3615523} [rare]Dragon Isles Tailoring Knowledge] (5)|!{4643977} [rare]Artisan's Mettle] (25)",
 	},
 
@@ -107,11 +125,18 @@ Data.Vignettes = {
 		-- Treasure
 		[70731] = "Barrel of Confiscated Treats|60+|34.1 60.79||treasure item:198106 link:2112|Contains|!{1500865} [rare]Recipe: Tasty Hatchling's Treat]|!{1500918} [Tasty Hatchling's Treat] (2)",
 		[70609] = "Elegant Canvas Brush|60+|60.25 41.64||treasure item:203206|Contains|!{2103804} [poor]Elegant Canvas Brush]",
-		[70294] = "Bag of Decayed Scales|60+ leatherworking skill:2830:25|56.82 30.57||treasure item:198690|Contains|!{4631333} [epic]Decayed Scales]",
-		[70372] = "Ancient Dragonweave Loom|60+ tailoring skill:tailoring10:25|58.69 45.9|\"Solve a series of puzzles to unlock the treasure\"|treasure item:201019|Contains|!{4549298} [epic]Ancient Dragonweave Bolt]",
-		[70288] = "Miniature Bronze Dragonflight Banner|60+ tailoring skill:tailoring10:25|60.41 79.66|\"On top of the platform in a pile of sand\"|treasure item:198684|Contains|!{4624621} [epic]Miniature Bronze Dragonflight Banner]",
-		[70261] = "Painter's Pretty Jewel|60+ jewelcrafting skill:jewelcrafting10:25|56.91 43.68|\"Use [spell]Anomaly Detection Mark I] to reveal the treasure inside an urn with a lantern on top\"|treasure item:198656|Contains|!{4555548} [epic]Painter's Pretty Jewel]",
-		[70285] = "Erupted Alexstraszite Cluster|60+ jewelcrafting skill:jewelcrafting10:25|59.85 65.17||treasure item:198682|Contains|!{133238} [epic]Alexstraszite Cluster]|!{4555569} [rare]Alexstraszite] (2)",
+		
+		-- Alchemy Treasure
+		[70301] = "Contraband Concoction|60+ alchemy skill:alchemy10:25|59.53 38.46||treasure item:198697|Contains|!{1416156} [epic]Contraband Concoction]",
+		[70278] = "Mysterious Cauldrons|60+ alchemy skill:alchemy10:25|55.23 30.54|\"Find three [Discarded Toys] on the ground nearby and bring one to each cauldron to unlock the treasure\"|treasure item:203471|Rewards|!{236546} [epic]Tasty Candy]",
+		
+		-- Blacksmithing Treasure
+		[70311] = "Draconic Flux|60+ blacksmithing skill:blacksmithing10:25|52.22 80.55||treasure item:201006|Rewards|!{1387609} [epic]Draconic Flux]",
+		
+		-- Enchanting Treasure
+		[70342] = "Fractured Titanic Sphere|60+ enchanting skill:enchanting10:25|59.89 70.33||treasure item:198800|Contains|!{442739} [epic]Fractured Titanic Sphere]",
+		
+		-- Inscription Treasure
 		[70281] = {
 			"[red]How to Train Your Whelpling]|60+ inscription skill:inscription10:25 -70306|34.66 61.8||treasure item:198669 atlas:vignetteloot-locked link:2022|{services-icon-warning} [red]Warning: There is currently a bug with this treasure which makes it drop the wrong item if you have not yet looted Pulsing Earth Rune.]||[red]You should loot [epic]Pulsing Earth Rune] in the Waking Shores before looting this treasure.||[poor]Contains]|!{4549132} [poor]How to Train Your Whelpling]",
 			"How to Train Your Whelpling|60+ inscription skill:inscription10:25 70306|34.66 61.8||treasure item:198669 link:2112|Contains|!{4549132} [epic]How to Train Your Whelpling]",
@@ -123,11 +148,19 @@ Data.Vignettes = {
 		},
 		[70287] = "Siennagosa|60+ inscription skill:inscription10:25|56.08 41.02|\"Help Siennagosa gather her Darkmoon cards. Make sure you pick them up in order or she might drop them again.\"|treasure speak item:201015|Rewards|!{4644010} [epic]Counterfeit Darkmoon Deck]",
 		[70264] = "Forgetful Apprentice's Tome|60+ inscription skill:inscription10:25|56.26 41.18||treasure item:198659|Contains|!{1499566} [epic]Forgetful Apprentice's Tome]",
-		[70342] = "Fractured Titanic Sphere|60+ enchanting skill:enchanting10:25|59.89 70.33||treasure item:198800|Contains|!{442739} [epic]Fractured Titanic Sphere]",
-		[70301] = "Contraband Concoction|60+ alchemy skill:alchemy10:25|59.53 38.46||treasure item:198697|Contains|!{1416156} [epic]Contraband Concoction]",
-		[70278] = "Mysterious Cauldrons|60+ alchemy skill:alchemy10:25|55.23 30.54|\"Find three [Discarded Toys] on the ground nearby and bring one to each cauldron to unlock the treasure\"|treasure item:203471|Rewards|!{236546} [epic]Tasty Candy]",
-		[70311] = "Draconic Flux|60+ blacksmithing skill:blacksmithing10:25|52.22 80.55||treasure item:201006|Rewards|!{1387609} [epic]Draconic Flux]",
 		
+		-- Jewelcrafting Treasure
+		[70261] = "Painter's Pretty Jewel|60+ jewelcrafting skill:jewelcrafting10:25|56.91 43.68|\"Use [spell]Anomaly Detection Mark I] to reveal the treasure inside an urn with a lantern on top\"|treasure item:198656|Contains|!{4555548} [epic]Painter's Pretty Jewel]",
+		[70285] = "Erupted Alexstraszite Cluster|60+ jewelcrafting skill:jewelcrafting10:25|59.85 65.17||treasure item:198682|Contains|!{133238} [epic]Alexstraszite Cluster]|!{4555569} [rare]Alexstraszite] (2)",
+		
+		-- Leatherworking Treasure
+		[70294] = "Bag of Decayed Scales|60+ leatherworking skill:2830:25|56.82 30.57||treasure item:198690|Contains|!{4631333} [epic]Decayed Scales]",
+
+		-- Tailoring Treasure
+		[70372] = "Ancient Dragonweave Loom|60+ tailoring skill:tailoring10:25|58.69 45.9|\"Solve a series of puzzles to unlock the treasure\"|treasure item:201019|Contains|!{4549298} [epic]Ancient Dragonweave Bolt]",
+		[70288] = "Miniature Bronze Dragonflight Banner|60+ tailoring skill:tailoring10:25|60.41 79.66|\"On top of the platform in a pile of sand\"|treasure item:198684|Contains|!{4624621} [epic]Miniature Bronze Dragonflight Banner]",
+		
+
 		-- High Peak
 		[70039] = "High Peak|60+ research:2164|50.16 81.63||vignette atlas:Warfronts-FieldMapIcons-Empty-Banner-Minimap large|Grants Reputation|!{4687628} [Dragonscale Expedition] (250)",
 		[70024] = "High Peak|60+ research:2164|46.11 73.98||vignette atlas:Warfronts-FieldMapIcons-Empty-Banner-Minimap large|Grants Reputation|!{4687628} [Dragonscale Expedition] (250)",
