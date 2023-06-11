@@ -19,7 +19,7 @@ Data.Vignettes = {
 		-- Alchemy Treasure
 		[75646] = "Malnourished Specimen|60+ alchemy skill:alchemy10:25|52.68 18.3||treasure item:205211|Contains|!{1001622} [epic]Nutrient Diluted Protofluid]",
 		[75649] = "Marrow-Ripened Slime|60+ alchemy skill:alchemy10:25|62.12 41.12||treasure item:205212|Contains|!{3459153} [epic]Marrow-Ripened Slime]",
-		[75651] = "Suspicious Mold|60+ alchemy skill:alchemy10:25|40.48 59.18||treasure item:205213|Contains|!{959835} [epic]Suspicious Mold]",
+		[75651] = "Suspicious Mold|60+ alchemy skill:alchemy10:25|40.43 59.21||treasure item:205213|Contains|!{959835} [epic]Suspicious Mold]",
 		
 		-- Blacksmithing Treasure
 		[76078] = "Well-Worn Kiln|60+ blacksmithing skill:blacksmithing10:25|57.15 54.67||treasure item:205986|Contains|!{5140835} [epic]Well-Worn Kiln]",
@@ -296,7 +296,7 @@ Data.Vignettes = {
 			"Boom Fumes|60+ engineering skill:engineering10:25 -item:198814|57.83 44.58||treasure item:198814|Contains|!{4497570} [Boom Fumes]",
 			"Durable Crystal|60+ engineering skill:engineering10:25 -item:198817|58.13 44.54||treasure item:198817|Contains|!{132781} [Durable Crystal]",
 		},
-		[70275] = "Disabled Tesla Coil|60+ engineering skill:engineering10:25|49.11 77.51|\"Activate three nearby [Exposed Wires] to unlock the treasure\"|treasure item:198789|Contains|!{133870} [epic]Intact Coil Capacitor]",
+		[70275] = "Disabled Tesla Coil|60+ engineering skill:engineering10:25|49.11 77.51|\"Clear three [Exposed Wires] after interacting with the coil to unlock it\"|treasure item:198789|Contains|!{133870} [epic]Intact Coil Capacitor]",
 		[70292] = "Closely Guarded Shiny|60+ jewelcrafting skill:jewelcrafting10:25|50.36 45.06|\"Hidden inside a tree trunk\"|treasure item:198687|Contains|!{317243} [epic]Closely Guarded Shiny]",
 		[70273] = "Igneous Gem|60+ jewelcrafting skill:jewelcrafting10:25|33.94 63.67|\"Activate three [Focusing Crystals] nearby to reveal the treasure\"|treasure item:201017|Contains|!{237200} [epic]Igneous Gem]",
 		[70308] = "Poacher's Pack|60+ leatherworking skill:leatherworking10:25|39.36 86.38||treasure item:198711|Contains|!{3056991} [epic]Poacher's Pack]",
