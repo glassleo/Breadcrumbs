@@ -108,7 +108,7 @@ Data.Vignettes = {
 	-- Valdrakken
 	[2112] = {
 		-- Treasure
-		[70731] = "Barrel of Confiscated Treats|60+|9.6 56.34|\"Behind a bookshelf\"|treasure item:198106|Contains|!{1500865} [rare]Recipe: Tasty Hatchling's Treat]|!{1500918} [Tasty Hatchling's Treat] (2)",
+		[70731] = "Barrel of Confiscated Treats|60+ skill:cooking10:1|9.6 56.34|\"Behind a bookshelf\"|treasure item:198106|Contains|!{1500865} [rare]Recipe: Tasty Hatchling's Treat]|!{1500918} [Tasty Hatchling's Treat] (2)",
 		
 		-- Inscription Treasure
 		[70281] = {
@@ -289,12 +289,10 @@ Data.Vignettes = {
 			"Adventurer's Lost Soap Bar|60+ -item:200065 -70864|39.64 84.68|\"In a tub of water\"|treasure item:200065|Contains|!{512902} [Adventurer's Lost Soap Bar]",
 		},
 		[70270] = {
-			"Boomthyr Rocket|60+ engineering skill:engineering10:25 -item:198815 -item:198816,-item:198814,-item:198817|56.02 44.82|\"Click on the notes and then collect four items nearby to restore the treasure\"|treasure atlas:vignetteloot-locked item:201014|\"[Ash] can be found in the same room as the Rocket and the rest can be found in the building on the opposite side\"||Required Items|!{133218} [hasitem:198816]Aerospace Grade Draconium]|!{443368} [hasitem:198815]Ash]|!{4497570} [hasitem:198814]Boom Fumes]|!{132781} [hasitem:198817]Durable Crystal]||Rewards|!{511727} [epic]Boomthyr Rocket]",
-			"Boomthyr Rocket|60+ engineering skill:engineering10:25 item:198815 -item:198816,-item:198814,-item:198817|56.02 44.82|\"Click on the notes and then collect four items nearby to restore the treasure\"|treasure atlas:vignetteloot-locked item:201014|Required Items|!{133218} [hasitem:198816]Aerospace Grade Draconium]|!{443368} [hasitem:198815]Ash]|!{4497570} [hasitem:198814]Boom Fumes]|!{132781} [hasitem:198817]Durable Crystal]||Rewards|!{511727} [epic]Boomthyr Rocket]",
+			"Boomthyr Rocket|60+ engineering skill:engineering10:25 -item:198815 -item:198816,-item:198814,-item:198817|56.02 44.82|\"Pick up the notes and then collect four parts nearby to restore the treasure|treasure atlas:vignetteloot-locked item:201014|[Ash] can be found in the same room as the notes and the rest can be found in the building on the opposite side\"||Required Items|!{133218} [hasitem:198816]Aerospace Grade Draconium]|!{443368} [hasitem:198815]Ash]|!{4497570} [hasitem:198814]Boom Fumes]|!{132781} [hasitem:198817]Durable Crystal]||Rewards|!{511727} [epic]Boomthyr Rocket]",
+			"Boomthyr Rocket|60+ engineering skill:engineering10:25 item:198815 -item:198816,-item:198814,-item:198817|56.02 44.82|\"Pick up the notes and then collect four parts nearby to restore the treasure|treasure atlas:vignetteloot-locked item:201014|The remaining parts can be found in the building on the opposite side of the notes\"||Required Items|!{133218} [hasitem:198816]Aerospace Grade Draconium]|!{443368} [hasitem:198815]Ash]|!{4497570} [hasitem:198814]Boom Fumes]|!{132781} [hasitem:198817]Durable Crystal]||Rewards|!{511727} [epic]Boomthyr Rocket]",
 			"Boomthyr Rocket|60+ engineering skill:engineering10:25 item:198815 item:198816 item:198814 item:198817|56.02 44.82||treasure item:201014|Required Items|!{133218} [hasitem:198816]Aerospace Grade Draconium]|!{443368} [hasitem:198815]Ash]|!{4497570} [hasitem:198814]Boom Fumes]|!{132781} [hasitem:198817]Durable Crystal]||Rewards|!{511727} [epic]Boomthyr Rocket]",
-			"Aerospace Grade Draconium|60+ engineering skill:engineering10:25 -item:198816|57.99 44.35||treasure item:198816|Contains|!{133218} [Aerospace Grade Draconium]",
-			"Boom Fumes|60+ engineering skill:engineering10:25 -item:198814|57.83 44.58||treasure item:198814|Contains|!{4497570} [Boom Fumes]",
-			"Durable Crystal|60+ engineering skill:engineering10:25 -item:198817|58.13 44.54||treasure item:198817|Contains|!{132781} [Durable Crystal]",
+			"Boomthyr Rocket Parts|60+ engineering skill:engineering10:25 item:198815 -item:198816,-item:198814,-item:198817|57.96 44.49||treasure atlas:questobjective",
 		},
 		[70275] = "Disabled Tesla Coil|60+ engineering skill:engineering10:25|49.11 77.51|\"Clear three [Exposed Wires] after interacting with the coil to unlock it\"|treasure item:198789|Contains|!{133870} [epic]Intact Coil Capacitor]",
 		[70292] = "Closely Guarded Shiny|60+ jewelcrafting skill:jewelcrafting10:25|50.36 45.06|\"Hidden inside a tree trunk\"|treasure item:198687|Contains|!{317243} [epic]Closely Guarded Shiny]",
@@ -305,10 +303,10 @@ Data.Vignettes = {
 		[70302] = "Mysterious Banner|60+ tailoring skill:tailoring10:25|74.74 37.92||treasure item:198699|Contains|!{4624620} [epic]Mysterious Banner]",
 		[70263] = "Forgotten Jewelry Box|60+ jewelcrafting skill:jewelcrafting10:25|31.48 86.61||treasure item:198660|Contains|!{4555596} [epic]Fragmented Key]|!{647735} [epic]Forgotten Jewelry Box]",
 		[70306] = "Pulsing Earth Rune|60+ inscription skill:inscription10:25|67.87 57.95||treasure item:198704|Contains|!{2491064} [epic]Pulsing Earth Rune]",
-		[70320] = "Flashfrozen Scroll|60+ enchanting skill:enchanting10:25|57.46 83.65|\"There is a bug that might prevent you from interacting with this treasure - work around it by using your interact key when standing near it.\"|treasure item:198798|Contains|!{4549198} [epic]Flashfrozen Scroll]",
+		[70320] = "Flashfrozen Scroll|60+ enchanting skill:enchanting10:25|57.46 83.65||treasure item:198798|Contains|!{4549198} [epic]Flashfrozen Scroll]",
 		[70272] = {
-			"Enchanted Debris|60+ enchanting skill:enchanting10:25|59.87 57.09|\"Find the nearby [Enchanted Broom] to unlock the treasure\"|treasure item:201012|Contains|!{2451603} [epic]Enchanted Debris]",
-			"Enchanted Broom|60+ enchanting skill:enchanting10:25|57.49 58.46||treasure interact",
+			"Enchanted Debris|60+ enchanting skill:enchanting10:25|59.87 57.09|\"Enchant a broom nearby to clean up the debris\"|treasure item:201012|Contains|!{2451603} [epic]Enchanted Debris]",
+			"Broom|60+ enchanting skill:enchanting10:25|57.49 58.46||treasure atlas:questobjective",
 		},
 		[70283] = "Lava-Infused Seed|60+ enchanting skill:enchanting10:25|67.91 26.78|\"Inside a flower\"|treasure item:198675|Contains|!{4554352} [epic]Lava-Infused Seed]",
 		[70289] = "Well Insulated Mug|60+ alchemy skill:alchemy10:25|25.11 74.11||treasure item:198685|Contains|!{1385153} [epic]Well Insulated Mug]",
@@ -336,7 +334,7 @@ Data.Vignettes = {
 		[70247] = "Grigori Vialtry|60+ alchemy skill:2823:25|60.83 75.9||vignette speak currency:2024|Master Alchemist|!{4624656} [rare]Dragon Isles Alchemy Knowledge] (5)|!{4643977} [rare]Artisan's Mettle] (25)",
 		[70250] = "Grekka Anvilsmash|60+ blacksmithing skill:2822:25|43.27 66.63||vignette speak currency:2023|Master Blacksmith|!{4624660} [rare]Dragon Isles Blacksmithing Knowledge] (5)|!{4643977} [rare]Artisan's Mettle] (25)",
 		[70259] = "Zenzi|60+ skinning skill:2834:25|73.28 69.73||vignette speak currency:2033|Masta Skinna|!{4625106} [rare]Dragon Isles Skinning Knowledge] (10)|!{4643977} [rare]Artisan's Mettle] (50)",
-		[70251] = "Shalasar Glimmerdusk|60+ enchanting skill:2825:25|32.13 91.98|\"On top of the building\"|vignette speak currency:2030 link:2023|Master Enchantress|!{3615911} [rare]Dragon Isles Enchanting Knowledge] (5)|!{4643977} [rare]Artisan's Mettle] (25)",
+		[70251] = "Shalasar Glimmerdusk|60+ enchanting skill:2825:25|32.13 91.98|\"On top of a building\"|vignette speak currency:2030 link:2023|Master Enchantress|!{3615911} [rare]Dragon Isles Enchanting Knowledge] (5)|!{4643977} [rare]Artisan's Mettle] (25)",
 	},
 
 
