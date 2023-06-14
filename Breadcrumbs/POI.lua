@@ -116,7 +116,7 @@ Data.POI = {
 	-- Thaldraszus
 	[2025] = {
 		-- Revival Catalyst
-		"creationcatalyst-32x32|[Revival Catalyst Console]|70+ currency:2533:1|60.69 53.71|tooltip|Transform an item from Dragonflight Season 2 into a set item.||[green]<currencycount:2167> §4Charge:Charges; Available]",
+		"creationcatalyst-32x32|[Revival Catalyst Console]|70+ currency:2533:1|60.69 53.71|tooltip|Transform an item from Dragonflight Season 2 into a set item.||[green]<currencycount:2533> §4Charge:Charges; Available]",
 		"creationcatalyst-32x32|[Revival Catalyst Console]|70+ -currency:2533:1|60.69 53.71|tooltip|Transform an item from Dragonflight Season 2 into a set item.||[gray]No Charges Available]",
 	},
 
@@ -853,6 +853,13 @@ Data.POI = {
 		"POI/Tailoring|[Tailoring]|5+ horde tailoring|59.35 43.09",
 		"POI/Fishing|[Fishing Trainer]|5+ horde|69.12 16.52",
 		"POI/Archaeology|[Archaeology]|10+ horde|73.99 31.6",
+	},
+
+	--[[ Tanaan Jungle ]]--
+
+	[534] = {
+		-- Apexis Gemcutter
+		"POI/Jewelcrafting|[Apexis Gemcutter]|40+ 39177 jewelcrafting,item:127773,item:127775,item:127771,item:127772|25.82 39.84",
 	},
 
 
