@@ -4168,6 +4168,15 @@ Data.Quests = {
 	},
 
 
+	-- [[ Tanaan Jungle ]]--
+
+	[534] = {
+		-- Apexis Gemcutter
+		[39176] = "Mastery Of Taladite|40+ 39175,39195|25.9 39.88|Sun-Sage Chakkis|jewelcrafting", -- Does not require Jewelcrafting
+		[39177] = "Ruined Construct|40+ 39176|17.46 45.16|Apexis Gemcutter|jewelcrafting", -- Does not require Jewelcrafting
+	},
+
+
 	-- [[ Frostfire Ridge ]]--
 
 	-- Frostfire Ridge
