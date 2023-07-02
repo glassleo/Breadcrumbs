@@ -115,7 +115,7 @@ Data.POI = {
 
 	-- Thaldraszus
 	[2025] = {
-		-- Revival Catalyst
+		-- Revival Catalyst - Season 2 prequest is 75497
 		"creationcatalyst-32x32|[Revival Catalyst Console]|70+ currency:2533:1|60.69 53.71|tooltip|Transform an item from Dragonflight Season 2 into a set item.||[green]<currencycount:2533> §4Charge:Charges; Available]",
 		"creationcatalyst-32x32|[Revival Catalyst Console]|70+ -currency:2533:1|60.69 53.71|tooltip|Transform an item from Dragonflight Season 2 into a set item.||[gray]No Charges Available]",
 	},
@@ -141,9 +141,6 @@ Data.POI = {
 
 	-- Ring of Transference
 	[1671] = {
-		-- Portal
-		--"POI/Portal|Portals|1+|56.27 75.98||Gorgrond, Karazhan, Mechagon",
-
 		-- Teleport Pad
 		"teleportationnetwork-32x32:small|Ring of Fates|1+|49.52 60.92|link:1670",
 		"teleportationnetwork-32x32:small|Ring of Fates|1+|55.66 51.62|link:1670",
