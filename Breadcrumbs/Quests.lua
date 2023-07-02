@@ -271,7 +271,7 @@ Data.Quests = {
 	-- Valdrakken
 	[2112] = {
 		-- Aiding the Accord
-		[70750] = "Aiding the Accord|60+ 67030 -72374 -72068 -72373 -72375 -72369|50.17 56.22|Therazal|campaign weekly", -- You get one of 5 random weeklies, we consolidate them into one pin
+		[70750] = "Aiding the Accord|60+ 67030 -72374 -72068 -72373 -72375 -72369 -75859 -75860 -75861|50.17 56.22|Therazal|campaign weekly", -- You get one of 5 random weeklies, we consolidate them into one pin
 		[72354] = "The Great Vault|70+|50.17 56.22|Therazal",
 
 		-- The Spark of Ingenuity
@@ -334,7 +334,7 @@ Data.Quests = {
 		-- Big Time Adventurer
 
 		-- Aiding the Accord
-		[70750] = "Aiding the Accord|60+ 67030 -72374 -72068 -72373 -72375|39.96 60.78|Therazal|campaign weekly link:2112", -- You get one of 5 random weeklies, we consolidate them into one pin
+		[70750] = "Aiding the Accord|60+ 67030 -72374 -72068 -72373 -72375 -72369 -75859 -75860 -75861|39.96 60.78|Therazal|campaign weekly link:2112", -- You get one of 5 random weeklies, we consolidate them into one pin
 		[72354] = "The Great Vault|70+|39.96 60.78|Therazal|link:2112",
 
 		-- The Spark of Ingenuity
@@ -1112,7 +1112,7 @@ Data.Quests = {
 		[65779] = "Into the Plains|60+ 62+,67030 65795,67030|48.27 88.67|Ambassador Taurasza|campaign", -- Adventure mode bypasses prereqs
 
 		-- Aiding the Accord
-		[70750] = "Aiding the Accord|60+ 67030 -72374 -72068 -72373 -72375|76.51 34.29|Kerazal|campaign weekly", -- You get one of 5 random weeklies, we consolidate them into one pin
+		[70750] = "Aiding the Accord|60+ 67030 -72374 -72068 -72373 -72375 -72369 -75859 -75860 -75861|76.51 34.29|Kerazal|campaign weekly", -- You get one of 5 random weeklies, we consolidate them into one pin
 		[72354] = "The Great Vault|70+|76.51 34.29|Kerazal",
 		
 		-- The Spark of Ingenuity
