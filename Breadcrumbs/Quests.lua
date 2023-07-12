@@ -17,7 +17,7 @@ Data.HiddenBonusObjectiveQuests = {
 	[72373] = true, -- Aiding the Accord: The Hunt is On
 	[72374] = true, -- Aiding the Accord: Dragonbane Keep
 	[72375] = true, -- Aiding the Accord: The Isles Call
-	[72369] = true, -- Aiding the Accord: Zskera Vaults
+	[75259] = true, -- Aiding the Accord: Zskera Vaults
 	[75859] = true, -- Aiding the Accord: Sniffenseeking
 	[75860] = true, -- Aiding the Accord: Researchers Under Fire
 	[75861] = true, -- Aiding the Accord: Suffusion Camp
@@ -249,6 +249,7 @@ Data.HiddenBonusObjectiveQuests = {
 
 	Dragonflight
 		67030 - Adventure Mode unlocked on account
+		75658 - Zaralek Cavern World Quests unlocked on account
 
 
 ]]--
@@ -263,6 +264,14 @@ Data.Quests = {
 	
 		-- Iskaara Tuskarr - The Chieftain's Duty
 		[68863] = "A Lost Tribe|70+ reputation:2511:11|3 RowieCampaign|Rowie|discovery campaign", -- Requires Renown 11 with Iskaara Tuskarr
+	},
+
+
+	--[[ Zaralek Cavern ]]--
+
+	[2133] = {
+		-- Campaign
+		[75641] = "Power Unified|70+ 75658|56.84 54.79|Examiner Tae'shara Bloodwatcher|campaign",
 	},
 
 
@@ -6115,6 +6124,49 @@ Data.Quests = {
 		[29513] = "Spoilin' for Salty Sea Dogs|1+ fishing|52.88 67.94|Stamp Thunderhorn|fishing",
 		[29507] = "Fun for the Little Ones|1+ archaeology|51.89 60.93|Professor Thaddeus Paleo|archaeology",
 	},
+
+
+	--[[ Hidden Quests ]]--
+
+	["Hidden"] = {
+		-- Dragon Isles
+		[67030] = "Dragon Isles Adventure Mode (Account Unlock)|60+|||campaign",
+		[75658] = "Zaralek Cavern World Quests (Account Unlock)|70+|||campaign",
+
+		-- Aiding the Accord
+		[72068] = "Aiding the Accord: A Feast For All|60+||Therezal|weekly campaign",
+		[72373] = "Aiding the Accord: The Hunt is On|60+||Therezal|weekly campaign",
+		[72374] = "Aiding the Accord: Dragonbane Keep|60+||Therezal|weekly campaign",
+		[72375] = "Aiding the Accord: The Isles Call|60+||Therezal|weekly campaign",
+		[75259] = "Aiding the Accord: Zskera Vaults|60+||Therezal|weekly campaign",
+		[75859] = "Aiding the Accord: Sniffenseeking|60+||Therezal|weekly campaign",
+		[75860] = "Aiding the Accord: Researchers Under Fire|60+||Therezal|weekly campaign",
+		[75861] = "Aiding the Accord: Suffusion Camp|60+||Therezal|weekly campaign",
+
+		-- Sniffenseeking
+		--[75875] = "Sniffenseeking: Dig In Progress",
+		--[75907] = "Sniffenseeking: Dig In Progress",
+		[75390] = "Vertical Anomaly",
+		[75234] = "Scratch and Sniff",
+		[75516] = "Successful Interventions",
+		[75996] = "Your Weight in Gold",
+		[76016] = "The Living Drill",
+		[75393] = "Making Scents",
+		[76015] = "Heart of Iron",
+		[76084] = "Frostfire Finesse",
+		[76027] = "Flapping and Screaming",
+		[75621] = "Element Whispers",
+		[75397] = "Those Rascally Worms",
+		[75517] = "Sneak and Sniff",
+		[75619] = "Thieving Critters",
+		[76014] = "Living Statue",
+		[75620] = "Liars in Light",
+		[76081] = "Liars of Spirit",
+		[76081] = "Liars of Spirit",
+
+		-- Treasure
+		[76017] = "Three-Dimensional Compass",
+	}
 }
 
 
