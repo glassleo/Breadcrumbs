@@ -73,17 +73,21 @@ Data.Vignettes = {
 		[73395] = "Well-Chewed Chest|70+|29.77 40.55|\"The key can be found underneath the dead [dead]Massive Corebeast] inside the cave\"|treasure item:204075|Requires|{2032583} [hasitem:202869]Scorching Key]||Contains|!{5062636} [rare]Whelpling's Shadowflame Crest Fragment] (6)|!{5172976} [Flightstones]|!{2065578} [Dragon Isles Supplies]",
 		[75515] = "Molten Hoard|70+|48.42 16.35|\"Inside the lava sewage outflow cave underneath Brimstone Garrison\"|treasure item:205981|Contains|!{5148757} [epic]Molten Primal Fang]",
 		--[75302] = "Stolen Stash|70+|60.66 46.23||treasure item:204075|Contains|!{5062636} [rare]Whelpling's Shadowflame Crest Fragment]|!{5172976} [Flightstones]|!{2065578} [Dragon Isles Supplies]",
-		[75559] = "Attunement Crystal|70+|39.41 73.28||treasure interact",
-		[74987] = "Attunement Crystal|70+|37.75 68.86||treasure interact",
+		[75559] = "Attunement Crystal|70+|39.41 73.28|Crystal-encased Chest|treasure atlas:questobjective",
+		[74987] = "Attunement Crystal|70+|37.75 68.86|Crystal-encased Chest|treasure atlas:questobjective",
 		[74986] = {
 			"Crystal-encased Chest|70+ -75559,-74987|36.4 74.26|\"Find two [Attunement Crystals] nearby in order to unlock the treasure\"|treasure item:204075 atlas:vignetteloot-locked|Contains|!{/Random} [rare]Random Trinket]|!{5062636} [rare]Whelpling's Shadowflame Crest Fragment] (6)|!{5172976} [Flightstones]|!{2065578} [Dragon Isles Supplies]",
 			"Crystal-encased Chest|70+ 75559 74987|36.4 74.26||treasure item:204075|Contains|!{/Random} [rare]Random Trinket]|!{5062636} [rare]Whelpling's Shadowflame Crest Fragment]|!{5172976} [Flightstones]|!{2065578} [Dragon Isles Supplies]",
 		},
-		[75019] = "Long-Lost Cache|70+|62.71 53.75||treasure item:204075|Contains|!{5062636} [rare]Whelpling's Shadowflame Crest Fragment]|!{5172976} [Flightstones]|!{2065578} [Dragon Isles Supplies]",
-		[75814] = "Waterlogged Bundle|70+|62.07 55.33||treasure item:204075|Contains|!{5062636} [rare]Whelpling's Shadowflame Crest Fragment]|!{5172976} [Flightstones]|!{2065578} [Dragon Isles Supplies]", -- also flags 75015
+		[75019] = "Long-Lost Cache|70+|62.71 53.75||treasure item:204075 weekly|Contains|!{5062636} [rare]Whelpling's Shadowflame Crest Fragment]|!{5172976} [Flightstones]|!{2065578} [Dragon Isles Supplies]",
+		--[75814] = "Waterlogged Bundle|70+|62.07 55.33||treasure item:204075|Contains|!{5062636} [rare]Whelpling's Shadowflame Crest Fragment]|!{5172976} [Flightstones]|!{2065578} [Dragon Isles Supplies]", -- also flags 75015
 		[75514] = {
 			"Fealty's Reward|70+|48.45 10.83|\"To open the chest you must first kneel before the statue of Neltharion in the western part of Brimstone Garrison\"|treasure item:204075|Contains|!{/Random} [rare]Random Trinket]|!{5062636} [rare]Whelpling's Shadowflame Crest Fragment]|!{5172976} [Flightstones]|!{2065578} [Dragon Isles Supplies]",
 			"Statue of Neltharion|70+|43.54 23.02|Fealty's Reward|treasure atlas:questobjective",
+		},
+		[75745] = {
+			"Nal ks'kol Reliquary|70+ -72964|64.07 75.07|\"You must progress further in the Embers of Neltharion campaign to gain acces to Nal ks'kol.\"|treasure item:191784 atlas:vignetteloot-locked|Contains|!{4643982} [epic]Dragon Shard of Knowledge]|!{5062636} [rare]Whelpling's Shadowflame Crest Fragment]|!{5172976} [Flightstones]|!{2065578} [Dragon Isles Supplies]",
+			"Nal ks'kol Reliquary|70+ +72964|64.07 75.07|\"Interact with the [Reliquary Access Console] and solve its puzzle to gain access to the treasure.\"|treasure item:191784|Contains|!{4643982} [epic]Dragon Shard of Knowledge]|!{5062636} [rare]Whelpling's Shadowflame Crest Fragment]|!{5172976} [Flightstones]|!{2065578} [Dragon Isles Supplies]",
 		},
 		
 	},
