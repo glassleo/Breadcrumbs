@@ -15,6 +15,7 @@ Data.Vignettes = {
 	
 	--[[ Zaralek Cavern ]]--
 
+	-- Zaralek Cavern
 	[2133] = {
 		-- Alchemy Treasure
 		[75646] = "Malnourished Specimen|60+ alchemy skill:alchemy10:25|52.68 18.3||treasure item:205211|Contains|!{1001622} [epic]Nutrient Diluted Protofluid]",
@@ -90,6 +91,11 @@ Data.Vignettes = {
 			"Nal ks'kol Reliquary|70+ +72964|64.07 75.07|\"Interact with the [Reliquary Access Console] and solve its puzzle to gain access to the treasure.\"|treasure item:191784|Contains|!{4643982} [epic]Dragon Shard of Knowledge]|!{5062636} [rare]Whelpling's Shadowflame Crest Fragment]|!{5172976} [Flightstones]|!{2065578} [Dragon Isles Supplies]",
 		},
 		
+	},
+
+	-- Deeplayer Nest
+	[2184] = {
+		[75303] = "Stolen Stash|70+|63.86 82.66||treasure item:204075|Contains|!{5062636} [rare]Whelpling's Shadowflame Crest Fragment]|!{5172976} [Flightstones]|!{2065578} [Dragon Isles Supplies]",
 	},
 
 
