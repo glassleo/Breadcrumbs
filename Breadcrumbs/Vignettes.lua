@@ -133,11 +133,11 @@ Data.Vignettes = {
 	-- Thaldraszus
 	[2025] = {
 		-- Treasure
-		[70731] = "Barrel of Confiscated Treats|60+|34.1 60.79||treasure item:198106 link:2112|Contains|!{1500865} [rare]Recipe: Tasty Hatchling's Treat]|!{1500918} [Tasty Hatchling's Treat] (2)",
+		[70731] = "Barrel of Confiscated Treats|60+ skill:cooking10:1|34.1 60.79||treasure item:198106 link:2112|Contains|!{1500865} [rare]Recipe: Tasty Hatchling's Treat]|!{1500918} [Tasty Hatchling's Treat] (2)",
 		[70609] = "Elegant Canvas Brush|60+|60.25 41.64||treasure item:203206|Contains|!{2103804} [poor]Elegant Canvas Brush]",
 		
 		-- Alchemy Treasure
-		[70301] = "Contraband Concoction|60+ alchemy skill:alchemy10:25|59.53 38.46||treasure item:198697|Contains|!{1416156} [epic]Contraband Concoction]",
+		[70301] = "Contraband Concoction|60+ alchemy skill:alchemy10:25|59.53 38.46|\"Hidden inside the foliage on the ground next to a flying book\"|treasure item:198697|Contains|!{1416156} [epic]Contraband Concoction]",
 		[70278] = "Mysterious Cauldrons|60+ alchemy skill:alchemy10:25|55.23 30.54|\"Find three [Discarded Toys] on the ground nearby and bring one to each cauldron to unlock the treasure\"|treasure item:203471|Rewards|!{236546} [epic]Tasty Candy]",
 		
 		-- Blacksmithing Treasure
