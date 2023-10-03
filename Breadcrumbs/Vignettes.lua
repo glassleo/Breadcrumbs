@@ -139,6 +139,7 @@ Data.Vignettes = {
 		-- Alchemy Treasure
 		[70301] = "Contraband Concoction|60+ alchemy skill:alchemy10:25|59.53 38.46|\"Hidden inside the foliage on the ground next to a flying book\"|treasure item:198697|Contains|!{1416156} [epic]Contraband Concoction]",
 		[70278] = "Mysterious Cauldrons|60+ alchemy skill:alchemy10:25|55.23 30.54|\"Find three [Discarded Toys] on the ground nearby and bring one to each cauldron to unlock the treasure\"|treasure item:203471|Rewards|!{236546} [epic]Tasty Candy]",
+		[70309] = "Small Basket of Firewater Powder|60+ alchemy skill:alchemy10:25 link:2024|48.66 90.21||treasure item:198712|Contains|!{133850} [epic]Firewater Powder Sample]",
 		
 		-- Blacksmithing Treasure
 		[70311] = "Draconic Flux|60+ blacksmithing skill:blacksmithing10:25|52.22 80.55||treasure item:201006|Rewards|!{1387609} [epic]Draconic Flux]",
@@ -203,8 +204,8 @@ Data.Vignettes = {
 		[70277] = "Crystalline Overgrowth|60+ jewelcrafting skill:jewelcrafting10:25|45.06 61.22||treasure item:198664|Contains|!{132778} [epic]Crystalline Overgrowth]",
 		[70271] = "Harmonic Chest|60+ jewelcrafting skill:jewelcrafting10:25|44.65 61.38|\"Pick up the nearby [Resonant Key] and then activate three [Humming Crystals] scattered throughout the lake to unlock the chest\"|treasure item:201016|Contains|!{1060568} [epic]Harmonic Crystal Harmonizer]",
 		[70237] = "Snow Covered Scroll|60+ cooking skill:cooking10:1|58.02 42.02||treasure scroll item:198103|Contains|!{1500865} [rare]Recipe: Snow in a Cone]|!{132387} [Snowball] (8-18)",
-		[70293] = "Frosted Parchment|60+ inscription skill:inscription10:1|43.64 30.82||treasure item:198686|Contains|!{1392956} [epic]Frosted Parchment]",
-		[70297] = "Dusty Darkmoon Card|60+ inscription skill:inscription10:1|46.19 24|\"On the upper ledge inside the building\"|treasure item:198693|Contains|!{1392956} [epic]Dusty Darkmoon Card]",
+		[70293] = "Frosted Parchment|60+ inscription skill:inscription10:25|43.64 30.82||treasure item:198686|Contains|!{1392956} [epic]Frosted Parchment]",
+		[70297] = "Dusty Darkmoon Card|60+ inscription skill:inscription10:25|46.19 24|\"On the upper ledge inside the building\"|treasure item:198693|Contains|!{1392956} [epic]Dusty Darkmoon Card]",
 		[70298] = "Enriched Earthen Shard|60+ enchanting skill:enchanting10:25|21.56 45.54||treasure item:198694|Contains|!{1016245} [epic]Enriched Earthen Shard]",
 		[70336] = "Forgotten Arcane Tome|60+ enchanting skill:enchanting10:25|38.51 59.13||treasure item:198799|Contains|!{134544} [epic]Forgotten Arcane Tome]",
 		[70290] = "Mana-Starved Crystal Cluster|60+ enchanting skill:enchanting10:25|45.16 61.12|\"Defeat an [hostile]Enchanted Crystalline Construct] to reveal the treasure\"|treasure item:201013|Contains|!{1016245} [epic]Faintly Enchanted Remains]",

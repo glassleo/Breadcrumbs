@@ -4463,7 +4463,7 @@ Data.Quests = {
 	[62]= {
 		-- art:67 - Cataclysm
 		-- art:1176 - Battle for Azeroth Warfront
-		[13518] = "The Last Wave of Survivors|5+ art:67 alliance ~26383 ~26385 ~28490|51.78 18.01|Dentaria Silverglade", -- Invalidates breadcrumbs 26383, 26385 and 28490
+		[13518] = "The Last Wave of Survivors|5+ art:62:67 alliance ~26383 ~26385 ~28490|51.78 18.01|Dentaria Silverglade", -- Invalidates breadcrumbs 26383, 26385 and 28490
 	},
 
 
@@ -5220,7 +5220,7 @@ Data.Quests = {
 		-- BfA: art:962
 
 		-- The Heart of Azeroth
-		[51211] = "The Heart of Azeroth|art:962 40+ 43028,52946|42.22 44.27|Magni Bronzebeard",
+		[51211] = "The Heart of Azeroth|art:81:962 40+ 43028,52946|42.22 44.27|Magni Bronzebeard",
 		[52428] = "Infusing the Heart|40+ 51211|43.2 44.49|Magni Bronzebeard|elsewhere link:1021",
 	},
 
@@ -6013,61 +6013,61 @@ Data.Quests = {
 		[24972] = "Vital Intelligence|1+ horde 24971|30.84 66.2|Shadow Priest Sarvis|link:465",
 
 		-- Calston Estate
-		[24979] = "A Scarlet Letter|1+ art:19 horde|34.21 48.05|{237451} [A Scarlet Letter]||Has a chance to drop from [hostile]Scarlet Warrior]",
-		[24974] = "Ever So Lonely|1+ art:19 horde|44.75 53.64|Sedrick Calston",
-		[24978] = "Reaping the Reapers|1+ art:19 horde|44.75 53.67|Deathguard Simmer",
-		[24980] = "The Scarlet Palisade|1+ art:19 horde 24978|44.75 53.67|Deathguard Simmer",
-		[24975] = "Fields of Grief|1+ art:19 horde|44.62 53.78|Apothecary Johaan",
-		[24976] = "Variety is the Spice of Death|1+ art:19 horde 24975|44.62 53.78|Apothecary Johaan",
-		[24977] = "Johaan's Experiment|1+ art:19 horde 24976|44.62 53.78|Apothecary Johaan",
-		[25038] = "Gordo's Task|1+ art:19 horde 24976|44.37 53.18|Gordo",
+		[24979] = "A Scarlet Letter|1+ art:18:19 horde|34.21 48.05|{237451} [A Scarlet Letter]||Has a chance to drop from [hostile]Scarlet Warrior]",
+		[24974] = "Ever So Lonely|1+ art:18:19 horde|44.75 53.64|Sedrick Calston",
+		[24978] = "Reaping the Reapers|1+ art:18:19 horde|44.75 53.67|Deathguard Simmer",
+		[24980] = "The Scarlet Palisade|1+ art:18:19 horde 24978|44.75 53.67|Deathguard Simmer",
+		[24975] = "Fields of Grief|1+ art:18:19 horde|44.62 53.78|Apothecary Johaan",
+		[24976] = "Variety is the Spice of Death|1+ art:18:19 horde 24975|44.62 53.78|Apothecary Johaan",
+		[24977] = "Johaan's Experiment|1+ art:18:19 horde 24976|44.62 53.78|Apothecary Johaan",
+		[25038] = "Gordo's Task|1+ art:18:19 horde 24976|44.37 53.18|Gordo",
 
 		-- Cold Hearth Manor
-		[25090] = "A Putrid Task|1+ art:19 horde|52.54 54.82|Deathguard Dillinger",
-		[24982] = "The New Forsaken|1+ art:19 horde -24983|52.54 54.82|Deathguard Dillinger", -- Breadcrumb for 24983
+		[25090] = "A Putrid Task|1+ art:18:19 horde|52.54 54.82|Deathguard Dillinger",
+		[24982] = "The New Forsaken|1+ art:18:19 horde -24983|52.54 54.82|Deathguard Dillinger", -- Breadcrumb for 24983
 
 		-- Brill
-		[6321]  = "Supplying Brill|1+ art:19 horde undead|60.13 52.39|Deathguard Morris", -- Undead only
-		[6323]  = "Ride to the Undercity|1+ art:19 horde undead 6321|58.84 51.94|Anette Williams", -- Undead only
-		[24983] = "Forsaken Duties|1+ art:19 horde ~24982|61 50.54|Magistrate Sevren", -- Invalidates breadcrumb 24982
-		[24990] = "Darkhound Pounding|1+ art:19 horde 24976|60.05 52.86|Junior Apothecary Holland",
-		[24992] = "Escaped From Gilneas|1+ art:19 horde +24990 -25039|1 WorgenInfiltrator|[hostile]Worgen Infiltrator]|discovery|Bring a [hostile]Darkhound] to low health to force a [hostile]Worgen Infiltrator] out of hiding", -- Mutually exclusive with 25039; triggering the Worgen Infiltrator completes HQT 25040
-		[25039] = "Have You Seen Anything Weird Out There?|1+ art:19 horde 25040 -24992|61.88 51.96|Ratslin Maime", -- Requires HQT 25040; mutually exclusive with 24992
-		[24993] = "Annihilate the Worgen|1+ art:19 horde 24992,25039|60.54 51.86|Executor Zygand",
-		[24996] = "Holland's Experiment|1+ art:19 horde 24990|60.05 52.86|Junior Apothecary Holland",
-		[24991] = "Garren's Haunt|1+ art:19 horde 24996 -24994|60.05 52.86|Junior Apothecary Holland", -- Breadcrumb for 24994
-		[25006] = "The Grasp Weakens|1+ art:19 horde 25005|61 50.54|Magistrate Sevren",
-		[25007] = "East... Always to the East|1+ art:19 horde 25006|61 50.54|Magistrate Sevren",
-		[24981] = "A Thorn in our Side|1+ art:19 horde|60.54 51.86|Executor Zygand",
-		[26964] = "Warchief's Command: Silverpine Forest!|5+ art:19 horde -28568 -26965|60.54 51.86|Executor Zygand", -- Breadcrumb for 26965 (?); mutually exclusive with 28568
+		[6321]  = "Supplying Brill|1+ art:18:19 horde undead|60.13 52.39|Deathguard Morris", -- Undead only
+		[6323]  = "Ride to the Undercity|1+ art:18:19 horde undead 6321|58.84 51.94|Anette Williams", -- Undead only
+		[24983] = "Forsaken Duties|1+ art:18:19 horde ~24982|61 50.54|Magistrate Sevren", -- Invalidates breadcrumb 24982
+		[24990] = "Darkhound Pounding|1+ art:18:19 horde 24976|60.05 52.86|Junior Apothecary Holland",
+		[24992] = "Escaped From Gilneas|1+ art:18:19 horde +24990 -25039|1 WorgenInfiltrator|[hostile]Worgen Infiltrator]|discovery|Bring a [hostile]Darkhound] to low health to force a [hostile]Worgen Infiltrator] out of hiding", -- Mutually exclusive with 25039; triggering the Worgen Infiltrator completes HQT 25040
+		[25039] = "Have You Seen Anything Weird Out There?|1+ art:18:19 horde 25040 -24992|61.88 51.96|Ratslin Maime", -- Requires HQT 25040; mutually exclusive with 24992
+		[24993] = "Annihilate the Worgen|1+ art:18:19 horde 24992,25039|60.54 51.86|Executor Zygand",
+		[24996] = "Holland's Experiment|1+ art:18:19 horde 24990|60.05 52.86|Junior Apothecary Holland",
+		[24991] = "Garren's Haunt|1+ art:18:19 horde 24996 -24994|60.05 52.86|Junior Apothecary Holland", -- Breadcrumb for 24994
+		[25006] = "The Grasp Weakens|1+ art:18:19 horde 25005|61 50.54|Magistrate Sevren",
+		[25007] = "East... Always to the East|1+ art:18:19 horde 25006|61 50.54|Magistrate Sevren",
+		[24981] = "A Thorn in our Side|1+ art:18:19 horde|60.54 51.86|Executor Zygand",
+		[26964] = "Warchief's Command: Silverpine Forest!|5+ art:18:19 horde -28568 -26965|60.54 51.86|Executor Zygand", -- Breadcrumb for 26965 (?); mutually exclusive with 28568
 
 		-- Death's Watch Waystation
-		[24988] = "The Chill of Death|1+ art:19 horde 24983|65.25 60.42|Gretchen Dedmar",
-		[24989] = "Return to the Magistrate|1+ art:19 horde 24988|65.49 60.25|Deathguard Linnea",
+		[24988] = "The Chill of Death|1+ art:18:19 horde 24983|65.25 60.42|Gretchen Dedmar",
+		[24989] = "Return to the Magistrate|1+ art:18:19 horde 24988|65.49 60.25|Deathguard Linnea",
 
 		-- Garren's Haunt
-		[24997] = "Graverobbers|1+ art:19 horde|61.6 34.39|Apprentice Crispin",
-		[24998] = "Maggot Eye|1+ art:19 horde 24997|61.6 34.39|Apprentice Crispin",
-		[24994] = "Doom Weed|1+ art:19 horde ~24991|61.65 34.56|Apothecary Jerrod", -- Invalidates breadcrumb 24991
-		[24995] = "Off the Scales|1+ art:19 horde 24994|61.65 34.56|Apothecary Jerrod",
-		[24999] = "Planting the Seed of Fear|1+ art:19 horde 24994|61.6 34.39|Apprentice Crispin",
-		[25031] = "Head for the Mills|1+ art:19 horde 24995 24999 -25003|61.65 34.56|Apothecary Jerrod", -- Breadcrumb for 25003
+		[24997] = "Graverobbers|1+ art:18:19 horde|61.6 34.39|Apprentice Crispin",
+		[24998] = "Maggot Eye|1+ art:18:19 horde 24997|61.6 34.39|Apprentice Crispin",
+		[24994] = "Doom Weed|1+ art:18:19 horde ~24991|61.65 34.56|Apothecary Jerrod", -- Invalidates breadcrumb 24991
+		[24995] = "Off the Scales|1+ art:18:19 horde 24994|61.65 34.56|Apothecary Jerrod",
+		[24999] = "Planting the Seed of Fear|1+ art:18:19 horde 24994|61.6 34.39|Apprentice Crispin",
+		[25031] = "Head for the Mills|1+ art:18:19 horde 24995 24999 -25003|61.65 34.56|Apothecary Jerrod", -- Breadcrumb for 25003
 
 		-- Agamand Mills
-		[25003] = "The Family Crypt|1+ art:19 horde ~25031|54.59 29.89|Coleman Farthing", -- Invalidates breadcrumb 25031
-		[25030] = "The Haunted Mills|1+ art:19 horde|52.83 26.35|{133730} [Dargol's Skull]|down|Drops from [hostile]Captain Dargol] inside the crypt",
-		[25004] = "The Mills Overrun|1+ art:19 horde 25003|54.59 29.89|Coleman Farthing",
-		[25029] = "Deaths in the Family|1+ art:19 horde 25003|54.59 29.89|Coleman Farthing",
-		[25005] = "Speak with Sevren|1+ art:19 horde 25004 25029|54.59 29.89|Coleman Farthing",
+		[25003] = "The Family Crypt|1+ art:18:19 horde ~25031|54.59 29.89|Coleman Farthing", -- Invalidates breadcrumb 25031
+		[25030] = "The Haunted Mills|1+ art:18:19 horde|52.83 26.35|{133730} [Dargol's Skull]|down|Drops from [hostile]Captain Dargol] inside the crypt",
+		[25004] = "The Mills Overrun|1+ art:18:19 horde 25003|54.59 29.89|Coleman Farthing",
+		[25029] = "Deaths in the Family|1+ art:18:19 horde 25003|54.59 29.89|Coleman Farthing",
+		[25005] = "Speak with Sevren|1+ art:18:19 horde 25004 25029|54.59 29.89|Coleman Farthing",
 
 		-- The Bulwark
-		[25056] = "Grisly Grizzlies|1+ art:19 horde|83.28 69.24|Apothecary Dithers",
-		[25013] = "A Little Oomph|1+ art:19 horde 25056|83.28 69.24|Apothecary Dithers",
-		[25009] = "At War With The Scarlet Crusade|1+ art:19 horde 25007|83.26 68.99|High Executor Derrington",
-		[25010] = "A Deadly New Ally|1+ art:19 horde 25009|83.26 68.99|High Executor Derrington",
-		[25046] = "A Daughter's Embrace|1+ art:19 horde 25010|87.5 43.29|Lieutenant Sanders",
-		[25011] = "To Bigger and Better Things|1+ art:19 horde 25046|83.26 68.99|High Executor Derrington",
-		[25012] = "Take to the Skies|1+ art:19 horde 25011|83.57 69.94|Timothy Cunningham",
+		[25056] = "Grisly Grizzlies|1+ art:18:19 horde|83.28 69.24|Apothecary Dithers",
+		[25013] = "A Little Oomph|1+ art:18:19 horde 25056|83.28 69.24|Apothecary Dithers",
+		[25009] = "At War With The Scarlet Crusade|1+ art:18:19 horde 25007|83.26 68.99|High Executor Derrington",
+		[25010] = "A Deadly New Ally|1+ art:18:19 horde 25009|83.26 68.99|High Executor Derrington",
+		[25046] = "A Daughter's Embrace|1+ art:18:19 horde 25010|87.5 43.29|Lieutenant Sanders",
+		[25011] = "To Bigger and Better Things|1+ art:18:19 horde 25046|83.26 68.99|High Executor Derrington",
+		[25012] = "Take to the Skies|1+ art:18:19 horde 25011|83.57 69.94|Timothy Cunningham",
 
 		-- Western Plaguelands
 	},
@@ -6088,10 +6088,10 @@ Data.Quests = {
 		-- art:1137 - Battle for Azeroth
 
 		-- Death Knight - The Four Horsemen
-		[42534] = "Our Oldest Enemies|10+ art:15 deathknight 42533|19.45 67.31|Prince Galen Trollbane|artifact",
-		[42535] = "Death... and Decay|10+ art:15 deathknight 42533|19.45 67.31|Prince Galen Trollbane|artifact",
-		[42536] = "Regicide|10+ art:15 deathknight 42534 42535|19.52 67.09|Thassarian|artifact",
-		[42537] = "The King Rises|10+ art:15 deathknight 42536|23.39 61.4|Thassarian|artifact",
+		[42534] = "Our Oldest Enemies|10+ art:14:15 deathknight 42533|19.45 67.31|Prince Galen Trollbane|artifact",
+		[42535] = "Death... and Decay|10+ art:14:15 deathknight 42533|19.45 67.31|Prince Galen Trollbane|artifact",
+		[42536] = "Regicide|10+ art:14:15 deathknight 42534 42535|19.52 67.09|Thassarian|artifact",
+		[42537] = "The King Rises|10+ art:14:15 deathknight 42536|23.39 61.4|Thassarian|artifact",
 	},
 
 
@@ -6166,6 +6166,7 @@ Data.Quests = {
 
 		-- Treasure
 		[76017] = "Three-Dimensional Compass",
+		[75601] = "Crystal-encased Chest Unlocked|60+|||treasure",
 	}
 }
 

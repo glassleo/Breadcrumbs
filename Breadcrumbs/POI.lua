@@ -118,6 +118,17 @@ Data.POI = {
 		-- Revival Catalyst - Season 2 prequest is 75497
 		"creationcatalyst-32x32|[Revival Catalyst Console]|70+ currency:2533:1|60.69 53.71|tooltip|Transform an item from Dragonflight Season 2 into a set item.||[green]<currencycount:2533> §4Charge:Charges; Available]",
 		"creationcatalyst-32x32|[Revival Catalyst Console]|70+ -currency:2533:1|60.69 53.71|tooltip|Transform an item from Dragonflight Season 2 into a set item.||[gray]No Charges Available]",
+		
+		-- Professions
+		"POI/Tailoring:small|[Temporal Loom]|58+ tailoring skill:tailoring10:1 profperk:tailoring10:40050|60.92 80.21|tooltip|[spell]Chronocloth Tailoring]", -- Only show if the first node of Chronocloth Tailoring is learned
+	},
+
+
+	--[[ Ohn'ahran Plains ]]--
+
+	[2024] = {
+		-- Professions
+		"POI/Tailoring:small|[Azure Loom]|58+ tailoring skill:tailoring10:1 profperk:tailoring10:40062|38.37 60.73|tooltip|[spell]Azureweave Tailoring]", -- Only show if the first node of Azureweave Tailoring is learned
 	},
 
 
@@ -1140,11 +1151,11 @@ Data.POI = {
 		-- art:962 - Battle for Azeroth
 
 		-- Portal
-		"POI/Portal:small|Portal to Tiragarde|art:962 50+ alliance|41.49 44.85",
-		"POI/Portal:small|Portal to Zuldazar|art:962 50+ horde|41.49 44.85",
+		"POI/Portal:small|Portal to Tiragarde|art:81:962 50+ alliance|41.49 44.85",
+		"POI/Portal:small|Portal to Zuldazar|art:81:962 50+ horde|41.49 44.85",
 
 		-- Teleport Pad
-		"teleportationnetwork-32x32:small|Chamber of Heart|art:962 40+ +51211|43.2 44.49|link:1021",
+		"teleportationnetwork-32x32:small|Chamber of Heart|art:81:962 40+ +51211|43.2 44.49|link:1021",
 	},
 
 	-- Chamber of Heart
@@ -1292,9 +1303,9 @@ Data.POI = {
 		"flightmasterargus:small|Translocator to Silvermoon City|horde|59.41 67.44",
 
 		-- Portal
-		"POI/Portal:small|Portal to Orgrimmar|horde art:19|60.74 58.68",
-		"POI/Portal:small|Portal to Stranglethorn Vale|horde art:19|61.88 59.01",
-		"POI/Portal:small|Portal to Howling Fjord|10+ horde art:19|59.09 58.9",
+		"POI/Portal:small|Portal to Orgrimmar|horde art:18:19|60.74 58.68",
+		"POI/Portal:small|Portal to Stranglethorn Vale|horde art:18:19|61.88 59.01",
+		"POI/Portal:small|Portal to Howling Fjord|10+ horde art:18:19|59.09 58.9",
 	},
 
 

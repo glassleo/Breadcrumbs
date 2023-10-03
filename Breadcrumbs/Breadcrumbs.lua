@@ -1811,7 +1811,7 @@ function Breadcrumbs:Validate(str)
 					if string.match(v, "^spell:(%d+)$") and (IsPlayerSpell(tonumber(string.match(v, "spell:(%d+)") or 0)) or IsSpellKnown(tonumber(string.match(v, "spell:(%d+)") or 0), true)) then pass = true end
 
 					-- art:x
-					if string.match(v, "^art:(%d+)$") and (C_Map.GetMapArtID(map) == tonumber(string.match(v, "art:(%d+)") or 0)) then pass = true end
+					--if string.match(v, "^art:(%d+)$") and (C_Map.GetMapArtID(map) == tonumber(string.match(v, "art:(%d+)") or 0)) then pass = true end
 
 					-- art:y:x
 					if string.match(v, "^art:(%d+):(%d+)$") and (C_Map.GetMapArtID(tonumber(string.match(v, "art:(%d+):%d+") or 0)) == tonumber(string.match(v, "art:%d+:(%d+)") or 0)) then pass = true end
@@ -1901,7 +1901,7 @@ function Breadcrumbs:Validate(str)
 						if string.match(w, "^spell:(%d+)$") and (IsPlayerSpell(tonumber(string.match(w, "spell:(%d+)") or 0)) or IsSpellKnown(tonumber(string.match(w, "spell:(%d+)") or 0), true)) then pass = false end
 
 						-- -art:n
-						if string.match(w, "^art:(%d+)$") and (C_Map.GetMapArtID(map) == tonumber(string.match(w, "art:(%d+)") or 0)) then pass = false end
+						--if string.match(w, "^art:(%d+)$") and (C_Map.GetMapArtID(map) == tonumber(string.match(w, "art:(%d+)") or 0)) then pass = false end
 
 						-- -art:x:n
 						if string.match(w, "^art:(%d+):(%d+)$") and (C_Map.GetMapArtID(tonumber(string.match(w, "art:(%d+):%d+") or 0)) == tonumber(string.match(w, "art:%d+:(%d+)") or 0)) then pass = false end
