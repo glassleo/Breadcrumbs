@@ -30,7 +30,7 @@ local Setting_EnableMailboxesEverywhere = false
 local Setting_EnableUnitTooltips = true
 local Setting_EnableAutomapGravidRepose = true
 -- Debug
-local Setting_Debug_QuestWatcher = true
+local Setting_Debug_QuestWatcher = false
 
 
 -- Constants
@@ -570,7 +570,7 @@ function Breadcrumbs:UpdateSkillLines(event, message)
 					local info = C_TradeSkillUI.GetProfessionInfoBySkillLineID(id)
 
 					if info and info.skillLevel > 0 and info.maxSkillLevel > 0 then
-						if ZA and ZA.DebugMode then print(id, info.professionName, info.skillLevel) end
+						--if ZA and ZA.DebugMode then print(id, info.professionName, info.skillLevel) end
 						BreadcrumbsSkillLines[name.."-"..realm][id] = tonumber(info.skillLevel or 1) or 1
 					end
 				end
@@ -1839,7 +1839,7 @@ function Breadcrumbs:Validate(str)
 
 					-- accachievement:x
 					if string.match(v, "^accachievement:(%d+)$") and select(4, GetAchievementInfo(tonumber(string.match(v, "accachievement:(%d+)") or 0))) then pass = true end
-
+					
 					-- Must match...
 					if v == class or v == faction or v == covenant or v == prof1 or v == prof2 or v == race then pass = true end
 					if v == "cloth" and (class == "priest" or class == "mage" or class == "warlock") then pass = true end
@@ -1913,7 +1913,7 @@ function Breadcrumbs:Validate(str)
 						if string.match(w, "^toy:(%d+)$") and PlayerHasToy(tonumber(string.match(w, "toy:(%d+)") or 0)) then pass = false end
 
 						-- -mount:x
-						if string.match(v, "^mount:(%d+)$") and select(11, C_MountJournal.GetMountInfoByID(tonumber(string.match(w, "mount:(%d+)") or 0))) then pass = false end
+						if string.match(w, "^mount:(%d+)$") and select(11, C_MountJournal.GetMountInfoByID(tonumber(string.match(w, "mount:(%d+)") or 0))) then pass = false end
 
 						-- -item:n
 						if string.match(w, "^item:(%d+)$") and (GetItemCount(tonumber(string.match(w, "item:(%d+)") or 0), true, false, true) >= 1) then pass = false end
