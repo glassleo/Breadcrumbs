@@ -107,8 +107,7 @@ Data.HiddenBonusObjectiveQuests = {
 
 		currency:n:x	Must have at least x or more of currency with ID n
 
-		art:x			Map (where this pin is located) must currently have UiMapArtID x (see https://wago.tools/db2/UiMapXMapArt)
-		art:y:x			Map with ID y must currently have UiMapArtID x
+		art:y:x			Map with MapID y must currently have UiMapArtID x (see https://wago.tools/db2/UiMapXMapArt)
 
 		reputation:x:n	Must have reached standing n or higher with reputation faction x
 						Major (renown) type reputations require renown level n or higher (1 is Renown 1)
@@ -176,13 +175,13 @@ Data.HiddenBonusObjectiveQuests = {
 		profession		Profession quest (alchemy, blacksmithing, enchanting, engineering, herbalism, inscription, jewelcrafting, leatherworking, mining, skinning, tailoring, archaeology, cooking, fishing)
 		petbattle		Pet Battle quest
 		
-		link:n			Pin becomes clickable to open map with ID n, should be used if the quest takes place on a different map
+		link:n			Pin becomes clickable to open map with MapID n, should be used if the quest takes place on a different map
 						Replaces the Source text with the name of the linked map
 		
 		up				Quest is on a different map above the current map, also changes the XX YY pin to an exit marker if provided
 		down			Quest is on a different map below the current map, also changes the XX YY pin to an entrance marker if provided
 
-		discovery		Quest can be discovered from a non-fixed location in the zone, for example by mining a node
+		discovery		Quest can be discovered from a non-fixed location in the zone, for example by mining a random node
 						Places the pin in the Discovery Quest list (top left corner of the map) sorted by other flags and priority number
 	
 		chromietime		Quest can only be picked up during a Timewalking Campaign (Chromie Time); adds a dynamic help tip depending on level and Chromie Time status
@@ -200,10 +199,10 @@ Data.HiddenBonusObjectiveQuests = {
 		[color]			Colored text opening tag where color a named color: 
 							spell, friendly, neutral, unfriendly, hostile, dead, daily, poor, uncommon, rare, epic, legendary, artifact, heirloom, green, yellow, red, gray
 		[hex]			Colored text opening tag where hex is a hex color, for example [ffffff] would be white
-		]				Close color tag
-		§				|
 		[hasitem:x]		Dynamic color opening tag - beige if the character has at least one item with ID x in their inventory, otherwise gray
 		[hasitem:x:n]	Dynamic color opening tag - beige if the character has n or more items with ID x in their inventory, otherwise gray
+		]				Close color tag
+		§				|
 		<itemcount:x>	Number of items with ID x
 		<currencycount:x>  Amount of currency with ID x
 
@@ -677,8 +676,9 @@ Data.Quests = {
 		-- Happy Little Accidents
 		[70166] = "The Joy of Painting|60+ 65+,67030 65849|22.14 36.76|Rauvros",
 		[70168] = "Sad Little Accidents|60+ 65+,67030 70166|7.87 53.45|Ranpiata|dungeon",
-		[70170] = "Beat the Demons Out of It|60+ 65+,67030 70168|7.87 53.45|Ranpiata|dungeon",
-		[70171] = "Happy Little Accidents|60+ 65+,67030 70170|7.87 53.45|Ranpiata",
+		[70169] = "Even Trees Need Friends|60+ 65+,67030 70168|8.68 53.53|Hudson",
+		[70170] = "Beat the Demons Out of It|60+ 65+,67030 70169|8.58 53.5|Ranpiata|dungeon",
+		--[70171] = "Happy Little Accidents|60+ 65+,67030 70170|7.87 53.45|Ranpiata",
 
 		-- Cobalt Assembly
 		[70550] = "Welcome to the Assembly|68+ ~72784|49.05 23.15|Venthi", -- Invalidates breadcrumb 72784
@@ -813,12 +813,12 @@ Data.Quests = {
 		[66676] = "Sneaking In|60+ 62+,67030 65711|48.27 56.5|Initiate Radiya",
 
 		-- To Tame A Thunderspine
-		[71196] = "To Tame A Thunderspine|70+ 66676 reputation:2503:9|56.2 77.11|Initiate Radiya", -- Requires Renown 9 with Maruuk Centaur
-		[71197] = "To Tame A Thunderspine|70+ 71196 reset:71196|56.2 77.11|Initiate Radiya", -- check coords
-		[71198] = "To Tame A Thunderspine|70+ 71197 reset:71197|57.09 77.64|Initiate Radiya",
-		[71199] = "To Tame A Thunderspine|70+ 71198 reset:71198|56.73 76.3|Initiate Radiya",
-		[71195] = "To Tame A Thunderspine|70+ 71199 reset:71199|57.66 72.31|Initiate Radiya",
-		[71209] = "Beast of the Plains|70+ 71195|57.66 72.31|Initiate Radiya",
+		[71196] = "To Tame A Thunderspine|70+ -mount:1639 66676 reputation:2503:9|56.2 77.11|Initiate Radiya", -- Requires Renown 9 with Maruuk Centaur; can no longer be complated after the mount is collected on account
+		[71197] = "To Tame A Thunderspine|70+ -mount:1639 71196 reset:71196|56.2 77.11|Initiate Radiya",
+		[71198] = "To Tame A Thunderspine|70+ -mount:1639 71197 reset:71197|57.09 77.64|Initiate Radiya",
+		[71199] = "To Tame A Thunderspine|70+ -mount:1639 71198 reset:71198|56.73 76.3|Initiate Radiya",
+		[71195] = "To Tame A Thunderspine|70+ -mount:1639 71199 reset:71199|57.66 72.31|Initiate Radiya",
+		[71209] = "Beast of the Plains|70+ -mount:1639 71195|57.66 72.31|Initiate Radiya",
 
 		-- Lilac Ramble
 		[65899] = "Find Theramus|60+ 62+,67030|25.06 56.88|Celina Crunchyleaves",
