@@ -72,6 +72,7 @@ Data.POI = {
 		"POI/Portal|Portal to Stormwind|alliance|59.79 41.71",
 		"POI/Portal|Portal to Badlands|1+|26.09 40.98",
 		"POI/Portal|Seasonal Portals|1+|53.95 55",
+		"POI/Portal|Portal to Emerald Dream|70+|62.68 57.3", -- Unknown account-wide trigger
 
 		-- Mailbox
 		"mailbox:objective|Mailbox|mailbox|35.44 59.67", -- Artisan's Market
