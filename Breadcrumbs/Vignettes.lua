@@ -13,6 +13,20 @@ local _, Data = ...
 Data.Vignettes = {
 
 	
+	--[[ Emerald Dream ]]--
+
+	-- Emerald Dream
+	[2200] = {
+		-- Engineering Treasure
+		[78278] = "Experimental Dreamcatcher|60+ engineering skill:engineering10:25|39.58 52.27|\"On top of a root\"|treasure item:210193|Contains|!{3694922} [epic]Experimental Dreamcatcher]",
+		[78279] = {
+			"Insomniotron|60+ -76320 engineering skill:engineering10:25|40.49 89.42|\"You need to progress further in the Emerald Dream campaign to access this treasure\"|treasure item:210194 atlas:vignetteloot-locked|Contains|!{4548868} [epic]Insomniotron]",
+			"Insomniotron|60+ +76320 engineering skill:engineering10:25|40.49 89.42||treasure item:210194|Contains|!{4548868} [epic]Insomniotron]",
+		},
+		[78281] = "Unhatched Battery|60+ engineering skill:engineering10:25|62.69 36.26||treasure item:210197|Contains|!{465875} [epic]Unhatched Battery]",
+	},
+
+	
 	--[[ Zaralek Cavern ]]--
 
 	-- Zaralek Cavern
