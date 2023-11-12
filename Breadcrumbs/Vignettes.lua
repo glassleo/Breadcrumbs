@@ -17,13 +17,27 @@ Data.Vignettes = {
 
 	-- Emerald Dream
 	[2200] = {
+		-- Blacksmithing Treasure
+		[78417] = "Amirdrassil Defender's Shield|60+ blacksmithing skill:blacksmithing10:25|49.83 62.98||treasure item:210464|Contains|!{5150876} [epic]Amirdrassil Defender's Shield]",
+		[78418] = "Deathstalker Chassis|60+ blacksmithing skill:blacksmithing10:25|36.34 46.79||treasure item:210465|Contains|!{464143} [epic]Deathstalker Chassis]",
+		[78419] = "Flamesworn Render|60+ blacksmithing skill:blacksmithing10:25|37.26 22.95||treasure item:210466|Contains|!{464143} [epic]Flamesworn Render]",
+
 		-- Engineering Treasure
 		[78278] = "Experimental Dreamcatcher|60+ engineering skill:engineering10:25|39.58 52.27|\"On top of a root\"|treasure item:210193|Contains|!{3694922} [epic]Experimental Dreamcatcher]",
 		[78279] = {
-			"Insomniotron|60+ -76320 engineering skill:engineering10:25|40.49 89.42|\"You need to progress further in the Emerald Dream campaign to access this treasure\"|treasure item:210194 atlas:vignetteloot-locked|Contains|!{4548868} [epic]Insomniotron]",
-			"Insomniotron|60+ +76320 engineering skill:engineering10:25|40.49 89.42||treasure item:210194|Contains|!{4548868} [epic]Insomniotron]",
+			"Insomniotron|60+ -76320 engineering skill:engineering10:25|62.65 74.79|\"You need to progress further in the Emerald Dream campaign to access this treasure\"|treasure down link:2254 item:210194 atlas:vignetteloot-locked|Contains|!{4548868} [epic]Insomniotron]",
+			"Insomniotron|60+ +76320 engineering skill:engineering10:25|62.65 74.79||treasure down link:2254 item:210194|Contains|!{4548868} [epic]Insomniotron]",
 		},
 		[78281] = "Unhatched Battery|60+ engineering skill:engineering10:25|62.69 36.26||treasure item:210197|Contains|!{465875} [epic]Unhatched Battery]",
+	},
+
+	-- Barrows of Reverie
+	[2254] = {
+		-- Engineering Treasure
+		[78279] = {
+			"Insomniotron|60+ -76320 engineering skill:engineering10:25|49.4 69.17|\"You need to progress further in the Emerald Dream campaign to access this treasure\"|treasure item:210194 atlas:vignetteloot-locked|Contains|!{4548868} [epic]Insomniotron]",
+			"Insomniotron|60+ +76320 engineering skill:engineering10:25|49.4 69.17||treasure item:210194|Contains|!{4548868} [epic]Insomniotron]",
+		},
 	},
 
 	
