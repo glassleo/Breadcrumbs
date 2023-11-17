@@ -30,7 +30,7 @@ local Setting_EnableMailboxesEverywhere = false
 local Setting_EnableUnitTooltips = true
 local Setting_EnableAutomapGravidRepose = true
 -- Debug
-local Setting_Debug_QuestWatcher = false
+local Setting_Debug_QuestWatcher = true
 
 
 -- Constants
