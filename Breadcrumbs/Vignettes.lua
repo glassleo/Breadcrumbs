@@ -24,20 +24,14 @@ Data.Vignettes = {
 
 		-- Engineering Treasure
 		[78278] = "Experimental Dreamcatcher|60+ engineering skill:engineering10:25|39.58 52.27|\"On top of a root\"|treasure item:210193|Contains|!{3694922} [epic]Experimental Dreamcatcher]",
-		[78279] = {
-			"Insomniotron|60+ -76320 engineering skill:engineering10:25|62.65 74.79|\"You need to progress further in the Emerald Dream campaign to access this treasure\"|treasure down link:2254 item:210194 atlas:vignetteloot-locked|Contains|!{4548868} [epic]Insomniotron]",
-			"Insomniotron|60+ +76320 engineering skill:engineering10:25|62.65 74.79||treasure down link:2254 item:210194|Contains|!{4548868} [epic]Insomniotron]",
-		},
+		[78279] = "Insomniotron|60+ engineering skill:engineering10:25|62.65 74.79||treasure down link:2254 item:210194|Contains|!{4548868} [epic]Insomniotron]",
 		[78281] = "Unhatched Battery|60+ engineering skill:engineering10:25|62.69 36.26||treasure item:210197|Contains|!{465875} [epic]Unhatched Battery]",
 	},
 
 	-- Barrows of Reverie
 	[2254] = {
 		-- Engineering Treasure
-		[78279] = {
-			"Insomniotron|60+ -76320 engineering skill:engineering10:25|49.4 69.17|\"You need to progress further in the Emerald Dream campaign to access this treasure\"|treasure item:210194 atlas:vignetteloot-locked|Contains|!{4548868} [epic]Insomniotron]",
-			"Insomniotron|60+ +76320 engineering skill:engineering10:25|49.4 69.17||treasure item:210194|Contains|!{4548868} [epic]Insomniotron]",
-		},
+		[78279] = "Insomniotron|60+ engineering skill:engineering10:25|49.4 69.17||treasure item:210194|Contains|!{4548868} [epic]Insomniotron]",
 	},
 
 	
@@ -832,6 +826,7 @@ Data.Vignettes = {
 	-- Azsuna
 	[630] = {
 		-- Treasure
+		[42272] = "Small Treasure Chest|10+|59.88 63.19||treasure|Contains|!{1397630} [Order Resources]",
 		[37596] = "Small Treasure Chest|10+|53.03 37.26||treasure|Contains|!{1397630} [Order Resources]",
 		[37649] = "Glimmering Treasure Chest|10+|50.41 54.38||treasure down link:632|Contains|!{1397630} [Order Resources]", -- Oceanus Cove
 		[37829] = "Small Treasure Chest|10+|53.17 64.46||treasure|Contains|!{1397630} [Order Resources]",
@@ -961,6 +956,8 @@ Data.Vignettes = {
 	-- Stormheim
 	[634] = {
 		-- Treasure
+		[43238] = "Small Treasure Chest|10+|43.16 40.49||treasure|Contains|!{1397630} [Order Resources]",
+		[38477] = "Small Treasure Chest|10+|42.34 61.12||treasure|Contains|!{1397630} [Order Resources]",
 		[42628] = "Small Treasure Chest|10+|72.13 54.89||treasure|Contains|!{1397630} [Order Resources]",
 		[42629] = "Small Treasure Chest|10+|75.15 49.47||treasure|Contains|!{1397630} [Order Resources]",
 		[42632] = "Small Treasure Chest|10+|73.96 52.23||treasure|Contains|!{1397630} [Order Resources]",
