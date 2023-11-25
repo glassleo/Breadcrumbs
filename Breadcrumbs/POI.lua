@@ -45,9 +45,19 @@ local _, Data = ...
 Data.POI = {
 
 
-	--[[ Zaralek Cavern ]]--
+	--[[ Emerald Dream ]]--
 
-	--[2133] = {},
+	-- Emerald Dream
+	[2200] = {
+		-- Door
+		"poi-door-down:small|Barrows of Reverie|1+|63.5 71.75|link:2254",
+	},
+
+	-- Barrows of Reverie
+	[2254] = {
+		-- Door
+		"poi-door-up|Emerald Dream|1+|66.46 16.24|link:2200",
+	},
 
 
 	--[[ The Forbidden Reach ]]--
