@@ -50,7 +50,17 @@ Data.POI = {
 	-- Emerald Dream
 	[2200] = {
 		-- Door
+		"poi-door-down:small|Sor'theril Barrow Den|1+|51.06 42.77|link:2253",
 		"poi-door-down:small|Barrows of Reverie|1+|63.5 71.75|link:2254",
+
+		-- Portal
+		"-:large|Ohn'ahran Plains|1+|73.35 51.08|link:2023",
+	},
+
+	-- Sor'theril Barrow Den
+	[2253] = {
+		-- Door
+		"poi-door-up|Emerald Dream|1+|72.29 88.16|link:2200",
 	},
 
 	-- Barrows of Reverie
@@ -82,7 +92,7 @@ Data.POI = {
 		"POI/Portal|Portal to Stormwind|alliance|59.79 41.71",
 		"POI/Portal|Portal to Badlands|1+|26.09 40.98",
 		"POI/Portal|Seasonal Portals|1+|53.95 55",
-		"POI/Portal|Portal to Emerald Dream|70+|62.68 57.3", -- Unknown account-wide trigger
+		"POI/Portal|Portal to Emerald Dream|70+ 77887|62.68 57.3",
 
 		-- Mailbox
 		"mailbox:objective|Mailbox|mailbox|35.44 59.67", -- Artisan's Market

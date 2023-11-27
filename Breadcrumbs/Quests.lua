@@ -21,6 +21,10 @@ Data.HiddenBonusObjectiveQuests = {
 	[75859] = true, -- Aiding the Accord: Sniffenseeking
 	[75860] = true, -- Aiding the Accord: Researchers Under Fire
 	[75861] = true, -- Aiding the Accord: Suffusion Camp
+	[78446] = true, -- Aiding the Accord: Superbloom
+	[78447] = true, -- Aiding the Accord: Emerald Bounty
+	[78444] = true, -- A Worthy Ally: Dream Wardens
+	[78821] = true, -- Blooming Dreamseeds
 }
 
 
@@ -249,6 +253,7 @@ Data.HiddenBonusObjectiveQuests = {
 	Dragonflight
 		67030 - Adventure Mode unlocked on account
 		75658 - Zaralek Cavern World Quests unlocked on account
+		77887,77572 - Emerald Dream World Quests unlocked on account
 
 
 ]]--
@@ -266,6 +271,157 @@ Data.Quests = {
 	},
 
 
+	--[[ Emerald Dream ]]--
+
+	-- Emerald Dream
+	[2200] = {
+		-- Enter the Dream
+		--[76317] = "Call of the Dream|70+|73.35 51.08|[Auto Accept]|campaign elsewhere link:2023", -- Auto Accept on login, unknown actual start point
+		[76318] = "Emerald Welcome|70+ 76317|73.35 51.08|Merithra|campaign elsewhere link:2023",
+		[76319] = "Feast or Flaming|70+ 76318|69.42 54.04|Merithra|campaign",
+		[76320] = "Wild Gods in Our Midst|70+ 76319|64.29 58.23|Cenarius|campaign",
+		[76321] = "Burning Assault|70+ 76320|63.28 71.51|Cenarius|campaign",
+		[76322] = "The Face of Our Enemies|70+ 76320|63.28 71.51|Cenarius|campaign",
+		[77818] = "The Cruel|70+ 76321 76322|62.78 68.63|Merithra|campaign",
+		[76323] = "Amirdrassil|70+ 77818|61.48 60.39|Merithra|campaign",
+		[76324] = "Lost to the Flame|70+ 76323|53.82 63.94|Merithra|campaign",
+		[76325] = "Between Fyrakk and a Hard Place|70+ 76324|50.96 69.99|Merithra|campaign",
+		[76326] = "Home in the Dream|70+ 76325|50.96 69.99|Merithra|campaign",
+		[77283] = "A Multi-Front Battle|70+ 76326|50.8 62.88|Merithra|campaign",
+
+		-- Druids of the Flame
+		[77436] = "The Burning Barrow|70+ 77283|50.8 62.88|Merithra|campaign",
+		[76433] = "Ashen Soil|70+ 77436|51.34 42.99|Tyrande Whisperwind|campaign",
+		[76434] = "Not Yet Lost|70+ 77436|51.34 42.99|Tyrande Whisperwind|campaign",
+		[76435] = "The Smoldering Copse|70+ 76433 76434|51.42 42.71|Tyrande Whisperwind|campaign",
+		[76437] = "Burning Ground|70+ 76435|40.8 47.5|Tyrande Whisperwind|campaign",
+		[76441] = "Grim Reprisal|70+ 76435|40.8 47.5|Tyrande Whisperwind|campaign",
+		[76442] = "Forlorn Hope|70+ 76437 76441|35.99 50.93|Tyrande Whisperwind|campaign",
+		[76443] = "The Looming Cinder|70+ 76442|36.13 50.86|Tyrande Whisperwind|campaign",
+
+		-- Ice and Fire
+		[76403] = "Mayhem Incarnate|70+ 76443|50.81 62.73|Vyranoth|campaign",
+		[76342] = "Light 'Em Up!|70+ 76403|36.85 26.08|Buri|campaign",
+		[76343] = "Best Laid Plans|70+ 76403|36.83 25.86|Vyranoth|campaign",
+		[76344] = "Primalist Directive|70+ 76342 76343|36.85 26.08|Buri|campaign",
+		[76345] = "Finding Terro|70+ +76344|36.83 25.86|Vyranoth|campaign",
+		[76532] = "Assault on the Wellspring|70+ 76344 76345|39.61 22.87|Buri|campaign",
+		[76348] = "Big Bright Beautiful Barrier|70+ 76532|27.63 32.21|Suzska|campaign",
+		[76347] = "Power, Eruption, and Lies|70+ 76348|33.51 30.27|Suzska|campaign",
+		[77178] = "Tactical Withdrawal|70+ 76347|33.73 25.25|Vyranoth|campaign",
+
+		-- Eye of Ysera
+		[76327] = "Eye of Ysera|70+ 77178|50.85 62.91|Ysera|campaign",
+		[76328] = "A New Brute|70+ 76327|52.1 29.25|Merithra|campaign",
+		[78646] = "Fire Watch|70+ 76328|52.72 28.17|Merithra|campaign",
+		[76329] = "In and Out Scout|70+ 78646|52.14 24.23|Merithra|campaign",
+		[76330] = "Disarm Specialist|70+ 78646|52.14 24.23|Merithra|campaign",
+		[76334] = "Good Counsel|70+ 76329 76330|52.14 24.23|Merithra|campaign",
+		[76332] = "Putting Roots Down|70+ 76334|53.06 28.2|Merithra|campaign",
+		[76331] = "Merithra's Gambit|70+ 76332|53.06 28.2|Merithra|campaign",
+		[76333] = "Triple Threat|70+ 76331|52.89 28.03|Merithra|campaign",
+		[76335] = "Might of the Forest|70+ 76331|52.89 28.03|Merithra|campaign",
+		[76336] = "Flight and Fight|70+ 76333 76335|57.34 26.14|Merithra|campaign",
+		[76337] = "The Ember Still Smolders|70+ 76336|51.97 29.48|Merithra|campaign",
+
+		-- A Dram of Fields and Fire
+		[76384] = "The Bloom Begins|70+ 76337|50.85 62.91|Merithra|campaign",
+		[76416] = "Forward Unto Fire|70+ 76384|50.76 62.83|Alexstrasza the Life-Binder|campaign",
+		[76385] = "Hazardous Horticulture|70+ 76416|38.96 39.13|Merithra|campaign",
+		[76386] = "A Clash of Ice and Fire|70+ 76416|38.87 39.18|Vyranoth|campaign",
+		[76387] = "Defense of the Ancients|70+ 76385 76386|38.66 39.15|Tyrande Whisperwind|campaign",
+		[76436] = "A Scrap of Hope|70+ 76385 76386|38.76 39.19|Alexstrasza the Life-Binder|campaign",
+		[76388] = "Fighting Fire With Fire|70+ 76387 76436|38.6 39.04|Alexstrasza the Life-Binder|campaign",
+		[76389] = "The Age of Mortals|70+ 76388|34.97 35.34|Tyrande Whisperwind|campaign",
+		[76398] = "Aerial Supremacy|70+ 76388|34.99 35.43|Merithra|campaign",
+		[76401] = "Echo of the Firelands|70+ 76389 76398|35.04 33.59|Alexstrasza the Life-Binder|campaign",
+		[76402] = "Amirdrassil, the Dream's Hope: Fyrakk|70+ 76401|27.93 31.15|Alexstrasza the Life-Binder|raid",
+
+		-- New Beginnings
+
+		-- Central Encampment
+		[78444] = "A Worthy Ally: Dream Wardens|70+ 77887|50.2 61.57|Keeper Amrymn|weekly",
+		[78821] = "Blooming Dreamseeds|70+ 77887|49.78 62.11|Talisa Whisperbloom|weekly",
+		[78427] = "Great Crates!|70+ 77887|52.51 62.47|Eran'nda|weekly",
+		[78428] = "Crate of the Art|70+ 78427|52.51 62.47|Eran'nda|weekly",
+		[77316] = "Trouble at the Tree|70+ 77887|49.78 62.49|Lady Moonberry",
+		[77317] = "Hatted Hibernation|70+ 77316|49.78 62.49|Lady Moonberry",
+		[77318] = "Merithra Says|70+ 77317|49.78 62.49|Lady Moonberry",
+		[78381] = "Dreams Unified|70+ 77887|49.78 62.49|Lady Moonberry",
+		[78262] = "It Starts With a Stone|70+ 77887|49.79 62.94|Vaskarn",
+		[78271] = "Dreaming of Crests|70+ 78262|49.79 62.94|Vaskarn",
+
+		-- The Superbloom
+		[78319] = "The Superbloom|70+ 77887|1 Clarelle|Clarelle|discovery weekly",
+
+		-- Dreamseeds
+		[78172] = "Mysterious Seeds|70+|2 MysteriousSeeds|{464030} [rare]Mysterious Seeds]|discovery|\"Obtained after looting your first Dreamseed\"",
+		[77209] = "Seed Legacy|70+ 78172|59.75 16.89|Sylvia Whisperbloom",
+		[78170] = "Nurturing Ageless Seeds|70+ 77209|59.75 16.89|Sylvia Whisperbloom",
+		[78171] = "Blossoms of the Past|70+ 78170|59.75 16.89|Sylvia Whisperbloom",
+		[78206] = "Emerald Bounty|70+ 78171|59.75 16.89|Sylvia Whisperbloom",
+		[78385] = "Small Dreamseeds|70+ reputation:2574:3|59.75 16.89|Sylvia Whisperbloom", -- Requires Renown 3 with Dream Wardens
+		[78387] = "Plump Dreamseeds|70+ reputation:2574:9|59.75 16.89|Sylvia Whisperbloom", -- Requires Renown 9 with Dream Wardens
+		[78388] = "Gigantic Dreamseeds|70+ reputation:2574:17|59.75 16.89|Sylvia Whisperbloom", -- Requires Renown 17 with Dream Wardens
+
+		-- The Dryad Garden
+		[76566] = "The Dryad Garden|70+ 77887 -76569|50.78 62.08|Cenarius", -- Breadcrumb invalidated by 76569?
+		[76567] = "Grousing Garden|70+|53.74 74.55|Ethidris Creekward",
+		[76568] = "Pineshrew Panic|70+|53.74 74.55|Ethidris Creekward",
+		[76569] = "Druid-Guardian Conference|70+ 76567 76568|53.74 74.55|Ethidris Creekward",
+		[76570] = "The Family Business|70+ 76569|53.74 74.55|Ethidris Creekward",
+		[76571] = "Growth Experience|70+ 76569|53.76 74.5|Melyrine Petalshade",
+		[76572] = "A Poisonous Promotion|70+ 76570 76571|53.77 74.6|Dionaessa",
+		[77802] = "What Do I Call You?|70+ 76572|53.77 74.6|Dionaessa",
+
+		-- The Q'onzu Query
+		[78065] = "The Q'onzu Query|70+ 77887|50.78 62.08|Cenarius",
+		[78163] = "Q'onzu's Qualification|70+ 78065|34.74 68.95|Dreamkin",
+		[78064] = "Q'onzu's Perception|70+ 78163|34.61 69.33|Q'onzu",
+		[78162] = "Q'onzu's Distraction|70+ 78064|34.61 69.33|Q'onzu",
+		[78066] = "The Answers You've Earned|70+ 78162|34.61 69.33|Q'onzu",
+		[78041] = "Sky Mother's Ire|70+ 78066|50.78 62.08|Cenarius",
+		[78042] = "Aviana's Assessment|70+ 78041|65.83 37.68|Aviana",
+		[78043] = "Q'onzu's Quandary|70+ 78041|65.84 37.81|Q'onzu",
+		[77788] = "Ashphodel Research Notes|70+ +78042|60.82 44.9|{4549180} [Ashphodel Research Notes]||\"Drops from [hostile]Searing Rootguard] and [hostile]Searing Herbalist]\"",
+		[78044] = "Appalling Pollen|70+ 78042 78043 77788|65.84 37.81|Q'onzu",
+		[78045] = "Uproot the Cause|70+ 78042 78043 77788|65.83 37.68|Aviana",
+		[78046] = "Overseer Oversight|70+ 78044 78045|65.83 37.68|Aviana",
+
+		-- Shandris and Lilian
+		[77662] = "A Call to Aid|70+ 78904|50.14 61.04|Delaryn Summermoon",
+		[77739] = "Smother the Flames|70+ 77662|49.61 46.15|Shandris Feathermoon",
+		[77664] = "One Last Step|70+ 77739|49.61 46.15|Shandris Feathermoon",
+		[77665] = "Bound to You|70+ 77664|55.2 42.35|Lilian Voss",
+		[77673] = "Under the Surface|70+ 77665|55.2 42.35|Lilian Voss",
+		[77674] = "Wounds of the Past|70+ 77673|50.29 47.96|Lilian Voss",
+		[77675] = "A Better Future, Together|70+ 77674|55.26 42.27|Lilian Voss",
+
+		-- Misfit Dragons
+		[76460] = "A Dragon in Hand is Worth Two in the Roost|70+ 78904|50.88 62.81|Wrathion",
+		[76461] = "Draconic Diplomacy|70+ 76460|50.88 62.81|Wrathion",
+
+		-- Burning Out
+		[77948] = "Burning Out|70+ 78904|52.01 63.63|Solarys Thorngale",
+		[77978] = "A Passed Torch|70+ +77948|38 47.21|Singed Leaflet", -- Must have picked up 77948
+
+		-- Sleepy Druid
+		[77896] = "A Sleepy Search|70+ 78904|50.29 63.35|Icarius",
+		[77911] = "Build-a-Blanket|70+ 77896|58.13 77.31|Thaalean",
+		[77922] = "Fluffy Filler Retrieval|70+ 77896|58.13 77.31|Thaalean",
+		[77955] = "Heated Hearthstone Hustle|70+ 77911 77922|58.13 77.31|Thaalean",
+		[77958] = "Sleepy Druid in Emerald Dream|70+ 77955|58.13 77.31|Thaalean",
+
+		-- Memory of the Dreamer
+		[77310] = "Memory of the Dreamer|70+ 78904|58.73 23.92|Keeper Adranas",
+		[77311] = "Healing Helper|70+ 77310|58.61 23.93|Alexstrasza the Life-Binder",
+		[77312] = "Nature Persists|70+ 77311|58.61 23.93|Alexstrasza the Life-Binder",
+		[77313] = "A Solemn Summons|70+ 77311|58.62 23.77|Ysera",
+		[77314] = "Requiem in a Dream|70+ 77312 77313|58.62 23.77|Ysera",
+		[77315] = "Ancient Memories|70+ 77314|58.62 23.77|Ysera",
+	},
+
+
 	--[[ Zaralek Cavern ]]--
 
 	[2133] = {
@@ -279,7 +435,7 @@ Data.Quests = {
 	-- Valdrakken
 	[2112] = {
 		-- Aiding the Accord
-		[70750] = "Aiding the Accord|60+ 67030 -72374 -72068 -72373 -72375 -72369 -75859 -75860 -75861|50.17 56.22|Therazal|campaign weekly", -- You get one of 5 random weeklies, we consolidate them into one pin
+		[70750] = "Aiding the Accord|60+ 67030 -72374 -72068 -72373 -72375 -72369 -75859 -75860 -75861 -78446 -78447|50.17 56.22|Therazal|campaign weekly", -- You get one of 5 random weeklies, we consolidate them into one pin
 		[72354] = "The Great Vault|70+|50.17 56.22|Therazal",
 
 		-- The Spark of Ingenuity
@@ -331,6 +487,10 @@ Data.Quests = {
 	
 		-- Iskaara Tuskarr - The Chieftain's Duty
 		[68863] = "A Lost Tribe|70+ reputation:2511:11|3 RowieCampaign|Rowie|discovery campaign", -- Requires Renown 11 with Iskaara Tuskarr
+
+		-- Emerald Dream - Misfit Dragons
+		[77195] = "A Dragon's Eye View|70+ 76461|6.84 65.3|Wrathion",
+		[76464] = "The Thorignir|70+ 77198|46.72 47.76|Vyranoth",
 	},
 
 	-- Thaldraszus
@@ -342,7 +502,7 @@ Data.Quests = {
 		-- Big Time Adventurer
 
 		-- Aiding the Accord
-		[70750] = "Aiding the Accord|60+ 67030 -72374 -72068 -72373 -72375 -72369 -75859 -75860 -75861|39.96 60.78|Therazal|campaign weekly link:2112", -- You get one of 5 random weeklies, we consolidate them into one pin
+		[70750] = "Aiding the Accord|60+ 67030 -72374 -72068 -72373 -72375 -72369 -75859 -75860 -75861 -78446 -78447|39.96 60.78|Therazal|campaign weekly link:2112", -- You get one of 5 random weeklies, we consolidate them into one pin
 		[72354] = "The Great Vault|70+|39.96 60.78|Therazal|link:2112",
 
 		-- The Spark of Ingenuity
@@ -447,6 +607,12 @@ Data.Quests = {
 	
 		-- Iskaara Tuskarr - The Chieftain's Duty
 		[68863] = "A Lost Tribe|70+ reputation:2511:11|3 RowieCampaign|Rowie|discovery campaign", -- Requires Renown 11 with Iskaara Tuskarr
+
+		-- Emerald Dream - Misfit Dragons
+		[77195] = "A Dragon's Eye View|70+ 76461|33.7 62.09|Wrathion",
+		[76462] = "Cavern Cleaning|70+ 77195|61.21 73.22|Vyranoth",
+		[77197] = "A Whelping Hand|70+ 76462|61.22 73.18|Wrathion",
+		[76464] = "The Thorignir|70+ 77198|39.46 59.55|Vyranoth|link:2112",
 	},
 
 	-- Primalist Tomorrow
@@ -918,6 +1084,10 @@ Data.Quests = {
 	
 		-- Iskaara Tuskarr - The Chieftain's Duty
 		[68863] = "A Lost Tribe|70+ reputation:2511:11|3 RowieCampaign|Rowie|discovery campaign", -- Requires Renown 11 with Iskaara Tuskarr
+
+		-- Emerald Dream - Enter the Dream
+		--[76317] = "Call of the Dream|70+|18.66 51.77|[Auto Accept]|campaign", -- Auto Accept on login, unknown actual start point
+		[76318] = "Emerald Welcome|70+ 76317|18.66 51.77|Merithra|campaign",
 	},
 
 
@@ -1121,7 +1291,7 @@ Data.Quests = {
 		[65779] = "Into the Plains|60+ 62+,67030 65795,67030|48.27 88.67|Ambassador Taurasza|campaign", -- Adventure mode bypasses prereqs
 
 		-- Aiding the Accord
-		[70750] = "Aiding the Accord|60+ 67030 -72374 -72068 -72373 -72375 -72369 -75859 -75860 -75861|76.51 34.29|Kerazal|campaign weekly", -- You get one of 5 random weeklies, we consolidate them into one pin
+		[70750] = "Aiding the Accord|60+ 67030 -72374 -72068 -72373 -72375 -72369 -75859 -75860 -75861 -78446 -78447|76.51 34.29|Kerazal|campaign weekly", -- You get one of 5 random weeklies, we consolidate them into one pin
 		[72354] = "The Great Vault|70+|76.51 34.29|Kerazal",
 		
 		-- The Spark of Ingenuity
@@ -1137,6 +1307,10 @@ Data.Quests = {
 	
 		-- Iskaara Tuskarr - The Chieftain's Duty
 		[68863] = "A Lost Tribe|70+ reputation:2511:11|3 RowieCampaign|Rowie|discovery campaign", -- Requires Renown 11 with Iskaara Tuskarr
+
+		-- Emerald Dream - Misfit Dragons
+		[76463] = "Delectable Delicacies|70+ 77197|61.61 68.7|Mother Elion",
+		[77198] = "Home in Time for Tea|70+ 76463|61.53 68.76|Mordenaku",
 	},
 
 
@@ -1494,7 +1668,7 @@ Data.Quests = {
 
 		-- Da Boss
 		[59809] = "On De Other Side|60+ nightfae renown:8 59242|1 MaskOfBwonsamdiCampaign|Mask of Bwonsamdi|discovery campaign",
-		[59811] = "Taking Inventory|60+ nightfae renown:8 59809|1 MaskOfBwonsamdiCampaign|Bwonsamdi|discovery campaign|\"Mask of Bwonsamdi can take you to the Other Side\"",
+		[59811] = "Taking Inventory|60+ nightfae renown:8 59809|1 MaskOfBwonsamdiCampaign|Bwonsamdi|discovery campaign|\"Mask of Bwonsamdi can take you to De Other Side\"",
 		[59812] = "Following the Trail|60+ nightfae 59811|1 MaskOfBwonsamdiCampaign|Mask of Bwonsamdi|discovery campaign",
 		[59813] = "Minions of Mueh'zala|60+ nightfae 59812|1 MaskOfBwonsamdiCampaign|Mask of Bwonsamdi|discovery campaign",
 		[59815] = "Stolen Loa|60+ nightfae 59812|2 MaskOfBwonsamdiCampaign|Mask of Bwonsamdi|discovery campaign",
@@ -3953,6 +4127,9 @@ Data.Quests = {
 
 		-- Mining - Infernal Brimstone
 		[38806] = "Infernal Brimstone Sample|45+ mining 45727,43341|7 InfernalBrimstone|{1394959} [Infernal Brimstone Sample]|mining discovery|Mined from Brimstone Destroyer Core",
+
+		-- Emerald Dream - Misfit Dragons
+		[76465] = "Dragon Keeping|70+ 76464|51.1 83.84|Vyranoth",
 	},
 
 	-- Stormscale Cavern
@@ -6132,6 +6309,8 @@ Data.Quests = {
 		-- Dragon Isles
 		[67030] = "Dragon Isles Adventure Mode (Account Unlock)|60+|||campaign",
 		[75658] = "Zaralek Cavern World Quests (Account Unlock)|70+|||campaign",
+		[77887] = "Emerald Dream World Quests (Account Unlock)|70+|||campaign",
+		[77572] = "Emerald Dream World Quests (Account Unlock)|70+|||campaign",
 
 		-- Aiding the Accord
 		[72068] = "Aiding the Accord: A Feast For All|60+||Therezal|weekly campaign",
@@ -6142,6 +6321,8 @@ Data.Quests = {
 		[75859] = "Aiding the Accord: Sniffenseeking|60+||Therezal|weekly campaign",
 		[75860] = "Aiding the Accord: Researchers Under Fire|60+||Therezal|weekly campaign",
 		[75861] = "Aiding the Accord: Suffusion Camp|60+||Therezal|weekly campaign",
+		[78446] = "Aiding the Accord: Superbloom|60+||Therezal|weekly campaign",
+		[78447] = "Aiding the Accord: Emerald Bounty|60+||Therezal|weekly campaign",
 
 		-- Sniffenseeking
 		--[75875] = "Sniffenseeking: Dig In Progress",

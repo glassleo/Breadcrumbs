@@ -34,7 +34,7 @@ local Setting_Debug_QuestWatcher = true
 
 
 -- Constants
-local CHROMIETIME_MAXLEVEL = 60 -- Maximum level for Chromie Time
+local CHROMIETIME_MAXLEVEL = 61 -- Maximum level for Chromie Time
 -- https://www.townlong-yak.com/framexml/live/GlobalStrings.lua
 local QUEST_ICONS_FILE = "Interface\\QuestFrame\\QuestTypeIcons"
 local AVAILABLE_QUEST = AVAILABLE_QUEST -- Available quest
@@ -926,12 +926,24 @@ function Breadcrumbs:UpdateMap(event, ...)
 				if flags["fishing"] then GameTooltip:AddLine(CreateAtlasMarkup("worldquest-icon-fishing") .. " Fishing") end
 				if flags["archaeology"] then GameTooltip:AddLine(CreateAtlasMarkup("worldquest-icon-archaeology") .. " Archaeology") end
 				if flags["petbattle"] then GameTooltip:AddLine(CreateAtlasMarkup("worldquest-icon-petbattle") .. " Archaeology") end
+
 				if flags["link"] and link then -- The pin is a link, indicate where it takes us
 					local mapinfo = C_Map.GetMapInfo(link)
 					GameTooltip:AddDoubleLine(AVAILABLE_QUEST, Breadcrumbs:FormatTooltip("{newplayertutorial-icon-mouse-leftbutton} ") .. (mapinfo.name or link), 1, 1, 1, 1, 1, 1)
 				else -- It's a quest, show source
 					GameTooltip:AddDoubleLine(AVAILABLE_QUEST, Breadcrumbs:FormatTooltip(source and "{!}" .. source or "", flags) or "", 1, 1, 1)
 				end
+
+				if flags["weekly"] then
+					if flags["account"] then
+						GameTooltip:AddLine("|T" .. QUEST_ICONS_FILE .. ":18:18:0:0:128:64:36:54:36:54|t Account " .. WEEKLY, 0, 0.8, 1)
+					else
+						GameTooltip:AddLine("|T" .. QUEST_ICONS_FILE .. ":18:18:0:0:128:64:36:54:36:54|t " .. WEEKLY)
+					end
+				elseif flags["account"] then
+					GameTooltip:AddLine("|T" .. QUEST_ICONS_FILE .. ":18:18:0:0:128:64:108:126:0:18|t Account", 0, 0.8, 1)
+				end
+
 				if Setting_HumanTooltips then -- Help tip
 					if help and strlen(help) > 0 then
 						GameTooltip:AddLine(" ")
@@ -1552,6 +1564,7 @@ function Breadcrumbs:UpdateMap(event, ...)
 	end
 
 	Breadcrumbs:FixBonusObjectives()
+	Breadcrumbs:FixBonusObjectivesDelayed()
 end
 
 -- Register Events
@@ -1573,6 +1586,7 @@ Breadcrumbs:RegisterEvent("COVENANT_CHOSEN", "UpdateMap")
 Breadcrumbs:RegisterEvent("COVENANT_SANCTUM_RENOWN_LEVEL_CHANGED", "UpdateMap")
 
 Breadcrumbs:RegisterEvent("QUEST_WATCH_LIST_CHANGED", "FixBonusObjectivesDelayed")
+Breadcrumbs:RegisterEvent("LORE_TEXT_UPDATED_CAMPAIGN", "FixBonusObjectivesDelayed")
 
 Breadcrumbs:RegisterEvent("CONSOLE_MESSAGE", "UpdateSkillLines")
 Breadcrumbs:RegisterEvent("TRADE_SKILL_SHOW", "UpdateSkillLines")
@@ -1771,7 +1785,7 @@ function Breadcrumbs:Validate(str)
 					if string.match(v, "^%-(%d+)$") and not C_QuestLog.IsQuestFlaggedCompleted(tonumber(string.match(v, "%-(%d+)") or 0)) and not C_QuestLog.IsOnQuest(tonumber(string.match(v, "%-(%d+)") or 0)) then pass = true end
 
 					-- Must have picked up quest but not completed it (§n)
-					if string.match(v, "^§(%d+)$") and not (C_QuestLog.IsQuestFlaggedCompleted(tonumber(string.match(v, "§(%d+)") or 0)) and C_QuestLog.IsOnQuest(tonumber(string.match(v, "§(%d+)") or 0))) then pass = true end
+					if string.match(v, "^§(%d+)$") and not C_QuestLog.IsQuestFlaggedCompleted(tonumber(string.match(v, "§(%d+)") or 0)) and C_QuestLog.IsOnQuest(tonumber(string.match(v, "§(%d+)") or 0)) then pass = true end
 
 					-- Must not have completed quest (_n)
 					if string.match(v, "^_(%d+)$") and not C_QuestLog.IsQuestFlaggedCompleted(tonumber(string.match(v, "_(%d+)") or 0)) then pass = true end

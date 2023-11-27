@@ -17,20 +17,51 @@ Data.Vignettes = {
 
 	-- Emerald Dream
 	[2200] = {
+		-- Alchemy Treasure
+		[78264] = "Half-Filled Dreamless Sleep Potion|60+ alchemy skill:alchemy10:25|54.05 32.64||treasure item:210184|Contains|!{134863} [epic]Half-Filled Dreamless Sleep Potion]",
+		[78269] = {
+			"Splash Potion of Narcolepsy|60+ §76506 alchemy skill:alchemy10:25|62.73 73.75|\"You are currently phased out from this treasure due to a world quest\"|treasure down link:2254 item:210185 atlas:vignetteloot-locked|Contains|!{463861} [epic]Splash Potion of Narcolepsy]",
+			"Splash Potion of Narcolepsy|60+ ~76506 alchemy skill:alchemy10:25|62.73 73.75||treasure down link:2254 item:210185|Contains|!{463861} [epic]Splash Potion of Narcolepsy]",
+		},
+		[78275] = "Root of the Problem|60+ alchemy skill:alchemy10:25|36.21 46.63||treasure item:210190|Contains|!{236301} [epic]Blazeroot]",
+
 		-- Blacksmithing Treasure
 		[78417] = "Amirdrassil Defender's Shield|60+ blacksmithing skill:blacksmithing10:25|49.83 62.98||treasure item:210464|Contains|!{5150876} [epic]Amirdrassil Defender's Shield]",
 		[78418] = "Deathstalker Chassis|60+ blacksmithing skill:blacksmithing10:25|36.34 46.79||treasure item:210465|Contains|!{464143} [epic]Deathstalker Chassis]",
 		[78419] = "Flamesworn Render|60+ blacksmithing skill:blacksmithing10:25|37.26 22.95||treasure item:210466|Contains|!{464143} [epic]Flamesworn Render]",
 
 		-- Engineering Treasure
+		[78308] = "Pure Dream Water|60+ enchanting skill:enchanting10:25|38.37 30.2||treasure item:210234|Contains|!{1020349} [epic]Pure Dream Water]",
+		[78309] = "Everburning Core|60+ enchanting skill:enchanting10:25|46.16 20.51||treasure item:210231|Contains|!{132839} [epic]Everburning Core]",
+		[78310] = "Essence of Dreams|60+ enchanting skill:enchanting10:25|66.36 74.2|\"On top of a floating branch\"|treasure item:210234|Contains|!{237556} [epic]Essence of Dreams]",
+
+		-- Engineering Treasure
 		[78278] = "Experimental Dreamcatcher|60+ engineering skill:engineering10:25|39.58 52.27|\"On top of a floating branch\"|treasure item:210193|Contains|!{3694922} [epic]Experimental Dreamcatcher]",
-		[78279] = "Insomniotron|60+ engineering skill:engineering10:25|62.65 74.79||treasure down link:2254 item:210194|Contains|!{4548868} [epic]Insomniotron]",
+		[78279] = {
+			"Insomniotron|60+ §76506 engineering skill:engineering10:25|62.65 74.79|\"You are currently phased out from this treasure due to a world quest\"|treasure down link:2254 item:210194 atlas:vignetteloot-locked|Contains|!{4548868} [epic]Insomniotron]",
+			"Insomniotron|60+ ~76506 engineering skill:engineering10:25|62.65 74.79||treasure down link:2254 item:210194|Contains|!{4548868} [epic]Insomniotron]",
+		},
 		[78281] = "Unhatched Battery|60+ engineering skill:engineering10:25|62.69 36.26||treasure item:210197|Contains|!{2032173} [epic]Unhatched Battery]",
+		
+		-- Inscription Treasure
+		[78411] = "Winnie's Notes on Flora and Fauna|60+ inscription skill:inscription10:25|55.64 27.49||treasure item:210458|Contains|!{133739} [epic]Winnie's Notes on Flora and Fauna]",
+		[78412] = "Grove Keeper's Pillar|60+ inscription skill:inscription10:25|63.5 71.52||treasure item:210459|Contains|!{5263786} [epic]Grove Keeper's Pillar]",
+		[78413] = "Primalist Shadowbinding Rune|60+ inscription skill:inscription10:25|36.04 46.64||treasure item:210460|Contains|!{4643988} [epic]Primalist Shadowbinding Rune]",
+		
+		-- Jewelcrafting Treasure
+		[78282] = "Petrified Hope|60+ jewelcrafting skill:jewelcrafting10:25|33.23 46.57||treasure item:210200|Contains|!{840007} [epic]Petrified Hope]",
+		[78283] = "Handful of Pebbles|60+ jewelcrafting skill:jewelcrafting10:25|43.51 33.36||treasure item:210201|Contains|!{646672} [epic]Handful of Pebbles]",
+		[78285] = "Coalesced Dreamstone|60+ jewelcrafting skill:jewelcrafting10:25|58.95 53.89||treasure item:210202|Contains|!{134104} [epic]Coalesced Dreamstone]",
 		
 		-- Leatherworking Treasure
 		[78298] = "Tuft of Dreamsaber Fur|60+ leatherworking skill:leatherworking10:25|41.75 66.49||treasure item:210208|Contains|!{1508485} [epic]Tuft of Dreamsaber Fur]",
 		[78299] = "Molted Faerie Dragon Scales|60+ leatherworking skill:leatherworking10:25|37.45 71.02||treasure item:210211|Contains|!{4559240} [epic]Molted Faerie Dragon Scales]",
 		[78305] = "Dreamtalon Claw|60+ leatherworking skill:leatherworking10:25|33.99 29.68||treasure item:210215|Contains|!{1508485} [epic]Dreamtalon Claw]",
+		
+		-- Tailoring Treasure
+		[78414] = "Exceedingly Soft Wildercloth|60+ tailoring skill:tailoring10:25|53.27 27.92||treasure item:210461|Contains|!{4549243} [epic]Exceedingly Soft Wildercloth]",
+		[78415] = "Plush Pillow|60+ tailoring skill:tailoring10:25|49.83 61.48||treasure item:210462|Contains|!{4624627} [epic]Plush Pillow]",
+		[78416] = "Snuggle Buddy|60+ tailoring skill:tailoring10:25|40.70 86.16||treasure item:210463|Contains|!{458256} [epic]Snuggle Buddy]",
 
 		-- Treasure
 		[78547] = "Unwaking Echo|70+|55.67 22.57|\"You must be sleeping to open the treasure\"|treasure item:210675|Contains|!{5173328} [rare]Gardener's Lightstaff]|!{5172976} [Flightstones]|!{2065578} [Dragon Isles Supplies]||Grants Reputation|!{5244643} [Dream Wardens] (200)",
@@ -53,32 +84,39 @@ Data.Vignettes = {
 			"Triflesnatcher|77857|41.74 62.6|Triflesnatch's Roving Trove|treasure atlas:questobjective",
 		},
 		[77872] = "Triflesnatch's Roving Trove|77860|34.09 56.35|\"On top of a floating branch\"|treasure item:208067|Contains|!{656679} [rare]Plump Dreamseed]",
-		[78365] = "Statue of the Ashen Panther|70+ hunter|63.43 72.98||treasure item:210631 atlas:vignetteloot-locked link:2254|Boon of Ashamane|{237473} [rare]Branch of Ashamane]",
-		[78359] = "Boon of Ashamane|78365|63.39 73.04||treasure item:210631 link:2254|Contains|{237473} [rare]Branch of Ashamane]",
-		[78033] = {
-			"Magical Bloom|70+|61.62 59.58|\"Chase the nearby [unfriendly]Laughing Podling] to unlock the treasure\"|treasure item:208047 atlas:vignetteloot-locked|Contains|!{656681} [epic]Gigantic Dreamseed]|!{5172976} [Flightstones]|!{2065578} [Dragon Isles Supplies]||Grants Reputation|!{5244643} [Dream Wardens] (200)",
-			"[unfriendly]Laughing Podling]|70+|64.34 61.31|Magical Bloom|treasure atlas:questobjective",
+		[78365] = {
+			"Statue of the Ashen Panther|70+ §76506|63.43 72.98||treasure down item:210631 link:2254|Boon of Ashamane|{237473} [rare]Branch of Ashamane]",
+			"Statue of the Ashen Panther|70+ ~76506|63.43 72.98||treasure down item:210631 link:2254|Boon of Ashamane|{237473} [rare]Branch of Ashamane]",
 		},
-		[78005] = "Magical Bloom|70+|61.62 59.58||treasure item:208047|Contains|!{656681} [epic]Gigantic Dreamseed]|!{5172976} [Flightstones]|!{2065578} [Dragon Isles Supplies]||Grants Reputation|!{5244643} [Dream Wardens] (200)",
+		[78359] = "Boon of Ashamane|78365|63.39 73.04||treasure down item:210631 link:2254|Contains|{237473} [rare]Branch of Ashamane]",
+		[78033] = {
+			"Magical Bloom|70+ §76320|61.62 59.58|\"You are currently phased out from this treasure due to a quest\"|treasure item:208047 atlas:vignetteloot-locked|Contains|!{656681} [epic]Gigantic Dreamseed]|!{5172976} [Flightstones]|!{2065578} [Dragon Isles Supplies]||Grants Reputation|!{5244643} [Dream Wardens] (200)",
+			"Magical Bloom|70+ ~76320|61.62 59.58|\"Chase the nearby [unfriendly]Laughing Podling] to unlock the treasure\"|treasure item:208047 atlas:vignetteloot-locked|Contains|!{656681} [epic]Gigantic Dreamseed]|!{5172976} [Flightstones]|!{2065578} [Dragon Isles Supplies]||Grants Reputation|!{5244643} [Dream Wardens] (200)",
+			"[unfriendly]Laughing Podling]|70+ ~76320|64.34 61.31|Magical Bloom|treasure atlas:questobjective",
+		},
+		[78005] = {
+			"Magical Bloom|78033 §76320|61.62 59.58|\"You are currently phased out from this treasure due to a quest\"|treasure item:208047 atlas:vignetteloot-locked|Contains|!{656681} [epic]Gigantic Dreamseed]|!{5172976} [Flightstones]|!{2065578} [Dragon Isles Supplies]||Grants Reputation|!{5244643} [Dream Wardens] (200)",
+			"Magical Bloom|78033 ~76320|61.62 59.58||treasure item:208047|Contains|!{656681} [epic]Gigantic Dreamseed]|!{5172976} [Flightstones]|!{2065578} [Dragon Isles Supplies]||Grants Reputation|!{5244643} [Dream Wardens] (200)",
+		},
 		[78006] = "Odd Burl|70+|55.26 57.25|\"On top of a large tree\"|treasure item:208067|Contains|!{656679} [rare]Plump Dreamseed]|!{5172976} [Flightstones]|!{2065578} [Dragon Isles Supplies]||Grants Reputation|!{5244643} [Dream Wardens] (200)",
 		[78095] = {
 			"Statue of the Bear Lord|70+ pandaren|47.05 53.09||treasure item:210434|Boon of Ursol|!{1629944} [rare]Visage of Ursol]",
-			"Statue of the Bear Lord|70+ druid -pandaren|47.05 53.09|\"Shift into {132276} [spell]Bear Form] to unlock the treasure\"|treasure item:210434 atlas:vignetteloot-locked|Boon of Ursol|!{1629944} [rare]Visage of Ursol]",
-			"Statue of the Bear Lord|70+ -druid -pandaren|47.05 53.09|\"Use the nearby [Mark of Ursol] to unlock the treasure\"|treasure item:210434 atlas:vignetteloot-locked|Boon of Ursol|!{1629944} [rare]Visage of Ursol]",
+			"Statue of the Bear Lord|70+ druid -pandaren|47.05 53.09|\"Shift into {132276} [spell]Bear Form] to unlock the treasure\"|treasure item:210434|Boon of Ursol|!{1629944} [rare]Visage of Ursol]",
+			"Statue of the Bear Lord|70+ -druid -pandaren|47.05 53.09|\"Use the nearby [Mark of Ursol] to unlock the treasure\"|treasure item:210434|Boon of Ursol|!{1629944} [rare]Visage of Ursol]",
 			"[Mark of Ursol]|70+ -pandaren -druid|48.01 52.46|Statue of the Bear Lord|treasure atlas:questobjective",
 		},
-		[78359] = "Boon of Ursol|78095|47.08 53.05||treasure item:210434|Contains|!{1629944} [rare]Visage of Ursol]",
+		[78107] = "Boon of Ursol|78095|47.08 53.05||treasure item:210434|Contains|!{1629944} [rare]Visage of Ursol]",
 		[78367] = {
 			"Statue of the Sky Mistress|70+ dracthyr|64.22 19.27||treasure item:210659|Boon of Aviana|!{237472} [rare]Branch of Aviana]",
-			"Statue of the Sky Mistress|70+ druid -dracthyr|64.22 19.27|\"Shift into {165962} [spell]Flight Form] to unlock the treasure\"|treasure item:210659 atlas:vignetteloot-locked|Boon of Aviana|!{237472} [rare]Branch of Aviana]",
-			"Statue of the Sky Mistress|70+ -druid -dracthyr|64.22 19.27|\"Use the nearby [Mark of Aviana] to unlock the treasure\"|treasure item:210659 atlas:vignetteloot-locked|Boon of Aviana|!{237472} [rare]Branch of Aviana]",
+			"Statue of the Sky Mistress|70+ druid -dracthyr|64.22 19.27|\"Shift into {165962} [spell]Flight Form] to unlock the treasure\"|treasure item:210659|Boon of Aviana|!{237472} [rare]Branch of Aviana]",
+			"Statue of the Sky Mistress|70+ -druid -dracthyr|64.22 19.27|\"Use the nearby [Mark of Aviana] to unlock the treasure\"|treasure item:210659|Boon of Aviana|!{237472} [rare]Branch of Aviana]",
 			"[Mark of Aviana]|70+ -dracthyr -druid|59.93 18.96|Statue of the Sky Mistress|treasure atlas:questobjective",
 		},
 		[78360] = "Boon of Aviana|78367|64.05 19.17||treasure item:210659|Contains|!{237472} [rare]Branch of Aviana]",
 		[78368] = {
 			"Statue of the Great Wolf|70+ worgen|32.94 83.23||treasure down item:210660|Boon of Goldrinn|!{3515606} [rare]Claw of Lo'Gosh]",
-			"Statue of the Great Wolf|70+ shaman -worgen|32.94 83.23|\"Use {136095} [spell]Ghost Wolf] or the nearby [Mark of Goldrinn] to unlock the treasure\"|treasure down item:210660 atlas:vignetteloot-locked|Boon of Goldrinn|!{3515606} [rare]Claw of Lo'Gosh]",
-			"Statue of the Great Wolf|70+ -shaman -worgen|32.94 83.23|\"Use the nearby [Mark of Goldrinn] to unlock the treasure\"|treasure down item:210660 atlas:vignetteloot-locked|Boon of Goldrinn|!{3515606} [rare]Claw of Lo'Gosh]",
+			"Statue of the Great Wolf|70+ shaman -worgen|32.94 83.23|\"Use {136095} [spell]Ghost Wolf] or the nearby [Mark of Goldrinn] to unlock the treasure\"|treasure down item:210660|Boon of Goldrinn|!{3515606} [rare]Claw of Lo'Gosh]",
+			"Statue of the Great Wolf|70+ -shaman -worgen|32.94 83.23|\"Use the nearby [Mark of Goldrinn] to unlock the treasure\"|treasure down item:210660|Boon of Goldrinn|!{3515606} [rare]Claw of Lo'Gosh]",
 			"[Mark of Goldrinn]|70+ -worgen|34.5 82.65|Statue of the Great Wolf|treasure atlas:questobjective",
 		},
 		[78361] = "Boon of Goldrinn|78368|33.06 83.27||treasure down item:210660|Contains|!{3515606} [rare]Claw of Lo'Gosh]",
@@ -87,20 +125,32 @@ Data.Vignettes = {
 	-- Barrows of Reverie
 	[2254] = {
 		-- Alchemy Treasure
+		[78269] = {
+			"Splash Potion of Narcolepsy|60+ §76506 alchemy skill:alchemy10:25|50.96 49.65|\"You are currently phased out from this treasure due to a world quest\"|treasure item:210185 atlas:vignetteloot-locked|Contains|!{463861} [epic]Splash Potion of Narcolepsy]",
+			"Splash Potion of Narcolepsy|60+ ~76506 alchemy skill:alchemy10:25|50.96 49.65||treasure item:210185|Contains|!{463861} [epic]Splash Potion of Narcolepsy]",
+		},
 
 		-- Engineering Treasure
-		[78279] = "Insomniotron|60+ engineering skill:engineering10:25|49.4 69.17||treasure item:210194|Contains|!{4548868} [epic]Insomniotron]",
+		[78279] = {
+			"Insomniotron|60+ §76506 engineering skill:engineering10:25|49.4 69.17|\"You are currently phased out from this treasure due to a world quest\"|treasure item:210194 atlas:vignetteloot-locked|Contains|!{4548868} [epic]Insomniotron]",
+			"Insomniotron|60+ ~76506 engineering skill:engineering10:25|49.4 69.17||treasure item:210194|Contains|!{4548868} [epic]Insomniotron]",
+		},
 
 		-- Treasure
 		[78365] = {
-			"Statue of the Ashen Panther|70+ druid|63.96 35.05|\"Shift into {132115} [spell]Cat Form] to unlock the treasure\"|treasure item:210631 atlas:vignetteloot-locked|Boon of Ashamane|{237473} [rare]Branch of Ashamane]",
-			"Statue of the Ashen Panther|70+ hunter -nightelf|63.96 35.05|\"Use {461113} [spell]Camouflage] or the nearby [Mark of Ashamane] to unlock the treasure\"|treasure item:210631 atlas:vignetteloot-locked|Boon of Ashamane|{237473} [rare]Branch of Ashamane]",
-			"Statue of the Ashen Panther|70+ hunter nightelf|63.96 35.05|\"Use {461113} [spell]Camouflage], {132089} [spell]Shadowmeld] or the nearby [Mark of Ashamane] to unlock the treasure\"|treasure item:210631 atlas:vignetteloot-locked|Boon of Ashamane|{237473} [rare]Branch of Ashamane]",
-			"Statue of the Ashen Panther|70+ rogue|63.96 35.05|\"Use {132320} [spell]Stealth] to unlock the treasure\"|treasure item:210631 atlas:vignetteloot-locked|Boon of Ashamane|{237473} [rare]Branch of Ashamane]",
-			"Statue of the Ashen Panther|70+ nightelf -druid -hunter -rogue|63.96 35.05|\"Use {132089} [spell]Shadowmeld] or the nearby [Mark of Ashamane] to unlock the treasure\"|treasure item:210631 atlas:vignetteloot-locked|Boon of Ashamane|{237473} [rare]Branch of Ashamane]",
-			"[Mark of Ashamane]|70+ -rogue -druid|62.5 60.07|Statue of the Ashen Panther|treasure atlas:questobjective",
+			"Statue of the Ashen Panther|70+ §76506|63.96 35.05|\"You are currently phased out from this treasure due to a world quest\"|treasure item:210631 atlas:vignetteloot-locked|Boon of Ashamane|{237473} [rare]Branch of Ashamane]",
+			"Statue of the Ashen Panther|70+ ~76506 druid|63.96 35.05|\"Shift into {132115} [spell]Cat Form] to unlock the treasure\"|treasure item:210631|Boon of Ashamane|{237473} [rare]Branch of Ashamane]",
+			"Statue of the Ashen Panther|70+ ~76506 hunter -nightelf|63.96 35.05|\"Use {461113} [spell]Camouflage] or the nearby [Mark of Ashamane] to unlock the treasure\"|treasure item:210631|Boon of Ashamane|{237473} [rare]Branch of Ashamane]",
+			"Statue of the Ashen Panther|70+ ~76506 hunter nightelf|63.96 35.05|\"Use {461113} [spell]Camouflage], {132089} [spell]Shadowmeld] or the nearby [Mark of Ashamane] to unlock the treasure\"|treasure item:210631|Boon of Ashamane|{237473} [rare]Branch of Ashamane]",
+			"Statue of the Ashen Panther|70+ ~76506 rogue|63.96 35.05|\"Use {132320} [spell]Stealth] to unlock the treasure\"|treasure item:210631|Boon of Ashamane|{237473} [rare]Branch of Ashamane]",
+			"Statue of the Ashen Panther|70+ ~76506 nightelf -druid -hunter -rogue|63.96 35.05|\"Use {132089} [spell]Shadowmeld] or the nearby [Mark of Ashamane] to unlock the treasure\"|treasure item:210631|Boon of Ashamane|{237473} [rare]Branch of Ashamane]",
+			"Statue of the Ashen Panther|70+ ~76506 -nightelf -druid -hunter -rogue|63.96 35.05|\"Use the nearby [Mark of Ashamane] to unlock the treasure\"|treasure item:210631|Boon of Ashamane|{237473} [rare]Branch of Ashamane]",
+			"[Mark of Ashamane]|70+ ~76506 -rogue -druid|62.5 60.07|Statue of the Ashen Panther|treasure atlas:questobjective",
 		},
-		[78359] = "Boon of Ashamane|78365|63.51 36.24||treasure item:210631|Contains|{237473} [rare]Branch of Ashamane]",
+		[78359] = {
+			"Boon of Ashamane|78365 §76506|63.51 36.24|\"You are currently phased out from this treasure due to a world quest\"|treasure item:210631 atlas:vignetteloot-locked|Contains|{237473} [rare]Branch of Ashamane]",
+			"Boon of Ashamane|78365 ~76506|63.51 36.24||treasure item:210631|Contains|{237473} [rare]Branch of Ashamane]",
+		},
 	},
 
 	
