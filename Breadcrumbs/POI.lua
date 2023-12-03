@@ -55,6 +55,10 @@ Data.POI = {
 
 		-- Portal
 		"-:large|Ohn'ahran Plains|1+|73.35 51.08|link:2023",
+
+		-- Vendor
+		"banker:objective|Theozhaklos the Curious|item:210944|36.69 33.29|tooltip item:210944|\"Exchange your {4555670} [epic]Emerald Mark of Mastery] for an Amirdrassil class set item of choice here\"",
+		"banker:objective|Kirasztia|item:210947|36.73 33.32|tooltip item:210947|\"Exchange your {1020381} [epic]Flame-Warped Curio] for an Amirdrassil class set item of choice here\"",
 	},
 
 	-- Sor'theril Barrow Den
@@ -137,8 +141,8 @@ Data.POI = {
 	-- Thaldraszus
 	[2025] = {
 		-- Revival Catalyst - Season 2 prequest is 75497
-		"creationcatalyst-32x32|[Revival Catalyst Console]|70+ currency:2533:1|60.69 53.71|tooltip|Transform an item from Dragonflight Season 2 into a set item.||[green]<currencycount:2533> §4Charge:Charges; Available]",
-		"creationcatalyst-32x32|[Revival Catalyst Console]|70+ -currency:2533:1|60.69 53.71|tooltip|Transform an item from Dragonflight Season 2 into a set item.||[gray]No Charges Available]",
+		"creationcatalyst-32x32|[Revival Catalyst Console]|70+ currency:2533:1|60.69 53.71|tooltip|Transform an item from Dragonflight Season 3 into a set item.||[green]<currencycount:2796> §4Charge:Charges; Available]",
+		"creationcatalyst-32x32|[Revival Catalyst Console]|70+ -currency:2533:1|60.69 53.71|tooltip|Transform an item from Dragonflight Season 3 into a set item.||[gray]No Charges Available]",
 		
 		-- Professions
 		"POI/Tailoring:small|[Temporal Loom]|58+ tailoring skill:tailoring10:1 profperk:tailoring10:40050|60.92 80.21|tooltip|[spell]Chronocloth Tailoring]", -- Only show if the first node of Chronocloth Tailoring is learned
