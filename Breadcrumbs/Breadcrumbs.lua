@@ -1851,6 +1851,9 @@ function Breadcrumbs:Validate(str)
 					-- achievement:x
 					if string.match(v, "^achievement:(%d+)$") and select(13, GetAchievementInfo(tonumber(string.match(v, "achievement:(%d+)") or 0))) then pass = true end
 
+					-- achievement:x:n
+					if string.match(v, "^achievement:(%d+):(%d+)$") and select(13, GetAchievementCriteriaInfo(tonumber(string.match(v, "achievement:(%d+):%d+") or 0), tonumber(string.match(v, "achievement:%d+:(%d+)") or 0))) then pass = true end
+
 					-- accachievement:x
 					if string.match(v, "^accachievement:(%d+)$") and select(4, GetAchievementInfo(tonumber(string.match(v, "accachievement:(%d+)") or 0))) then pass = true end
 					
@@ -1940,6 +1943,9 @@ function Breadcrumbs:Validate(str)
 
 						-- -achievement:n
 						if string.match(w, "^achievement:(%d+)$") and select(13, GetAchievementInfo(tonumber(string.match(w, "achievement:(%d+)") or 0))) then pass = false end
+
+						-- achievement:x:n
+						if string.match(w, "^achievement:(%d+):(%d+)$") and select(13, GetAchievementCriteriaInfo(tonumber(string.match(w, "achievement:(%d+):%d+") or 0), tonumber(string.match(w, "achievement:%d+:(%d+)") or 0))) then pass = false end
 
 						-- -accachievement:n
 						if string.match(w, "^accachievement:(%d+)$") and select(4, GetAchievementInfo(tonumber(string.match(w, "accachievement:(%d+)") or 0))) then pass = false end

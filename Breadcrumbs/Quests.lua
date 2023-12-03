@@ -130,6 +130,7 @@ Data.HiddenBonusObjectiveQuests = {
 		spell:x			Must know spell with ID x
 
 		achievement:x	Must have earned achievement with ID x on this character
+		achievement:x:n	Must have completed criteria number n of achievement with ID x on this character
 		accachievement:x  Must have earned achievement with ID x on any character
 
 		broken			Quest is broken and cannot be completed, it will be hidden unless the user has decided to display broken quests
