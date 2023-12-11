@@ -92,7 +92,8 @@ Data.Vignettes = {
 		[78033] = {
 			"Magical Bloom|70+ §76320 -achievement:19317:5|61.62 59.58|\"You are currently phased out from this treasure due to a quest\"|treasure item:208047 atlas:vignetteloot-locked|Contains|!{656681} [epic]Gigantic Dreamseed]|!{5172976} [Flightstones]|!{2065578} [Dragon Isles Supplies]||Grants Reputation|!{5244643} [Dream Wardens] (200)",
 			"Magical Bloom|70+ ~76320 -achievement:19317:5|61.62 59.58|\"Chase the nearby [unfriendly]Laughing Podling] to unlock the treasure\"|treasure item:208047 atlas:vignetteloot-locked|Contains|!{656681} [epic]Gigantic Dreamseed]|!{5172976} [Flightstones]|!{2065578} [Dragon Isles Supplies]||Grants Reputation|!{5244643} [Dream Wardens] (200)",
-			"[unfriendly]Laughing Podling]|70+ ~76320 -achievement:19317:5|64.34 61.31|Magical Bloom|treasure atlas:questobjective",
+			"[unfriendly]Laughing Podling]|70+ ~76320 -achievement:19317:5|64.34 61.31|Magical Bloom|treasure atlas:questobjective|\"First location\"",
+			"[unfriendly]Laughing Podling]|70+ ~76320 -achievement:19317:5|62.95 60.39|Magical Bloom|treasure atlas:questobjective|\"Second location\"",
 		},
 		[78005] = {
 			"Magical Bloom|78033 §76320 -achievement:19317:5|61.62 59.58|\"You are currently phased out from this treasure due to a quest\"|treasure item:208047 atlas:vignetteloot-locked|Contains|!{656681} [epic]Gigantic Dreamseed]|!{5172976} [Flightstones]|!{2065578} [Dragon Isles Supplies]||Grants Reputation|!{5244643} [Dream Wardens] (200)",
@@ -108,7 +109,7 @@ Data.Vignettes = {
 		[78107] = "Boon of Ursol|78095|47.08 53.05||treasure item:210434|Contains|!{1629944} [rare]Visage of Ursol]",
 		[78367] = {
 			"Statue of the Sky Mistress|70+ dracthyr|64.22 19.27||treasure item:210659|Boon of Aviana|!{237472} [rare]Branch of Aviana]",
-			"Statue of the Sky Mistress|70+ druid -dracthyr|64.22 19.27|\"Shift into {165962} [spell]Flight Form] to unlock the treasure\"|treasure item:210659|Boon of Aviana|!{237472} [rare]Branch of Aviana]",
+			"Statue of the Sky Mistress|70+ druid -dracthyr|64.22 19.27|\"Shift into {132128} [spell]Flight Form] to unlock the treasure\"|treasure item:210659|Boon of Aviana|!{237472} [rare]Branch of Aviana]",
 			"Statue of the Sky Mistress|70+ -druid -dracthyr|64.22 19.27|\"Use the nearby [Mark of Aviana] to unlock the treasure\"|treasure item:210659|Boon of Aviana|!{237472} [rare]Branch of Aviana]",
 			"[Mark of Aviana]|70+ -dracthyr -druid|59.93 18.96|Statue of the Sky Mistress|treasure atlas:questobjective",
 		},
@@ -142,10 +143,9 @@ Data.Vignettes = {
 			"Statue of the Ashen Panther|70+ ~76506 druid|63.96 35.05|\"Shift into {132115} [spell]Cat Form] to unlock the treasure\"|treasure item:210631|Boon of Ashamane|{237473} [rare]Branch of Ashamane]",
 			"Statue of the Ashen Panther|70+ ~76506 hunter -nightelf|63.96 35.05|\"Use {461113} [spell]Camouflage] or the nearby [Mark of Ashamane] to unlock the treasure\"|treasure item:210631|Boon of Ashamane|{237473} [rare]Branch of Ashamane]",
 			"Statue of the Ashen Panther|70+ ~76506 hunter nightelf|63.96 35.05|\"Use {461113} [spell]Camouflage], {132089} [spell]Shadowmeld] or the nearby [Mark of Ashamane] to unlock the treasure\"|treasure item:210631|Boon of Ashamane|{237473} [rare]Branch of Ashamane]",
-			"Statue of the Ashen Panther|70+ ~76506 rogue|63.96 35.05|\"Use {132320} [spell]Stealth] to unlock the treasure\"|treasure item:210631|Boon of Ashamane|{237473} [rare]Branch of Ashamane]",
-			"Statue of the Ashen Panther|70+ ~76506 nightelf -druid -hunter -rogue|63.96 35.05|\"Use {132089} [spell]Shadowmeld] or the nearby [Mark of Ashamane] to unlock the treasure\"|treasure item:210631|Boon of Ashamane|{237473} [rare]Branch of Ashamane]",
-			"Statue of the Ashen Panther|70+ ~76506 -nightelf -druid -hunter -rogue|63.96 35.05|\"Use the nearby [Mark of Ashamane] to unlock the treasure\"|treasure item:210631|Boon of Ashamane|{237473} [rare]Branch of Ashamane]",
-			"[Mark of Ashamane]|70+ ~76506 -rogue -druid|62.5 60.07|Statue of the Ashen Panther|treasure atlas:questobjective",
+			"Statue of the Ashen Panther|70+ ~76506 nightelf -druid -hunter|63.96 35.05|\"Use {132089} [spell]Shadowmeld] or the nearby [Mark of Ashamane] to unlock the treasure\"|treasure item:210631|Boon of Ashamane|{237473} [rare]Branch of Ashamane]",
+			"Statue of the Ashen Panther|70+ ~76506 -nightelf -druid -hunter|63.96 35.05|\"Use the nearby [Mark of Ashamane] to unlock the treasure\"|treasure item:210631|Boon of Ashamane|{237473} [rare]Branch of Ashamane]",
+			"[Mark of Ashamane]|70+ ~76506 -druid|62.5 60.07|Statue of the Ashen Panther|treasure atlas:questobjective",
 		},
 		[78359] = {
 			"Boon of Ashamane|78365 §76506|63.51 36.24|\"You are currently phased out from this treasure due to a world quest\"|treasure item:210631 atlas:vignetteloot-locked|Contains|{237473} [rare]Branch of Ashamane]",
@@ -996,6 +996,21 @@ Data.Vignettes = {
 		[39084] = "Small Treasure Chest|10+|43.22 54.88||treasure|Contains|!{1397630} [Order Resources]",
 		[39085] = "Small Treasure Chest|10+|40.51 44.69||treasure down link:642|Contains|!{1397630} [Order Resources]", -- Darkpens
 		[44139] = "Small Treasure Chest|10+|63.91 45.57||treasure|Contains|!{1397630} [Order Resources]",
+
+		-- Vignette
+		[40079] = {
+			"Lyrath Moonfeather|10+ cloth|61.83 29.61||vignette item:130118|Drops|!{1113073} [rare]Moonfeather Handwraps]|!{1397630} [Order Resources]",
+			"Lyrath Moonfeather|10+ -cloth|61.83 29.61||vignette|Drops|!{1397630} [Order Resources]",
+		},
+		[40079] = {
+			"Wrathtalon|10+ leather|66.67 36.78||vignette item:130116|Drops|!{1115105} [rare]Twisted Wraithtalon Gloves]|!{1397630} [Order Resources]",
+			"Wrathtalon|10+ -leather|66.67 36.78||vignette|Drops|!{1397630} [Order Resources]",
+		},
+		[38780] = {
+			"Thondrax|10+ mail|62.66 47.52||vignette item:130121|Drops|!{1116923} [rare]Thondrax's Night-Runed Bands]|!{1397630} [Order Resources]",
+			"Thondrax|10+ -mail|62.66 47.52||vignette|Drops|!{1397630} [Order Resources]",
+		},
+		[38767] = "Darkshade|10+|43.42 54.04||vignette item:130166|Drops|!{132225} [rare]Risen Saber Kitten]|!{1397630} [Order Resources]",
 	},
 
 	-- Darkpens
