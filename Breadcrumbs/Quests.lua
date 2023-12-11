@@ -12,7 +12,7 @@ Data.HiddenBonusObjectiveQuests = {
 	[64641] = true, -- Zereth Mortis - Mysterious Greenery
 
 	-- Dragonflight
-	[70750] = true, -- Aiding the Accord
+	[78861] = true, -- Aiding the Accord
 	[72068] = true, -- Aiding the Accord: A Feast For All
 	[72373] = true, -- Aiding the Accord: The Hunt is On
 	[72374] = true, -- Aiding the Accord: Dragonbane Keep
@@ -23,6 +23,8 @@ Data.HiddenBonusObjectiveQuests = {
 	[75861] = true, -- Aiding the Accord: Suffusion Camp
 	[78446] = true, -- Aiding the Accord: Superbloom
 	[78447] = true, -- Aiding the Accord: Emerald Bounty
+	[77976] = true, -- Aiding the Accord: Dreamsurge
+	[77254] = true, -- Aiding the Accord: Time Rift
 	[78444] = true, -- A Worthy Ally: Dream Wardens
 	[78821] = true, -- Blooming Dreamseeds
 }
@@ -112,6 +114,7 @@ Data.HiddenBonusObjectiveQuests = {
 		currency:n:x	Must have at least x or more of currency with ID n
 
 		art:y:x			Map with MapID y must currently have UiMapArtID x (see https://wago.tools/db2/UiMapXMapArt)
+		taxi:y:x		Map with MapID y must currently have a taxi node with ID x (see https://wago.tools/db2/TaxiNodes)
 
 		reputation:x:n	Must have reached standing n or higher with reputation faction x
 						Major (renown) type reputations require renown level n or higher (1 is Renown 1)
@@ -339,6 +342,7 @@ Data.Quests = {
 		[76402] = "Amirdrassil, the Dream's Hope: Fyrakk|70+ 76401|27.93 31.15|Alexstrasza the Life-Binder|raid",
 
 		-- New Beginnings
+		[77780] = "A Blossom Witnessed|70+ 76402|27.58 31.46|Tyrande Whisperwind|campaign",
 
 		-- Central Encampment
 		[78444] = "A Worthy Ally: Dream Wardens|70+ 77887|50.2 61.57|Keeper Amrymn|weekly",
@@ -2475,8 +2479,8 @@ Data.Quests = {
 		[40935] = "The Call of Vengeance|10+ deathknight 40934,40986 -40987|73.08 46.89|Revil Kost|artifact elsewhere link:42", -- 40987 is used if 2nd/3rd artifact
 
 		-- Demon Hunter - The Illidari
-		[39047] = "Call of the Illidari|10+ demonhunter 44184,44663 40375|57.88 45.65|Kor'vas Bloodthorn|artifact", -- Altruis
-		[39261] = "Call of the Illidari|10+ demonhunter 44184,44663 40374|57.88 45.65|Kor'vas Bloodthorn|artifact", -- Kayn
+		[39047] = "Call of the Illidari|10+ demonhunter 44184,44663 40375|0 KorvasBloodthornLegendary|Kor'vas Bloodthorn|discovery artifact", -- Altruis
+		[39261] = "Call of the Illidari|10+ demonhunter 44184,44663 40374|0 KorvasBloodthornLegendary|Kor'vas Bloodthorn|discovery artifact", -- Kayn
 		[40816] = "The Power to Survive|10+ demonhunter 39047,39261 40375|74.98 49.02|Altruis the Sufferer|artifact", -- Altruis
 		[40814] = "The Power to Survive|10+ demonhunter 39047,39261 40374|74.98 49.02|Kayn Sunfury|artifact", -- Kayn
 		[42869] = "Eternal Vigil|10+ demonhunter 41119,39247,41863,40249|73.85 46.05|Kor'vas Bloodthorn|artifact",
@@ -2506,14 +2510,17 @@ Data.Quests = {
 		-- Demon Hunter - Destiny of the Illidari
 		[42594] = "Move Like No Other|10+ demonhunter 42593|26.03 52.08|Archmage Lan'dalock|artifact",
 
+		-- Death Knight - The Ebon Blade
+		[40714] = "The Call To War|10+ deathknight 44184,44663|0 BolvarLegendary|[Auto Accept]|discovery artifact",
+
 		-- Druid - The Dreamgrove
-		[40643] = "A Summons From Moonglade|10+ druid 44184,44663|60.39 44.99|Archdruid Hamuul Runetotem|artifact",
+		[40643] = "A Summons From Moonglade|10+ druid 44184,44663|0 ArchdruidHamuulRunetotemLegendary|Archdruid Hamuul Runetotem|discovery artifact",
 		[41106] = "Call of the Wilds|10+ druid 40643|60.39 44.99|Archdruid Hamuul Runetotem|artifact elsewhere link:80|Visit {!}Archdruid Hamuul Runetotem in Moonglade to continue the Druid Campaign",
 		[40644] = "The Dreamway|10+ druid 41106|60.39 44.99|Archdruid Hamuul Runetotem|artifact elsewhere link:80|Visit {!}Archdruid Hamuul Runetotem in Moonglade to continue the Druid Campaign",
 		[40645] = "To The Dreamgrove|10+ druid 40644|60.39 44.99|Malfurion Stormrage|artifact elsewhere link:80|Visit {!}Malfurion Stormrage in Moonglade to continue the Druid Campaign",
 
 		-- Hunter - Path of the Hunter
-		[40384] = "Needs of the Hunters|10+ hunter 44184,44663|61.27 44.89|Snowfeather|artifact",
+		[40384] = "Needs of the Hunters|10+ hunter 44184,44663|0 SnowfeatherLegendary|Snowfeather|discovery artifact",
 		[41415] = "The Hunter's Call|10+ hunter 40384|60.04 53.46|Emmarel Shadewarden|artifact",
 		[40618] = "Weapons of Legend|10+ hunter 41415|60.04 53.46|Emmarel Shadewarden|artifact",
 
@@ -2538,12 +2545,36 @@ Data.Quests = {
 		[40955] = "Oath of Service|10+ hunter 40954|72.83 41.19|Emmarel Shadewarden|artifact elsewhere link:739|Visit {!}Emmarel Shadewarden in Trueshot Lodge to continue the Hunter Campaign",
 		[40958] = "Tactical Matters|10+ hunter 40955|72.83 41.19|Emmarel Shadewarden|artifact elsewhere link:739|Visit {!}Emmarel Shadewarden in Trueshot Lodge to continue the Hunter Campaign",
 		[40959] = "The Campaign Begins|10+ hunter 40958|72.83 41.19|Tactician Tinderfell|artifact elsewhere link:739|Visit {!}Tactician Tinderfell in Trueshot Lodge to continue the Hunter Campaign",
+
+		-- Mage - The Tirisgarde Reborn
+		[41035] = "Felstorm's Plea|10+ mage 44184,44663|0 MerylFelstormLegendary|[Auto Accept]|discovery artifact",
+
+		-- Monk - The Broken Temple
+		[12103] = "Before the Storm|10+ monk 44184,44663|0 InitiateDaNelLegendary|Initiate Da-Nel|discovery artifact",
+
+		-- Paladin - The Silver Hand
+		[38710] = "An Urgent Gathering|10+ paladin 44184,44663|0 LordMaxwellTyrosusLegendary|Lord Maxwell Tyrosus|discovery artifact",
+
+		-- Priest - Light and the Void
+		[40705] = {
+			"Priestly Matters|10+ priest alliance 44184,44663|0 HoodedPriestessAllianceLegendary|Hooded Priestess|discovery artifact",
+			"Priestly Matters|10+ priest horde 44184,44663|0 HoodedPriestessHordeLegendary|Hooded Priestess|discovery artifact",
+		},
+
+		-- Rogue - The Uncrowned
+		[40832] = "Call of The Uncrowned|10+ rogue 44184,44663|0 RavenholdtCourierLegendary|Ravenholdt Courier|discovery artifact",
+
+		-- Shaman - A Ring Unbroken
+		[39746] = "A Ring Unbroken|10+ shaman 44184,44663|47.29 33.45|Thrall|artifact",
 		
 		-- Warrior - Becoming Valarjar
-		[42814] = "An Important Mission|10+ warrior alliance 44184,44663|0 QuestionMark|Sergeant Dalton|discovery artifact", -- Alliance
-		[41052] = "A Desperate Plea|10+ warrior horde 44184,44663|0 QuestionMark|Eitrigg|discovery artifact", -- Horde
+		[42814] = "An Important Mission|10+ warrior alliance 44184,44663|0 SergeantDaltonLegendary|Sergeant Dalton|discovery artifact", -- Alliance
+		[41052] = "A Desperate Plea|10+ warrior horde 44184,44663|0 EitriggLegendary|Eitrigg|discovery artifact", -- Horde
 		[42815] = "Return to the Broken Shore|10+ warrior alliance 42814|74.59 44.98|Danath Trollbane|artifact", -- Alliance
 		--[38904] = "Return to the Broken Shore|10+ warrior alliance 41052|COORDS|High Overlord Saurfang|artifact", -- Horde
+
+		-- Warlock - Council of the Black Harvest
+		[40716] = "The Sixth|10+ warlock 44184,44663|0 RitssynFlamescowlLegendary|Ritssyn Flamescowl|discovery artifact",
 
 		-- Other classes
 		[72129] = "Aiding Khadgar|10+ -deathknight -demonhunter -druid -hunter -mage -monk -paladin -priest -rogue -shaman -warlock -warrior 44184,44663|28.49 48.34|Archmage Khadgar|artifact", -- Auto Accept
@@ -3471,7 +3502,7 @@ Data.Quests = {
 		[38647] = "For the Corn!|10+ 38643,39149|38.8 61.4|Granny Marl",
 		[39117] = "Shriek No More|10+ 38643,39149|37 58.4|Cecily Radcliffe",
 		[38711] = "The Warden's Signet|10+ 38643,39149|39.12 64.5|{1025252} [Warden's Signet]||Drops from [hostile]Lelyn Swiftshadow]",
-		[39015] = "Grumpy|10+|38.64 65.64|Grumpy||Available after walking through the fire to the top floor of Heathrow Manor",
+		[39015] = "Grumpy|10+|38.64 65.64|Grumpy||\"Available after walking through the fire to the top floor of Heathrow Manor\"",
 
 		-- Black Rook Hold
 		-- TODO:: check which quests can be picked up at the same time, and check 38721 coordinates
@@ -3480,9 +3511,9 @@ Data.Quests = {
 		[38714] = "Maiev's Trail|10+ 38718|40.8 53|Commander Jarod Shadowsong",
 		[38715] = "The Rook's Guard|10+ 38718|40.8 53|Commander Jarod Shadowsong",
 		[38717] = "Black Rook Prison|10+ 38714 38715|43.82 50.29 40.8 53 40.8 53|Commander Jarod Shadowsong",
-		[38724] = "Brotherly Love|10+ 38717 -demonhunter|40.58 44.28|Commander Jarod Shadowsong",
-		[44457] = "Brotherly Love|10+ 38717 demonhunter|40.58 44.28|Commander Jarod Shadowsong", -- Demon Hunter
-		[38721] = "Lieutenant of the Tower|10+ 38724,44457|39.48 42.1|Maiev Shadowsong",
+		[38724] = "Brotherly Love|10+ 38717 -demonhunter|40.58 44.28|Commander Jarod Shadowsong|down link:642",
+		[44457] = "Brotherly Love|10+ 38717 demonhunter|40.58 44.28|Commander Jarod Shadowsong|down link:642", -- Demon Hunter
+		[38721] = "Lieutenant of the Tower|10+ 38724,44457|39.48 42.1|Maiev Shadowsong|down link:642",
 		[38719] = "Illidari Freedom|10+ 38717 -demonhunter|40.6 44.2|Arduen Soulblade",
 		[44278] = "Illidari Freedom|10+ 38717 demonhunter|40.6 44.2|Arduen Soulblade", -- Demon Hunter
 
@@ -4318,7 +4349,139 @@ Data.Quests = {
 
 	--[[ Krokuun ]]--
 
+	-- The Vindicaar, Upper Deck
+	[831] = {
+		-- Assault on Argus
+		[46938] = "Alone in the Abyss|45+ 48440|40.27 23.62|Prophet Velen",
+		[48500] = "A Moment of Respite|45+ 46843|40.27 23.62|Prophet Velen",
+
+		-- The Light Mother
+		[47431] = "Gathering Light|45+ 48500|42.02 25.76|High Exarch Turalyon",
+		[47743] = "The Child of Light and Shadow|45+ 47653|42.09 25.72|High Exarch Turalyon",
+		[49143] = "Essence of the Light Mother|45+ 47743|45.47 35.43|Prophet Velen|artifact",
+		[48559] = "An Offering of Light|45+ 49143|45.47 35.43|Prophet Velen|artifact",
+
+		-- The Heart of Argus
+		[48199] = "The Burning Heart|45+ 48559|40.27 23.62|Prophet Velen",
+
+		-- Nath'raxas Assault
+		[47889] = "The Speaker Calls|45+ 47473,48929|39.13 24.9|High Exarch Turalyon",
+
+		-- The Vindicaar
+		[49445] = "The Prime Exchange|45+|39.61 65.12|Maras|link:832", -- unknown prereq
+		[47287] = {
+			"The Vindicaar Matrix Core|45+ 47743 -48559|43.21 27.82|Grand Artificer Romuul",
+			"The Vindicaar Matrix Core|45+ 47743 48559|43.41 23.31|Grand Artificer Romuul",
+		},
+		[48799] = "Fuel of a Doomed World|45+ 47473,48929|39.13 24.9|High Exarch Turalyon|weekly",
+
+		-- Invasion Points
+		[48513] = "Invasion Point Offensive|45+ 48440|40.1 19.43|Illidan Stormrage",
+
+		-- Antorus, the Burning Throne
+		[49014] = "The Burning Throne|45+ 48559 -47654 -48203|39.13 24.9|High Exarch Turalyon",
+		[48203] = "The Burning Throne|45+ 48559 47654 -49014|39.13 24.9|High Exarch Turalyon",
+	},
+
+	-- The Vindicaar, Lower Deck
+	[832] = {
+		-- Assault on Argus
+		[46938] = "Alone in the Abyss|45+ 48440|40.27 23.62|Prophet Velen|link:831",
+		[48500] = "A Moment of Respite|45+ 46843|40.27 23.62|Prophet Velen|link:831",
+
+		-- The Light Mother
+		[47431] = "Gathering Light|45+ 48500|42.02 25.76|High Exarch Turalyon|link:831",
+		[47743] = "The Child of Light and Shadow|45+ 47653|42.09 25.72|High Exarch Turalyon|link:831",
+		[49143] = "Essence of the Light Mother|45+ 47743|45.47 35.43|Prophet Velen|artifact link:831",
+		[48559] = "An Offering of Light|45+ 49143|45.47 35.43|Prophet Velen|artifact link:831",
+
+		-- The Heart of Argus
+		[48199] = "The Burning Heart|45+ 48559|40.27 23.62|Prophet Velen|link:831",
+
+		-- Nath'raxas Assault
+		[47889] = "The Speaker Calls|45+ 47473,48929|39.13 24.9|High Exarch Turalyon|link:831",
+
+		-- The Vindicaar
+		[49445] = "The Prime Exchange|45+|39.61 65.12|Maras", -- unknown prereq
+		[47287] = {
+			"The Vindicaar Matrix Core|45+ 47743 -48559|43.21 27.82|Grand Artificer Romuul|link:831",
+			"The Vindicaar Matrix Core|45+ 47743 48559|43.41 23.31|Grand Artificer Romuul|link:831",
+		},
+		[48799] = "Fuel of a Doomed World|45+ 47473,48929|39.13 24.9|High Exarch Turalyon|weekly link:831",
+
+		-- Invasion Points
+		[48513] = "Invasion Point Offensive|45+ 48440|40.1 19.43|Illidan Stormrage|link:831",
+
+		-- Antorus, the Burning Throne
+		[49014] = "The Burning Throne|45+ 48559 -47654 -48203|39.13 24.9|High Exarch Turalyon|link:831",
+		[48203] = "The Burning Throne|45+ 48559 47654 -49014|39.13 24.9|High Exarch Turalyon|link:831",
+	},
+
+	-- Krokuun
 	[830] = {
+		-- Assault on Argus
+		[46938] = "Alone in the Abyss|45+ 48440|61.76 86.82|Prophet Velen|link:831",
+		[47589] = "Righteous Fury|45+ 46938|60.82 79.4|Prophet Velen",
+		[46297] = "Overwhelming Power|45+ 46938|60.92 79.22|Illidan Stormrage",
+		[48483] = "A Stranger's Plea|45+ 46938|58.76 78.36|Chieftain Hatuun",
+		[47627] = "Vengeance|45+ 47589 46297 48483|54.33 75.25|Illidan Stormrage",
+		[47641] = "Signs of Resistance|45+ 47627|54.24 75.43|Prophet Velen",
+		[46732] = "The Prophet's Gambit|45+ 47641|59.91 69.14|Prophet Velen",
+		[46816] = "Rendezvous|45+ 46732|56.65 67.43|High Exarch Turalyon",
+		[46839] = "From Darkness|45+ 46816|56.65 67.43|High Exarch Turalyon",
+		[46841] = "Threat Reduction|45+ 46839|59.95 66.36|High Exarch Turalyon",
+		[46840] = "Prisoners No More|45+ 46839|59.95 66.36|High Exarch Turalyon",
+		[46842] = "A Strike at the Heart|45+ 46841 46840|50.4 53.83|High Exarch Turalyon",
+		[46843] = "Return to the Vindicaar|45+ 46842|51.56 52.8|High Exarch Turalyon",
+		[48500] = "A Moment of Respite|45+ 46843|61.76 86.82|Prophet Velen|link:831",
+
+		-- The Light Mother
+		[47431] = "Gathering Light|45+ 48500|61.9 86.99|High Exarch Turalyon|link:831",
+		[46213] = "Crystals Not Included|45+ 47431|40.51 63.63|Captain Fareeya",
+		[47541] = "The Best Prevention|45+ 47431|40.64 64.35|Grand Lector Enaara",
+		[40238] = "A Grim Equation|45+ 47431|39.93 63.12|Grand Vindicator Sorvos",
+		[47508] = "Fire At Will|45+ 46213 47541 40238|31.82 71.84|Archmage Y'mera",
+		[47771] = "Locating the Longshot|45+ 47508|31.82 71.84|Archmage Y'mera",
+		[47526] = "Bringing the Big Guns|45+ 47771|31.45 63.79|Baraat the Longshot",
+		[47754] = "Lightly Roasted|45+ 47526|31.69 58.22|Image of Grand Artificer Romuul",
+		[47652] = "The Light Mother|45+ 47754|36.34 56.93|High Exarch Turalyon",
+		[47653] = "Light's Return|45+ 47652|37.37 53.55|High Exarch Turalyon",
+		[47743] = "The Child of Light and Shadow|45+ 47653|61.91 86.99|High Exarch Turalyon|link:831",
+		[49143] = "Essence of the Light Mother|45+ 47743|62.18 87.76|Prophet Velen|artifact link:831",
+		[48559] = "An Offering of Light|45+ 49143|62.18 87.76|Prophet Velen|artifact link:831",
+
+		-- The Heart of Argus
+		[48199] = "The Burning Heart|45+ 48559|62.18 87.76|Prophet Velen|link:831",
+
+		-- Nath'raxas Assault
+		[47889] = "The Speaker Calls|45+ 47473,48929|61.67 86.92|High Exarch Turalyon|link:831",
+
+		-- Petrified Forest
+		[48460] = "The Wranglers|45+ !46732 -47967|56.56 67.56|Chieftain Hatuun", -- Breadcrumb for 47967
+		[47967] = "An Argus Roper|45+ !46732 ~48460|64.44 62.6|Lead Rider Jerek", -- Invalidates breadcrumb 48460
+		[48455] = "Duskcloak Problem|45+ !46732|64.44 62.6|Lead Rider Jerek", -- Check req
+		[48453] = "Strike Back|45+ 47967 48455|64.44 62.6|Lead Rider Jerek",
+		[48544] = "Woah, Nelly!|45+ 48453|64.44 62.6|Lead Rider Jerek",
+
+		-- The Vindicaar
+		[49445] = "The Prime Exchange|45+|61.71 90.12|Maras|link:832", -- unknown prereq
+		[47287] = "The Vindicaar Matrix Core|45+ 47743|62 87.15|Grand Artificer Romuul|link:831",
+		[48799] = "Fuel of a Doomed World|45+ 47473,48929|61.67 86.92|High Exarch Turalyon|weekly link:831",
+
+		-- Invasion Points
+		[48513] = "Invasion Point Offensive|45+ 48440|61.75 86.48|Illidan Stormrage|link:831",
+
+		-- Antorus, the Burning Throne
+		[49014] = "The Burning Throne|45+ 48559 -47654 -48203|61.67 86.92|High Exarch Turalyon|link:831",
+		[48203] = "The Burning Throne|45+ 48559 47654 -49014|61.67 86.92|High Exarch Turalyon|link:831",
+
+		-- Dragonflight - Seeing Red
+		[77410] = "Opening Wounds|70+ 77409|53.75 68.1|Chieftain Hatuun|important",
+		[77411] = "Contrition|70+ 77410|53.79 68.23|Arzal'kal|important",
+		[77789] = "Severing Ties|70+ +77411|63.49 42.49|Arzal'kal|important",
+		[77412] = "Proof and Promise|70+ 77411 77789|63.49 42.49|Arzal'kal|important",
+		[77795] = "Scavenged Artifacts|70+ 77412|56.9 68.66|Gaal|important",
+
 		-- Mining - Empyrium
 		[48034] = "Empyrium Deposit Chunk|45+ mining|8 EmpyriumDeposit|{962048} [Empyrium Deposit Chunk]|mining discovery|Mined from Empyrium Deposits",
 		[48035] = "Angling For a Better Strike|45+ mining 48034|8 EmpyriumDeposit|{237286} [Empyrium Dust]|mining discovery|Mined from Empyrium Deposits",
@@ -4331,7 +4494,73 @@ Data.Quests = {
 
 	--[[ Antoran Wastes ]]--
 
+	-- The Vindicaar, Upper Deck
+	[886] = {
+		-- The Heart of Argus
+		[48200] = "Securing a Foothold|45+ 48199|33.51 58.32|High Exarch Turalyon",
+		[48201] = "Reinforce Light's Purchase|45+ 48200 taxi:885:1992|33.51 58.32|High Exarch Turalyon", -- Light's Purchase
+		[48202] = "Reinforce the Veiled Den|45+ 48200 taxi:885:1993|33.51 58.32|High Exarch Turalyon", -- The Veiled Den
+
+		-- Nath'raxas Assault
+		[47889] = "The Speaker Calls|45+ 47473,48929|33.51 58.32|High Exarch Turalyon",
+
+		-- The Vindicaar
+		[47287] = "The Vindicaar Matrix Core|45+ 47743 48559|32.72 55.53|Grand Artificer Romuul",
+		[48799] = "Fuel of a Doomed World|45+ 47473,48929|33.51 58.32|High Exarch Turalyon|weekly",
+
+		-- Invasion Points
+		[48513] = "Invasion Point Offensive|45+ 48440|29.89 59.23|Illidan Stormrage",
+
+		-- Antorus, the Burning Throne
+		[49014] = "The Burning Throne|45+ 48559 -47654 -48203|33.51 58.32|High Exarch Turalyon",
+		[48203] = "The Burning Throne|45+ 48559 47654 -49014|33.51 58.32|High Exarch Turalyon",
+	},
+
+	-- The Vindicaar, Lower Deck
+	[887] = {
+		-- The Heart of Argus
+		[48200] = "Securing a Foothold|45+ 48199|33.51 58.32|High Exarch Turalyon|link:886",
+		[48201] = "Reinforce Light's Purchase|45+ 48200 taxi:885:1992|33.51 58.32|High Exarch Turalyon|link:886", -- Light's Purchase
+		[48202] = "Reinforce the Veiled Den|45+ 48200 taxi:885:1993|33.51 58.32|High Exarch Turalyon|link:886", -- The Veiled Den
+
+		-- Nath'raxas Assault
+		[47889] = "The Speaker Calls|45+ 47473,48929|33.51 58.32|High Exarch Turalyon|link:886",
+
+		-- The Vindicaar
+		[47287] = "The Vindicaar Matrix Core|45+ 47743 48559|32.72 55.53|Grand Artificer Romuul|link:886",
+		[48799] = "Fuel of a Doomed World|45+ 47473,48929|33.51 58.32|High Exarch Turalyon|weekly link:886",
+
+		-- Invasion Points
+		[48513] = "Invasion Point Offensive|45+ 48440|29.89 59.23|Illidan Stormrage|link:886",
+
+		-- Antorus, the Burning Throne
+		[49014] = "The Burning Throne|45+ 48559 -47654 -48203|33.51 58.32|High Exarch Turalyon|link:886",
+		[48203] = "The Burning Throne|45+ 48559 47654 -49014|33.51 58.32|High Exarch Turalyon|link:886",
+	},
+
+	-- Antoran Wastes
 	[885] = {
+		-- The Heart of Argus
+		[48200] = "Securing a Foothold|45+ 48199|75.86 37.56|High Exarch Turalyon|link:886",
+		[48201] = "Reinforce Light's Purchase|45+ 48200 taxi:885:1992|75.86 37.56|High Exarch Turalyon|link:886", -- Light's Purchase
+		[48202] = "Reinforce the Veiled Den|45+ 48200 taxi:885:1993|75.86 37.56|High Exarch Turalyon|link:886", -- The Veiled Den
+		[47473] = "Sizing Up The Opposition|45+ 48201 taxi:885:1992 -48929|72.39 74.85|Alleria Windrunner", -- Light's Purchase
+		[48929] = "Sizing Up The Opposition|45+ 48202 taxi:885:1993 -47473|68.8 26|Illidan Stormrage|link:886", -- The Veiled Den
+
+		-- Nath'raxas Assault
+		[47889] = "The Speaker Calls|45+ 47473,48929|75.86 37.56|High Exarch Turalyon|link:886",
+
+		-- The Vindicaar
+		[47287] = "The Vindicaar Matrix Core|45+ 47743 48559|75.79 37.29|Grand Artificer Romuul|link:886",
+		[48799] = "Fuel of a Doomed World|45+ 47473,48929|75.86 37.56|High Exarch Turalyon|weekly link:886",
+
+		-- Invasion Points
+		[48513] = "Invasion Point Offensive|45+ 48440|75.51 37.65|Illidan Stormrage|link:886",
+
+		-- Antorus, the Burning Throne
+		[49014] = "The Burning Throne|45+ 48559 -47654 -48203|75.86 37.56|High Exarch Turalyon|link:886",
+		[48203] = "The Burning Throne|45+ 48559 47654 -49014|75.86 37.56|High Exarch Turalyon|link:886",
+
 		-- Mining - Empyrium
 		[48034] = "Empyrium Deposit Chunk|45+ mining|8 EmpyriumDeposit|{962048} [Empyrium Deposit Chunk]|mining discovery|Mined from Empyrium Deposits",
 		[48035] = "Angling For a Better Strike|45+ mining 48034|8 EmpyriumDeposit|{237286} [Empyrium Dust]|mining discovery|Mined from Empyrium Deposits",
@@ -4344,7 +4573,65 @@ Data.Quests = {
 
 	--[[ Eredath ]]--
 
+	-- The Vindicaar, Upper Deck
+	[883] = {
+		-- The Burning Heart
+		[48199] = "The Burning Heart|45+ 48559|47 23.26|Prophet Velen",
+
+		-- Nath'raxas Assault
+		[47889] = "The Speaker Calls|45+ 47473,48929|45.84 23.94|High Exarch Turalyon",
+
+		-- The Vindicaar
+		[47287] = "The Vindicaar Matrix Core|45+ 47743 48559|49.68 23.82|Grand Artificer Romuul",
+		[48799] = "Fuel of a Doomed World|45+ 47473,48929|45.84 23.94|High Exarch Turalyon|weekly",
+
+		-- Invasion Points
+		[48513] = "Invasion Point Offensive|45+ 48559|47.37 19.7|Illidan Stormrage",
+
+		-- Antorus, the Burning Throne
+		[49014] = "The Burning Throne|45+ 48559 -47654 -48203|45.84 23.94|High Exarch Turalyon",
+		[48203] = "The Burning Throne|45+ 48559 47654 -49014|45.84 23.94|High Exarch Turalyon",
+	},
+
+	-- The Vindicaar, Lower Deck
+	[884] = {
+		-- The Burning Heart
+		[48199] = "The Burning Heart|45+ 48559|47 23.26|Prophet Velen|link:883",
+
+		-- Nath'raxas Assault
+		[47889] = "The Speaker Calls|45+ 47473,48929|45.84 23.94|High Exarch Turalyon|link:883",
+
+		-- The Vindicaar
+		[47287] = "The Vindicaar Matrix Core|45+ 47743 48559|49.68 23.82|Grand Artificer Romuul|link:883",
+		[48799] = "Fuel of a Doomed World|45+ 47473,48929|45.84 23.94|High Exarch Turalyon|weekly link:883",
+
+		-- Invasion Points
+		[48513] = "Invasion Point Offensive|45+ 48559|47.37 19.7|Illidan Stormrage|link:883",
+
+		-- Antorus, the Burning Throne
+		[49014] = "The Burning Throne|45+ 48559 -47654 -48203|45.84 23.94|High Exarch Turalyon|link:883",
+		[48203] = "The Burning Throne|45+ 48559 47654 -49014|45.84 23.94|High Exarch Turalyon|link:883",
+	},
+
+	-- Eredath
 	[882] = {
+		-- The Burning Heart
+		[48199] = "The Burning Heart|45+ 48559|51.42 87.01|Prophet Velen|link:883",
+
+		-- Nath'raxas Assault
+		[47889] = "The Speaker Calls|45+ 47473,48929|51.3 87.09|High Exarch Turalyon|link:883",
+
+		-- The Vindicaar
+		[47287] = "The Vindicaar Matrix Core|45+ 47743 48559|51.7 87.07|Grand Artificer Romuul|link:883",
+		[48799] = "Fuel of a Doomed World|45+ 47473,48929|51.3 87.09|High Exarch Turalyon|weekly link:883",
+
+		-- Invasion Points
+		[48513] = "Invasion Point Offensive|45+ 48559|51.46 86.64|Illidan Stormrage|link:883",
+
+		-- Antorus, the Burning Throne
+		[49014] = "The Burning Throne|45+ 48559 -47654 -48203|51.3 87.09|High Exarch Turalyon|link:883",
+		[48203] = "The Burning Throne|45+ 48559 47654 -49014|51.3 87.09|High Exarch Turalyon|link:883",
+
 		-- Mining - Empyrium
 		[48034] = "Empyrium Deposit Chunk|45+ mining|8 EmpyriumDeposit|{962048} [Empyrium Deposit Chunk]|mining discovery|Mined from Empyrium Deposits",
 		[48035] = "Angling For a Better Strike|45+ mining 48034|8 EmpyriumDeposit|{237286} [Empyrium Dust]|mining discovery|Mined from Empyrium Deposits",
@@ -4352,6 +4639,38 @@ Data.Quests = {
 		[48037] = "Empyrium Seam Chunk|45+ mining|9 EmpyriumSeam|{962048} [Empyrium Seam Chunk]|mining discovery|Mined from Empyrium Seams",
 		[48038] = "Don't Just Pick At It|45+ mining 48037|9 EmpyriumSeam|{667492} [Embedded Empyrium Ore]|mining discovery|Mined from Empyrium Seams",
 		[48039] = "Balancing the Break|45+ mining 48038|9 EmpyriumSeam|{961620} [Empyrium Bits]|mining discovery|Mined from Empyrium Seams",
+	},
+
+
+	--[[ Azuremyst Isle (Legion Timeline) ]]--
+
+	-- The Vindicaar, Azuremyst Isle
+	[893] = {
+		-- To Argus!
+		[48440] = "Into the Night|45+ 47224|39.18 78.38|Prophet Velen",
+	},
+
+	-- The Exodar
+	[892] = {
+		-- To Argus!
+		[47224] = "The Vindicaar|45+ 47223|33.77 65.52|Prophet Velen",
+		[48440] = "Into the Night|45+ 47224|33.67 66.37|Prophet Velen|elsewhere link:893|\"Use the Lightforged Beacon in the Vault of Lights to board The Vindicaar\"",
+	},
+
+	-- Azuremyst Isle
+	[891] = {
+		-- To Argus!
+		[47223] = "Light's Exodus|45+ 47222,47867|20.63 53.26|Vindicator Boros",
+		[47224] = "The Vindicaar|45+ 47223|22.68 47.07|Prophet Velen|down link:892",
+		[48440] = "Into the Night|45+ 47224|22.68 47.07|Prophet Velen|elsewhere link:892|\"Use the Lightforged Beacon in The Exodar to board The Vindicaar\"",
+	},
+
+
+	--[[ The Vindicaar, Azeroth ]]--
+
+	[940] = {
+		-- Dragonflight - Seeing Red
+		[77409] = "Uncertainty|70+ 77408|43.22 24.96|Prophet Velen|important",
 	},
 
 
@@ -4657,30 +4976,6 @@ Data.Quests = {
 		[9625]  = "Elekks Are Serious Business|1+ 9623 -28559 alliance|81.51 51.46|Torallius the Pack Handler", -- Breadcrumb for Bloodmyst; mutually exclusive with Hero's Call 28559
 	},
 
-	-- Ammen Vale
-	[468] = {
-		[9279]  = "You Survived!|1+ -9280 draenei alliance|61.16 29.5|Megelon", -- Draenei only
-		[9280]  = "Replenishing the Healing Crystals|1+ 9279 draenei alliance|52.74 35.9|Proenitus", -- Draenei
-		[9369]  = "Replenishing the Healing Crystals|1+ -draenei alliance|52.74 35.9|Proenitus", -- Other races
-		[9409]  = "Urgent Delivery!|1+ 9280,9369 alliance|52.74 35.9|Proenitus",
-		[9283]  = "Rescue the Survivors!|1+ 9409 draenei alliance|52.07 42.63|Zalduun", -- Draenei only
-		[9371]  = "Botanist Taerix|1+ 9409 -10302 alliance|52.74 35.9|Proenitus", -- Breadcrumb for Volatile Mutations
-		[10302] = "Volatile Mutations|1+ 9280,9369 alliance|49.87 37.33|Botanist Taerix",
-		[9293]  = "What Must Be Done...|1+ 10302 alliance|49.87 37.33|Botanist Taerix",
-		[9294]  = "Healing the Lake|1+ 9293 alliance|49.87 37.33|Botanist Taerix",
-		[10304] = "Vindicator Aldar|1+ 9294 -37444 -9303 alliance|49.87 37.33|Botanist Taerix", -- Breadcrumb for Inoculation
-		[9799]  = "Botanical Legwork|1+ 10302 alliance|49.72 37.52|Apprentice Vishael",
-		[37445] = "Spare Parts|1+ 10302 -9305 alliance|50.49 47.87|Technician Zhanaa", -- Pre-6.0 version is 9305
-		[37444] = "Inoculation|1+ 10302 -9303 alliance|50.64 48.73|Vindicator Aldar", -- Pre-6.0 version is 9303
-		[9309]  = "The Missing Scout|1+ 37444,9303 alliance|50.64 48.73|Vindicator Aldar", -- check if also req 9294?
-		[10303] = "The Blood Elves|1+ 9309 alliance|33.9 69.38|Tolaan",
-		[9311]  = "Blood Elf Spy|1+ 10303 alliance|33.9 69.38|Tolaan",
-		[9798]  = "Blood Elf Plans|1+ alliance|27.79 80.42|{132319} [Blood Elf Plans]||Drops from [Surveyor Candress]",
-		[9312]  = "The Emitter|1+ 37445,9305 9311 alliance|50.64 48.73|Vindicator Aldar",
-		[9313]  = "Travel to Azure Watch|1+ 9312 alliance|50.49 47.87|Technician Zhanaa",
-		[9314]  = "Word from Azure Watch|1+ alliance|17.1 54.15|Aeun",
-	},
-
 	-- Azuremyst Isle
 	[97] = {
 		-- Ammen Vale
@@ -4769,6 +5064,30 @@ Data.Quests = {
 		[9566] = "Blood Crystals|1+ 9565 alliance|65.18 30.89|Blood Crystal",
 	},
 
+	-- Ammen Vale
+	[468] = {
+		[9279]  = "You Survived!|1+ -9280 draenei alliance|61.16 29.5|Megelon", -- Draenei only
+		[9280]  = "Replenishing the Healing Crystals|1+ 9279 draenei alliance|52.74 35.9|Proenitus", -- Draenei
+		[9369]  = "Replenishing the Healing Crystals|1+ -draenei alliance|52.74 35.9|Proenitus", -- Other races
+		[9409]  = "Urgent Delivery!|1+ 9280,9369 alliance|52.74 35.9|Proenitus",
+		[9283]  = "Rescue the Survivors!|1+ 9409 draenei alliance|52.07 42.63|Zalduun", -- Draenei only
+		[9371]  = "Botanist Taerix|1+ 9409 -10302 alliance|52.74 35.9|Proenitus", -- Breadcrumb for Volatile Mutations
+		[10302] = "Volatile Mutations|1+ 9280,9369 alliance|49.87 37.33|Botanist Taerix",
+		[9293]  = "What Must Be Done...|1+ 10302 alliance|49.87 37.33|Botanist Taerix",
+		[9294]  = "Healing the Lake|1+ 9293 alliance|49.87 37.33|Botanist Taerix",
+		[10304] = "Vindicator Aldar|1+ 9294 -37444 -9303 alliance|49.87 37.33|Botanist Taerix", -- Breadcrumb for Inoculation
+		[9799]  = "Botanical Legwork|1+ 10302 alliance|49.72 37.52|Apprentice Vishael",
+		[37445] = "Spare Parts|1+ 10302 -9305 alliance|50.49 47.87|Technician Zhanaa", -- Pre-6.0 version is 9305
+		[37444] = "Inoculation|1+ 10302 -9303 alliance|50.64 48.73|Vindicator Aldar", -- Pre-6.0 version is 9303
+		[9309]  = "The Missing Scout|1+ 37444,9303 alliance|50.64 48.73|Vindicator Aldar", -- check if also req 9294?
+		[10303] = "The Blood Elves|1+ 9309 alliance|33.9 69.38|Tolaan",
+		[9311]  = "Blood Elf Spy|1+ 10303 alliance|33.9 69.38|Tolaan",
+		[9798]  = "Blood Elf Plans|1+ alliance|27.79 80.42|{132319} [Blood Elf Plans]||Drops from [Surveyor Candress]",
+		[9312]  = "The Emitter|1+ 37445,9305 9311 alliance|50.64 48.73|Vindicator Aldar",
+		[9313]  = "Travel to Azure Watch|1+ 9312 alliance|50.49 47.87|Technician Zhanaa",
+		[9314]  = "Word from Azure Watch|1+ alliance|17.1 54.15|Aeun",
+	},
+
 
 	--[[ Durotar ]]--
 
@@ -4809,11 +5128,14 @@ Data.Quests = {
 		-- Battle for Azeroth - The Stormwind Extraction
 		[51443] = {"Battle for Azeroth: Mission Statement|10+ horde -60361 -59926|66.69 49.23|Warchief's Herald", "Battle for Azeroth: Mission Statement|10+ horde -60361 -59926|49.41 76.6|Warchief's Herald",}, -- 60361 is the Exile's Reach version
 		
-		-- Dragon Isles - The Dragonscale Expedition
+		-- Dragonflight - The Dragonscale Expedition
 		[65435] = "The Dragon Isles Await|10+ horde -70198|44.08 37.98|Ebyssian|campaign",
 		[65437] = "Aspectral Invitation|10+ horde 65435 -70198|44.08 37.98|Ebyssian|campaign",
 		[65443] = "Expeditionary Coordination|10+ horde 65437  -70198|44.19 37.79|Naleidea Rivergleam|campaign",
 		[72256] = "The Dark Talons|10+ horde 65437  -70198|44.04 38.27|Scalecommander Cindrethresh|campaign",
+
+		-- Dragonflight - Seeing Red
+		[77408] = "Prophecy Stirs|70+ horde|71.8 44.6|Knight-Lord Dranarus|important",
 
 		-- Blacksmithing
 		[2751]  = "Barbaric Battlements|15+ horde blacksmithing skill:blacksmithing1:140|76.76 37.74|Orokk Omosh|blacksmithing", -- Requires 140 skill in Classic Blacksmithing
@@ -5751,9 +6073,15 @@ Data.Quests = {
 		},
 		[42782] = "To Be Prepared|10+ alliance -demonhunter -44663 -44184 40519|37.08 43.1|Recruiter Lee",
 
-		-- Stormheim - Greymane's Gambit
+		-- Legion - Stormheim - Greymane's Gambit
 		[38206] = "Making the Rounds|10+ 38035 alliance|18.92 42.78|Sky Admiral Rogers",
 		[39800] = "Greymane's Gambit|10+ 38206 alliance|18.66 51.1|Genn Greymane",
+
+		-- Legion - Argus - To Argus!
+		[47222] = "Two If By Sea|45+ alliance 48506|21.37 30.46|Vereesa Windrunner",
+		[47223] = "Light's Exodus|45+ alliance 47222,47867|21.37 30.46|Vindicator Boros|elsewhere link:891|\"Vereesa Windrunner aboard the Wind's Redemption can take you back to Azuremyst Isle\"",
+		[47224] = "The Vindicaar|45+ alliance 47223|21.37 30.46|Prophet Velen|elsewhere link:891|\"Vereesa Windrunner aboard the Wind's Redemption can take you back to Azuremyst Isle\"",
+		[48440] = "Into the Night|45+ 47224|21.37 30.46|Prophet Velen|elsewhere link:891|\"Vereesa Windrunner aboard the Wind's Redemption can take you back to Azuremyst Isle\"",
 
 		-- Battle for Azeroth - A Nation Divided
 		[46727] = { -- 58983 is the Exile's Reach version - 56775 won't show for Exile's Reach players
@@ -5762,13 +6090,16 @@ Data.Quests = {
 		},
 		[46728] = "The Nation of Kul Tiras|10+ alliance 46727 -59641 -56775|80.26 33.13|Anduin Wrynn", -- 59641 is Exile's Reach version
 
-		-- Dragon Isles - The Dragonscale Expedition
+		-- Dragonflight - The Dragonscale Expedition
 		[65436] = "The Dragon Isles Await|10+ alliance -70197|79.8 27.02|Wrathion|campaign",
 		[66577] = "Aspectral Invitation|10+ alliance 65436 -70197|79.8 27.02|Wrathion|campaign",
 		[66589] = "Expeditionary Coordination|10+ alliance 66577 -70197|79.72 27.32|Toddy Whiskers|campaign",
 		[72240] = "The Obsidian Warders|10+ alliance 66577 -70197|79.75 27.97|Scalecommander Azurathel|campaign",
 		[66596] = "Whispers on the Winds|10+ alliance 66589 72240 -70197|23.01 56.15|Archmage Khadgar|campaign",
 		[67700] = "To the Dragon Isles!|10+ alliance 66596,70197 ~70197|22.72 55.66|Toddy Whiskers|campaign",
+
+		-- Dragonflight - Seeing Red
+		[77408] = "Prophecy Stirs|70+ alliance|77.94 37.28|Virtos|important",
 
 		-- Engineering
 		[29477] = "Gnomish Engineering|20+ alliance engineering skill:engineering1:200 -spell:20219 -spell:20222|62.85 31.96|Lilliam Sparkspindle|engineering", -- Requires 200 skill in Classic Engineering
@@ -6314,6 +6645,7 @@ Data.Quests = {
 		[77572] = "Emerald Dream World Quests (Account Unlock)|70+|||campaign",
 
 		-- Aiding the Accord
+		[70750] = "Aiding the Accord|60+||Therezal|weekly campaign", -- Low Level version
 		[72068] = "Aiding the Accord: A Feast For All|60+||Therezal|weekly campaign",
 		[72373] = "Aiding the Accord: The Hunt is On|60+||Therezal|weekly campaign",
 		[72374] = "Aiding the Accord: Dragonbane Keep|60+||Therezal|weekly campaign",
@@ -6324,10 +6656,12 @@ Data.Quests = {
 		[75861] = "Aiding the Accord: Suffusion Camp|60+||Therezal|weekly campaign",
 		[78446] = "Aiding the Accord: Superbloom|60+||Therezal|weekly campaign",
 		[78447] = "Aiding the Accord: Emerald Bounty|60+||Therezal|weekly campaign",
+		[77976] = "Aiding the Accord: Dreamsurge|60+||Therezal|weekly campaign",
+		[77254] = "Aiding the Accord: Time Rift|60+||Therezal|weekly campaign",
 
 		-- Sniffenseeking
-		--[75875] = "Sniffenseeking: Dig In Progress",
-		--[75907] = "Sniffenseeking: Dig In Progress",
+		[75875] = "Sniffenseeking Flag",
+		[75907] = "Sniffenseeking Flag",
 		[75390] = "Vertical Anomaly",
 		[75234] = "Scratch and Sniff",
 		[75516] = "Successful Interventions",
@@ -6346,9 +6680,21 @@ Data.Quests = {
 		[76081] = "Liars of Spirit",
 		[76081] = "Liars of Spirit",
 
+		-- Argus
+		[48451] = "Vindicaar Matrix Crystal: Light's Judgment",
+
 		-- Treasure
 		[76017] = "Three-Dimensional Compass",
 		[75601] = "Crystal-encased Chest Unlocked|60+|||treasure",
+
+		-- Engineering: Reaves
+		[40735] = "Reaves Module: Snack Distribution Mode|5+|||engineering",
+		[40738] = "Reaves Module: Wormhole Generator Mode|5+|||engineering",
+		[40736] = "Reaves Module: Bling Mode|5+|||engineering",
+		[40737] = "Reaves Module: Piloted Combat Mode|5+|||engineering",
+		[40732] = "Reaves Module: Repair Mode|5+|||engineering",
+		[40734] = "Reaves Module: Fireworks Display Mode|5+|||engineering",
+		[40733] = "Reaves Module: Failure Detection Mode|5+|||engineering",
 	}
 }
 
