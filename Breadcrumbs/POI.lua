@@ -857,6 +857,9 @@ Data.POI = {
 		-- Portal
 		"POI/Portal|Portal to Stormwind|alliance|60.81 37.9",
 
+		-- Flight Master
+		"taxinode_alliance:small|Stormshield, Ashran|alliance|30.58 48.45",
+
 		-- Professions
 		"POI/Alchemy|[Alchemy]|5+ alliance alchemy|36.7 68.6",
 		"POI/Blacksmithing|[Blacksmithing]|5+ alliance blacksmithing|49.5 47.69",
@@ -887,6 +890,13 @@ Data.POI = {
 		"POI/Fishing|[Fishing Trainer]|5+ horde|69.12 16.52",
 		"POI/Archaeology|[Archaeology]|10+ horde|73.99 31.6",
 	},
+
+	-- Ashran
+	[588] = {
+		-- Flight Master
+		"taxinode_alliance:small|Stormshield, Ashran|alliance|37.21 90.85|link:622",
+	},
+
 
 	--[[ Tanaan Jungle ]]--
 
@@ -999,6 +1009,7 @@ Data.POI = {
 		"mailbox:objective|Mailbox|mailbox reputation:934:4|55.41 80.62", -- Scryer's Tier Inn
 		"mailbox:objective|Mailbox|mailbox reputation:934:4|60.07 65.05", -- Scryer Bank
 		"mailbox:objective|Mailbox|mailbox reputation:934:4|61.15 64.24", -- Scryer Bank
+		"mailbox:objective|Mailbox|mailbox reputation:934:4|73.77 34.4", -- World's End Tavern
 
 		-- Professions
 		"POI/Alchemy|[Alchemy]|5+ reputation:932:4 alchemy -herbalism|38.46 30.11||Aldor Rise", -- Aldor
