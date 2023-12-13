@@ -2692,6 +2692,7 @@ Data.Quests = {
 		[40862] = "All Charged Up|10+ engineering 40860|38.36 25.57|Fargo Flintlocke|engineering elsewhere link:641",
 		[40863] = "Always the Last Thing|10+ engineering 40858|38.97 25.42|Didi the Wrench|engineering",
 		[40864] = "Modular Modifications|10+ engineering 40863|38.97 25.42|Didi the Wrench|engineering",
+		[46128] = "Time for a Recharge|10+ engineering 40864|38.36 25.57|Hobart Grapplehammer|engineering",
 		[40865] = "It's Not Rocket Science|10+ engineering 40861 40862 40864|38.36 25.57|Hobart Grapplehammer|engineering",
 
 		-- Enchanting
@@ -6684,10 +6685,10 @@ Data.Quests = {
 		[48451] = "Vindicaar Matrix Crystal: Light's Judgment",
 
 		-- Treasure
-		[76017] = "Three-Dimensional Compass",
-		[75601] = "Crystal-encased Chest Unlocked|60+|||treasure",
+		[75601] = "Crystal-encased Chest|60+|||treasure",
 
-		-- Engineering: Reaves
+		-- Engineering
+		[76017] = "Three-Dimensional Compass",
 		[40735] = "Reaves Module: Snack Distribution Mode|5+|||engineering",
 		[40738] = "Reaves Module: Wormhole Generator Mode|5+|||engineering",
 		[40736] = "Reaves Module: Bling Mode|5+|||engineering",
@@ -6695,6 +6696,76 @@ Data.Quests = {
 		[40732] = "Reaves Module: Repair Mode|5+|||engineering",
 		[40734] = "Reaves Module: Fireworks Display Mode|5+|||engineering",
 		[40733] = "Reaves Module: Failure Detection Mode|5+|||engineering",
+
+		-- Uuna
+		[50098] = "Uuna: Can anybody hear me?",
+		[50099] = "Uuna: Who's there?",
+		[50100] = "Uuna: Ack! A monster!",
+		[50101] = "Uuna: Are you sad too?",
+		[50102] = "Uuna: Too bright!",
+		[50103] = "Uuna: I can see... sorta",
+		[50104] = "Uuna: Nuu",
+		[50105] = "Uuna: Wand",
+		[50106] = "Uuna: Flower Crown",
+		[50107] = "Uuna: Kidnapped!",
+		[50108] = "Uuna: Spirit Healer's Mark",
+		[50109] = "Uuna: Not afraid any more!",
+		[50140] = "Uuna: Visit Gate of the Setting Sun",
+		[50141] = "Uuna: Visit the Nighthold",
+		[50142] = "Uuna: Visit Dalaran",
+		[50143] = "Uuna: Visit Wyrmrest Temple",
+		[50144] = "Uuna: Visit Nordrassil",
+		[50145] = "Uuna: Visit Mount Neverest",
+		[50146] = "Uuna: Visit Blackrock Mountain",
+		[50147] = "Uuna: Visit Karabor",
+
+		-- Baa'l
+		[52819] = "Baa'l: Conspicious Note",
+		[52809] = "Baa'l: Broken Shore Pebble",
+		[52810] = "Baa'l: Hook Point Pebble",
+		[52818] = "Baa'l: Zuldazar Pebble",
+		[52817] = "Baa'l: Gol Osigr Pebble",
+		[52816] = "Baa'l: Vol'dun Pebble",
+		[52815] = "Baa'l: Stormsong Valley Pebble",
+		[52814] = "Baa'l: South Sea Shipwreck Pebble",
+		[52813] = "Baa'l: Proudmoore Keep Pebble",
+		[52812] = "Baa'l: Western Watch Pebble",
+		[53632] = "Baa'l: Kennings Lodge Pebble",
+		[53633] = "Baa'l: Mossy Waterfall Cave Pebble",
+		[53634] = "Baa'l: Seaweed Cave Pebble",
+		[42827] = "Baa'l: South Sea Cave Pebble",
+		[42828] = "Baa'l: Uuna",
+		[52829] = "Baa'l: Seek Knowledge",
+
+		-- Waist of Time
+		[52830] = "Waist of Time: Lit Orb",
+		[52831] = "Waist of Time: Strange Seed",
+		[52898] = "Waist of Time: Tiny Frog",
+		[52899] = "Waist of Time: Brittle Bone",
+		[52900] = "Waist of Time: Misplaced Candle",
+		[52901] = "Waist of Time: Odd Cup",
+		[52902] = "Waist of Time: Interesting Rock",
+		[52903] = "Waist of Time: Blooming Lily",
+		[52904] = "Waist of Time: Pretty Flower",
+		[52905] = "Waist of Time: Old Book",
+		[52906] = "Waist of Time: Dead Fish",
+		[52907] = "Waist of Time: Scratched Board",
+		[52908] = "Waist of Time: Lost Ring",
+		[52909] = "Waist of Time: Spoiled Apple",
+		[52910] = "Waist of Time: Broken Tooth",
+		[52911] = "Waist of Time: Worn Helm",
+		[52912] = "Waist of Time: Leafy Leaf",
+		[52913] = "Waist of Time: Musty Cloth",
+		[52914] = "Waist of Time: Broken Tablet",
+		[52915] = "Waist of Time: Ashed Torch",
+		[52916] = "Waist of Time: Grimmy's List of Friends",
+		[52917] = "Waist of Time: Grimmy's Secrets",
+		[52918] = "Waist of Time: Grimmy's List of Enemies",
+
+		-- World Boss
+		[32519] = "Oondasta|1+|||weekly vignette",
+		[32099] = "Sha of Anger|1+|||weekly vignette",
+		[37464] = "Rukhmar|1+|||weekly vignette",
 	}
 }
 
