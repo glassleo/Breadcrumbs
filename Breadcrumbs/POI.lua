@@ -95,7 +95,7 @@ Data.POI = {
 		"POI/Portal|Portal to Orgrimmar|horde|56.64 38.3",
 		"POI/Portal|Portal to Stormwind|alliance|59.79 41.71",
 		"POI/Portal|Portal to Badlands|1+|26.09 40.98",
-		"POI/Portal|Seasonal Portals|1+|53.95 55",
+		"POI/Portal|Portal to The Timeways|1+|53.55 55.36||Seasonal Dungeon Portals",
 		"POI/Portal|Portal to Emerald Dream|70+ 77887|62.68 57.3",
 
 		-- Mailbox
