@@ -360,7 +360,7 @@ Data.Quests = {
 		[78319] = "The Superbloom|70+ 77887|1 Clarelle|Clarelle|discovery weekly",
 
 		-- Dreamseeds
-		[78172] = "Mysterious Seeds|70+|2 MysteriousSeeds|{464030} [rare]Mysterious Seeds]|discovery|\"Obtained after looting your first Dreamseed\"",
+		[78172] = "Mysterious Seeds|70+|2 MysteriousSeeds|{464030} [rare]Mysterious Seeds]|discovery|Obtained by looting a Dreamseed",
 		[77209] = "Seed Legacy|70+ 78172|59.75 16.89|Sylvia Whisperbloom",
 		[78170] = "Nurturing Ageless Seeds|70+ 77209|59.75 16.89|Sylvia Whisperbloom",
 		[78171] = "Blossoms of the Past|70+ 78170|59.75 16.89|Sylvia Whisperbloom",
@@ -871,11 +871,21 @@ Data.Quests = {
 		-- Dragonscale Expedition - In the Halls of Titans
 		[69097] = "A Vault Unsealed|70+ reputation:2507:24|1 DocNannersCampaign|Doc Nanners|discovery campaign", -- Requires Renown 24 with Dragonscale Expedition
 
-		-- Iskaara Tuskarr - Renown
+		-- Iskaara Tuskarr Renown
 		[70871] = "Iskaaran Fishing Net|60+ accachievement:16924|12.82 49.18|Tavio", -- Requires Renown 5 with Iskaara Tuskarr on account
-		[70940] = "Tuskarr Champion's Tales|60+ reputation:2511:5|12.41 49.34|Elder Poa", -- Requires Renown 5 with Iskaara Tuskarr
-		[70963] = "Wrist Support|60+ reputation:2511:14|13.17 48.52|Arvik", -- Requires Renown 14 with Iskaara Tuskarr
-		[70978] = "Dragon Isles Champion's Tales|60+ reputation:2511:15|12.41 49.34|Elder Poa", -- Requires Renown 15 with Iskaara Tuskarr
+		[70940] = "Tuskarr Champion's Tales|60+ reputation:2511:5|12.41 49.34|Elder Poa", -- Renown 5
+		[70963] = "Wrist Support|60+ reputation:2511:14|13.17 48.52|Arvik", -- Renown 14
+		[72318] = "Iskaaran Crafter's Knowledge|60+ reputation:2511:14 enchanting skill:enchanting10:1|13.91 50.08|Rokkutuk|enchanting", -- Renown 14, Dragon Isles Enchanting
+		[72319] = "Iskaaran Crafter's Knowledge|60+ reputation:2511:14 herbalism skill:herbalism10:1|13.91 50.08|Rokkutuk|herbalism", -- Renown 14, Dragon Isles Herbalism
+		[72320] = "Iskaaran Crafter's Knowledge|60+ reputation:2511:14 jewelcrafting skill:jewelcrafting10:1|13.91 50.08|Rokkutuk|jewelcrafting", -- Renown 14, Dragon Isles Jewelcrafting
+		[72321] = "Iskaaran Crafter's Knowledge|60+ reputation:2511:14 leatherworking skill:leatherworking10:1|13.91 50.08|Rokkutuk|leatherworking", -- Renown 14, Dragon Isles Leatherworking
+		[72322] = "Iskaaran Crafter's Knowledge|60+ reputation:2511:14 skinning skill:skinning10:1|13.91 50.08|Rokkutuk|skinning", -- Renown 14, Dragon Isles Skinning
+		[70978] = "Dragon Isles Champion's Tales|60+ reputation:2511:15|12.41 49.34|Elder Poa", -- Renown 15
+		[72323] = "Iskaaran Crafter's Knowledge|60+ reputation:2511:24 enchanting skill:enchanting10:1|13.91 50.08|Rokkutuk|enchanting", -- Renown 24, Dragon Isles Enchanting
+		[72324] = "Iskaaran Crafter's Knowledge|60+ reputation:2511:24 herbalism skill:herbalism10:1|13.91 50.08|Rokkutuk|herbalism", -- Renown 24, Dragon Isles Herbalism
+		[72325] = "Iskaaran Crafter's Knowledge|60+ reputation:2511:24 jewelcrafting skill:jewelcrafting10:1|13.91 50.08|Rokkutuk|jewelcrafting", -- Renown 24, Dragon Isles Jewelcrafting
+		[72326] = "Iskaaran Crafter's Knowledge|60+ reputation:2511:24 leatherworking skill:leatherworking10:1|13.91 50.08|Rokkutuk|leatherworking", -- Renown 24, Dragon Isles Leatherworking
+		[72327] = "Iskaaran Crafter's Knowledge|60+ reputation:2511:24 skinning skill:skinning10:1|13.91 50.08|Rokkutuk|skinning", -- Renown 24, Dragon Isles Skinning
 	
 		-- Iskaara Tuskarr - The Chieftain's Duty
 		[68863] = "A Lost Tribe|70+ reputation:2511:11|3 RowieCampaign|Rowie|discovery campaign", -- Requires Renown 11 with Iskaara Tuskarr
@@ -4829,6 +4839,16 @@ Data.Quests = {
 	},
 
 
+	--[[ The Storm Peaks ]]--
+
+	-- The Storm Peaks
+	[120] = {
+		-- Engineering
+		[12888] = "SCRAP-E|25+ engineering skill:engineering3:50|1 SCRAPEAccessCard|{134390} [SCRAP-E Access Card]|discovery engineering|Has a chance to drop when scrapping mechanicals using Engineering",
+		[12889] = "The Prototype Console|25+ 12888 engineering skill:engineering3:50|37.7 46.54|SCRAP-E|engineering",
+	},
+
+
 	--[[ Teldrassil ]]--
 
 	-- Darnassus
@@ -6761,10 +6781,27 @@ Data.Quests = {
 		[52916] = "Waist of Time: Grimmy's List of Friends",
 		[52917] = "Waist of Time: Grimmy's Secrets",
 		[52918] = "Waist of Time: Grimmy's List of Enemies",
+		[52822] = "Waist of Time: Aquinastrasz",
+		[52823] = "Waist of Time: Karnum Marshweaver",
+		[52824] = "Waist of Time: Noggra",
+		[52826] = "Waist of Time: Stained Mug",
+		[52919] = "Waist of Time: Enemies dealt with",
+		[52920] = "Waist of Time: Grimmy's Favorite Recipe",
+		[52921] = "Waist of Time: Marker",
+		[52922] = "Waist of Time|||treasure",
+
+		-- Alara'shinu
+		[78606] = "Alara'shinu: Landeron Felfury",
+		[78622] = "Alara'shinu: Memory of Landeron Felfury, Broken Shore",
+		[78623] = "Alara'shinu: Memory of Landeron Felfury, Val'sharah", -- Val'sharah 51.19 56.9
+		[78660] = "Alara'shinu: Warglaive", -- Loot available
+		[78677] = "Alara'shinu: Imbued", -- Imbued
+		[78678] = "Alara'shinu|||treasure", -- Looted, 51.16 57.14
 
 		-- World Boss
-		[32519] = "Oondasta|1+|||weekly vignette",
+		[32098] = "Galleon|1+|||weekly vignette",
 		[32099] = "Sha of Anger|1+|||weekly vignette",
+		[32519] = "Oondasta|1+|||weekly vignette",
 		[37464] = "Rukhmar|1+|||weekly vignette",
 	}
 }
