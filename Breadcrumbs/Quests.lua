@@ -2677,44 +2677,44 @@ Data.Quests = {
 		-- Nomi pops up with 40988 (Too Many Cooks) or 40989 (The Prodigal Sous Chef) automatically after learning a Legion cooking recipe
 		-- There is also 44581 (Spicing Things Up) that might be obsolete as of 7.1
 		[40990] = {"A Good Recipe List|10+ cooking 40988,40989,44581 alliance|40.07 65.98|Nomi|cooking", "A Good Recipe List|10+ cooking 40988,40989,44581 horde|69.77 38.77|Nomi|cooking",},
-		[40991] = {"Opening the Test Kitchen|10+ cooking 40990 alliance|40.07 65.98|Nomi|cooking", "Opening the Test Kitchen|10+ cooking 40990 horde|69.77 38.77|Nomi|cooking",},
+		[40991] = {"Opening the Test Kitchen|10+ cooking skill:cooking7:1 40990 alliance|40.07 65.98|Nomi|cooking", "Opening the Test Kitchen|10+ cooking 40990 horde|69.77 38.77|Nomi|cooking",},
 
 		-- Alchemy
 		[39325] = "Get Your Mix On|10+ alchemy|41.33 33.39|Deucus Valdera|alchemy",
-		[39326] = "Missing Shipments|10+ alchemy 39325|41.33 33.39|Deucus Valdera|alchemy",
-		[39566] = "The Search for Knowledge|10+ alchemy 39326 -39390|41.33 33.39|Deucus Valdera|alchemy",
-		[39390] = "A Mysterious Text|10+ alchemy 39566|41.33 33.39|Alchemy Book|alchemy elsewhere link:630",
-		[39327] = "There's a Scribe for That|10+ alchemy 39390|41.33 33.39|Deucus Valdera|alchemy",
+		[39326] = "Missing Shipments|10+ alchemy skill:alchemy7:1 39325|41.33 33.39|Deucus Valdera|alchemy",
+		[39566] = "The Search for Knowledge|10+ alchemy skill:alchemy7:1 39326 -39390|41.33 33.39|Deucus Valdera|alchemy",
+		[39390] = "A Mysterious Text|10+ alchemy skill:alchemy7:1 39566|41.33 33.39|Alchemy Book|alchemy elsewhere link:630",
+		[39327] = "There's a Scribe for That|10+ alchemy skill:alchemy7:1 39390|41.33 33.39|Deucus Valdera|alchemy",
 
 		-- Blacksmithing
-		[48053] = "Weigh Anchor|45+ blacksmithing alliance|44.13 28.72|Alard Schmied|blacksmithing", -- Alliance
-		[48054] = "Weigh Anchor|45+ blacksmithing horde|44.13 28.72|Alard Schmied|blacksmithing", -- Horde
+		[48053] = "Weigh Anchor|45+ blacksmithing skill:blacksmithing7:1 alliance|44.13 28.72|Alard Schmied|blacksmithing", -- Alliance
+		[48054] = "Weigh Anchor|45+ blacksmithing skill:blacksmithing7:1 horde|44.13 28.72|Alard Schmied|blacksmithing", -- Horde
 
 		-- Engineering
 		[40545] = "Aww Scrap!|10+ engineering|38.36 25.57|Hobart Grapplehammer|engineering",
-		[40854] = "Endless Possibilities|10+ engineering 40545|59.84 47.87|Filgo Scrapbottom|engineering down link:628",
-		[40855] = "Our Man in Azsuna|10+ engineering 40854|38.99 25.41|Didi the Wrench|engineering",
-		[40859] = "The Latest Fashion: Headguns!|10+ engineering 40855|38.99 25.41|Fargo Flintlocke|engineering elsewhere link:630",
-		[40856] = "It'll Cost You|10+ engineering 40855|38.99 25.41|Fargo Flintlocke|engineering elsewhere link:630",
-		[40858] = "The Missing Pieces|10+ engineering 40856|38.99 25.41|Fargo Flintlocke|engineering elsewhere link:630",
-		[40860] = "Resupplying the Line|10+ engineering 40858|38.36 25.57|Hobart Grapplehammer|engineering",
-		[40861] = "In My Sights|10+ engineering 40860|38.36 25.57|Fargo Flintlocke|engineering elsewhere link:641",
-		[40862] = "All Charged Up|10+ engineering 40860|38.36 25.57|Fargo Flintlocke|engineering elsewhere link:641",
-		[40863] = "Always the Last Thing|10+ engineering 40858|38.97 25.42|Didi the Wrench|engineering",
-		[40864] = "Modular Modifications|10+ engineering 40863|38.97 25.42|Didi the Wrench|engineering",
-		[46128] = "Time for a Recharge|10+ engineering 40864|38.36 25.57|Hobart Grapplehammer|engineering",
-		[40865] = "It's Not Rocket Science|10+ engineering 40861 40862 40864|38.36 25.57|Hobart Grapplehammer|engineering",
+		[40854] = "Endless Possibilities|10+ engineering skill:engineering7:1 40545|59.84 47.87|Filgo Scrapbottom|engineering down link:628",
+		[40855] = "Our Man in Azsuna|10+ engineering skill:engineering7:1 40854|38.99 25.41|Didi the Wrench|engineering",
+		[40859] = "The Latest Fashion: Headguns!|10+ engineering skill:engineering7:1 40855|38.99 25.41|Fargo Flintlocke|engineering elsewhere link:630",
+		[40856] = "It'll Cost You|10+ engineering skill:engineering7:1 40855|38.99 25.41|Fargo Flintlocke|engineering elsewhere link:630",
+		[40858] = "The Missing Pieces|10+ engineering skill:engineering7:1 40856|38.99 25.41|Fargo Flintlocke|engineering elsewhere link:630",
+		[40860] = "Resupplying the Line|10+ engineering skill:engineering7:1 40858|38.36 25.57|Hobart Grapplehammer|engineering",
+		[40861] = "In My Sights|10+ engineering skill:engineering7:1 40860|38.36 25.57|Fargo Flintlocke|engineering elsewhere link:641",
+		[40862] = "All Charged Up|10+ engineering skill:engineering7:1 40860|38.36 25.57|Fargo Flintlocke|engineering elsewhere link:641",
+		[40863] = "Always the Last Thing|10+ engineering skill:engineering7:1 40858|38.97 25.42|Didi the Wrench|engineering",
+		[40864] = "Modular Modifications|10+ engineering skill:engineering7:1 40863|38.97 25.42|Didi the Wrench|engineering",
+		[46128] = "Time for a Recharge|10+ engineering skill:engineering7:1 40864|38.36 25.57|Hobart Grapplehammer|engineering",
+		[40865] = "It's Not Rocket Science|10+ engineering skill:engineering7:1 40861 40862 40864|38.36 25.57|Hobart Grapplehammer|engineering",
 
 		-- Enchanting
 		-- ...
-		[39879] = "Strong Like the Earth|10+ enchanting 39878|38.31 40.37|Guron Twaintail|enchanting elsewhere link:750",
-		[39880] = "Waste Not|10+ enchanting 39878|38.31 40.37|Guron Twaintail|enchanting elsewhere link:750",
-		[39883] = "Cloaked in Tradition|10+ enchanting 39879 39880|38.31 40.37|Guron Twaintail|enchanting elsewhere link:750",
-		[39881] = "Fey Enchantments|10+ enchanting 39883|38.31 40.37|Enchanter Nalthanis|enchanting",
-		[39884] = "No Longer Worthy|10+ enchanting 39881|38.31 40.37|Nalamya|enchanting elsewhere link:641",
-		[39889] = "Led Astray|10+ enchanting 39881|38.31 40.37|Nalamya|enchanting elsewhere link:641",
-		[39882] = "Darkheart Thicket: The Glamour Has Faded|10+ enchanting 39884 39889|38.31 40.37|Nalamya|enchanting dungeon elsewhere link:641",
-		[39903] = "An Enchanting Home|10+ enchanting 39883|38.31 40.37|Enchanter Nalthanis|enchanting",
+		[39879] = "Strong Like the Earth|10+ enchanting skill:enchanting7:1 39878|38.31 40.37|Guron Twaintail|enchanting elsewhere link:750",
+		[39880] = "Waste Not|10+ enchanting skill:enchanting7:1 39878|38.31 40.37|Guron Twaintail|enchanting elsewhere link:750",
+		[39883] = "Cloaked in Tradition|10+ enchanting skill:enchanting7:1 39879 39880|38.31 40.37|Guron Twaintail|enchanting elsewhere link:750",
+		[39881] = "Fey Enchantments|10+ enchanting skill:enchanting7:1 39883|38.31 40.37|Enchanter Nalthanis|enchanting",
+		[39884] = "No Longer Worthy|10+ enchanting skill:enchanting7:1 39881|38.31 40.37|Nalamya|enchanting elsewhere link:641",
+		[39889] = "Led Astray|10+ enchanting skill:enchanting7:1 39881|38.31 40.37|Nalamya|enchanting elsewhere link:641",
+		[39882] = "Darkheart Thicket: The Glamour Has Faded|10+ enchanting skill:enchanting7:1 39884 39889|38.31 40.37|Nalamya|enchanting dungeon elsewhere link:641",
+		[39903] = "An Enchanting Home|10+ enchanting skill:enchanting7:1 39883|38.31 40.37|Enchanter Nalthanis|enchanting",
 
 		-- Herbalism - Aethril
 		[40013] = "Aethril Sample|10+ herbalism|1 Aethril|{1395063} [Aethril Sample]|herbalism discovery link:630|Gathered from Aethril",
@@ -2753,7 +2753,7 @@ Data.Quests = {
 		[40039] = "Tharillon's Fall|10+ herbalism 40038|43 33.36|Kuhuine Tenderstride|herbalism",
 
 		-- Herbalism - Felwort
-		[40040] = "Felwort Sample|10+ herbalism 45727,43341|6 Felwort|{1387614} [Felwort Sample]|herbalism discovery link:619|Gathered from Felwort", -- Available after unlocking World Quests
+		[40040] = "Felwort Sample|10+ herbalism 45727,43341 40013 40018 40024 40029 40035|6 Felwort|{1387614} [Felwort Sample]|herbalism discovery link:619|Gathered from Felwort", -- Available after unlocking World Quests
 		[40041] = "Felwort Analysis|10+ herbalism 40040 40014 40019 40024 40029 40035|43 33.36|Kuhuine Tenderstride|herbalism", -- Available after getting rank 1 of all other Broken Isles herbs
 		[40041] = "The Emerald Nightmare: Felwort Mastery|10+ herbalism 40041 40016 40021 40026 40031 40037|43 33.36|Kuhuine Tenderstride|herbalism raid", -- Available after getting rank 2 of all other Broken Isles herbs
 
@@ -2815,7 +2815,7 @@ Data.Quests = {
 	-- The Underbelly
 	[628] = {
 		-- Engineering
-		[40854] = "Endless Possibilities|10+ engineering 40545|65.96 52.87|Filgo Scrapbottom|engineering",
+		[40854] = "Endless Possibilities|10+ engineering skill:engineering7:1 40545|65.96 52.87|Filgo Scrapbottom|engineering",
 	},
 
 	-- Aegwynn's Galleru
@@ -2859,7 +2859,7 @@ Data.Quests = {
 		[40038] = "Insane Ramblings|10+ herbalism 40037|5 StarlightRose|{134943} [Scribbled Ramblings]|herbalism discovery link:680|Gathered from Starlight Rose",
 
 		-- Herbalism - Felwort
-		[40040] = "Felwort Sample|10+ herbalism 45727,43341|6 Felwort|{1387614} [Felwort Sample]|herbalism discovery link:619|Gathered from Felwort", -- Available after unlocking World Quests
+		[40040] = "Felwort Sample|10+ herbalism 45727,43341 40013 40018 40024 40029 40035|6 Felwort|{1387614} [Felwort Sample]|herbalism discovery link:619|Gathered from Felwort", -- Available after unlocking World Quests
 
 		-- Mining - Leystone
 		[38777] = "Leystone Deposit Sample|10+ mining|1 LeystoneDeposit|{1394960} [Leystone Deposit Sample]|mining discovery|Mined from Leystone Deposits",
@@ -3368,12 +3368,12 @@ Data.Quests = {
 		[42367] = "Arkethrax|10+ 42375|63.88 28.88|Marius Felbane",
 
 		-- Alchemy
-		[39390] = "A Mysterious Text|10+ alchemy 39325|44.96 52.11|Alchemy Book|alchemy",
+		[39390] = "A Mysterious Text|10+ alchemy skill:alchemy7:1 39325|44.96 52.11|Alchemy Book|alchemy",
 
 		-- Engineering
-		[40856] = "It'll Cost You|10+ engineering 40855|65.21 24.91|Fargo Flintlocke|engineering",
-		[40859] = "The Latest Fashion: Headguns!|10+ engineering 40855|65.21 24.91|Fargo Flintlocke|engineering",
-		[40858] = "The Missing Pieces|10+ engineering 40856|65.21 24.91|Fargo Flintlocke|engineering",
+		[40856] = "It'll Cost You|10+ engineering skill:engineering7:1 40855|65.21 24.91|Fargo Flintlocke|engineering",
+		[40859] = "The Latest Fashion: Headguns!|10+ engineering skill:engineering7:1 40855|65.21 24.91|Fargo Flintlocke|engineering",
+		[40858] = "The Missing Pieces|10+ engineering skill:engineering7:1 40856|65.21 24.91|Fargo Flintlocke|engineering",
 
 		-- Herbalism - Aethril
 		[40013] = "Aethril Sample|10+ herbalism|1 Aethril|{1395063} [Aethril Sample]|herbalism discovery|Gathered from Aethril",
@@ -3381,7 +3381,7 @@ Data.Quests = {
 		[40017] = "A Slip of the Hand|10+ herbalism 40016|1 Aethril|[Auto Accept]|herbalism discovery|Has a chance to be obtained after gathering Aethril",
 
 		-- Herbalism - Felwort
-		[40040] = "Felwort Sample|10+ herbalism 45727,43341|6 Felwort|{1387614} [Felwort Sample]|herbalism discovery|Gathered from Felwort", -- Available after unlocking World Quests
+		[40040] = "Felwort Sample|10+ herbalism 45727,43341 40013 40018 40024 40029 40035|6 Felwort|{1387614} [Felwort Sample]|herbalism discovery|Gathered from Felwort", -- Available after unlocking World Quests
 
 		-- Mining - Leystone
 		[38777] = "Leystone Deposit Sample|10+ mining|1 LeystoneDeposit|{1394960} [Leystone Deposit Sample]|mining discovery|Mined from Leystone Deposits",
@@ -3558,13 +3558,13 @@ Data.Quests = {
 		[42388] = "Urgent Summons|10+ hunter 42386 42387 -42389|41.67 59.95|Snowfeather|artifact",
 
 		-- Engineering
-		[40861] = "In My Sights|10+ engineering 40860|59.83 62.26|Fargo Flintlocke|engineering",
-		[40862] = "All Charged Up|10+ engineering 40860|59.83 62.26|Fargo Flintlocke|engineering",
+		[40861] = "In My Sights|10+ engineering skill:engineering7:1 40860|59.83 62.26|Fargo Flintlocke|engineering",
+		[40862] = "All Charged Up|10+ engineering skill:engineering7:1 40860|59.83 62.26|Fargo Flintlocke|engineering",
 
 		-- Enchanting
-		[39884] = "No Longer Worthy|10+ enchanting 39881|54.4 57.71|Nalamya|enchanting",
-		[39889] = "Led Astray|10+ enchanting 39881|54.4 57.71|Nalamya|enchanting",
-		[39882] = "Darkheart Thicket: The Glamour Has Faded|10+ enchanting 39884 39889|54.4 57.71|Nalamya|enchanting dungeon",
+		[39884] = "No Longer Worthy|10+ enchanting skill:enchanting7:1 39881|54.4 57.71|Nalamya|enchanting",
+		[39889] = "Led Astray|10+ enchanting skill:enchanting7:1 39881|54.4 57.71|Nalamya|enchanting",
+		[39882] = "Darkheart Thicket: The Glamour Has Faded|10+ enchanting skill:enchanting7:1 39884 39889|54.4 57.71|Nalamya|enchanting dungeon",
 
 		-- Herbalism - Dreamleaf
 		[40018] = "Dreamleaf Sample|10+ herbalism|2 Dreamleaf|{1387613} [Dreamleaf Sample]|herbalism discovery|Gathered from Dreamleaf",
@@ -3574,7 +3574,7 @@ Data.Quests = {
 		[40023] = "The Last Straw|10+ herbalism 40022|54.81 71.71|Wildcrafter Osme|herbalism",
 
 		-- Herbalism - Felwort
-		[40040] = "Felwort Sample|10+ herbalism 45727,43341|6 Felwort|{1387614} [Felwort Sample]|herbalism discovery|Gathered from Felwort", -- Available after unlocking World Quests
+		[40040] = "Felwort Sample|10+ herbalism 45727,43341 40013 40018 40024 40029 40035|6 Felwort|{1387614} [Felwort Sample]|herbalism discovery|Gathered from Felwort", -- Available after unlocking World Quests
 
 		-- Mining - Leystone
 		[38777] = "Leystone Deposit Sample|10+ mining|1 LeystoneDeposit|{1394960} [Leystone Deposit Sample]|mining discovery|Mined from Leystone Deposits",
@@ -3774,9 +3774,9 @@ Data.Quests = {
 		[42410] = "Champion: Rexxar|10+ hunter 42392|36.73 35.4|Rexxar|artifact",
 
 		-- Enchanting
-		[39879] = "Strong Like the Earth|10+ enchanting 39878|46.73 60.42|Guron Twaintail|enchanting link:750",
-		[39880] = "Waste Not|10+ enchanting 39878|46.73 60.42|Guron Twaintail|enchanting link:750",
-		[39883] = "Cloaked in Tradition|10+ enchanting 39879 39880|46.73 60.42|Guron Twaintail|enchanting link:750",
+		[39879] = "Strong Like the Earth|10+ enchanting skill:enchanting7:1 39878|46.73 60.42|Guron Twaintail|enchanting link:750",
+		[39880] = "Waste Not|10+ enchanting skill:enchanting7:1 39878|46.73 60.42|Guron Twaintail|enchanting link:750",
+		[39883] = "Cloaked in Tradition|10+ enchanting skill:enchanting7:1 39879 39880|46.73 60.42|Guron Twaintail|enchanting link:750",
 
 		-- Herbalism - Foxflower
 		[40024] = "Foxflower Sample|10+ herbalism|3 Foxflower|{1387616} [Foxflower Sample]|herbalism discovery|Gathered from Foxflower",
@@ -3784,7 +3784,7 @@ Data.Quests = {
 		[40028] = "The Pied Picker|10+ herbalism 40026|3 Foxflower|{656439} [Foxflower Scent Gland]|herbalism discovery|Gathered from Foxflower",
 
 		-- Herbalism - Felwort
-		[40040] = "Felwort Sample|10+ herbalism 45727,43341|6 Felwort|{1387614} [Felwort Sample]|herbalism discovery|Gathered from Felwort", -- Available after unlocking World Quests
+		[40040] = "Felwort Sample|10+ herbalism 45727,43341 40013 40018 40024 40029 40035|6 Felwort|{1387614} [Felwort Sample]|herbalism discovery|Gathered from Felwort", -- Available after unlocking World Quests
 
 		-- Mining - Leystone
 		[38777] = "Leystone Deposit Sample|10+ mining|1 LeystoneDeposit|{1394960} [Leystone Deposit Sample]|mining discovery|Mined from Leystone Deposits",
@@ -3859,9 +3859,9 @@ Data.Quests = {
 		[39133] = "No Time to talk|10+ 38909|61.94 6.41|Warbrave Nava",
 
 		-- Enchanting
-		[39879] = "Strong Like the Earth|10+ enchanting 39878|44.49 45.54|Guron Twaintail|enchanting",
-		[39880] = "Waste Not|10+ enchanting 39878|44.49 45.54|Guron Twaintail|enchanting",
-		[39883] = "Cloaked in Tradition|10+ enchanting 39879 39880|44.49 45.54|Guron Twaintail|enchanting",
+		[39879] = "Strong Like the Earth|10+ enchanting skill:enchanting7:1 39878|44.49 45.54|Guron Twaintail|enchanting",
+		[39880] = "Waste Not|10+ enchanting skill:enchanting7:1 39878|44.49 45.54|Guron Twaintail|enchanting",
+		[39883] = "Cloaked in Tradition|10+ enchanting skill:enchanting7:1 39879 39880|44.49 45.54|Guron Twaintail|enchanting",
 	},
 
 	-- Hall of Chieftains, Thunder Totem
@@ -3899,9 +3899,9 @@ Data.Quests = {
 		[42622] = "Ceremonial Drums|10+ 39992|54.86 77.92|Torv Dubstomp",
 
 		-- Enchanting
-		[39879] = "Strong Like the Earth|10+ enchanting 39878|54.9 48.34|Guron Twaintail|enchanting up link:750",
-		[39880] = "Waste Not|10+ enchanting 39878|54.9 48.34|Guron Twaintail|enchanting up link:750",
-		[39883] = "Cloaked in Tradition|10+ enchanting 39879 39880|54.9 48.34|Guron Twaintail|enchanting up link:750",
+		[39879] = "Strong Like the Earth|10+ enchanting skill:enchanting7:1 39878|54.9 48.34|Guron Twaintail|enchanting up link:750",
+		[39880] = "Waste Not|10+ enchanting skill:enchanting7:1 39878|54.9 48.34|Guron Twaintail|enchanting up link:750",
+		[39883] = "Cloaked in Tradition|10+ enchanting skill:enchanting7:1 39879 39880|54.9 48.34|Guron Twaintail|enchanting up link:750",
 	},
 
 	-- Bitestone Enclave
@@ -4144,7 +4144,7 @@ Data.Quests = {
 		[40032] = "The Missing Page|10+ herbalism 40031|4 Fjarnskaggl|{134938} [Runed Journal Page]|herbalism discovery|Gathered from Fjarnskaggl",
 
 		-- Herbalism - Felwort
-		[40040] = "Felwort Sample|10+ herbalism 45727,43341|6 Felwort|{1387614} [Felwort Sample]|herbalism discovery|Gathered from Felwort", -- Available after unlocking World Quests
+		[40040] = "Felwort Sample|10+ herbalism 45727,43341 40013 40018 40024 40029 40035|6 Felwort|{1387614} [Felwort Sample]|herbalism discovery|Gathered from Felwort", -- Available after unlocking World Quests
 
 		-- Mining - Leystone
 		[38777] = "Leystone Deposit Sample|10+ mining|1 LeystoneDeposit|{1394960} [Leystone Deposit Sample]|mining discovery|Mined from Leystone Deposits",
@@ -4249,7 +4249,7 @@ Data.Quests = {
 		[40038] = "Insane Ramblings|10+ herbalism 40037|5 StarlightRose|{134943} [Scribbled Ramblings]|herbalism discovery|Gathered from Starlight Rose",
 
 		-- Herbalism - Felwort
-		[40040] = "Felwort Sample|10+ herbalism 45727,43341|6 Felwort|{1387614} [Felwort Sample]|herbalism discovery|Gathered from Felwort", -- Available after unlocking World Quests
+		[40040] = "Felwort Sample|10+ herbalism 45727,43341 40013 40018 40024 40029 40035|6 Felwort|{1387614} [Felwort Sample]|herbalism discovery|Gathered from Felwort", -- Available after unlocking World Quests
 
 		-- Mining - Leystone
 		[38777] = "Leystone Deposit Sample|10+ mining|1 LeystoneDeposit|{1394960} [Leystone Deposit Sample]|mining discovery|Mined from Leystone Deposits",
@@ -6666,7 +6666,8 @@ Data.Quests = {
 		[77572] = "Emerald Dream World Quests (Account Unlock)|70+|||campaign",
 
 		-- Aiding the Accord
-		[70750] = "Aiding the Accord|60+||Therezal|weekly campaign", -- Low Level version
+		[78861] = "Aiding the Accord|60+||Therezal|weekly campaign", -- Reputation only version, offered when not eligible for the weekly activity
+		[70750] = "Aiding the Accord|60+||Therezal|weekly campaign", -- Reputation only version, offered when not eligible for the weekly activity
 		[72068] = "Aiding the Accord: A Feast For All|60+||Therezal|weekly campaign",
 		[72373] = "Aiding the Accord: The Hunt is On|60+||Therezal|weekly campaign",
 		[72374] = "Aiding the Accord: Dragonbane Keep|60+||Therezal|weekly campaign",
@@ -6791,17 +6792,18 @@ Data.Quests = {
 		[52922] = "Waist of Time|||treasure",
 
 		-- Alara'shinu
-		[78606] = "Alara'shinu: Landeron Felfury",
-		[78622] = "Alara'shinu: Memory of Landeron Felfury, Broken Shore",
-		[78623] = "Alara'shinu: Memory of Landeron Felfury, Val'sharah", -- Val'sharah 51.19 56.9
-		[78660] = "Alara'shinu: Warglaive", -- Loot available
-		[78677] = "Alara'shinu: Imbued", -- Imbued
-		[78678] = "Alara'shinu|||treasure", -- Looted, 51.16 57.14
+		--[78606] = "Alara'shinu: Landeron Felfury",
+		--[78622] = "Alara'shinu: Memory of Landeron Felfury (Broken Shore)",
+		--[78623] = "Alara'shinu: Memory of Landeron Felfury (Val'sharah)", -- Val'sharah 51.19 56.9
+		[78660] = "Alara'shinu: Stag Witnessed", -- Loot available
+		--[78677] = "Alara'shinu: Imbued", -- Imbued
+		--[78678] = "Alara'shinu|||treasure", -- Looted, 51.16 57.14
 
 		-- World Boss
 		[32098] = "Galleon|1+|||weekly vignette",
 		[32099] = "Sha of Anger|1+|||weekly vignette",
 		[32519] = "Oondasta|1+|||weekly vignette",
+		[37460] = "Drov the Ruiner|1+|||weekly vignette",
 		[37464] = "Rukhmar|1+|||weekly vignette",
 	}
 }
