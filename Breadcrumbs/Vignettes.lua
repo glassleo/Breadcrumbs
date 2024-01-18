@@ -70,7 +70,7 @@ Data.Vignettes = {
 		[78552] = "Unwaking Echo|70+|46.4 86.15|\"You must be sleeping to open the treasure\"|treasure item:210682|Contains|!{5169125} [rare]Camper's Knife]|!{5172976} [Flightstones]|!{2065578} [Dragon Isles Supplies]||Grants Reputation|!{5244643} [Dream Wardens] (200)",
 		[77858] = "Hidden Moonkin Stash|70+|47.49 34.85|\"On top of a floating branch\"|treasure item:210725|Contains|!{4067367} [rare]Owl Post]|!{5172976} [Flightstones]|!{2065578} [Dragon Isles Supplies]||Grants Reputation|!{5244643} [Dream Wardens] (200)",
 		[78120] = "Pineshrew Cache|70+|37.26 30.69||treasure item:210411|Contains|!{464030} [rare]Fast Growing Seed]",
-		[77950] = "Crystalline Glowblossom|70+|39.11 65.52|\"On top of a tree\"|treasure item:208047|Contains|!{656681} [epic]Gigantic Dreamseed]",
+		[77950] = "Crystalline Glowblossom|70+|39.11 65.52|\"Hanging from a tree branch\"|treasure item:208047|Contains|!{5172976} [Flightstones]|!{2065578} [Dragon Isles Supplies]||Grants Reputation|!{5244643} [Dream Wardens] (200)",
 		[77855] = {
 			"Triflesnatch's Roving Trove|70+|42.23 56.3|\"Wake and follow the nearby [friendly]Triflesnatcher] to unlock the treasure\"|treasure item:208067 atlas:vignetteloot-locked|Contains|!{656679} [rare]Plump Dreamseed]",
 			"Triflesnatcher|70+|39.72 52.15|Triflesnatch's Roving Trove|treasure atlas:questobjective",
@@ -121,6 +121,11 @@ Data.Vignettes = {
 			"[Mark of Goldrinn]|70+ -worgen|34.5 82.65|Statue of the Great Wolf|treasure atlas:questobjective",
 		},
 		[78361] = "Boon of Goldrinn|78368|33.06 83.27||treasure down item:210660|Contains|!{3515606} [rare]Claw of Lo'Gosh]",
+
+		-- Alara'shinu
+		[78606] = "Landeron Felfury|70+ demonhunter|50.54 60.97||treasure speak item:210961|\"Speaking to Landeron Felfury is the first step in unlocking the secret warglaive [epic]Alara'shinu]\"",
+		[78622] = "Alara'shinu|70+ demonhunter 78606|50.54 60.97||treasure elsewhere link:646 item:210961|\"The next step in unlocking the secret warglaive [epic]Alara'shinu] takes place in Broken Shore\"",
+		[78623] = "Alara'shinu|70+ demonhunter 78622|50.54 60.97||treasure elsewhere link:641 item:210961|\"The next step in unlocking the secret warglaive [epic]Alara'shinu] takes place in Val'sharah\"",
 	},
 
 	-- Barrows of Reverie
@@ -997,6 +1002,11 @@ Data.Vignettes = {
 		[39085] = "Small Treasure Chest|10+|40.51 44.69||treasure down link:642|Contains|!{1397630} [Order Resources]", -- Darkpens
 		[44139] = "Small Treasure Chest|10+|63.91 45.57||treasure|Contains|!{1397630} [Order Resources]",
 
+		-- Alara'shinu
+		[78623] = "Memory of Landeron Felfury|70+ demonhunter 78622|51.19 56.9||treasure speak item:210961|\"Witnessing the memory of Landeron Felfury inside the Temple of Elune is the final step in unlocking the secret warglaive [epic]Alara'shinu]",
+		[78677] = "Warglaive|70+ demonhunter 78623|51.16 57.14||treasure item:210961|Contains|!{5061798} [epic]Alara'shinu]",
+		[78678] = "Warglaive|70+ demonhunter 78677|51.16 57.14||treasure item:210961|Contains|!{5061798} [epic]Alara'shinu]",
+
 		-- Vignette
 		[40079] = {
 			"Lyrath Moonfeather|10+ cloth|61.83 29.61||vignette item:130118|Drops|!{1113073} [rare]Moonfeather Handwraps]|!{1397630} [Order Resources]",
@@ -1110,6 +1120,15 @@ Data.Vignettes = {
 			"Apothecary Faldren|45+ -cloth|42.29 56.62||vignette|Drops|!{1397630} [Order Resources]",
 		},
 		[43954] = "Anax|45+|42.29 56.62||vignette item:140934|Drops|!{804967} [rare]Benax]|!{1397630} [Order Resources]",
+	},
+
+
+	--[[ Broken Shore ]]--
+
+	[646] = {
+		-- Alara'shinu
+		[78622] = "Memory of Landeron Felfury|70+ demonhunter 78606|71.6 41.49||treasure speak item:210961|\"Witnessing the memory of Landeron Felfury inside The Lost Temple is the second step in unlocking the secret warglaive [epic]Alara'shinu]\"",
+		[78623] = "Alara'shinu|70+ demonhunter 78622|71.6 41.49||treasure elsewhere link:641 item:210961|\"The next step in unlocking the secret warglaive [epic]Alara'shinu] takes place in Val'sharah\"",
 	},
 
 
