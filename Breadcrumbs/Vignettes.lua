@@ -70,7 +70,7 @@ Data.Vignettes = {
 		[78552] = "Unwaking Echo|70+|46.4 86.15|\"You must be sleeping to open the treasure\"|treasure item:210682|Contains|!{5169125} [rare]Camper's Knife]|!{5172976} [Flightstones]|!{2065578} [Dragon Isles Supplies]||Grants Reputation|!{5244643} [Dream Wardens] (200)",
 		[77858] = "Hidden Moonkin Stash|70+|47.49 34.85|\"On top of a floating branch\"|treasure item:210725|Contains|!{4067367} [rare]Owl Post]|!{5172976} [Flightstones]|!{2065578} [Dragon Isles Supplies]||Grants Reputation|!{5244643} [Dream Wardens] (200)",
 		[78120] = "Pineshrew Cache|70+|37.26 30.69||treasure item:210411|Contains|!{464030} [rare]Fast Growing Seed]",
-		[77950] = "Crystalline Glowblossom|70+|39.11 65.52|\"Hanging from a tree branch\"|treasure item:208047|Contains|!{5172976} [Flightstones]|!{2065578} [Dragon Isles Supplies]||Grants Reputation|!{5244643} [Dream Wardens] (200)",
+		[77950] = "Crystalline Glowblossom|70+|39.11 65.52|\"Hanging from a tree branch\"|treasure item:208047|Contains|!{656681} [epic]Gigantic Dreamseed]",
 		[77855] = {
 			"Triflesnatch's Roving Trove|70+|42.23 56.3|\"Wake and follow the nearby [friendly]Triflesnatcher] to unlock the treasure\"|treasure item:208067 atlas:vignetteloot-locked|Contains|!{656679} [rare]Plump Dreamseed]",
 			"Triflesnatcher|70+|39.72 52.15|Triflesnatch's Roving Trove|treasure atlas:questobjective",
