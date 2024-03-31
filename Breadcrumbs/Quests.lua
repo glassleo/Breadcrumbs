@@ -27,6 +27,7 @@ Data.HiddenBonusObjectiveQuests = {
 	[77254] = true, -- Aiding the Accord: Time Rift
 	[78444] = true, -- A Worthy Ally: Dream Wardens
 	[78821] = true, -- Blooming Dreamseeds
+	[78643] = true, -- Fair Skies and Strong Winds,
 }
 
 
@@ -342,7 +343,7 @@ Data.Quests = {
 		[76402] = "Amirdrassil, the Dream's Hope: Fyrakk|70+ 76401|27.93 31.15|Alexstrasza the Life-Binder|raid",
 
 		-- New Beginnings
-		[77780] = "A Blossom Witnessed|70+ 76402|27.58 31.46|Tyrande Whisperwind|campaign",
+		[77780] = "A Blossom Witnessed|70+ 76401|27.58 31.46|Tyrande Whisperwind|campaign",
 
 		-- Central Encampment
 		[78444] = "A Worthy Ally: Dream Wardens|70+ 77887|50.2 61.57|Keeper Amrymn|weekly",
@@ -440,7 +441,7 @@ Data.Quests = {
 	-- Valdrakken
 	[2112] = {
 		-- Aiding the Accord
-		[70750] = "Aiding the Accord|60+ 67030 -72374 -72068 -72373 -72375 -72369 -75859 -75860 -75861 -78446 -78447|50.17 56.22|Therazal|campaign weekly", -- You get one of 5 random weeklies, we consolidate them into one pin
+		[70750] = "Aiding the Accord|60+ 67030 -78861 -72068 -72373 -72374 -72375 -75259 -75859 -75860 -75861 -78446 -78447 -77976 -77254|50.17 56.22|Therazal|campaign weekly", -- You get one of 5 random weeklies, we consolidate them into one pin
 		[72354] = "The Great Vault|70+|50.17 56.22|Therazal",
 
 		-- The Spark of Ingenuity
@@ -496,6 +497,11 @@ Data.Quests = {
 		-- Emerald Dream - Misfit Dragons
 		[77195] = "A Dragon's Eye View|70+ 76461|6.84 65.3|Wrathion",
 		[76464] = "The Thorignir|70+ 77198|46.72 47.76|Vyranoth",
+
+		-- Seeds of Renewal
+		[78643] = "Fair Skies and Strong Winds|70+ 76283|58.12 34.87|Alexstrasza the Life-Binder",
+		[78863] = "A Place Beneath the Boughs|70+ 78643|58.12 34.87|Alexstrasza the Life-Binder",
+		--[78865] = "Siblings Until the End|70+ 78643 ANDSOMETHINGELSE|COORDS|Vyranoth", -- prereqs?
 	},
 
 	-- Thaldraszus
@@ -507,7 +513,7 @@ Data.Quests = {
 		-- Big Time Adventurer
 
 		-- Aiding the Accord
-		[70750] = "Aiding the Accord|60+ 67030 -72374 -72068 -72373 -72375 -72369 -75859 -75860 -75861 -78446 -78447|39.96 60.78|Therazal|campaign weekly link:2112", -- You get one of 5 random weeklies, we consolidate them into one pin
+		[70750] = "Aiding the Accord|60+ 67030 -78861 -72068 -72373 -72374 -72375 -75259 -75859 -75860 -75861 -78446 -78447 -77976 -77254|39.96 60.78|Therazal|campaign weekly link:2112", -- You get one of 5 random weeklies, we consolidate them into one pin
 		[72354] = "The Great Vault|70+|39.96 60.78|Therazal|link:2112",
 
 		-- The Spark of Ingenuity
@@ -1103,6 +1109,28 @@ Data.Quests = {
 		-- Emerald Dream - Enter the Dream
 		--[76317] = "Call of the Dream|70+|18.66 51.77|[Auto Accept]|campaign", -- Auto Accept on login, unknown actual start point
 		[76318] = "Emerald Welcome|70+ 76317|18.66 51.77|Merithra|campaign",
+
+		-- Emerald Dream - New Beginnings
+		[76276] = "A Changed Land|70+ 77780|14.88 55.88|Merithra of the Dream|campaign",
+		[77329] = "Auspicious Gathering|70+ 76276|14.88 55.88|Merithra of the Dream|campaign",
+	},
+
+	-- Amirdrassil
+	[2239] = {
+		-- Emerald Dream - New Beginnings
+		[76276] = "A Changed Land|70+ 77780|83.25 44.42|Merithra of the Dream|campaign",
+		[77329] = "Auspicious Gathering|70+ 76276|83.25 44.42|Merithra of the Dream|campaign",
+		[77200] = "Offerings for the Well|70+ 77329|50.82 61.47|Tyrande Whisperwind|campaign",
+		--[77201] = "A Personal Offering|70+ 77329 nightelf|50.82 61.47|Tyrande Whisperwind|campaign", -- Night Elf only
+		[76280] = "New Moon|70+ 77200 -nightelf,77201|50.82 61.47|Tyrande Whisperwind|campaign",
+		[76281] = "Something Worth Celebrating|70+ 76280|50.82 61.47|Tyrande Whisperwind|campaign",
+		[77781] = "A Different Enthusiasm|70+ +76281|54.25 57.88|Merithra of the Dream|campaign",
+		[76282] = "A Disquieting Feeling|70+ +76281|54.32 57.88|Kalecgos|campaign",
+		[76283] = "Andu-falah-dor|70+ 76281 77781 76282|54.25 57.88|Merithra of the Dream|campaign",
+
+		-- Seeds of Renewal
+		[78643] = "Fair Skies and Strong Winds|70+ 76283|50.88 61.67|Alexstrasza",
+		[78864] = "The Returning|70+ 78863|51.09 60.52|Shandris Feathermoon",
 	},
 
 
@@ -1306,7 +1334,7 @@ Data.Quests = {
 		[65779] = "Into the Plains|60+ 62+,67030 65795,67030|48.27 88.67|Ambassador Taurasza|campaign", -- Adventure mode bypasses prereqs
 
 		-- Aiding the Accord
-		[70750] = "Aiding the Accord|60+ 67030 -72374 -72068 -72373 -72375 -72369 -75859 -75860 -75861 -78446 -78447|76.51 34.29|Kerazal|campaign weekly", -- You get one of 5 random weeklies, we consolidate them into one pin
+		[70750] = "Aiding the Accord|60+ 67030 -78861 -72068 -72373 -72374 -72375 -75259 -75859 -75860 -75861 -78446 -78447 -77976 -77254|76.51 34.29|Kerazal|campaign weekly", -- You get one of 5 random weeklies, we consolidate them into one pin
 		[72354] = "The Great Vault|70+|76.51 34.29|Kerazal",
 		
 		-- The Spark of Ingenuity
