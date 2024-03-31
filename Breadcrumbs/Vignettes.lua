@@ -50,7 +50,7 @@ Data.Vignettes = {
 		
 		-- Jewelcrafting Treasure
 		[78282] = "Petrified Hope|60+ jewelcrafting skill:jewelcrafting10:25|33.23 46.57||treasure item:210200|Contains|!{840007} [epic]Petrified Hope]",
-		[78283] = "Handful of Pebbles|60+ jewelcrafting skill:jewelcrafting10:25|43.51 33.36||treasure item:210201|Contains|!{646672} [epic]Handful of Pebbles]",
+		[78283] = "Unpolished Blemish|60+ jewelcrafting skill:jewelcrafting10:25|43.51 33.36||treasure item:210201|Contains|!{646672} [epic]Handful of Pebbles]",
 		[78285] = "Coalesced Dreamstone|60+ jewelcrafting skill:jewelcrafting10:25|58.95 53.89||treasure item:210202|Contains|!{134104} [epic]Coalesced Dreamstone]",
 		
 		-- Leatherworking Treasure
@@ -216,18 +216,19 @@ Data.Vignettes = {
 			"Blazing Shadowflame Chest|70+ item:15138|28.53 47.94|\"You must equip an Onyxia Scale Cloak to be able to open the chest\"|treasure item:205418|Requires|{133757} [hasitem:15138]Onyxia Scale Cloak]||Contains|!{4914678} [rare]Blazing Shadowflame Cinder]|!{5062636} [rare]Whelpling's Shadowflame Crest Fragment]|!{5172976} [Flightstones]|!{2065578} [Dragon Isles Supplies]",
 			"Blazing Shadowflame Chest|70+ -item:15138|28.53 47.94|\"You must equip an Onyxia Scale Cloak to be able to open the chest\"|treasure item:205418 atlas:vignetteloot-locked|Requires|{133757} [hasitem:15138]Onyxia Scale Cloak]||Contains|!{4914678} [rare]Blazing Shadowflame Cinder]|!{5062636} [rare]Whelpling's Shadowflame Crest Fragment]|!{5172976} [Flightstones]|!{2065578} [Dragon Isles Supplies]",
 		},
-		[73706] = "Charred Egg|70+|30.05 41.93||treasure item:204075|Contains|!{5062636} [rare]Whelpling's Shadowflame Crest Fragment]|!{5172976} [Flightstones]|!{2065578} [Dragon Isles Supplies]",
+		[73706] = "Charred Egg|70+|30.05 41.93||treasure|Contains|!{5172976} [Flightstones]|!{2065578} [Dragon Isles Supplies]",
+		--[75187] = "Chest of the Flights|70+|56.04 3.05|\"Activate the nearby gems in the same order as the banner above the chest\"|treasure daily|Contains|!{5172976} [Flightstones]|!{2065578} [Dragon Isles Supplies]",
 		[73395] = "Well-Chewed Chest|70+|29.77 40.55|\"The key can be found underneath the dead [dead]Massive Corebeast] inside the cave\"|treasure item:204075|Requires|{2032583} [hasitem:202869]Scorching Key]||Contains|!{5062636} [rare]Whelpling's Shadowflame Crest Fragment] (6)|!{5172976} [Flightstones]|!{2065578} [Dragon Isles Supplies]",
 		[75515] = "Molten Hoard|70+|48.42 16.35|\"Inside the lava sewage outflow cave underneath Brimstone Garrison\"|treasure item:205981|Contains|!{5148757} [epic]Molten Primal Fang]",
-		--[75302] = "Stolen Stash|70+|60.66 46.23||treasure item:204075|Contains|!{5062636} [rare]Whelpling's Shadowflame Crest Fragment]|!{5172976} [Flightstones]|!{2065578} [Dragon Isles Supplies]",
+		--[75302] = "Stolen Stash|70+|60.66 46.23||treasure|Contains|!{5172976} [Flightstones]|!{2065578} [Dragon Isles Supplies]",
 		[75559] = "Attunement Crystal|70+|39.41 73.28|Crystal-encased Chest|treasure atlas:questobjective",
 		[74987] = "Attunement Crystal|70+|37.75 68.86|Crystal-encased Chest|treasure atlas:questobjective",
 		[74986] = {
 			"Crystal-encased Chest|70+ -75559,-74987|36.4 74.26|\"Find two [Attunement Crystals] nearby in order to unlock the treasure\"|treasure item:204075 atlas:vignetteloot-locked|Contains|!{/Random} [rare]Random Trinket]|!{5062636} [rare]Whelpling's Shadowflame Crest Fragment] (6)|!{5172976} [Flightstones]|!{2065578} [Dragon Isles Supplies]",
-			"Crystal-encased Chest|70+ 75559 74987|36.4 74.26||treasure item:204075|Contains|!{/Random} [rare]Random Trinket]|!{5062636} [rare]Whelpling's Shadowflame Crest Fragment]|!{5172976} [Flightstones]|!{2065578} [Dragon Isles Supplies]",
+			"Crystal-encased Chest|70+ 75559 74987|36.4 74.26||treasure|Contains|!{/Random} [rare]Random Trinket]|!{5172976} [Flightstones]|!{2065578} [Dragon Isles Supplies]",
 		},
-		[75019] = "Long-Lost Cache|70+|62.71 53.75||treasure item:204075 weekly|Contains|!{5062636} [rare]Whelpling's Shadowflame Crest Fragment]|!{5172976} [Flightstones]|!{2065578} [Dragon Isles Supplies]",
-		--[75814] = "Waterlogged Bundle|70+|62.07 55.33||treasure item:204075|Contains|!{5062636} [rare]Whelpling's Shadowflame Crest Fragment]|!{5172976} [Flightstones]|!{2065578} [Dragon Isles Supplies]", -- also flags 75015
+		[75019] = "Long-Lost Cache|70+|62.71 53.75||treasure weekly|Contains|!{5172976} [Flightstones]|!{2065578} [Dragon Isles Supplies]",
+		--[75814] = "Waterlogged Bundle|70+|62.07 55.33||treasure|Contains|!{5172976} [Flightstones]|!{2065578} [Dragon Isles Supplies]", -- also flags 75015
 		[75514] = {
 			"Fealty's Reward|70+|48.45 10.83|\"To open the chest you must first kneel before the statue of Neltharion in the western part of Brimstone Garrison\"|treasure item:204075|Contains|!{/Random} [rare]Random Trinket]|!{5062636} [rare]Whelpling's Shadowflame Crest Fragment]|!{5172976} [Flightstones]|!{2065578} [Dragon Isles Supplies]",
 			"Statue of Neltharion|70+|43.54 23.02|Fealty's Reward|treasure atlas:questobjective",
@@ -241,7 +242,7 @@ Data.Vignettes = {
 
 	-- Deeplayer Nest
 	[2184] = {
-		[75303] = "Stolen Stash|70+|63.86 82.66||treasure item:204075|Contains|!{5062636} [rare]Whelpling's Shadowflame Crest Fragment]|!{5172976} [Flightstones]|!{2065578} [Dragon Isles Supplies]",
+		[75303] = "Stolen Stash|70+|63.86 82.66||treasure|Contains|!{5172976} [Flightstones]|!{2065578} [Dragon Isles Supplies]",
 	},
 
 
@@ -281,6 +282,9 @@ Data.Vignettes = {
 		-- Treasure
 		[70731] = "Barrel of Confiscated Treats|60+ skill:cooking10:1|34.1 60.79||treasure item:198106 link:2112|Contains|!{1500865} [rare]Recipe: Tasty Hatchling's Treat]|!{1500918} [Tasty Hatchling's Treat] (2)",
 		[70609] = "Elegant Canvas Brush|60+|60.25 41.64||treasure item:203206|Contains|!{2103804} [poor]Elegant Canvas Brush]",
+		[70538] = "Yennu's Map|60+|54.94 75.43||treasure item:199069|Contains|!{1505955} [uncommon]Yennu's Map]",
+		[70611] = "Acorn Harvester|60+|49.44 62.9|\"Pick up the nearby [Acorn] and give it to the [friendly]Acorn Harvester]\"|treasure item:193066|Rewards|!{4528722} [rare]Chestnut]",
+		[70610] = "Surveyor's Magnifying Glass|60+|64.86 16.56|\"Inside a cave\"|treasure item:193036|Contains|!{4419345} [uncommon]Left-Handed Magnifying Glass]",
 		
 		-- Alchemy Treasure
 		[70301] = "Contraband Concoction|60+ alchemy skill:alchemy10:25|59.53 38.46|\"Hidden inside the foliage on the ground next to a flying book\"|treasure item:198697|Contains|!{1416156} [epic]Contraband Concoction]",
@@ -340,6 +344,7 @@ Data.Vignettes = {
 
 	--[[ The Azure Span ]]--
 
+	-- The Azure Span
 	[2024] = {
 		-- Treasure
 		[70266] = "Decay-Infused Tanning Oil|60+ leatherworking skill:2830:25|16.73 38.79||treasure item:198658|Contains|!{650640} [epic]Decay-Infused Tanning Oil]",
@@ -361,6 +366,9 @@ Data.Vignettes = {
 			"Spelltouched Tongs|60+ blacksmithing skill:blacksmithing10:25 -mining|53.14 66.14|\"You may need [hasitem:198727]Expedition Explosives] to break open the rock wall.\n\nThey can be bought from the Dragonscale Expedition quartermaster in the Waking Shores.\"|treasure item:201011|Contains|!{1020378} [epic]Spelltouched Tongs]",
 			"Spelltouched Tongs|60+ blacksmithing skill:blacksmithing10:25 mining|53.14 66.14|\"You may need to break the rock wall using your Mining skill\"|treasure item:201011|Contains|!{1020378} [epic]Spelltouched Tongs]",
 		},
+		[70441] = "Pepper Hammer|60+|26.56 46.29|\"Loot the [Tree Sap] on top of the dead tree trunk and then use the [Stick] to summon [friendly]Pepper Hammer]\"|treasure item:193834|Rewards|!{3998670} [rare]Blackfeather Nester]",
+		[70380] = "Rubber Fish|60+|54.61 29.32||treasure item:202712|Contains|!{237308} [uncommon]Rubber Fish] (5)",
+		[70606] = "Lost Compass|60+|74.9 55.01||treasure item:202711|Contains|!{4635196} [rare]Lost Compass]",
 
 		-- High Peak
 		[71215] = "High Peak|60+ research:2164|31.92 27.03||vignette atlas:Warfronts-FieldMapIcons-Empty-Banner-Minimap large|Grants Reputation|!{4687628} [Dragonscale Expedition] (250)",
@@ -389,6 +397,12 @@ Data.Vignettes = {
 		[70255] = "Pluutar|60+ jewelcrafting skill:2829:25|46.22 40.76||vignette speak currency:2029|Master Jewelcrafter|!{4624793} [rare]Dragon Isles Jewelcrafting Knowledge] (5)|!{4643977} [rare]Artisan's Mettle] (25)",
 	},
 
+	-- Traitor's Rest
+	[2262] = {
+		-- Treasure
+		[70441] = "Pepper Hammer|60+|53.39 50.52|\"Loot the [Tree Sap] on top of the dead tree trunk and then use the [Stick] to summon [friendly]Pepper Hammer]\"|treasure item:193834|Rewards|!{3998670} [rare]Blackfeather Nester]",
+	},
+
 
 	--[[ Ohn'ahran Plains ]]--
 
@@ -408,6 +422,10 @@ Data.Vignettes = {
 			"Ancient Spear Shards|60+ blacksmithing skill:blacksmithing10:25|81.11 37.88|\"Inside a cave\"|treasure item:201004 down|Contains|!{1717146} [epic]Ancient Spear Shards]",
 			"Cave Entrance|60+ blacksmithing skill:blacksmithing10:25|79.39 36.47|Ancient Spear Shards|treasure atlas:questobjective",
 		},
+		[67718] = "Ludo|60+|61.04 43.13|\"Pet [friendly]Ludo] to get the map\"|treasure item:195453|Rewards|!{237385} [uncommon]Ludo's Stash Map]",
+		[70402] = "Centaur Horn|60+|73.49 56.14||treasure item:200869|Contains|!{516667} [uncommon]Ohn Lite Branded Horn]",
+		[70379] = "Gold Coin|60+|82.33 73.4|\"Next to The Great Swog\"|treasure item:199338|Contains|!{4638724} [Copper Coin of the Isles]",
+		[70400] = "Tuskarr Toy Boat|60+|51.99 58.39||treasure item:200876|Contains|!{1126431} [Yennu's Toy Boat]",
 
 		-- High Peak
 		[71208] = "High Peak|60+ research:2164|86.31 39.28||vignette atlas:Warfronts-FieldMapIcons-Empty-Banner-Minimap large|Grants Reputation|!{4687628} [Dragonscale Expedition] (250)",
@@ -474,6 +492,16 @@ Data.Vignettes = {
 		[70312] = "Curious Ingots|60+ blacksmithing skill:blacksmithing10:25|65.6 25.69||treasure item:201005|Contains|!{133218} [epic]Curious Ingots]",
 		[70246] = "Ancient Monument|60+ blacksmithing skill:blacksmithing10:25|22.25 87.62|\"Defeat the four [neutral]Enchanted Bulwarks] to reveal the treasure\"|treasure item:201007|Contains|!{135418} [epic]Ancient Monument]",
 		[70310] = "Qalashi Weapon Diagram|60+ blacksmithing skill:blacksmithing10:25|34.52 67.14||treasure item:201010|Contains|!{1505957} [epic]Qalashi Weapon Diagram]",
+		[70346] = {
+			"Dead Man's Chestplate|60+ cloth|69.3 46.59|\"In the middle section of the tower\"|treasure item:202193|Contains|!{4623197} [rare]Dead Man's Tunic]",
+			"Dead Man's Chestplate|60+ leather|69.3 46.59|\"In the middle section of the tower\"|treasure item:202192|Contains|!{4581056} [rare]Dead Man's Leathers]",
+			"Dead Man's Chestplate|60+ mail|69.3 46.59|\"In the middle section of the tower\"|treasure item:202190|Contains|!{4628906} [rare]Dead Man's Chains]",
+			"Dead Man's Chestplate|60+ plate|69.3 46.59|\"In the middle section of the tower\"|treasure item:202191|Contains|!{4615258} [rare]Dead Man's Breastplate]",
+		},
+		[70345] = {
+			"Yennu's Kite|60+ -toy:202022|46.74 31.28|\"Up on a tree branch\"|treasure item:202022|Contains|!{318523} [rare]Yennu's Kite]",
+			"Yennu's Kite|60+ toy:202022|46.74 31.28|\"Up on a tree branch\"|treasure|Contains|!{2065578} [Dragon Isles Supplies]", -- Drops supplies instead if you have learned the toy already
+		},
 		
 		-- High Peak
 		[70824] = "High Peak|60+ research:2164|73.35 38.85||vignette atlas:Warfronts-FieldMapIcons-Empty-Banner-Minimap large|Grants Reputation|!{4687628} [Dragonscale Expedition] (250)",
