@@ -28,7 +28,7 @@ Data.Vignettes = {
 		-- Blacksmithing Treasure
 		[78417] = "Amirdrassil Defender's Shield|60+ blacksmithing skill:blacksmithing10:25|49.83 62.98||treasure item:210464|Contains|!{5150876} [epic]Amirdrassil Defender's Shield]",
 		[78418] = "Deathstalker Chassis|60+ blacksmithing skill:blacksmithing10:25|36.34 46.79||treasure item:210465|Contains|!{464143} [epic]Deathstalker Chassis]",
-		[78419] = "Flamesworn Render|60+ blacksmithing skill:blacksmithing10:25|37.26 22.95||treasure item:210466|Contains|!{464143} [epic]Flamesworn Render]",
+		[78419] = "Flamesworn Render|60+ blacksmithing skill:blacksmithing10:25|37.26 22.95||treasure item:210466|Contains|!{4392916} [epic]Flamesworn Render]",
 
 		-- Engineering Treasure
 		[78308] = "Pure Dream Water|60+ enchanting skill:enchanting10:25|38.37 30.2||treasure item:210234|Contains|!{1020349} [epic]Pure Dream Water]",
