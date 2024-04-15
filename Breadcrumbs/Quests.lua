@@ -2422,7 +2422,7 @@ Data.Quests = {
 		[47485] = "The Ashvane Trading Company|10+ alliance 47181|67.99 21.91|Cyrus Crestfall",
 
 		-- Scrap-O-Matic 1000
-		[52462] = "A Load of Scrap|10+ alliance|77.17 16.46|Crenzo Sparkshatter",
+		[52462] = "A Load of Scrap|10+ alliance 47189|77.17 16.46|Crenzo Sparkshatter",
 
 		-- The Great Sea Scrolls
 		[53476] = "The Great Sea Scrolls|10+|1 Scrollcase|{454060} [Ancient Pilgrimage Scrollcasing]|discovery|Has a chance to drop from any Treasure Chest in Kul Tiras or Zandalar",
