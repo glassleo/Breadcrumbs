@@ -8,6 +8,7 @@ local LoginThrottle = true
 
 -- User settings (GUI NYI)
 local Setting_DisableStorylineQuestDataProvider = true
+if PlayerGetTimerunningSeasonID() then Setting_DisableStorylineQuestDataProvider = false end -- Disable in Timerunning
 local Setting_EnableQuests = true
 local Setting_PinSize = 20
 local Setting_ObjectivesPinSize = 15
@@ -75,6 +76,7 @@ local SkillLines = {
 		[2437] = 8, -- Kul Tiran/Zandalari
 		[2751] = 9, -- Shadowlands
 		[2822] = 10, -- Dragon Isles
+		[2872] = 11, -- Khaz Algar
 	},
 	[165] = { -- Leatherworking
 		[2532] = 1, -- Classic
@@ -87,6 +89,7 @@ local SkillLines = {
 		[2525] = 8, -- Kul Tiran/Zandalari
 		[2758] = 9, -- Shadowlands
 		[2830] = 10, -- Dragon Isles
+		[2880] = 11, -- Khaz Algar
 	},
 	[171] = { -- Alchemy
 		[2485] = 1, -- Classic
@@ -99,6 +102,7 @@ local SkillLines = {
 		[2478] = 8, -- Kul Tiran/Zandalari
 		[2750] = 9, -- Shadowlands
 		[2823] = 10, -- Dragon Isles
+		[2871] = 11, -- Khaz Algar
 	},
 	[182] = { -- Herbalism
 		[2556] = 1, -- Classic
@@ -111,6 +115,7 @@ local SkillLines = {
 		[2549] = 8, -- Kul Tiran/Zandalari
 		[2760] = 9, -- Shadowlands
 		[2832] = 10, -- Dragon Isles
+		[2877] = 11, -- Khaz Algar
 	},
 	[185] = { -- Cooking
 		[2548] = 1, -- Classic
@@ -123,6 +128,7 @@ local SkillLines = {
 		[2541] = 8, -- Kul Tiran/Zandalari
 		[2752] = 9, -- Shadowlands
 		[2824] = 10, -- Dragon Isles
+		[2873] = 11, -- Khaz Algar
 	},
 	[186] = { -- Mining
 		[2572] = 1, -- Classic
@@ -135,6 +141,7 @@ local SkillLines = {
 		[2565] = 8, -- Kul Tiran/Zandalari
 		[2761] = 9, -- Shadowlands
 		[2833] = 10, -- Dragon Isles
+		[2881] = 11, -- Khaz Algar
 	},
 	[197] = { -- Tailoring
 		[2540] = 1, -- Classic
@@ -147,6 +154,7 @@ local SkillLines = {
 		[2533] = 8, -- Kul Tiran/Zandalari
 		[2759] = 9, -- Shadowlands
 		[2831] = 10, -- Dragon Isles
+		[2883] = 11, -- Khaz Algar
 	},
 	[202] = { -- Engineering
 		[2506] = 1, -- Classic
@@ -159,6 +167,7 @@ local SkillLines = {
 		[2499] = 8, -- Kul Tiran/Zandalari
 		[2755] = 9, -- Shadowlands
 		[2827] = 10, -- Dragon Isles
+		[2875] = 11, -- Khaz Algar
 	},
 	[333] = { -- Enchanting
 		[2494] = 1, -- Classic
@@ -171,6 +180,7 @@ local SkillLines = {
 		[2486] = 8, -- Kul Tiran/Zandalari
 		[2753] = 9, -- Shadowlands
 		[2825] = 10, -- Dragon Isles
+		[2874] = 11, -- Khaz Algar
 	},
 	[356] = { -- Fishing
 		[2592] = 1, -- Classic
@@ -183,6 +193,7 @@ local SkillLines = {
 		[2585] = 8, -- Kul Tiran/Zandalari
 		[2754] = 9, -- Shadowlands
 		[2826] = 10, -- Dragon Isles
+		[2876] = 11, -- Khaz Algar
 	},
 	[393] = { -- Skinning
 		[2564] = 1, -- Classic
@@ -195,6 +206,7 @@ local SkillLines = {
 		[2557] = 8, -- Kul Tiran/Zandalari
 		[2762] = 9, -- Shadowlands
 		[2834] = 10, -- Dragon Isles
+		[2882] = 11, -- Khaz Algar
 	},
 	[755] = { -- Jewelcrafting
 		[2524] = 1, -- Classic
@@ -207,6 +219,7 @@ local SkillLines = {
 		[2517] = 8, -- Kul Tiran/Zandalari
 		[2757] = 9, -- Shadowlands
 		[2829] = 10, -- Dragon Isles
+		[2879] = 11, -- Khaz Algar
 	},
 	[773] = { -- Inscription
 		[2514] = 1, -- Classic
@@ -219,6 +232,7 @@ local SkillLines = {
 		[2507] = 8, -- Kul Tiran/Zandalari
 		[2756] = 9, -- Shadowlands
 		[2828] = 10, -- Dragon Isles
+		[2878] = 11, -- Khaz Algar
 	},
 	[794] = { -- Archaeology
 		[794] = true, -- Archaeology

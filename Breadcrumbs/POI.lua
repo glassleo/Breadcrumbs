@@ -141,8 +141,8 @@ Data.POI = {
 	-- Thaldraszus
 	[2025] = {
 		-- Revival Catalyst - Season 2 prequest is 75497
-		"creationcatalyst-32x32|[Revival Catalyst Console]|70+ currency:2533:1|60.69 53.71|tooltip|Transform an item from Dragonflight Season 3 into a set item.||[green]<currencycount:2796> §4Charge:Charges; Available]",
-		"creationcatalyst-32x32|[Revival Catalyst Console]|70+ -currency:2533:1|60.69 53.71|tooltip|Transform an item from Dragonflight Season 3 into a set item.||[gray]No Charges Available]",
+		"creationcatalyst-32x32|[Revival Catalyst Console]|70+ currency:2912:1|60.69 53.71|tooltip|Transform an item from Dragonflight into a set item.||[green]<currencycount:2912> §4Charge:Charges; Available]",
+		"creationcatalyst-32x32|[Revival Catalyst Console]|70+ -currency:2912:1|60.69 53.71|tooltip|Transform an item from Dragonflight into a set item.||[gray]No Charges Available]",
 		
 		-- Professions
 		"POI/Tailoring:small|[Temporal Loom]|58+ tailoring skill:tailoring10:1 profperk:tailoring10:40050|60.92 80.21|tooltip|[spell]Chronocloth Tailoring]", -- Only show if the first node of Chronocloth Tailoring is learned
@@ -1238,8 +1238,12 @@ Data.POI = {
 	[971] = {
 		-- Portal
 		"POI/VoidPortal|Rift to Stormwind|alliance|27.99 21.51",
-		"POI/VoidPortal|Rift to Fathom's Edge|alliance|27.9 28.61",
-		"POI/VoidPortal|Rift to Telogrus|alliance|29.45 37.79",
+		"POI/VoidPortal|Rift to Fathom's Edge|1+|27.9 28.61",
+		"POI/VoidPortal|Rift to Telogrus|1+|29.45 37.79",
+		"POI/VoidPortal|Rift to Cosmic Horizon|1+|30.05 44.11",
+		"POI/VoidPortal|Rift to Fathom's Edge|1+|40.02 49.31",
+		"POI/VoidPortal|Rift to Equinox Reach|1+|43.93 63.74",
+		"POI/VoidPortal|Rift to Cosmic Horizon|1+|48.95 72.06",
 	},
 
 	-- Mechagon City

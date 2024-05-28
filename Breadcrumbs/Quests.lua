@@ -12,19 +12,6 @@ Data.HiddenBonusObjectiveQuests = {
 	[64641] = true, -- Zereth Mortis - Mysterious Greenery
 
 	-- Dragonflight
-	[78861] = true, -- Aiding the Accord
-	[72068] = true, -- Aiding the Accord: A Feast For All
-	[72373] = true, -- Aiding the Accord: The Hunt is On
-	[72374] = true, -- Aiding the Accord: Dragonbane Keep
-	[72375] = true, -- Aiding the Accord: The Isles Call
-	[75259] = true, -- Aiding the Accord: Zskera Vaults
-	[75859] = true, -- Aiding the Accord: Sniffenseeking
-	[75860] = true, -- Aiding the Accord: Researchers Under Fire
-	[75861] = true, -- Aiding the Accord: Suffusion Camp
-	[78446] = true, -- Aiding the Accord: Superbloom
-	[78447] = true, -- Aiding the Accord: Emerald Bounty
-	[77976] = true, -- Aiding the Accord: Dreamsurge
-	[77254] = true, -- Aiding the Accord: Time Rift
 	[78444] = true, -- A Worthy Ally: Dream Wardens
 	[78821] = true, -- Blooming Dreamseeds
 	[78643] = true, -- Fair Skies and Strong Winds,
@@ -441,7 +428,6 @@ Data.Quests = {
 	-- Valdrakken
 	[2112] = {
 		-- Aiding the Accord
-		[70750] = "Aiding the Accord|60+ 67030 -78861 -72068 -72373 -72374 -72375 -75259 -75859 -75860 -75861 -78446 -78447 -77976 -77254|50.17 56.22|Therazal|campaign weekly", -- You get one of 5 random weeklies, we consolidate them into one pin
 		[72354] = "The Great Vault|70+|50.17 56.22|Therazal",
 
 		-- The Spark of Ingenuity
@@ -513,7 +499,6 @@ Data.Quests = {
 		-- Big Time Adventurer
 
 		-- Aiding the Accord
-		[70750] = "Aiding the Accord|60+ 67030 -78861 -72068 -72373 -72374 -72375 -75259 -75859 -75860 -75861 -78446 -78447 -77976 -77254|39.96 60.78|Therazal|campaign weekly link:2112", -- You get one of 5 random weeklies, we consolidate them into one pin
 		[72354] = "The Great Vault|70+|39.96 60.78|Therazal|link:2112",
 
 		-- The Spark of Ingenuity
@@ -855,7 +840,7 @@ Data.Quests = {
 		[70168] = "Sad Little Accidents|60+ 65+,67030 70166|7.87 53.45|Ranpiata|dungeon",
 		[70169] = "Even Trees Need Friends|60+ 65+,67030 70168|8.68 53.53|Hudson",
 		[70170] = "Beat the Demons Out of It|60+ 65+,67030 70169|8.58 53.5|Ranpiata|dungeon",
-		--[70171] = "Happy Little Accidents|60+ 65+,67030 70170|7.87 53.45|Ranpiata",
+		[70171] = "Happy Little Accidents|60+ 65+,67030 70170|7.94 53.27|Ranpiata",
 
 		-- Cobalt Assembly
 		[70550] = "Welcome to the Assembly|68+ ~72784|49.05 23.15|Venthi", -- Invalidates breadcrumb 72784
@@ -1334,7 +1319,6 @@ Data.Quests = {
 		[65779] = "Into the Plains|60+ 62+,67030 65795,67030|48.27 88.67|Ambassador Taurasza|campaign", -- Adventure mode bypasses prereqs
 
 		-- Aiding the Accord
-		[70750] = "Aiding the Accord|60+ 67030 -78861 -72068 -72373 -72374 -72375 -75259 -75859 -75860 -75861 -78446 -78447 -77976 -77254|76.51 34.29|Kerazal|campaign weekly", -- You get one of 5 random weeklies, we consolidate them into one pin
 		[72354] = "The Great Vault|70+|76.51 34.29|Kerazal",
 		
 		-- The Spark of Ingenuity
