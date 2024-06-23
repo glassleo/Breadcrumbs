@@ -747,7 +747,7 @@ Data.Quests = {
 		[65279] = "By Royal Decree|60+ 65+,67030|16.2 20.88|Gnoll Mon-Ark",
 		[65306] = "Rot Rancher|60+ 65+,67030|16.2 20.88|Gnoll Mon-Ark",
 		[65302] = "Keys to the Kingdom|60+ 65+,67030 65279 65306|16.2 20.88|Gnoll Mon-Ark",
-		[65594] = "Making a Mountain Out of a Gnoll Hill|60+ 65+,67030 65302|16.2 20.88|Gnoll Mon-Ark", -- coords?
+		[65594] = "Making a Mountain Out of a Gnoll Hill|60+ 65+,67030 65302|15.74 19.17|Gnoll Mon-Ark", -- coords?
 		[65595] = "One Bad Apple|60+ 65+,67030 65594|12.87 22.01|Gnoll Mon-Ark",
 
 		-- Shiverweb Vale
