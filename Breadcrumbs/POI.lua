@@ -136,6 +136,9 @@ Data.POI = {
 		-- Pets
 		"WildBattlePet|[Pet Supplies]|1+|48.3 82.51",
 		"Stablemaster|[Stable Master]|1+|46.65 78.95",
+
+		-- Item Turn-In
+		"QuestRepeatableTurnin:small|Lillian Brightmoon|60+ 72261 item:201411|35.18 24.64|tooltip item:201411|{QuestRepeatableTurnin} Vault Artifacts (<itemcount:201411>)||Required Item|!{4638531} [rare]Ancient Vault Artifact]||Rewards|!{4687628} [Dragonscale Expedition] (30)|!{2065578} [Dragon Isles Supplies] (10)",
 	},
 
 	-- Thaldraszus
@@ -149,7 +152,7 @@ Data.POI = {
 	},
 
 
-	--[[ Ohn'ahran Plains ]]--
+	--[[ The Azure Span ]]--
 
 	[2024] = {
 		-- Professions
@@ -160,7 +163,7 @@ Data.POI = {
 	--[[ Ohn'ahran Plains ]]--
 
 	[2023] = {
-		-- Khadin
+		-- Item Turn-In
 		"QuestRepeatableTurnin:small|Khadin|60+ 69979 item:191784|51.77 33.02|tooltip item:190456|{QuestRepeatableTurnin} Specialized Secrets (<itemcount:191784>)||Required Item|!{4643982} [epic]Dragon Shard of Knowledge]||Rewards|!{4643977} [rare]Artisan's Mettle] (50)|!{4624728} [Dragon Isles Knowledge]",
 	},
 
@@ -1030,10 +1033,15 @@ Data.POI = {
 		"POI/Tailoring|[Tailoring and Leatherworking]|5+ reputation:932:4 tailoring leatherwokring|37.47 27.21||Aldor Rise", -- Aldor
 		"POI/Tailoring|[Tailoring and Skinning]|5+ reputation:932:4 tailoring skinning|37.47 27.21||Aldor Rise", -- Aldor
 		"POI/Bandage|[Bandage Trainer]|5+ reputation:932:4 tailoring|66.5 13.44||Shattrath Infirmary", -- Aldor
-		--"POI/Cooking|[Cooking]|5+ reputation:932:4|35.12 76.19||Aldor Rise", -- Aldor
-		--"POI/Fishing|[Fishing]|5+ reputation:932:4|55.47 78.48||Aldor Rise", -- Aldor
-		--"POI/Archaeology|[Archaeology]|10+ reputation:932:4|48.84 33.39||Aldor Rise", -- Aldor
+		"POI/Cooking|[Cooking]|5+|62.39 67.17",
+		"POI/Archaeology|[Archaeology]|10+|62.72 70.58",
 		"profession|[Profession Trainers]|10+ reputation:934:4|43.65 90.87||The Seer's Library", -- Scryer
+	},
+
+	-- Terokkar Forest
+	[108] = {
+		-- Professions
+		"POI/Fishing|[Fishing]|5+|38.72 12.8",
 	},
 
 
