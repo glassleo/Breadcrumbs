@@ -1,4 +1,4 @@
-## Interface: 100105
+## Interface: 110000
 ## Title: Breadcrumbs
 ## Version: Alpha 1
 ## Notes: Adds dynamic pins to your World Map
