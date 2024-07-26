@@ -471,15 +471,15 @@ function Breadcrumbs:FormatTooltip(text, flags, varwrap)
 	text = string.gsub(text, "%[hasitem:([%d]+):([%d]+)%]", function(item, count)
 		item = tonumber(item or 0) or 0
 		count = tonumber(count or 0) or 0
-		return (GetItemCount(item, true, false, true) >= count) and "|cffffff98" or (GetItemCount(item, true, false, true) >= 1) and "|cff9d9d9d" or "|cff9d9d9d"
+		return (C_Item.GetItemCount(item, true, false, true) >= count) and "|cffffff98" or (C_Item.GetItemCount(item, true, false, true) >= 1) and "|cff9d9d9d" or "|cff9d9d9d"
 	end)
 	text = string.gsub(text, "%[hasitem:([%d]+)%]", function(item)
 		item = tonumber(item or 0) or 0
-		return (GetItemCount(item, true, false, true) >= 1) and "|cffffff98" or "|cff9d9d9d"
+		return (C_Item.GetItemCount(item, true, false, true) >= 1) and "|cffffff98" or "|cff9d9d9d"
 	end)
 	text = string.gsub(text, "<itemcount:([%d]+)>", function(id)
 		id = tonumber(id or 0) or 0
-		return tostring(GetItemCount(id, true, false, true) or 0)
+		return tostring(C_Item.GetItemCount(id, true, false, true) or 0)
 	end)
 	text = string.gsub(text, "<currencycount:([%d]+)>", function(id)
 		id = tonumber(id or 0) or 0
@@ -1179,7 +1179,7 @@ function Breadcrumbs:UpdateMap(event, ...)
 						item = tonumber(string.match(task, "item:([%d]+):[%d]+"))
 						count = tonumber(string.match(task, "item:[%d]+:([%d]+)"))
 
-						if GetItemCount(item, true, false, true) < count then
+						if C_Item.GetItemCount(item, true, false, true) < count then
 							match = true
 							type = "item"
 						end
@@ -1187,7 +1187,7 @@ function Breadcrumbs:UpdateMap(event, ...)
 						item = tonumber(string.match(task, "item:([%d]+)"))
 						count = 1
 
-						if GetItemCount(item, true, false, true) < count then
+						if C_Item.GetItemCount(item, true, false, true) < count then
 							match = true
 							type = "item"
 						end
@@ -1225,7 +1225,7 @@ function Breadcrumbs:UpdateMap(event, ...)
 									GameTooltip:AddLine(Breadcrumbs:FormatTooltip(title))
 
 									if type == "item" then
-										GameTooltip:AddLine("- " .. GetItemCount(item, true, false, true) .. "/" .. count .. " " .. (description or ""), 1, 1, 1, true)
+										GameTooltip:AddLine("- " .. C_Item.GetItemCount(item, true, false, true) .. "/" .. count .. " " .. (description or ""), 1, 1, 1, true)
 									else
 										GameTooltip:AddLine("- " .. match, 1, 1, 1, true)
 									end
@@ -1766,7 +1766,7 @@ function Breadcrumbs:Validate(str)
 	local faction = strlower(UnitFactionGroup("player"))
 	local level = UnitLevel("player") or 1
 	local renown = C_CovenantSanctumUI.GetRenownLevel() or 1
-	local garrison = C_Garrison and C_Garrison.GetGarrisonInfo(Enum.GarrisonType.Type_6_0) or 0
+	local garrison = C_Garrison and C_Garrison.GetGarrisonInfo(Enum.GarrisonType.Type_6_0_Garrison or Enum.GarrisonType.Type_6_0) or 0
 	local covenant = C_Covenants and C_Covenants.GetActiveCovenantID() or 0
 	covenant = (covenant == 1) and "kyrian" or (covenant == 2) and "venthyr" or (covenant == 3) and "nightfae" or (covenant == 4) and "necrolord" or nil
 	local prof1, prof2, archaeology, fishing, cooking = GetProfessions()
@@ -1872,10 +1872,10 @@ function Breadcrumbs:Validate(str)
 					if string.match(v, "^mount:(%d+)$") and select(11, C_MountJournal.GetMountInfoByID(tonumber(string.match(v, "mount:(%d+)") or 0))) then pass = true end
 
 					-- item:x
-					if string.match(v, "^item:(%d+)$") and GetItemCount(tonumber(string.match(v, "item:(%d+)") or 0), true, false, true) >= 1 then pass = true end
+					if string.match(v, "^item:(%d+)$") and C_Item.GetItemCount(tonumber(string.match(v, "item:(%d+)") or 0), true, false, true) >= 1 then pass = true end
 
 					-- item:x:n
-					if string.match(v, "^item:(%d+):(%d+)$") and GetItemCount(tonumber(string.match(v, "item:(%d+):%d+") or 0), true, false, true) >= (tonumber(string.match(v, "item:%d+:(%d+)") or 0)) then pass = true end
+					if string.match(v, "^item:(%d+):(%d+)$") and C_Item.GetItemCount(tonumber(string.match(v, "item:(%d+):%d+") or 0), true, false, true) >= (tonumber(string.match(v, "item:%d+:(%d+)") or 0)) then pass = true end
 
 					-- currency:x:n
 					if string.match(v, "^currency:(%d+):(%d+)$") and C_CurrencyInfo.GetCurrencyInfo(tonumber(string.match(v, "currency:(%d+):%d+") or 0)).quantity >= (tonumber(string.match(v, "currency:%d+:(%d+)") or 0)) then pass = true end
@@ -1968,10 +1968,10 @@ function Breadcrumbs:Validate(str)
 						if string.match(w, "^mount:(%d+)$") and select(11, C_MountJournal.GetMountInfoByID(tonumber(string.match(w, "mount:(%d+)") or 0))) then pass = false end
 
 						-- -item:n
-						if string.match(w, "^item:(%d+)$") and (GetItemCount(tonumber(string.match(w, "item:(%d+)") or 0), true, false, true) >= 1) then pass = false end
+						if string.match(w, "^item:(%d+)$") and (C_Item.GetItemCount(tonumber(string.match(w, "item:(%d+)") or 0), true, false, true) >= 1) then pass = false end
 
 						-- -item:n:x
-						if string.match(w, "^item:(%d+):(%d+)$") and GetItemCount(tonumber(string.match(w, "item:(%d+):%d+") or 0), true, false, true) >= (tonumber(string.match(w, "item:%d+:(%d+)") or 0)) then pass = false end
+						if string.match(w, "^item:(%d+):(%d+)$") and C_Item.GetItemCount(tonumber(string.match(w, "item:(%d+):%d+") or 0), true, false, true) >= (tonumber(string.match(w, "item:%d+:(%d+)") or 0)) then pass = false end
 
 						-- -currency:n:x
 						if string.match(w, "^currency:(%d+):(%d+)$") and C_CurrencyInfo.GetCurrencyInfo(tonumber(string.match(w, "currency:(%d+):%d+") or 0)).quantity >= (tonumber(string.match(w, "currency:%d+:(%d+)") or 0)) then pass = false end
