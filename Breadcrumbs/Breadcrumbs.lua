@@ -35,7 +35,7 @@ local Setting_Debug_QuestWatcher = true
 
 
 -- Constants
-local CHROMIETIME_MAXLEVEL = 61 -- Maximum level for Chromie Time
+local CHROMIETIME_MAXLEVEL = 69 -- Maximum level for Chromie Time
 -- https://www.townlong-yak.com/framexml/live/GlobalStrings.lua
 local QUEST_ICONS_FILE = "Interface\\QuestFrame\\QuestTypeIcons"
 local AVAILABLE_QUEST = AVAILABLE_QUEST -- Available quest
@@ -355,7 +355,24 @@ function Breadcrumbs:GetQuestName(id)
 				else
 					flags = {}
 				end
-				return name, flags["campaign"] and (flags["daily"] and "Quest-DailyCampaign-Available" or "Quest-Campaign-Available") or flags["legendary"] and "quest-legendary-available" or flags["artifact"] and "quest-legendary-available" or flags["important"] and "quest-important-available" or flags["daily"] and "QuestDaily" or "QuestNormal", flags["legendary"] and "ff8000" or flags["artifact"] and "ff8000" or "ffd100"
+
+				local icon = "QuestNormal"
+
+				if flags["campaign"] and flags["daily"] then
+					icon = "Quest-DailyCampaign-Available"
+				elseif flags["campaign"] then
+					icon = "Quest-Campaign-Available"
+				elseif flags["legendary"] or flags["artifact"] then
+					icon = "quest-legendary-available"
+				elseif flags["artifact"] then
+					icon = "quest-important-available"
+				elseif flags["daily"] then
+					icon = "QuestDaily"
+				elseif flags["weekly"] then
+					icon = "quest-recurring-available"
+				end
+				
+				return name, icon, flags["legendary"] and "ff8000" or flags["artifact"] and "ff8000" or "ffd100"
 			end
 		end
 	end
@@ -396,14 +413,14 @@ function Breadcrumbs:OnInitialize()
 	if Setting_DisableStorylineQuestDataProvider then
 		-- Remove StorylineQuestDataProvider
 		for provider in next, WorldMapFrame.dataProviders do
-		    if(provider.RequestQuestLinesForMap) then
+		    if (provider.RequestQuestLinesForMap) then
 		    	WorldMapFrame:RemoveDataProvider(provider)
 		    end
 		end
 	end
 
 	if Setting_Debug_QuestWatcher then
-		-- Delay Quest Listener for the first 10 seconds after logging in
+		-- Delay Quest Watcher for the first 10 seconds after logging in
 		C_Timer.After(10, function()
 			LoginThrottle = false
 			print("|cffffff00Breadcrumbs Quest Watcher is enabled|r")
@@ -424,7 +441,7 @@ end
 
 -- Fix Bonus Objectives
 function Breadcrumbs:FixBonusObjectives()
-	-- Attempt to fix the Blizzard map bug preventing Legion leveling bonus objectives from hiding properly at level 60+
+	-- Attempt to fix the Blizzard map bug preventing Legion leveling bonus objectives from hiding properly at level 70+
 	if not WorldMapFrame then return end
 
 	-- We don't want to unregister the entire Data Provider since that would mess up bonus objectives on other maps
@@ -745,8 +762,8 @@ function Breadcrumbs:UpdateMap(event, ...)
 								Pin:SetNormalTexture(flag_icon)
 							elseif flags["kill"] then
 								Pin:SetNormalTexture("Interface/AddOns/Breadcrumbs/Textures/QuestKill")
-							--elseif flags["weekly"] then
-							--	Pin:SetNormalTexture("Interface/AddOns/Breadcrumbs/Textures/QuestWeekly")
+							elseif flags["weekly"] then
+								Pin:SetNormalAtlas("quest-recurring-available")
 							else
 								Pin:SetNormalAtlas(flags["elsewhere"] and "poi-traveldirections-arrow" or flags["warboard"] and "warboard" or flags["campaign"] and "quest-campaign-available" or flags["dailycampaign"] and "quest-dailycampaign-available" or flags["up"] and "questnormal" or flags["down"] and "questnormal" or flags["artifact"] and "quest-legendary-available" or flags["legendary"] and "quest-legendary-available" or flags["important"] and "quest-important-available" or flags["daily"] and "questdaily" or "questnormal")
 							end
@@ -769,6 +786,7 @@ function Breadcrumbs:UpdateMap(event, ...)
 								else -- Normal quest
 									GameTooltip:AddLine(title)
 								end
+
 								if flags["dungeon"] then GameTooltip:AddLine(CreateAtlasMarkup("dungeon") .. " " .. DUNGEON) end
 								if flags["raid"] then GameTooltip:AddLine(CreateAtlasMarkup("raid") .. " " .. RAID) end
 								if flags["alchemy"] then GameTooltip:AddLine(CreateAtlasMarkup("worldquest-icon-alchemy") .. " Alchemy") end
@@ -787,21 +805,21 @@ function Breadcrumbs:UpdateMap(event, ...)
 								if flags["archaeology"] then GameTooltip:AddLine(CreateAtlasMarkup("worldquest-icon-archaeology") .. " " .. PROFESSIONS_ARCHAEOLOGY) end
 								if flags["petbattle"] then GameTooltip:AddLine(CreateAtlasMarkup("worldquest-icon-petbattle") .. " " .. PET_BATTLE) end
 								
+								if flags["weekly"] then
+									if flags["account"] or flags["warband"] then
+										GameTooltip:AddLine(CreateAtlasMarkup("warbands-icon") .. CreateAtlasMarkup("quest-recurring-available") .. WEEKLY .. " " .. ACCOUNT_QUEST_LABEL, 0, 0.8, 1)
+									else
+										GameTooltip:AddLine(CreateAtlasMarkup("quest-recurring-available") .. " " .. WEEKLY)
+									end
+								elseif flags["account"] or flags["warband"] then
+									GameTooltip:AddLine(CreateAtlasMarkup("warbands-icon") .. " " .. ACCOUNT_QUEST_LABEL, 0, 0.8, 1)
+								end
+
 								if flags["link"] and link then -- The pin is a link, indicate where it takes us
 									local mapinfo = C_Map.GetMapInfo(link)
 									GameTooltip:AddDoubleLine(AVAILABLE_QUEST, Breadcrumbs:FormatTooltip("{newplayertutorial-icon-mouse-leftbutton} ") .. (mapinfo.name or link), 1, 1, 1, 1, 1, 1)
 								else -- It's a quest, show source
 									GameTooltip:AddDoubleLine(AVAILABLE_QUEST, Breadcrumbs:FormatTooltip(source and "{!}" .. source or "", flags) or "", 1, 1, 1)
-								end
-
-								if flags["weekly"] then
-									if flags["account"] then
-										GameTooltip:AddLine("|T" .. QUEST_ICONS_FILE .. ":18:18:0:0:128:64:36:54:36:54|t Account " .. WEEKLY, 0, 0.8, 1)
-									else
-										GameTooltip:AddLine("|T" .. QUEST_ICONS_FILE .. ":18:18:0:0:128:64:36:54:36:54|t " .. WEEKLY)
-									end
-								elseif flags["account"] then
-									GameTooltip:AddLine("|T" .. QUEST_ICONS_FILE .. ":18:18:0:0:128:64:108:126:0:18|t Account", 0, 0.8, 1)
 								end
 
 								if Setting_HumanTooltips then -- Help tip
@@ -885,7 +903,7 @@ function Breadcrumbs:UpdateMap(event, ...)
 								end)
 							end
 
-							Pins:AddWorldMapIconMap("Breadcrumbs", Pin, map, x/100, y/100, nil, (flags["bonusobjective"] or flags["weekly"] or flags["daily"] or flags["campaign"]) and "PIN_FRAME_LEVEL_BONUS_OBJECTIVE" or "PIN_FRAME_LEVEL_STORY_LINE")
+							Pins:AddWorldMapIconMap("Breadcrumbs", Pin, map, x/100, y/100, nil, (flags["bonusobjective"] or flags["weekly"] or flags["daily"] or flags["campaign"]) and "PIN_FRAME_LEVEL_BONUS_OBJECTIVE" or "PIN_FRAME_LEVEL_QUEST_PING")
 							Pin:Show()
 						end
 					end
@@ -1625,6 +1643,7 @@ Breadcrumbs:RegisterEvent("TRADE_SKILL_SHOW", "UpdateSkillLines")
 function Breadcrumbs:Validate(str)
 	local str = str or ""
 
+	str = string.gsub(str, ":blacksmithing11",":2872")
 	str = string.gsub(str, ":blacksmithing10",":2822")
 	str = string.gsub(str, ":blacksmithing1", ":2477")
 	str = string.gsub(str, ":blacksmithing2", ":2476")
@@ -1635,6 +1654,7 @@ function Breadcrumbs:Validate(str)
 	str = string.gsub(str, ":blacksmithing7", ":2454")
 	str = string.gsub(str, ":blacksmithing8", ":2437")
 	str = string.gsub(str, ":blacksmithing9", ":2751")
+	str = string.gsub(str, ":leatherworking11",":2880")
 	str = string.gsub(str, ":leatherworking10",":2830")
 	str = string.gsub(str, ":leatherworking1", ":2532")
 	str = string.gsub(str, ":leatherworking2", ":2531")
@@ -1645,6 +1665,7 @@ function Breadcrumbs:Validate(str)
 	str = string.gsub(str, ":leatherworking7", ":2526")
 	str = string.gsub(str, ":leatherworking8", ":2525")
 	str = string.gsub(str, ":leatherworking9", ":2758")
+	str = string.gsub(str, ":alchemy11",":2871")
 	str = string.gsub(str, ":alchemy10",":2823")
 	str = string.gsub(str, ":alchemy1", ":2485")
 	str = string.gsub(str, ":alchemy2", ":2484")
@@ -1655,6 +1676,7 @@ function Breadcrumbs:Validate(str)
 	str = string.gsub(str, ":alchemy7", ":2479")
 	str = string.gsub(str, ":alchemy8", ":2478")
 	str = string.gsub(str, ":alchemy9", ":2750")
+	str = string.gsub(str, ":herbalism11",":2877")
 	str = string.gsub(str, ":herbalism10",":2832")
 	str = string.gsub(str, ":herbalism1", ":2556")
 	str = string.gsub(str, ":herbalism2", ":2555")
@@ -1665,6 +1687,7 @@ function Breadcrumbs:Validate(str)
 	str = string.gsub(str, ":herbalism7", ":2550")
 	str = string.gsub(str, ":herbalism8", ":2549")
 	str = string.gsub(str, ":herbalism9", ":2760")
+	str = string.gsub(str, ":cooking11",":2873")
 	str = string.gsub(str, ":cooking10",":2824")
 	str = string.gsub(str, ":cooking1", ":2548")
 	str = string.gsub(str, ":cooking2", ":2547")
@@ -1675,6 +1698,7 @@ function Breadcrumbs:Validate(str)
 	str = string.gsub(str, ":cooking7", ":2542")
 	str = string.gsub(str, ":cooking8", ":2541")
 	str = string.gsub(str, ":cooking9", ":2752")
+	str = string.gsub(str, ":mining11",":2881")
 	str = string.gsub(str, ":mining10",":2833")
 	str = string.gsub(str, ":mining1", ":2572")
 	str = string.gsub(str, ":mining2", ":2571")
@@ -1685,6 +1709,7 @@ function Breadcrumbs:Validate(str)
 	str = string.gsub(str, ":mining7", ":2566")
 	str = string.gsub(str, ":mining8", ":2565")
 	str = string.gsub(str, ":mining9", ":2761")
+	str = string.gsub(str, ":tailoring11",":2883")
 	str = string.gsub(str, ":tailoring10",":2831")
 	str = string.gsub(str, ":tailoring1", ":2540")
 	str = string.gsub(str, ":tailoring2", ":2539")
@@ -1695,6 +1720,7 @@ function Breadcrumbs:Validate(str)
 	str = string.gsub(str, ":tailoring7", ":2534")
 	str = string.gsub(str, ":tailoring8", ":2533")
 	str = string.gsub(str, ":tailoring9", ":2759")
+	str = string.gsub(str, ":engineering11",":2875")
 	str = string.gsub(str, ":engineering10",":2827")
 	str = string.gsub(str, ":engineering1", ":2506")
 	str = string.gsub(str, ":engineering2", ":2505")
@@ -1705,6 +1731,7 @@ function Breadcrumbs:Validate(str)
 	str = string.gsub(str, ":engineering7", ":2500")
 	str = string.gsub(str, ":engineering8", ":2499")
 	str = string.gsub(str, ":engineering9", ":2755")
+	str = string.gsub(str, ":enchanting11",":2874")
 	str = string.gsub(str, ":enchanting10",":2825")
 	str = string.gsub(str, ":enchanting1", ":2494")
 	str = string.gsub(str, ":enchanting2", ":2493")
@@ -1715,6 +1742,7 @@ function Breadcrumbs:Validate(str)
 	str = string.gsub(str, ":enchanting7", ":2487")
 	str = string.gsub(str, ":enchanting8", ":2486")
 	str = string.gsub(str, ":enchanting9", ":2753")
+	str = string.gsub(str, ":fishing11",":2876")
 	str = string.gsub(str, ":fishing10",":2826")
 	str = string.gsub(str, ":fishing1", ":2592")
 	str = string.gsub(str, ":fishing2", ":2591")
@@ -1725,6 +1753,7 @@ function Breadcrumbs:Validate(str)
 	str = string.gsub(str, ":fishing7", ":2586")
 	str = string.gsub(str, ":fishing8", ":2585")
 	str = string.gsub(str, ":fishing9", ":2754")
+	str = string.gsub(str, ":skinning11",":2882")
 	str = string.gsub(str, ":skinning10",":2834")
 	str = string.gsub(str, ":skinning1", ":2564")
 	str = string.gsub(str, ":skinning2", ":2563")
@@ -1735,6 +1764,7 @@ function Breadcrumbs:Validate(str)
 	str = string.gsub(str, ":skinning7", ":2558")
 	str = string.gsub(str, ":skinning8", ":2557")
 	str = string.gsub(str, ":skinning9", ":2762")
+	str = string.gsub(str, ":jewelcrafting10",":2879")
 	str = string.gsub(str, ":jewelcrafting10",":2829")
 	str = string.gsub(str, ":jewelcrafting1", ":2524")
 	str = string.gsub(str, ":jewelcrafting2", ":2523")
@@ -1745,6 +1775,7 @@ function Breadcrumbs:Validate(str)
 	str = string.gsub(str, ":jewelcrafting7", ":2518")
 	str = string.gsub(str, ":jewelcrafting8", ":2517")
 	str = string.gsub(str, ":jewelcrafting9", ":2757")
+	str = string.gsub(str, ":inscription11",":2878")
 	str = string.gsub(str, ":inscription10",":2828")
 	str = string.gsub(str, ":inscription1", ":2514")
 	str = string.gsub(str, ":inscription2", ":2513")
