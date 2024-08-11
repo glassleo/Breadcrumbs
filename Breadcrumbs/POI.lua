@@ -92,11 +92,11 @@ Data.POI = {
 	-- Valdrakken
 	[2112] = {
 		-- Portal
-		"POI/Portal|Portal to Orgrimmar|horde|56.64 38.3",
-		"POI/Portal|Portal to Stormwind|alliance|59.79 41.71",
-		"POI/Portal|Portal to Badlands|1+|26.09 40.98",
-		"POI/Portal|Portal to The Timeways|1+|53.55 55.36||Seasonal Dungeon Portals",
-		"POI/Portal|Portal to Emerald Dream|70+ 77887|62.68 57.3",
+		"TaxiNode_Continent_Horde|Portal to Orgrimmar|horde|56.64 38.3",
+		"TaxiNode_Continent_Alliance|Portal to Stormwind|alliance|59.79 41.71",
+		"TaxiNode_Continent_Neutral|Portal to Badlands|1+|26.09 40.98",
+		"TaxiNode_Continent_Neutral|Portal to The Timeways|1+|53.55 55.36||Seasonal Dungeon Portals",
+		"TaxiNode_Continent_Neutral|Portal to Emerald Dream|70+ 77887|62.68 57.3",
 
 		-- Mailbox
 		"mailbox:objective|Mailbox|mailbox|35.44 59.67", -- Artisan's Market
@@ -193,8 +193,8 @@ Data.POI = {
 	-- Ring of Fates
 	[1670] = {
 		-- Portal
-		"POI/Portal|Portal to Orgrimmar|horde 60151|20.85 54.83",
-		"POI/Portal|Portal to Stormwind|alliance 60151|20.89 45.69",
+		"TaxiNode_Continent_Horde|Portal to Orgrimmar|horde 60151|20.85 54.83",
+		"TaxiNode_Continent_Alliance|Portal to Stormwind|alliance 60151|20.89 45.69",
 
 		-- Teleport Pad
 		"teleportationnetwork-32x32:small|Ring of Transference|1+|52.07 57.9|link:1671",
@@ -296,7 +296,7 @@ Data.POI = {
 	-- Elysian Hold - Archon's Rise
 	[1707] = {
 		-- Portal
-		"POI/Portal|Portal to Oribos|kyrian research:1058|48.84 64.79", -- Requires Eternal Paths (Tier 3 Transport Network) (1058)
+		"TaxiNode_Continent_Neutral|Portal to Oribos|kyrian research:1058|48.84 64.79", -- Requires Eternal Paths (Tier 3 Transport Network) (1058)
 
 		-- Mailbox
 		"mailbox:objective|Mailbox|mailbox|48.64 58.21",
@@ -309,7 +309,7 @@ Data.POI = {
 	-- Seat of the Primus
 	[1698] = {
 		-- Portal
-		"POI/Portal|Portal to Oribos|necrolord research:1052|56.37 31.5", -- Requires Flying Fortress (Tier 3 Transport Network) (1052)
+		"TaxiNode_Continent_Neutral|Portal to Oribos|necrolord research:1052|56.37 31.5", -- Requires Flying Fortress (Tier 3 Transport Network) (1052)
 
 		-- Mailbox
 		"mailbox:objective|Mailbox|mailbox|48.33 28.16",
@@ -330,7 +330,7 @@ Data.POI = {
 	-- Heart of the Forest - The Trunk
 	[1701] = {
 		-- Portal
-		"POI/Portal|Portal to Oribos|nightfae research:1055|56.07 12.42", -- Requires Blossoming Network (Tier 3 Transport Network) (1055)
+		"TaxiNode_Continent_Neutral|Portal to Oribos|nightfae research:1055|56.07 12.42", -- Requires Blossoming Network (Tier 3 Transport Network) (1055)
 
 		-- Mailbox
 		"mailbox:objective|Mailbox|mailbox nightfae|52.42 56.33",
@@ -342,7 +342,7 @@ Data.POI = {
 	-- Heart of the Forest - The Roots
 	[1702] = {
 		-- Portal
-		"POI/Portal|Portal to Oribos|nightfae research:1055|59.88 28.46", -- Requires Blossoming Network (Tier 3 Transport Network) (1055)
+		"TaxiNode_Continent_Neutral|Portal to Oribos|nightfae research:1055|59.88 28.46", -- Requires Blossoming Network (Tier 3 Transport Network) (1055)
 	},
 
 
@@ -351,7 +351,7 @@ Data.POI = {
 	-- Sinfall - Sinfall Reaches
 	[1699] = {
 		-- Portal
-		"POI/Portal|Portal to Oribos|venthyr research:1049|62.47 26.55", -- Requires Mirror's Edge (Tier 3 Transport Network) (1049)
+		"TaxiNode_Continent_Neutral|Portal to Oribos|venthyr research:1049|62.47 26.55", -- Requires Mirror's Edge (Tier 3 Transport Network) (1049)
 
 		-- Mirror
 		"teleportationnetwork-revendreth-32x32:small|Sinfall Depths|1+|36.2 48.2|link:1700",
@@ -399,7 +399,7 @@ Data.POI = {
 	-- Boralus
 	[1161] = {
 		-- Portal
-		"POI/Portal|Sanctum of the Sages|10+ alliance 47186,kultiran|70.52 17.28",
+		"TaxiNode_Continent_Alliance|Sanctum of the Sages|10+ alliance 47186,kultiran|70.52 17.28",
 
 		-- Scrapper
 		"poi-scrapper|[Scrap-O-Matic 1000]|alliance|77.13 16.31",
@@ -427,7 +427,7 @@ Data.POI = {
 	-- Dazar'alor
 	[1165] = {
 		-- Portal
-		"POI/Portal|Hall of Ancient Paths|10+ horde 46931,zandalari|51.2 46.11|link:1163",
+		"TaxiNode_Continent_Horde|Hall of Ancient Paths|10+ horde 46931,zandalari|51.2 46.11|link:1163",
 
 		-- Scrapper
 		"poi-scrapper|[Shred-Master Mk1]|horde|45.05 40.03",
@@ -451,11 +451,11 @@ Data.POI = {
 	-- The Great Seal
 	[1163] = {
 		-- Portal
-		"POI/Portal|Portal to Silvermoon City|10+ horde 46931,zandalari|73.85 62.2",
-		"POI/Portal|Portal to Orgrimmar|10+ horde 46931,zandalari|73.85 69.92",
-		"POI/Portal|Portal to Thunder Bluff|10+ horde 46931,zandalari|73.85 77.38",
-		"POI/Portal|Portal to Silithus|50+ horde 46931|73.85 85.35",
-		"POI/Portal|Portal to Nazjatar|50+ horde 55053|62.97 85.44",
+		"TaxiNode_Continent_Horde|Portal to Silvermoon City|10+ horde 46931,zandalari|73.85 62.2",
+		"TaxiNode_Continent_Horde|Portal to Orgrimmar|10+ horde 46931,zandalari|73.85 69.92",
+		"TaxiNode_Continent_Horde|Portal to Thunder Bluff|10+ horde 46931,zandalari|73.85 77.38",
+		"TaxiNode_Continent_Neutral|Portal to Silithus|50+ horde 46931|73.85 85.35",
+		"TaxiNode_Continent_Neutral|Portal to Nazjatar|50+ horde 55053|62.97 85.44",
 
 		-- Profession
 		"POI/Archaeology|[Archaeology]|horde|31.75 35.36||Vault of Kings",
@@ -479,8 +479,8 @@ Data.POI = {
 	-- Dalaran
 	[627] = {
 		-- Portal
-		"POI/Portal|Portal to Stormwind|alliance|39.55 63.19",
-		"POI/Portal|Portal to Orgrimmar|horde|55.31 24.02",
+		"TaxiNode_Continent_Alliance|Portal to Stormwind|alliance|39.55 63.19",
+		"TaxiNode_Continent_Horde|Portal to Orgrimmar|horde|55.31 24.02",
 		"groupfinder-icon-class-demonhunter|[The Fel Hammer]|10+ demonhunter 42872|97.5 68.73|tooltip|Gateway to the Fel Hammer in Mardum, Home of the Illidari",
 		"groupfinder-icon-class-rogue|[Hall of Shadows]|10+ rogue 40832|46.8 25.4|tooltip|Home of the Uncrowned",
 
@@ -537,7 +537,7 @@ Data.POI = {
 	-- Death Knight - Acherus: The Ebon Hold - Hall of Command
 	[648] = {
 		-- Portal
-		"POI/Portal|Portal to Dalaran|deathknight|24.73 33.7",
+		"TaxiNode_Continent_Neutral|Portal to Dalaran|deathknight|24.73 33.7",
 
 		-- Teleport Pad
 		"-|The Heart of Acherus|1+|34.6 36.6|link:647",
@@ -577,8 +577,8 @@ Data.POI = {
 	-- Druid - The Dreamgrove
 	[747] = {
 		-- Portal
-		"POI/DreamwayPortal|Emerald Dreamway|10+ druid +40645|55.4 22.06",
-		"POI/Portal|Portal to Dalaran|10+ druid 40653|56.5 43.1",
+		"TaxiNode_Continent_Neutral|Emerald Dreamway|10+ druid +40645|55.4 22.06",
+		"TaxiNode_Continent_Neutral|Portal to Dalaran|10+ druid 40653|56.5 43.1",
 
 		-- Flight Master
 		"taxinode_neutral:small|The Dreamgrove, Val'sharah|druid|61.74 33.99",
@@ -612,7 +612,7 @@ Data.POI = {
 	-- Hunter - Trueshot Lodge
 	[739] = {
 		-- Portal
-		"POI/Portal|Portal to Dalaran|hunter|48.63 43.49",
+		"TaxiNode_Continent_Neutral|Portal to Dalaran|hunter|48.63 43.49",
 
 		-- Flight Master
 		"taxinode_neutral:small|Trueshot Lodge, Highmountain|hunter|35.82 27.61",
@@ -634,14 +634,14 @@ Data.POI = {
 	-- Mage - Hall of the Guardian
 	[734] = {
 		-- Portal
-		"POI/Portal|Portal to Dalaran|mage|57.4 90.3",
+		"TaxiNode_Continent_Neutral|Portal to Dalaran|mage|57.4 90.3",
 
 		-- Teleportation Nexus
-		"POI/Portal|Azsuna|mage research:386|55.04 39.54||Teleportation Nexus",
-		"POI/Portal|Val'sharah|mage research:386|66.77 46.73||Teleportation Nexus",
-		"POI/Portal|Highmountain|mage research:386|54.64 44.59||Teleportation Nexus",
-		"POI/Portal|Stormheim|mage research:386|67.18 41.58||Teleportation Nexus",
-		"POI/Portal|Suramar|mage research:386|60.4 50.6||Teleportation Nexus",
+		"TaxiNode_Continent_Neutral|Azsuna|mage research:386|55.04 39.54||Teleportation Nexus",
+		"TaxiNode_Continent_Neutral|Val'sharah|mage research:386|66.77 46.73||Teleportation Nexus",
+		"TaxiNode_Continent_Neutral|Highmountain|mage research:386|54.64 44.59||Teleportation Nexus",
+		"TaxiNode_Continent_Neutral|Stormheim|mage research:386|67.18 41.58||Teleportation Nexus",
+		"TaxiNode_Continent_Neutral|Suramar|mage research:386|60.4 50.6||Teleportation Nexus",
 
 		-- Scouting Map
 		"ShipMissionIcon-Bonus-MapBadge|Scouting Map|mage|81.7 61.4",
@@ -668,7 +668,7 @@ Data.POI = {
 	-- Paladin - Sanctum of Light
 	[24] = {
 		-- Portal
-		"POI/Portal|Portal to Dalaran|paladin|37.62 64.08",
+		"TaxiNode_Continent_Neutral|Portal to Dalaran|paladin|37.62 64.08",
 
 		-- Scouting Map
 		"ShipMissionIcon-Bonus-MapBadge|Scouting Map|paladin|53.5 78.7",
@@ -684,7 +684,7 @@ Data.POI = {
 	-- Priest - Netherlight Temple
 	[702] = {
 		-- Portal
-		"POI/Portal|Portal to Dalaran|1+|49.8 80.7",
+		"TaxiNode_Continent_Neutral|Portal to Dalaran|1+|49.8 80.7",
 
 		-- Scouting Map
 		"ShipMissionIcon-Bonus-MapBadge|Scouting Map|priest|49.84 47.37",
@@ -716,7 +716,7 @@ Data.POI = {
 	-- Shaman - The Heart of Azeroth
 	[726] = {
 		-- Portal
-		"POI/Portal|Portal to Dalaran|shaman|29.8 51.95",
+		"TaxiNode_Continent_Neutral|Portal to Dalaran|shaman|29.8 51.95",
 
 		-- Scouting Map
 		"ShipMissionIcon-Bonus-MapBadge|Scouting Map|shaman|33.93 59.55",
@@ -764,8 +764,8 @@ Data.POI = {
 	-- Azsuna
 	[630] = {
 		-- Portal
-		"POI/Portal|Portal to Stormwind|alliance|46.66 41.42",
-		"POI/Portal|Portal to Orgrimmar|horde|46.67 41.3",
+		"TaxiNode_Continent_Alliance|Portal to Stormwind|alliance|46.66 41.42",
+		"TaxiNode_Continent_Horde|Portal to Orgrimmar|horde|46.67 41.3",
 		"teleportationnetwork-32x32:small|Teleportation Nexus|mage research:386|57.95 15.15",
 		"groupfinder-icon-class-warrior:small|[Skyhold]|10+ warrior 40585 44060|47.45 28.22|tooltip|Entrance to Skyhold, Home of the Valarjar",
 		"groupfinder-icon-class-warrior:small|[Skyhold]|10+ warrior 40585 -44060|47.45 28.22|tooltip|Entrance to Skyhold, Home of the Valarjar||\"Speak to {flightmaster} Dagrona if you cannot see the Gaze of Odyn\"",
@@ -794,7 +794,7 @@ Data.POI = {
 	-- Hall of Chieftains, Thunder Totem
 	[652] = {
 		-- Portal
-		"POI/Portal|Portal to Orgrimmar|horde Highmountain|46.01 63.85", -- Highmountain Tauren only
+		"TaxiNode_Continent_Horde|Portal to Orgrimmar|horde Highmountain|46.01 63.85", -- Highmountain Tauren only
 	},
 
 	-- Thunder Totem
@@ -820,7 +820,7 @@ Data.POI = {
 	-- Stormheim
 	[634] = {
 		-- Portal
-		"POI/Portal|Portal to Dalaran|1+|30.08 40.7",
+		"TaxiNode_Continent_Neutral|Portal to Dalaran|1+|30.08 40.7",
 		"teleportationnetwork-32x32:small|Teleportation Nexus|mage research:386|31.34 60.51",
 		"groupfinder-icon-class-warrior:small|[Skyhold]|10+ warrior 40585|60.17 52.23|tooltip|Entrance to Skyhold, Home of the Valarjar",
 	},
@@ -840,7 +840,7 @@ Data.POI = {
 	-- Frostwall
 	[590] = {
 		-- Portal
-		"POI/Portal|Portal to Ashran|horde garrison:3|75.2 48.4",
+		"TaxiNode_Continent_Horde|Portal to Ashran|horde garrison:3|75.2 48.4",
 	},
 
 
@@ -849,7 +849,7 @@ Data.POI = {
 	-- Lunarfall
 	[582] = {
 		-- Portal
-		"POI/Portal|Portal to Ashran|alliance garrison:3|70.1 27.3",
+		"TaxiNode_Continent_Alliance|Portal to Ashran|alliance garrison:3|70.1 27.3",
 	},
 
 
@@ -858,7 +858,7 @@ Data.POI = {
 	-- Stormshield
 	[622] = {
 		-- Portal
-		"POI/Portal|Portal to Stormwind|alliance|60.81 37.9",
+		"TaxiNode_Continent_Alliance|Portal to Stormwind|alliance|60.81 37.9",
 
 		-- Flight Master
 		"taxinode_alliance:small|Stormshield, Ashran|alliance|30.58 48.45",
@@ -879,7 +879,7 @@ Data.POI = {
 	-- Warspear
 	[624] = {
 		-- Portal
-		"POI/Portal|Portal to Orgrimmar|horde|60.81 51.61",
+		"TaxiNode_Continent_Horde|Portal to Orgrimmar|horde|60.81 51.61",
 
 		-- Professions
 		"POI/Alchemy|[Alchemy]|5+ horde alchemy|61.17 27.14||Alchemy Lab",
@@ -913,7 +913,7 @@ Data.POI = {
 
 	[371] = {
 		-- Portal
-		"POI/Portal:small|Portal to Orgrimmar|horde|28.52 14.02",
+		"TaxiNode_Continent_Horde|Portal to Orgrimmar|horde|28.52 14.02",
 
 		-- Professions
 		"POI/Enchanting|[Enchanting]|10+ enchanting|46.85 42.94",
@@ -946,7 +946,7 @@ Data.POI = {
 	-- Shrine of Two Moons - The Imperial Mercantile
 	[392] = {
 		-- Portal
-		"POI/Portal|Portal to Orgrimmar|horde|73.37 42.64",
+		"TaxiNode_Continent_Horde|Portal to Orgrimmar|horde|73.37 42.64",
 	},
 
 	-- Shrine of Two Moons - Hall of the Crescent Moon
@@ -961,8 +961,8 @@ Data.POI = {
 	-- Dalaran
 	[125] = {
 		-- Portal
-		"POI/Portal|Portal to Stormwind|alliance|40.11 62.81",
-		"POI/Portal|Portal to Orgrimmar|horde|55.33 25.44",
+		"TaxiNode_Continent_Alliance|Portal to Stormwind|alliance|40.11 62.81",
+		"TaxiNode_Continent_Horde|Portal to Orgrimmar|horde|55.33 25.44",
 
 		-- Flight Master
 		"taxinode_neutral:small|Dalaran, Crystalsong Forest|1+|72.18 45.78",
@@ -992,7 +992,7 @@ Data.POI = {
 
 	[116] = {
 		-- Portal
-		"POI/DreamwayPortal|Emerald Dreamway|10+ druid 40645|50.32 29.2",
+		"TaxiNode_Continent_Neutral|Emerald Dreamway|10+ druid 40645|50.32 29.2",
 	},
 
 
@@ -1001,9 +1001,9 @@ Data.POI = {
 	-- Shattrath City
 	[111] = {
 		-- Portal
-		"POI/Portal|Portal to Stormwind|alliance|57.21 48.27",
-		"POI/Portal|Portal to Orgrimmar|horde|56.82 48.87",
-		"POI/Portal|Portal to Isle of Quel'Danas|25+|48.59 42.02",
+		"TaxiNode_Continent_Alliance|Portal to Stormwind|alliance|57.21 48.27",
+		"TaxiNode_Continent_Horde|Portal to Orgrimmar|horde|56.82 48.87",
+		"TaxiNode_Continent_Neutral|Portal to Isle of Quel'Danas|25+|48.59 42.02",
 
 		-- Mailbox
 		"mailbox:objective|Mailbox|mailbox reputation:932:4|28.92 47.52", -- Aldor Rise Inn
@@ -1050,14 +1050,14 @@ Data.POI = {
 	-- Darnassus
 	[89] = {
 		-- Portal
-		"POI/Portal|Portals|alliance|43 74||Exodar, Hellfire Peninsula",
+		"TaxiNode_Continent_Alliance|Portals|alliance|43 74||Exodar, Hellfire Peninsula",
 	},
 
 	-- Teldrassil
 	[57] = {
 		-- Portal
-		"POI/Portal:small|Portal to Stormwind|alliance|55.03 93.71",
-		"POI/Portal:small|Portal to Exodar|alliance|52.27 89.47",
+		"TaxiNode_Continent_Alliance|Portal to Stormwind|alliance|55.03 93.71",
+		"TaxiNode_Continent_Alliance|Portal to Exodar|alliance|52.27 89.47",
 	},
 
 	-- Ban'ethil Barrow Den - Upper Den
@@ -1080,13 +1080,13 @@ Data.POI = {
 	-- Azuremyst Isle
 	[97] = {
 		-- Portal
-		"POI/Portal:small|Portal to Darnassus|alliance|20.4 54.18",
+		"TaxiNode_Continent_Alliance|Portal to Darnassus|alliance|20.4 54.18",
 	},
 
 	-- The Exodar
 	[103] = {
 		-- Portal
-		"POI/Portal|Portal to Stormwind|alliance|48.34 62.93",
+		"TaxiNode_Continent_Alliance|Portal to Stormwind|alliance|48.34 62.93",
 	},
 
 
@@ -1117,7 +1117,7 @@ Data.POI = {
 
 	[80] = {
 		-- Portal
-		"POI/DreamwayPortal|Emerald Dreamway|10+ druid 40645|68.11 60.28",
+		"TaxiNode_Continent_Neutral|Emerald Dreamway|10+ druid 40645|68.11 60.28",
 	},
 
 
@@ -1125,7 +1125,7 @@ Data.POI = {
 
 	[69] = {
 		-- Portal
-		"POI/DreamwayPortal|Emerald Dreamway|10+ druid 40645|51.34 10.6",
+		"TaxiNode_Continent_Neutral|Emerald Dreamway|10+ druid 40645|51.34 10.6",
 	},
 
 
@@ -1133,9 +1133,9 @@ Data.POI = {
 
 	[198] = {
 		-- Portal
-		"POI/Portal:small|Portal to Stormwind|alliance|62.62 23.13",
-		"POI/Portal:small|Portal to Orgrimmar|horde|63.49 24.44",
-		"POI/DreamwayPortal:small|Emerald Dreamway|10+ druid 40645|59 26.24",
+		"TaxiNode_Continent_Alliance|Portal to Stormwind|alliance|62.62 23.13",
+		"TaxiNode_Continent_Horde|Portal to Orgrimmar|horde|63.49 24.44",
+		"TaxiNode_Continent_Neutral|Emerald Dreamway|10+ druid 40645|59 26.24",
 	},
 
 
@@ -1145,10 +1145,10 @@ Data.POI = {
 	[85] = {
 		-- Portal
 		"-:large|The Western Earthshrine|horde|50.4 37.3||Cataclysm Portals",
-		"POI/Portal:small|Portal to Undercity|art:18:19 horde|50.75 55.59",
-		"POI/Portal:small|Portal to Tirisfal Glades|art:18:1136 horde|50.75 55.59",
-		"POI/Portal:small|Portal to Tol Barad|30+ horde|47.39 39.26",
-		"POI/Portal:small|Portal to Thunder Totem|horde Highmountain|40.09 76.83", -- Highmountain Tauren only
+		"TaxiNode_Continent_Horde|Portal to Undercity|art:18:19 horde|50.75 55.59",
+		"TaxiNode_Continent_Horde|Portal to Tirisfal Glades|art:18:1136 horde|50.75 55.59",
+		"TaxiNode_Continent_Horde|Portal to Tol Barad|30+ horde|47.39 39.26",
+		"TaxiNode_Continent_Horde|Orgrimmar Embassy Portals|horde|38.37 75.59",
 
 		-- Heirloom Vendor
 		"timewalkingvendor-32x32|[Heirloom Vendor]|59770|57.1 89.95|tooltip",
@@ -1195,8 +1195,8 @@ Data.POI = {
 		-- art:962 - Battle for Azeroth
 
 		-- Portal
-		"POI/Portal:small|Portal to Tiragarde|art:81:962 50+ alliance|41.49 44.85",
-		"POI/Portal:small|Portal to Zuldazar|art:81:962 50+ horde|41.49 44.85",
+		"TaxiNode_Continent_Alliance|Portal to Tiragarde|art:81:962 50+ alliance|41.49 44.85",
+		"TaxiNode_Continent_Horde|Portal to Zuldazar|art:81:962 50+ horde|41.49 44.85",
 
 		-- Teleport Pad
 		"teleportationnetwork-32x32:small|Chamber of Heart|art:81:962 40+ +51211|43.2 44.49|link:1021",
@@ -1215,10 +1215,10 @@ Data.POI = {
 	[84] = {
 		-- Portal
 		"-:large|The Eastern Earthshrine|alliance|74.85 17.65||Cataclysm Portals",
-		"POI/Portal:small|Portal to Darnassus|10+ art:62:67 alliance|24.5 55.6", -- Requires level 10 to use; phased to Cataclysm
-		"POI/Portal:small|Portal to Darkshore|10+ art:62:1176 alliance|24.5 55.6", -- Phased to BfA
-		"POI/VoidPortal:small|Rift to Telogrus|alliance voidelf|54.47 15.36", -- Void Elf only
-		"teleportationnetwork-32x32:small|Mechagon City Teleporter|alliance mechagnome|52.75 16.08", -- Mechagnome only
+		"TaxiNode_Continent_Alliance|Portal to Darnassus|10+ art:62:67 alliance|24.5 55.6", -- Requires level 10 to use; phased to Cataclysm
+		"TaxiNode_Continent_Alliance|Portal to Darkshore|10+ art:62:1176 alliance|24.5 55.6", -- Phased to BfA
+		"TaxiNode_Continent_Alliance|Rift to Telogrus|alliance voidelf|54.47 15.36", -- Void Elf only
+		"TaxiNode_Continent_Alliance|Mechagon City Teleporter|alliance mechagnome|52.75 16.08", -- Mechagnome only
 
 		-- Professions
 		"POI/Alchemy|[Alchemy]|5+ alliance alchemy|55.66 86.08||Alchemy Needs",
@@ -1245,20 +1245,20 @@ Data.POI = {
 	-- Telogrus Rift
 	[971] = {
 		-- Portal
-		"POI/VoidPortal|Rift to Stormwind|alliance|27.99 21.51",
-		"POI/VoidPortal|Rift to Fathom's Edge|1+|27.9 28.61",
-		"POI/VoidPortal|Rift to Telogrus|1+|29.45 37.79",
-		"POI/VoidPortal|Rift to Cosmic Horizon|1+|30.05 44.11",
-		"POI/VoidPortal|Rift to Fathom's Edge|1+|40.02 49.31",
-		"POI/VoidPortal|Rift to Equinox Reach|1+|43.93 63.74",
-		"POI/VoidPortal|Rift to Cosmic Horizon|1+|48.95 72.06",
+		"TaxiNode_Continent_Alliance|Rift to Stormwind|alliance|27.99 21.51",
+		"TaxiNode_Continent_Neutral|Rift to Fathom's Edge|1+|27.9 28.61",
+		"TaxiNode_Continent_Neutral|Rift to Telogrus|1+|29.45 37.79",
+		"TaxiNode_Continent_Neutral|Rift to Cosmic Horizon|1+|30.05 44.11",
+		"TaxiNode_Continent_Neutral|Rift to Fathom's Edge|1+|40.02 49.31",
+		"TaxiNode_Continent_Neutral|Rift to Equinox Reach|1+|43.93 63.74",
+		"TaxiNode_Continent_Neutral|Rift to Cosmic Horizon|1+|48.95 72.06",
 	},
 
 	-- Mechagon City
 	[1573] = {
 		-- Portal
-		"teleportationnetwork-32x32:small|Stormwind Teleportation Unit|alliance|20.5 59.8",
-		--"teleportationnetwork-32x32:small|Mechagon City Teleporter|alliance|31 87.75", -- Inactive
+		"TaxiNode_Continent_Alliance|Stormwind Teleportation Unit|alliance|20.5 59.8",
+		--"TaxiNode_Continent_Neutral|Mechagon City Teleporter|alliance|31 87.75", -- Inactive
 	},
 
 
@@ -1304,11 +1304,9 @@ Data.POI = {
 
 	-- Silvermoon City
 	[110] = {
-		-- Orb of Translocation
-		"flightmasterargus|Translocator to Tirisfal Glades|horde|49.46 15.05",
-
 		-- Portal
-		"POI/Portal|Portal to Orgrimmar|horde|58.54 18.65",
+		"TaxiNode_Continent_Horde|Translocator to Tirisfal Glades|horde|49.46 15.05",
+		"TaxiNode_Continent_Horde|Portal to Orgrimmar|horde|58.54 18.65",
 	},
 
 
@@ -1317,7 +1315,7 @@ Data.POI = {
 	-- Undercity
 	[90] = {
 		-- Portal
-		"POI/Portal|Portal to Hellfire Peninsula|10+ horde|85.27 17.05",
+		"TaxiNode_Continent_Horde|Portal to Hellfire Peninsula|10+ horde|85.27 17.05",
 
 		-- Heirloom Vendor
 		"timewalkingvendor-32x32|[Heirloom Vendor]|horde|78.14 76.3|tooltip",
@@ -1347,13 +1345,11 @@ Data.POI = {
 		-- art:19 - Cataclysm
 		-- art:1136 - Battle for Azeroth
 
-		-- Orb of Translocation
-		"flightmasterargus:small|Translocator to Silvermoon City|horde|59.41 67.44",
-
 		-- Portal
-		"POI/Portal:small|Portal to Orgrimmar|horde art:18:19|60.74 58.68",
-		"POI/Portal:small|Portal to Stranglethorn Vale|horde art:18:19|61.88 59.01",
-		"POI/Portal:small|Portal to Howling Fjord|10+ horde art:18:19|59.09 58.9",
+		"TaxiNode_Continent_Horde|Translocator to Silvermoon City|horde|59.41 67.44",
+		"TaxiNode_Continent_Horde|Portal to Orgrimmar|horde art:18:19|60.74 58.68",
+		"TaxiNode_Continent_Horde|Portal to Stranglethorn Vale|horde art:18:19|61.88 59.01",
+		"TaxiNode_Continent_Horde|Portal to Howling Fjord|10+ horde art:18:19|59.09 58.9",
 	},
 
 
@@ -1361,7 +1357,7 @@ Data.POI = {
 
 	[47] = {
 		-- Portal
-		"POI/DreamwayPortal|Emerald Dreamway|10+ druid 40645|46.57 35.63",
+		"TaxiNode_Continent_Neutral|Emerald Dreamway|10+ druid 40645|46.57 35.63",
 	},
 
 
@@ -1369,7 +1365,7 @@ Data.POI = {
 
 	[26] = {
 		-- Portal
-		"POI/DreamwayPortal|Emerald Dreamway|10+ druid 40645|62.28 22.67",
+		"TaxiNode_Continent_Neutral|Emerald Dreamway|10+ druid 40645|62.28 22.67",
 	},
 
 
@@ -1377,10 +1373,10 @@ Data.POI = {
 
 	[407] = {
 		-- Portal
-		"mageportalhorde|Portal to Elwynn Forest|alliance|50.56 90.7",
-		"mageportalhorde|Portal to Elwynn Forest|alliance|51.22 23.1",
-		"mageportalhorde|Portal to Mulgore|horde|50.56 90.7",
-		"mageportalhorde|Portal to Mulgore|horde|51.22 23.1",
+		"TaxiNode_Continent_Al'|Portal to Elwynn Forest|alliance|50.56 90.7",
+		"TaxiNode_Continent_Alliance|Portal to Elwynn Forest|alliance|51.22 23.1",
+		"TaxiNode_Continent_Horde|Portal to Mulgore|horde|50.56 90.7",
+		"TaxiNode_Continent_Horde|Portal to Mulgore|horde|51.22 23.1",
 	},
 
 
@@ -1399,8 +1395,8 @@ Data.POI = {
 		"poi-door-down:small|Caverns of Time|1+|30.94 73.52|link:75",
 
 		-- Portal
-		"POI/Portal|Portal to Stormwind|alliance|58.98 26.73",
-		"POI/Portal|Portal to Orgrimmar|horde|58.18 26.68",
+		"TaxiNode_Continent_Alliance|Portal to Stormwind|alliance|58.98 26.73",
+		"TaxiNode_Continent_Horde|Portal to Orgrimmar|horde|58.18 26.68",
 	},
 
 	-- Caverns of Time
