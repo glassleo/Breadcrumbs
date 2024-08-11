@@ -1173,12 +1173,20 @@ Data.Vignettes = {
 	-- Lunarfall
 	[582] = {
 		-- Treasure
+		[35530] = "Lunarfall Egg|10+ alliance garrison:1|49.99 43.52||treasure|Contains|!{1005027} [Garrison Resources]",
+		[35381] = "Pipper's Buried Supplies|10+ alliance garrison:1|42.39 54.4||treasure|Contains|!{1005027} [Garrison Resources]",
+		[35384] = "Pipper's Buried Supplies|10+ alliance garrison:1|49.15 76.9||treasure|Contains|!{1005027} [Garrison Resources]",
 		[35383] = "Pipper's Buried Supplies|10+ alliance garrison:1|30.9 27.7||treasure|Contains|!{1005027} [Garrison Resources]",
 	},
 
 	-- Shadowmoon Valley
 	[539] = {
+		-- Treasure
+		[35280] = "Stolen Treasure|10+|27.05 2.49||treasure down|Contains|!{1005027} [Garrison Resources]",
+		[34174] = "Fantastic Fish|10+|26.53 5.68||treasure|Contains|!{1005027} [Garrison Resources]",
+
 		-- Vignette
+		[35281] = "Bahameye|10+|29.06 5.67||vignette|Drops|!{1005027} [Garrison Resources]",
 		[35847] = "Voidseer Kalurg|10+|32.67 41.37|\"Kill the nearby [hostile]Shadowmoon Channellers] to remove the barrier\"|vignette item:109074|Drops|!{937854} [rare]Fine Void-Chain Cinch]|!{1005027} [Garrison Resources]",
 	},
 
