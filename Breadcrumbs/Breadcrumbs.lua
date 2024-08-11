@@ -807,12 +807,12 @@ function Breadcrumbs:UpdateMap(event, ...)
 								
 								if flags["weekly"] then
 									if flags["account"] or flags["warband"] then
-										GameTooltip:AddLine(CreateAtlasMarkup("warbands-icon") .. CreateAtlasMarkup("quest-recurring-available") .. WEEKLY .. " " .. ACCOUNT_QUEST_LABEL, 0, 0.8, 1)
+										GameTooltip:AddLine(CreateAtlasMarkup("questlog-questtypeicon-account") .. CreateAtlasMarkup("questlog-questtypeicon-Recurring") .. WEEKLY .. " " .. ACCOUNT_QUEST_LABEL, 0, 0.8, 1)
 									else
-										GameTooltip:AddLine(CreateAtlasMarkup("quest-recurring-available") .. " " .. WEEKLY)
+										GameTooltip:AddLine(CreateAtlasMarkup("questlog-questtypeicon-Recurring") .. " " .. WEEKLY)
 									end
 								elseif flags["account"] or flags["warband"] then
-									GameTooltip:AddLine(CreateAtlasMarkup("warbands-icon") .. " " .. ACCOUNT_QUEST_LABEL, 0, 0.8, 1)
+									GameTooltip:AddLine(CreateAtlasMarkup("questlog-questtypeicon-account") .. " " .. ACCOUNT_QUEST_LABEL, 0, 0.8, 1)
 								end
 
 								if flags["link"] and link then -- The pin is a link, indicate where it takes us
@@ -1863,11 +1863,12 @@ function Breadcrumbs:Validate(str)
 					if string.match(v, "^reputation:(%d+):(%d+)$") then
 						local faction, standing = tonumber(string.match(v, "reputation:(%d+):%d+") or 0), tonumber(string.match(v, "reputation:%d+:(%d+)") or 0)
 						local major, friend = C_MajorFactions.GetMajorFactionData(faction), C_GossipInfo.GetFriendshipReputationRanks(faction)
+						local factionData = C_Reputation.GetFactionDataByID(faction)
 						if major then
 							if major.renownLevel >= standing then pass = true end
 						elseif friend and friend.maxLevel > 0 then
 							if friend.currentLevel >= standing then pass = true end
-						elseif tonumber((select(3, GetFactionInfoByID(faction))) or 0) >= standing then
+						elseif factionData and tonumber(factionData.reaction or 0) >= standing then
 							pass = true
 						end
 					end
@@ -1959,11 +1960,12 @@ function Breadcrumbs:Validate(str)
 						if string.match(w, "^reputation:(%d+):(%d+)$") then
 							local faction, standing = tonumber(string.match(w, "reputation:(%d+):%d+") or 0), tonumber(string.match(w, "reputation:%d+:(%d+)") or 0)
 							local major, friend = C_MajorFactions.GetMajorFactionData(faction), C_GossipInfo.GetFriendshipReputationRanks(faction)
+							local factionData = C_Reputation.GetFactionDataByID(faction)
 							if major then
 								if major.renownLevel >= standing then pass = false end
 							elseif friend and friend.maxLevel > 0 then
 								if friend.currentLevel >= standing then pass = false end
-							elseif tonumber((select(3, GetFactionInfoByID(faction))) or 0) >= standing then
+							elseif factionData and tonumber(factionData.reaction or 0) >= standing then
 								pass = false
 							end
 						end
