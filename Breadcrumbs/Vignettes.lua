@@ -64,11 +64,11 @@ Data.Vignettes = {
 		[78416] = "Snuggle Buddy|60+ tailoring skill:tailoring10:25|40.70 86.16||treasure item:210463|Contains|!{458256} [epic]Snuggle Buddy]",
 
 		-- Treasure
-		[78547] = "Unwaking Echo|70+|55.67 22.57|\"You must be sleeping to open the treasure\"|treasure item:210675|Contains|!{5173328} [rare]Gardener's Lightstaff]|!{5172976} [Flightstones]|!{2065578} [Dragon Isles Supplies]||Grants Reputation|!{5244643} [Dream Wardens] (200)",
-		[78550] = "Unwaking Echo|70+|69.57 52.84|\"You must be sleeping to open the treasure\"|treasure item:210686|Contains|!{1084301} [rare]Grovekeeper's Barrier]|!{5172976} [Flightstones]|!{2065578} [Dragon Isles Supplies]||Grants Reputation|!{5244643} [Dream Wardens] (200)",
-		[78551] = "Unwaking Echo|70+|55.32 45.38|\"You must be sleeping to open the treasure\"|treasure down item:210678|Contains|!{5171388} [rare]Verdant Gleaner's Scythe]|!{5172976} [Flightstones]|!{2065578} [Dragon Isles Supplies]||Grants Reputation|!{5244643} [Dream Wardens] (200)",
-		[78552] = "Unwaking Echo|70+|46.4 86.15|\"You must be sleeping to open the treasure\"|treasure item:210682|Contains|!{5169125} [rare]Camper's Knife]|!{5172976} [Flightstones]|!{2065578} [Dragon Isles Supplies]||Grants Reputation|!{5244643} [Dream Wardens] (200)",
-		[77858] = "Hidden Moonkin Stash|70+|47.49 34.85|\"On top of a floating branch\"|treasure item:210725|Contains|!{4067367} [rare]Owl Post]|!{5172976} [Flightstones]|!{2065578} [Dragon Isles Supplies]||Grants Reputation|!{5244643} [Dream Wardens] (200)",
+		[78547] = "Unwaking Echo|70+|55.67 22.57|\"You must be sleeping to open the treasure\"|treasure item:210675|Contains|!{5173328} [rare]Gardener's Lightstaff]|!{2065578} [Dragon Isles Supplies]||Grants Reputation|!{5244643} [Dream Wardens] (200)",
+		[78550] = "Unwaking Echo|70+|69.57 52.84|\"You must be sleeping to open the treasure\"|treasure item:210686|Contains|!{1084301} [rare]Grovekeeper's Barrier]|!{2065578} [Dragon Isles Supplies]||Grants Reputation|!{5244643} [Dream Wardens] (200)",
+		[78551] = "Unwaking Echo|70+|55.32 45.38|\"You must be sleeping to open the treasure\"|treasure down item:210678|Contains|!{5171388} [rare]Verdant Gleaner's Scythe]|!{2065578} [Dragon Isles Supplies]||Grants Reputation|!{5244643} [Dream Wardens] (200)",
+		[78552] = "Unwaking Echo|70+|46.4 86.15|\"You must be sleeping to open the treasure\"|treasure item:210682|Contains|!{5169125} [rare]Camper's Knife]|!{2065578} [Dragon Isles Supplies]||Grants Reputation|!{5244643} [Dream Wardens] (200)",
+		[77858] = "Hidden Moonkin Stash|70+|47.49 34.85|\"On top of a floating branch\"|treasure item:210725|Contains|!{4067367} [rare]Owl Post]|!{2065578} [Dragon Isles Supplies]||Grants Reputation|!{5244643} [Dream Wardens] (200)",
 		[78120] = "Pineshrew Cache|70+|37.26 30.69||treasure item:210411|Contains|!{464030} [rare]Fast Growing Seed]",
 		[77950] = "Crystalline Glowblossom|70+|39.11 65.52|\"Hanging from a tree branch\"|treasure item:208047|Contains|!{656681} [epic]Gigantic Dreamseed]",
 		[77855] = {
@@ -90,16 +90,16 @@ Data.Vignettes = {
 		},
 		[78359] = "Boon of Ashamane|78365|63.39 73.04||treasure down item:210631 link:2254|Contains|{237473} [rare]Branch of Ashamane]",
 		[78033] = {
-			"Magical Bloom|70+ §76320 -achievement:19317:5|61.62 59.58|\"You are currently phased out from this treasure due to a quest\"|treasure item:208047 atlas:vignetteloot-locked|Contains|!{656681} [epic]Gigantic Dreamseed]|!{5172976} [Flightstones]|!{2065578} [Dragon Isles Supplies]||Grants Reputation|!{5244643} [Dream Wardens] (200)",
-			"Magical Bloom|70+ ~76320 -achievement:19317:5|61.62 59.58|\"Chase the nearby [unfriendly]Laughing Podling] to unlock the treasure\"|treasure item:208047 atlas:vignetteloot-locked|Contains|!{656681} [epic]Gigantic Dreamseed]|!{5172976} [Flightstones]|!{2065578} [Dragon Isles Supplies]||Grants Reputation|!{5244643} [Dream Wardens] (200)",
+			"Magical Bloom|70+ §76320 -achievement:19317:5|61.62 59.58|\"You are currently phased out from this treasure due to a quest\"|treasure item:208047 atlas:vignetteloot-locked|Contains|!{656681} [epic]Gigantic Dreamseed]|!{2065578} [Dragon Isles Supplies]||Grants Reputation|!{5244643} [Dream Wardens] (200)",
+			"Magical Bloom|70+ ~76320 -achievement:19317:5|61.62 59.58|\"Chase the nearby [unfriendly]Laughing Podling] to unlock the treasure\"|treasure item:208047 atlas:vignetteloot-locked|Contains|!{656681} [epic]Gigantic Dreamseed]|!{2065578} [Dragon Isles Supplies]||Grants Reputation|!{5244643} [Dream Wardens] (200)",
 			"[unfriendly]Laughing Podling]|70+ ~76320 -achievement:19317:5|64.34 61.31|Magical Bloom|treasure atlas:questobjective|\"First location\"",
 			"[unfriendly]Laughing Podling]|70+ ~76320 -achievement:19317:5|62.95 60.39|Magical Bloom|treasure atlas:questobjective|\"Second location\"",
 		},
 		[78005] = {
-			"Magical Bloom|78033 §76320 -achievement:19317:5|61.62 59.58|\"You are currently phased out from this treasure due to a quest\"|treasure item:208047 atlas:vignetteloot-locked|Contains|!{656681} [epic]Gigantic Dreamseed]|!{5172976} [Flightstones]|!{2065578} [Dragon Isles Supplies]||Grants Reputation|!{5244643} [Dream Wardens] (200)",
-			"Magical Bloom|78033 ~76320 -achievement:19317:5|61.62 59.58||treasure item:208047|Contains|!{656681} [epic]Gigantic Dreamseed]|!{5172976} [Flightstones]|!{2065578} [Dragon Isles Supplies]||Grants Reputation|!{5244643} [Dream Wardens] (200)",
+			"Magical Bloom|78033 §76320 -achievement:19317:5|61.62 59.58|\"You are currently phased out from this treasure due to a quest\"|treasure item:208047 atlas:vignetteloot-locked|Contains|!{656681} [epic]Gigantic Dreamseed]|!{2065578} [Dragon Isles Supplies]||Grants Reputation|!{5244643} [Dream Wardens] (200)",
+			"Magical Bloom|78033 ~76320 -achievement:19317:5|61.62 59.58||treasure item:208047|Contains|!{656681} [epic]Gigantic Dreamseed]|!{2065578} [Dragon Isles Supplies]||Grants Reputation|!{5244643} [Dream Wardens] (200)",
 		},
-		[78006] = "Odd Burl|70+|55.26 57.25|\"On top of a large tree\"|treasure item:208067|Contains|!{656679} [rare]Plump Dreamseed]|!{5172976} [Flightstones]|!{2065578} [Dragon Isles Supplies]||Grants Reputation|!{5244643} [Dream Wardens] (200)",
+		[78006] = "Odd Burl|70+|55.26 57.25|\"On top of a large tree\"|treasure item:208067|Contains|!{656679} [rare]Plump Dreamseed]|!{2065578} [Dragon Isles Supplies]||Grants Reputation|!{5244643} [Dream Wardens] (200)",
 		[78095] = {
 			"Statue of the Bear Lord|70+ pandaren|47.05 53.09||treasure item:210434|Boon of Ursol|!{1629944} [rare]Visage of Ursol]",
 			"Statue of the Bear Lord|70+ druid -pandaren|47.05 53.09|\"Shift into {132276} [spell]Bear Form] to unlock the treasure\"|treasure item:210434|Boon of Ursol|!{1629944} [rare]Visage of Ursol]",
@@ -213,36 +213,36 @@ Data.Vignettes = {
 		
 		-- Treasure
 		[72986] = {
-			"Blazing Shadowflame Chest|70+ item:15138|28.53 47.94|\"You must equip an Onyxia Scale Cloak to be able to open the chest\"|treasure item:205418|Requires|{133757} [hasitem:15138]Onyxia Scale Cloak]||Contains|!{4914678} [rare]Blazing Shadowflame Cinder]|!{5062636} [rare]Whelpling's Shadowflame Crest Fragment]|!{5172976} [Flightstones]|!{2065578} [Dragon Isles Supplies]",
-			"Blazing Shadowflame Chest|70+ -item:15138|28.53 47.94|\"You must equip an Onyxia Scale Cloak to be able to open the chest\"|treasure item:205418 atlas:vignetteloot-locked|Requires|{133757} [hasitem:15138]Onyxia Scale Cloak]||Contains|!{4914678} [rare]Blazing Shadowflame Cinder]|!{5062636} [rare]Whelpling's Shadowflame Crest Fragment]|!{5172976} [Flightstones]|!{2065578} [Dragon Isles Supplies]",
+			"Blazing Shadowflame Chest|70+ item:15138|28.53 47.94|\"You must equip an Onyxia Scale Cloak to be able to open the chest\"|treasure item:205418|Requires|{133757} [hasitem:15138]Onyxia Scale Cloak]||Contains|!{4914678} [rare]Blazing Shadowflame Cinder]|!{2065578} [Dragon Isles Supplies]",
+			"Blazing Shadowflame Chest|70+ -item:15138|28.53 47.94|\"You must equip an Onyxia Scale Cloak to be able to open the chest\"|treasure item:205418 atlas:vignetteloot-locked|Requires|{133757} [hasitem:15138]Onyxia Scale Cloak]||Contains|!{4914678} [rare]Blazing Shadowflame Cinder]|!{2065578} [Dragon Isles Supplies]",
 		},
-		[73706] = "Charred Egg|70+|30.05 41.93||treasure|Contains|!{5172976} [Flightstones]|!{2065578} [Dragon Isles Supplies]",
-		--[75187] = "Chest of the Flights|70+|56.04 3.05|\"Activate the nearby gems in the same order as the banner above the chest\"|treasure daily|Contains|!{5172976} [Flightstones]|!{2065578} [Dragon Isles Supplies]",
-		[73395] = "Well-Chewed Chest|70+|29.77 40.55|\"The key can be found underneath the dead [dead]Massive Corebeast] inside the cave\"|treasure item:204075|Requires|{2032583} [hasitem:202869]Scorching Key]||Contains|!{5062636} [rare]Whelpling's Shadowflame Crest Fragment] (6)|!{5172976} [Flightstones]|!{2065578} [Dragon Isles Supplies]",
+		[73706] = "Charred Egg|70+|30.05 41.93||treasure|Contains|!{2065578} [Dragon Isles Supplies]",
+		--[75187] = "Chest of the Flights|70+|56.04 3.05|\"Activate the nearby gems in the same order as the banner above the chest\"|treasure daily|Contains|!{2065578} [Dragon Isles Supplies]",
+		[73395] = "Well-Chewed Chest|70+|29.77 40.55|\"The key can be found underneath the dead [dead]Massive Corebeast] inside the cave\"|treasure item:204075|Requires|{2032583} [hasitem:202869]Scorching Key]||Contains|!{2065578} [Dragon Isles Supplies]",
 		[75515] = "Molten Hoard|70+|48.42 16.35|\"Inside the lava sewage outflow cave underneath Brimstone Garrison\"|treasure item:205981|Contains|!{5148757} [epic]Molten Primal Fang]",
-		--[75302] = "Stolen Stash|70+|60.66 46.23||treasure|Contains|!{5172976} [Flightstones]|!{2065578} [Dragon Isles Supplies]",
+		--[75302] = "Stolen Stash|70+|60.66 46.23||treasure|Contains|!{2065578} [Dragon Isles Supplies]",
 		[75559] = "Attunement Crystal|70+|39.41 73.28|Crystal-encased Chest|treasure atlas:questobjective",
 		[74987] = "Attunement Crystal|70+|37.75 68.86|Crystal-encased Chest|treasure atlas:questobjective",
 		[74986] = {
-			"Crystal-encased Chest|70+ -75559,-74987|36.4 74.26|\"Find two [Attunement Crystals] nearby in order to unlock the treasure\"|treasure item:204075 atlas:vignetteloot-locked|Contains|!{/Random} [rare]Random Trinket]|!{5062636} [rare]Whelpling's Shadowflame Crest Fragment] (6)|!{5172976} [Flightstones]|!{2065578} [Dragon Isles Supplies]",
-			"Crystal-encased Chest|70+ 75559 74987|36.4 74.26||treasure|Contains|!{/Random} [rare]Random Trinket]|!{5172976} [Flightstones]|!{2065578} [Dragon Isles Supplies]",
+			"Crystal-encased Chest|70+ -75559,-74987|36.4 74.26|\"Find two [Attunement Crystals] nearby in order to unlock the treasure\"|treasure item:204075 atlas:vignetteloot-locked|Contains|!{/Random} [rare]Random Trinket]|!{2065578} [Dragon Isles Supplies]",
+			"Crystal-encased Chest|70+ 75559 74987|36.4 74.26||treasure|Contains|!{/Random} [rare]Random Trinket]|!{2065578} [Dragon Isles Supplies]",
 		},
-		[75019] = "Long-Lost Cache|70+|62.71 53.75||treasure weekly|Contains|!{5172976} [Flightstones]|!{2065578} [Dragon Isles Supplies]",
-		--[75814] = "Waterlogged Bundle|70+|62.07 55.33||treasure|Contains|!{5172976} [Flightstones]|!{2065578} [Dragon Isles Supplies]", -- also flags 75015
+		[75019] = "Long-Lost Cache|70+|62.71 53.75||treasure weekly|Contains|!{2065578} [Dragon Isles Supplies]",
+		--[75814] = "Waterlogged Bundle|70+|62.07 55.33||treasure|Contains|!{2065578} [Dragon Isles Supplies]", -- also flags 75015
 		[75514] = {
-			"Fealty's Reward|70+|48.45 10.83|\"To open the chest you must first kneel before the statue of Neltharion in the western part of Brimstone Garrison\"|treasure item:204075|Contains|!{/Random} [rare]Random Trinket]|!{5062636} [rare]Whelpling's Shadowflame Crest Fragment]|!{5172976} [Flightstones]|!{2065578} [Dragon Isles Supplies]",
+			"Fealty's Reward|70+|48.45 10.83|\"To open the chest you must first kneel before the statue of Neltharion in the western part of Brimstone Garrison\"|treasure item:204075|Contains|!{/Random} [rare]Random Trinket]|!{2065578} [Dragon Isles Supplies]",
 			"Statue of Neltharion|70+|43.54 23.02|Fealty's Reward|treasure atlas:questobjective",
 		},
 		[75745] = {
-			"Nal ks'kol Reliquary|70+ -72964|64.07 75.07|\"You must progress further in the Embers of Neltharion campaign to gain acces to Nal ks'kol.\"|treasure item:191784 atlas:vignetteloot-locked|Contains|!{4643982} [epic]Dragon Shard of Knowledge]|!{5062636} [rare]Whelpling's Shadowflame Crest Fragment]|!{5172976} [Flightstones]|!{2065578} [Dragon Isles Supplies]",
-			"Nal ks'kol Reliquary|70+ +72964|64.07 75.07|\"Interact with the [Reliquary Access Console] and solve its puzzle to gain access to the treasure.\"|treasure item:191784|Contains|!{4643982} [epic]Dragon Shard of Knowledge]|!{5062636} [rare]Whelpling's Shadowflame Crest Fragment]|!{5172976} [Flightstones]|!{2065578} [Dragon Isles Supplies]",
+			"Nal ks'kol Reliquary|70+ -72964|64.07 75.07|\"You must progress further in the Embers of Neltharion campaign to gain acces to Nal ks'kol.\"|treasure item:191784 atlas:vignetteloot-locked|Contains|!{4643982} [epic]Dragon Shard of Knowledge]|!{2065578} [Dragon Isles Supplies]",
+			"Nal ks'kol Reliquary|70+ +72964|64.07 75.07|\"Interact with the [Reliquary Access Console] and solve its puzzle to gain access to the treasure.\"|treasure item:191784|Contains|!{4643982} [epic]Dragon Shard of Knowledge]|!{2065578} [Dragon Isles Supplies]",
 		},
 		
 	},
 
 	-- Deeplayer Nest
 	[2184] = {
-		[75303] = "Stolen Stash|70+|63.86 82.66||treasure|Contains|!{5172976} [Flightstones]|!{2065578} [Dragon Isles Supplies]",
+		[75303] = "Stolen Stash|70+|63.86 82.66||treasure|Contains|!{2065578} [Dragon Isles Supplies]",
 	},
 
 
