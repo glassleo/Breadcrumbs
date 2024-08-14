@@ -420,6 +420,12 @@ Data.Quests = {
 	[2133] = {
 		-- Campaign
 		[75641] = "Power Unified|70+ 75658|56.84 54.79|Examiner Tae'shara Bloodwatcher|campaign",
+
+		-- Loamm Niffen Renown
+		[75725] = "Off to the Track|10+ reputation:2564:7|56.41 56.69|Newsy", -- Requires Renown 7 with Loamm Niffen
+		[75728] = "Bartering Boulders|10+ reputation:2564:12|56.41 56.69|Newsy", -- Requires Renown 12 with Loamm Niffen
+		[75741] = "Bundle of Boulders|10+ reputation:2564:17|56.41 56.69|Newsy", -- Requires Renown 17 with Loamm Niffen
+		[75744] = "A Token of Our Gratitude|10+ reputation:2564:20|56.41 56.69|Newsy", -- Requires Renown 20 with Loamm Niffen
 	},
 
 
