@@ -45,6 +45,14 @@ local _, Data = ...
 Data.POI = {
 
 
+	--[[ Amirdrassil ]]--
+
+	[2239] = {
+		-- Portal
+		"-:large|Emerald Dream [gold](70)]|1+|90 34.79|link:2200",
+	},
+
+
 	--[[ Emerald Dream ]]--
 
 	-- Emerald Dream
@@ -54,7 +62,7 @@ Data.POI = {
 		"poi-door-down:small|Barrows of Reverie|1+|63.5 71.75|link:2254",
 
 		-- Portal
-		"-:large|Ohn'ahran Plains|1+|73.35 51.08|link:2023",
+		"-:large|Ohn'ahran Plains [gold](10-70)]|1+|73.35 51.08|link:2023|Pet Level [gold](25)]",
 
 		-- Vendor
 		"banker:objective|Theozhaklos the Curious|item:210944|36.69 33.29|tooltip item:210944|\"Exchange your {4555670} [epic]Emerald Mark of Mastery] for an Amirdrassil class set item of choice here\"",
@@ -95,7 +103,6 @@ Data.POI = {
 		"TaxiNode_Continent_Horde|Portal to Orgrimmar|horde|56.64 38.3",
 		"TaxiNode_Continent_Alliance|Portal to Stormwind|alliance|59.79 41.71",
 		"TaxiNode_Continent_Neutral|Portal to Badlands|1+|26.09 40.98",
-		"TaxiNode_Continent_Neutral|Portal to The Timeways|1+|53.55 55.36||Seasonal Dungeon Portals",
 		"TaxiNode_Continent_Neutral|Portal to Emerald Dream|70+ 77887|62.68 57.3",
 
 		-- Mailbox
