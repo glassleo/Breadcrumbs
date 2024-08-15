@@ -507,6 +507,7 @@ function Breadcrumbs:FormatTooltip(text, flags, varwrap)
 	text = string.gsub(text, "%[green%]", "|cff00ff00") -- green
 	text = string.gsub(text, "%[neutral%]", "|cffffff00") -- neutral yellow
 	text = string.gsub(text, "%[yellow%]", "|cffffff00") -- yellow
+	text = string.gsub(text, "%[gold%]", "|cffffd100") -- golden yellow
 	text = string.gsub(text, "%[unfriendly%]", "|cffee6622") -- unfriendly orange
 	text = string.gsub(text, "%[hostile%]", "|cffff0000") -- hostile red
 	text = string.gsub(text, "%[red%]", "|cffff0000") -- red
