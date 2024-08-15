@@ -254,9 +254,9 @@ Data.Vignettes = {
 		[73699] = "High Peak|60+ research:2164|54.58 34.64||vignette atlas:Warfronts-FieldMapIcons-Empty-Banner-Minimap large|Grants Reputation|!{4687628} [Dragonscale Expedition] (250)",
 
 		-- Signal Transmitter
-		[73145] = "Deactivated Signal Transmitter|engineering skill:engineering10:25 profperk:2827:50930|39.99 81.83|[spell]Wyrmhole Generator]|treasure atlas:mechagon-projects large",
-		[73143] = "Deactivated Signal Transmitter|engineering skill:engineering10:25 profperk:2827:50930|31.78 26.2|[spell]Wyrmhole Generator]|treasure atlas:mechagon-projects large",
-		[73144] = "Deactivated Signal Transmitter|engineering skill:engineering10:25 profperk:2827:50930|78.04 51.1|[spell]Wyrmhole Generator]|treasure atlas:mechagon-projects large",
+		[73145] = "Deactivated Signal Transmitter|engineering skill:engineering10:25 profperk:2827:50930|39.99 81.83|[spell]Wyrmhole Generator]|treasure atlas:Warfronts-BaseMapIcons-Empty-Workshop large",
+		[73143] = "Deactivated Signal Transmitter|engineering skill:engineering10:25 profperk:2827:50930|31.78 26.2|[spell]Wyrmhole Generator]|treasure atlas:Warfronts-BaseMapIcons-Empty-Workshop large",
+		[73144] = "Deactivated Signal Transmitter|engineering skill:engineering10:25 profperk:2827:50930|78.04 51.1|[spell]Wyrmhole Generator]|treasure atlas:Warfronts-BaseMapIcons-Empty-Workshop large",
 	},
 
 
@@ -332,9 +332,9 @@ Data.Vignettes = {
 		[71208] = "High Peak|60+ research:2164|28 70.63||vignette atlas:Warfronts-FieldMapIcons-Empty-Banner-Minimap large|Grants Reputation|!{4687628} [Dragonscale Expedition] (250)",
 
 		-- Signal Transmitter
-		[70583] = "Deactivated Signal Transmitter|engineering skill:engineering10:25 profperk:2827:50930|50.63 55.6|[spell]Wyrmhole Generator]|treasure atlas:mechagon-projects large",
-		[70584] = "Deactivated Signal Transmitter|engineering skill:engineering10:25 profperk:2827:50930|70.3 44.3|[spell]Wyrmhole Generator]|treasure atlas:mechagon-projects large",
-		[70585] = "Deactivated Signal Transmitter|engineering skill:engineering10:25 profperk:2827:50930|63.67 77.1|[spell]Wyrmhole Generator]|treasure atlas:mechagon-projects large",
+		[70583] = "Deactivated Signal Transmitter|engineering skill:engineering10:25 profperk:2827:50930|50.63 55.6|[spell]Wyrmhole Generator]|treasure atlas:Warfronts-BaseMapIcons-Empty-Workshop large",
+		[70584] = "Deactivated Signal Transmitter|engineering skill:engineering10:25 profperk:2827:50930|70.3 44.3|[spell]Wyrmhole Generator]|treasure atlas:Warfronts-BaseMapIcons-Empty-Workshop large",
+		[70585] = "Deactivated Signal Transmitter|engineering skill:engineering10:25 profperk:2827:50930|63.67 77.1|[spell]Wyrmhole Generator]|treasure atlas:Warfronts-BaseMapIcons-Empty-Workshop large",
 
 		-- Profession Master
 		[70258] = "Bridgette Holdug|60+ mining skill:2833:25|61.43 76.87||vignette speak currency:2035|Master Miner|!{3615521} [rare]Dragon Isles Mining Knowledge] (10)|!{4643977} [rare]Artisan's Mettle] (50)",
@@ -386,10 +386,10 @@ Data.Vignettes = {
 		[72136] = {"Misaligned Ley Crystal|60+ -mining|65.88 50.66|\"You may need [hasitem:198727]Expedition Explosives] to break open the rock wall.\n\nThey can be bought from the Dragonscale Expedition quartermaster in the Waking Shores.\"|vignette atlas:AzeriteReady item:198727|Grants Reputation|!{4687630} [Valdrakken Accord] (20)", "Misaligned Ley Crystal|60+ mining|65.88 50.66|\"You may need to break the rock wall using your Mining skill\"|vignette atlas:AzeriteReady|Grants Reputation|!{4687630} [Valdrakken Accord] (20)",},
 
 		-- Signal Transmitter
-		[70579] = "Deactivated Signal Transmitter|engineering skill:engineering10:25 profperk:2827:50930|27.56 26.45|[spell]Wyrmhole Generator]|treasure atlas:mechagon-projects large",
-		[70580] = "Deactivated Signal Transmitter|engineering skill:engineering10:25 profperk:2827:50930|45.77 65.25|[spell]Wyrmhole Generator]|treasure atlas:mechagon-projects large",
-		[70581] = "Deactivated Signal Transmitter|engineering skill:engineering10:25 profperk:2827:50930|71.04 47.82|[spell]Wyrmhole Generator]|treasure atlas:mechagon-projects large",
-		[70578] = "Deactivated Signal Transmitter|engineering skill:engineering10:25 profperk:2827:50930|34.91 26.77|[spell]Wyrmhole Generator]|treasure atlas:mechagon-projects large link:2023",
+		[70579] = "Deactivated Signal Transmitter|engineering skill:engineering10:25 profperk:2827:50930|27.56 26.45|[spell]Wyrmhole Generator]|treasure atlas:Warfronts-BaseMapIcons-Empty-Workshop large",
+		[70580] = "Deactivated Signal Transmitter|engineering skill:engineering10:25 profperk:2827:50930|45.77 65.25|[spell]Wyrmhole Generator]|treasure atlas:Warfronts-BaseMapIcons-Empty-Workshop large",
+		[70581] = "Deactivated Signal Transmitter|engineering skill:engineering10:25 profperk:2827:50930|71.04 47.82|[spell]Wyrmhole Generator]|treasure atlas:Warfronts-BaseMapIcons-Empty-Workshop large",
+		[70578] = "Deactivated Signal Transmitter|engineering skill:engineering10:25 profperk:2827:50930|34.91 26.77|[spell]Wyrmhole Generator]|treasure atlas:Warfronts-BaseMapIcons-Empty-Workshop large link:2023",
 
 		-- Profession Master
 		[70252] = "Frizz Buzzcrank|60+ engineering skill:engineering10:25|17.76 21.68||vignette speak currency:2027|Master Engineer|!{4624728} [rare]Dragon Isles Engineering Knowledge] (5)|!{4643977} [rare]Artisan's Mettle] (25)",
@@ -436,10 +436,10 @@ Data.Vignettes = {
 		[71215] = "High Peak|60+ research:2164|63.4 85.35||vignette atlas:Warfronts-FieldMapIcons-Empty-Banner-Minimap large|Grants Reputation|!{4687628} [Dragonscale Expedition] (250)",
 		
 		-- Signal Transmitter
-		[70576] = "Deactivated Signal Transmitter|engineering skill:engineering10:25 profperk:2827:50930|28.02 35.67|[spell]Wyrmhole Generator]|treasure atlas:mechagon-projects large",
-		[70577] = "Deactivated Signal Transmitter|engineering skill:engineering10:25 profperk:2827:50930|56.89 28.91|[spell]Wyrmhole Generator]|treasure atlas:mechagon-projects large",
-		[70578] = "Deactivated Signal Transmitter|engineering skill:engineering10:25 profperk:2827:50930|67.7 84.97|[spell]Wyrmhole Generator]|treasure atlas:mechagon-projects large",
-		[70579] = "Deactivated Signal Transmitter|engineering skill:engineering10:25 profperk:2827:50930|57.14 84.52|[spell]Wyrmhole Generator]|treasure atlas:mechagon-projects large link:2024",
+		[70576] = "Deactivated Signal Transmitter|engineering skill:engineering10:25 profperk:2827:50930|28.02 35.67|[spell]Wyrmhole Generator]|treasure atlas:Warfronts-BaseMapIcons-Empty-Workshop large",
+		[70577] = "Deactivated Signal Transmitter|engineering skill:engineering10:25 profperk:2827:50930|56.89 28.91|[spell]Wyrmhole Generator]|treasure atlas:Warfronts-BaseMapIcons-Empty-Workshop large",
+		[70578] = "Deactivated Signal Transmitter|engineering skill:engineering10:25 profperk:2827:50930|67.7 84.97|[spell]Wyrmhole Generator]|treasure atlas:Warfronts-BaseMapIcons-Empty-Workshop large",
+		[70579] = "Deactivated Signal Transmitter|engineering skill:engineering10:25 profperk:2827:50930|57.14 84.52|[spell]Wyrmhole Generator]|treasure atlas:Warfronts-BaseMapIcons-Empty-Workshop large link:2024",
 
 		-- Profession Master
 		[70251] = "Shalasar Glimmerdusk|60+ enchanting skill:2825:25|62.42 18.7|\"On top of the building\"|vignette speak currency:2030|Master Enchantress|!{3615911} [rare]Dragon Isles Enchanting Knowledge] (5)|!{4643977} [rare]Artisan's Mettle] (25)",
@@ -511,9 +511,9 @@ Data.Vignettes = {
 		[71204] = "High Peak|60+ research:2164|54.80 74.12||vignette atlas:Warfronts-FieldMapIcons-Empty-Banner-Minimap large|Grants Reputation|!{4687628} [Dragonscale Expedition] (250)",
 
 		-- Signal Transmitter
-		[70573] = "Deactivated Signal Transmitter|engineering skill:engineering10:25 profperk:2827:50930|74.6 25.51|[spell]Wyrmhole Generator]|treasure atlas:mechagon-projects large",
-		[70574] = "Deactivated Signal Transmitter|engineering skill:engineering10:25 profperk:2827:50930|62.2 78.97|[spell]Wyrmhole Generator]|treasure atlas:mechagon-projects large|\"Hidden on top of a ledge underneath two tree canopies.\"",
-		[70575] = "Deactivated Signal Transmitter|engineering skill:engineering10:25 profperk:2827:50930|23.43 43.83|[spell]Wyrmhole Generator]|treasure atlas:mechagon-projects large",
+		[70573] = "Deactivated Signal Transmitter|engineering skill:engineering10:25 profperk:2827:50930|74.6 25.51|[spell]Wyrmhole Generator]|treasure atlas:Warfronts-BaseMapIcons-Empty-Workshop large",
+		[70574] = "Deactivated Signal Transmitter|engineering skill:engineering10:25 profperk:2827:50930|62.2 78.97|[spell]Wyrmhole Generator]|treasure atlas:Warfronts-BaseMapIcons-Empty-Workshop large|\"Hidden on top of a ledge underneath two tree canopies.\"",
+		[70575] = "Deactivated Signal Transmitter|engineering skill:engineering10:25 profperk:2827:50930|23.43 43.83|[spell]Wyrmhole Generator]|treasure atlas:Warfronts-BaseMapIcons-Empty-Workshop large",
 
 		-- Profession Master
 		[70247] = "Grigori Vialtry|60+ alchemy skill:2823:25|60.83 75.9||vignette speak currency:2024|Master Alchemist|!{4624656} [rare]Dragon Isles Alchemy Knowledge] (5)|!{4643977} [rare]Artisan's Mettle] (25)",
