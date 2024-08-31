@@ -31,6 +31,9 @@ local _, Data = ...
 	Flags: Additional optional flags
 		tooltip			Gives the map pin a tooltip instead of a map label
 		combo			Gives the map pin both a tooltip and a map label; with this flag Tooltip2 is used as the tooltip's title
+
+		low				Sets frame level to be lower than other POI pins
+		high			Sets frame level to be on top of all other pins
 		
 		link:n			Pin becomes clickable to open map with ID n
 
@@ -43,6 +46,63 @@ local _, Data = ...
 ]]--
 
 Data.POI = {
+
+
+	--[[ Isle of Dorn ]]--
+
+	-- Dornogal
+	[2339] = {
+		-- Portal
+		"TaxiNode_Continent_Horde|Portal to Orgrimmar|horde|38.18 27.22",
+		"TaxiNode_Continent_Alliance|Portal to Stormwind|alliance|41.17 22.68",
+
+		-- Mailbox
+		"mailbox:objective|Mailbox|mailbox|58.06 55.58|high", -- The Forgegrounds
+		"mailbox:objective|Mailbox|mailbox|45.68 68.71|high", -- The Forgegrounds
+		"mailbox:objective|Mailbox|mailbox|55.67 50.07|high", -- Gilded Exchange
+		"mailbox:objective|Mailbox|mailbox|51.72 45.94|high", -- Council's Treasury
+		"mailbox:objective|Mailbox|mailbox|58.15 32.46|high", -- Stoneshaper's Atrium
+		"mailbox:objective|Mailbox|mailbox|64.97 17.45|high", -- Stoneward's Rise
+		"mailbox:objective|Mailbox|mailbox|48.48 26.16|high", -- Keepers Terrace
+		"mailbox:objective|Mailbox|mailbox|37.64 40.88|high", -- Keepers Terrace
+		"mailbox:objective|Mailbox|mailbox|45.36 48.23|high", -- Stonelight Rest
+
+		-- Innkeeper
+		"Innkeeper|Stonelight Rest|1+|44.72 46.4",
+
+		-- Crafting Orders
+		"Professions-Crafting-Orders-Icon|Crafting Orders|1+|59.74 55.73",
+
+		-- Item Upgrades
+		"upgradeitem-32x32|[Item Upgrades]|60+|52.08 42.1||Mythic Aspirations",
+		"upgradeitem-32x32|[Item Upgrades]|60+|59.98 69.73||Contender's Gate",
+
+		-- PvP
+		"poi-alliance|[Conquest & Honor Quartermaster]|70+ alliance|55.25 76.81",
+		"poi-horde|[Conquest & Honor Quartermaster]|70+ horde|55.25 76.81",
+
+		-- Professions
+		"POI/Alchemy|[Alchemy]|68+ alchemy|47.14 70.71|low",
+		"POI/Blacksmithing|[Blacksmithing]|68+ blacksmithing|49.05 63.22|low",
+		"POI/Enchanting|[Enchanting]|68+ enchanting|52.48 71.36|low",
+		"POI/Engineering|[Engineering]|68+ engineering|49.04 56.07|low",
+		"POI/Herbalism|[Herbalism]|68+ herbalism|44.76 69.3|low",
+		"POI/Inscription|[Inscription]|68+ inscription|48.75 71.18|low",
+		"POI/Jewelcrafting|[Jewelcrafting]|68+ jewelcrafting|49.48 71.15|low",
+		"POI/Leatherworking|[Leatherworking]|68+ leatherworking|64.45 58.97|low",
+		"POI/Mining|[Mining]|68+ mining|52.62 52.53|low",
+		"POI/Skinning|[Skinning]|68+ skinning|54.27 56.66|low",
+		"POI/Tailoring|[Tailoring]|68+ tailoring|54.58 63.43|low",
+		"POI/Cooking|[Cooking]|68+|43.91 45.48|low|Stonelight Rest",
+		"POI/Fishing|[Fishing]|68+|50.55 26.81|low",
+
+		-- Rostrum of Transformation
+		"dragon-rostrum|[Rostrum of Transformation]|dragonriding|47.97 67.88",
+
+		-- Pets
+		"WildBattlePet|[Pet Charm Trader]|1+|58.51 64.86",
+		"Stablemaster|[Stable Master]|1+|55.37 67.1",
+	},
 
 
 	--[[ Amirdrassil ]]--
@@ -113,7 +173,7 @@ Data.POI = {
 		"mailbox:objective|Mailbox|mailbox|54.58 59.5", -- Bank of Valdrakken
 
 		-- Crafting Orders
-		"Professions-Crafting-Orders-Icon|Crafting Orders|58+|34.72 62.47",
+		"Professions-Crafting-Orders-Icon|Crafting Orders|1+|34.72 62.47",
 
 		-- Item Upgrades
 		"upgradeitem-32x32|[Item Upgrades]|60+|38.65 37.11",

@@ -7,7 +7,7 @@ local LoginThrottle = true
 
 
 -- User settings (GUI NYI)
-local Setting_DisableStorylineQuestDataProvider = true
+local Setting_DisableStorylineQuestDataProvider = false
 if PlayerGetTimerunningSeasonID() then Setting_DisableStorylineQuestDataProvider = false end -- Disable in Timerunning
 local Setting_EnableQuests = true
 local Setting_PinSize = 20
@@ -1604,7 +1604,7 @@ function Breadcrumbs:UpdateMap(event, ...)
 						end)
 					end
 
-					Pins:AddWorldMapIconMap("Breadcrumbs", Pin, map, x/100, y/100, nil, "PIN_FRAME_LEVEL_AREA_POI")
+					Pins:AddWorldMapIconMap("Breadcrumbs", Pin, map, x/100, y/100, nil, flags["high"] and "PIN_FRAME_LEVEL_TOPMOST" or flags["low"] and "PIN_FRAME_LEVEL_DEFAULT" or "PIN_FRAME_LEVEL_AREA_POI")
 					Pin:Show()
 				end
 			end
