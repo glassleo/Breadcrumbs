@@ -17,48 +17,190 @@ Data.Vignettes = {
 	
 	-- Dornogal
 	[2339] = {
+		-- Alchemy Treasure
+		--[83840] = "Earthen Iron Powder|alchemy skill:alchemy11:1|___COORDS___||treasure item:226265|Contains|!{133592} [epic]Earthen Iron Powder]",
+		
+		-- Blacksmithing Treasure
+		[83849] = "Dornogal Hammer|blacksmithing skill:blacksmithing11:1|47.59 26.22||treasure item:226277|Contains|!{133060} [epic]Dornogal Hammer]",
+
+		-- Enchanting Treasure
+		[83859] = "Silver Dornogal Rod|enchanting skill:enchanting11:1|58.04 56.98||treasure item:226285|Contains|!{610576} [epic]Silver Dornogal Rod]",
+
+		-- Engineering Treasure
+		[83867] = "Dornogal Spectacles|engineering skill:engineering11:1|64.86 52.86||treasure item:226293|Contains|!{3779053} [epic]Dornogal Spectacles]",
+		
 		-- Herbalism Treasure
 		[83875] = "Dornogal Gardening Scythe|herbalism skill:herbalism11:1|59.25 23.54||treasure item:226301|Contains|!{1060569} [epic]Dornogal Gardening Scythe]",
 		
+		-- Inscription Treasure
+		--[83882] = "Dornogal Scribe's Quill|inscription skill:inscription11:1|___COORDS___||treasure item:226308|Contains|!{2103812} [epic]Dornogal Scribe's Quill]",
+		
+		-- Jewelcrafting Treasure
+		--[83891] = "Earthen Gem Pliers|jewelcrafting skill:jewelcrafting11:1|___COORDS___||treasure item:226317|Contains|!{1020376} [epic]Earthen Gem Pliers]",
+		
+		-- Leatherworking Treasure
+		--[83898] = "Earthen Lacing Tools|leatherworking skill:leatherworking11:1|___COORDS___||treasure item:226324|Contains|!{136247} [epic]Earthen Lacing Tools]",
+		
 		-- Mining Treasure
 		[83907] = "Dornogal Chisel|mining skill:mining11:1|36.72 79.36||treasure item:226333|Contains|!{1059115} [epic]Dornogal Chisel]",
+		
+		-- Skinning Treasure
+		--[83914] = "Dornogal Carving Knife|skinning skill:skinning11:1|___COORDS___||treasure item:226340|Contains|!{5404237} [epic]Dornogal Carving Knife]",
+		
+		-- Tailoring Treasure
+		--[83922] = "Dornogal Seam Ripper|tailoring skill:tailoring11:1|___COORDS___||treasure item:226348|Contains|!{464119} [epic]Dornogal Seam Ripper]",
 	},
 
 	-- Isle of Dorn
 	[2248] = {
+		-- Alchemy Treasure
+		--[83840] = "Earthen Iron Powder|alchemy skill:alchemy11:1|___COORDS___||treasure link:2339 item:226265|Contains|!{133592} [epic]Earthen Iron Powder]",
+		--[83841] = "Metal Dornogal Frame|alchemy skill:alchemy11:1|___COORDS___||treasure item:226266|Contains|!{4622302} [epic]Metal Dornogal Frame]",
+
+		-- Blacksmithing Treasure
+		[83849] = "Dornogal Hammer|blacksmithing skill:blacksmithing11:1|49.09 38.76||treasure link:2339 item:226277|Contains|!{133060} [epic]Dornogal Hammer]",
+		[83848] = "Ancient Earthen Anvil|blacksmithing skill:blacksmithing11:1|59.83 61.91||treasure item:226276|Contains|!{2356069} [epic]Ancient Earthen Anvil]",
+
+		-- Enchanting Treasure
+		[83859] = "Silver Dornogal Rod|enchanting skill:enchanting11:1|51.66 46.32||treasure link:2339 item:226285|Contains|!{610576} [epic]Silver Dornogal Rod]",
+		[83856] = "Grinded Earthen Gem|enchanting skill:enchanting11:1|57.59 61.64||treasure item:226284|Contains|!{134388} [epic]Grinded Earthen Gem]",
+
+		-- Engineering Treasure
+		[83867] = "Dornogal Spectacles|engineering skill:engineering11:1|53.33 45.31||treasure link:2339 item:226293|Contains|!{3779053} [epic]Dornogal Spectacles]",
+		[83866] = "Rock Engineer's Wrench|engineering skill:engineering11:1|61.35 69.57||treasure item:226292|Contains|!{134520} [epic]Rock Engineer's Wrench]",
+		
 		-- Herbalism Treasure
 		[83875] = "Dornogal Gardening Scythe|herbalism skill:herbalism11:1|51.96 38.11||treasure link:2339 item:226301|Contains|!{1060569} [epic]Dornogal Gardening Scythe]",
 		[83874] = "Ancient Flower|herbalism skill:herbalism11:1|57.54 61.46||treasure item:226300|Contains|!{134205} [epic]Ancient Flower]",
 		
+		-- Inscription Treasure
+		--[83882] = "Dornogal Scribe's Quill|inscription skill:inscription11:1|___COORDS___||treasure link:2339 item:226308|Contains|!{2103812} [epic]Dornogal Scribe's Quill]",
+		--[83883] = "Historian's Dip Pen|inscription skill:inscription11:1|___COORDS___||treasure item:226309|Contains|!{4419478} [epic]Historian's Dip Pen]",
+		
+		-- Jewelcrafting Treasure
+		--[83891] = "Earthen Gem Pliers|jewelcrafting skill:jewelcrafting11:1|___COORDS___||treasure link:2339 item:226317|Contains|!{1020376} [epic]Earthen Gem Pliers]",
+		--[83890] = "Gentle Jewel Hammer|jewelcrafting skill:jewelcrafting11:1|___COORDS___||treasure item:226316|Contains|!{133055} [epic]Gentle Jewel Hammer]",
+		
+		-- Leatherworking Treasure
+		--[83898] = "Earthen Lacing Tools|leatherworking skill:leatherworking11:1|___COORDS___||treasure link:2339 item:226324|Contains|!{136247} [epic]Earthen Lacing Tools]",
+		--[83899] = "Dornogal Craftsman's Flat Knife|leatherworking skill:leatherworking11:1|___COORDS___||treasure item:226325|Contains|!{5545563} [epic]Dornogal Craftsman's Flat Knife]",
+		
 		-- Mining Treasure
 		[83907] = "Dornogal Chisel|mining skill:mining11:1|46.42 51.82||treasure link:2339 item:226333|Contains|!{1059115} [epic]Dornogal Chisel]",
 		[83906] = "Earthen Miner's Gavel|mining skill:mining11:1|58.18 62.04||treasure item:226332|Contains|!{2578727} [epic]Earthen Miner's Gavel]",
-	},
-
-
-	--[[ Hallowfall ]]--
-
-	[2215] = {
-		-- Herbalism Treasure
-		[83879] = "Arathi Herb Pruner|herbalism skill:herbalism11:1|35.98 55.01||treasure item:226305|Contains|!{135653} [epic]Arathi Herb Pruner]",
-		[83878] = "Arathi Garden Trowel|herbalism skill:herbalism11:1|47.78 63.32||treasure item:226304|Contains|!{1060568} [epic]Arathi Garden Trowel]",
 		
-		-- Mining Treasure
-		[83911] = "Devout Archaeologist's Excavator|mining skill:mining11:1|43.1 56.85||treasure item:226337|Contains|!{5874233} [epic]Devout Archaeologist's Excavator]",
-		[83910] = "Arathi Precision Drill|mining skill:mining11:1|46.07 64.39|\"Underneath the porch\"|treasure item:226336|Contains|!{135657} [epic]Arathi Precision Drill]",
+		-- Skinning Treasure
+		--[83914] = "Dornogal Carving Knife|skinning skill:skinning11:1|___COORDS___||treasure link:2339 item:226340|Contains|!{5404237} [epic]Dornogal Carving Knife]",
+		--[83915] = "Earthen Worker's Beams|skinning skill:skinning11:1|___COORDS___||treasure item:226341|Contains|!{135435} [epic]Earthen Worker's Beams]",
+		
+		-- Tailoring Treasure
+		--[83922] = "Dornogal Seam Ripper|tailoring skill:tailoring11:1|___COORDS___||treasure link:2339 item:226348|Contains|!{464119} [epic]Dornogal Seam Ripper]",
+		--[83923] = "Earthen Tape Measure|tailoring skill:tailoring11:1|___COORDS___||treasure item:226349|Contains|!{134510} [epic]Earthen Tape Measure]",
 	},
 
 
 	--[[ The Ringing Deeps ]]--
 
 	[2214] = {
+		-- Treasure
+		[82239] = "Discarded Toolbox|68+|45.51 17.45||treasure item:224644|Contains|!{4548872} [rare]Lava-Forged Cogwheel]|!{2967113} [Resonance Crystals]",
+		[82235] = "Munderut's Forgotten Stash|68+|55.39 13.85||treasure item:212505|Contains|!{5931413} [rare]Extravagant Emerald]|!{5931416} [rare]Radiant Ruby]|!{5931414} [rare]Stunning Sapphire]|!{5931415} [uncommon]Ambivalent Amber] (2)",
+		[83030] = "Waterlogged Refuse|68+|66.19 33.41||treasure|Contains|!{2967113} [Resonance Crystals]",
+		[82230] = "Cursed Pickaxe|68+|63.08 63.11||treasure item:224837|Contains|!{5873892} [rare]Cursed Pickaxe]|!{2967113} [Resonance Crystals]",
+		[82818] = "Scary Dark Chest|68+|58.93 30.28|\"You may need to light nearby [Candle Stubs] to unlock the treasure\"|treasure item:224439|Contains|!{5869499} [rare]Oop'lajax]|!{2967113} [Resonance Crystals]",
+
+		-- Alchemy Treasure
+		--[83843] = "Engraved Stirring Rod|alchemy skill:alchemy11:1|___COORDS___||treasure item:226268|Contains|!{237445} [epic]Engraved Stirring Rod]",
+		--[83842] = "Reinforced Beaker|alchemy skill:alchemy11:1|___COORDS___||treasure item:226267|Contains|!{134870} [epic]Reinforced Beaker]",
+		
+		-- Blacksmithing Treasure
+		[83850] = "Ringing Hammer Vise|blacksmithing skill:blacksmithing11:1|47.7 33.16||treasure item:226278|Contains|!{4559194} [epic]Ringing Hammer Vise]",
+		[83851] = "Earthen Chisels|blacksmithing skill:blacksmithing11:1|60.53 53.67||treasure item:226279|Contains|!{1059123} [epic]Earthen Chisels]",
+
+		-- Enchanting Treasure
+		[83861] = "Animated Enchanting Dust|enchanting skill:enchanting11:1|67.19 65.89||treasure item:226287|Contains|!{133851} [epic]Animated Enchanting Dust]",
+		[83860] = "Soot-Coated Orb|enchanting skill:enchanting11:1|44.61 22.13||treasure item:226286|Contains|!{236514} [epic]Soot-Coated Orb]",
+
+		-- Engineering Treasure
+		[83869] = "Earthen Construct Blueprints|engineering skill:engineering11:1|64.49 58.74|\"Inside a building\"|treasure item:226295|Contains|!{2915721} [epic]Earthen Construct Blueprints]",
+		[83868] = "Inert Mining Bomb|engineering skill:engineering11:1|42.62 27.25||treasure item:226294|Contains|!{133709} [epic]Inert Mining Bomb]",
+		
 		-- Herbalism Treasure
 		[83877] = "Fungarian Slicer's Knife|herbalism skill:herbalism11:1|52.91 65.82||treasure item:226303|Contains|!{5169125} [epic]Fungarian Slicer's Knife]",
 		[83876] = "Earthen Digging Fork|herbalism skill:herbalism11:1|48.24 35.04|\"On top of a table inside a house\"|treasure item:226302|Contains|!{5874233} [epic]Earthen Digging Fork]",
 		
+		-- Inscription Treasure
+		--[83885] = "Blue Earthen Pigment|inscription skill:inscription11:1|___COORDS___||treasure item:226311|Contains|!{237157} [epic]Blue Earthen Pigment]",
+		--[83884] = "Runic Scroll|inscription skill:inscription11:1|___COORDS___||treasure item:226310|Contains|!{1500889} [epic]Runic Scroll]",
+		
+		-- Jewelcrafting Treasure
+		--[83893] = "Jeweler's Delicate Drill|jewelcrafting skill:jewelcrafting11:1|___COORDS___||treasure item:226319|Contains|!{133056} [epic]Jeweler's Delicate Drill]",
+		--[83892] = "Carved Stone File|jewelcrafting skill:jewelcrafting11:1|___COORDS___||treasure item:226318|Contains|!{519379} [epic]Carved Stone File]",
+		
+		-- Leatherworking Treasure
+		--[83900] = "Underground Stropping Compound|leatherworking skill:leatherworking11:1|___COORDS___||treasure item:226326|Contains|!{2066015} [epic]Underground Stropping Compound]",
+		--[83901] = "Earthen Awl|leatherworking skill:leatherworking11:1|___COORDS___||treasure item:226327|Contains|!{4635252} [epic]Earthen Awl]",
+		
 		-- Mining Treasure
 		[83909] = "Regenerating Ore|mining skill:mining11:1|66.26 66.24||treasure item:226335|Contains|!{961633} [epic]Regenerating Ore]",
 		[83908] = "Earthen Excavator's Shovel|mining skill:mining11:1|49.42 27.53||treasure item:226334|Contains|!{134436} [epic]Earthen Excavator's Shovel]",
+		
+		-- Skinning Treasure
+		--[83916] = "Artisan's Drawing Knife|skinning skill:skinning11:1|___COORDS___||treasure item:226342|Contains|!{1064503} [epic]Artisan's Drawing Knife]",
+		--[83917] = "Fungarian's Rich Tannin|skinning skill:skinning11:1|___COORDS___||treasure item:226343|Contains|!{134382} [epic]Fungarian's Rich Tannin]",
+		
+		-- Tailoring Treasure
+		--[83925] = "Earthen Stitcher's Snips|tailoring skill:tailoring11:1|___COORDS___||treasure item:226351|Contains|!{463557} [epic]Earthen Stitcher's Snips]",
+		--[83924] = "Runed Earthen Pins|tailoring skill:tailoring11:1|___COORDS___||treasure item:226350|Contains|!{454058} [epic]Runed Earthen Pins]",
+	},
+
+
+	--[[ Hallowfall ]]--
+
+	[2215] = {
+		-- Alchemy Treasure
+		--[83844] = "Chemist's Purified Water|alchemy skill:alchemy11:1|___COORDS___||treasure item:226269|Contains|!{132852} [epic]Chemist's Purified Water]",
+		--[83845] = "Sanctified Mortar and Pestle|alchemy skill:alchemy11:1|___COORDS___||treasure item:226270|Contains|!{236229} [epic]Sanctified Mortar and Pestle]",
+		
+		-- Blacksmithing Treasure
+		[83853] = "Radiant Tongs|blacksmithing skill:blacksmithing11:1|44.06 55.59||treasure item:226281|Contains|!{1020384} [epic]Radiant Tongs]",
+		[83852] = "Holy Flame Forge|blacksmithing skill:blacksmithing11:1|47.58 61.06||treasure item:226280|Contains|!{1723995} [epic]Holy Flame Forge]",
+
+		-- Enchanting Treasure
+		[83863] = "Enchanted Arathi Scroll|enchanting skill:enchanting11:1|48.59 64.51|\"Inside the Althal Lab\"|treasure item:226289|Contains|!{4549168} [epic]Enchanted Arathi Scroll]",
+		[83862] = "Essence of Holy Fire|enchanting skill:enchanting11:1|40.05 70.55|\"Inside the tower\"|treasure item:226288|Contains|!{535593} [epic]Essence of Holy Fire]",
+
+		-- Engineering Treasure
+		[83871] = "Arathi Safety Gloves|engineering skill:engineering11:1|41.63 48.93|\"Inside the skiff\"|treasure item:226297|Contains|!{133816} [epic]Arathi Safety Gloves]",
+		[83870] = "Holy Firework Dud|engineering skill:engineering11:1|46.32 61.35||treasure item:226296|Contains|!{134286} [epic]Holy Firework Dud]",
+
+		-- Herbalism Treasure
+		[83879] = "Arathi Herb Pruner|herbalism skill:herbalism11:1|35.98 55.01||treasure item:226305|Contains|!{135653} [epic]Arathi Herb Pruner]",
+		[83878] = "Arathi Garden Trowel|herbalism skill:herbalism11:1|47.78 63.32||treasure item:226304|Contains|!{1060568} [epic]Arathi Garden Trowel]",
+		
+		-- Inscription Treasure
+		--[83887] = "Calligrapher's Chiseled Marker|inscription skill:inscription11:1|___COORDS___||treasure item:226313|Contains|!{4620676} [epic]Calligrapher's Chiseled Marker]",
+		--[83886] = "Informant's Fountain Pen|inscription skill:inscription11:1|___COORDS___||treasure item:226312|Contains|!{237171} [epic]Informant's Fountain Pen]",
+		
+		-- Jewelcrafting Treasure
+		--[83895] = "Librarian's Magnifiers|jewelcrafting skill:jewelcrafting11:1|___COORDS___||treasure item:226321|Contains|!{4419344} [epic]Librarian's Magnifiers]",
+		--[83894] = "Arathi Sizing Gauges|jewelcrafting skill:jewelcrafting11:1|___COORDS___||treasure item:226320|Contains|!{134509} [epic]Arathi Sizing Gauges]",
+		
+		-- Leatherworking Treasure
+		--[83903] = "Arathi Leather Burnisher|leatherworking skill:leatherworking11:1|___COORDS___||treasure item:226329|Contains|!{135660} [epic]Arathi Leather Burnisher]",
+		--[83902] = "Arathi Beveler Set|leatherworking skill:leatherworking11:1|___COORDS___||treasure item:226328|Contains|!{4635253} [epic]Arathi Beveler Set]",
+		
+		-- Mining Treasure
+		[83911] = "Devout Archaeologist's Excavator|mining skill:mining11:1|43.1 56.85||treasure item:226337|Contains|!{5874233} [epic]Devout Archaeologist's Excavator]",
+		[83910] = "Arathi Precision Drill|mining skill:mining11:1|46.07 64.39|\"Underneath the porch\"|treasure item:226336|Contains|!{135657} [epic]Arathi Precision Drill]",
+		
+		-- Skinning Treasure
+		--[83919] = "Arathi Craftsman's Spokeshave|skinning skill:skinning11:1|___COORDS___||treasure item:226345|Contains|!{511729} [epic]Arathi Craftsman's Spokeshave]",
+		--[83918] = "Arathi Tanning Agent|skinning skill:skinning11:1|___COORDS___||treasure item:226344|Contains|!{133587} [epic]Arathi Tanning Agent]",
+		
+		-- Tailoring Treasure
+		--[83926] = "Arathi Rotary Cutter|tailoring skill:tailoring11:1|___COORDS___||treasure item:226352|Contains|!{237507} [epic]Arathi Rotary Cutter]",
+		--[83927] = "Royal Outfitter's Protractor|tailoring skill:tailoring11:1|___COORDS___||treasure item:226353|Contains|!{133878} [epic]Royal Outfitter's Protractor]",
 	},
 
 
@@ -66,35 +208,113 @@ Data.Vignettes = {
 	
 	-- Azj-Kahet
 	[2255] = {
-		-- Herbalism Treasure
-		[83880] = "Web-Entangled Lotus|herbalism skill:herbalism11:1|50.38 72.31||treasure item:226306|Contains|!{876365} [epic]Web-Entangled Lotus]",
-		[83881] = "Tunneler's Shovel|herbalism skill:herbalism11:1|47.65 70.65||treasure item:226307|Contains|!{134435} [epic]Tunneler's Shovel]",
+		-- Alchemy Treasure
+		--[83847] = "Dark Apothecary's Vial|alchemy skill:alchemy11:1|___COORDS___||treasure item:226272|Contains|!{463861} [epic]Dark Apothecary's Vial]",
+		--[83846] = "Nerubian Mixing Salts|alchemy skill:alchemy11:1|___COORDS___||treasure item:226271|Contains|!{1387651} [epic]Nerubian Mixing Salts]",
 		
+		-- Blacksmithing Treasure
+		[83855] = "Spiderling's Wire Brush|blacksmithing skill:blacksmithing11:1|52.96 51.26|\"Inside a building\"|treasure item:226283|Contains|!{5546082} [epic]Spiderling's Wire Brush]",
+		[83854] = "Nerubian Smith's Kit|blacksmithing skill:blacksmithing11:1|47.56 73.02||treasure link:2213 item:226282|Contains|!{465841} [epic]Nerubian Smith's Kit]",
+
+		-- Enchanting Treasure
+		[83865] = "Void Shard|enchanting skill:enchanting11:1|57.35 44.03||treasure item:226291|Contains|!{1003592} [epic]Void Shard]",
+		[83864] = "Book of Dark Magic|enchanting skill:enchanting11:1|52.86 72.71||treasure link:2213 item:226290|Contains|!{133737} [epic]Book of Dark Magic]",
+
+		-- Engineering Treasure
+		[83872] = "Puppeted Mechanical Spider|engineering skill:engineering11:1|56.85 38.58|\"Inside The Trap Door\"|treasure item:226298|Contains|!{2027945} [epic]Puppeted Mechanical Spider]",
+		[83873] = "Emptied Venom Canister|engineering skill:engineering11:1|53.36 68.93||treasure link:2213 item:226299|Contains|!{967528} [epic]Emptied Venom Canister]",
+		
+		-- Herbalism Treasure
+		[83880] = "Web-Entangled Lotus|herbalism skill:herbalism11:1|50.38 72.31||treasure link:2213 item:226306|Contains|!{876365} [epic]Web-Entangled Lotus]",
+		[83881] = "Tunneler's Shovel|herbalism skill:herbalism11:1|47.65 70.65||treasure link:2213 item:226307|Contains|!{134435} [epic]Tunneler's Shovel]",
+		
+		-- Inscription Treasure
+		--[83888] = "Nerubian Texts|inscription skill:inscription11:1|___COORDS___||treasure item:226314|Contains|!{133733} [epic]Nerubian Texts]",
+		--[83889] = "Venomancer's Ink Well|inscription skill:inscription11:1|___COORDS___||treasure item:226315|Contains|!{464026} [epic]Venomancer's Ink Well]",
+		
+		-- Jewelcrafting Treasure
+		--[83897] = "Nerubian Bench Blocks|jewelcrafting skill:jewelcrafting11:1|___COORDS___||treasure item:226323|Contains|!{1060564} [epic]Nerubian Bench Blocks]",
+		--[83896] = "Ritual Caster's Crystal|jewelcrafting skill:jewelcrafting11:1|___COORDS___||treasure item:226322|Contains|!{132885} [epic]Ritual Caster's Crystal]",
+		
+		-- Leatherworking Treasure
+		--[83905] = "Curved Nerubian Skinning Knife|leatherworking skill:leatherworking11:1|___COORDS___||treasure item:226331|Contains|!{464119} [epic]Curved Nerubian Skinning Knife]",
+		--[83904] = "Nerubian Tanning Mallet|leatherworking skill:leatherworking11:1|___COORDS___||treasure item:226330|Contains|!{1059113} [epic]Nerubian Tanning Mallet]",
+
 		-- Mining Treasure
-		[83912] = "Heavy Spider Crusher|mining skill:mining11:1|47.66 72.6||treasure item:226338|Contains|!{133046} [epic]Heavy Spider Crusher]",
+		[83912] = "Heavy Spider Crusher|mining skill:mining11:1|47.66 72.6||treasure link:2213 item:226338|Contains|!{133046} [epic]Heavy Spider Crusher]",
 		[83913] = "Nerubian Mining Cart|mining skill:mining11:1|48.07 79.21||treasure down link:2216 item:226339|Contains|!{4202229} [epic]Nerubian Mining Supplies]",
+		
+		-- Skinning Treasure
+		--[83921] = "Carapace Shiner|skinning skill:skinning11:1|___COORDS___||treasure item:226347|Contains|!{135034} [epic]Carapace Shiner]",
+		--[83920] = "Nerubian's Slicking Iron|skinning skill:skinning11:1|___COORDS___||treasure item:226346|Contains|!{135655} [epic]Nerubian's Slicking Iron]",
+		
+		-- Tailoring Treasure
+		--[83928] = "Nerubian Quilt|tailoring skill:tailoring11:1|___COORDS___||treasure item:226354|Contains|!{1379171} [epic]Nerubian Quilt]",
+		--[83929] = "Nerubian's Pincushion|tailoring skill:tailoring11:1|___COORDS___||treasure item:226355|Contains|!{1044082} [epic]Nerubian's Pincushion]",
 	},
 
 	-- City of Threads
 	[2213] = {
+		-- Alchemy Treasure
+
+		-- Blacksmithing Treasure
+		[83854] = "Nerubian Smith's Kit|blacksmithing skill:blacksmithing11:1|46.52 22.91||treasure item:226282|Contains|!{465841} [epic]Nerubian Smith's Kit]",
+
+		-- Enchanting Treasure
+		[83864] = "Book of Dark Magic|enchanting skill:enchanting11:1|61.72 22||treasure item:226290|Contains|!{133737} [epic]Book of Dark Magic]",
+
+		-- Engineering Treasure
+		[83873] = "Emptied Venom Canister|engineering skill:engineering11:1|63.14 11.16||treasure item:226299|Contains|!{967528} [epic]Emptied Venom Canister]",
+
 		-- Herbalism Treasure
 		[83880] = "Web-Entangled Lotus|herbalism skill:herbalism11:1|54.6 20.88||treasure item:226306|Contains|!{876365} [epic]Web-Entangled Lotus]",
 		[83881] = "Tunneler's Shovel|herbalism skill:herbalism11:1|46.78 16.13||treasure item:226307|Contains|!{134435} [epic]Tunneler's Shovel]",
 		
+		-- Inscription Treasure
+		
+		-- Jewelcrafting Treasure
+		
+		-- Leatherworking Treasure
+
 		-- Mining Treasure
 		[83912] = "Heavy Spider Crusher|mining skill:mining11:1|46.82 21.71||treasure item:226338|Contains|!{133046} [epic]Heavy Spider Crusher]",
 		[83913] = "Nerubian Mining Cart|mining skill:mining11:1|47.96 40.63||treasure down link:2216 item:226339|Contains|!{4202229} [epic]Nerubian Mining Supplies]",
+
+		-- Skinning Treasure
+
+		-- Tailoring Treasure
 	},
 
 	-- The Burrows, City of Threads
 	[2216] = {
+		-- Alchemy Treasure
+
+		-- Blacksmithing Treasure
+		[83854] = "Nerubian Smith's Kit|blacksmithing skill:blacksmithing11:1|46.52 22.91||treasure up link:2213 item:226282|Contains|!{465841} [epic]Nerubian Smith's Kit]",
+
+		-- Enchanting Treasure
+		[83864] = "Book of Dark Magic|enchanting skill:enchanting11:1|61.72 22||treasure up link:2213 item:226290|Contains|!{133737} [epic]Book of Dark Magic]",
+
+		-- Engineering Treasure
+		[83873] = "Emptied Venom Canister|engineering skill:engineering11:1|63.14 11.16||treasure up link:2213 item:226299|Contains|!{967528} [epic]Emptied Venom Canister]",
+
 		-- Herbalism Treasure
 		[83880] = "Web-Entangled Lotus|herbalism skill:herbalism11:1|54.6 20.88||treasure up link:2213 item:226306|Contains|!{876365} [epic]Web-Entangled Lotus]",
 		[83881] = "Tunneler's Shovel|herbalism skill:herbalism11:1|46.78 16.13||treasure up link:2213 item:226307|Contains|!{134435} [epic]Tunneler's Shovel]",
+
+		-- Inscription Treasure
+		
+		-- Jewelcrafting Treasure
+		
+		-- Leatherworking Treasure
 		
 		-- Mining Treasure
 		[83912] = "Heavy Spider Crusher|mining skill:mining11:1|46.82 21.71||treasure up link:2213 item:226338|Contains|!{133046} [epic]Heavy Spider Crusher]",
 		[83913] = "Nerubian Mining Cart|mining skill:mining11:1|47.96 40.63||treasure item:226339|Contains|!{4202229} [epic]Nerubian Mining Supplies]",
+
+		-- Skinning Treasure
+
+		-- Tailoring Treasure
 	},
 
 	
