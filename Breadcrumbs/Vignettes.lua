@@ -36,7 +36,7 @@ Data.Vignettes = {
 		--[83882] = "Dornogal Scribe's Quill|inscription skill:inscription11:1|___COORDS___||treasure item:226308|Contains|!{2103812} [epic]Dornogal Scribe's Quill]",
 		
 		-- Jewelcrafting Treasure
-		--[83891] = "Earthen Gem Pliers|jewelcrafting skill:jewelcrafting11:1|___COORDS___||treasure item:226317|Contains|!{1020376} [epic]Earthen Gem Pliers]",
+		[83891] = "Earthen Gem Pliers|jewelcrafting skill:jewelcrafting11:1|34.84 52.16||treasure item:226317|Contains|!{1020376} [epic]Earthen Gem Pliers]",
 		
 		-- Leatherworking Treasure
 		--[83898] = "Earthen Lacing Tools|leatherworking skill:leatherworking11:1|___COORDS___||treasure item:226324|Contains|!{136247} [epic]Earthen Lacing Tools]",
@@ -78,7 +78,7 @@ Data.Vignettes = {
 		--[83883] = "Historian's Dip Pen|inscription skill:inscription11:1|___COORDS___||treasure item:226309|Contains|!{4419478} [epic]Historian's Dip Pen]",
 		
 		-- Jewelcrafting Treasure
-		--[83891] = "Earthen Gem Pliers|jewelcrafting skill:jewelcrafting11:1|___COORDS___||treasure link:2339 item:226317|Contains|!{1020376} [epic]Earthen Gem Pliers]",
+		[83891] = "Earthen Gem Pliers|jewelcrafting skill:jewelcrafting11:1|45.96 45.14||treasure link:2339 item:226317|Contains|!{1020376} [epic]Earthen Gem Pliers]",
 		--[83890] = "Gentle Jewel Hammer|jewelcrafting skill:jewelcrafting11:1|___COORDS___||treasure item:226316|Contains|!{133055} [epic]Gentle Jewel Hammer]",
 		
 		-- Leatherworking Treasure
