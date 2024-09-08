@@ -252,17 +252,6 @@ Data.HiddenBonusObjectiveQuests = {
 
 Data.Quests = {
 
-	--[[ Dragon Isles ]]--
-
-	[1978] = {
-		-- Dragonscale Expedition - In the Halls of Titans
-		[69097] = "A Vault Unsealed|70+ reputation:2507:24|1 DocNannersCampaign|Doc Nanners|discovery campaign", -- Requires Renown 24 with Dragonscale Expedition
-	
-		-- Iskaara Tuskarr - The Chieftain's Duty
-		[68863] = "A Lost Tribe|70+ reputation:2511:11|3 RowieCampaign|Rowie|discovery campaign", -- Requires Renown 11 with Iskaara Tuskarr
-	},
-
-
 	--[[ Emerald Dream ]]--
 
 	-- Emerald Dream
@@ -480,12 +469,6 @@ Data.Quests = {
 		-- Tyrhold Reservoir
 		[72190] = "Reservoir Reservations|60+, 68+,67030 -65913|25.49 40.95|Talikka", -- Breadcrumb for 65913
 		
-		-- Dragonscale Expedition - In the Halls of Titans
-		[69097] = "A Vault Unsealed|70+ reputation:2507:24|1 DocNannersCampaign|Doc Nanners|discovery campaign", -- Requires Renown 24 with Dragonscale Expedition
-	
-		-- Iskaara Tuskarr - The Chieftain's Duty
-		[68863] = "A Lost Tribe|70+ reputation:2511:11|3 RowieCampaign|Rowie|discovery campaign", -- Requires Renown 11 with Iskaara Tuskarr
-
 		-- Emerald Dream - Misfit Dragons
 		[77195] = "A Dragon's Eye View|70+ 76461|6.84 65.3|Wrathion",
 		[76464] = "The Thorignir|70+ 77198|46.72 47.76|Vyranoth",
@@ -599,7 +582,6 @@ Data.Quests = {
 		[69919] = "A Craft in Need|60+ 62+,67030 alchemy,blacksmithing,enchanting,engineering,inscription,jewelcrafting,leatherworking,tailoring,cooking,fishing|37.82 61.14|Azley|link:2112",
 		
 		-- Dragonscale Expedition - In the Halls of Titans
-		[69097] = "A Vault Unsealed|70+ reputation:2507:24|1 DocNannersCampaign|Doc Nanners|discovery campaign", -- Requires Renown 24 with Dragonscale Expedition
 		[66636] = "The Other Side|70+ 67722|54.27 55.41|Toddy Whiskers|campaign",
 		[66173] = "Hall of Samples|70+ 66636|55.13 56.34|Toddy Whiskers|campaign",
 		[66174] = "Hall of the Aspects|70+ 66636|55.13 56.34|Toddy Whiskers|campaign",
@@ -607,23 +589,11 @@ Data.Quests = {
 		[66546] = "Retrieve the Discs|70+ 71152|55.13 56.34|Toddy Whiskers|campaign",
 		[66547] = "It Belongs in a Museum... Eventually|70+ 66546|54.45 55.55|Toddy Whiskers|campaign",
 	
-		-- Iskaara Tuskarr - The Chieftain's Duty
-		[68863] = "A Lost Tribe|70+ reputation:2511:11|3 RowieCampaign|Rowie|discovery campaign", -- Requires Renown 11 with Iskaara Tuskarr
-
 		-- Emerald Dream - Misfit Dragons
 		[77195] = "A Dragon's Eye View|70+ 76461|33.7 62.09|Wrathion",
 		[76462] = "Cavern Cleaning|70+ 77195|61.21 73.22|Vyranoth",
 		[77197] = "A Whelping Hand|70+ 76462|61.22 73.18|Wrathion",
 		[76464] = "The Thorignir|70+ 77198|39.46 59.55|Vyranoth|link:2112",
-	},
-
-	-- Primalist Tomorrow
-	[2085] = {
-		-- Dragonscale Expedition - In the Halls of Titans
-		[69097] = "A Vault Unsealed|70+ reputation:2507:24|1 DocNannersCampaign|Doc Nanners|discovery campaign", -- Requires Renown 24 with Dragonscale Expedition
-	
-		-- Iskaara Tuskarr - The Chieftain's Duty
-		[68863] = "A Lost Tribe|70+ reputation:2511:11|3 RowieCampaign|Rowie|discovery campaign", -- Requires Renown 11 with Iskaara Tuskarr
 	},
 
 
@@ -865,9 +835,6 @@ Data.Quests = {
 		[69981] = "Customer Satisfaction|60+ 69915 alchemy,blacksmithing,enchanting,engineering,inscription,jewelcrafting,leatherworking,tailoring,cooking,fishing|37.94 24.1|Azley",
 		[69919] = "A Craft in Need|60+ 62+,67030 alchemy,blacksmithing,enchanting,engineering,inscription,jewelcrafting,leatherworking,tailoring,cooking,fishing|37.94 24.1|Azley",
 		
-		-- Dragonscale Expedition - In the Halls of Titans
-		[69097] = "A Vault Unsealed|70+ reputation:2507:24|1 DocNannersCampaign|Doc Nanners|discovery campaign", -- Requires Renown 24 with Dragonscale Expedition
-
 		-- Iskaara Tuskarr Renown
 		[70871] = "Iskaaran Fishing Net|60+ accachievement:16924|12.82 49.18|Tavio", -- Requires Renown 5 with Iskaara Tuskarr on account
 		[70940] = "Tuskarr Champion's Tales|60+ reputation:2511:5|12.41 49.34|Elder Poa", -- Renown 5
@@ -885,7 +852,6 @@ Data.Quests = {
 		[72327] = "Iskaaran Crafter's Knowledge|60+ reputation:2511:24 skinning skill:skinning10:1|13.91 50.08|Rokkutuk|skinning", -- Renown 24, Dragon Isles Skinning
 	
 		-- Iskaara Tuskarr - The Chieftain's Duty
-		[68863] = "A Lost Tribe|70+ reputation:2511:11|3 RowieCampaign|Rowie|discovery campaign", -- Requires Renown 11 with Iskaara Tuskarr
 		[68640] = "Sudden Isolation|70+ reputation:2511:11 68863|13.14 49.26|Murik|campaign", -- Requires Renown 11 with Iskaara Tuskarr
 
 		-- The Spark of Ingenuity
@@ -1091,12 +1057,6 @@ Data.Quests = {
 		[70376] = "Second Challenge of Tyr: Might|60+ 70339|66.14 55.2|Ornamented Statue|campaign",
 		[70341] = "Well Earned Victory|60+ 70376|66.28 55.33|Maiden of Inspiration|campaign",
 		
-		-- Dragonscale Expedition - In the Halls of Titans
-		[69097] = "A Vault Unsealed|70+ reputation:2507:24|1 DocNannersCampaign|Doc Nanners|discovery campaign", -- Requires Renown 24 with Dragonscale Expedition
-	
-		-- Iskaara Tuskarr - The Chieftain's Duty
-		[68863] = "A Lost Tribe|70+ reputation:2511:11|3 RowieCampaign|Rowie|discovery campaign", -- Requires Renown 11 with Iskaara Tuskarr
-
 		-- Emerald Dream - Enter the Dream
 		--[76317] = "Call of the Dream|70+|18.66 51.77|[Auto Accept]|campaign", -- Auto Accept on login, unknown actual start point
 		[76318] = "Emerald Welcome|70+ 76317|18.66 51.77|Merithra|campaign",
@@ -1333,14 +1293,10 @@ Data.Quests = {
 		[70510] = "Victorious|60+ 70621|64.1 41.39|Maiden of Inspiration|campaign",
 
 		-- Dragonscale Expedition - In the Halls of Titans
-		[69097] = "A Vault Unsealed|70+ reputation:2507:24|1 DocNannersCampaign|Doc Nanners|discovery campaign", -- Requires Renown 24 with Dragonscale Expedition
 		[67722] = "Break on Through|70+ reputation:2507:24 69097|47.1 82.58|Cataloger Jakes|campaign", -- Requires Renown 24 with Dragonscale Expedition
 		-- hidden tracking quests: 72752, 72822
 		[69888] = "Unusual Suspects|70+ 66547 -72822|47.21 82.73|Toddy Whiskers", -- Available the following weekly reset after completing 66547 (72822 is hidden weekly tracking quest)
 	
-		-- Iskaara Tuskarr - The Chieftain's Duty
-		[68863] = "A Lost Tribe|70+ reputation:2511:11|3 RowieCampaign|Rowie|discovery campaign", -- Requires Renown 11 with Iskaara Tuskarr
-
 		-- Emerald Dream - Misfit Dragons
 		[76463] = "Delectable Delicacies|70+ 77197|61.61 68.7|Mother Elion",
 		[77198] = "Home in Time for Tea|70+ 76463|61.53 68.76|Mordenaku",
