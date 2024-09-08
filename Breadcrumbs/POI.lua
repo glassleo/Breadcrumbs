@@ -231,7 +231,7 @@ Data.POI = {
 
 	[2023] = {
 		-- Item Turn-In
-		"QuestRepeatableTurnin:small|Khadin|60+ 69979 item:191784|51.77 33.02|tooltip item:190456|{QuestRepeatableTurnin} Specialized Secrets (<itemcount:191784>)||Required Item|!{4643982} [epic]Dragon Shard of Knowledge]||Rewards|!{4643977} [rare]Artisan's Mettle] (50)|!{4624728} [Dragon Isles Knowledge]",
+		"QuestRepeatableTurnin:small|Khadin|60+ 69979 +67298 item:191784|51.77 33.02|tooltip item:190456|{QuestRepeatableTurnin} Specialized Secrets (<itemcount:191784>)||Required Item|!{4643982} [epic]Dragon Shard of Knowledge]||Rewards|!{4643977} [rare]Artisan's Mettle] (50)|!{4624728} [Dragon Isles Knowledge]",
 	},
 
 
