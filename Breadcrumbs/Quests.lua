@@ -83,7 +83,7 @@ Data.HiddenBonusObjectiveQuests = {
 		active:n		World Quest/Task Quest with ID n must be active
 
 		flying			Must have learned flying
-		dragonriding	Must have learned dragonriding
+		skyriding		Must have learned skyriding
 
 		garrison		Must have unlocked WoD Garrison (any tier)
 		garrison:n		Must have a WoD Garrison at tier n
@@ -569,12 +569,12 @@ Data.Quests = {
 		[67178] = "White Eyes, Blue Dragon|60+ 68+,67030 67167|58.12 40.34|Professor Dromokdormi",
 
 		-- Dragon Racing
-		[72485] = "The Azure Span Tour|60+ dragonriding 72483|29.34 68.39|Celormu",
-		[72487] = "The Thaldraszus Tour|60+ dragonriding 72485|44.47 90.73|Celormu",
-		[72482] = "The Waking Shores Advanced Tour|60+ dragonriding accachievement:15915 accachievement:15918 accachievement:15921 accachievement:15924|46.04 63.03|Celormu", -- Requires all normal races completed on account
-		[72972] = "The Waking Shores Reverse Tour|60+ dragonriding accachievement:15915 accachievement:15918 accachievement:15921 accachievement:15924|46.04 63.03|Celormu", -- Requires all normal races completed on account
-		[72488] = "The Thaldraszus Advanced Tour|60+ dragonriding 72486|44.47 90.73|Celormu",
-		[72985] = "The Thaldraszus Reverse Tour|60+ dragonriding 72984|44.47 90.73|Celormu",
+		[72485] = "The Azure Span Tour|60+ skyriding 72483|29.34 68.39|Celormu",
+		[72487] = "The Thaldraszus Tour|60+ skyriding 72485|44.47 90.73|Celormu",
+		[72482] = "The Waking Shores Advanced Tour|60+ skyriding accachievement:15915 accachievement:15918 accachievement:15921 accachievement:15924|46.04 63.03|Celormu", -- Requires all normal races completed on account
+		[72972] = "The Waking Shores Reverse Tour|60+ skyriding accachievement:15915 accachievement:15918 accachievement:15921 accachievement:15924|46.04 63.03|Celormu", -- Requires all normal races completed on account
+		[72488] = "The Thaldraszus Advanced Tour|60+ skyriding 72486|44.47 90.73|Celormu",
+		[72985] = "The Thaldraszus Reverse Tour|60+ skyriding 72984|44.47 90.73|Celormu",
 
 		-- Artisan's Consortium
 		[70221] = "Show Your Mettle|60+ 62+,67030 alchemy,blacksmithing,enchanting,engineering,inscription,jewelcrafting,leatherworking,tailoring,herbalism,mining,skinning reputation:2544:2|38.41 62.79|Miguel Bright|weekly link:2112", -- Requires Preferred (rank 2) or higher with Artisan's Consortium
@@ -822,9 +822,9 @@ Data.Quests = {
 		[70550] = "Welcome to the Assembly|68+ ~72784|49.05 23.15|Venthi", -- Invalidates breadcrumb 72784
 
 		-- Dragon Racing
-		[72487] = "The Thaldraszus Tour|60+ dragonriding 72485|63.17 13.65|Celormu",
-		[72488] = "The Thaldraszus Advanced Tour|60+ dragonriding 72486|63.17 13.65|Celormu",
-		[72985] = "The Thaldraszus Reverse Tour|60+ dragonriding 72984|63.17 13.65|Celormu",
+		[72487] = "The Thaldraszus Tour|60+ skyriding 72485|63.17 13.65|Celormu",
+		[72488] = "The Thaldraszus Advanced Tour|60+ skyriding 72486|63.17 13.65|Celormu",
+		[72985] = "The Thaldraszus Reverse Tour|60+ skyriding 72984|63.17 13.65|Celormu",
 
 		-- The Ruby Feast
 		[67047] = "Warm Away These Shivers|70+ 70930|51.73 61.98|Lilial Dawnburst",
@@ -1032,9 +1032,9 @@ Data.Quests = {
 		[66464] = "The Field of Ferocity: Master of the Hunt!|60+ 62+,67030 66463|53.16 37.32|Gurgthock",
 
 		-- Dragon Racing
-		[72485] = "The Azure Span Tour|60+ dragonriding 72483|88.09 36.28|Celormu",
-		[72486] = "The Azure Span Advanced Tour|60+ dragonriding 72484|88.09 36.28|Celormu",
-		[72486] = "The Azure Span Reverse Tour|60+ dragonriding 72982|88.09 36.28|Celormu",
+		[72485] = "The Azure Span Tour|60+ skyriding 72483|88.09 36.28|Celormu",
+		[72486] = "The Azure Span Advanced Tour|60+ skyriding 72484|88.09 36.28|Celormu",
+		[72486] = "The Azure Span Reverse Tour|60+ skyriding 72982|88.09 36.28|Celormu",
 
 		-- Grand Hunts
 		[70501] = "License to Hunt|70+ accachievement:17044|64.01 41.02|Hunt Instructor Basku", -- Requires Renown 5 with Maruuk Centaur unlocked on account
@@ -1261,12 +1261,12 @@ Data.Quests = {
 		[70414] = "Shaky Grounds|60+|37.1 56.05|Earthmender Govrum",
 
 		-- Dragon Racing
-		[72481] = "The Waking Shores Tour|60+ dragonriding achievement:16978 67030|73.25 52.07|Celormu", -- Requires Valdrakken Accord renown 7 obtained on account
-		[72483] = "The Ohn'ahran Plains Tour|60+ dragonriding 72481|73.25 52.07|Celormu",
-		[72482] = "The Waking Shores Advanced Tour|60+ dragonriding accachievement:15915 accachievement:15918 accachievement:15921 accachievement:15924|73.25 52.07|Celormu", -- Requires all normal races completed on account
-		[72972] = "The Waking Shores Reverse Tour|60+ dragonriding accachievement:15915 accachievement:15918 accachievement:15921 accachievement:15924|73.25 52.07|Celormu", -- Requires all normal races completed on account
-		[72484] = "The Ohn'ahran Plains Advanced Tour|60+ dragonriding 72482|73.25 52.07|Celormu",
-		[72982] = "The Ohn'ahran Plains Reverse Tour|60+ dragonriding 72972|73.25 52.07|Celormu",
+		[72481] = "The Waking Shores Tour|60+ skyriding achievement:16978 67030|73.25 52.07|Celormu", -- Requires Valdrakken Accord renown 7 obtained on account
+		[72483] = "The Ohn'ahran Plains Tour|60+ skyriding 72481|73.25 52.07|Celormu",
+		[72482] = "The Waking Shores Advanced Tour|60+ skyriding accachievement:15915 accachievement:15918 accachievement:15921 accachievement:15924|73.25 52.07|Celormu", -- Requires all normal races completed on account
+		[72972] = "The Waking Shores Reverse Tour|60+ skyriding accachievement:15915 accachievement:15918 accachievement:15921 accachievement:15924|73.25 52.07|Celormu", -- Requires all normal races completed on account
+		[72484] = "The Ohn'ahran Plains Advanced Tour|60+ skyriding 72482|73.25 52.07|Celormu",
+		[72982] = "The Ohn'ahran Plains Reverse Tour|60+ skyriding 72972|73.25 52.07|Celormu",
 
 		-- Artisan's Consortium
 		[67564] = "Artisan's Courier|60+ alchemy,blacksmithing,enchanting,engineering,inscription,jewelcrafting,leatherworking,tailoring,herbalism,mining,skinning|57.93 68.25|Haephesta",
