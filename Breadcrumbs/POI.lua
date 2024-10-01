@@ -97,11 +97,17 @@ Data.POI = {
 		"POI/Fishing|[Fishing]|68+|50.55 26.81|low",
 
 		-- Rostrum of Transformation
-		"dragon-rostrum|[Rostrum of Transformation]|dragonriding|47.97 67.88",
+		"dragon-rostrum|[Rostrum of Transformation]|skyriding|47.97 67.88",
+
+		-- Barber
+		"Barbershop-32x32|[Barber]|1+|59.05 51.39",
 
 		-- Pets
 		"WildBattlePet|[Pet Charm Trader]|1+|58.51 64.86",
 		"Stablemaster|[Stable Master]|1+|55.37 67.1",
+
+		-- Vendor
+		"banker:objective|Osidion|item:223951|57.26 60.84|tooltip item:223951|\"Exchange your {4555612} [Earth-Encrusted Gem] for an Ensemble of choice here\"",
 	},
 
 
@@ -198,7 +204,7 @@ Data.POI = {
 		"POI/Fishing|[Fishing]|58+|43.7 74.5",
 
 		-- Rostrum of Transformation
-		"dragon-rostrum|[Rostrum of Transformation]|dragonriding|25.05 50.64",
+		"dragon-rostrum|[Rostrum of Transformation]|skyriding|25.05 50.64",
 
 		-- Pets
 		"WildBattlePet|[Pet Supplies]|1+|48.3 82.51",
@@ -239,7 +245,7 @@ Data.POI = {
 
 	[2022] = {
 		-- Rostrum of Transformation
-		"dragon-rostrum:small|[Rostrum of Transformation]|dragonriding|74.03 58.16",
+		"dragon-rostrum:small|[Rostrum of Transformation]|skyriding|74.03 58.16",
 	},
 
 
@@ -1284,8 +1290,7 @@ Data.POI = {
 		"-:large|The Eastern Earthshrine|alliance|74.85 17.65||Cataclysm Portals",
 		"TaxiNode_Continent_Alliance|Portal to Darnassus|10+ art:62:67 alliance|24.5 55.6", -- Requires level 10 to use; phased to Cataclysm
 		"TaxiNode_Continent_Alliance|Portal to Darkshore|10+ art:62:1176 alliance|24.5 55.6", -- Phased to BfA
-		"TaxiNode_Continent_Alliance|Rift to Telogrus|alliance voidelf|54.47 15.36", -- Void Elf only
-		"TaxiNode_Continent_Alliance|Mechagon City Teleporter|alliance mechagnome|52.75 16.08", -- Mechagnome only
+		"TaxiNode_Continent_Alliance|Stormwind Embassy Portals|alliance|49.17 9.64|high",
 
 		-- Professions
 		"POI/Alchemy|[Alchemy]|5+ alliance alchemy|55.66 86.08||Alchemy Needs",
