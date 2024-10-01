@@ -326,14 +326,14 @@ function Breadcrumbs:Debug_UpdateQuestCache()
 			for id, _ in pairs(quests) do
 				if not Debug_CharacterQuestCache[id] then
 					local name, atlas, color = Breadcrumbs:GetQuestName(id)
-					print("|cffffff00Quest completed:|r", "|cff71d5ff"..id.."|r" .. (name and (" " .. CreateAtlasMarkup(atlas or "QuestTrivial") .. " |cff" .. color .. name .. "|r") or ""))
+					print("|cffffff00Quest completed:|r", "|cff71d5ff"..id.."|r" .. (name and (" " .. CreateAtlasMarkup(atlas or "QuestTrivial") .. " |cff" .. color .. Breadcrumbs:FormatTooltip(name) .. "|r") or ""))
 				end
 			end
 
 			for id, _ in pairs(Debug_CharacterQuestCache) do
 				if not quests[id] then
 					local name, atlas, color = Breadcrumbs:GetQuestName(id)
-					print("|cffff2020Quest flagged incomplete:|r", "|cff71d5ff"..id.."|r" .. (name and (" " .. CreateAtlasMarkup(atlas or "QuestTrivial") .. " |cff" .. color .. name .. "|r") or ""))
+					print("|cffff2020Quest flagged incomplete:|r", "|cff71d5ff"..id.."|r" .. (name and (" " .. CreateAtlasMarkup(atlas or "QuestTrivial") .. " |cff" .. color .. Breadcrumbs:FormatTooltip(name) .. "|r") or ""))
 				end
 			end
 		end
@@ -1811,7 +1811,7 @@ function Breadcrumbs:Validate(str)
 		if prof2 then prof2 = SkillLineToKeyword[prof2] or nil end
 	end
 	local flying = IsSpellKnown(34090) or IsSpellKnown(34091) or IsSpellKnown(90265) and true or false
-	local dragonriding = IsSpellKnown(376777) and true or false
+	local skyriding = IsSpellKnown(376777) and true or false
 
 	local pass = true
 	for k = 1, #data do
@@ -1933,7 +1933,7 @@ function Breadcrumbs:Validate(str)
 					if v == "garrison:2" and garrison == 2 then pass = true end
 					if v == "garrison:3" and garrison == 3 then pass = true end
 					if v == "flying" and flying then pass = true end
-					if v == "dragonriding" and dragonriding then pass = true end
+					if v == "skyriding" and skyriding then pass = true end
 					if archaeology and v == "archaeology" then pass = true end
 					if fishing and v == "fishing" then pass = true end
 					if cooking and v == "cooking" then pass = true end
@@ -2029,7 +2029,7 @@ function Breadcrumbs:Validate(str)
 						if w == "garrison:2" and garrison == 2 then pass = false end
 						if w == "garrison:3" and garrison == 3 then pass = false end
 						if flying and w == "flying" then pass = false end
-						if dragonriding and w == "dragonriding" then pass = false end
+						if skyriding and w == "skyriding" then pass = false end
 						if archaeology and w == "archaeology" then pass = false end
 						if fishing and w == "fishing" then pass = false end
 						if cooking and w == "cooking" then pass = false end
