@@ -48,13 +48,14 @@ Data.Vignettes = {
 		[83914] = "Dornogal Carving Knife|skinning skill:skinning11:1|28.77 51.65|\"Inside the ALliance Embassy bulding\"|treasure item:226340|Contains|!{5404237} [epic]Dornogal Carving Knife]",
 		
 		-- Tailoring Treasure
-		[83922] = "Dornogal Seam Ripper|tailoring skill:tailoring11:1|61.56 1851|\"Inside a building\"|treasure item:226348|Contains|!{464119} [epic]Dornogal Seam Ripper]",
+		[83922] = "Dornogal Seam Ripper|tailoring skill:tailoring11:1|61.56 18.51|\"Inside a building\"|treasure item:226348|Contains|!{464119} [epic]Dornogal Seam Ripper]",
 	},
 
 	-- Isle of Dorn
 	[2248] = {
 		-- Treasure
-		[82325] = "Kobold Pickaxe|68+|62.57 43.27||treasure item:223484|Contains|!{5559853} [rare]Kobold Mastermind's \"Pivel\"]",
+		[82325] = "Kobold Pickaxe|68+|62.57 43.27||treasure atlas:VignetteLootElite item:223484|Contains|!{5559853} [rare]Kobold Mastermind's \"Pivel\"]",
+		[82715] = "Web-Wrapped Axe|68+|59.12 23.47||treasure atlas:VignetteLootElite item:224290|Contains|!{5330304} [rare]Storm Defender's Axe]",
 		--[82714] = "Infused Cinderbrew|68+|56.22 60.94||treasure item:224263|Contains|!{645193} [rare]Infused Fire-Honey Milk]", -- Repeatable?
 
 		-- Alchemy Treasure
