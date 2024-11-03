@@ -222,17 +222,17 @@ Data.Vignettes = {
 		-- Alchemy Treasure
 		[83847] = "Dark Apothecary's Vial|alchemy skill:alchemy11:1|42.82 57.36|\"Inside the tower\"|treasure item:226272|Contains|!{463861} [epic]Dark Apothecary's Vial]",
 		[83846] = "Nerubian Mixing Salts|alchemy skill:alchemy11:1|47.13 69.65||treasure link:2213 item:226271|Contains|!{1387651} [epic]Nerubian Mixing Salts]",
-		[82633] = "[neutral]Siesbarg]|alchemy skill:alchemy11:1 -item:224024|47.19 69.57||treasure atlas:banker link:2213 item:224024|Sells|!{4624658} [rare]Theories of Bodily Transmutation, Chapter 8]",
+		[82633] = "[neutral]Siesbarg]|alchemy skill:alchemy11:1 -item:224024|47.19 69.57||treasure atlas:lootroll-icon-greed link:2213 item:224024|Sells|!{4624658} [rare]Theories of Bodily Transmutation, Chapter 8]",
 		
 		-- Blacksmithing Treasure
 		[83855] = "Spiderling's Wire Brush|blacksmithing skill:blacksmithing11:1|52.96 51.26|\"Inside a building\"|treasure item:226283|Contains|!{5546082} [epic]Spiderling's Wire Brush]",
 		[83854] = "Nerubian Smith's Kit|blacksmithing skill:blacksmithing11:1|47.56 73.02||treasure link:2213 item:226282|Contains|!{465841} [epic]Nerubian Smith's Kit]",
-		[82631] = "[neutral]Rakka]|blacksmithing skill:blacksmithing11:1 -item:224038|47.6 72.69||treasure atlas:banker link:2213 item:224038|Sells|!{4624661} [rare]Smithing After Saronite]",
+		[82631] = "[neutral]Rakka]|blacksmithing skill:blacksmithing11:1 -item:224038|47.6 72.69||treasure atlas:lootroll-icon-greed link:2213 item:224038|Sells|!{4624661} [rare]Smithing After Saronite]",
 
 		-- Enchanting Treasure
 		[83865] = "Void Shard|enchanting skill:enchanting11:1|57.35 44.03||treasure item:226291|Contains|!{1003592} [epic]Void Shard]",
 		[83864] = "Book of Dark Magic|enchanting skill:enchanting11:1|52.86 72.71||treasure link:2213 item:226290|Contains|!{133737} [epic]Book of Dark Magic]",
-		[82635] = "[neutral]Iliani]|enchanting skill:enchanting11:1 -item:224050|47.19 76.74||treasure atlas:banker link:2213 item:224050|Sells|!{4624666} [rare]Web Sparkles: Pretty and Powerful]",
+		[82635] = "[neutral]Iliani]|enchanting skill:enchanting11:1 -item:224050|47.19 76.74||treasure atlas:lootroll-icon-greed link:2213 item:224050|Sells|!{4624666} [rare]Web Sparkles: Pretty and Powerful]",
 
 		-- Engineering Treasure
 		[83872] = "Puppeted Mechanical Spider|engineering skill:engineering11:1|56.85 38.58|\"On a table inside The Trap Door\"|treasure item:226298|Contains|!{2027945} [epic]Puppeted Mechanical Spider]",
@@ -245,53 +245,53 @@ Data.Vignettes = {
 		-- Inscription Treasure
 		[83888] = "Nerubian Texts|inscription skill:inscription11:1|55.83 43.9||treasure item:226314|Contains|!{133733} [epic]Nerubian Texts]",
 		[83889] = "Venomancer's Ink Well|inscription skill:inscription11:1|48.85 75.70||treasure link:2213 item:226315|Contains|!{464026} [epic]Venomancer's Ink Well]",
-		[82636] = "[neutral]Nuel Prill]|inscription skill:inscription11:1|46.06 74.53 -item:224053||treasure atlas:banker link:2213 item:224053|Sells|!{4624734} [rare]Eight Views on Defense against Hostile Runes]",
+		[82636] = "[neutral]Nuel Prill]|inscription skill:inscription11:1|46.06 74.53 -item:224053||treasure atlas:lootroll-icon-greed link:2213 item:224053|Sells|!{4624734} [rare]Eight Views on Defense against Hostile Runes]",
 		
 		-- Jewelcrafting Treasure
 		[83897] = "Nerubian Bench Blocks|jewelcrafting skill:jewelcrafting11:1|56.17 58.65|\"Inside the tower\"|treasure item:226323|Contains|!{1060564} [epic]Nerubian Bench Blocks]",
 		[83896] = "Ritual Caster's Crystal|jewelcrafting skill:jewelcrafting11:1|48.01 71.83||treasure link:2213 item:226322|Contains|!{132885} [epic]Ritual Caster's Crystal]",
-		[82637] = "[neutral]Alvus Valavulu]|jewelcrafting skill:jewelcrafting11:1 -item:224054|47.99 71.56||treasure atlas:banker link:2213 item:224054|Sells|!{4624833} [rare]Emergent Crystals of the Surface-Dwellers]",
+		[82637] = "[neutral]Alvus Valavulu]|jewelcrafting skill:jewelcrafting11:1 -item:224054|47.99 71.56||treasure atlas:lootroll-icon-greed link:2213 item:224054|Sells|!{4624833} [rare]Emergent Crystals of the Surface-Dwellers]",
 
 		-- Leatherworking Treasure
 		[83905] = "Curved Nerubian Skinning Knife|leatherworking skill:leatherworking11:1|59.99 54.01||treasure item:226331|Contains|!{464119} [epic]Curved Nerubian Skinning Knife]",
 		[83904] = "Nerubian Tanning Mallet|leatherworking skill:leatherworking11:1|50.53 74.43||treasure link:2213 item:226330|Contains|!{1059113} [epic]Nerubian Tanning Mallet]",
-		[82626] = "[neutral]Kama]|leatherworking -skinning,82596 skill:leatherworking11:1 -item:224056|46.31 72.12||treasure atlas:banker link:2213 item:224056|Sells|!{4624911} [rare]Uses for Leftover Husks (After You Take Them Apart)]",
+		[82626] = "[neutral]Kama]|leatherworking -skinning,82596 skill:leatherworking11:1 -item:224056|46.31 72.12||treasure atlas:lootroll-icon-greed link:2213 item:224056|Sells|!{4624911} [rare]Uses for Leftover Husks (After You Take Them Apart)]",
 
 		-- Mining Treasure
 		[83912] = "Heavy Spider Crusher|mining skill:mining11:1|47.66 72.6||treasure link:2213 item:226338|Contains|!{133046} [epic]Heavy Spider Crusher]",
 		[83913] = "Nerubian Mining Cart|mining skill:mining11:1|48.07 79.21||treasure down link:2216 item:226339|Contains|!{4202229} [epic]Nerubian Mining Supplies]",
 		[82614] = {
-			"[neutral]Rakka]|mining -blacksmithing,82631,item:224038 skill:mining11:1 -item:224055|47.6 72.69||treasure atlas:banker link:2213 item:224055|Sells|!{4625027} [rare]A Rocky Start]",
-			"[neutral]Rakka]|mining blacksmithing -82631 skill:mining11:1,skill:blacksmithing11:1 -item:224055 -item:224038|47.6 72.69||treasure atlas:banker link:2213 item:224055|Sells|!{4625027} [rare]A Rocky Start]|!{4624661} [rare]Smithing After Saronite]",
+			"[neutral]Rakka]|mining -blacksmithing,82631,item:224038 skill:mining11:1 -item:224055|47.6 72.69||treasure atlas:lootroll-icon-greed link:2213 item:224055|Sells|!{4625027} [rare]A Rocky Start]",
+			"[neutral]Rakka]|mining blacksmithing -82631 skill:mining11:1,skill:blacksmithing11:1 -item:224055 -item:224038|47.6 72.69||treasure atlas:lootroll-icon-greed link:2213 item:224055|Sells|!{4625027} [rare]A Rocky Start]|!{4624661} [rare]Smithing After Saronite]",
 		},
 
 		-- Skinning Treasure
 		[83921] = "Carapace Shiner|skinning skill:skinning11:1|56.54 55.24||treasure item:226347|Contains|!{135034} [epic]Carapace Shiner]",
 		[83920] = "Nerubian's Slicking Iron|skinning skill:skinning11:1|46.85 82.28||treasure down link:2216 item:226346|Contains|!{135655} [epic]Nerubian's Slicking Iron]",
 		[82596] = {
-			"[neutral]Kama]|skinning -leatherworking,82626,item:224056 skill:skinning11:1 -item:224007|46.31 72.12||treasure atlas:banker link:2213 item:224007|Sells|!{4624664} [rare]Uses for Leftover Husks (How to Take Them Apart)]",
-			"[neutral]Kama]|skinning leatherworking -82626 skill:skinning11:1,skill:leatherworking11:1 -item:224007 -item:224056|46.31 72.12||treasure atlas:banker link:2213 item:224007|Sells|!{4624664} [rare]Uses for Leftover Husks (How to Take Them Apart)]|!{4624911} [rare]Uses for Leftover Husks (After You Take Them Apart)]",
+			"[neutral]Kama]|skinning -leatherworking,82626,item:224056 skill:skinning11:1 -item:224007|46.31 72.12||treasure atlas:lootroll-icon-greed link:2213 item:224007|Sells|!{4624664} [rare]Uses for Leftover Husks (How to Take Them Apart)]",
+			"[neutral]Kama]|skinning leatherworking -82626 skill:skinning11:1,skill:leatherworking11:1 -item:224007 -item:224056|46.31 72.12||treasure atlas:lootroll-icon-greed link:2213 item:224007|Sells|!{4624664} [rare]Uses for Leftover Husks (How to Take Them Apart)]|!{4624911} [rare]Uses for Leftover Husks (After You Take Them Apart)]",
 		},
 		
 		-- Tailoring Treasure
 		[83928] = "Nerubian Quilt|tailoring skill:tailoring11:1|53.27 53.12|\"Inside a building\"|treasure item:226354|Contains|!{1379171} [epic]Nerubian Quilt]",
 		[83929] = "Nerubian's Pincushion|tailoring skill:tailoring11:1|48.89 70.89||treasure link:2213 item:226355|Contains|!{1044082} [epic]Nerubian's Pincushion]",
-		[82634] = "[neutral]Saaria]|tailoring skill:tailoring11:1 -item:224036|48.91 70.95||treasure atlas:banker link:2213 item:224036|Sells|!{4625110} [rare]And That's A Web-Wrap!]",
+		[82634] = "[neutral]Saaria]|tailoring skill:tailoring11:1 -item:224036|48.91 70.95||treasure atlas:lootroll-icon-greed link:2213 item:224036|Sells|!{4625110} [rare]And That's A Web-Wrap!]",
 	},
 
 	-- City of Threads
 	[2213] = {
 		-- Alchemy Treasure
 		[83846] = "Nerubian Mixing Salts|alchemy skill:alchemy11:1|45.29 13.24|\"Inside a building\"|treasure item:226271|Contains|!{1387651} [epic]Nerubian Mixing Salts]",
-		[82633] = "[neutral]Siesbarg]|alchemy skill:alchemy11:1 -item:224024|45.46 13.02||treasure atlas:banker item:224024|Sells|!{4624658} [rare]Theories of Bodily Transmutation, Chapter 8]",
+		[82633] = "[neutral]Siesbarg]|alchemy skill:alchemy11:1 -item:224024|45.46 13.02||treasure atlas:lootroll-icon-greed item:224024|Sells|!{4624658} [rare]Theories of Bodily Transmutation, Chapter 8]",
 
 		-- Blacksmithing Treasure
 		[83854] = "Nerubian Smith's Kit|blacksmithing skill:blacksmithing11:1|46.52 22.91||treasure item:226282|Contains|!{465841} [epic]Nerubian Smith's Kit]",
-		[82631] = "[neutral]Rakka]|blacksmithing skill:blacksmithing11:1 -item:224038|46.64 21.96||treasure atlas:banker item:224038|Sells|!{4624661} [rare]Smithing After Saronite]",
+		[82631] = "[neutral]Rakka]|blacksmithing skill:blacksmithing11:1 -item:224038|46.64 21.96||treasure atlas:lootroll-icon-greed item:224038|Sells|!{4624661} [rare]Smithing After Saronite]",
 
 		-- Enchanting Treasure
 		[83864] = "Book of Dark Magic|enchanting skill:enchanting11:1|61.72 22||treasure item:226290|Contains|!{133737} [epic]Book of Dark Magic]",
-		[82635] = "[neutral]Iliani]|enchanting skill:enchanting11:1 -item:224050|45.46 33.58|\"Inside the Infuser building\"|treasure atlas:banker item:224050|Sells|!{4624666} [rare]Web Sparkles: Pretty and Powerful]",
+		[82635] = "[neutral]Iliani]|enchanting skill:enchanting11:1 -item:224050|45.46 33.58|\"Inside the Infuser building\"|treasure atlas:lootroll-icon-greed item:224050|Sells|!{4624666} [rare]Web Sparkles: Pretty and Powerful]",
 		
 		-- Engineering Treasure
 		[83873] = "Emptied Venom Canister|engineering skill:engineering11:1|63.14 11.16||treasure item:226299|Contains|!{967528} [epic]Emptied Venom Canister]",
@@ -302,49 +302,49 @@ Data.Vignettes = {
 		
 		-- Inscription Treasure
 		[83889] = "Venomancer's Ink Well|inscription skill:inscription11:1|50.23 30.84|\"Inside a building\"|treasure item:226315|Contains|!{464026} [epic]Venomancer's Ink Well]",
-		[82636] = "[neutral]Nuel Prill]|inscription skill:inscription11:1|42.23 27.23 -item:224053|\"Inside a building\"|treasure atlas:banker item:224053|Sells|!{4624734} [rare]Eight Views on Defense against Hostile Runes]",
+		[82636] = "[neutral]Nuel Prill]|inscription skill:inscription11:1|42.23 27.23 -item:224053|\"Inside a building\"|treasure atlas:lootroll-icon-greed item:224053|Sells|!{4624734} [rare]Eight Views on Defense against Hostile Runes]",
 		
 		-- Jewelcrafting Treasure
 		[83896] = "Ritual Caster's Crystal|jewelcrafting skill:jewelcrafting11:1|47.81 19.5|\"On top of a table\"|treasure item:226322|Contains|!{132885} [epic]Ritual Caster's Crystal]",
-		[82637] = "[neutral]Alvus Valavulu]|jewelcrafting skill:jewelcrafting11:1 -item:224054|47.75 18.73||treasure atlas:banker item:224054|Sells|!{4624833} [rare]Emergent Crystals of the Surface-Dwellers]",
+		[82637] = "[neutral]Alvus Valavulu]|jewelcrafting skill:jewelcrafting11:1 -item:224054|47.75 18.73||treasure atlas:lootroll-icon-greed item:224054|Sells|!{4624833} [rare]Emergent Crystals of the Surface-Dwellers]",
 		
 		-- Leatherworking Treasure
 		[83904] = "Nerubian Tanning Mallet|leatherworking skill:leatherworking11:1|55.03 26.94|\"Inside the tower\"|treasure item:226330|Contains|!{1059113} [epic]Nerubian Tanning Mallet]",
-		[82626] = "[neutral]Kama]|leatherworking -skinning,82596 skill:leatherworking11:1 -item:224056|42.93 20.33||treasure atlas:banker item:224056|Sells|!{4624911} [rare]Uses for Leftover Husks (After You Take Them Apart)]",
+		[82626] = "[neutral]Kama]|leatherworking -skinning,82596 skill:leatherworking11:1 -item:224056|42.93 20.33||treasure atlas:lootroll-icon-greed item:224056|Sells|!{4624911} [rare]Uses for Leftover Husks (After You Take Them Apart)]",
 
 		-- Mining Treasure
 		[83912] = "Heavy Spider Crusher|mining skill:mining11:1|46.82 21.71||treasure item:226338|Contains|!{133046} [epic]Heavy Spider Crusher]",
 		[83913] = "Nerubian Mining Cart|mining skill:mining11:1|47.96 40.63||treasure down link:2216 item:226339|Contains|!{4202229} [epic]Nerubian Mining Supplies]",
 		[82614] = {
-			"[neutral]Rakka]|mining -blacksmithing,82631,item:224038 skill:mining11:1 -item:224055|46.64 21.96||treasure atlas:banker item:224055|Sells|!{4625027} [rare]A Rocky Start]",
-			"[neutral]Rakka]|mining blacksmithing -82631 skill:mining11:1,skill:blacksmithing11:1 -item:224055 -item:224038|46.64 21.96||treasure atlas:banker item:224055|Sells|!{4625027} [rare]A Rocky Start]|!{4624661} [rare]Smithing After Saronite]",
+			"[neutral]Rakka]|mining -blacksmithing,82631,item:224038 skill:mining11:1 -item:224055|46.64 21.96||treasure atlas:lootroll-icon-greed item:224055|Sells|!{4625027} [rare]A Rocky Start]",
+			"[neutral]Rakka]|mining blacksmithing -82631 skill:mining11:1,skill:blacksmithing11:1 -item:224055 -item:224038|46.64 21.96||treasure atlas:lootroll-icon-greed item:224055|Sells|!{4625027} [rare]A Rocky Start]|!{4624661} [rare]Smithing After Saronite]",
 		},
 
 		-- Skinning Treasure
 		[83920] = "Nerubian's Slicking Iron|skinning skill:skinning11:1|44.48 49.46||treasure down link:2216 item:226346|Contains|!{135655} [epic]Nerubian's Slicking Iron]",
 		[82596] = {
-			"[neutral]Kama]|skinning -leatherworking,82626,item:224056 skill:skinning11:1 -item:224007|42.93 20.33||treasure atlas:banker item:224007|Sells|!{4624664} [rare]Uses for Leftover Husks (How to Take Them Apart)]",
-			"[neutral]Kama]|skinning leatherworking -82626 skill:skinning11:1,skill:leatherworking11:1 -item:224007 -item:224056|42.93 20.33||treasure atlas:banker item:224007|Sells|!{4624664} [rare]Uses for Leftover Husks (How to Take Them Apart)]|!{4624911} [rare]Uses for Leftover Husks (After You Take Them Apart)]",
+			"[neutral]Kama]|skinning -leatherworking,82626,item:224056 skill:skinning11:1 -item:224007|42.93 20.33||treasure atlas:lootroll-icon-greed item:224007|Sells|!{4624664} [rare]Uses for Leftover Husks (How to Take Them Apart)]",
+			"[neutral]Kama]|skinning leatherworking -82626 skill:skinning11:1,skill:leatherworking11:1 -item:224007 -item:224056|42.93 20.33||treasure atlas:lootroll-icon-greed item:224007|Sells|!{4624664} [rare]Uses for Leftover Husks (How to Take Them Apart)]|!{4624911} [rare]Uses for Leftover Husks (After You Take Them Apart)]",
 		},
 
 		-- Tailoring Treasure
 		[83929] = "Nerubian's Pincushion|tailoring skill:tailoring11:1|50.32 16.81||treasure item:226355|Contains|!{1044082} [epic]Nerubian's Pincushion]",
-		[82634] = "[neutral]Saaria]|tailoring skill:tailoring11:1 -item:224036|50.39 16.97||treasure atlas:banker item:224036|Sells|!{4625110} [rare]And That's A Web-Wrap!]",
+		[82634] = "[neutral]Saaria]|tailoring skill:tailoring11:1 -item:224036|50.39 16.97||treasure atlas:lootroll-icon-greed item:224036|Sells|!{4625110} [rare]And That's A Web-Wrap!]",
 	},
 
 	-- City of Threads - Lower (The Burrows)
 	[2216] = {
 		-- Alchemy Treasure
 		[83846] = "Nerubian Mixing Salts|alchemy skill:alchemy11:1|45.29 13.24||treasure up link:2213 item:226271|Contains|!{1387651} [epic]Nerubian Mixing Salts]",
-		[82633] = "[neutral]Siesbarg]|alchemy skill:alchemy11:1 -item:224024|45.46 13.02||treasure atlas:banker up link:2213 item:224024|Sells|!{4624658} [rare]Theories of Bodily Transmutation, Chapter 8]",
+		[82633] = "[neutral]Siesbarg]|alchemy skill:alchemy11:1 -item:224024|45.46 13.02||treasure atlas:lootroll-icon-greed up link:2213 item:224024|Sells|!{4624658} [rare]Theories of Bodily Transmutation, Chapter 8]",
 
 		-- Blacksmithing Treasure
 		[83854] = "Nerubian Smith's Kit|blacksmithing skill:blacksmithing11:1|46.52 22.91||treasure up link:2213 item:226282|Contains|!{465841} [epic]Nerubian Smith's Kit]",
-		[82631] = "[neutral]Rakka]|blacksmithing skill:blacksmithing11:1 -item:224038|46.64 21.96||treasure up atlas:banker link:2213 item:224038|Sells|!{4624661} [rare]Smithing After Saronite]",
+		[82631] = "[neutral]Rakka]|blacksmithing skill:blacksmithing11:1 -item:224038|46.64 21.96||treasure up atlas:lootroll-icon-greed link:2213 item:224038|Sells|!{4624661} [rare]Smithing After Saronite]",
 
 		-- Enchanting Treasure
 		[83864] = "Book of Dark Magic|enchanting skill:enchanting11:1|61.72 22||treasure up link:2213 item:226290|Contains|!{133737} [epic]Book of Dark Magic]",
-		[82635] = "[neutral]Iliani]|enchanting skill:enchanting11:1 -item:224050|45.46 33.58|\"Inside the Infuser building\"|treasure atlas:banker up link:2213 item:224050|Sells|!{4624666} [rare]Web Sparkles: Pretty and Powerful]",
+		[82635] = "[neutral]Iliani]|enchanting skill:enchanting11:1 -item:224050|45.46 33.58|\"Inside the Infuser building\"|treasure atlas:lootroll-icon-greed up link:2213 item:224050|Sells|!{4624666} [rare]Web Sparkles: Pretty and Powerful]",
 
 		-- Engineering Treasure
 		[83873] = "Emptied Venom Canister|engineering skill:engineering11:1|63.14 11.16||treasure up link:2213 item:226299|Contains|!{967528} [epic]Emptied Venom Canister]",
@@ -355,34 +355,34 @@ Data.Vignettes = {
 
 		-- Inscription Treasure
 		[83889] = "Venomancer's Ink Well|inscription skill:inscription11:1|50.23 30.84||treasure up link:2213 item:226315|Contains|!{464026} [epic]Venomancer's Ink Well]",
-		[82636] = "[neutral]Nuel Prill]|inscription skill:inscription11:1 -item:224053|42.23 27.23||treasure atlas:banker up link:2213 item:224053|Sells|!{4624734} [rare]Eight Views on Defense against Hostile Runes]",
+		[82636] = "[neutral]Nuel Prill]|inscription skill:inscription11:1 -item:224053|42.23 27.23||treasure atlas:lootroll-icon-greed up link:2213 item:224053|Sells|!{4624734} [rare]Eight Views on Defense against Hostile Runes]",
 		
 		-- Jewelcrafting Treasure
 		[83896] = "Ritual Caster's Crystal|jewelcrafting skill:jewelcrafting11:1|47.81 19.5||treasure up link:2213 item:226322|Contains|!{132885} [epic]Ritual Caster's Crystal]",
-		[82637] = "[neutral]Alvus Valavulu]|jewelcrafting skill:jewelcrafting11:1 -item:224054|47.75 18.73||treasure atlas:banker up link:2213 item:224054|Sells|!{4624833} [rare]Emergent Crystals of the Surface-Dwellers]",
+		[82637] = "[neutral]Alvus Valavulu]|jewelcrafting skill:jewelcrafting11:1 -item:224054|47.75 18.73||treasure atlas:lootroll-icon-greed up link:2213 item:224054|Sells|!{4624833} [rare]Emergent Crystals of the Surface-Dwellers]",
 		
 		-- Leatherworking Treasure
 		[83904] = "Nerubian Tanning Mallet|leatherworking skill:leatherworking11:1|55.03 26.94||treasure up link:2213 item:226330|Contains|!{1059113} [epic]Nerubian Tanning Mallet]",
-		[82626] = "[neutral]Kama]|leatherworking -skinning,82596 skill:leatherworking11:1 -item:224056|42.93 20.33||treasure atlas:banker up link:2213 item:224056|Sells|!{4624911} [rare]Uses for Leftover Husks (After You Take Them Apart)]",
+		[82626] = "[neutral]Kama]|leatherworking -skinning,82596 skill:leatherworking11:1 -item:224056|42.93 20.33||treasure atlas:lootroll-icon-greed up link:2213 item:224056|Sells|!{4624911} [rare]Uses for Leftover Husks (After You Take Them Apart)]",
 		
 		-- Mining Treasure
 		[83912] = "Heavy Spider Crusher|mining skill:mining11:1|46.82 21.71||treasure up link:2213 item:226338|Contains|!{133046} [epic]Heavy Spider Crusher]",
 		[83913] = "Nerubian Mining Cart|mining skill:mining11:1|47.96 40.63||treasure item:226339|Contains|!{4202229} [epic]Nerubian Mining Supplies]",
 		[82614] = {
-			"[neutral]Rakka]|mining -blacksmithing,82631,item:224038 skill:mining11:1 -item:224055|46.64 21.96||treasure atlas:banker up link:2213 item:224055|Sells|!{4625027} [rare]A Rocky Start]",
-			"[neutral]Rakka]|mining blacksmithing -82631 skill:mining11:1,skill:blacksmithing11:1 -item:224055 -item:224038|46.64 21.96||treasure atlas:banker up link:2213 item:224055|Sells|!{4625027} [rare]A Rocky Start]|!{4624661} [rare]Smithing After Saronite]",
+			"[neutral]Rakka]|mining -blacksmithing,82631,item:224038 skill:mining11:1 -item:224055|46.64 21.96||treasure atlas:lootroll-icon-greed up link:2213 item:224055|Sells|!{4625027} [rare]A Rocky Start]",
+			"[neutral]Rakka]|mining blacksmithing -82631 skill:mining11:1,skill:blacksmithing11:1 -item:224055 -item:224038|46.64 21.96||treasure atlas:lootroll-icon-greed up link:2213 item:224055|Sells|!{4625027} [rare]A Rocky Start]|!{4624661} [rare]Smithing After Saronite]",
 		},
 
 		-- Skinning Treasure
 		[83920] = "Nerubian's Slicking Iron|skinning skill:skinning11:1|44.48 49.46|\"Inside the Warehouse building\"|treasure item:226346|Contains|!{135655} [epic]Nerubian's Slicking Iron]",
 		[82596] = {
-			"[neutral]Kama]|skinning -leatherworking,82626,item:224056 skill:skinning11:1 -item:224007|42.93 20.33||treasure atlas:banker up link:2213 item:224007|Sells|!{4624664} [rare]Uses for Leftover Husks (How to Take Them Apart)]",
-			"[neutral]Kama]|skinning leatherworking -82626 skill:skinning11:1,skill:leatherworking11:1 -item:224007 -item:224056|42.93 20.33||treasure atlas:banker up link:2213 item:224007|Sells|!{4624664} [rare]Uses for Leftover Husks (How to Take Them Apart)]|!{4624911} [rare]Uses for Leftover Husks (After You Take Them Apart)]",
+			"[neutral]Kama]|skinning -leatherworking,82626,item:224056 skill:skinning11:1 -item:224007|42.93 20.33||treasure atlas:lootroll-icon-greed up link:2213 item:224007|Sells|!{4624664} [rare]Uses for Leftover Husks (How to Take Them Apart)]",
+			"[neutral]Kama]|skinning leatherworking -82626 skill:skinning11:1,skill:leatherworking11:1 -item:224007 -item:224056|42.93 20.33||treasure atlas:lootroll-icon-greed up link:2213 item:224007|Sells|!{4624664} [rare]Uses for Leftover Husks (How to Take Them Apart)]|!{4624911} [rare]Uses for Leftover Husks (After You Take Them Apart)]",
 		},
 
 		-- Tailoring Treasure
 		[83929] = "Nerubian's Pincushion|tailoring skill:tailoring11:1|50.32 16.81||treasure up link:2213 item:226355|Contains|!{1044082} [epic]Nerubian's Pincushion]",
-		[82634] = "[neutral]Saaria]|tailoring skill:tailoring11:1 -item:224036|50.39 16.97||treasure atlas:banker up link:2213 item:224036|Sells|!{4625110} [rare]And That's A Web-Wrap!]",
+		[82634] = "[neutral]Saaria]|tailoring skill:tailoring11:1 -item:224036|50.39 16.97||treasure atlas:lootroll-icon-greed up link:2213 item:224036|Sells|!{4625110} [rare]And That's A Web-Wrap!]",
 	},
 
 	
