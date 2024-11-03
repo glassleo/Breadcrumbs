@@ -107,7 +107,28 @@ Data.POI = {
 		"Stablemaster|[Stable Master]|1+|55.37 67.1",
 
 		-- Vendor
-		"banker:objective|Osidion|item:223951|57.26 60.84|tooltip item:223951|\"Exchange your {4555612} [Earth-Encrusted Gem] for an Ensemble of choice here\"",
+		"poi-transmogrifier|Osidion|item:223951|57.26 60.84|tooltip item:223951|\"Exchange your {4555612} [Earth-Encrusted Gem] for an Ensemble of choice here\"",
+	},
+
+
+	--[[ Azj-Kahet ]]--
+	
+	-- Azj-Kahet
+	[2255] = {
+		-- Vendor
+		"TimewalkingVendor-32x32|[neutral]Ab'xal] & [neutral]Ip'xal]|item:226206|51.28 81.06|tooltip item:226206 link:2216|\"Exchange your {5789325} [epic]Mark of the Spelunker Supreme] for a Nerub-ar Palace set item of choice here\"",
+	},
+
+	-- City of Threads
+	[2213] = {
+		-- Vendor
+		"TimewalkingVendor-32x32|[neutral]Ab'xal] & [neutral]Ip'xal]|item:226206|57.17 45.96|tooltip item:226206 link:2216|\"Exchange your {5789325} [epic]Mark of the Spelunker Supreme] for a Nerub-ar Palace set item of choice here\"",
+	},
+
+	-- City of Threads - Lower (The Burrows)
+	[2216] = {
+		-- Vendor
+		"TimewalkingVendor-32x32|[neutral]Ab'xal] & [neutral]Ip'xal]|item:226206|57.17 45.96|tooltip item:226206|\"Exchange your {5789325} [epic]Mark of the Spelunker Supreme] for a Nerub-ar Palace set item of choice here\"",
 	},
 
 
@@ -131,8 +152,8 @@ Data.POI = {
 		"-:large|Ohn'ahran Plains [gold](10-70)]|1+|73.35 51.08|link:2023|Pet Level [gold](25)]",
 
 		-- Vendor
-		"banker:objective|Theozhaklos the Curious|item:210944|36.69 33.29|tooltip item:210944|\"Exchange your {4555670} [epic]Emerald Mark of Mastery] for an Amirdrassil class set item of choice here\"",
-		"banker:objective|Kirasztia|item:210947|36.73 33.32|tooltip item:210947|\"Exchange your {1020381} [epic]Flame-Warped Curio] for an Amirdrassil class set item of choice here\"",
+		"poi-transmogrifier|Theozhaklos the Curious|item:210944|36.69 33.29|tooltip item:210944|\"Exchange your {4555670} [epic]Emerald Mark of Mastery] for an Amirdrassil set item of choice here\"",
+		"poi-transmogrifier|Kirasztia|item:210947|36.73 33.32|tooltip item:210947|\"Exchange your {1020381} [epic]Flame-Warped Curio] for an Amirdrassil set item of choice here\"",
 	},
 
 	-- Sor'theril Barrow Den
@@ -451,10 +472,10 @@ Data.POI = {
 	-- Revendreth
 	[1525] = {
 		-- Vendor
-		"banker:objective|Deadfoot|mage,priest,warlock item:182744 -item:182746|48.73 68.52|tooltip item:182741|\"Deadfoot might have something to repair your [uncommon]Ornate Belt Buckle]\"||Sells|!{133875} [All-In-One Belt Repair Kit]",
-		"banker:objective|Deadfoot|demonhunter,druid,monk,rogue item:182744 -item:182746|48.73 68.52|tooltip item:182742|\"Deadfoot might have something to repair your [uncommon]Ornate Belt Buckle]\"||Sells|!{133875} [All-In-One Belt Repair Kit]",
-		"banker:objective|Deadfoot|evoker,hunter,shaman item:182744 -item:182746|48.73 68.52|tooltip item:182739|\"Deadfoot might have something to repair your [uncommon]Ornate Belt Buckle]\"||Sells|!{133875} [All-In-One Belt Repair Kit]",
-		"banker:objective|Deadfoot|deathknight,paladin,warrior item:182744 -item:182746|48.73 68.52|tooltip item:182740|\"Deadfoot might have something to repair your [uncommon]Ornate Belt Buckle]\"||Sells|!{133875} [All-In-One Belt Repair Kit]",
+		"lootroll-icon-greed:objective|Deadfoot|mage,priest,warlock item:182744 -item:182746|48.73 68.52|tooltip item:182741|\"Deadfoot might have something to repair your [uncommon]Ornate Belt Buckle]\"||Sells|!{133875} [All-In-One Belt Repair Kit]",
+		"lootroll-icon-greed:objective|Deadfoot|demonhunter,druid,monk,rogue item:182744 -item:182746|48.73 68.52|tooltip item:182742|\"Deadfoot might have something to repair your [uncommon]Ornate Belt Buckle]\"||Sells|!{133875} [All-In-One Belt Repair Kit]",
+		"lootroll-icon-greed:objective|Deadfoot|evoker,hunter,shaman item:182744 -item:182746|48.73 68.52|tooltip item:182739|\"Deadfoot might have something to repair your [uncommon]Ornate Belt Buckle]\"||Sells|!{133875} [All-In-One Belt Repair Kit]",
+		"lootroll-icon-greed:objective|Deadfoot|deathknight,paladin,warrior item:182744 -item:182746|48.73 68.52|tooltip item:182740|\"Deadfoot might have something to repair your [uncommon]Ornate Belt Buckle]\"||Sells|!{133875} [All-In-One Belt Repair Kit]",
 	},
 
 
