@@ -6779,6 +6779,19 @@ Data.Quests = {
 		[32519] = "Oondasta|1+|||weekly vignette",
 		[37460] = "Drov the Ruiner|1+|||weekly vignette",
 		[37464] = "Rukhmar|1+|||weekly vignette",
+
+		-- Circe's Circlet
+		[85669] = "Thunderlord's Crackling Citrine",
+		[85670] = "Undersea Overseer's Citrine",
+		[85671] = "Squall Sailor's Citrine",
+		[85672] = "Mariner's Hallowed Citrine",
+		[85673] = "Old Salt's Bardic Citrine",
+		[85674] = "Storm Sewer's Citrine",
+		[85675] = "Windsinger's Runed Citrine",
+		[85676] = "Stormbringer's Runed Citrine",
+		[85707] = "Legendary Skipper's Citrine",
+		[85708] = "Seabed Leviathan's Citrine",
+		[85709] = "Roaring War-Queen's Citrine",
 	}
 }
 
