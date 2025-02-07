@@ -45,7 +45,7 @@ Data.Vignettes = {
 		[83907] = "Dornogal Chisel|mining skill:mining11:1|36.72 79.36||treasure item:226333|Contains|!{1059115} [epic]Dornogal Chisel]",
 		
 		-- Skinning Treasure
-		[83914] = "Dornogal Carving Knife|skinning skill:skinning11:1|28.77 51.65|\"Inside the ALliance Embassy bulding\"|treasure item:226340|Contains|!{5404237} [epic]Dornogal Carving Knife]",
+		[83914] = "Dornogal Carving Knife|skinning skill:skinning11:1|28.77 51.65|\"Inside the Alliance Embassy bulding\"|treasure item:226340|Contains|!{5404237} [epic]Dornogal Carving Knife]",
 		
 		-- Tailoring Treasure
 		[83922] = "Dornogal Seam Ripper|tailoring skill:tailoring11:1|61.56 18.51|\"Inside a building\"|treasure item:226348|Contains|!{464119} [epic]Dornogal Seam Ripper]",
@@ -191,7 +191,7 @@ Data.Vignettes = {
 		[83886] = "Informant's Fountain Pen|inscription skill:inscription11:1|43.25 58.94||treasure item:226312|Contains|!{237171} [epic]Informant's Fountain Pen]",
 		
 		-- Jewelcrafting Treasure
-		[83895] = "Librarian's Magnifiers|jewelcrafting skill:jewelcrafting11:1|44.69 50.97|\"Upstairs\"|treasure item:226321|Contains|!{4419344} [epic]Librarian's Magnifiers]",
+		[83895] = "Librarian's Magnifiers|jewelcrafting skill:jewelcrafting11:1|44.69 50.97|\"Upstairs on round table\"|treasure item:226321|Contains|!{4419344} [epic]Librarian's Magnifiers]",
 		[83894] = "Arathi Sizing Gauges|jewelcrafting skill:jewelcrafting11:1|47.39 60.68|\"On top of a shelf\"|treasure item:226320|Contains|!{134509} [epic]Arathi Sizing Gauges]",
 		
 		-- Leatherworking Treasure
