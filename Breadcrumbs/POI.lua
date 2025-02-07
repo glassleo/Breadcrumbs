@@ -52,7 +52,7 @@ Data.POI = {
 
 	-- Dornogal
 	[2339] = {
-		-- Portal
+		-- Travel
 		"TaxiNode_Continent_Horde|Portal to Orgrimmar|horde|38.18 27.22",
 		"TaxiNode_Continent_Alliance|Portal to Stormwind|alliance|41.17 22.68",
 
