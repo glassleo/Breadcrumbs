@@ -108,55 +108,55 @@ Data.Vignettes = {
 
 	[2214] = {
 		-- Treasure
-		[82239] = "Discarded Toolbox|68+|45.51 17.45||treasure item:224644|Contains|!{4548872} [rare]Lava-Forged Cogwheel]|!{2967113} [Resonance Crystals]",
-		[82235] = "Munderut's Forgotten Stash|68+|55.39 13.85||treasure item:212505|Contains|!{5931413} [rare]Extravagant Emerald]|!{5931416} [rare]Radiant Ruby]|!{5931414} [rare]Stunning Sapphire]|!{5931415} [uncommon]Ambivalent Amber] (2)",
-		[83030] = "Waterlogged Refuse|68+|66.19 33.41||treasure|Contains|!{2967113} [Resonance Crystals]",
-		[82230] = "Cursed Pickaxe|68+|63.08 63.11||treasure item:224837|Contains|!{5873892} [rare]Cursed Pickaxe]|!{2967113} [Resonance Crystals]",
-		[82818] = "Scary Dark Chest|68+|58.93 30.28|\"Light all the nearby [Candle Stubs] to unlock the treasure\"|treasure atlas:VignetteLootElite item:224439|Contains|!{5869499} [rare]Oop'lajax]|!{2967113} [Resonance Crystals]",
+		[82239] = "Discarded Toolbox|68+|41.35 17.45||treasure item:224644|Contains|!{4548872} [rare]Lava-Forged Cogwheel]|!{2967113} [Resonance Crystals]",
+		[82235] = "Munderut's Forgotten Stash|68+|51.23 13.85||treasure item:212505|Contains|!{5931413} [rare]Extravagant Emerald]|!{5931416} [rare]Radiant Ruby]|!{5931414} [rare]Stunning Sapphire]|!{5931415} [uncommon]Ambivalent Amber] (2)",
+		[83030] = "Waterlogged Refuse|68+|62.03 33.41||treasure|Contains|!{2967113} [Resonance Crystals]",
+		[82230] = "Cursed Pickaxe|68+|58.92 63.11||treasure item:224837|Contains|!{5873892} [rare]Cursed Pickaxe]|!{2967113} [Resonance Crystals]",
+		[82818] = "Scary Dark Chest|68+|54.77 30.28|\"Light all the nearby [Candle Stubs] to unlock the treasure\"|treasure atlas:VignetteLootElite item:224439|Contains|!{5869499} [rare]Oop'lajax]|!{2967113} [Resonance Crystals]",
 
 		-- Alchemy Treasure
-		[83843] = "Engraved Stirring Rod|alchemy skill:alchemy11:1|64.96 61.75|\"Inside a building\"|treasure item:226268|Contains|!{237445} [epic]Engraved Stirring Rod]",
-		[83842] = "Reinforced Beaker|alchemy skill:alchemy11:1|42.21 24.18|\"Inside a building\"|treasure item:226267|Contains|!{134870} [epic]Reinforced Beaker]",
+		[83843] = "Engraved Stirring Rod|alchemy skill:alchemy11:1|60.8 61.75|\"Inside a building\"|treasure item:226268|Contains|!{237445} [epic]Engraved Stirring Rod]",
+		[83842] = "Reinforced Beaker|alchemy skill:alchemy11:1|38.05 24.18|\"Inside a building\"|treasure item:226267|Contains|!{134870} [epic]Reinforced Beaker]",
 		
 		-- Blacksmithing Treasure
-		[83850] = "Ringing Hammer Vise|blacksmithing skill:blacksmithing11:1|47.7 33.16||treasure item:226278|Contains|!{4559194} [epic]Ringing Hammer Vise]",
-		[83851] = "Earthen Chisels|blacksmithing skill:blacksmithing11:1|60.53 53.67||treasure item:226279|Contains|!{1059123} [epic]Earthen Chisels]",
+		[83850] = "Ringing Hammer Vise|blacksmithing skill:blacksmithing11:1|43.54 33.16||treasure item:226278|Contains|!{4559194} [epic]Ringing Hammer Vise]",
+		[83851] = "Earthen Chisels|blacksmithing skill:blacksmithing11:1|46.37 53.67||treasure item:226279|Contains|!{1059123} [epic]Earthen Chisels]",
 
 		-- Enchanting Treasure
-		[83861] = "Animated Enchanting Dust|enchanting skill:enchanting11:1|67.19 65.89||treasure item:226287|Contains|!{133851} [epic]Animated Enchanting Dust]",
-		[83860] = "Soot-Coated Orb|enchanting skill:enchanting11:1|44.61 22.13||treasure item:226286|Contains|!{236514} [epic]Soot-Coated Orb]",
+		[83861] = "Animated Enchanting Dust|enchanting skill:enchanting11:1|63.03 65.89||treasure item:226287|Contains|!{133851} [epic]Animated Enchanting Dust]",
+		[83860] = "Soot-Coated Orb|enchanting skill:enchanting11:1|40.45 22.13||treasure item:226286|Contains|!{236514} [epic]Soot-Coated Orb]",
 
 		-- Engineering Treasure
-		[83869] = "Earthen Construct Blueprints|engineering skill:engineering11:1|64.49 58.74|\"Inside a building\"|treasure item:226295|Contains|!{2915721} [epic]Earthen Construct Blueprints]",
-		[83868] = "Inert Mining Bomb|engineering skill:engineering11:1|42.62 27.25||treasure item:226294|Contains|!{133709} [epic]Inert Mining Bomb]",
+		[83869] = "Earthen Construct Blueprints|engineering skill:engineering11:1|60.33 58.74|\"Inside a building\"|treasure item:226295|Contains|!{2915721} [epic]Earthen Construct Blueprints]",
+		[83868] = "Inert Mining Bomb|engineering skill:engineering11:1|38.46 27.25||treasure item:226294|Contains|!{133709} [epic]Inert Mining Bomb]",
 		
 		-- Herbalism Treasure
-		[83877] = "Fungarian Slicer's Knife|herbalism skill:herbalism11:1|52.91 65.82||treasure item:226303|Contains|!{5169125} [epic]Fungarian Slicer's Knife]",
-		[83876] = "Earthen Digging Fork|herbalism skill:herbalism11:1|48.24 35.04|\"On top of a table inside a house\"|treasure item:226302|Contains|!{5874233} [epic]Earthen Digging Fork]",
+		[83877] = "Fungarian Slicer's Knife|herbalism skill:herbalism11:1|48.75 65.82||treasure item:226303|Contains|!{5169125} [epic]Fungarian Slicer's Knife]",
+		[83876] = "Earthen Digging Fork|herbalism skill:herbalism11:1|44.08 35.04|\"On top of a table inside a house\"|treasure item:226302|Contains|!{5874233} [epic]Earthen Digging Fork]",
 		
 		-- Inscription Treasure
-		[83885] = "Blue Earthen Pigment|inscription skill:inscription11:1|62.46 58.01|\"Inside a building\"|treasure item:226311|Contains|!{237157} [epic]Blue Earthen Pigment]",
-		[83884] = "Runic Scroll|inscription skill:inscription11:1|48.55 34.31|\"Inside a building\"|treasure item:226310|Contains|!{1500889} [epic]Runic Scroll]",
+		[83885] = "Blue Earthen Pigment|inscription skill:inscription11:1|58.3 58.01|\"Inside a building\"|treasure item:226311|Contains|!{237157} [epic]Blue Earthen Pigment]",
+		[83884] = "Runic Scroll|inscription skill:inscription11:1|44.39 34.31|\"Inside a building\"|treasure item:226310|Contains|!{1500889} [epic]Runic Scroll]",
 		
 		-- Jewelcrafting Treasure
-		[83893] = "Jeweler's Delicate Drill|jewelcrafting skill:jewelcrafting11:1|56.99 54.53||treasure item:226319|Contains|!{133056} [epic]Jeweler's Delicate Drill]",
-		[83892] = "Carved Stone File|jewelcrafting skill:jewelcrafting11:1|48.48 35.12|\"Inside a building\"|treasure item:226318|Contains|!{519379} [epic]Carved Stone File]",
+		[83893] = "Jeweler's Delicate Drill|jewelcrafting skill:jewelcrafting11:1|52.83 54.53||treasure item:226319|Contains|!{133056} [epic]Jeweler's Delicate Drill]",
+		[83892] = "Carved Stone File|jewelcrafting skill:jewelcrafting11:1|44.32 35.12|\"Inside a building\"|treasure item:226318|Contains|!{519379} [epic]Carved Stone File]",
 		
 		-- Leatherworking Treasure
-		[83900] = "Underground Stropping Compound|leatherworking skill:leatherworking11:1|47.05 34.89|\"Inside a building\"|treasure item:226326|Contains|!{2066015} [epic]Underground Stropping Compound]",
-		[83901] = "Earthen Awl|leatherworking skill:leatherworking11:1|64.28 65.28||treasure item:226327|Contains|!{4635252} [epic]Earthen Awl]",
+		[83900] = "Underground Stropping Compound|leatherworking skill:leatherworking11:1|42.89 34.89|\"Inside a building\"|treasure item:226326|Contains|!{2066015} [epic]Underground Stropping Compound]",
+		[83901] = "Earthen Awl|leatherworking skill:leatherworking11:1|60.12 65.28||treasure item:226327|Contains|!{4635252} [epic]Earthen Awl]",
 		
 		-- Mining Treasure
-		[83909] = "Regenerating Ore|mining skill:mining11:1|66.26 66.24||treasure item:226335|Contains|!{961633} [epic]Regenerating Ore]",
-		[83908] = "Earthen Excavator's Shovel|mining skill:mining11:1|49.42 27.53||treasure item:226334|Contains|!{134436} [epic]Earthen Excavator's Shovel]",
+		[83909] = "Regenerating Ore|mining skill:mining11:1|62.1 66.24||treasure item:226335|Contains|!{961633} [epic]Regenerating Ore]",
+		[83908] = "Earthen Excavator's Shovel|mining skill:mining11:1|45.26 27.53||treasure item:226334|Contains|!{134436} [epic]Earthen Excavator's Shovel]",
 		
 		-- Skinning Treasure
-		[83916] = "Artisan's Drawing Knife|skinning skill:skinning11:1|47.3 28.33||treasure item:226342|Contains|!{1064503} [epic]Artisan's Drawing Knife]",
-		[83917] = "Fungarian's Rich Tannin|skinning skill:skinning11:1|65.7 61.9||treasure item:226343|Contains|!{134382} [epic]Fungarian's Rich Tannin]",
+		[83916] = "Artisan's Drawing Knife|skinning skill:skinning11:1|43.14 28.33||treasure item:226342|Contains|!{1064503} [epic]Artisan's Drawing Knife]",
+		[83917] = "Fungarian's Rich Tannin|skinning skill:skinning11:1|61.54 61.9||treasure item:226343|Contains|!{134382} [epic]Fungarian's Rich Tannin]",
 		
 		-- Tailoring Treasure
-		[83925] = "Earthen Stitcher's Snips|tailoring skill:tailoring11:1|64.15 60.32||treasure item:226351|Contains|!{463557} [epic]Earthen Stitcher's Snips]",
-		[83924] = "Runed Earthen Pins|tailoring skill:tailoring11:1|48.83 32.87|\"Deep inside the basement of the Gundargaz inn\"|treasure item:226350|Contains|!{454058} [epic]Runed Earthen Pins]",
+		[83925] = "Earthen Stitcher's Snips|tailoring skill:tailoring11:1|59.99 60.32||treasure item:226351|Contains|!{463557} [epic]Earthen Stitcher's Snips]",
+		[83924] = "Runed Earthen Pins|tailoring skill:tailoring11:1|44.67 32.87|\"Deep inside the basement of the Gundargaz inn\"|treasure item:226350|Contains|!{454058} [epic]Runed Earthen Pins]",
 	},
 
 
