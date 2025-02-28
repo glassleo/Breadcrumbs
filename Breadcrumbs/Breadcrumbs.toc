@@ -1,8 +1,8 @@
-## Interface: 110002
+## Interface: 110100
 ## Title: Breadcrumbs
 ## Version: Alpha 1
 ## Notes: Adds dynamic pins to your World Map
-## Author: Leo <hello@leo.glass>
+## Author: Leo
 ## IconTexture: 134269
 ## OptionalDeps: TomTom, TipTac
 
