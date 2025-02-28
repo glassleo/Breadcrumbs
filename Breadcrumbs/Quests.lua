@@ -6789,6 +6789,7 @@ Data.Quests = {
 		[85674] = "Storm Sewer's Citrine",
 		[85675] = "Windsinger's Runed Citrine",
 		[85676] = "Stormbringer's Runed Citrine",
+		[85677] = "Fathomdweller's Runed Citrine",
 		[85707] = "Legendary Skipper's Citrine",
 		[85708] = "Seabed Leviathan's Citrine",
 		[85709] = "Roaring War-Queen's Citrine",
