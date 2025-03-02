@@ -1486,7 +1486,7 @@ function Breadcrumbs:UpdateMap(event, ...)
 					local Pin = NewPin()
 
 					if texture == "-" then
-						Pin:SetNormalTexture("")
+						Pin:SetNormalTexture("Interface/AddOns/Breadcrumbs/Textures/Empty")
 						Pin:SetHighlightAtlas("BonusChest-CircleGlow")
 						Pin:GetHighlightTexture():SetAlpha(0.3)
 					elseif (tonumber(texture or 0) or 0) > 0 then
