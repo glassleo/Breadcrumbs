@@ -210,19 +210,19 @@ Data.POI = {
 		"poi-horde|[Conquest & Honor Quartermaster]|70+ horde|43.89 39.52",
 
 		-- Professions
-		"POI/Alchemy|[Alchemy]|58+ alchemy|36.39 71.73",
-		"POI/Blacksmithing|[Blacksmithing]|58+ blacksmithing|36.97 47.1",
-		"POI/Enchanting|[Enchanting]|58+ enchanting|31.17 61.19",
-		"POI/Engineering|[Engineering]|58+ engineering|42.26 48.8",
-		"POI/Herbalism|[Herbalism]|58+ herbalism|37.69 67.99",
-		"POI/Inscription|[Inscription]|58+ inscription|38.85 73.39",
-		"POI/Jewelcrafting|[Jewelcrafting]|58+ jewelcrafting|40.27 61.57",
-		"POI/Leatherworking|[Leatherworking]|58+ leatherworking|28.83 62.12",
-		"POI/Mining|[Mining]|58+ mining|38.87 51.49",
-		"POI/Skinning|[Skinning]|58+ skinning|28.47 59.62",
-		"POI/Tailoring|[Tailoring]|58+ tailoring|32.04 66.28",
-		"POI/Cooking|[Cooking]|58+|46.51 46.26",
-		"POI/Fishing|[Fishing]|58+|43.7 74.5",
+		"POI/Alchemy|[Alchemy]|10+ alchemy|36.39 71.73",
+		"POI/Blacksmithing|[Blacksmithing]|10+ blacksmithing|36.97 47.1",
+		"POI/Enchanting|[Enchanting]|10+ enchanting|31.17 61.19",
+		"POI/Engineering|[Engineering]|10+ engineering|42.26 48.8",
+		"POI/Herbalism|[Herbalism]|10+ herbalism|37.69 67.99",
+		"POI/Inscription|[Inscription]|10+ inscription|38.85 73.39",
+		"POI/Jewelcrafting|[Jewelcrafting]|10+ jewelcrafting|40.27 61.57",
+		"POI/Leatherworking|[Leatherworking]|10+ leatherworking|28.83 62.12",
+		"POI/Mining|[Mining]|10+ mining|38.87 51.49",
+		"POI/Skinning|[Skinning]|10+ skinning|28.47 59.62",
+		"POI/Tailoring|[Tailoring]|10+ tailoring|32.04 66.28",
+		"POI/Cooking|[Cooking]|10+|46.51 46.26",
+		"POI/Fishing|[Fishing]|10+|43.7 74.5",
 
 		-- Rostrum of Transformation
 		"dragon-rostrum|[Rostrum of Transformation]|skyriding|25.05 50.64",
@@ -258,7 +258,7 @@ Data.POI = {
 
 	[2023] = {
 		-- Item Turn-In
-		"QuestRepeatableTurnin:small|Khadin|60+ 69979 +67298 item:191784|51.77 33.02|tooltip item:190456|{QuestRepeatableTurnin} Specialized Secrets (<itemcount:191784>)||Required Item|!{4643982} [epic]Dragon Shard of Knowledge]||Rewards|!{4643977} [rare]Artisan's Mettle] (50)|!{4624728} [Dragon Isles Knowledge]",
+		"QuestRepeatableTurnin:small|Khadin|10+ 69979 +67298 item:191784|51.77 33.02|tooltip item:190456|{QuestRepeatableTurnin} Specialized Secrets (<itemcount:191784>)||Required Item|!{4643982} [epic]Dragon Shard of Knowledge]||Rewards|!{4643977} [rare]Artisan's Mettle] (50)|!{4624728} [Dragon Isles Knowledge]",
 	},
 
 
@@ -287,8 +287,8 @@ Data.POI = {
 	-- Ring of Fates
 	[1670] = {
 		-- Portal
-		"TaxiNode_Continent_Horde|Portal to Orgrimmar|horde 60151|20.85 54.83",
-		"TaxiNode_Continent_Alliance|Portal to Stormwind|alliance 60151|20.89 45.69",
+		"TaxiNode_Continent_Horde|Portal to Orgrimmar|horde|20.85 54.83",
+		"TaxiNode_Continent_Alliance|Portal to Stormwind|alliance|20.89 45.69",
 
 		-- Teleport Pad
 		"teleportationnetwork-32x32:small|Ring of Transference|1+|52.07 57.9|link:1671",
@@ -306,20 +306,20 @@ Data.POI = {
 		"upgradeitem-32x32|[Item Upgrades]|60+|34.56 56.52",
 
 		-- Professions
-		"POI/Alchemy|[Alchemy]|48+ alchemy|39.23 40.38",
-		"POI/Blacksmithing|[Blacksmithing]|48+ blacksmithing|40.48 31.5",
-		"POI/Enchanting|[Enchanting]|48+ enchanting|48.41 29.44",
-		"POI/Engineering|[Engineering]|48+ engineering|38.06 44.66",
-		"POI/Herbalism|[Herbalism]|48+ herbalism|40.23 38.26",
-		"POI/Inscription|[Inscription]|48+ inscription|36.52 36.7",
-		"POI/Jewelcrafting|[Jewelcrafting]|48+ jewelcrafting|35.2 41.35",
-		"POI/Leatherworking|[Leatherworking]|48+ leatherworking -skinning|42.27 26.58",
-		"POI/Leatherworking|[Leatherworking and Skinning]|48+ leatherworking skinning|42.14 27.31",
-		"POI/Mining|[Mining]|48+ mining|39.3 32.94",
-		"POI/Skinning|[Skinning]|48+ skinning -leatherworking|42.13 28.08",
-		"POI/Tailoring|[Tailoring]|48+ tailoring|45.47 31.76",
-		"POI/Cooking|[Cooking]|48+|46.82 22.66",
-		"POI/Fishing|[Fishing]|48+|46.14 26.35",
+		"POI/Alchemy|[Alchemy]|10+ alchemy|39.23 40.38",
+		"POI/Blacksmithing|[Blacksmithing]|10+ blacksmithing|40.48 31.5",
+		"POI/Enchanting|[Enchanting]|10+ enchanting|48.41 29.44",
+		"POI/Engineering|[Engineering]|10+ engineering|38.06 44.66",
+		"POI/Herbalism|[Herbalism]|10+ herbalism|40.23 38.26",
+		"POI/Inscription|[Inscription]|10+ inscription|36.52 36.7",
+		"POI/Jewelcrafting|[Jewelcrafting]|10+ jewelcrafting|35.2 41.35",
+		"POI/Leatherworking|[Leatherworking]|10+ leatherworking -skinning|42.27 26.58",
+		"POI/Leatherworking|[Leatherworking and Skinning]|10+ leatherworking skinning|42.14 27.31",
+		"POI/Mining|[Mining]|10+ mining|39.3 32.94",
+		"POI/Skinning|[Skinning]|10+ skinning -leatherworking|42.13 28.08",
+		"POI/Tailoring|[Tailoring]|10+ tailoring|45.47 31.76",
+		"POI/Cooking|[Cooking]|10+|46.82 22.66",
+		"POI/Fishing|[Fishing]|10+|46.14 26.35",
 	},
 
 
