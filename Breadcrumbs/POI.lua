@@ -48,6 +48,21 @@ local _, Data = ...
 Data.POI = {
 
 
+	--[[ Undermine ]]--
+
+	[2346] = {
+		-- Item Turn-In
+		"QuestRepeatableTurnin:small|Angelo Rustbin|item:233246|25.75 38.14|tooltip item:233558|{348555} [uncommon]Gunk-Covered Thingy] (<itemcount:233246>)",
+
+		-- Cartel Headquarters
+		"poi-hub|[The Scapshop]|1+|39.15 22.19|tooltip|Bilgewater Cartel",
+		"poi-hub|[Port Authority]|1+|63.42 16.74|tooltip|Blackwater Cartel",
+		"poi-hub|[Venture Plaza]|1+|53.3 72.72|tooltip|Venture Company",
+		"poi-hub|[Steamwheedle Laboratories]|1+|27.13 72.58|tooltip|Steamwheedle Cartel",
+		"poi-hub|[Hovel Hill]|86961|29.74 41.1|tooltip|Darkfuse Solutions",
+	},
+
+
 	--[[ Isle of Dorn ]]--
 
 	-- Dornogal
