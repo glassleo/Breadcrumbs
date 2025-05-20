@@ -165,6 +165,12 @@ Data.Vignettes = {
 	[2215] = {
 		-- Treasure
 		[81978] = "Lost Memento|68+|50.05 13.83||treasure item:224575|Contains|!{133278} [rare]Lightbearer's Pendant]|!{2967113} [Resonance Crystals]",
+		--[] = "Illuminated Footlocker|68+|58.39 27.16|\"Catch 5 Star Glimmers inside the cave to reveal the treasure\"|treasure item:224552|Contains|!{135432} [rare]Cave Spelunker's Torch]|!{2967113} [Resonance Crystals]",
+		[83263] = {
+			"[friendly]Caesper]|68+ item:225238|41.76 58.29|\"Feed Caesper the {134016} [Meaty Haunch] to wake him up\"|treasure atlas:VignetteLootElite item:225639|Rewards|!{4549193} [Recipe: Exquisitely Eviscerated Muscle]",
+			"[friendly]Caesper]|68+ -item:225238|41.76 58.29|\"Buy a {134016} [Meaty Haunch] from [friendly]Torran Dellain] at Dunelle's Kindness to be able to wake him up\"|treasure atlas:vignettelootelite-locked item:225639|Rewards|!{4549193} [Recipe: Exquisitely Eviscerated Muscle]",
+			"[friendly]Torran Dellain]|68+ -item:225238|69.26 43.93||treasure item:225238|Sells|!{134016} [Meaty Haunch]",
+		},
 
 		-- Alchemy Treasure
 		[83844] = "Chemist's Purified Water|alchemy skill:alchemy11:1|42.65 55.1||treasure item:226269|Contains|!{132852} [epic]Chemist's Purified Water]",
