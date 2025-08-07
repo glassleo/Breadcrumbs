@@ -67,10 +67,6 @@ Data.POI = {
 
 	-- Dornogal
 	[2339] = {
-		-- Travel
-		"TaxiNode_Continent_Horde|Portal to Orgrimmar|horde|38.18 27.22",
-		"TaxiNode_Continent_Alliance|Portal to Stormwind|alliance|41.17 22.68",
-
 		-- Mailbox
 		"mailbox:objective|Mailbox|mailbox|58.06 55.58|high", -- The Forgegrounds
 		"mailbox:objective|Mailbox|mailbox|45.68 68.71|high", -- The Forgegrounds
