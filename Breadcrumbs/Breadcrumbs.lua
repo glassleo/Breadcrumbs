@@ -1945,6 +1945,7 @@ function Breadcrumbs:Validate(str)
 					if race == "kultiran" and v == "kultiranhuman" then pass = true end
 					if race == "zandalaritroll" and v == "zandalari" then pass = true end
 					if v == "mailbox" and Setting_EnableMailboxes then pass = true end
+					if v == "remix" and PlayerGetTimerunningSeasonID() then pass = true end
 
 					-- Must not match...
 					if string.match(v, "%-(%a+)") and not pass then
@@ -2040,6 +2041,7 @@ function Breadcrumbs:Validate(str)
 						if race == "lightforgeddraenei" and w == "lightforged" then pass = false end
 						if race == "kultiran" and w == "kultiranhuman" then pass = false end
 						if race == "zandalaritroll" and w == "zandalari" then pass = false end
+						if w == "remix" and PlayerGetTimerunningSeasonID() then pass = false end
 					end
 
 					-- Broken
