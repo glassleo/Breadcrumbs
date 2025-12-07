@@ -165,7 +165,11 @@ Data.Vignettes = {
 	[2215] = {
 		-- Treasure
 		[81978] = "Lost Memento|68+|50.05 13.83||treasure item:224575|Contains|!{133278} [rare]Lightbearer's Pendant]|!{2967113} [Resonance Crystals]",
-		--[] = "Illuminated Footlocker|68+|58.39 27.16|\"Catch 5 Star Glimmers inside the cave to reveal the treasure\"|treasure item:224552|Contains|!{135432} [rare]Cave Spelunker's Torch]|!{2967113} [Resonance Crystals]",
+		[83273] = {
+			"Smuggler's Treasure|68+ item:225335|55.13 51.94||treasure atlas:VignetteLootElite item:226021|Contains|!{1001622} [uncommon]Jar of Pickles]|!{2967113} [Resonance Crystals]",
+			"Smuggler's Treasure|68+ -item:225335|55.13 51.94|\"The {237379} [Smuggler's Key] can be found on the [dead]Dead Arathi] below\"|treasure atlas:vignettelootelite-locked item:226021|Contains|!{1001622} [uncommon]Jar of Pickles]|!{2967113} [Resonance Crystals]",
+		},
+		[81468] = "Illuminated Footlocker|68+|58.39 27.16|\"Catch 5 Star Glimmers inside the cave to reveal the treasure\"|treasure item:224552|Contains|!{135432} [rare]Cave Spelunker's Torch]|!{2967113} [Resonance Crystals]",
 		[83263] = {
 			"[friendly]Caesper]|68+ item:225238|41.76 58.29|\"Feed Caesper the {134016} [Meaty Haunch] to wake him up\"|treasure atlas:VignetteLootElite item:225639|Rewards|!{4549193} [Recipe: Exquisitely Eviscerated Muscle]",
 			"[friendly]Caesper]|68+ -item:225238|41.76 58.29|\"Buy a {134016} [Meaty Haunch] from [friendly]Torran Dellain] at Dunelle's Kindness to be able to wake him up\"|treasure atlas:vignettelootelite-locked item:225639|Rewards|!{4549193} [Recipe: Exquisitely Eviscerated Muscle]",
@@ -243,6 +247,7 @@ Data.Vignettes = {
 		-- Engineering Treasure
 		[83872] = "Puppeted Mechanical Spider|engineering skill:engineering11:1|56.85 38.58|\"On a table inside The Trap Door\"|treasure item:226298|Contains|!{2027945} [epic]Puppeted Mechanical Spider]",
 		[83873] = "Emptied Venom Canister|engineering skill:engineering11:1|53.36 68.93||treasure link:2213 item:226299|Contains|!{967528} [epic]Emptied Venom Canister]",
+		[82632] = "[neutral]Rikku]|engineering skill:engineering11:1|51.68 76.04 -item:224052||treasure scroll link:2213 item:224052|Sells|!{4624730} [rare]Clocks, Gears, Sprockets, and Legs]",
 		
 		-- Herbalism Treasure
 		[83880] = "Web-Entangled Lotus|herbalism skill:herbalism11:1|50.38 72.31||treasure link:2213 item:226306|Contains|!{876365} [epic]Web-Entangled Lotus]",
@@ -302,6 +307,7 @@ Data.Vignettes = {
 		
 		-- Engineering Treasure
 		[83873] = "Emptied Venom Canister|engineering skill:engineering11:1|63.14 11.16||treasure item:226299|Contains|!{967528} [epic]Emptied Venom Canister]",
+		[82632] = "[neutral]Rikku]|engineering skill:engineering11:1|58.34 31.55 -item:224052||treasure scroll item:224052|Sells|!{4624730} [rare]Clocks, Gears, Sprockets, and Legs]",
 
 		-- Herbalism Treasure
 		[83880] = "Web-Entangled Lotus|herbalism skill:herbalism11:1|54.6 20.88||treasure item:226306|Contains|!{876365} [epic]Web-Entangled Lotus]",
@@ -356,6 +362,7 @@ Data.Vignettes = {
 
 		-- Engineering Treasure
 		[83873] = "Emptied Venom Canister|engineering skill:engineering11:1|63.14 11.16||treasure up link:2213 item:226299|Contains|!{967528} [epic]Emptied Venom Canister]",
+		[82632] = "[neutral]Rikku]|engineering skill:engineering11:1|58.34 31.55 -item:224052||treasure scroll up link:2213 item:224052|Sells|!{4624730} [rare]Clocks, Gears, Sprockets, and Legs]",
 
 		-- Herbalism Treasure
 		[83880] = "Web-Entangled Lotus|herbalism skill:herbalism11:1|54.6 20.88||treasure up link:2213 item:226306|Contains|!{876365} [epic]Web-Entangled Lotus]",
@@ -1450,7 +1457,7 @@ Data.Vignettes = {
 		[40475] = "Highmountain Clan Chest|10+|45.13 59.92||treasure link:750|Contains|!{1397630} [Order Resources]", -- Thunder Totem
 		[40475] = "Small Treasure Chest|10+|45.13 59.92||treasure link:750|Contains|!{1397630} [Order Resources]", -- Thunder Totem
 		[40476] = "Glimmering Treasure Chest|10+|38.3 61.01||treasure down link:655|Contains|!{1397630} [Order Resources]", -- Lifespring Cavern
-		[40484] = "Small Treasure Chest|10+|53.04 52.23|\"Inside Candle Rock\"|treasure down|Contains|!{1397630} [Order Resources]", -- Candle Rock
+		[40484] = "Small Treasure Chest|10+|53.46 43.55|\"Inside Candle Rock\"|treasure down|Contains|!{1397630} [Order Resources]", -- Candle Rock
 		--[40489] = "Treasure Chest|10+|85.23 37.96||treasure down link:651|Contains|!{1397630} [Order Resources]", -- Bitestone Enclave
 		[40493] = "Small Treasure Chest|10+|53.04 52.23|\"On the furthest ledge inside Crystal Fissure\"|treasure down|Contains|!{1397630} [Order Resources]", -- Crystal Fissure
 		[40506] = "Small Treasure Chest|10+|50.81 35.04||treasure|Contains|!{1397630} [Order Resources]",
