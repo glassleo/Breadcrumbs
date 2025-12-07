@@ -127,6 +127,8 @@ Data.HiddenBonusObjectiveQuests = {
 		broken			Quest is broken and cannot be completed, it will be hidden unless the user has decided to display broken quests
 		broken:n		Quest is broken if you are level n or higher and cannot be completed, it will be hidden when above this level unless the user has decided to display broken quests
 
+		remix 			Timerunning (Remix) is currently active
+
 	Almost all conditions can be inverted by adding - in front of them
 	Some examples:
 		dwarf			Must be a dwarf
@@ -2645,7 +2647,7 @@ Data.Quests = {
 		[48507] = "The Hand of Fate|45+ 46734 horde -47835|28.49 48.34|Archmage Khadgar", -- Horde - Auto-Accept version is 47835
 
 		-- Wakening Essence
-		[50432] = "Titanic Innovation|45+|45.21 29.1|Arcanomancer Vridiel|legendary",
+		[50432] = "Titanic Innovation|45+ -remix|45.21 29.1|Arcanomancer Vridiel|legendary",
 
 		-- Cooking
 		-- Nomi pops up with 40988 (Too Many Cooks) or 40989 (The Prodigal Sous Chef) automatically after learning a Legion cooking recipe
@@ -3486,7 +3488,7 @@ Data.Quests = {
 		[38646] = "A Sight For Sore Eyes|10+ 38643,39149|38.8 61.4|Granny Marl",
 		[38647] = "For the Corn!|10+ 38643,39149|38.8 61.4|Granny Marl",
 		[39117] = "Shriek No More|10+ 38643,39149|37 58.4|Cecily Radcliffe",
-		[38711] = "The Warden's Signet|10+ 38643,39149|39.12 64.5|{1025252} [Warden's Signet]||Drops from [hostile]Lelyn Swiftshadow]",
+		[38711] = "The Warden's Signet|10+ 38643,39149 -remix|39.12 64.5|{1025252} [Warden's Signet]||Drops from [hostile]Lelyn Swiftshadow]",
 		[39015] = "Grumpy|10+|38.64 65.64|Grumpy||\"Available after walking through the fire to the top floor of Heathrow Manor\"",
 
 		-- Black Rook Hold
@@ -3521,7 +3523,7 @@ Data.Quests = {
 		[42857] = "Moist Around the Hedges|10+|66.8 75.7|Moist Grizzlecomb",
 
 		-- Mark of the Demon
-		[38656] = "Mark of the Demon|10+|56.77 54.33|{133791} [Demonic Emblem]||Drops from [hostile]Gravax the Desecrator]",
+		[38656] = "Mark of the Demon|10+ -remix|56.77 54.33|{133791} [Demonic Emblem]||Drops from [hostile]Gravax the Desecrator]",
 
 		-- Sylvan Falls
 		[41094] = "Hatchlings of the Talon|10+|76.08 31.39|Aviana",
@@ -3982,8 +3984,8 @@ Data.Quests = {
 		[39597] = "The Blessing of the Watchers|10+ 39594|46.32 44.83|Yotnar",
 
 		-- The Trial of Will
-		[38337] = "Built to Scale|10+ alliance|44.45 64.34|{134308} [Storm Drake Scale]||Drops from [hostile]Stormwing Drake] in Hrydshal", -- Alliance
-		[38616] = "Built to Scale|10+ horde|44.45 64.34|{134308} [Storm Drake Scale]||Drops from [hostile]Stormwing Drake] in Hrydshal", -- Horde
+		[38337] = "Built to Scale|10+ alliance -remix|44.45 64.34|{134308} [Storm Drake Scale]||Drops from [hostile]Stormwing Drake] in Hrydshal", -- Alliance
+		[38616] = "Built to Scale|10+ horde -remix|44.45 64.34|{134308} [Storm Drake Scale]||Drops from [hostile]Stormwing Drake] in Hrydshal", -- Horde
 		[38473] = "Will of the Thorignir|10+ 39597 alliance|43.17 49.15|Havi", -- Alliance
 		[38611] = "Will of the Thorignir|10+ 39597 horde|41.83 43.06|Havi", -- Horde
 		[38312] = "A Grapple a Day|10+ 38473 alliance|37.38 63.85|Commander Lorna Crowley", -- Alliance
@@ -4273,8 +4275,8 @@ Data.Quests = {
 		[46734] = "Assault on Broken Shore|45+ 46730|18.5 33.1|Archmage Khadgar|link:627|Visit {!}Archmage Khadgar in Krasus' Landing to continue the Broken Shore campaign",
 		
 		-- Begin Construction
-		[46286] = "Legionfall Supplies|45+ 46734|44.54 63.15|Commander Chambers",
-		[46245] = "Begin Construction|45+ 46286|44.54 63.15|Commander Chambers",
+		[46286] = "Legionfall Supplies|45+ 46734 -remix|44.54 63.15|Commander Chambers",
+		[46245] = "Begin Construction|45+ 46286 -remix|44.54 63.15|Commander Chambers",
 
 		-- Aalgen Point
 		[46832] = "Aalgen Point|45+ 46734|44.54 63.15|Commander Chambers",
@@ -4295,7 +4297,7 @@ Data.Quests = {
 		[46509] = "Tomb Raidering|45+ 46501|39.54 71.68|Excavator Karla",
 		[46510] = "Ship Graveyard|45+ 46509|39.54 71.68|Excavator Karla",
 		[46511] = "We're Treasure Hunters|45+ 46510|39.54 71.68|Excavator Karla",
-		[46666] = "The Motherlode|45+ 46511|39.54 71.68|Excavator Karla||Available the following day after completing We're Treasure Hunters",
+		[46666] = "The Motherlode|45+ 46511 reset:46511|39.54 71.68|Excavator Karla||Available the following day after completing We're Treasure Hunters",
 
 		-- Cathedral of Eternal Night
 		[46253] = "Pillars of Creation|45+ 46734|44.73 63.27|Archmage Khadgar|dungeon",
@@ -4353,7 +4355,7 @@ Data.Quests = {
 		[47889] = "The Speaker Calls|45+ 47473,48929|39.13 24.9|High Exarch Turalyon",
 
 		-- The Vindicaar
-		[49445] = "The Prime Exchange|45+|39.61 65.12|Maras|link:832", -- unknown prereq
+		[49445] = "The Prime Exchange|45+ -remix|39.61 65.12|Maras|link:832", -- unknown prereq
 		[47287] = {
 			"The Vindicaar Matrix Core|45+ 47743 -48559|43.21 27.82|Grand Artificer Romuul",
 			"The Vindicaar Matrix Core|45+ 47743 48559|43.41 23.31|Grand Artificer Romuul",
