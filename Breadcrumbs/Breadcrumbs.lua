@@ -31,11 +31,11 @@ local Setting_EnableMailboxesEverywhere = false
 local Setting_EnableUnitTooltips = true
 local Setting_EnableAutomapGravidRepose = true
 -- Debug
-local Setting_Debug_QuestWatcher = true
+local Setting_Debug_QuestWatcher = false
 
 
 -- Constants
-local CHROMIETIME_MAXLEVEL = 69 -- Maximum level for Chromie Time
+local CHROMIETIME_MAXLEVEL = 71 -- Maximum level for Chromie Time
 -- https://www.townlong-yak.com/framexml/live/GlobalStrings.lua
 local QUEST_ICONS_FILE = "Interface\\QuestFrame\\QuestTypeIcons"
 local AVAILABLE_QUEST = AVAILABLE_QUEST -- Available quest
@@ -64,6 +64,7 @@ local SkillLineToKeyword = {
 	[794] = "archaeology",
 }
 
+-- https://wago.tools/db2/SkillLine
 local SkillLines = {
 	[164] = { -- Blacksmithing
 		[2477] = 1, -- Classic
@@ -77,6 +78,7 @@ local SkillLines = {
 		[2751] = 9, -- Shadowlands
 		[2822] = 10, -- Dragon Isles
 		[2872] = 11, -- Khaz Algar
+		[2907] = 12, -- Midnight
 	},
 	[165] = { -- Leatherworking
 		[2532] = 1, -- Classic
@@ -90,6 +92,7 @@ local SkillLines = {
 		[2758] = 9, -- Shadowlands
 		[2830] = 10, -- Dragon Isles
 		[2880] = 11, -- Khaz Algar
+		[2915] = 12, -- Midnight
 	},
 	[171] = { -- Alchemy
 		[2485] = 1, -- Classic
@@ -103,6 +106,7 @@ local SkillLines = {
 		[2750] = 9, -- Shadowlands
 		[2823] = 10, -- Dragon Isles
 		[2871] = 11, -- Khaz Algar
+		[2906] = 12, -- Midnight
 	},
 	[182] = { -- Herbalism
 		[2556] = 1, -- Classic
@@ -116,6 +120,7 @@ local SkillLines = {
 		[2760] = 9, -- Shadowlands
 		[2832] = 10, -- Dragon Isles
 		[2877] = 11, -- Khaz Algar
+		[2912] = 12, -- Midnight
 	},
 	[185] = { -- Cooking
 		[2548] = 1, -- Classic
@@ -129,6 +134,7 @@ local SkillLines = {
 		[2752] = 9, -- Shadowlands
 		[2824] = 10, -- Dragon Isles
 		[2873] = 11, -- Khaz Algar
+		[2908] = 12, -- Midnight
 	},
 	[186] = { -- Mining
 		[2572] = 1, -- Classic
@@ -142,6 +148,7 @@ local SkillLines = {
 		[2761] = 9, -- Shadowlands
 		[2833] = 10, -- Dragon Isles
 		[2881] = 11, -- Khaz Algar
+		[2916] = 12, -- Midnight
 	},
 	[197] = { -- Tailoring
 		[2540] = 1, -- Classic
@@ -155,6 +162,7 @@ local SkillLines = {
 		[2759] = 9, -- Shadowlands
 		[2831] = 10, -- Dragon Isles
 		[2883] = 11, -- Khaz Algar
+		[2918] = 12, -- Midnight
 	},
 	[202] = { -- Engineering
 		[2506] = 1, -- Classic
@@ -168,6 +176,7 @@ local SkillLines = {
 		[2755] = 9, -- Shadowlands
 		[2827] = 10, -- Dragon Isles
 		[2875] = 11, -- Khaz Algar
+		[2910] = 12, -- Midnight
 	},
 	[333] = { -- Enchanting
 		[2494] = 1, -- Classic
@@ -181,6 +190,7 @@ local SkillLines = {
 		[2753] = 9, -- Shadowlands
 		[2825] = 10, -- Dragon Isles
 		[2874] = 11, -- Khaz Algar
+		[2909] = 12, -- Midnight
 	},
 	[356] = { -- Fishing
 		[2592] = 1, -- Classic
@@ -194,6 +204,7 @@ local SkillLines = {
 		[2754] = 9, -- Shadowlands
 		[2826] = 10, -- Dragon Isles
 		[2876] = 11, -- Khaz Algar
+		[2911] = 12, -- Midnight
 	},
 	[393] = { -- Skinning
 		[2564] = 1, -- Classic
@@ -207,6 +218,7 @@ local SkillLines = {
 		[2762] = 9, -- Shadowlands
 		[2834] = 10, -- Dragon Isles
 		[2882] = 11, -- Khaz Algar
+		[2917] = 12, -- Midnight
 	},
 	[755] = { -- Jewelcrafting
 		[2524] = 1, -- Classic
@@ -220,6 +232,7 @@ local SkillLines = {
 		[2757] = 9, -- Shadowlands
 		[2829] = 10, -- Dragon Isles
 		[2879] = 11, -- Khaz Algar
+		[2914] = 12, -- Midnight
 	},
 	[773] = { -- Inscription
 		[2514] = 1, -- Classic
@@ -233,6 +246,7 @@ local SkillLines = {
 		[2756] = 9, -- Shadowlands
 		[2828] = 10, -- Dragon Isles
 		[2878] = 11, -- Khaz Algar
+		[2913] = 12, -- Midnight
 	},
 	[794] = { -- Archaeology
 		[794] = true, -- Archaeology
