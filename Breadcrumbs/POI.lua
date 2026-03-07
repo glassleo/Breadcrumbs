@@ -48,6 +48,54 @@ local _, Data = ...
 Data.POI = {
 
 
+	--[[ Eversong Woods ]]--
+
+	-- Silvermoon City
+	[2393] = {
+		-- Mailbox
+		--"mailbox:objective|Mailbox|mailbox|58.06 55.58|high", -- 
+
+		-- Innkeeper
+		"Innkeeper|Wayfarer's Rest|1+|56.46 70.35",
+		"Innkeeper|Silvermoon City Inn|horde|66.91 62.06",
+
+		-- Crafting Orders
+		--"Professions-Crafting-Orders-Icon|Crafting Orders|1+|59.74 55.73",
+
+		-- Item Upgrades
+		--"upgradeitem-32x32|[Item Upgrades]|60+|52.08 42.1||Mythic Aspirations",
+		--"upgradeitem-32x32|[Item Upgrades]|60+|59.98 69.73||Contender's Gate",
+
+		-- Professions
+		"POI/Alchemy|[Alchemy]|80+ alchemy|47.02 51.88|low",
+		"POI/Blacksmithing|[Blacksmithing]|80+ blacksmithing|43.77 51.29|low",
+		"POI/Enchanting|[Enchanting]|80+ enchanting|47.98 53.64|low",
+		"POI/Engineering|[Engineering]|80+ engineering|43.53 53.95|low",
+		"POI/Herbalism|[Herbalism]|80+ herbalism|48.3 51.41|low",
+		"POI/Inscription|[Inscription]|80+ inscription|46.78 51.48|low",
+		"POI/Jewelcrafting|[Jewelcrafting]|80+ jewelcrafting|47.92 55.15|low",
+		"POI/Leatherworking|[Leatherworking]|80+ leatherworking|43.15 55.83|low",
+		"POI/Mining|[Mining]|80+ mining|42.6 52.93|low",
+		"POI/Skinning|[Skinning]|80+ skinning|43.24 55.41|low",
+		"POI/Tailoring|[Tailoring]|80+ tailoring|48.23 54.16|low",
+		--"POI/Cooking|[Cooking]|80+|56.36 69.83|low|Stonelight Rest",
+		"POI/Fishing|[Fishing]|80+|44.83 60.37|low",
+
+		-- Rostrum of Transformation
+		"dragon-rostrum|[Rostrum of Transformation]|skyriding|52.19 73.67",
+
+		-- Barber
+		"Barbershop-32x32|[Barber]|1+|43.04 78.52",
+
+		-- Pets
+		--"WildBattlePet|[Pet Charm Trader]|1+|58.51 64.86",
+		"Stablemaster|[Stable Master]|1+|46.35 55.56",
+
+		-- Trading Post
+		-- 48.82 78.03
+	},
+
+
 	--[[ Undermine ]]--
 
 	[2346] = {
@@ -93,19 +141,19 @@ Data.POI = {
 		"poi-horde|[Conquest & Honor Quartermaster]|70+ horde|55.25 76.81",
 
 		-- Professions
-		"POI/Alchemy|[Alchemy]|68+ alchemy|47.14 70.71|low",
-		"POI/Blacksmithing|[Blacksmithing]|68+ blacksmithing|49.05 63.22|low",
-		"POI/Enchanting|[Enchanting]|68+ enchanting|52.48 71.36|low",
-		"POI/Engineering|[Engineering]|68+ engineering|49.04 56.07|low",
-		"POI/Herbalism|[Herbalism]|68+ herbalism|44.76 69.3|low",
-		"POI/Inscription|[Inscription]|68+ inscription|48.75 71.18|low",
-		"POI/Jewelcrafting|[Jewelcrafting]|68+ jewelcrafting|49.48 71.15|low",
-		"POI/Leatherworking|[Leatherworking]|68+ leatherworking|54.45 58.97|low",
-		"POI/Mining|[Mining]|68+ mining|52.62 52.53|low",
-		"POI/Skinning|[Skinning]|68+ skinning|54.27 56.66|low",
-		"POI/Tailoring|[Tailoring]|68+ tailoring|54.58 63.43|low",
-		"POI/Cooking|[Cooking]|68+|43.91 45.48|low|Stonelight Rest",
-		"POI/Fishing|[Fishing]|68+|50.55 26.81|low",
+		"POI/Alchemy|[Alchemy]|10+ alchemy|47.14 70.71|low",
+		"POI/Blacksmithing|[Blacksmithing]|10+ blacksmithing|49.05 63.22|low",
+		"POI/Enchanting|[Enchanting]|10+ enchanting|52.48 71.36|low",
+		"POI/Engineering|[Engineering]|10+ engineering|49.04 56.07|low",
+		"POI/Herbalism|[Herbalism]|10+ herbalism|44.76 69.3|low",
+		"POI/Inscription|[Inscription]|10+ inscription|48.75 71.18|low",
+		"POI/Jewelcrafting|[Jewelcrafting]|10+ jewelcrafting|49.48 71.15|low",
+		"POI/Leatherworking|[Leatherworking]|10+ leatherworking|54.45 58.97|low",
+		"POI/Mining|[Mining]|10+ mining|52.62 52.53|low",
+		"POI/Skinning|[Skinning]|10+ skinning|54.27 56.66|low",
+		"POI/Tailoring|[Tailoring]|10+ tailoring|54.58 63.43|low",
+		"POI/Cooking|[Cooking]|10+|43.91 45.48|low|Stonelight Rest",
+		"POI/Fishing|[Fishing]|10+|50.55 26.81|low",
 
 		-- Rostrum of Transformation
 		"dragon-rostrum|[Rostrum of Transformation]|skyriding|47.97 67.88",
