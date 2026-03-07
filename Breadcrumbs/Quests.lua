@@ -111,8 +111,8 @@ Data.HiddenBonusObjectiveQuests = {
 
 		skill:x:n		Must have n or more skill in TradeSkillLine ID x (see https://wowpedia.fandom.com/wiki/TradeSkillLineID)
 						For example, skill:2832:25 would require Dragon Isles Herbalism at skill level 25 or higher
-		skill:profX:n	Shorthand for TradeSkillLine ID, where prof is the name of the profession and X is the expansion number (Classic is 1, Burning Crusade is 2, ... Dragonflight is 10)
-						For example, skill:herbalism10:25 is equivalent to skill:2832:25
+		skill:prof:X:n	Shorthand for TradeSkillLine ID, where prof is the name of the profession and X is the expansion number (Classic is 1, Burning Crusade is 2, ... Midnight is 12)
+						For example, skill:herbalism:10:25 is equivalent to skill:2832:25
 						Archaeology does not have expansion categories, so in this case skill:archaeology:525 is equivalent to skill:794:525
 
 		profperk:x:y	Must have earned specialization perk y in profession with TradeSkillLine ID x

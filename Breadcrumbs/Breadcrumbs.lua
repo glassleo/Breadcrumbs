@@ -25,13 +25,13 @@ local Setting_EnableObjectives = true
 local Setting_EnableTreasures = true
 local Setting_EnableVignettes = true
 local Setting_EnablePOI = true
-local Setting_EnableMailboxes = true
+local Setting_EnableMailboxes = false
 local Setting_EnableMailboxesEverywhere = false
 --local Setting_EnableMailboxToggleButton = true -- NYI
 local Setting_EnableUnitTooltips = true
 local Setting_EnableAutomapGravidRepose = true
 -- Debug
-local Setting_Debug_QuestWatcher = false
+local Setting_Debug_QuestWatcher = true
 
 
 -- Constants
@@ -589,12 +589,16 @@ function Breadcrumbs:UpdateSkillLines(event, message)
 		skill = tonumber(skill or 0) or 0
 		level = tonumber(level or 0) or 0
 
-		if skill > 0 and level > 0 then
+		if skill > 0 then
 			for prof, lines in pairs(SkillLines) do
 				for id, _ in pairs(lines) do
 					if id == skill then
 						--if ZA and ZA.DebugMode then print(id, level) end
-						BreadcrumbsSkillLines[name.."-"..realm][id] = level
+						if level > 0 then
+							BreadcrumbsSkillLines[name.."-"..realm][id] = level -- Learned or increased
+						elseif level == 0 then
+							BreadcrumbsSkillLines[name.."-"..realm][id] = nil -- Unlearned
+						end
 					end
 				end
 			end
@@ -1658,150 +1662,22 @@ Breadcrumbs:RegisterEvent("TRADE_SKILL_SHOW", "UpdateSkillLines")
 function Breadcrumbs:Validate(str)
 	local str = str or ""
 
-	str = string.gsub(str, ":blacksmithing11",":2872")
-	str = string.gsub(str, ":blacksmithing10",":2822")
-	str = string.gsub(str, ":blacksmithing1", ":2477")
-	str = string.gsub(str, ":blacksmithing2", ":2476")
-	str = string.gsub(str, ":blacksmithing3", ":2475")
-	str = string.gsub(str, ":blacksmithing4", ":2474")
-	str = string.gsub(str, ":blacksmithing5", ":2473")
-	str = string.gsub(str, ":blacksmithing6", ":2472")
-	str = string.gsub(str, ":blacksmithing7", ":2454")
-	str = string.gsub(str, ":blacksmithing8", ":2437")
-	str = string.gsub(str, ":blacksmithing9", ":2751")
-	str = string.gsub(str, ":leatherworking11",":2880")
-	str = string.gsub(str, ":leatherworking10",":2830")
-	str = string.gsub(str, ":leatherworking1", ":2532")
-	str = string.gsub(str, ":leatherworking2", ":2531")
-	str = string.gsub(str, ":leatherworking3", ":2530")
-	str = string.gsub(str, ":leatherworking4", ":2529")
-	str = string.gsub(str, ":leatherworking5", ":2528")
-	str = string.gsub(str, ":leatherworking6", ":2527")
-	str = string.gsub(str, ":leatherworking7", ":2526")
-	str = string.gsub(str, ":leatherworking8", ":2525")
-	str = string.gsub(str, ":leatherworking9", ":2758")
-	str = string.gsub(str, ":alchemy11",":2871")
-	str = string.gsub(str, ":alchemy10",":2823")
-	str = string.gsub(str, ":alchemy1", ":2485")
-	str = string.gsub(str, ":alchemy2", ":2484")
-	str = string.gsub(str, ":alchemy3", ":2483")
-	str = string.gsub(str, ":alchemy4", ":2482")
-	str = string.gsub(str, ":alchemy5", ":2481")
-	str = string.gsub(str, ":alchemy6", ":2480")
-	str = string.gsub(str, ":alchemy7", ":2479")
-	str = string.gsub(str, ":alchemy8", ":2478")
-	str = string.gsub(str, ":alchemy9", ":2750")
-	str = string.gsub(str, ":herbalism11",":2877")
-	str = string.gsub(str, ":herbalism10",":2832")
-	str = string.gsub(str, ":herbalism1", ":2556")
-	str = string.gsub(str, ":herbalism2", ":2555")
-	str = string.gsub(str, ":herbalism3", ":2554")
-	str = string.gsub(str, ":herbalism4", ":2553")
-	str = string.gsub(str, ":herbalism5", ":2552")
-	str = string.gsub(str, ":herbalism6", ":2551")
-	str = string.gsub(str, ":herbalism7", ":2550")
-	str = string.gsub(str, ":herbalism8", ":2549")
-	str = string.gsub(str, ":herbalism9", ":2760")
-	str = string.gsub(str, ":cooking11",":2873")
-	str = string.gsub(str, ":cooking10",":2824")
-	str = string.gsub(str, ":cooking1", ":2548")
-	str = string.gsub(str, ":cooking2", ":2547")
-	str = string.gsub(str, ":cooking3", ":2546")
-	str = string.gsub(str, ":cooking4", ":2545")
-	str = string.gsub(str, ":cooking5", ":2544")
-	str = string.gsub(str, ":cooking6", ":2543")
-	str = string.gsub(str, ":cooking7", ":2542")
-	str = string.gsub(str, ":cooking8", ":2541")
-	str = string.gsub(str, ":cooking9", ":2752")
-	str = string.gsub(str, ":mining11",":2881")
-	str = string.gsub(str, ":mining10",":2833")
-	str = string.gsub(str, ":mining1", ":2572")
-	str = string.gsub(str, ":mining2", ":2571")
-	str = string.gsub(str, ":mining3", ":2570")
-	str = string.gsub(str, ":mining4", ":2569")
-	str = string.gsub(str, ":mining5", ":2568")
-	str = string.gsub(str, ":mining6", ":2567")
-	str = string.gsub(str, ":mining7", ":2566")
-	str = string.gsub(str, ":mining8", ":2565")
-	str = string.gsub(str, ":mining9", ":2761")
-	str = string.gsub(str, ":tailoring11",":2883")
-	str = string.gsub(str, ":tailoring10",":2831")
-	str = string.gsub(str, ":tailoring1", ":2540")
-	str = string.gsub(str, ":tailoring2", ":2539")
-	str = string.gsub(str, ":tailoring3", ":2538")
-	str = string.gsub(str, ":tailoring4", ":2537")
-	str = string.gsub(str, ":tailoring5", ":2536")
-	str = string.gsub(str, ":tailoring6", ":2535")
-	str = string.gsub(str, ":tailoring7", ":2534")
-	str = string.gsub(str, ":tailoring8", ":2533")
-	str = string.gsub(str, ":tailoring9", ":2759")
-	str = string.gsub(str, ":engineering11",":2875")
-	str = string.gsub(str, ":engineering10",":2827")
-	str = string.gsub(str, ":engineering1", ":2506")
-	str = string.gsub(str, ":engineering2", ":2505")
-	str = string.gsub(str, ":engineering3", ":2504")
-	str = string.gsub(str, ":engineering4", ":2503")
-	str = string.gsub(str, ":engineering5", ":2502")
-	str = string.gsub(str, ":engineering6", ":2501")
-	str = string.gsub(str, ":engineering7", ":2500")
-	str = string.gsub(str, ":engineering8", ":2499")
-	str = string.gsub(str, ":engineering9", ":2755")
-	str = string.gsub(str, ":enchanting11",":2874")
-	str = string.gsub(str, ":enchanting10",":2825")
-	str = string.gsub(str, ":enchanting1", ":2494")
-	str = string.gsub(str, ":enchanting2", ":2493")
-	str = string.gsub(str, ":enchanting3", ":2492")
-	str = string.gsub(str, ":enchanting4", ":2491")
-	str = string.gsub(str, ":enchanting5", ":2489")
-	str = string.gsub(str, ":enchanting6", ":2488")
-	str = string.gsub(str, ":enchanting7", ":2487")
-	str = string.gsub(str, ":enchanting8", ":2486")
-	str = string.gsub(str, ":enchanting9", ":2753")
-	str = string.gsub(str, ":fishing11",":2876")
-	str = string.gsub(str, ":fishing10",":2826")
-	str = string.gsub(str, ":fishing1", ":2592")
-	str = string.gsub(str, ":fishing2", ":2591")
-	str = string.gsub(str, ":fishing3", ":2590")
-	str = string.gsub(str, ":fishing4", ":2589")
-	str = string.gsub(str, ":fishing5", ":2588")
-	str = string.gsub(str, ":fishing6", ":2587")
-	str = string.gsub(str, ":fishing7", ":2586")
-	str = string.gsub(str, ":fishing8", ":2585")
-	str = string.gsub(str, ":fishing9", ":2754")
-	str = string.gsub(str, ":skinning11",":2882")
-	str = string.gsub(str, ":skinning10",":2834")
-	str = string.gsub(str, ":skinning1", ":2564")
-	str = string.gsub(str, ":skinning2", ":2563")
-	str = string.gsub(str, ":skinning3", ":2562")
-	str = string.gsub(str, ":skinning4", ":2561")
-	str = string.gsub(str, ":skinning5", ":2560")
-	str = string.gsub(str, ":skinning6", ":2559")
-	str = string.gsub(str, ":skinning7", ":2558")
-	str = string.gsub(str, ":skinning8", ":2557")
-	str = string.gsub(str, ":skinning9", ":2762")
-	str = string.gsub(str, ":jewelcrafting11",":2879")
-	str = string.gsub(str, ":jewelcrafting10",":2829")
-	str = string.gsub(str, ":jewelcrafting1", ":2524")
-	str = string.gsub(str, ":jewelcrafting2", ":2523")
-	str = string.gsub(str, ":jewelcrafting3", ":2522")
-	str = string.gsub(str, ":jewelcrafting4", ":2521")
-	str = string.gsub(str, ":jewelcrafting5", ":2520")
-	str = string.gsub(str, ":jewelcrafting6", ":2519")
-	str = string.gsub(str, ":jewelcrafting7", ":2518")
-	str = string.gsub(str, ":jewelcrafting8", ":2517")
-	str = string.gsub(str, ":jewelcrafting9", ":2757")
-	str = string.gsub(str, ":inscription11",":2878")
-	str = string.gsub(str, ":inscription10",":2828")
-	str = string.gsub(str, ":inscription1", ":2514")
-	str = string.gsub(str, ":inscription2", ":2513")
-	str = string.gsub(str, ":inscription3", ":2512")
-	str = string.gsub(str, ":inscription4", ":2511")
-	str = string.gsub(str, ":inscription5", ":2510")
-	str = string.gsub(str, ":inscription6", ":2509")
-	str = string.gsub(str, ":inscription7", ":2508")
-	str = string.gsub(str, ":inscription8", ":2507")
-	str = string.gsub(str, ":inscription9", ":2756")
-	str = string.gsub(str, ":archaeology",":794")
+	for SkillLine, SubSkillLines in pairs(SkillLines) do
+		local keyword = SkillLineToKeyword[SkillLine] or nil
+
+		if keyword and type(SubSkillLines) == "number" then
+			str = string.gsub(str, ":" .. keyword, ":" .. SkillLine)
+		elseif keyword and type(SubSkillLines) == "table" then
+			for SubSkillLine, expansion in pairs(SubSkillLines) do
+				if type(expansion) == "boolean" then
+					str = string.gsub(str, ":" .. keyword .. ":", ":" .. SkillLine .. ":") -- Archaeology
+				else
+					str = string.gsub(str, ":" .. keyword .. ":" .. expansion .. ":", ":" .. SubSkillLine .. ":")
+					str = string.gsub(str, ":" .. keyword .. expansion .. ":", ":" .. SubSkillLine .. ":")
+				end
+			end
+		end
+	end
 
 
 	local data = { strsplit(" ", strlower(str)) }
