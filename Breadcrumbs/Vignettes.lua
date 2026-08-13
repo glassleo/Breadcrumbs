@@ -13,42 +13,388 @@ local _, Data = ...
 Data.Vignettes = {
 
 
+	--[[ Eversong Woods ]]--
+	
+	-- Silvermoon City
+	[2393] = {
+		-- Alchemy Treasure
+		[89117] = "Pristine Potion|alchemy skill:alchemy:12:1|47.75 51.69|\"On a bench on top of the building\"|treasure item:238538|Contains|!{609896} [epic]Pristine Potion]",
+		[89111] = "Vial of Eversong Oddities|alchemy skill:alchemy:12:1|45.08 44.74||treasure item:238532|Contains|!{609903} [epic]Vial of Eversong Oddities]",
+		[89115] = "Freshly Plucked Peacebloom|alchemy skill:alchemy:12:1|49.1 75.85||treasure item:238536|Contains|!{7290677} [epic]Freshly Plucked Peacebloom]",
+		
+		-- Blacksmithing Treasure
+		[89183] = "Sin'dorei Master's Forgemace|blacksmithing skill:blacksmithing:12:1|49.16 61.34||treasure item:238546|Contains|!{454057} [epic]Sin'dorei Master's Forgemace]",
+		[89184] = "Silvermoon Blacksmith's Hammer|blacksmithing skill:blacksmithing:12:1|48.53 74.38||treasure item:238547|Contains|!{133061} [epic]Silvermoon Blacksmith's Hammer]",
+		[89177] = "Deconstructed Forge Techniques|blacksmithing skill:blacksmithing:12:1|26.98 60.29||treasure item:238540|Contains|!{441147} [epic]Deconstructed Forge Techniques]",
+
+		-- Enchanting Treasure
+		[89107] = "Sin'dorei Enchanting Rod|enchanting skill:enchanting:12:1|89.03 88.42||treasure item:238555 link:2395|Contains|!{237444} [epic]Sin'dorei Enchanting Rod]",
+
+		-- Engineering Treasure
+		[89133] = "One Engineer's Junk|engineering skill:engineering:12:1|51.32 74.44|\"Inside a building\"|treasure item:238556|Contains|!{134520} [epic]One Engineer's Junk]",
+		[89139] = "What To Do When Nothing Works|engineering skill:engineering:12:1|51.21 57.24|\"On a table on top of the building\"|treasure item:238562|Contains|!{133735} [epic]What To Do When Nothing Works]",
+		
+		-- Herbalism Treasure
+		[89160] = "Simple Leaf Pruners|herbalism skill:herbalism:12:1|49.01 75.93||treasure item:238470|Contains|!{135653} [epic]Simple Leaf Pruners]",
+		[89158] = "A Spade|herbalism skill:herbalism:12:1|91.57 81.26||treasure item:238472 link:2395|Contains|!{5768267} [epic]A Spade]",
+		
+		-- Inscription Treasure
+		[89073] = "Songwriter's Pen|inscription skill:inscription:12:1|47.59 50.41|\"On top of the building, on top of some crates next to some books\"|treasure item:238578|Contains|!{2356068} [epic]Songwriter's Pen]",
+		
+		-- Jewelcrafting Treasure
+		[89122] = "Sin'dorei Masterwork Chisel|jewelcrafting skill:jewelcrafting:12:1|50.5 56.57|\"Inside a building\"|treasure item:238580|Contains|!{1059115} [epic]Sin'dorei Masterwork Chisel]",
+		[89127] = "Vintage Soul Gem|jewelcrafting skill:jewelcrafting:12:1|55.43 47.81|\"Bottom level, on top of some crates\"|treasure item:238585|Contains|!{135998} [epic]Vintage Soul Gem]",
+		[89124] = "Dual-Function Magnifiers|jewelcrafting skill:jewelcrafting:12:1|28.62 46.38|{Ping_Chat_Warning} [red]has phasing issues and may not be lootable]\n\n\"Inside a building, under a table on top of a square rug\"|treasure item:238582|Contains|!{4419345} [epic]Dual-Function Magnifiers]",
+		
+		-- Leatherworking Treasure
+		[89096] = "Artisan's Considered Order|leatherworking skill:leatherworking:12:1|44.77 56.26||treasure item:238595|Contains|!{134940} [epic]Artisan's Considered Order]",
+		
+		-- Skinning Treasure
+		[89171] = "Sin'dorei Tanning Oil|skinning skill:skinning:12:1|43.13 55.63||treasure item:238633|Contains|!{1500929} [epic]Sin'dorei Tanning Oil]",
+		
+		-- Tailoring Treasure
+		[89079] = "A Really Nice Curtain|tailoring skill:tailoring:12:1|35.73 61.22|\"Inside a building\"|treasure item:238613|Contains|!{5931422} [epic]A Really Nice Curtain]",
+		[89084] = "Particularly Enchanting Tablecloth|tailoring skill:tailoring:12:1|31.79 68.28||treasure item:238618|Contains|!{1379171} [epic]Particularly Enchanting Tablecloth]",
+		[89080] = "Sin'dorei Outfitter's Ruler|tailoring skill:tailoring:12:1|31.54 96.04||treasure item:238614 link:2395|Contains|!{454058} [epic]Sin'dorei Outfitter's Ruler]",
+	},
+
+	-- Eversong Woods
+	[2395] = {
+		-- Alchemy Treasure
+		[89117] = "Pristine Potion|alchemy skill:alchemy:12:1|51.19 21.64||treasure item:238538 link:2393|Contains|!{609896} [epic]Pristine Potion]",
+		[89111] = "Vial of Eversong Oddities|alchemy skill:alchemy:12:1|50.39 19.58||treasure item:238532 link:2393|Contains|!{609903} [epic]Vial of Eversong Oddities]",
+		[89115] = "Freshly Plucked Peacebloom|alchemy skill:alchemy:12:1|51.59 28.85||treasure item:238536 link:2393|Contains|!{7290677} [epic]Freshly Plucked Peacebloom]",
+		
+		-- Blacksmithing Treasure
+		[89183] = "Sin'dorei Master's Forgemace|blacksmithing skill:blacksmithing:12:1|51.61 24.52|\"Inside a building\"|treasure item:238546 link:2393|Contains|!{454057} [epic]Sin'dorei Master's Forgemace]",
+		[89184] = "Silvermoon Blacksmith's Hammer|blacksmithing skill:blacksmithing:12:1|51.42 28.41||treasure item:238547 link:2393|Contains|!{133061} [epic]Silvermoon Blacksmith's Hammer]",
+		[89177] = "Deconstructed Forge Techniques|blacksmithing skill:blacksmithing:12:1|45 24.21||treasure item:238540 link:2393|Contains|!{441147} [epic]Deconstructed Forge Techniques]",
+		[89180] = "Metalworking Cheat Sheet|blacksmithing skill:blacksmithing:12:1|56.84 40.77||treasure item:238543|Contains|!{1500890} [epic]Metalworking Cheat Sheet]",
+		[89178] = "Silvermoon Smithing Kit|blacksmithing skill:blacksmithing:12:1|48.37 75.82||treasure item:238541|Contains|!{133060} [epic]Silvermoon Smithing Kit]",
+
+		-- Enchanting Treasure
+		[89107] = "Sin'dorei Enchanting Rod|enchanting skill:enchanting:12:1|63.49 32.59||treasure item:238555|Contains|!{237444} [epic]Sin'dorei Enchanting Rod]",
+		[89103] = "Everblazing Sunmote|enchanting skill:enchanting:12:1|60.75 53.01||treasure item:238551|Contains|!{132842} [epic]Everblazing Sunmote]",
+		[89101] = "Enchanted Sunfire Silk|enchanting skill:enchanting:12:1|40.19 61.22|\"Inside a building on the bottom floor\"|treasure item:238549|Contains|!{4549279} [epic]Enchanted Sunfire Silk]",
+		[92374] = "[friendly]Caeris Fairdawn]|enchanting skill:enchanting:12:25 -item:257600|43.46 47.42||treasure scroll item:257600|Sells|!{134556} [rare]Skill Issue: Enchanting]",
+
+		-- Engineering Treasure
+		[89133] = "One Engineer's Junk|engineering skill:engineering:12:1|52.25 28.43||treasure item:238556 link:2393|Contains|!{134520} [epic]One Engineer's Junk]",
+		[89139] = "What To Do When Nothing Works|engineering skill:engineering:12:1|52.22 23.3||treasure item:238562 link:2393|Contains|!{133735} [epic]What To Do When Nothing Works]",
+		[89135] = "Manual of Mistakes and Mishaps|engineering skill:engineering:12:1|39.57 45.79||treasure item:238558|Contains|!{133743} [epic]Manual of Mistakes and Mishaps]",
+		
+		-- Herbalism Treasure
+		[89160] = "Simple Leaf Pruners|herbalism skill:herbalism:12:1|51.56 28.87||treasure item:238470 link:2393|Contains|!{135653} [epic]Simple Leaf Pruners]",
+		[89158] = "A Spade|herbalism skill:herbalism:12:1|64.25 30.46||treasure item:238472|Contains|!{5768267} [epic]A Spade]", --!
+		
+		-- Inscription Treasure
+		[89073] = "Songwriter's Pen|inscription skill:inscription:12:1|51.14 21.26||treasure item:238578 link:2393|Contains|!{2356068} [epic]Songwriter's Pen]",
+		[89074] = "Songwriter's Quill|inscription skill:inscription:12:1|40.35 61.24|\"Inside a building on the bottom floor, on top of a table\"|treasure item:238579|Contains|!{4419478} [epic]Songwriter's Quill]",
+		[89072] = "Half-Baked Techniques|inscription skill:inscription:12:1|39.27 45.43||treasure item:238577|Contains|!{1500861} [epic]Half-Baked Techniques]",
+		[89069] = "Spare Ink|inscription skill:inscription:12:1|48.31 75.54||treasure item:238574|Contains|!{237056} [epic]Spare Ink]",
+		
+		-- Jewelcrafting Treasure
+		[89122] = "Sin'dorei Masterwork Chisel|jewelcrafting skill:jewelcrafting:12:1|52.01 23.1||treasure item:238580 link:2393|Contains|!{1059115} [epic]Sin'dorei Masterwork Chisel]",
+		[89127] = "Vintage Soul Gem|jewelcrafting skill:jewelcrafting:12:1|53.48 20.49||treasure item:238585 link:2393|Contains|!{135998} [epic]Vintage Soul Gem]",
+		[89124] = "Dual-Function Magnifiers|jewelcrafting skill:jewelcrafting:12:1|45.49 20.06||treasure item:238582 link:2393|Contains|!{4419345} [epic]Dual-Function Magnifiers]",
+		[89129] = "Sin'dorei Gem Faceters|jewelcrafting skill:jewelcrafting:12:1|39.64 38.82||treasure item:238587|Contains|!{4631356} [epic]Sin'dorei Gem Faceters]",
+		[89125] = "Poorly Rounded Vial|jewelcrafting skill:jewelcrafting:12:1|56.62 40.88|\"Inside a building, bottom flor on top of a table\"|treasure item:238583|Contains|!{132377} [epic]Poorly Rounded Vial]",
+		[93222] = "[friendly]Caeris Fairdawn]|jewelcrafting skill:jewelcrafting:12:25 -item:257599|43.46 47.42||treasure scroll item:257599|Sells|!{134556} [rare]Skill Issue: Jewelcrafting]",
+		
+		-- Leatherworking Treasure
+		[89096] = "Artisan's Considered Order|leatherworking skill:leatherworking:12:1|50.3 23.01||treasure item:238595 link:2393|Contains|!{134940} [epic]Artisan's Considered Order]",
+		
+		-- Mining Treasure
+		[89147] = "Solid Ore Punchers|mining skill:mining:12:1|37.98 45.37||treasure item:238599|Contains|!{4185388} [epic]Solid Ore Punchers]",
+		
+		-- Skinning Treasure
+		[89171] = "Sin'dorei Tanning Oil|skinning skill:skinning:12:1|49.81 22.82||treasure item:238633 link:2393|Contains|!{1500929} [epic]Sin'dorei Tanning Oil]",
+		[89173] = "Thalassian Skinning Knife|skinning skill:skinning:12:1|48.4 76.25||treasure item:238635|Contains|!{5351157} [epic]Thalassian Skinning Knife]",
+		
+		-- Tailoring Treasure
+		[89079] = "A Really Nice Curtain|tailoring skill:tailoring:12:1|47.6 24.49||treasure item:238613 link:2393|Contains|!{5931422} [epic]A Really Nice Curtain]",
+		[89084] = "Particularly Enchanting Tablecloth|tailoring skill:tailoring:12:1|46.43 26.59||treasure item:238618 link:2393|Contains|!{1379171} [epic]Particularly Enchanting Tablecloth]",
+		[89080] = "Sin'dorei Outfitter's Ruler|tailoring skill:tailoring:12:1|46.36 34.86|\"Inside the sanctum at the top level\"|treasure item:238614|Contains|!{454058} [epic]Sin'dorei Outfitter's Ruler]",
+		[93201] = "[friendly]Caeris Fairdawn]|tailoring skill:tailoring:12:25 -item:257601|43.46 47.42||treasure scroll item:257601|Sells|!{134556} [rare]Skill Issue: Tailoring]",
+
+		-- Treasure
+		[91358] = "Burbling Paint Pot|80+|48.74 75.44||treasure item:246314|Contains:|!{237160} [rare]Burbling Blob of Paint]",
+		[93908] = "Gilded Armillary Sphere|80+|44.62 45.55|\"Inside the tower at the top level\"|treasure item:265828|Contains:|!{2356035} [poor]Gilded Armillary Sphere]",
+		[93061] = "Stone Vat|80+|40.44 60.9|\"Collect and deposit 10 {134014} [Bunch of Ripe Grapes] into the vat, then jump on them, and then finally purchase {2066026} [Packet of Instant Yeast] from [friendly]Sheri] nearby\"|treasure atlas:VignetteLootElite",
+		[93893] = "Forgotten Ink and Quill|80+|43.28 69.5|\"In a bookshelf at the top level inside a building\"|treasure",
+	},
+
+
+	--[[ Zul'Aman ]]--
+	
+	-- Atal'Aman
+	[2536] = {
+		-- Alchemy Treasure
+		[89116] = "Measured Ladle|alchemy skill:alchemy:12:1|49.09 23.18||treasure item:238537|Contains|!{236229} [epic]Measured Ladle]",
+		[89114] = "Vial of Zul'Aman Oddities|alchemy skill:alchemy:12:1|91.07 28.22||treasure item:238535|Contains|!{609900} [epic]Vial of Zul'Aman Oddities]",
+		
+		-- Blacksmithing Treasure
+		[89179] = "Carefully Racked Spear|blacksmithing skill:blacksmithing:12:1|33.08 65.82||treasure item:238542|Contains|!{135134} [epic]Carefully Racked Spear]",
+
+		-- Enchanting Treasure
+		[89100] = "Enchanted Amani Mask|enchanting skill:enchanting:12:1|48.76 22.58||treasure item:238548|Contains|!{135701} [epic]Enchanted Amani Mask]",
+		[89106] = "Loa-Blessed Dust|enchanting skill:enchanting:12:1|91.19 28.28||treasure item:238554 link:2437|Contains|!{134388} [epic]Loa-Blessed Dust]",
+
+		-- Engineering Treasure
+		[89138] = "Offline Helper Bot|engineering skill:engineering:12:1|65.14 34.75||treasure item:238557|Contains|!{5242532} [epic]Offline Helper Bot]",
+		
+		-- Inscription Treasure
+		[89068] = "Leather-Bound Techniques|inscription skill:inscription:12:1|91.6 17.59||treasure item:238573 link:2437|Contains|!{5268643} [epic]Leather-Bound Techniques]",
+		
+		-- Leatherworking Treasure
+		[89092] = "Bundle of Tanner's Trinkets|leatherworking skill:leatherworking:12:1|45.29 45.62||treasure item:238591|Contains|!{3622216} [epic]Bundle of Tanner's Trinkets]",
+		
+		-- Mining Treasure
+		[89149] = "Amani Expert's Chisel|mining skill:mining:12:1|33.3 65.91||treasure item:238601|Contains|!{7433333} [epic]Amani Expert's Chisel]",
+		
+		-- Skinning Treasure
+		[89167] = "Cadre Skinning Knife|skinning skill:skinning:12:1|44.9 45.17||treasure item:238629|Contains|!{135694} [epic]Cadre Skinning Knife]",
+		
+		-- Tailoring Treasure
+		[89085] = "Artisan's Cover Comb|skill:tailoring:12:1|91.87 16.69||treasure item:238619 link:2437|Contains|!{133800} [epic]Artisan's Cover Comb]",
+	},
+
+	-- Zul'Aman
+	[2437] = {
+		-- Alchemy Treasure
+		[89116] = "Measured Ladle|alchemy skill:alchemy:12:1|33.19 50.31||treasure item:238537 link:2536|Contains|!{236229} [epic]Measured Ladle]",
+		[89114] = "Vial of Zul'Aman Oddities|alchemy skill:alchemy:12:1|40.39 51.17||treasure item:238535|Contains|!{609900} [epic]Vial of Zul'Aman Oddities]",
+		
+		-- Blacksmithing Treasure
+		[89179] = "Carefully Racked Spear|blacksmithing skill:blacksmithing:12:1|30.44 57.62||treasure item:238542 link:2536|Contains|!{135134} [epic]Carefully Racked Spear]",
+
+		-- Enchanting Treasure
+		[89100] = "Enchanted Amani Mask|enchanting skill:enchanting:12:1|33.13 50.21||treasure item:238548 link:2536|Contains|!{135701} [epic]Enchanted Amani Mask]",
+		[89106] = "Loa-Blessed Dust|enchanting skill:enchanting:12:1|40.41 51.18||treasure item:238554|Contains|!{134388} [epic]Loa-Blessed Dust]",
+
+		-- Engineering Treasure
+		[89138] = "Offline Helper Bot|engineering skill:engineering:12:1|35.94 52.29||treasure item:238557 link:2536|Contains|!{5242532} [epic]Offline Helper Bot]",
+		[89140] = "Handy Wrench|engineering skill:engineering:12:1|34.21 87.8||treasure item:238563|Contains|!{134520} [epic]Handy Wrench]",
+		
+		-- Herbalism Treasure
+		[89161] = "Sweeping Harvester's Scythe|herbalism skill:herbalism:12:1|41.91 45.91||treasure item:238469|Contains|!{2101966} [epic]Sweeping Harvester's Scythe]",
+		
+		-- Inscription Treasure
+		[89068] = "Leather-Bound Techniques|inscription skill:inscription:12:1|40.48 49.35|\"Inside a small cave\"|treasure item:238573|Contains|!{5268643} [epic]Leather-Bound Techniques]",
+		
+		-- Leatherworking Treasure
+		[89092] = "Bundle of Tanner's Trinkets|leatherworking skill:leatherworking:12:1|32.54 54.15||treasure item:238591 link:2536|Contains|!{3622216} [epic]Bundle of Tanner's Trinkets]",
+		[89089] = "Amani Leatherworker's Tool|leatherworking skill:leatherworking:12:1|33.08 78.91|\"Inside the Torntusk cave\"|treasure item:238588|Contains|!{4224726} [epic]Amani Leatherworker's Tool]",
+		[89091] = "Prestigiously Racked Hide|leatherworking skill:leatherworking:12:1|30.75 83.97|\"Inside Nalorakk's temple near the entrance\"|treasure item:238590|Contains|!{3586020} [epic]Prestigiously Racked Hide]",
+		[92371] = "[friendly]Magovu]|leatherworking skill:leatherworking:12:25 -item:250922|45.95 65.92||treasure scroll item:250922|Sells|!{4624984} [rare]Whisper of the Loa: Leatherworking]",
+		
+		-- Mining Treasure
+		[89149] = "Amani Expert's Chisel|mining skill:mining:12:1|30.48 57.63||treasure item:238601 link:2536|Contains|!{7433333} [epic]Amani Expert's Chisel]",
+		[89145] = "Spelunker's Lucky Charm|mining skill:mining:12:1|42 46.52||treasure item:238597|Contains|!{1379232} [epic]Spelunker's Lucky Charm]",
+		[92372] = "[friendly]Magovu]|mining skill:mining:12:25 -item:250924|45.95 65.92||treasure scroll item:250924|Sells|!{4625105} [rare]Whisper of the Loa: Mining]",
+		
+		-- Skinning Treasure
+		[89167] = "Cadre Skinning Knife|skinning skill:skinning:12:1|32.47 54.08||treasure item:238629 link:2536|Contains|!{135694} [epic]Cadre Skinning Knife]",
+		[89170] = "Amani Tanning Oil|skinning skill:skinning:12:1|40.39 36.01||treasure item:238632|Contains|!{1500931} [epic]Amani Tanning Oil]",
+		[89172] = "Amani Skinning Knife|skinning skill:skinning:12:1|33.07 79.07|\"Inside the Torntusk cave\"|treasure item:238634|Contains|!{961616} [epic]Amani Skinning Knife]",
+		[92373] = "[friendly]Magovu]|skinning skill:skinning:12:25 -item:250923|45.95 65.92||treasure scroll item:250923|Sells|!{4625108} [rare]Whisper of the Loa: Skinning]",
+		
+		-- Tailoring Treasure
+		[89085] = "Artisan's Cover Comb|skill:tailoring:12:1|40.53 49.37|\"Inside a small cave\"|treasure item:238619|Contains|!{133800} [epic]Artisan's Cover Comb]",
+
+		-- Treasure
+		[90798] = "Secret Formula|80+|40.47 35.95||treasure item:256326::::::::80:103::11:2:13573:6652:2:28:3321:9:80|Contains|!{2399245} [uncommon]Fetid Dartfrog Idol]",
+		[90799] = "Abandoned Nest|80+|42.64 52.44||treasure item:255008|Contains|!{132834} [uncommon]Weathered Eagle Egg]",
+	},
+
+
+	--[[ Harandar ]]--
+	
+	-- The Den
+	[2576] = {
+		-- Herbalism Treasure
+		[89155] = "Planting Shovel|herbalism skill:herbalism:12:1|46.38 73.42||treasure item:238475 up|Contains|!{1060569} [epic]Planting Shovel]",
+		[93411] = "[friendly]Naynar]|herbalism skill:herbalism:12:25 -item:258410|45.04 32.85||treasure scroll item:258410|Sells|!{4624732} [rare]Traditions of the Haranir: Herbalism]",
+
+		-- Inscription Treasure
+		[89071] = "Leftover Sanguithorn Pigment|inscription skill:inscription:12:1|59.77 26.77||treasure item:238576 up|Contains|!{237156} [epic]Leftover Sanguithorn Pigment]",
+		[93412] = "[friendly]Naynar]|inscription skill:inscription:12:25 -item:258411|45.04 32.85||treasure scroll item:258411|Sells|!{4624735} [rare]Traditions of the Haranir: Inscription]",
+
+		-- Leatherworking Treasure
+		[89094] = "Haranir Leatherworking Mallet|leatherworking skill:leatherworking:12:1|51.08 37.62||treasure item:238593 up|Contains|!{5546083} [epic]Haranir Leatherworking Mallet]",
+	},
+
+	-- Harandar
+	[2413] = {
+		-- Alchemy Treasure
+		[89113] = "Vial of Rootlands Oddities|alchemy skill:alchemy:12:1|34.77 24.69||treasure item:238534|Contains|!{609902} [epic]Vial of Rootlands Oddities]",
+		
+		-- Blacksmithing Treasure
+		[89182] = "Rutaani Floratender's Sword|blacksmithing skill:blacksmithing:12:1|66.34 50.84||treasure item:238545|Contains|!{454050} [epic]Rutaani Floratender's Sword]",
+
+		-- Enchanting Treasure
+		[89104] = "Entropic Shard|enchanting skill:enchanting:12:1|37.75 65.22||treasure item:238552|Contains|!{535593} [epic]Entropic Shard]",
+		[89105] = "Primal Essence Orb|enchanting skill:enchanting:12:1|65.72 50.21|\"On top of a large mushroom\"|treasure item:238553|Contains|!{348545} [epic]Primal Essence Orb]",
+
+		-- Engineering Treasure
+		[89136] = "Expeditious Pylon|engineering skill:engineering:12:1|68 49.81|\"On top of a large mushroom\"|treasure item:238559|Contains|!{1405806} [epic]Expeditious Pylon]",
+		
+		-- Herbalism Treasure
+		[89155] = "Planting Shovel|herbalism skill:herbalism:12:1|51.11 55.71||treasure item:238475|Contains|!{1060569} [epic]Planting Shovel]",
+		[89162] = "Bloomed Bud|herbalism skill:herbalism:12:1|38.32 67.04||treasure item:238468|Contains|!{134200} [epic]Bloomed Bud]",
+		[89159] = "Lightbloom Root|herbalism skill:herbalism:12:1|36.66 25.06||treasure item:238471|Contains|!{960689} [epic]Lightbloom Root]",
+		[89157] = "Harvester's Sickle|herbalism skill:herbalism:12:1|76.13 51.05||treasure item:238473|Contains|!{1060561} [epic]Harvester's Sickle]",
+		[93411] = "[friendly]Naynar]|herbalism skill:herbalism:12:25 -item:258410|50.95 50.73||treasure scroll item:258410|Sells|!{4624732} [rare]Traditions of the Haranir: Herbalism]",
+		
+		-- Inscription Treasure
+		[89070] = "Intrepid Explorer's Marker|inscription skill:inscription:12:1|52.43 52.61|\"On top of a large root\"|treasure item:238575|Contains|!{1379233} [epic]Intrepid Explorer's Marker]",
+		[89071] = "Leftover Sanguithorn Pigment|inscription skill:inscription:12:1|52.75 49.98||treasure item:238576|Contains|!{237156} [epic]Leftover Sanguithorn Pigment]",
+		[93412] = "[friendly]Naynar]|inscription skill:inscription:12:25 -item:258411|50.95 50.73||treasure scroll item:258411|Sells|!{4624735} [rare]Traditions of the Haranir: Inscription]",
+		
+		-- Leatherworking Treasure
+		[89094] = "Haranir Leatherworking Mallet|leatherworking skill:leatherworking:12:1|51.69 51.31||treasure item:238593|Contains|!{5546083} [epic]Haranir Leatherworking Mallet]",
+		[89095] = "Haranir Leatherworking Knife|leatherworking skill:leatherworking:12:1|36.1 25.17||treasure item:238594|Contains|!{5545563} [epic]Haranir Leatherworking Knife]",
+		
+		-- Mining Treasure
+		[89151] = "Spare Expedition Torch|mining skill:mining:12:1|38.84 65.86||treasure item:238603|Contains|!{135432} [epic]Spare Expedition Torch]",
+		
+		-- Skinning Treasure
+		[89168] = "Primal Hide|skinning skill:skinning:12:1|69.52 49.18|\"Inside a cave\"|treasure item:238630|Contains|!{1377086} [epic]Primal Hide]",
+		[89166] = "Lightbloom Afflicted Hide|skinning skill:skinning:12:1|76.09 51.08||treasure item:238628|Contains|!{4632798} [epic]Lightbloom Afflicted Hide]",
+		
+		-- Tailoring Treasure
+		[89078] = "A Child's Stuffy|tailoring skill:tailoring:12:1|70.56 50.9|\"Inside a building\"|treasure item:238612|Contains|!{458256} [epic]A Child's Stuffy]",
+		[89081] = "Wooden Weaving Sword|tailoring skill:tailoring:12:1|69.76 51.04||treasure item:238615|Contains|!{463557} [epic]Wooden Weaving Sword]",
+
+		-- Treasure
+		[92431] = "Reliquary's Lost Paint Supplies|80+|62.91 51.25||treasure item:263287|Contains|!{7337575} [rare]Reliquary-Keeper's Lost Shortbow]",
+	},
+
+
+	--[[ The Voidstorm ]]--
+	
+	-- Slayer's Rise
+	[2444] = {
+		-- Alchemy Treasure
+		[89112] = "Vial of Voidstorm Oddities|alchemy skill:alchemy:12:1|41.97 40.62||treasure item:238533|Contains|!{609899} [epic]Vial of Voidstorm Oddities]",
+		
+		-- Blacksmithing Treasure
+		[89181] = "Voidstorm Defense Spear|blacksmithing skill:blacksmithing:12:1|30.51 68.99||treasure item:238544|Contains|!{135124} [epic]Voidstorm Defense Spear]",
+
+		-- Engineering Treasure
+		[89134] = "Miniaturized Transport Skiff|engineering skill:engineering:12:1|28.93 38.99||treasure item:238557|Contains|!{134063} [epic]Miniaturized Transport Skiff]",
+		[89137] = "Ethereal Stormwrench|engineering skill:engineering:12:1|54.13 51.01|\"Inside a building\"|treasure item:238560|Contains|!{4284646} [epic]Ethereal Stormwrench]",
+		
+		-- Inscription Treasure
+		[89067] = "Void-Touched Quill|inscription skill:inscription:12:1|60.69 84.26|\"Inside a building\"|treasure item:238572|Contains|!{2103812} [epic]Void-Touched Quill]",
+		
+		-- Jewelcrafting Treasure
+		[89123] = "Speculative Voidstorm Crystal|jewelcrafting skill:jewelcrafting:12:1|30.47 69.02|\"Inside a building\"|treasure item:238581|Contains|!{1033908} [epic]Speculative Voidstorm Crystal]",
+		[89128] = "Ethereal Gem Pliers|jewelcrafting skill:jewelcrafting:12:1|54.2 51.05|\"Inside a building\"|treasure item:238586|Contains|!{1405812} [epic]Ethereal Gem Pliers]",
+		[89126] = "Shattered Glass|jewelcrafting skill:jewelcrafting:12:1|62.77 53.46||treasure item:238584|Contains|!{4631357} [epic]Shattered Glass]",
+		
+		-- Leatherworking Treasure
+		[89093] = "Patterns: Beyond the Void|leatherworking skill:leatherworking:12:1|53.74 51.67|\"Inside a building\"|treasure item:238592|Contains|!{237448} [epic]Patterns: Beyond the Void]",
+		
+		-- Mining Treasure
+		[89150] = "Star Metal Deposit|mining skill:mining:12:1|31.67 76.91|{Ping_Chat_Warning} [red]has phasing issues and may not be lootable]|treasure item:238602|Contains|!{4661454} [epic]Star Metal Deposit]",
+		[89144] = "Miner's Guide to Voidstorm|mining skill:mining:12:1|30.47 69.07|\"Inside a building\"|treasure item:238596|Contains|!{133735} [epic]Miner's Guide to Voidstorm]",
+		[89146] = "Lost Voidstorm Satchel|mining skill:mining:12:1|54.24 51.59|\"Inside a building\"|treasure item:238598|Contains|!{5931423} [epic]Lost Voidstorm Satchel]",
+		[89148] = "Glimmering Void Pearl|mining skill:mining:12:1|28.76 38.56||treasure item:238600|Contains|!{134126} [epic]Glimmering Void Pearl]",
+		
+		-- Skinning Treasure
+		[89169] = "Voidstorm Leather Sample|skinning skill:skinning:12:1|45.5 42.4||treasure item:238631|Contains|!{642724} [epic]Voidstorm Leather Sample]",
+		
+		-- Tailoring Treasure
+		[89082] = "Book of Sin'dorei Stitches|tailoring skill:tailoring:12:1|62.01 83.51||treasure item:238616|Contains|!{5268643} [epic]Book of Sin'dorei Stitches]",
+		[89083] = "Satin Throw Pillow|tailoring skill:tailoring:12:1|61.39 85.12|\"Inside a building\"|treasure item:238617|Contains|!{4624625} [epic]Satin Throw Pillow]",
+	},
+
+	-- The Voidstorm
+	[2405] = {
+		-- Alchemy Treasure
+		[89112] = "Vial of Voidstorm Oddities|alchemy skill:alchemy:12:1|46.44 21.98||treasure item:238533 link:2444|Contains|!{609899} [epic]Vial of Voidstorm Oddities]",
+		[89118] = "Failed Experiment|alchemy skill:alchemy:12:1|32.79 43.3||treasure item:238539|Contains|!{463861} [epic]Failed Experiment]",
+		[93794] = "[friendly]Void Researcher Anomander]|alchemy skill:alchemy:12:25 -item:262645|52.58 72.9||treasure scroll item:262645|Sells|!{4624656} [rare]Beyond the Event Horizon: Alchemy]",
+		
+		-- Blacksmithing Treasure
+		[89181] = "Voidstorm Defense Spear|blacksmithing skill:blacksmithing:12:1|41.31 34.67||treasure item:238544 link:2444|Contains|!{135124} [epic]Voidstorm Defense Spear]",
+		[93795] = "[friendly]Void Researcher Anomander]|blacksmithing skill:blacksmithing:12:25 -item:262644|52.58 72.9||treasure scroll item:262644|Sells|!{4624660} [rare]Beyond the Event Horizon: Blacksmithing]",
+
+		-- Enchanting Treasure
+		[89102] = "Pure Void Crystal|enchanting skill:enchanting:12:1|35.46 58.82||treasure item:238550|Contains|!{458245} [epic]Pure Void Crystal]",
+
+		-- Engineering Treasure
+		[89134] = "Miniaturized Transport Skiff|engineering skill:engineering:12:1|40.61 21.25||treasure item:238557 link:2444|Contains|!{134063} [epic]Miniaturized Transport Skiff]",
+		[89137] = "Ethereal Stormwrench|engineering skill:engineering:12:1|51.88 26.63||treasure item:238560 link:2444|Contains|!{4284646} [epic]Ethereal Stormwrench]",
+		[93796] = "[friendly]Void Researcher Anomander]|engineering skill:engineering:12:25 -item:262646|52.58 72.9||treasure scroll item:262646|Sells|!{4624728} [rare]Beyond the Event Horizon: Engineering]",
+		
+		-- Herbalism Treasure
+		[89156] = "Peculiar Lotus|herbalism skill:herbalism:12:1|34.68 56.97||treasure item:238474|Contains|!{876365} [epic]Peculiar Lotus]",
+		
+		-- Inscription Treasure
+		[89067] = "Void-Touched Quill|inscription skill:inscription:12:1|54.81 41.5||treasure item:238572 link:2444|Contains|!{2103812} [epic]Void-Touched Quill]",
+		
+		-- Jewelcrafting Treasure
+		[89123] = "Speculative Voidstorm Crystal|jewelcrafting skill:jewelcrafting:12:1|41.29 34.68||treasure item:238581 link:2444|Contains|!{1033908} [epic]Speculative Voidstorm Crystal]",
+		[89128] = "Ethereal Gem Pliers|jewelcrafting skill:jewelcrafting:12:1|51.91 26.64||treasure item:238586 link:2444|Contains|!{1405812} [epic]Ethereal Gem Pliers]",
+		[89126] = "Shattered Glass|jewelcrafting skill:jewelcrafting:12:1|55.74 27.72||treasure item:238584 link:2444|Contains|!{4631357} [epic]Shattered Glass]",
+		
+		-- Leatherworking Treasure
+		[89093] = "Patterns: Beyond the Void|leatherworking skill:leatherworking:12:1|51.7 26.92||treasure item:238592 link:2444|Contains|!{237448} [epic]Patterns: Beyond the Void]",
+		[89090] = "Ethereal Leatherworking Knife|leatherworking skill:leatherworking:12:1|34.72 56.92||treasure item:238589|Contains|!{5545563} [epic]Ethereal Leatherworking Knife]",
+		
+		-- Mining Treasure
+		[89150] = "Star Metal Deposit|mining skill:mining:12:1|41.83 38.21|{Ping_Chat_Warning} [red]has phasing issues and may not be lootable]|treasure item:238602|Contains|!{4661454} [epic]Star Metal Deposit]",
+		[89144] = "Miner's Guide to Voidstorm|mining skill:mining:12:1|41.29 34.7||treasure item:238596 link:2444|Contains|!{133735} [epic]Miner's Guide to Voidstorm]",
+		[89146] = "Lost Voidstorm Satchel|mining skill:mining:12:1|51.93 26.89||treasure item:238598 link:2444|Contains|!{5931423} [epic]Lost Voidstorm Satchel]",
+		[89148] = "Glimmering Void Pearl|mining skill:mining:12:1|40.53 21.06||treasure item:238600 link:2444|Contains|!{134126} [epic]Glimmering Void Pearl]",
+		
+		-- Skinning Treasure
+		[89169] = "Voidstorm Leather Sample|skinning skill:skinning:12:1|48.02 22.78||treasure item:238631 link:2444|Contains|!{642724} [epic]Voidstorm Leather Sample]",
+		
+		-- Tailoring Treasure
+		[89082] = "Book of Sin'dorei Stitches|tailoring skill:tailoring:12:1|55.4 41.16||treasure item:238616 link:2444|Contains|!{5268643} [epic]Book of Sin'dorei Stitches]",
+		[89083] = "Satin Throw Pillow|tailoring skill:tailoring:12:1|55.13 41.89||treasure item:238617 link:2444|Contains|!{4624625} [epic]Satin Throw Pillow]",
+	},
+
+
 	--[[ Isle of Dorn ]]--
 	
 	-- Dornogal
 	[2339] = {
 		-- Alchemy Treasure
-		[83840] = "Earthen Iron Powder|alchemy skill:alchemy11:1|32.46 60.33||treasure item:226265|Contains|!{133592} [epic]Earthen Iron Powder]",
+		[83840] = "Earthen Iron Powder|alchemy skill:alchemy:11:1|32.46 60.33||treasure item:226265|Contains|!{133592} [epic]Earthen Iron Powder]",
 		
 		-- Blacksmithing Treasure
-		[83849] = "Dornogal Hammer|blacksmithing skill:blacksmithing11:1|47.59 26.22||treasure item:226277|Contains|!{133060} [epic]Dornogal Hammer]",
+		[83849] = "Dornogal Hammer|blacksmithing skill:blacksmithing:11:1|47.59 26.22||treasure item:226277|Contains|!{133060} [epic]Dornogal Hammer]",
 
 		-- Enchanting Treasure
-		[83859] = "Silver Dornogal Rod|enchanting skill:enchanting11:1|58.04 56.98||treasure item:226285|Contains|!{610576} [epic]Silver Dornogal Rod]",
+		[83859] = "Silver Dornogal Rod|enchanting skill:enchanting:11:1|58.04 56.98||treasure item:226285|Contains|!{610576} [epic]Silver Dornogal Rod]",
 
 		-- Engineering Treasure
-		[83867] = "Dornogal Spectacles|engineering skill:engineering11:1|64.86 52.86||treasure item:226293|Contains|!{3779053} [epic]Dornogal Spectacles]",
+		[83867] = "Dornogal Spectacles|engineering skill:engineering:11:1|64.86 52.86||treasure item:226293|Contains|!{3779053} [epic]Dornogal Spectacles]",
 		
 		-- Herbalism Treasure
-		[83875] = "Dornogal Gardening Scythe|herbalism skill:herbalism11:1|59.25 23.54||treasure item:226301|Contains|!{1060569} [epic]Dornogal Gardening Scythe]",
+		[83875] = "Dornogal Gardening Scythe|herbalism skill:herbalism:11:1|59.25 23.54||treasure item:226301|Contains|!{1060569} [epic]Dornogal Gardening Scythe]",
 		
 		-- Inscription Treasure
-		[83882] = "Dornogal Scribe's Quill|inscription skill:inscription11:1|57.26 46.86|\"Inside the Auction House\"|treasure item:226308|Contains|!{2103812} [epic]Dornogal Scribe's Quill]",
+		[83882] = "Dornogal Scribe's Quill|inscription skill:inscription:11:1|57.26 46.86|\"Inside the Auction House\"|treasure item:226308|Contains|!{2103812} [epic]Dornogal Scribe's Quill]",
 		
 		-- Jewelcrafting Treasure
-		[83891] = "Earthen Gem Pliers|jewelcrafting skill:jewelcrafting11:1|34.84 52.16||treasure item:226317|Contains|!{1020376} [epic]Earthen Gem Pliers]",
+		[83891] = "Earthen Gem Pliers|jewelcrafting skill:jewelcrafting:11:1|34.84 52.16||treasure item:226317|Contains|!{1020376} [epic]Earthen Gem Pliers]",
 		
 		-- Leatherworking Treasure
-		[83898] = "Earthen Lacing Tools|leatherworking skill:leatherworking11:1|68.24 23.34||treasure item:226324|Contains|!{136247} [epic]Earthen Lacing Tools]",
+		[83898] = "Earthen Lacing Tools|leatherworking skill:leatherworking:11:1|68.24 23.34||treasure item:226324|Contains|!{136247} [epic]Earthen Lacing Tools]",
 		
 		-- Mining Treasure
-		[83907] = "Dornogal Chisel|mining skill:mining11:1|36.72 79.36||treasure item:226333|Contains|!{1059115} [epic]Dornogal Chisel]",
+		[83907] = "Dornogal Chisel|mining skill:mining:11:1|36.72 79.36||treasure item:226333|Contains|!{1059115} [epic]Dornogal Chisel]",
 		
 		-- Skinning Treasure
-		[83914] = "Dornogal Carving Knife|skinning skill:skinning11:1|28.77 51.65|\"Inside the Alliance Embassy bulding\"|treasure item:226340|Contains|!{5404237} [epic]Dornogal Carving Knife]",
+		[83914] = "Dornogal Carving Knife|skinning skill:skinning:11:1|28.77 51.65|\"Inside the Alliance Embassy bulding\"|treasure item:226340|Contains|!{5404237} [epic]Dornogal Carving Knife]",
 		
 		-- Tailoring Treasure
-		[83922] = "Dornogal Seam Ripper|tailoring skill:tailoring11:1|61.56 18.51|\"Inside a building\"|treasure item:226348|Contains|!{464119} [epic]Dornogal Seam Ripper]",
+		[83922] = "Dornogal Seam Ripper|tailoring skill:tailoring:11:1|61.56 18.51|\"Inside a building\"|treasure item:226348|Contains|!{464119} [epic]Dornogal Seam Ripper]",
 	},
 
 	-- Isle of Dorn
@@ -59,48 +405,48 @@ Data.Vignettes = {
 		--[82714] = "Infused Cinderbrew|68+|56.22 60.94||treasure item:224263|Contains|!{645193} [rare]Infused Fire-Honey Milk]", -- Repeatable?
 
 		-- Alchemy Treasure
-		[83840] = "Earthen Iron Powder|alchemy skill:alchemy11:1|45.37 47.14||treasure link:2339 item:226265|Contains|!{133592} [epic]Earthen Iron Powder]",
-		[83841] = "Metal Dornogal Frame|alchemy skill:alchemy11:1|57.7 61.82||treasure item:226266|Contains|!{4622302} [epic]Metal Dornogal Frame]",
+		[83840] = "Earthen Iron Powder|alchemy skill:alchemy:11:1|45.37 47.14||treasure link:2339 item:226265|Contains|!{133592} [epic]Earthen Iron Powder]",
+		[83841] = "Metal Dornogal Frame|alchemy skill:alchemy:11:1|57.7 61.82||treasure item:226266|Contains|!{4622302} [epic]Metal Dornogal Frame]",
 
 		-- Blacksmithing Treasure
-		[83849] = "Dornogal Hammer|blacksmithing skill:blacksmithing11:1|49.09 38.76||treasure link:2339 item:226277|Contains|!{133060} [epic]Dornogal Hammer]",
-		[83848] = "Ancient Earthen Anvil|blacksmithing skill:blacksmithing11:1|59.83 61.91||treasure item:226276|Contains|!{2356069} [epic]Ancient Earthen Anvil]",
+		[83849] = "Dornogal Hammer|blacksmithing skill:blacksmithing:11:1|49.09 38.76||treasure link:2339 item:226277|Contains|!{133060} [epic]Dornogal Hammer]",
+		[83848] = "Ancient Earthen Anvil|blacksmithing skill:blacksmithing:11:1|59.83 61.91||treasure item:226276|Contains|!{2356069} [epic]Ancient Earthen Anvil]",
 
 		-- Enchanting Treasure
-		[83859] = "Silver Dornogal Rod|enchanting skill:enchanting11:1|51.66 46.32||treasure link:2339 item:226285|Contains|!{610576} [epic]Silver Dornogal Rod]",
-		[83856] = "Grinded Earthen Gem|enchanting skill:enchanting11:1|57.59 61.64||treasure item:226284|Contains|!{134388} [epic]Grinded Earthen Gem]",
+		[83859] = "Silver Dornogal Rod|enchanting skill:enchanting:11:1|51.66 46.32||treasure link:2339 item:226285|Contains|!{610576} [epic]Silver Dornogal Rod]",
+		[83856] = "Grinded Earthen Gem|enchanting skill:enchanting:11:1|57.59 61.64||treasure item:226284|Contains|!{134388} [epic]Grinded Earthen Gem]",
 
 		-- Engineering Treasure
-		[83867] = "Dornogal Spectacles|engineering skill:engineering11:1|53.33 45.31||treasure link:2339 item:226293|Contains|!{3779053} [epic]Dornogal Spectacles]",
-		[83866] = "Rock Engineer's Wrench|engineering skill:engineering11:1|61.35 69.57||treasure item:226292|Contains|!{134520} [epic]Rock Engineer's Wrench]",
+		[83867] = "Dornogal Spectacles|engineering skill:engineering:11:1|53.33 45.31||treasure link:2339 item:226293|Contains|!{3779053} [epic]Dornogal Spectacles]",
+		[83866] = "Rock Engineer's Wrench|engineering skill:engineering:11:1|61.35 69.57||treasure item:226292|Contains|!{134520} [epic]Rock Engineer's Wrench]",
 		
 		-- Herbalism Treasure
-		[83875] = "Dornogal Gardening Scythe|herbalism skill:herbalism11:1|51.96 38.11||treasure link:2339 item:226301|Contains|!{1060569} [epic]Dornogal Gardening Scythe]",
-		[83874] = "Ancient Flower|herbalism skill:herbalism11:1|57.54 61.46||treasure item:226300|Contains|!{134205} [epic]Ancient Flower]",
+		[83875] = "Dornogal Gardening Scythe|herbalism skill:herbalism:11:1|51.96 38.11||treasure link:2339 item:226301|Contains|!{1060569} [epic]Dornogal Gardening Scythe]",
+		[83874] = "Ancient Flower|herbalism skill:herbalism:11:1|57.54 61.46||treasure item:226300|Contains|!{134205} [epic]Ancient Flower]",
 		
 		-- Inscription Treasure
-		[83882] = "Dornogal Scribe's Quill|inscription skill:inscription11:1|51.47 43.84||treasure link:2339 item:226308|Contains|!{2103812} [epic]Dornogal Scribe's Quill]",
-		[83883] = "Historian's Dip Pen|inscription skill:inscription11:1|55.98 60.02|\"Inside a building\"|treasure item:226309|Contains|!{4419478} [epic]Historian's Dip Pen]",
+		[83882] = "Dornogal Scribe's Quill|inscription skill:inscription:11:1|51.47 43.84||treasure link:2339 item:226308|Contains|!{2103812} [epic]Dornogal Scribe's Quill]",
+		[83883] = "Historian's Dip Pen|inscription skill:inscription:11:1|55.98 60.02|\"Inside a building\"|treasure item:226309|Contains|!{4419478} [epic]Historian's Dip Pen]",
 		
 		-- Jewelcrafting Treasure
-		[83891] = "Earthen Gem Pliers|jewelcrafting skill:jewelcrafting11:1|45.96 45.14||treasure link:2339 item:226317|Contains|!{1020376} [epic]Earthen Gem Pliers]",
-		[83890] = "Gentle Jewel Hammer|jewelcrafting skill:jewelcrafting11:1|63.53 66.88|\"In the basement of a building\"|treasure down item:226316|Contains|!{133055} [epic]Gentle Jewel Hammer]",
+		[83891] = "Earthen Gem Pliers|jewelcrafting skill:jewelcrafting:11:1|45.96 45.14||treasure link:2339 item:226317|Contains|!{1020376} [epic]Earthen Gem Pliers]",
+		[83890] = "Gentle Jewel Hammer|jewelcrafting skill:jewelcrafting:11:1|63.53 66.88|\"In the basement of a building\"|treasure down item:226316|Contains|!{133055} [epic]Gentle Jewel Hammer]",
 		
 		-- Leatherworking Treasure
-		[83898] = "Earthen Lacing Tools|leatherworking skill:leatherworking11:1|54.17 38.06||treasure link:2339 item:226324|Contains|!{136247} [epic]Earthen Lacing Tools]",
-		[83899] = "Dornogal Craftsman's Flat Knife|leatherworking skill:leatherworking11:1|58.65 30.77||treasure item:226325|Contains|!{5545563} [epic]Dornogal Craftsman's Flat Knife]",
+		[83898] = "Earthen Lacing Tools|leatherworking skill:leatherworking:11:1|54.17 38.06||treasure link:2339 item:226324|Contains|!{136247} [epic]Earthen Lacing Tools]",
+		[83899] = "Dornogal Craftsman's Flat Knife|leatherworking skill:leatherworking:11:1|58.65 30.77||treasure item:226325|Contains|!{5545563} [epic]Dornogal Craftsman's Flat Knife]",
 		
 		-- Mining Treasure
-		[83907] = "Dornogal Chisel|mining skill:mining11:1|46.42 51.82||treasure link:2339 item:226333|Contains|!{1059115} [epic]Dornogal Chisel]",
-		[83906] = "Earthen Miner's Gavel|mining skill:mining11:1|58.18 62.04||treasure item:226332|Contains|!{2578727} [epic]Earthen Miner's Gavel]",
+		[83907] = "Dornogal Chisel|mining skill:mining:11:1|46.42 51.82||treasure link:2339 item:226333|Contains|!{1059115} [epic]Dornogal Chisel]",
+		[83906] = "Earthen Miner's Gavel|mining skill:mining:11:1|58.18 62.04||treasure item:226332|Contains|!{2578727} [epic]Earthen Miner's Gavel]",
 		
 		-- Skinning Treasure
-		[83914] = "Dornogal Carving Knife|skinning skill:skinning11:1|44.47 45.01||treasure link:2339 item:226340|Contains|!{5404237} [epic]Dornogal Carving Knife]",
-		[83915] = "Earthen Worker's Beams|skinning skill:skinning11:1|60.04 28||treasure item:226341|Contains|!{135435} [epic]Earthen Worker's Beams]",
+		[83914] = "Dornogal Carving Knife|skinning skill:skinning:11:1|44.47 45.01||treasure link:2339 item:226340|Contains|!{5404237} [epic]Dornogal Carving Knife]",
+		[83915] = "Earthen Worker's Beams|skinning skill:skinning:11:1|60.04 28||treasure item:226341|Contains|!{135435} [epic]Earthen Worker's Beams]",
 		
 		-- Tailoring Treasure
-		[83922] = "Dornogal Seam Ripper|tailoring skill:tailoring11:1|52.52 36.87||treasure link:2339 item:226348|Contains|!{464119} [epic]Dornogal Seam Ripper]",
-		[83923] = "Earthen Tape Measure|tailoring skill:tailoring11:1|56.2 61.02||treasure item:226349|Contains|!{134510} [epic]Earthen Tape Measure]",
+		[83922] = "Dornogal Seam Ripper|tailoring skill:tailoring:11:1|52.52 36.87||treasure link:2339 item:226348|Contains|!{464119} [epic]Dornogal Seam Ripper]",
+		[83923] = "Earthen Tape Measure|tailoring skill:tailoring:11:1|56.2 61.02||treasure item:226349|Contains|!{134510} [epic]Earthen Tape Measure]",
 	},
 
 
@@ -115,48 +461,48 @@ Data.Vignettes = {
 		[82818] = "Scary Dark Chest|68+|54.77 30.28|\"Light all the nearby [Candle Stubs] to unlock the treasure\"|treasure atlas:VignetteLootElite item:224439|Contains|!{5869499} [rare]Oop'lajax]|!{2967113} [Resonance Crystals]",
 
 		-- Alchemy Treasure
-		[83843] = "Engraved Stirring Rod|alchemy skill:alchemy11:1|60.8 61.75|\"Inside a building\"|treasure item:226268|Contains|!{237445} [epic]Engraved Stirring Rod]",
-		[83842] = "Reinforced Beaker|alchemy skill:alchemy11:1|38.05 24.18|\"Inside a building\"|treasure item:226267|Contains|!{134870} [epic]Reinforced Beaker]",
+		[83843] = "Engraved Stirring Rod|alchemy skill:alchemy:11:1|60.8 61.75|\"Inside a building\"|treasure item:226268|Contains|!{237445} [epic]Engraved Stirring Rod]",
+		[83842] = "Reinforced Beaker|alchemy skill:alchemy:11:1|38.05 24.18|\"Inside a building\"|treasure item:226267|Contains|!{134870} [epic]Reinforced Beaker]",
 		
 		-- Blacksmithing Treasure
-		[83850] = "Ringing Hammer Vise|blacksmithing skill:blacksmithing11:1|43.54 33.16||treasure item:226278|Contains|!{4559194} [epic]Ringing Hammer Vise]",
-		[83851] = "Earthen Chisels|blacksmithing skill:blacksmithing11:1|46.37 53.67||treasure item:226279|Contains|!{1059123} [epic]Earthen Chisels]",
+		[83850] = "Ringing Hammer Vise|blacksmithing skill:blacksmithing:11:1|43.54 33.16||treasure item:226278|Contains|!{4559194} [epic]Ringing Hammer Vise]",
+		[83851] = "Earthen Chisels|blacksmithing skill:blacksmithing:11:1|46.37 53.67||treasure item:226279|Contains|!{1059123} [epic]Earthen Chisels]",
 
 		-- Enchanting Treasure
-		[83861] = "Animated Enchanting Dust|enchanting skill:enchanting11:1|63.03 65.89||treasure item:226287|Contains|!{133851} [epic]Animated Enchanting Dust]",
-		[83860] = "Soot-Coated Orb|enchanting skill:enchanting11:1|40.45 22.13||treasure item:226286|Contains|!{236514} [epic]Soot-Coated Orb]",
+		[83861] = "Animated Enchanting Dust|enchanting skill:enchanting:11:1|63.03 65.89||treasure item:226287|Contains|!{133851} [epic]Animated Enchanting Dust]",
+		[83860] = "Soot-Coated Orb|enchanting skill:enchanting:11:1|40.45 22.13||treasure item:226286|Contains|!{236514} [epic]Soot-Coated Orb]",
 
 		-- Engineering Treasure
-		[83869] = "Earthen Construct Blueprints|engineering skill:engineering11:1|60.33 58.74|\"Inside a building\"|treasure item:226295|Contains|!{2915721} [epic]Earthen Construct Blueprints]",
-		[83868] = "Inert Mining Bomb|engineering skill:engineering11:1|38.46 27.25||treasure item:226294|Contains|!{133709} [epic]Inert Mining Bomb]",
+		[83869] = "Earthen Construct Blueprints|engineering skill:engineering:11:1|60.33 58.74|\"Inside a building\"|treasure item:226295|Contains|!{2915721} [epic]Earthen Construct Blueprints]",
+		[83868] = "Inert Mining Bomb|engineering skill:engineering:11:1|38.46 27.25||treasure item:226294|Contains|!{133709} [epic]Inert Mining Bomb]",
 		
 		-- Herbalism Treasure
-		[83877] = "Fungarian Slicer's Knife|herbalism skill:herbalism11:1|48.75 65.82||treasure item:226303|Contains|!{5169125} [epic]Fungarian Slicer's Knife]",
-		[83876] = "Earthen Digging Fork|herbalism skill:herbalism11:1|44.08 35.04|\"On top of a table inside a house\"|treasure item:226302|Contains|!{5874233} [epic]Earthen Digging Fork]",
+		[83877] = "Fungarian Slicer's Knife|herbalism skill:herbalism:11:1|48.75 65.82||treasure item:226303|Contains|!{5169125} [epic]Fungarian Slicer's Knife]",
+		[83876] = "Earthen Digging Fork|herbalism skill:herbalism:11:1|44.08 35.04|\"On top of a table inside a house\"|treasure item:226302|Contains|!{5874233} [epic]Earthen Digging Fork]",
 		
 		-- Inscription Treasure
-		[83885] = "Blue Earthen Pigment|inscription skill:inscription11:1|58.3 58.01|\"Inside a building\"|treasure item:226311|Contains|!{237157} [epic]Blue Earthen Pigment]",
-		[83884] = "Runic Scroll|inscription skill:inscription11:1|44.39 34.31|\"Inside a building\"|treasure item:226310|Contains|!{1500889} [epic]Runic Scroll]",
+		[83885] = "Blue Earthen Pigment|inscription skill:inscription:11:1|58.3 58.01|\"Inside a building\"|treasure item:226311|Contains|!{237157} [epic]Blue Earthen Pigment]",
+		[83884] = "Runic Scroll|inscription skill:inscription:11:1|44.39 34.31|\"Inside a building\"|treasure item:226310|Contains|!{1500889} [epic]Runic Scroll]",
 		
 		-- Jewelcrafting Treasure
-		[83893] = "Jeweler's Delicate Drill|jewelcrafting skill:jewelcrafting11:1|52.83 54.53||treasure item:226319|Contains|!{133056} [epic]Jeweler's Delicate Drill]",
-		[83892] = "Carved Stone File|jewelcrafting skill:jewelcrafting11:1|44.32 35.12|\"Inside a building\"|treasure item:226318|Contains|!{519379} [epic]Carved Stone File]",
+		[83893] = "Jeweler's Delicate Drill|jewelcrafting skill:jewelcrafting:11:1|52.83 54.53||treasure item:226319|Contains|!{133056} [epic]Jeweler's Delicate Drill]",
+		[83892] = "Carved Stone File|jewelcrafting skill:jewelcrafting:11:1|44.32 35.12|\"Inside a building\"|treasure item:226318|Contains|!{519379} [epic]Carved Stone File]",
 		
 		-- Leatherworking Treasure
-		[83900] = "Underground Stropping Compound|leatherworking skill:leatherworking11:1|42.89 34.89|\"Inside a building\"|treasure item:226326|Contains|!{2066015} [epic]Underground Stropping Compound]",
-		[83901] = "Earthen Awl|leatherworking skill:leatherworking11:1|60.12 65.28||treasure item:226327|Contains|!{4635252} [epic]Earthen Awl]",
+		[83900] = "Underground Stropping Compound|leatherworking skill:leatherworking:11:1|42.89 34.89|\"Inside a building\"|treasure item:226326|Contains|!{2066015} [epic]Underground Stropping Compound]",
+		[83901] = "Earthen Awl|leatherworking skill:leatherworking:11:1|60.12 65.28||treasure item:226327|Contains|!{4635252} [epic]Earthen Awl]",
 		
 		-- Mining Treasure
-		[83909] = "Regenerating Ore|mining skill:mining11:1|62.1 66.24||treasure item:226335|Contains|!{961633} [epic]Regenerating Ore]",
-		[83908] = "Earthen Excavator's Shovel|mining skill:mining11:1|45.26 27.53||treasure item:226334|Contains|!{134436} [epic]Earthen Excavator's Shovel]",
+		[83909] = "Regenerating Ore|mining skill:mining:11:1|62.1 66.24||treasure item:226335|Contains|!{961633} [epic]Regenerating Ore]",
+		[83908] = "Earthen Excavator's Shovel|mining skill:mining:11:1|45.26 27.53||treasure item:226334|Contains|!{134436} [epic]Earthen Excavator's Shovel]",
 		
 		-- Skinning Treasure
-		[83916] = "Artisan's Drawing Knife|skinning skill:skinning11:1|43.14 28.33||treasure item:226342|Contains|!{1064503} [epic]Artisan's Drawing Knife]",
-		[83917] = "Fungarian's Rich Tannin|skinning skill:skinning11:1|61.54 61.9||treasure item:226343|Contains|!{134382} [epic]Fungarian's Rich Tannin]",
+		[83916] = "Artisan's Drawing Knife|skinning skill:skinning:11:1|43.14 28.33||treasure item:226342|Contains|!{1064503} [epic]Artisan's Drawing Knife]",
+		[83917] = "Fungarian's Rich Tannin|skinning skill:skinning:11:1|61.54 61.9||treasure item:226343|Contains|!{134382} [epic]Fungarian's Rich Tannin]",
 		
 		-- Tailoring Treasure
-		[83925] = "Earthen Stitcher's Snips|tailoring skill:tailoring11:1|59.99 60.32||treasure item:226351|Contains|!{463557} [epic]Earthen Stitcher's Snips]",
-		[83924] = "Runed Earthen Pins|tailoring skill:tailoring11:1|44.67 32.87|\"Deep inside the basement of the Gundargaz inn\"|treasure item:226350|Contains|!{454058} [epic]Runed Earthen Pins]",
+		[83925] = "Earthen Stitcher's Snips|tailoring skill:tailoring:11:1|59.99 60.32||treasure item:226351|Contains|!{463557} [epic]Earthen Stitcher's Snips]",
+		[83924] = "Runed Earthen Pins|tailoring skill:tailoring:11:1|44.67 32.87|\"Deep inside the basement of the Gundargaz inn\"|treasure item:226350|Contains|!{454058} [epic]Runed Earthen Pins]",
 	},
 
 
@@ -177,48 +523,48 @@ Data.Vignettes = {
 		},
 
 		-- Alchemy Treasure
-		[83844] = "Chemist's Purified Water|alchemy skill:alchemy11:1|42.65 55.1||treasure item:226269|Contains|!{132852} [epic]Chemist's Purified Water]",
-		[83845] = "Sanctified Mortar and Pestle|alchemy skill:alchemy11:1|41.66 55.84|\"Bottom floor of the orphanage building\"|treasure item:226270|Contains|!{236229} [epic]Sanctified Mortar and Pestle]",
+		[83844] = "Chemist's Purified Water|alchemy skill:alchemy:11:1|42.65 55.1||treasure item:226269|Contains|!{132852} [epic]Chemist's Purified Water]",
+		[83845] = "Sanctified Mortar and Pestle|alchemy skill:alchemy:11:1|41.66 55.84|\"Bottom floor of the orphanage building\"|treasure item:226270|Contains|!{236229} [epic]Sanctified Mortar and Pestle]",
 		
 		-- Blacksmithing Treasure
-		[83853] = "Radiant Tongs|blacksmithing skill:blacksmithing11:1|44.06 55.59||treasure item:226281|Contains|!{1020384} [epic]Radiant Tongs]",
-		[83852] = "Holy Flame Forge|blacksmithing skill:blacksmithing11:1|47.58 61.06||treasure item:226280|Contains|!{1723995} [epic]Holy Flame Forge]",
+		[83853] = "Radiant Tongs|blacksmithing skill:blacksmithing:11:1|44.06 55.59||treasure item:226281|Contains|!{1020384} [epic]Radiant Tongs]",
+		[83852] = "Holy Flame Forge|blacksmithing skill:blacksmithing:11:1|47.58 61.06||treasure item:226280|Contains|!{1723995} [epic]Holy Flame Forge]",
 
 		-- Enchanting Treasure
-		[83863] = "Enchanted Arathi Scroll|enchanting skill:enchanting11:1|48.59 64.51|\"Inside the Althal Lab\"|treasure item:226289|Contains|!{4549168} [epic]Enchanted Arathi Scroll]",
-		[83862] = "Essence of Holy Fire|enchanting skill:enchanting11:1|40.05 70.55|\"Inside the tower\"|treasure item:226288|Contains|!{535593} [epic]Essence of Holy Fire]",
+		[83863] = "Enchanted Arathi Scroll|enchanting skill:enchanting:11:1|48.59 64.51|\"Inside the Althal Lab\"|treasure item:226289|Contains|!{4549168} [epic]Enchanted Arathi Scroll]",
+		[83862] = "Essence of Holy Fire|enchanting skill:enchanting:11:1|40.05 70.55|\"Inside the tower\"|treasure item:226288|Contains|!{535593} [epic]Essence of Holy Fire]",
 
 		-- Engineering Treasure
-		[83871] = "Arathi Safety Gloves|engineering skill:engineering11:1|41.63 48.93|\"Inside the skiff\"|treasure item:226297|Contains|!{133816} [epic]Arathi Safety Gloves]",
-		[83870] = "Holy Firework Dud|engineering skill:engineering11:1|46.32 61.35||treasure item:226296|Contains|!{134286} [epic]Holy Firework Dud]",
+		[83871] = "Arathi Safety Gloves|engineering skill:engineering:11:1|41.63 48.93|\"Inside the skiff\"|treasure item:226297|Contains|!{133816} [epic]Arathi Safety Gloves]",
+		[83870] = "Holy Firework Dud|engineering skill:engineering:11:1|46.32 61.35||treasure item:226296|Contains|!{134286} [epic]Holy Firework Dud]",
 
 		-- Herbalism Treasure
-		[83879] = "Arathi Herb Pruner|herbalism skill:herbalism11:1|35.98 55.01||treasure item:226305|Contains|!{135653} [epic]Arathi Herb Pruner]",
-		[83878] = "Arathi Garden Trowel|herbalism skill:herbalism11:1|47.78 63.32||treasure item:226304|Contains|!{1060568} [epic]Arathi Garden Trowel]",
+		[83879] = "Arathi Herb Pruner|herbalism skill:herbalism:11:1|35.98 55.01||treasure item:226305|Contains|!{135653} [epic]Arathi Herb Pruner]",
+		[83878] = "Arathi Garden Trowel|herbalism skill:herbalism:11:1|47.78 63.32||treasure item:226304|Contains|!{1060568} [epic]Arathi Garden Trowel]",
 		
 		-- Inscription Treasure
-		[83887] = "Calligrapher's Chiseled Marker|inscription skill:inscription11:1|42.83 49.07|\"In the tower\"|treasure item:226313|Contains|!{4620676} [epic]Calligrapher's Chiseled Marker]",
-		[83886] = "Informant's Fountain Pen|inscription skill:inscription11:1|43.25 58.94||treasure item:226312|Contains|!{237171} [epic]Informant's Fountain Pen]",
+		[83887] = "Calligrapher's Chiseled Marker|inscription skill:inscription:11:1|42.83 49.07|\"In the tower\"|treasure item:226313|Contains|!{4620676} [epic]Calligrapher's Chiseled Marker]",
+		[83886] = "Informant's Fountain Pen|inscription skill:inscription:11:1|43.25 58.94||treasure item:226312|Contains|!{237171} [epic]Informant's Fountain Pen]",
 		
 		-- Jewelcrafting Treasure
-		[83895] = "Librarian's Magnifiers|jewelcrafting skill:jewelcrafting11:1|44.69 50.97|\"Upstairs on round table\"|treasure item:226321|Contains|!{4419344} [epic]Librarian's Magnifiers]",
-		[83894] = "Arathi Sizing Gauges|jewelcrafting skill:jewelcrafting11:1|47.39 60.68|\"On top of a shelf\"|treasure item:226320|Contains|!{134509} [epic]Arathi Sizing Gauges]",
+		[83895] = "Librarian's Magnifiers|jewelcrafting skill:jewelcrafting:11:1|44.69 50.97|\"Upstairs on round table\"|treasure item:226321|Contains|!{4419344} [epic]Librarian's Magnifiers]",
+		[83894] = "Arathi Sizing Gauges|jewelcrafting skill:jewelcrafting:11:1|47.39 60.68|\"On top of a shelf\"|treasure item:226320|Contains|!{134509} [epic]Arathi Sizing Gauges]",
 		
 		-- Leatherworking Treasure
-		[83903] = "Arathi Leather Burnisher|leatherworking skill:leatherworking11:1|41.5 57.83||treasure item:226329|Contains|!{135660} [epic]Arathi Leather Burnisher]",
-		[83902] = "Arathi Beveler Set|leatherworking skill:leatherworking11:1|47.51 65.13||treasure item:226328|Contains|!{4635253} [epic]Arathi Beveler Set]",
+		[83903] = "Arathi Leather Burnisher|leatherworking skill:leatherworking:11:1|41.5 57.83||treasure item:226329|Contains|!{135660} [epic]Arathi Leather Burnisher]",
+		[83902] = "Arathi Beveler Set|leatherworking skill:leatherworking:11:1|47.51 65.13||treasure item:226328|Contains|!{4635253} [epic]Arathi Beveler Set]",
 		
 		-- Mining Treasure
-		[83911] = "Devout Archaeologist's Excavator|mining skill:mining11:1|43.1 56.85||treasure item:226337|Contains|!{5874233} [epic]Devout Archaeologist's Excavator]",
-		[83910] = "Arathi Precision Drill|mining skill:mining11:1|46.07 64.39|\"Underneath the porch\"|treasure item:226336|Contains|!{135657} [epic]Arathi Precision Drill]",
+		[83911] = "Devout Archaeologist's Excavator|mining skill:mining:11:1|43.1 56.85||treasure item:226337|Contains|!{5874233} [epic]Devout Archaeologist's Excavator]",
+		[83910] = "Arathi Precision Drill|mining skill:mining:11:1|46.07 64.39|\"Underneath the porch\"|treasure item:226336|Contains|!{135657} [epic]Arathi Precision Drill]",
 		
 		-- Skinning Treasure
-		[83919] = "Arathi Craftsman's Spokeshave|skinning skill:skinning11:1|42.3 53.93|\"Inside a building\"|treasure item:226345|Contains|!{511729} [epic]Arathi Craftsman's Spokeshave]",
-		[83918] = "Arathi Tanning Agent|skinning skill:skinning11:1|49.36 62.15|\"Inside the house\"|treasure item:226344|Contains|!{133587} [epic]Arathi Tanning Agent]",
+		[83919] = "Arathi Craftsman's Spokeshave|skinning skill:skinning:11:1|42.3 53.93|\"Inside a building\"|treasure item:226345|Contains|!{511729} [epic]Arathi Craftsman's Spokeshave]",
+		[83918] = "Arathi Tanning Agent|skinning skill:skinning:11:1|49.36 62.15|\"Inside the house\"|treasure item:226344|Contains|!{133587} [epic]Arathi Tanning Agent]",
 		
 		-- Tailoring Treasure
-		[83926] = "Arathi Rotary Cutter|tailoring skill:tailoring11:1|49.32 62.31||treasure item:226352|Contains|!{237507} [epic]Arathi Rotary Cutter]",
-		[83927] = "Royal Outfitter's Protractor|tailoring skill:tailoring11:1|40.09 68.13|\"Inside the pavillion\"|treasure item:226353|Contains|!{133878} [epic]Royal Outfitter's Protractor]",
+		[83926] = "Arathi Rotary Cutter|tailoring skill:tailoring:11:1|49.32 62.31||treasure item:226352|Contains|!{237507} [epic]Arathi Rotary Cutter]",
+		[83927] = "Royal Outfitter's Protractor|tailoring skill:tailoring:11:1|40.09 68.13|\"Inside the pavillion\"|treasure item:226353|Contains|!{133878} [epic]Royal Outfitter's Protractor]",
 	},
 
 
@@ -230,175 +576,175 @@ Data.Vignettes = {
 		[82721] = "Niffen Stash|68+|54.51 50.7|\"Under the bridge\"|treasure atlas:VignetteLootElite item:204790|Contains|!{5869499} [Strong Sniffin' Soup for Niffen] (3)|!{4549280} [Kej] (45)",
 
 		-- Alchemy Treasure
-		[83847] = "Dark Apothecary's Vial|alchemy skill:alchemy11:1|42.82 57.36|\"Inside the tower\"|treasure item:226272|Contains|!{463861} [epic]Dark Apothecary's Vial]",
-		[83846] = "Nerubian Mixing Salts|alchemy skill:alchemy11:1|47.13 69.65||treasure link:2213 item:226271|Contains|!{1387651} [epic]Nerubian Mixing Salts]",
-		[82633] = "[neutral]Siesbarg]|alchemy skill:alchemy11:1 -item:224024|47.19 69.57||treasure scroll link:2213 item:224024|Sells|!{4624658} [rare]Theories of Bodily Transmutation, Chapter 8]",
+		[83847] = "Dark Apothecary's Vial|alchemy skill:alchemy:11:1|42.82 57.36|\"Inside the tower\"|treasure item:226272|Contains|!{463861} [epic]Dark Apothecary's Vial]",
+		[83846] = "Nerubian Mixing Salts|alchemy skill:alchemy:11:1|47.13 69.65||treasure link:2213 item:226271|Contains|!{1387651} [epic]Nerubian Mixing Salts]",
+		[82633] = "[neutral]Siesbarg]|alchemy skill:alchemy:11:1 -item:224024|47.19 69.57||treasure scroll link:2213 item:224024|Sells|!{4624658} [rare]Theories of Bodily Transmutation, Chapter 8]",
 		
 		-- Blacksmithing Treasure
-		[83855] = "Spiderling's Wire Brush|blacksmithing skill:blacksmithing11:1|52.96 51.26|\"Inside a building\"|treasure item:226283|Contains|!{5546082} [epic]Spiderling's Wire Brush]",
-		[83854] = "Nerubian Smith's Kit|blacksmithing skill:blacksmithing11:1|47.56 73.02||treasure link:2213 item:226282|Contains|!{465841} [epic]Nerubian Smith's Kit]",
-		[82631] = "[neutral]Rakka]|blacksmithing skill:blacksmithing11:1 -item:224038|47.6 72.69||treasure scroll link:2213 item:224038|Sells|!{4624661} [rare]Smithing After Saronite]",
+		[83855] = "Spiderling's Wire Brush|blacksmithing skill:blacksmithing:11:1|52.96 51.26|\"Inside a building\"|treasure item:226283|Contains|!{5546082} [epic]Spiderling's Wire Brush]",
+		[83854] = "Nerubian Smith's Kit|blacksmithing skill:blacksmithing:11:1|47.56 73.02||treasure link:2213 item:226282|Contains|!{465841} [epic]Nerubian Smith's Kit]",
+		[82631] = "[neutral]Rakka]|blacksmithing skill:blacksmithing:11:1 -item:224038|47.6 72.69||treasure scroll link:2213 item:224038|Sells|!{4624661} [rare]Smithing After Saronite]",
 
 		-- Enchanting Treasure
-		[83865] = "Void Shard|enchanting skill:enchanting11:1|57.35 44.03||treasure item:226291|Contains|!{1003592} [epic]Void Shard]",
-		[83864] = "Book of Dark Magic|enchanting skill:enchanting11:1|52.86 72.71||treasure link:2213 item:226290|Contains|!{133737} [epic]Book of Dark Magic]",
-		[82635] = "[neutral]Iliani]|enchanting skill:enchanting11:1 -item:224050|47.19 76.74||treasure scroll link:2213 item:224050|Sells|!{4624666} [rare]Web Sparkles: Pretty and Powerful]",
+		[83865] = "Void Shard|enchanting skill:enchanting:11:1|57.35 44.03||treasure item:226291|Contains|!{1003592} [epic]Void Shard]",
+		[83864] = "Book of Dark Magic|enchanting skill:enchanting:11:1|52.86 72.71||treasure link:2213 item:226290|Contains|!{133737} [epic]Book of Dark Magic]",
+		[82635] = "[neutral]Iliani]|enchanting skill:enchanting:11:1 -item:224050|47.19 76.74||treasure scroll link:2213 item:224050|Sells|!{4624666} [rare]Web Sparkles: Pretty and Powerful]",
 
 		-- Engineering Treasure
-		[83872] = "Puppeted Mechanical Spider|engineering skill:engineering11:1|56.85 38.58|\"On a table inside The Trap Door\"|treasure item:226298|Contains|!{2027945} [epic]Puppeted Mechanical Spider]",
-		[83873] = "Emptied Venom Canister|engineering skill:engineering11:1|53.36 68.93||treasure link:2213 item:226299|Contains|!{967528} [epic]Emptied Venom Canister]",
-		[82632] = "[neutral]Rikku]|engineering skill:engineering11:1|51.68 76.04 -item:224052||treasure scroll link:2213 item:224052|Sells|!{4624730} [rare]Clocks, Gears, Sprockets, and Legs]",
+		[83872] = "Puppeted Mechanical Spider|engineering skill:engineering:11:1|56.85 38.58|\"On a table inside The Trap Door\"|treasure item:226298|Contains|!{2027945} [epic]Puppeted Mechanical Spider]",
+		[83873] = "Emptied Venom Canister|engineering skill:engineering:11:1|53.36 68.93||treasure link:2213 item:226299|Contains|!{967528} [epic]Emptied Venom Canister]",
+		[82632] = "[neutral]Rikku]|engineering skill:engineering:11:1|51.68 76.04 -item:224052||treasure scroll link:2213 item:224052|Sells|!{4624730} [rare]Clocks, Gears, Sprockets, and Legs]",
 		
 		-- Herbalism Treasure
-		[83880] = "Web-Entangled Lotus|herbalism skill:herbalism11:1|50.38 72.31||treasure link:2213 item:226306|Contains|!{876365} [epic]Web-Entangled Lotus]",
-		[83881] = "Tunneler's Shovel|herbalism skill:herbalism11:1|47.65 70.65||treasure link:2213 item:226307|Contains|!{134435} [epic]Tunneler's Shovel]",
-		[82630] = "[neutral]LLyot]|herbalism skill:herbalism11:1|47.68 70.64 -item:224023||treasure scroll link:2213 item:224023|Sells|!{4624731} [rare]Herbal Embalming Techniques]",
+		[83880] = "Web-Entangled Lotus|herbalism skill:herbalism:11:1|50.38 72.31||treasure link:2213 item:226306|Contains|!{876365} [epic]Web-Entangled Lotus]",
+		[83881] = "Tunneler's Shovel|herbalism skill:herbalism:11:1|47.65 70.65||treasure link:2213 item:226307|Contains|!{134435} [epic]Tunneler's Shovel]",
+		[82630] = "[neutral]LLyot]|herbalism skill:herbalism:11:1|47.68 70.64 -item:224023||treasure scroll link:2213 item:224023|Sells|!{4624731} [rare]Herbal Embalming Techniques]",
 		
 		-- Inscription Treasure
-		[83888] = "Nerubian Texts|inscription skill:inscription11:1|55.83 43.9||treasure item:226314|Contains|!{133733} [epic]Nerubian Texts]",
-		[83889] = "Venomancer's Ink Well|inscription skill:inscription11:1|48.85 75.70||treasure link:2213 item:226315|Contains|!{464026} [epic]Venomancer's Ink Well]",
-		[82636] = "[neutral]Nuel Prill]|inscription skill:inscription11:1|46.06 74.53 -item:224053||treasure scroll link:2213 item:224053|Sells|!{4624734} [rare]Eight Views on Defense against Hostile Runes]",
+		[83888] = "Nerubian Texts|inscription skill:inscription:11:1|55.83 43.9||treasure item:226314|Contains|!{133733} [epic]Nerubian Texts]",
+		[83889] = "Venomancer's Ink Well|inscription skill:inscription:11:1|48.85 75.70||treasure link:2213 item:226315|Contains|!{464026} [epic]Venomancer's Ink Well]",
+		[82636] = "[neutral]Nuel Prill]|inscription skill:inscription:11:1|46.06 74.53 -item:224053||treasure scroll link:2213 item:224053|Sells|!{4624734} [rare]Eight Views on Defense against Hostile Runes]",
 		
 		-- Jewelcrafting Treasure
-		[83897] = "Nerubian Bench Blocks|jewelcrafting skill:jewelcrafting11:1|56.17 58.65|\"Inside the tower\"|treasure item:226323|Contains|!{1060564} [epic]Nerubian Bench Blocks]",
-		[83896] = "Ritual Caster's Crystal|jewelcrafting skill:jewelcrafting11:1|48.01 71.83||treasure link:2213 item:226322|Contains|!{132885} [epic]Ritual Caster's Crystal]",
-		[82637] = "[neutral]Alvus Valavulu]|jewelcrafting skill:jewelcrafting11:1 -item:224054|47.99 71.56||treasure scroll link:2213 item:224054|Sells|!{4624833} [rare]Emergent Crystals of the Surface-Dwellers]",
+		[83897] = "Nerubian Bench Blocks|jewelcrafting skill:jewelcrafting:11:1|56.17 58.65|\"Inside the tower\"|treasure item:226323|Contains|!{1060564} [epic]Nerubian Bench Blocks]",
+		[83896] = "Ritual Caster's Crystal|jewelcrafting skill:jewelcrafting:11:1|48.01 71.83||treasure link:2213 item:226322|Contains|!{132885} [epic]Ritual Caster's Crystal]",
+		[82637] = "[neutral]Alvus Valavulu]|jewelcrafting skill:jewelcrafting:11:1 -item:224054|47.99 71.56||treasure scroll link:2213 item:224054|Sells|!{4624833} [rare]Emergent Crystals of the Surface-Dwellers]",
 
 		-- Leatherworking Treasure
-		[83905] = "Curved Nerubian Skinning Knife|leatherworking skill:leatherworking11:1|59.99 54.01||treasure item:226331|Contains|!{464119} [epic]Curved Nerubian Skinning Knife]",
-		[83904] = "Nerubian Tanning Mallet|leatherworking skill:leatherworking11:1|50.53 74.43||treasure link:2213 item:226330|Contains|!{1059113} [epic]Nerubian Tanning Mallet]",
-		[82626] = "[neutral]Kama]|leatherworking -skinning,82596 skill:leatherworking11:1 -item:224056|46.31 72.12||treasure scroll link:2213 item:224056|Sells|!{4624911} [rare]Uses for Leftover Husks (After You Take Them Apart)]",
+		[83905] = "Curved Nerubian Skinning Knife|leatherworking skill:leatherworking:11:1|59.99 54.01||treasure item:226331|Contains|!{464119} [epic]Curved Nerubian Skinning Knife]",
+		[83904] = "Nerubian Tanning Mallet|leatherworking skill:leatherworking:11:1|50.53 74.43||treasure link:2213 item:226330|Contains|!{1059113} [epic]Nerubian Tanning Mallet]",
+		[82626] = "[neutral]Kama]|leatherworking -skinning,82596 skill:leatherworking:11:1 -item:224056|46.31 72.12||treasure scroll link:2213 item:224056|Sells|!{4624911} [rare]Uses for Leftover Husks (After You Take Them Apart)]",
 
 		-- Mining Treasure
-		[83912] = "Heavy Spider Crusher|mining skill:mining11:1|47.66 72.6||treasure link:2213 item:226338|Contains|!{133046} [epic]Heavy Spider Crusher]",
-		[83913] = "Nerubian Mining Cart|mining skill:mining11:1|48.07 79.21||treasure down link:2216 item:226339|Contains|!{4202229} [epic]Nerubian Mining Supplies]",
+		[83912] = "Heavy Spider Crusher|mining skill:mining:11:1|47.66 72.6||treasure link:2213 item:226338|Contains|!{133046} [epic]Heavy Spider Crusher]",
+		[83913] = "Nerubian Mining Cart|mining skill:mining:11:1|48.07 79.21||treasure down link:2216 item:226339|Contains|!{4202229} [epic]Nerubian Mining Supplies]",
 		[82614] = {
-			"[neutral]Rakka]|mining -blacksmithing,82631,item:224038 skill:mining11:1 -item:224055|47.6 72.69||treasure scroll link:2213 item:224055|Sells|!{4625027} [rare]A Rocky Start]",
-			"[neutral]Rakka]|mining blacksmithing -82631 skill:mining11:1,skill:blacksmithing11:1 -item:224055 -item:224038|47.6 72.69||treasure scroll link:2213 item:224055|Sells|!{4625027} [rare]A Rocky Start]|!{4624661} [rare]Smithing After Saronite]",
+			"[neutral]Rakka]|mining -blacksmithing,82631,item:224038 skill:mining:11:1 -item:224055|47.6 72.69||treasure scroll link:2213 item:224055|Sells|!{4625027} [rare]A Rocky Start]",
+			"[neutral]Rakka]|mining blacksmithing -82631 skill:mining:11:1,skill:blacksmithing:11:1 -item:224055 -item:224038|47.6 72.69||treasure scroll link:2213 item:224055|Sells|!{4625027} [rare]A Rocky Start]|!{4624661} [rare]Smithing After Saronite]",
 		},
 
 		-- Skinning Treasure
-		[83921] = "Carapace Shiner|skinning skill:skinning11:1|56.54 55.24||treasure item:226347|Contains|!{135034} [epic]Carapace Shiner]",
-		[83920] = "Nerubian's Slicking Iron|skinning skill:skinning11:1|46.85 82.28||treasure down link:2216 item:226346|Contains|!{135655} [epic]Nerubian's Slicking Iron]",
+		[83921] = "Carapace Shiner|skinning skill:skinning:11:1|56.54 55.24||treasure item:226347|Contains|!{135034} [epic]Carapace Shiner]",
+		[83920] = "Nerubian's Slicking Iron|skinning skill:skinning:11:1|46.85 82.28||treasure down link:2216 item:226346|Contains|!{135655} [epic]Nerubian's Slicking Iron]",
 		[82596] = {
-			"[neutral]Kama]|skinning -leatherworking,82626,item:224056 skill:skinning11:1 -item:224007|46.31 72.12||treasure scroll link:2213 item:224007|Sells|!{4624664} [rare]Uses for Leftover Husks (How to Take Them Apart)]",
-			"[neutral]Kama]|skinning leatherworking -82626 skill:skinning11:1,skill:leatherworking11:1 -item:224007 -item:224056|46.31 72.12||treasure scroll link:2213 item:224007|Sells|!{4624664} [rare]Uses for Leftover Husks (How to Take Them Apart)]|!{4624911} [rare]Uses for Leftover Husks (After You Take Them Apart)]",
+			"[neutral]Kama]|skinning -leatherworking,82626,item:224056 skill:skinning:11:1 -item:224007|46.31 72.12||treasure scroll link:2213 item:224007|Sells|!{4624664} [rare]Uses for Leftover Husks (How to Take Them Apart)]",
+			"[neutral]Kama]|skinning leatherworking -82626 skill:skinning:11:1,skill:leatherworking:11:1 -item:224007 -item:224056|46.31 72.12||treasure scroll link:2213 item:224007|Sells|!{4624664} [rare]Uses for Leftover Husks (How to Take Them Apart)]|!{4624911} [rare]Uses for Leftover Husks (After You Take Them Apart)]",
 		},
 		
 		-- Tailoring Treasure
-		[83928] = "Nerubian Quilt|tailoring skill:tailoring11:1|53.27 53.12|\"Inside a building\"|treasure item:226354|Contains|!{1379171} [epic]Nerubian Quilt]",
-		[83929] = "Nerubian's Pincushion|tailoring skill:tailoring11:1|48.89 70.89||treasure link:2213 item:226355|Contains|!{1044082} [epic]Nerubian's Pincushion]",
-		[82634] = "[neutral]Saaria]|tailoring skill:tailoring11:1 -item:224036|48.91 70.95||treasure scroll link:2213 item:224036|Sells|!{4625110} [rare]And That's A Web-Wrap!]",
+		[83928] = "Nerubian Quilt|tailoring skill:tailoring:11:1|53.27 53.12|\"Inside a building\"|treasure item:226354|Contains|!{1379171} [epic]Nerubian Quilt]",
+		[83929] = "Nerubian's Pincushion|tailoring skill:tailoring:11:1|48.89 70.89||treasure link:2213 item:226355|Contains|!{1044082} [epic]Nerubian's Pincushion]",
+		[82634] = "[neutral]Saaria]|tailoring skill:tailoring:11:1 -item:224036|48.91 70.95||treasure scroll link:2213 item:224036|Sells|!{4625110} [rare]And That's A Web-Wrap!]",
 	},
 
 	-- City of Threads
 	[2213] = {
 		-- Alchemy Treasure
-		[83846] = "Nerubian Mixing Salts|alchemy skill:alchemy11:1|45.29 13.24|\"Inside a building\"|treasure item:226271|Contains|!{1387651} [epic]Nerubian Mixing Salts]",
-		[82633] = "[neutral]Siesbarg]|alchemy skill:alchemy11:1 -item:224024|45.46 13.02||treasure scroll item:224024|Sells|!{4624658} [rare]Theories of Bodily Transmutation, Chapter 8]",
+		[83846] = "Nerubian Mixing Salts|alchemy skill:alchemy:11:1|45.29 13.24|\"Inside a building\"|treasure item:226271|Contains|!{1387651} [epic]Nerubian Mixing Salts]",
+		[82633] = "[neutral]Siesbarg]|alchemy skill:alchemy:11:1 -item:224024|45.46 13.02||treasure scroll item:224024|Sells|!{4624658} [rare]Theories of Bodily Transmutation, Chapter 8]",
 
 		-- Blacksmithing Treasure
-		[83854] = "Nerubian Smith's Kit|blacksmithing skill:blacksmithing11:1|46.52 22.91||treasure item:226282|Contains|!{465841} [epic]Nerubian Smith's Kit]",
-		[82631] = "[neutral]Rakka]|blacksmithing skill:blacksmithing11:1 -item:224038|46.64 21.96||treasure scroll item:224038|Sells|!{4624661} [rare]Smithing After Saronite]",
+		[83854] = "Nerubian Smith's Kit|blacksmithing skill:blacksmithing:11:1|46.52 22.91||treasure item:226282|Contains|!{465841} [epic]Nerubian Smith's Kit]",
+		[82631] = "[neutral]Rakka]|blacksmithing skill:blacksmithing:11:1 -item:224038|46.64 21.96||treasure scroll item:224038|Sells|!{4624661} [rare]Smithing After Saronite]",
 
 		-- Enchanting Treasure
-		[83864] = "Book of Dark Magic|enchanting skill:enchanting11:1|61.72 22||treasure item:226290|Contains|!{133737} [epic]Book of Dark Magic]",
-		[82635] = "[neutral]Iliani]|enchanting skill:enchanting11:1 -item:224050|45.46 33.58|\"Inside the Infuser building\"|treasure scroll item:224050|Sells|!{4624666} [rare]Web Sparkles: Pretty and Powerful]",
+		[83864] = "Book of Dark Magic|enchanting skill:enchanting:11:1|61.72 22||treasure item:226290|Contains|!{133737} [epic]Book of Dark Magic]",
+		[82635] = "[neutral]Iliani]|enchanting skill:enchanting:11:1 -item:224050|45.46 33.58|\"Inside the Infuser building\"|treasure scroll item:224050|Sells|!{4624666} [rare]Web Sparkles: Pretty and Powerful]",
 		
 		-- Engineering Treasure
-		[83873] = "Emptied Venom Canister|engineering skill:engineering11:1|63.14 11.16||treasure item:226299|Contains|!{967528} [epic]Emptied Venom Canister]",
-		[82632] = "[neutral]Rikku]|engineering skill:engineering11:1|58.34 31.55 -item:224052||treasure scroll item:224052|Sells|!{4624730} [rare]Clocks, Gears, Sprockets, and Legs]",
+		[83873] = "Emptied Venom Canister|engineering skill:engineering:11:1|63.14 11.16||treasure item:226299|Contains|!{967528} [epic]Emptied Venom Canister]",
+		[82632] = "[neutral]Rikku]|engineering skill:engineering:11:1|58.34 31.55 -item:224052||treasure scroll item:224052|Sells|!{4624730} [rare]Clocks, Gears, Sprockets, and Legs]",
 
 		-- Herbalism Treasure
-		[83880] = "Web-Entangled Lotus|herbalism skill:herbalism11:1|54.6 20.88||treasure item:226306|Contains|!{876365} [epic]Web-Entangled Lotus]",
-		[83881] = "Tunneler's Shovel|herbalism skill:herbalism11:1|46.78 16.13||treasure item:226307|Contains|!{134435} [epic]Tunneler's Shovel]",
-		[82630] = "[neutral]LLyot]|herbalism skill:herbalism11:1|46.87 16.08 -item:224023||treasure scroll item:224023|Sells|!{4624731} [rare]Herbal Embalming Techniques]",
+		[83880] = "Web-Entangled Lotus|herbalism skill:herbalism:11:1|54.6 20.88||treasure item:226306|Contains|!{876365} [epic]Web-Entangled Lotus]",
+		[83881] = "Tunneler's Shovel|herbalism skill:herbalism:11:1|46.78 16.13||treasure item:226307|Contains|!{134435} [epic]Tunneler's Shovel]",
+		[82630] = "[neutral]LLyot]|herbalism skill:herbalism:11:1|46.87 16.08 -item:224023||treasure scroll item:224023|Sells|!{4624731} [rare]Herbal Embalming Techniques]",
 		
 		-- Inscription Treasure
-		[83889] = "Venomancer's Ink Well|inscription skill:inscription11:1|50.23 30.84|\"Inside a building\"|treasure item:226315|Contains|!{464026} [epic]Venomancer's Ink Well]",
-		[82636] = "[neutral]Nuel Prill]|inscription skill:inscription11:1|42.23 27.23 -item:224053|\"Inside a building\"|treasure scroll item:224053|Sells|!{4624734} [rare]Eight Views on Defense against Hostile Runes]",
+		[83889] = "Venomancer's Ink Well|inscription skill:inscription:11:1|50.23 30.84|\"Inside a building\"|treasure item:226315|Contains|!{464026} [epic]Venomancer's Ink Well]",
+		[82636] = "[neutral]Nuel Prill]|inscription skill:inscription:11:1|42.23 27.23 -item:224053|\"Inside a building\"|treasure scroll item:224053|Sells|!{4624734} [rare]Eight Views on Defense against Hostile Runes]",
 		
 		-- Jewelcrafting Treasure
-		[83896] = "Ritual Caster's Crystal|jewelcrafting skill:jewelcrafting11:1|47.81 19.5|\"On top of a table\"|treasure item:226322|Contains|!{132885} [epic]Ritual Caster's Crystal]",
-		[82637] = "[neutral]Alvus Valavulu]|jewelcrafting skill:jewelcrafting11:1 -item:224054|47.75 18.73||treasure scroll item:224054|Sells|!{4624833} [rare]Emergent Crystals of the Surface-Dwellers]",
+		[83896] = "Ritual Caster's Crystal|jewelcrafting skill:jewelcrafting:11:1|47.81 19.5|\"On top of a table\"|treasure item:226322|Contains|!{132885} [epic]Ritual Caster's Crystal]",
+		[82637] = "[neutral]Alvus Valavulu]|jewelcrafting skill:jewelcrafting:11:1 -item:224054|47.75 18.73||treasure scroll item:224054|Sells|!{4624833} [rare]Emergent Crystals of the Surface-Dwellers]",
 		
 		-- Leatherworking Treasure
-		[83904] = "Nerubian Tanning Mallet|leatherworking skill:leatherworking11:1|55.03 26.94|\"Inside the tower\"|treasure item:226330|Contains|!{1059113} [epic]Nerubian Tanning Mallet]",
-		[82626] = "[neutral]Kama]|leatherworking -skinning,82596 skill:leatherworking11:1 -item:224056|42.93 20.33||treasure scroll item:224056|Sells|!{4624911} [rare]Uses for Leftover Husks (After You Take Them Apart)]",
+		[83904] = "Nerubian Tanning Mallet|leatherworking skill:leatherworking:11:1|55.03 26.94|\"Inside the tower\"|treasure item:226330|Contains|!{1059113} [epic]Nerubian Tanning Mallet]",
+		[82626] = "[neutral]Kama]|leatherworking -skinning,82596 skill:leatherworking:11:1 -item:224056|42.93 20.33||treasure scroll item:224056|Sells|!{4624911} [rare]Uses for Leftover Husks (After You Take Them Apart)]",
 
 		-- Mining Treasure
-		[83912] = "Heavy Spider Crusher|mining skill:mining11:1|46.82 21.71||treasure item:226338|Contains|!{133046} [epic]Heavy Spider Crusher]",
-		[83913] = "Nerubian Mining Cart|mining skill:mining11:1|47.96 40.63||treasure down link:2216 item:226339|Contains|!{4202229} [epic]Nerubian Mining Supplies]",
+		[83912] = "Heavy Spider Crusher|mining skill:mining:11:1|46.82 21.71||treasure item:226338|Contains|!{133046} [epic]Heavy Spider Crusher]",
+		[83913] = "Nerubian Mining Cart|mining skill:mining:11:1|47.96 40.63||treasure down link:2216 item:226339|Contains|!{4202229} [epic]Nerubian Mining Supplies]",
 		[82614] = {
-			"[neutral]Rakka]|mining -blacksmithing,82631,item:224038 skill:mining11:1 -item:224055|46.64 21.96||treasure scroll item:224055|Sells|!{4625027} [rare]A Rocky Start]",
-			"[neutral]Rakka]|mining blacksmithing -82631 skill:mining11:1,skill:blacksmithing11:1 -item:224055 -item:224038|46.64 21.96||treasure scroll item:224055|Sells|!{4625027} [rare]A Rocky Start]|!{4624661} [rare]Smithing After Saronite]",
+			"[neutral]Rakka]|mining -blacksmithing,82631,item:224038 skill:mining:11:1 -item:224055|46.64 21.96||treasure scroll item:224055|Sells|!{4625027} [rare]A Rocky Start]",
+			"[neutral]Rakka]|mining blacksmithing -82631 skill:mining:11:1,skill:blacksmithing11:1 -item:224055 -item:224038|46.64 21.96||treasure scroll item:224055|Sells|!{4625027} [rare]A Rocky Start]|!{4624661} [rare]Smithing After Saronite]",
 		},
 
 		-- Skinning Treasure
-		[83920] = "Nerubian's Slicking Iron|skinning skill:skinning11:1|44.48 49.46||treasure down link:2216 item:226346|Contains|!{135655} [epic]Nerubian's Slicking Iron]",
+		[83920] = "Nerubian's Slicking Iron|skinning skill:skinning:11:1|44.48 49.46||treasure down link:2216 item:226346|Contains|!{135655} [epic]Nerubian's Slicking Iron]",
 		[82596] = {
-			"[neutral]Kama]|skinning -leatherworking,82626,item:224056 skill:skinning11:1 -item:224007|42.93 20.33||treasure scroll item:224007|Sells|!{4624664} [rare]Uses for Leftover Husks (How to Take Them Apart)]",
-			"[neutral]Kama]|skinning leatherworking -82626 skill:skinning11:1,skill:leatherworking11:1 -item:224007 -item:224056|42.93 20.33||treasure scroll item:224007|Sells|!{4624664} [rare]Uses for Leftover Husks (How to Take Them Apart)]|!{4624911} [rare]Uses for Leftover Husks (After You Take Them Apart)]",
+			"[neutral]Kama]|skinning -leatherworking,82626,item:224056 skill:skinning:11:1 -item:224007|42.93 20.33||treasure scroll item:224007|Sells|!{4624664} [rare]Uses for Leftover Husks (How to Take Them Apart)]",
+			"[neutral]Kama]|skinning leatherworking -82626 skill:skinning:11:1,skill:leatherworking:11:1 -item:224007 -item:224056|42.93 20.33||treasure scroll item:224007|Sells|!{4624664} [rare]Uses for Leftover Husks (How to Take Them Apart)]|!{4624911} [rare]Uses for Leftover Husks (After You Take Them Apart)]",
 		},
 
 		-- Tailoring Treasure
-		[83929] = "Nerubian's Pincushion|tailoring skill:tailoring11:1|50.32 16.81||treasure item:226355|Contains|!{1044082} [epic]Nerubian's Pincushion]",
-		[82634] = "[neutral]Saaria]|tailoring skill:tailoring11:1 -item:224036|50.39 16.97||treasure scroll item:224036|Sells|!{4625110} [rare]And That's A Web-Wrap!]",
+		[83929] = "Nerubian's Pincushion|tailoring skill:tailoring:11:1|50.32 16.81||treasure item:226355|Contains|!{1044082} [epic]Nerubian's Pincushion]",
+		[82634] = "[neutral]Saaria]|tailoring skill:tailoring:11:1 -item:224036|50.39 16.97||treasure scroll item:224036|Sells|!{4625110} [rare]And That's A Web-Wrap!]",
 	},
 
 	-- City of Threads - Lower (The Burrows)
 	[2216] = {
 		-- Alchemy Treasure
-		[83846] = "Nerubian Mixing Salts|alchemy skill:alchemy11:1|45.29 13.24||treasure up link:2213 item:226271|Contains|!{1387651} [epic]Nerubian Mixing Salts]",
-		[82633] = "[neutral]Siesbarg]|alchemy skill:alchemy11:1 -item:224024|45.46 13.02||treasure scroll up link:2213 item:224024|Sells|!{4624658} [rare]Theories of Bodily Transmutation, Chapter 8]",
+		[83846] = "Nerubian Mixing Salts|alchemy skill:alchemy:11:1|45.29 13.24||treasure up link:2213 item:226271|Contains|!{1387651} [epic]Nerubian Mixing Salts]",
+		[82633] = "[neutral]Siesbarg]|alchemy skill:alchemy:11:1 -item:224024|45.46 13.02||treasure scroll up link:2213 item:224024|Sells|!{4624658} [rare]Theories of Bodily Transmutation, Chapter 8]",
 
 		-- Blacksmithing Treasure
-		[83854] = "Nerubian Smith's Kit|blacksmithing skill:blacksmithing11:1|46.52 22.91||treasure up link:2213 item:226282|Contains|!{465841} [epic]Nerubian Smith's Kit]",
-		[82631] = "[neutral]Rakka]|blacksmithing skill:blacksmithing11:1 -item:224038|46.64 21.96||treasure up scroll link:2213 item:224038|Sells|!{4624661} [rare]Smithing After Saronite]",
+		[83854] = "Nerubian Smith's Kit|blacksmithing skill:blacksmithing:11:1|46.52 22.91||treasure up link:2213 item:226282|Contains|!{465841} [epic]Nerubian Smith's Kit]",
+		[82631] = "[neutral]Rakka]|blacksmithing skill:blacksmithing:11:1 -item:224038|46.64 21.96||treasure up scroll link:2213 item:224038|Sells|!{4624661} [rare]Smithing After Saronite]",
 
 		-- Enchanting Treasure
-		[83864] = "Book of Dark Magic|enchanting skill:enchanting11:1|61.72 22||treasure up link:2213 item:226290|Contains|!{133737} [epic]Book of Dark Magic]",
-		[82635] = "[neutral]Iliani]|enchanting skill:enchanting11:1 -item:224050|45.46 33.58|\"Inside the Infuser building\"|treasure scroll up link:2213 item:224050|Sells|!{4624666} [rare]Web Sparkles: Pretty and Powerful]",
+		[83864] = "Book of Dark Magic|enchanting skill:enchanting:11:1|61.72 22||treasure up link:2213 item:226290|Contains|!{133737} [epic]Book of Dark Magic]",
+		[82635] = "[neutral]Iliani]|enchanting skill:enchanting:11:1 -item:224050|45.46 33.58|\"Inside the Infuser building\"|treasure scroll up link:2213 item:224050|Sells|!{4624666} [rare]Web Sparkles: Pretty and Powerful]",
 
 		-- Engineering Treasure
-		[83873] = "Emptied Venom Canister|engineering skill:engineering11:1|63.14 11.16||treasure up link:2213 item:226299|Contains|!{967528} [epic]Emptied Venom Canister]",
-		[82632] = "[neutral]Rikku]|engineering skill:engineering11:1|58.34 31.55 -item:224052||treasure scroll up link:2213 item:224052|Sells|!{4624730} [rare]Clocks, Gears, Sprockets, and Legs]",
+		[83873] = "Emptied Venom Canister|engineering skill:engineering:11:1|63.14 11.16||treasure up link:2213 item:226299|Contains|!{967528} [epic]Emptied Venom Canister]",
+		[82632] = "[neutral]Rikku]|engineering skill:engineering:11:1|58.34 31.55 -item:224052||treasure scroll up link:2213 item:224052|Sells|!{4624730} [rare]Clocks, Gears, Sprockets, and Legs]",
 
 		-- Herbalism Treasure
-		[83880] = "Web-Entangled Lotus|herbalism skill:herbalism11:1|54.6 20.88||treasure up link:2213 item:226306|Contains|!{876365} [epic]Web-Entangled Lotus]",
-		[83881] = "Tunneler's Shovel|herbalism skill:herbalism11:1|46.78 16.13||treasure up link:2213 item:226307|Contains|!{134435} [epic]Tunneler's Shovel]",
-		[82630] = "[neutral]LLyot]|herbalism skill:herbalism11:1|46.87 16.08 -item:224023||treasure scroll up link:2213 item:224023|Sells|!{4624731} [rare]Herbal Embalming Techniques]",
+		[83880] = "Web-Entangled Lotus|herbalism skill:herbalism:11:1|54.6 20.88||treasure up link:2213 item:226306|Contains|!{876365} [epic]Web-Entangled Lotus]",
+		[83881] = "Tunneler's Shovel|herbalism skill:herbalism:11:1|46.78 16.13||treasure up link:2213 item:226307|Contains|!{134435} [epic]Tunneler's Shovel]",
+		[82630] = "[neutral]LLyot]|herbalism skill:herbalism:11:1|46.87 16.08 -item:224023||treasure scroll up link:2213 item:224023|Sells|!{4624731} [rare]Herbal Embalming Techniques]",
 
 		-- Inscription Treasure
-		[83889] = "Venomancer's Ink Well|inscription skill:inscription11:1|50.23 30.84||treasure up link:2213 item:226315|Contains|!{464026} [epic]Venomancer's Ink Well]",
-		[82636] = "[neutral]Nuel Prill]|inscription skill:inscription11:1 -item:224053|42.23 27.23||treasure scroll up link:2213 item:224053|Sells|!{4624734} [rare]Eight Views on Defense against Hostile Runes]",
+		[83889] = "Venomancer's Ink Well|inscription skill:inscription:11:1|50.23 30.84||treasure up link:2213 item:226315|Contains|!{464026} [epic]Venomancer's Ink Well]",
+		[82636] = "[neutral]Nuel Prill]|inscription skill:inscription:11:1 -item:224053|42.23 27.23||treasure scroll up link:2213 item:224053|Sells|!{4624734} [rare]Eight Views on Defense against Hostile Runes]",
 		
 		-- Jewelcrafting Treasure
-		[83896] = "Ritual Caster's Crystal|jewelcrafting skill:jewelcrafting11:1|47.81 19.5||treasure up link:2213 item:226322|Contains|!{132885} [epic]Ritual Caster's Crystal]",
-		[82637] = "[neutral]Alvus Valavulu]|jewelcrafting skill:jewelcrafting11:1 -item:224054|47.75 18.73||treasure scroll up link:2213 item:224054|Sells|!{4624833} [rare]Emergent Crystals of the Surface-Dwellers]",
+		[83896] = "Ritual Caster's Crystal|jewelcrafting skill:jewelcrafting:11:1|47.81 19.5||treasure up link:2213 item:226322|Contains|!{132885} [epic]Ritual Caster's Crystal]",
+		[82637] = "[neutral]Alvus Valavulu]|jewelcrafting skill:jewelcrafting:11:1 -item:224054|47.75 18.73||treasure scroll up link:2213 item:224054|Sells|!{4624833} [rare]Emergent Crystals of the Surface-Dwellers]",
 		
 		-- Leatherworking Treasure
-		[83904] = "Nerubian Tanning Mallet|leatherworking skill:leatherworking11:1|55.03 26.94||treasure up link:2213 item:226330|Contains|!{1059113} [epic]Nerubian Tanning Mallet]",
-		[82626] = "[neutral]Kama]|leatherworking -skinning,82596 skill:leatherworking11:1 -item:224056|42.93 20.33||treasure scroll up link:2213 item:224056|Sells|!{4624911} [rare]Uses for Leftover Husks (After You Take Them Apart)]",
+		[83904] = "Nerubian Tanning Mallet|leatherworking skill:leatherworking:11:1|55.03 26.94||treasure up link:2213 item:226330|Contains|!{1059113} [epic]Nerubian Tanning Mallet]",
+		[82626] = "[neutral]Kama]|leatherworking -skinning,82596 skill:leatherworking:11:1 -item:224056|42.93 20.33||treasure scroll up link:2213 item:224056|Sells|!{4624911} [rare]Uses for Leftover Husks (After You Take Them Apart)]",
 		
 		-- Mining Treasure
-		[83912] = "Heavy Spider Crusher|mining skill:mining11:1|46.82 21.71||treasure up link:2213 item:226338|Contains|!{133046} [epic]Heavy Spider Crusher]",
-		[83913] = "Nerubian Mining Cart|mining skill:mining11:1|47.96 40.63||treasure item:226339|Contains|!{4202229} [epic]Nerubian Mining Supplies]",
+		[83912] = "Heavy Spider Crusher|mining skill:mining:11:1|46.82 21.71||treasure up link:2213 item:226338|Contains|!{133046} [epic]Heavy Spider Crusher]",
+		[83913] = "Nerubian Mining Cart|mining skill:mining:11:1|47.96 40.63||treasure item:226339|Contains|!{4202229} [epic]Nerubian Mining Supplies]",
 		[82614] = {
-			"[neutral]Rakka]|mining -blacksmithing,82631,item:224038 skill:mining11:1 -item:224055|46.64 21.96||treasure scroll up link:2213 item:224055|Sells|!{4625027} [rare]A Rocky Start]",
-			"[neutral]Rakka]|mining blacksmithing -82631 skill:mining11:1,skill:blacksmithing11:1 -item:224055 -item:224038|46.64 21.96||treasure scroll up link:2213 item:224055|Sells|!{4625027} [rare]A Rocky Start]|!{4624661} [rare]Smithing After Saronite]",
+			"[neutral]Rakka]|mining -blacksmithing,82631,item:224038 skill:mining:11:1 -item:224055|46.64 21.96||treasure scroll up link:2213 item:224055|Sells|!{4625027} [rare]A Rocky Start]",
+			"[neutral]Rakka]|mining blacksmithing -82631 skill:mining:11:1,skill:blacksmithing:11:1 -item:224055 -item:224038|46.64 21.96||treasure scroll up link:2213 item:224055|Sells|!{4625027} [rare]A Rocky Start]|!{4624661} [rare]Smithing After Saronite]",
 		},
 
 		-- Skinning Treasure
-		[83920] = "Nerubian's Slicking Iron|skinning skill:skinning11:1|44.48 49.46|\"Inside the Warehouse building\"|treasure item:226346|Contains|!{135655} [epic]Nerubian's Slicking Iron]",
+		[83920] = "Nerubian's Slicking Iron|skinning skill:skinning:11:1|44.48 49.46|\"Inside the Warehouse building\"|treasure item:226346|Contains|!{135655} [epic]Nerubian's Slicking Iron]",
 		[82596] = {
-			"[neutral]Kama]|skinning -leatherworking,82626,item:224056 skill:skinning11:1 -item:224007|42.93 20.33||treasure scroll up link:2213 item:224007|Sells|!{4624664} [rare]Uses for Leftover Husks (How to Take Them Apart)]",
-			"[neutral]Kama]|skinning leatherworking -82626 skill:skinning11:1,skill:leatherworking11:1 -item:224007 -item:224056|42.93 20.33||treasure scroll up link:2213 item:224007|Sells|!{4624664} [rare]Uses for Leftover Husks (How to Take Them Apart)]|!{4624911} [rare]Uses for Leftover Husks (After You Take Them Apart)]",
+			"[neutral]Kama]|skinning -leatherworking,82626,item:224056 skill:skinning:11:1 -item:224007|42.93 20.33||treasure scroll up link:2213 item:224007|Sells|!{4624664} [rare]Uses for Leftover Husks (How to Take Them Apart)]",
+			"[neutral]Kama]|skinning leatherworking -82626 skill:skinning:11:1,skill:leatherworking:11:1 -item:224007 -item:224056|42.93 20.33||treasure scroll up link:2213 item:224007|Sells|!{4624664} [rare]Uses for Leftover Husks (How to Take Them Apart)]|!{4624911} [rare]Uses for Leftover Husks (After You Take Them Apart)]",
 		},
 
 		-- Tailoring Treasure
-		[83929] = "Nerubian's Pincushion|tailoring skill:tailoring11:1|50.32 16.81||treasure up link:2213 item:226355|Contains|!{1044082} [epic]Nerubian's Pincushion]",
-		[82634] = "[neutral]Saaria]|tailoring skill:tailoring11:1 -item:224036|50.39 16.97||treasure scroll up link:2213 item:224036|Sells|!{4625110} [rare]And That's A Web-Wrap!]",
+		[83929] = "Nerubian's Pincushion|tailoring skill:tailoring:11:1|50.32 16.81||treasure up link:2213 item:226355|Contains|!{1044082} [epic]Nerubian's Pincushion]",
+		[82634] = "[neutral]Saaria]|tailoring skill:tailoring:11:1 -item:224036|50.39 16.97||treasure scroll up link:2213 item:224036|Sells|!{4625110} [rare]And That's A Web-Wrap!]",
 	},
 
 	
@@ -407,50 +753,50 @@ Data.Vignettes = {
 	-- Emerald Dream
 	[2200] = {
 		-- Alchemy Treasure
-		[78264] = "Half-Filled Dreamless Sleep Potion|60+ alchemy skill:alchemy10:25|54.05 32.64||treasure item:210184|Contains|!{134863} [epic]Half-Filled Dreamless Sleep Potion]",
+		[78264] = "Half-Filled Dreamless Sleep Potion|60+ alchemy skill:alchemy:10:25|54.05 32.64||treasure item:210184|Contains|!{134863} [epic]Half-Filled Dreamless Sleep Potion]",
 		[78269] = {
-			"Splash Potion of Narcolepsy|60+ §76506 alchemy skill:alchemy10:25|62.73 73.75|\"You are currently phased out from this treasure due to a world quest\"|treasure down link:2254 item:210185 atlas:vignetteloot-locked|Contains|!{463861} [epic]Splash Potion of Narcolepsy]",
-			"Splash Potion of Narcolepsy|60+ ~76506 alchemy skill:alchemy10:25|62.73 73.75||treasure down link:2254 item:210185|Contains|!{463861} [epic]Splash Potion of Narcolepsy]",
+			"Splash Potion of Narcolepsy|60+ §76506 alchemy skill:alchemy:10:25|62.73 73.75|\"You are currently phased out from this treasure due to a world quest\"|treasure down link:2254 item:210185 atlas:vignetteloot-locked|Contains|!{463861} [epic]Splash Potion of Narcolepsy]",
+			"Splash Potion of Narcolepsy|60+ ~76506 alchemy skill:alchemy:10:25|62.73 73.75||treasure down link:2254 item:210185|Contains|!{463861} [epic]Splash Potion of Narcolepsy]",
 		},
-		[78275] = "Root of the Problem|60+ alchemy skill:alchemy10:25|36.21 46.63||treasure item:210190|Contains|!{236301} [epic]Blazeroot]",
+		[78275] = "Root of the Problem|60+ alchemy skill:alchemy:10:25|36.21 46.63||treasure item:210190|Contains|!{236301} [epic]Blazeroot]",
 
 		-- Blacksmithing Treasure
-		[78417] = "Amirdrassil Defender's Shield|blacksmithing skill:blacksmithing10:25|49.83 62.98||treasure item:210464|Contains|!{5150876} [epic]Amirdrassil Defender's Shield]",
-		[78418] = "Deathstalker Chassis|blacksmithing skill:blacksmithing10:25|36.34 46.79||treasure item:210465|Contains|!{464143} [epic]Deathstalker Chassis]",
-		[78419] = "Flamesworn Render|blacksmithing skill:blacksmithing10:25|37.26 22.95||treasure item:210466|Contains|!{4392916} [epic]Flamesworn Render]",
+		[78417] = "Amirdrassil Defender's Shield|blacksmithing skill:blacksmithing:10:25|49.83 62.98||treasure item:210464|Contains|!{5150876} [epic]Amirdrassil Defender's Shield]",
+		[78418] = "Deathstalker Chassis|blacksmithing skill:blacksmithing:10:25|36.34 46.79||treasure item:210465|Contains|!{464143} [epic]Deathstalker Chassis]",
+		[78419] = "Flamesworn Render|blacksmithing skill:blacksmithing:10:25|37.26 22.95||treasure item:210466|Contains|!{4392916} [epic]Flamesworn Render]",
 
 		-- Engineering Treasure
-		[78308] = "Pure Dream Water|enchanting skill:enchanting10:25|38.37 30.2||treasure item:210234|Contains|!{1020349} [epic]Pure Dream Water]",
-		[78309] = "Everburning Core|enchanting skill:enchanting10:25|46.16 20.51||treasure item:210231|Contains|!{132839} [epic]Everburning Core]",
-		[78310] = "Essence of Dreams|enchanting skill:enchanting10:25|66.36 74.2|\"On top of a floating branch\"|treasure item:210234|Contains|!{237556} [epic]Essence of Dreams]",
+		[78308] = "Pure Dream Water|enchanting skill:enchanting:10:25|38.37 30.2||treasure item:210234|Contains|!{1020349} [epic]Pure Dream Water]",
+		[78309] = "Everburning Core|enchanting skill:enchanting:10:25|46.16 20.51||treasure item:210231|Contains|!{132839} [epic]Everburning Core]",
+		[78310] = "Essence of Dreams|enchanting skill:enchanting:10:25|66.36 74.2|\"On top of a floating branch\"|treasure item:210234|Contains|!{237556} [epic]Essence of Dreams]",
 
 		-- Engineering Treasure
-		[78278] = "Experimental Dreamcatcher|engineering skill:engineering10:25|39.58 52.27|\"On top of a floating branch\"|treasure item:210193|Contains|!{3694922} [epic]Experimental Dreamcatcher]",
+		[78278] = "Experimental Dreamcatcher|engineering skill:engineering:10:25|39.58 52.27|\"On top of a floating branch\"|treasure item:210193|Contains|!{3694922} [epic]Experimental Dreamcatcher]",
 		[78279] = {
-			"Insomniotron|§76506 engineering skill:engineering10:25|62.65 74.79|\"You are currently phased out from this treasure due to a world quest\"|treasure down link:2254 item:210194 atlas:vignetteloot-locked|Contains|!{4548868} [epic]Insomniotron]",
-			"Insomniotron|~76506 engineering skill:engineering10:25|62.65 74.79||treasure down link:2254 item:210194|Contains|!{4548868} [epic]Insomniotron]",
+			"Insomniotron|§76506 engineering skill:engineering:10:25|62.65 74.79|\"You are currently phased out from this treasure due to a world quest\"|treasure down link:2254 item:210194 atlas:vignetteloot-locked|Contains|!{4548868} [epic]Insomniotron]",
+			"Insomniotron|~76506 engineering skill:engineering:10:25|62.65 74.79||treasure down link:2254 item:210194|Contains|!{4548868} [epic]Insomniotron]",
 		},
-		[78281] = "Unhatched Battery|engineering skill:engineering10:25|62.69 36.26||treasure item:210197|Contains|!{2032173} [epic]Unhatched Battery]",
+		[78281] = "Unhatched Battery|engineering skill:engineering:10:25|62.69 36.26||treasure item:210197|Contains|!{2032173} [epic]Unhatched Battery]",
 		
 		-- Inscription Treasure
-		[78411] = "Winnie's Notes on Flora and Fauna|inscription skill:inscription10:25|55.64 27.49||treasure item:210458|Contains|!{133739} [epic]Winnie's Notes on Flora and Fauna]",
-		[78412] = "Grove Keeper's Pillar|inscription skill:inscription10:25|63.5 71.52||treasure item:210459|Contains|!{5263786} [epic]Grove Keeper's Pillar]",
-		[78413] = "Primalist Shadowbinding Rune|inscription skill:inscription10:25|36.04 46.64||treasure item:210460|Contains|!{4643988} [epic]Primalist Shadowbinding Rune]",
+		[78411] = "Winnie's Notes on Flora and Fauna|inscription skill:inscription:10:25|55.64 27.49||treasure item:210458|Contains|!{133739} [epic]Winnie's Notes on Flora and Fauna]",
+		[78412] = "Grove Keeper's Pillar|inscription skill:inscription:10:25|63.5 71.52||treasure item:210459|Contains|!{5263786} [epic]Grove Keeper's Pillar]",
+		[78413] = "Primalist Shadowbinding Rune|inscription skill:inscription:10:25|36.04 46.64||treasure item:210460|Contains|!{4643988} [epic]Primalist Shadowbinding Rune]",
 		
 		-- Jewelcrafting Treasure
-		[78282] = "Petrified Hope|jewelcrafting skill:jewelcrafting10:25|33.23 46.57||treasure item:210200|Contains|!{840007} [epic]Petrified Hope]",
-		[78283] = "Unpolished Blemish|jewelcrafting skill:jewelcrafting10:25|43.51 33.36||treasure item:210201|Contains|!{646672} [epic]Handful of Pebbles]",
-		[78285] = "Coalesced Dreamstone|jewelcrafting skill:jewelcrafting10:25|58.95 53.89||treasure item:210202|Contains|!{134104} [epic]Coalesced Dreamstone]",
+		[78282] = "Petrified Hope|jewelcrafting skill:jewelcrafting:10:25|33.23 46.57||treasure item:210200|Contains|!{840007} [epic]Petrified Hope]",
+		[78283] = "Unpolished Blemish|jewelcrafting skill:jewelcrafting:10:25|43.51 33.36||treasure item:210201|Contains|!{646672} [epic]Handful of Pebbles]",
+		[78285] = "Coalesced Dreamstone|jewelcrafting skill:jewelcrafting:10:25|58.95 53.89||treasure item:210202|Contains|!{134104} [epic]Coalesced Dreamstone]",
 		
 		-- Leatherworking Treasure
-		[78298] = "Tuft of Dreamsaber Fur|leatherworking skill:leatherworking10:25|41.75 66.49||treasure item:210208|Contains|!{1508485} [epic]Tuft of Dreamsaber Fur]",
-		[78299] = "Molted Faerie Dragon Scales|leatherworking skill:leatherworking10:25|37.45 71.02||treasure item:210211|Contains|!{4559240} [epic]Molted Faerie Dragon Scales]",
-		[78305] = "Dreamtalon Claw|leatherworking skill:leatherworking10:25|33.99 29.68||treasure item:210215|Contains|!{1508485} [epic]Dreamtalon Claw]",
+		[78298] = "Tuft of Dreamsaber Fur|leatherworking skill:leatherworking:10:25|41.75 66.49||treasure item:210208|Contains|!{1508485} [epic]Tuft of Dreamsaber Fur]",
+		[78299] = "Molted Faerie Dragon Scales|leatherworking skill:leatherworking:10:25|37.45 71.02||treasure item:210211|Contains|!{4559240} [epic]Molted Faerie Dragon Scales]",
+		[78305] = "Dreamtalon Claw|leatherworking skill:leatherworking:10:25|33.99 29.68||treasure item:210215|Contains|!{1508485} [epic]Dreamtalon Claw]",
 		
 		-- Tailoring Treasure
-		[78414] = "Exceedingly Soft Wildercloth|tailoring skill:tailoring10:25|53.27 27.92||treasure item:210461|Contains|!{4549243} [epic]Exceedingly Soft Wildercloth]",
-		[78415] = "Plush Pillow|tailoring skill:tailoring10:25|49.83 61.48||treasure item:210462|Contains|!{4624627} [epic]Plush Pillow]",
-		[78416] = "Snuggle Buddy|tailoring skill:tailoring10:25|40.70 86.16||treasure item:210463|Contains|!{458256} [epic]Snuggle Buddy]",
+		[78414] = "Exceedingly Soft Wildercloth|tailoring skill:tailoring:10:25|53.27 27.92||treasure item:210461|Contains|!{4549243} [epic]Exceedingly Soft Wildercloth]",
+		[78415] = "Plush Pillow|tailoring skill:tailoring:10:25|49.83 61.48||treasure item:210462|Contains|!{4624627} [epic]Plush Pillow]",
+		[78416] = "Snuggle Buddy|tailoring skill:tailoring:10:25|40.70 86.16||treasure item:210463|Contains|!{458256} [epic]Snuggle Buddy]",
 
 		-- Treasure
 		[78547] = "Unwaking Echo|70+|55.67 22.57|\"You must be sleeping to open the treasure\"|treasure item:210675|Contains|!{5173328} [rare]Gardener's Lightstaff]|!{2065578} [Dragon Isles Supplies]||Grants Reputation|!{5244643} [Dream Wardens] (200)",
@@ -521,14 +867,14 @@ Data.Vignettes = {
 	[2254] = {
 		-- Alchemy Treasure
 		[78269] = {
-			"Splash Potion of Narcolepsy|60+ §76506 alchemy skill:alchemy10:25|50.96 49.65|\"You are currently phased out from this treasure due to a world quest\"|treasure item:210185 atlas:vignetteloot-locked|Contains|!{463861} [epic]Splash Potion of Narcolepsy]",
-			"Splash Potion of Narcolepsy|60+ ~76506 alchemy skill:alchemy10:25|50.96 49.65||treasure item:210185|Contains|!{463861} [epic]Splash Potion of Narcolepsy]",
+			"Splash Potion of Narcolepsy|60+ §76506 alchemy skill:alchemy:10:25|50.96 49.65|\"You are currently phased out from this treasure due to a world quest\"|treasure item:210185 atlas:vignetteloot-locked|Contains|!{463861} [epic]Splash Potion of Narcolepsy]",
+			"Splash Potion of Narcolepsy|60+ ~76506 alchemy skill:alchemy:10:25|50.96 49.65||treasure item:210185|Contains|!{463861} [epic]Splash Potion of Narcolepsy]",
 		},
 
 		-- Engineering Treasure
 		[78279] = {
-			"Insomniotron|§76506 engineering skill:engineering10:25|49.4 69.17|\"You are currently phased out from this treasure due to a world quest\"|treasure item:210194 atlas:vignetteloot-locked|Contains|!{4548868} [epic]Insomniotron]",
-			"Insomniotron|~76506 engineering skill:engineering10:25|49.4 69.17||treasure item:210194|Contains|!{4548868} [epic]Insomniotron]",
+			"Insomniotron|§76506 engineering skill:engineering:10:25|49.4 69.17|\"You are currently phased out from this treasure due to a world quest\"|treasure item:210194 atlas:vignetteloot-locked|Contains|!{4548868} [epic]Insomniotron]",
+			"Insomniotron|~76506 engineering skill:engineering:10:25|49.4 69.17||treasure item:210194|Contains|!{4548868} [epic]Insomniotron]",
 		},
 
 		-- Treasure
@@ -553,52 +899,52 @@ Data.Vignettes = {
 	-- Zaralek Cavern
 	[2133] = {
 		-- Alchemy Treasure
-		[75646] = "Malnourished Specimen|alchemy skill:alchemy10:25|52.68 18.3||treasure item:205211|Contains|!{1001622} [epic]Nutrient Diluted Protofluid]",
-		[75649] = "Marrow-Ripened Slime|alchemy skill:alchemy10:25|62.12 41.12||treasure item:205212|Contains|!{3459153} [epic]Marrow-Ripened Slime]",
-		[75651] = "Suspicious Mold|alchemy skill:alchemy10:25|40.43 59.21||treasure item:205213|Contains|!{959835} [epic]Suspicious Mold]",
+		[75646] = "Malnourished Specimen|alchemy skill:alchemy:10:25|52.68 18.3||treasure item:205211|Contains|!{1001622} [epic]Nutrient Diluted Protofluid]",
+		[75649] = "Marrow-Ripened Slime|alchemy skill:alchemy:10:25|62.12 41.12||treasure item:205212|Contains|!{3459153} [epic]Marrow-Ripened Slime]",
+		[75651] = "Suspicious Mold|alchemy skill:alchemy:10:25|40.43 59.21||treasure item:205213|Contains|!{959835} [epic]Suspicious Mold]",
 		
 		-- Blacksmithing Treasure
-		[76078] = "Well-Worn Kiln|blacksmithing skill:blacksmithing10:25|57.15 54.67||treasure item:205986|Contains|!{5140835} [epic]Well-Worn Kiln]",
-		[76079] = "Brimstone Rescue Ring|blacksmithing skill:blacksmithing10:25|48.31 22.01||treasure item:205987|Contains|!{2000808} [epic]Brimstone Rescue Ring]",
-		[76080] = "Zaqali Elder Spear|blacksmithing skill:blacksmithing10:25|27.51 42.88||treasure item:205988|Contains|!{135124} [epic]Zaqali Elder Spear]",
+		[76078] = "Well-Worn Kiln|blacksmithing skill:blacksmithing:10:25|57.15 54.67||treasure item:205986|Contains|!{5140835} [epic]Well-Worn Kiln]",
+		[76079] = "Brimstone Rescue Ring|blacksmithing skill:blacksmithing:10:25|48.31 22.01||treasure item:205987|Contains|!{2000808} [epic]Brimstone Rescue Ring]",
+		[76080] = "Zaqali Elder Spear|blacksmithing skill:blacksmithing:10:25|27.51 42.88||treasure item:205988|Contains|!{135124} [epic]Zaqali Elder Spear]",
 		
 		-- Enchanting Treasure
-		[75508] = "Lava-Drenched Shadow Crystal|enchanting skill:enchanting10:25|48.25 17.02|\"Inside the lava sewage outflow cave underneath Brimstone Garrison\"|treasure item:204990|Contains|!{1003588} [epic]Lava-Drenched Shadow Crystal]",
-		[75509] = "Shimmering Aqueous Orb|enchanting skill:enchanting10:25|62.38 53.79||treasure item:204999|Contains|!{132852} [epic]Shimmering Aqueous Orb]",
-		[75510] = "Resonating Arcane Crystal|enchanting skill:enchanting10:25|36.65 69.34||treasure item:205001|Contains|!{237013} [epic]Resonating Arcane Crystal]",
+		[75508] = "Lava-Drenched Shadow Crystal|enchanting skill:enchanting:10:25|48.25 17.02|\"Inside the lava sewage outflow cave underneath Brimstone Garrison\"|treasure item:204990|Contains|!{1003588} [epic]Lava-Drenched Shadow Crystal]",
+		[75509] = "Shimmering Aqueous Orb|enchanting skill:enchanting:10:25|62.38 53.79||treasure item:204999|Contains|!{132852} [epic]Shimmering Aqueous Orb]",
+		[75510] = "Resonating Arcane Crystal|enchanting skill:enchanting:10:25|36.65 69.34||treasure item:205001|Contains|!{237013} [epic]Resonating Arcane Crystal]",
 		
 		-- Engineering Treasure
-		[75186] = "Busted Wyrmhole Generator|engineering skill:engineering10:25|37.83 58.85||treasure item:205954|Contains|!{4548860} [epic]Busted Wyrmhole Generator]|!{4635196} [rare]Three-Dimensional Compass]",
-		[75183] = "Haphazardly Discarded Bombs|engineering skill:engineering10:25|48.15 27.89||treasure item:204470|Contains|!{133710} [epic]Haphazardly Discarded Bomb]",
-		[75433] = "Molten Scoutbot|engineering skill:engineering10:25|48.12 16.6|\"Inside the lava sewage outflow cave underneath Brimstone Garrison\"|treasure item:204855|Contains|!{2735923} [epic]Overclocked Determination Core]",
-		[75180] = "Misplaced Aberrus Outflow Blueprints|engineering skill:engineering10:25|48.48 48.64||treasure item:204469|Contains|!{1392956} [epic]Misplaced Aberrus Outflow Blueprints]",
-		[75184] = "Defective Survival Pack|engineering skill:engineering10:25|50.51 47.95||treasure item:204471|Contains|!{1405807} [epic]Defective Survival Pack]",
-		[75188] = "Inconspicuous Data Miner|engineering skill:engineering10:25|49.89 59.26||treasure item:204480|Contains|!{892830} [epic]Inconspicuous Data Miner]",
-		[75431] = "Discarded Dracothyst Drill|engineering skill:engineering10:25|49.47 79.02||treasure item:204853|Contains|!{893841} [epic]Discarded Dracothyst Drill]",
-		[75430] = "Bolts and Brass|engineering skill:engineering10:25|57.65 73.94||treasure item:204850|Contains|!{4548875} [epic]Handful of Khaz'gorite Bolts]",
+		[75186] = "Busted Wyrmhole Generator|engineering skill:engineering:10:25|37.83 58.85||treasure item:205954|Contains|!{4548860} [epic]Busted Wyrmhole Generator]|!{4635196} [rare]Three-Dimensional Compass]",
+		[75183] = "Haphazardly Discarded Bombs|engineering skill:engineering:10:25|48.15 27.89||treasure item:204470|Contains|!{133710} [epic]Haphazardly Discarded Bomb]",
+		[75433] = "Molten Scoutbot|engineering skill:engineering:10:25|48.12 16.6|\"Inside the lava sewage outflow cave underneath Brimstone Garrison\"|treasure item:204855|Contains|!{2735923} [epic]Overclocked Determination Core]",
+		[75180] = "Misplaced Aberrus Outflow Blueprints|engineering skill:engineering:10:25|48.48 48.64||treasure item:204469|Contains|!{1392956} [epic]Misplaced Aberrus Outflow Blueprints]",
+		[75184] = "Defective Survival Pack|engineering skill:engineering:10:25|50.51 47.95||treasure item:204471|Contains|!{1405807} [epic]Defective Survival Pack]",
+		[75188] = "Inconspicuous Data Miner|engineering skill:engineering:10:25|49.89 59.26||treasure item:204480|Contains|!{892830} [epic]Inconspicuous Data Miner]",
+		[75431] = "Discarded Dracothyst Drill|engineering skill:engineering:10:25|49.47 79.02||treasure item:204853|Contains|!{893841} [epic]Discarded Dracothyst Drill]",
+		[75430] = "Bolts and Brass|engineering skill:engineering:10:25|57.65 73.94||treasure item:204850|Contains|!{4548875} [epic]Handful of Khaz'gorite Bolts]",
 		
 		-- Inscription Treasure
-		[76120] = "Hissing Rune Draft|inscription skill:inscription10:25|53.02 74.26||treasure item:206034|Contains|!{237450} [epic]Hissing Rune Draft]",
+		[76120] = "Hissing Rune Draft|inscription skill:inscription:10:25|53.02 74.26||treasure item:206034|Contains|!{237450} [epic]Hissing Rune Draft]",
 		[76121] = {
-			"Ancient Research|inscription skill:inscription10:25|54.57 20.21|\"Inside a building, under a table\"|treasure item:206035|Contains|!{4549134} [epic]Ancient Research]",
-			"Building Entrance|inscription skill:inscription10:25|52.78 18.85|Ancient Research|treasure atlas:questobjective",
+			"Ancient Research|inscription skill:inscription:10:25|54.57 20.21|\"Inside a building, under a table\"|treasure item:206035|Contains|!{4549134} [epic]Ancient Research]",
+			"Building Entrance|inscription skill:inscription:10:25|52.78 18.85|Ancient Research|treasure atlas:questobjective",
 		},
-		[76117] = "Intricate Zaqali Runes|inscription skill:inscription10:25|36.67 46.15||treasure item:206031|Contains|!{1029027} [epic]Intricate Zaqali Runes]",
+		[76117] = "Intricate Zaqali Runes|inscription skill:inscription:10:25|36.67 46.15||treasure item:206031|Contains|!{1029027} [epic]Intricate Zaqali Runes]",
 		
 		-- Jewelcrafting Treasure
-		[75652] = "Snubbed Snail Shells|jewelcrafting skill:jewelcrafting10:25|40.38 80.65||treasure item:205214|Contains|!{4632789} [epic]Snubbed Snail Shells]",
-		[75653] = "Gently Jostled Jewels|jewelcrafting skill:jewelcrafting10:25|34.5 45.42||treasure item:205216|Contains|!{1379185} [epic]Gently Jostled Jewels]",
-		[75654] = "Broken Barter Boulder|jewelcrafting skill:jewelcrafting10:25|54.39 32.45|\"Inside a small cave\"|treasure item:205219|Contains|!{2066015} [epic]Broken Barter Boulder]",
+		[75652] = "Snubbed Snail Shells|jewelcrafting skill:jewelcrafting:10:25|40.38 80.65||treasure item:205214|Contains|!{4632789} [epic]Snubbed Snail Shells]",
+		[75653] = "Gently Jostled Jewels|jewelcrafting skill:jewelcrafting:10:25|34.5 45.42||treasure item:205216|Contains|!{1379185} [epic]Gently Jostled Jewels]",
+		[75654] = "Broken Barter Boulder|jewelcrafting skill:jewelcrafting:10:25|54.39 32.45|\"Inside a small cave\"|treasure item:205219|Contains|!{2066015} [epic]Broken Barter Boulder]",
 		
 		-- Leatherworking Treasure
-		[75502] = "Sulfur-Soaked Skins|leatherworking skill:leatherworking10:25|49.52 54.67|\"Inside a broken cart\"|treasure item:204988|Contains|!{4635271} [epic]Sulfur-Soaked Skins]",
-		[75495] = "Flame-Infused Scale Oil|leatherworking skill:leatherworking10:25|41.16 48.81||treasure item:204986|Contains|!{252176} [epic]Flame-Infused Scale Oil]",
-		[75496] = "Lava-Forged Leatherworker's \"Knife\"|leatherworking skill:leatherworking10:25|45.24 21.09||treasure item:204987|Contains|!{4732313} [epic]Lava-Forged Leatherworker's \"Knife\"]",
+		[75502] = "Sulfur-Soaked Skins|leatherworking skill:leatherworking:10:25|49.52 54.67|\"Inside a broken cart\"|treasure item:204988|Contains|!{4635271} [epic]Sulfur-Soaked Skins]",
+		[75495] = "Flame-Infused Scale Oil|leatherworking skill:leatherworking:10:25|41.16 48.81||treasure item:204986|Contains|!{252176} [epic]Flame-Infused Scale Oil]",
+		[75496] = "Lava-Forged Leatherworker's \"Knife\"|leatherworking skill:leatherworking:10:25|45.24 21.09||treasure item:204987|Contains|!{4732313} [epic]Lava-Forged Leatherworker's \"Knife\"]",
 
 		-- Tailoring Treasure
-		[76110] = "Used Medical Wrap Kit|tailoring skill:tailoring10:25|59.11 73.18||treasure item:206025|Contains|!{1387611} [epic]Used Medical Wrap Kit]",
-		[76102] = "Abandoned Reserve Chute|tailoring skill:tailoring10:25|47.21 48.55|\"On a ledge on top of the tower\"|treasure item:206019|Contains|!{133633} [epic]Abandoned Reserve Chute]",
-		[76116] = "Exquisitely Embroidered Banner|tailoring skill:tailoring10:25|44.55 15.67||treasure item:206030|Contains|!{4624616} [epic]Exquisitely Embroidered Banner]",
+		[76110] = "Used Medical Wrap Kit|tailoring skill:tailoring:10:25|59.11 73.18||treasure item:206025|Contains|!{1387611} [epic]Used Medical Wrap Kit]",
+		[76102] = "Abandoned Reserve Chute|tailoring skill:tailoring:10:25|47.21 48.55|\"On a ledge on top of the tower\"|treasure item:206019|Contains|!{133633} [epic]Abandoned Reserve Chute]",
+		[76116] = "Exquisitely Embroidered Banner|tailoring skill:tailoring:10:25|44.55 15.67||treasure item:206030|Contains|!{4624616} [epic]Exquisitely Embroidered Banner]",
 		
 		-- Treasure
 		[72986] = {
@@ -643,9 +989,9 @@ Data.Vignettes = {
 		[73699] = "High Peak|10+ research:2164|54.58 34.64||vignette atlas:Warfronts-FieldMapIcons-Empty-Banner-Minimap large|Grants Reputation|!{4687628} [Dragonscale Expedition] (250)",
 
 		-- Signal Transmitter
-		[73145] = "Deactivated Signal Transmitter|engineering skill:engineering10:25 profperk:2827:50930|39.99 81.83|[spell]Wyrmhole Generator]|treasure atlas:Warfronts-BaseMapIcons-Empty-Workshop large",
-		[73143] = "Deactivated Signal Transmitter|engineering skill:engineering10:25 profperk:2827:50930|31.78 26.2|[spell]Wyrmhole Generator]|treasure atlas:Warfronts-BaseMapIcons-Empty-Workshop large",
-		[73144] = "Deactivated Signal Transmitter|engineering skill:engineering10:25 profperk:2827:50930|78.04 51.1|[spell]Wyrmhole Generator]|treasure atlas:Warfronts-BaseMapIcons-Empty-Workshop large",
+		[73145] = "Deactivated Signal Transmitter|engineering skill:engineering:10:25 profperk:2827:50930|39.99 81.83|[spell]Wyrmhole Generator]|treasure atlas:Warfronts-BaseMapIcons-Empty-Workshop large",
+		[73143] = "Deactivated Signal Transmitter|engineering skill:engineering:10:25 profperk:2827:50930|31.78 26.2|[spell]Wyrmhole Generator]|treasure atlas:Warfronts-BaseMapIcons-Empty-Workshop large",
+		[73144] = "Deactivated Signal Transmitter|engineering skill:engineering:10:25 profperk:2827:50930|78.04 51.1|[spell]Wyrmhole Generator]|treasure atlas:Warfronts-BaseMapIcons-Empty-Workshop large",
 	},
 
 
@@ -654,12 +1000,12 @@ Data.Vignettes = {
 	-- Valdrakken
 	[2112] = {
 		-- Treasure
-		[70731] = "Barrel of Confiscated Treats|skill:cooking10:1|9.6 56.34|\"Behind a bookshelf\"|treasure item:198106|Contains|!{1500865} [rare]Recipe: Tasty Hatchling's Treat]|!{1500918} [Tasty Hatchling's Treat] (2)",
+		[70731] = "Barrel of Confiscated Treats|skill:cooking:10:1|9.6 56.34|\"Behind a bookshelf\"|treasure item:198106|Contains|!{1500865} [rare]Recipe: Tasty Hatchling's Treat]|!{1500918} [Tasty Hatchling's Treat] (2)",
 		
 		-- Inscription Treasure
 		[70281] = {
-			"[red]How to Train Your Whelpling]|inscription skill:inscription10:25 -70306|13.43 63.29||treasure item:198669 atlas:vignetteloot-locked link:2022|{services-icon-warning} [red]Warning: There is currently a bug with this treasure which makes it drop the wrong item if you have not yet looted Pulsing Earth Rune.]||[red]You should loot [epic]Pulsing Earth Rune] in the Waking Shores before looting this treasure.||[poor]Contains]|!{4549132} [poor]How to Train Your Whelpling]",
-			"How to Train Your Whelpling|inscription skill:inscription10:25 70306|13.43 63.29||treasure item:198669|Contains|!{4549132} [epic]How to Train Your Whelpling]",
+			"[red]How to Train Your Whelpling]|inscription skill:inscription:10:25 -70306|13.43 63.29||treasure item:198669 atlas:vignetteloot-locked link:2022|{services-icon-warning} [red]Warning: There is currently a bug with this treasure which makes it drop the wrong item if you have not yet looted Pulsing Earth Rune.]||[red]You should loot [epic]Pulsing Earth Rune] in the Waking Shores before looting this treasure.||[poor]Contains]|!{4549132} [poor]How to Train Your Whelpling]",
+			"How to Train Your Whelpling|inscription skill:inscription:10:25 70306|13.43 63.29||treasure item:198669|Contains|!{4549132} [epic]How to Train Your Whelpling]",
 		},
 
 		-- Tailoring Master
@@ -669,45 +1015,45 @@ Data.Vignettes = {
 	-- Thaldraszus
 	[2025] = {
 		-- Treasure
-		[70731] = "Barrel of Confiscated Treats|skill:cooking10:1|34.1 60.79||treasure item:198106 link:2112|Contains|!{1500865} [rare]Recipe: Tasty Hatchling's Treat]|!{1500918} [Tasty Hatchling's Treat] (2)",
+		[70731] = "Barrel of Confiscated Treats|skill:cooking:10:1|34.1 60.79||treasure item:198106 link:2112|Contains|!{1500865} [rare]Recipe: Tasty Hatchling's Treat]|!{1500918} [Tasty Hatchling's Treat] (2)",
 		[70609] = "Elegant Canvas Brush|10+|60.25 41.64||treasure item:203206|Contains|!{2103804} [poor]Elegant Canvas Brush]",
 		[70538] = "Yennu's Map|10+|54.94 75.43||treasure item:199069|Contains|!{1505955} [uncommon]Yennu's Map]",
 		[70611] = "Acorn Harvester|10+|49.44 62.9|\"Pick up the nearby [Acorn] and give it to the [friendly]Acorn Harvester]\"|treasure item:193066|Rewards|!{4528722} [rare]Chestnut]",
 		[70610] = "Surveyor's Magnifying Glass|10+|64.86 16.56|\"Inside a cave\"|treasure item:193036|Contains|!{4419345} [uncommon]Left-Handed Magnifying Glass]",
 		
 		-- Alchemy Treasure
-		[70301] = "Contraband Concoction|alchemy skill:alchemy10:25|59.53 38.46|\"Hidden inside the foliage on the ground next to a flying book\"|treasure item:198697|Contains|!{1416156} [epic]Contraband Concoction]",
-		[70278] = "Mysterious Cauldrons|alchemy skill:alchemy10:25|55.23 30.54|\"Find three [Discarded Toys] on the ground nearby and bring one to each cauldron to unlock the treasure\"|treasure item:203471|Rewards|!{236546} [epic]Tasty Candy]",
-		[70309] = "Small Basket of Firewater Powder|alchemy skill:alchemy10:25 link:2024|48.66 90.21||treasure item:198712|Contains|!{133850} [epic]Firewater Powder Sample]",
+		[70301] = "Contraband Concoction|alchemy skill:alchemy:10:25|59.53 38.46|\"Hidden inside the foliage on the ground next to a flying book\"|treasure item:198697|Contains|!{1416156} [epic]Contraband Concoction]",
+		[70278] = "Mysterious Cauldrons|alchemy skill:alchemy:10:25|55.23 30.54|\"Find three [Discarded Toys] on the ground nearby and bring one to each cauldron to unlock the treasure\"|treasure item:203471|Rewards|!{236546} [epic]Tasty Candy]",
+		[70309] = "Small Basket of Firewater Powder|alchemy skill:alchemy:10:25 link:2024|48.66 90.21||treasure item:198712|Contains|!{133850} [epic]Firewater Powder Sample]",
 		
 		-- Blacksmithing Treasure
-		[70311] = "Draconic Flux|blacksmithing skill:blacksmithing10:25|52.22 80.55||treasure item:201006|Rewards|!{1387609} [epic]Draconic Flux]",
+		[70311] = "Draconic Flux|blacksmithing skill:blacksmithing:10:25|52.22 80.55||treasure item:201006|Rewards|!{1387609} [epic]Draconic Flux]",
 		
 		-- Enchanting Treasure
-		[70342] = "Fractured Titanic Sphere|enchanting skill:enchanting10:25|59.89 70.33||treasure item:198800|Contains|!{442739} [epic]Fractured Titanic Sphere]",
+		[70342] = "Fractured Titanic Sphere|enchanting skill:enchanting:10:25|59.89 70.33||treasure item:198800|Contains|!{442739} [epic]Fractured Titanic Sphere]",
 		
 		-- Inscription Treasure
 		[70281] = {
-			"[red]How to Train Your Whelpling]|inscription skill:inscription10:25 -70306|34.66 61.8||treasure item:198669 atlas:vignetteloot-locked link:2022|{services-icon-warning} [red]Warning: There is currently a bug with this treasure which makes it drop the wrong item if you have not yet looted Pulsing Earth Rune.]||[red]You should loot [epic]Pulsing Earth Rune] in the Waking Shores before looting this treasure.||[poor]Contains]|!{4549132} [poor]How to Train Your Whelpling]",
-			"How to Train Your Whelpling|inscription skill:inscription10:25 70306|34.66 61.8||treasure item:198669 link:2112|Contains|!{4549132} [epic]How to Train Your Whelpling]",
+			"[red]How to Train Your Whelpling]|inscription skill:inscription:10:25 -70306|34.66 61.8||treasure item:198669 atlas:vignetteloot-locked link:2022|{services-icon-warning} [red]Warning: There is currently a bug with this treasure which makes it drop the wrong item if you have not yet looted Pulsing Earth Rune.]||[red]You should loot [epic]Pulsing Earth Rune] in the Waking Shores before looting this treasure.||[poor]Contains]|!{4549132} [poor]How to Train Your Whelpling]",
+			"How to Train Your Whelpling|inscription skill:inscription:10:25 70306|34.66 61.8||treasure item:198669 link:2112|Contains|!{4549132} [epic]How to Train Your Whelpling]",
 		},
 		[70248] = {
-			"Curious Glyph|inscription skill:inscription10:25 -item:198672|47.09 40.07|\"Interact with the [Curious Glyph] and then kill the [neutral]Confusion Manifest] across the bridge to obtain the key.\"|treasure item:198659 atlas:vignetteloot-locked|Requires|{4638737} [hasitem:198672]Decryption Key]||Contains|!{1499566} [epic]Forgetful Apprentice's Tome]",
-			"Curious Glyph|inscription skill:inscription10:25 item:198672|47.09 40.07|\"Return the key to the [Curious Glyph], then interact with it another time to loot the treasure.\"|treasure item:198659 atlas:vignetteloot-locked|Requires|{4638737} [hasitem:198672]Decryption Key]||Contains|!{1499566} [epic]Forgetful Apprentice's Tome]",
+			"Curious Glyph|inscription skill:inscription:10:25 -item:198672|47.09 40.07|\"Interact with the [Curious Glyph] and then kill the [neutral]Confusion Manifest] across the bridge to obtain the key.\"|treasure item:198659 atlas:vignetteloot-locked|Requires|{4638737} [hasitem:198672]Decryption Key]||Contains|!{1499566} [epic]Forgetful Apprentice's Tome]",
+			"Curious Glyph|inscription skill:inscription:10:25 item:198672|47.09 40.07|\"Return the key to the [Curious Glyph], then interact with it another time to loot the treasure.\"|treasure item:198659 atlas:vignetteloot-locked|Requires|{4638737} [hasitem:198672]Decryption Key]||Contains|!{1499566} [epic]Forgetful Apprentice's Tome]",
 		},
-		[70287] = "Siennagosa|inscription skill:inscription10:25|56.08 41.02|\"Help Siennagosa gather her Darkmoon cards. Make sure you pick them up in order or she might drop them again.\"|treasure speak item:201015|Rewards|!{4644010} [epic]Counterfeit Darkmoon Deck]",
-		[70264] = "Forgetful Apprentice's Tome|inscription skill:inscription10:25|56.26 41.18||treasure item:198659|Contains|!{1499566} [epic]Forgetful Apprentice's Tome]",
+		[70287] = "Siennagosa|inscription skill:inscription:10:25|56.08 41.02|\"Help Siennagosa gather her Darkmoon cards. Make sure you pick them up in order or she might drop them again.\"|treasure speak item:201015|Rewards|!{4644010} [epic]Counterfeit Darkmoon Deck]",
+		[70264] = "Forgetful Apprentice's Tome|inscription skill:inscription:10:25|56.26 41.18||treasure item:198659|Contains|!{1499566} [epic]Forgetful Apprentice's Tome]",
 		
 		-- Jewelcrafting Treasure
-		[70261] = "Painter's Pretty Jewel|jewelcrafting skill:jewelcrafting10:25|56.91 43.68|\"Use [spell]Anomaly Detection Mark I] to reveal the treasure inside an urn with a lantern on top\"|treasure item:198656|Contains|!{4555548} [epic]Painter's Pretty Jewel]",
-		[70285] = "Erupted Alexstraszite Cluster|jewelcrafting skill:jewelcrafting10:25|59.85 65.17||treasure item:198682|Contains|!{133238} [epic]Alexstraszite Cluster]|!{4555569} [rare]Alexstraszite] (2)",
+		[70261] = "Painter's Pretty Jewel|jewelcrafting skill:jewelcrafting:10:25|56.91 43.68|\"Use [spell]Anomaly Detection Mark I] to reveal the treasure inside an urn with a lantern on top\"|treasure item:198656|Contains|!{4555548} [epic]Painter's Pretty Jewel]",
+		[70285] = "Erupted Alexstraszite Cluster|jewelcrafting skill:jewelcrafting:10:25|59.85 65.17||treasure item:198682|Contains|!{133238} [epic]Alexstraszite Cluster]|!{4555569} [rare]Alexstraszite] (2)",
 		
 		-- Leatherworking Treasure
 		[70294] = "Bag of Decayed Scales|leatherworking skill:2830:25|56.82 30.57||treasure item:198690|Contains|!{4631333} [epic]Decayed Scales]",
 
 		-- Tailoring Treasure
-		[70372] = "Ancient Dragonweave Loom|tailoring skill:tailoring10:25|58.69 45.9|\"Solve a series of puzzles to unlock the treasure\"|treasure item:201019|Contains|!{4549298} [epic]Ancient Dragonweave Bolt]",
-		[70288] = "Miniature Bronze Dragonflight Banner|tailoring skill:tailoring10:25|60.41 79.66|\"On top of the platform in a pile of sand\"|treasure item:198684|Contains|!{4624621} [epic]Miniature Bronze Dragonflight Banner]",
+		[70372] = "Ancient Dragonweave Loom|tailoring skill:tailoring:10:25|58.69 45.9|\"Solve a series of puzzles to unlock the treasure\"|treasure item:201019|Contains|!{4549298} [epic]Ancient Dragonweave Bolt]",
+		[70288] = "Miniature Bronze Dragonflight Banner|tailoring skill:tailoring:10:25|60.41 79.66|\"On top of the platform in a pile of sand\"|treasure item:198684|Contains|!{4624621} [epic]Miniature Bronze Dragonflight Banner]",
 		
 
 		-- High Peak
@@ -720,9 +1066,9 @@ Data.Vignettes = {
 		[71208] = "High Peak|10+ research:2164|28 70.63||vignette atlas:Warfronts-FieldMapIcons-Empty-Banner-Minimap large|Grants Reputation|!{4687628} [Dragonscale Expedition] (250)",
 
 		-- Signal Transmitter
-		[70583] = "Deactivated Signal Transmitter|engineering skill:engineering10:25 profperk:2827:50930|50.63 55.6|[spell]Wyrmhole Generator]|treasure atlas:Warfronts-BaseMapIcons-Empty-Workshop large",
-		[70584] = "Deactivated Signal Transmitter|engineering skill:engineering10:25 profperk:2827:50930|70.3 44.3|[spell]Wyrmhole Generator]|treasure atlas:Warfronts-BaseMapIcons-Empty-Workshop large",
-		[70585] = "Deactivated Signal Transmitter|engineering skill:engineering10:25 profperk:2827:50930|63.67 77.1|[spell]Wyrmhole Generator]|treasure atlas:Warfronts-BaseMapIcons-Empty-Workshop large",
+		[70583] = "Deactivated Signal Transmitter|engineering skill:engineering:10:25 profperk:2827:50930|50.63 55.6|[spell]Wyrmhole Generator]|treasure atlas:Warfronts-BaseMapIcons-Empty-Workshop large",
+		[70584] = "Deactivated Signal Transmitter|engineering skill:engineering:10:25 profperk:2827:50930|70.3 44.3|[spell]Wyrmhole Generator]|treasure atlas:Warfronts-BaseMapIcons-Empty-Workshop large",
+		[70585] = "Deactivated Signal Transmitter|engineering skill:engineering:10:25 profperk:2827:50930|63.67 77.1|[spell]Wyrmhole Generator]|treasure atlas:Warfronts-BaseMapIcons-Empty-Workshop large",
 
 		-- Profession Master
 		[70258] = "Bridgette Holdug|mining skill:2833:25|61.43 76.87||vignette speak currency:2035|Master Miner|!{3615521} [rare]Dragon Isles Mining Knowledge] (10)|!{4643977} [rare]Artisan's Mettle] (50)",
@@ -738,21 +1084,21 @@ Data.Vignettes = {
 		[70266] = "Decay-Infused Tanning Oil|leatherworking skill:2830:25|16.73 38.79||treasure item:198658|Contains|!{650640} [epic]Decay-Infused Tanning Oil]",
 		[70269] = "Broken Drum|leatherworking skill:2830:25|12.51 49.41|\"Repair the Broken Drum for Raq inside The Filled Bowl\"|treasure item:201018|Rewards|!{1001627} [epic]Well-Danced Drum]",
 		[70286] = "Crate of Treated Hides|leatherworking skill:2830:25|57.51 41.35||treasure item:198683|Contains|!{4559254} [epic]Treated Hides]",
-		[70267] = "Intriguing Bolt of Blue Cloth|tailoring skill:tailoring10:25|40.67 54.93||treasure item:198662|Contains|!{132909} [epic]Intriguing Bolt of Blue Cloth]",
-		[70284] = "Decaying Brackenhide Blanket|tailoring skill:tailoring10:25|16.2 38.94||treasure item:198680|Contains|!{237277} [epic]Decaying Brackenhide Blanket]",
-		[70277] = "Crystalline Overgrowth|jewelcrafting skill:jewelcrafting10:25|45.06 61.22||treasure item:198664|Contains|!{132778} [epic]Crystalline Overgrowth]",
-		[70271] = "Harmonic Chest|jewelcrafting skill:jewelcrafting10:25|44.65 61.38|\"Pick up the nearby [Resonant Key] and then activate three [Humming Crystals] scattered throughout the lake to unlock the chest\"|treasure item:201016|Contains|!{1060568} [epic]Harmonic Crystal Harmonizer]",
-		[70237] = "Snow Covered Scroll|cooking skill:cooking10:1|58.02 42.02||treasure scroll item:198103|Contains|!{1500865} [rare]Recipe: Snow in a Cone]|!{132387} [Snowball] (8-18)",
-		[70293] = "Frosted Parchment|inscription skill:inscription10:25|43.64 30.82||treasure item:198686|Contains|!{1392956} [epic]Frosted Parchment]",
-		[70297] = "Dusty Darkmoon Card|inscription skill:inscription10:25|46.19 24|\"On the upper ledge inside the building\"|treasure item:198693|Contains|!{1392956} [epic]Dusty Darkmoon Card]",
-		[70298] = "Enriched Earthen Shard|enchanting skill:enchanting10:25|21.56 45.54||treasure item:198694|Contains|!{1016245} [epic]Enriched Earthen Shard]",
-		[70336] = "Forgotten Arcane Tome|enchanting skill:enchanting10:25|38.51 59.13||treasure item:198799|Contains|!{134544} [epic]Forgotten Arcane Tome]",
-		[70290] = "Mana-Starved Crystal Cluster|enchanting skill:enchanting10:25|45.16 61.12|\"Defeat an [hostile]Enchanted Crystalline Construct] to reveal the treasure\"|treasure item:201013|Contains|!{1016245} [epic]Faintly Enchanted Remains]",
-		[70309] = "Small Basket of Firewater Powder|alchemy skill:alchemy10:25|67.06 13.16||treasure item:198712|Contains|!{133850} [epic]Firewater Powder Sample]",
-		[70208] = "Experimental Decay Cauldron|alchemy skill:alchemy10:25|16.31 38.5||treasure item:198599|Contains|!{650637} [epic]Experimental Decay Sample]",
+		[70267] = "Intriguing Bolt of Blue Cloth|tailoring skill:tailoring:10:25|40.67 54.93||treasure item:198662|Contains|!{132909} [epic]Intriguing Bolt of Blue Cloth]",
+		[70284] = "Decaying Brackenhide Blanket|tailoring skill:tailoring:10:25|16.2 38.94||treasure item:198680|Contains|!{237277} [epic]Decaying Brackenhide Blanket]",
+		[70277] = "Crystalline Overgrowth|jewelcrafting skill:jewelcrafting:10:25|45.06 61.22||treasure item:198664|Contains|!{132778} [epic]Crystalline Overgrowth]",
+		[70271] = "Harmonic Chest|jewelcrafting skill:jewelcrafting:10:25|44.65 61.38|\"Pick up the nearby [Resonant Key] and then activate three [Humming Crystals] scattered throughout the lake to unlock the chest\"|treasure item:201016|Contains|!{1060568} [epic]Harmonic Crystal Harmonizer]",
+		[70237] = "Snow Covered Scroll|cooking skill:cooking:10:1|58.02 42.02||treasure scroll item:198103|Contains|!{1500865} [rare]Recipe: Snow in a Cone]|!{132387} [Snowball] (8-18)",
+		[70293] = "Frosted Parchment|inscription skill:inscription:10:25|43.64 30.82||treasure item:198686|Contains|!{1392956} [epic]Frosted Parchment]",
+		[70297] = "Dusty Darkmoon Card|inscription skill:inscription:10:25|46.19 24|\"On the upper ledge inside the building\"|treasure item:198693|Contains|!{1392956} [epic]Dusty Darkmoon Card]",
+		[70298] = "Enriched Earthen Shard|enchanting skill:enchanting:10:25|21.56 45.54||treasure item:198694|Contains|!{1016245} [epic]Enriched Earthen Shard]",
+		[70336] = "Forgotten Arcane Tome|enchanting skill:enchanting:10:25|38.51 59.13||treasure item:198799|Contains|!{134544} [epic]Forgotten Arcane Tome]",
+		[70290] = "Mana-Starved Crystal Cluster|enchanting skill:enchanting:10:25|45.16 61.12|\"Defeat an [hostile]Enchanted Crystalline Construct] to reveal the treasure\"|treasure item:201013|Contains|!{1016245} [epic]Faintly Enchanted Remains]",
+		[70309] = "Small Basket of Firewater Powder|alchemy skill:alchemy:10:25|67.06 13.16||treasure item:198712|Contains|!{133850} [epic]Firewater Powder Sample]",
+		[70208] = "Experimental Decay Cauldron|alchemy skill:alchemy:10:25|16.31 38.5||treasure item:198599|Contains|!{650637} [epic]Experimental Decay Sample]",
 		[70314] = {
-			"Spelltouched Tongs|blacksmithing skill:blacksmithing10:25 -mining|53.14 66.14|\"You may need [hasitem:198727]Expedition Explosives] to break open the rock wall.\n\nThey can be bought from the Dragonscale Expedition quartermaster in the Waking Shores.\"|treasure item:201011|Contains|!{1020378} [epic]Spelltouched Tongs]",
-			"Spelltouched Tongs|blacksmithing skill:blacksmithing10:25 mining|53.14 66.14|\"You may need to break the rock wall using your Mining skill\"|treasure item:201011|Contains|!{1020378} [epic]Spelltouched Tongs]",
+			"Spelltouched Tongs|blacksmithing skill:blacksmithing:10:25 -mining|53.14 66.14|\"You may need [hasitem:198727]Expedition Explosives] to break open the rock wall.\n\nThey can be bought from the Dragonscale Expedition quartermaster in the Waking Shores.\"|treasure item:201011|Contains|!{1020378} [epic]Spelltouched Tongs]",
+			"Spelltouched Tongs|blacksmithing skill:blacksmithing:10:25 mining|53.14 66.14|\"You may need to break the rock wall using your Mining skill\"|treasure item:201011|Contains|!{1020378} [epic]Spelltouched Tongs]",
 		},
 		[70441] = "Pepper Hammer|10+|26.56 46.29|\"Loot the [Tree Sap] on top of the dead tree trunk and then use the [Stick] to summon [friendly]Pepper Hammer]\"|treasure item:193834|Rewards|!{3998670} [rare]Blackfeather Nester]",
 		[70380] = "Rubber Fish|10+|54.61 29.32||treasure item:202712|Contains|!{237308} [uncommon]Rubber Fish] (5)",
@@ -775,13 +1121,13 @@ Data.Vignettes = {
 		[72136] = {"Misaligned Ley Crystal|10+ -mining|65.88 50.66|\"You may need [hasitem:198727]Expedition Explosives] to break open the rock wall.\n\nThey can be bought from the Dragonscale Expedition quartermaster in the Waking Shores.\"|vignette atlas:AzeriteReady item:198727|Grants Reputation|!{4687630} [Valdrakken Accord] (20)", "Misaligned Ley Crystal|10+ mining|65.88 50.66|\"You may need to break the rock wall using your Mining skill\"|vignette atlas:AzeriteReady|Grants Reputation|!{4687630} [Valdrakken Accord] (20)",},
 
 		-- Signal Transmitter
-		[70579] = "Deactivated Signal Transmitter|engineering skill:engineering10:25 profperk:2827:50930|27.56 26.45|[spell]Wyrmhole Generator]|treasure atlas:Warfronts-BaseMapIcons-Empty-Workshop large",
-		[70580] = "Deactivated Signal Transmitter|engineering skill:engineering10:25 profperk:2827:50930|45.77 65.25|[spell]Wyrmhole Generator]|treasure atlas:Warfronts-BaseMapIcons-Empty-Workshop large",
-		[70581] = "Deactivated Signal Transmitter|engineering skill:engineering10:25 profperk:2827:50930|71.04 47.82|[spell]Wyrmhole Generator]|treasure atlas:Warfronts-BaseMapIcons-Empty-Workshop large",
-		[70578] = "Deactivated Signal Transmitter|engineering skill:engineering10:25 profperk:2827:50930|34.91 26.77|[spell]Wyrmhole Generator]|treasure atlas:Warfronts-BaseMapIcons-Empty-Workshop large link:2023",
+		[70579] = "Deactivated Signal Transmitter|engineering skill:engineering:10:25 profperk:2827:50930|27.56 26.45|[spell]Wyrmhole Generator]|treasure atlas:Warfronts-BaseMapIcons-Empty-Workshop large",
+		[70580] = "Deactivated Signal Transmitter|engineering skill:engineering:10:25 profperk:2827:50930|45.77 65.25|[spell]Wyrmhole Generator]|treasure atlas:Warfronts-BaseMapIcons-Empty-Workshop large",
+		[70581] = "Deactivated Signal Transmitter|engineering skill:engineering:10:25 profperk:2827:50930|71.04 47.82|[spell]Wyrmhole Generator]|treasure atlas:Warfronts-BaseMapIcons-Empty-Workshop large",
+		[70578] = "Deactivated Signal Transmitter|engineering skill:engineering:10:25 profperk:2827:50930|34.91 26.77|[spell]Wyrmhole Generator]|treasure atlas:Warfronts-BaseMapIcons-Empty-Workshop large link:2023",
 
 		-- Profession Master
-		[70252] = "Frizz Buzzcrank|engineering skill:engineering10:25|17.76 21.68||vignette speak currency:2027|Master Engineer|!{4624728} [rare]Dragon Isles Engineering Knowledge] (5)|!{4643977} [rare]Artisan's Mettle] (25)",
+		[70252] = "Frizz Buzzcrank|engineering skill:engineering:10:25|17.76 21.68||vignette speak currency:2027|Master Engineer|!{4624728} [rare]Dragon Isles Engineering Knowledge] (5)|!{4643977} [rare]Artisan's Mettle] (25)",
 		[70254] = "Lydiara Whisperfeather|inscription skill:2828:25|40.14 64.34||vignette speak currency:2028|Master Scribe|!{4624734} [rare]Dragon Isles Inscription Knowledge] (5)|!{4643977} [rare]Artisan's Mettle] (25)",
 		[70255] = "Pluutar|jewelcrafting skill:2829:25|46.22 40.76||vignette speak currency:2029|Master Jewelcrafter|!{4624793} [rare]Dragon Isles Jewelcrafting Knowledge] (5)|!{4643977} [rare]Artisan's Mettle] (25)",
 	},
@@ -798,18 +1144,18 @@ Data.Vignettes = {
 	[2023] = {
 		-- Treasure
 		[70300] = "Wind-Blessed Hide|leatherworking skill:2830:25|86.28 53.63||treasure item:198696|Contains|!{4559248} [epic]Wind-Blessed Hide]",
-		[70295] = "Battle Hardened Centaur Carpet|tailoring skill:tailoring10:25|35.34 40.12||treasure item:198692|Contains|!{134517} [epic]Noteworthy Scrap of Carpet]",
-		[70303] = "Catnip Frond|tailoring skill:tailoring10:25|65.65 53|\"Gather five Catnip Leaves, then throw them at the [friendly]Playful Prowler] to reveal the treasure\"|treasure item:201020|Requires|{3387975} [hasitem:198688:5]Catnip Leaf] (<itemcount:198688>/5)||Rewards|!{4549280} [epic]Silky Surprise]",
-		[70282] = "Lofty Malygite|jewelcrafting skill:jewelcrafting10:25|25.12 34.86||treasure item:198670|Contains|!{4555596} [epic]Lofty Malygite]|!{4555644} [rare]Stormy Malygite]|!{4555566} [rare]Malygite]",
-		[70263] = "Forgotten Jewelry Box|jewelcrafting skill:jewelcrafting10:25|61.76 13.03||treasure item:198660|Contains|!{4555596} [epic]Fragmented Key]|!{647735} [epic]Forgotten Jewelry Box]",
-		[70307] = "Sign Language Reference Sheet|inscription skill:inscription10:25|85.75 25.2||treasure item:198703|Contains|!{134329} [epic]Sign Language Reference Sheet]",
-		[70291] = "Stormbound Horn|enchanting skill:enchanting10:25|61.55 67.7||treasure item:198689|Contains|!{134229} [epic]Stormbound Horn]",
-		[70305] = "Canteen of Suspicious Water|alchemy skill:alchemy10:25|79.24 83.75|\"Inside the Roaring Dragonsprings cavern\"|treasure item:198710|Contains|!{4621580} [epic]Canteen of Suspicious Water]",
-		[70246] = "Ancient Monument|blacksmithing skill:blacksmithing10:25|52.03 14.1|\"Defeat the four [neutral]Enchanted Bulwarks] to reveal the treasure\"|treasure item:201007 link:2022|Contains|!{135418} [epic]Ancient Monument]",
-		[70353] = "Falconer Gauntlet Drawings|blacksmithing skill:blacksmithing10:25|50.91 66.48|\"Inside a hut\"|treasure item:201009|Contains|!{1505931} [epic]Falconer Gauntlet Drawings]",
+		[70295] = "Battle Hardened Centaur Carpet|tailoring skill:tailoring:10:25|35.34 40.12||treasure item:198692|Contains|!{134517} [epic]Noteworthy Scrap of Carpet]",
+		[70303] = "Catnip Frond|tailoring skill:tailoring:10:25|65.65 53|\"Gather five Catnip Leaves, then throw them at the [friendly]Playful Prowler] to reveal the treasure\"|treasure item:201020|Requires|{3387975} [hasitem:198688:5]Catnip Leaf] (<itemcount:198688>/5)||Rewards|!{4549280} [epic]Silky Surprise]",
+		[70282] = "Lofty Malygite|jewelcrafting skill:jewelcrafting:10:25|25.12 34.86||treasure item:198670|Contains|!{4555596} [epic]Lofty Malygite]|!{4555644} [rare]Stormy Malygite]|!{4555566} [rare]Malygite]",
+		[70263] = "Forgotten Jewelry Box|jewelcrafting skill:jewelcrafting:10:25|61.76 13.03||treasure item:198660|Contains|!{4555596} [epic]Fragmented Key]|!{647735} [epic]Forgotten Jewelry Box]",
+		[70307] = "Sign Language Reference Sheet|inscription skill:inscription:10:25|85.75 25.2||treasure item:198703|Contains|!{134329} [epic]Sign Language Reference Sheet]",
+		[70291] = "Stormbound Horn|enchanting skill:enchanting:10:25|61.55 67.7||treasure item:198689|Contains|!{134229} [epic]Stormbound Horn]",
+		[70305] = "Canteen of Suspicious Water|alchemy skill:alchemy:10:25|79.24 83.75|\"Inside the Roaring Dragonsprings cavern\"|treasure item:198710|Contains|!{4621580} [epic]Canteen of Suspicious Water]",
+		[70246] = "Ancient Monument|blacksmithing skill:blacksmithing:10:25|52.03 14.1|\"Defeat the four [neutral]Enchanted Bulwarks] to reveal the treasure\"|treasure item:201007 link:2022|Contains|!{135418} [epic]Ancient Monument]",
+		[70353] = "Falconer Gauntlet Drawings|blacksmithing skill:blacksmithing:10:25|50.91 66.48|\"Inside a hut\"|treasure item:201009|Contains|!{1505931} [epic]Falconer Gauntlet Drawings]",
 		[70313] = {
-			"Ancient Spear Shards|blacksmithing skill:blacksmithing10:25|81.11 37.88|\"Inside a cave\"|treasure item:201004 down|Contains|!{1717146} [epic]Ancient Spear Shards]",
-			"Cave Entrance|blacksmithing skill:blacksmithing10:25|79.39 36.47|Ancient Spear Shards|treasure atlas:questobjective",
+			"Ancient Spear Shards|blacksmithing skill:blacksmithing:10:25|81.11 37.88|\"Inside a cave\"|treasure item:201004 down|Contains|!{1717146} [epic]Ancient Spear Shards]",
+			"Cave Entrance|blacksmithing skill:blacksmithing:10:25|79.39 36.47|Ancient Spear Shards|treasure atlas:questobjective",
 		},
 		[67718] = "Ludo|10+|61.04 43.13|\"Pet [friendly]Ludo] to get the map\"|treasure item:195453|Rewards|!{237385} [uncommon]Ludo's Stash Map]",
 		[70402] = "Centaur Horn|10+|73.49 56.14||treasure item:200869|Contains|!{516667} [uncommon]Ohn Lite Branded Horn]",
@@ -825,16 +1171,16 @@ Data.Vignettes = {
 		[71215] = "High Peak|10+ research:2164|63.4 85.35||vignette atlas:Warfronts-FieldMapIcons-Empty-Banner-Minimap large|Grants Reputation|!{4687628} [Dragonscale Expedition] (250)",
 		
 		-- Signal Transmitter
-		[70576] = "Deactivated Signal Transmitter|engineering skill:engineering10:25 profperk:2827:50930|28.02 35.67|[spell]Wyrmhole Generator]|treasure atlas:Warfronts-BaseMapIcons-Empty-Workshop large",
-		[70577] = "Deactivated Signal Transmitter|engineering skill:engineering10:25 profperk:2827:50930|56.89 28.91|[spell]Wyrmhole Generator]|treasure atlas:Warfronts-BaseMapIcons-Empty-Workshop large",
-		[70578] = "Deactivated Signal Transmitter|engineering skill:engineering10:25 profperk:2827:50930|67.7 84.97|[spell]Wyrmhole Generator]|treasure atlas:Warfronts-BaseMapIcons-Empty-Workshop large",
-		[70579] = "Deactivated Signal Transmitter|engineering skill:engineering10:25 profperk:2827:50930|57.14 84.52|[spell]Wyrmhole Generator]|treasure atlas:Warfronts-BaseMapIcons-Empty-Workshop large link:2024",
+		[70576] = "Deactivated Signal Transmitter|engineering skill:engineering:10:25 profperk:2827:50930|28.02 35.67|[spell]Wyrmhole Generator]|treasure atlas:Warfronts-BaseMapIcons-Empty-Workshop large",
+		[70577] = "Deactivated Signal Transmitter|engineering skill:engineering:10:25 profperk:2827:50930|56.89 28.91|[spell]Wyrmhole Generator]|treasure atlas:Warfronts-BaseMapIcons-Empty-Workshop large",
+		[70578] = "Deactivated Signal Transmitter|engineering skill:engineering:10:25 profperk:2827:50930|67.7 84.97|[spell]Wyrmhole Generator]|treasure atlas:Warfronts-BaseMapIcons-Empty-Workshop large",
+		[70579] = "Deactivated Signal Transmitter|engineering skill:engineering:10:25 profperk:2827:50930|57.14 84.52|[spell]Wyrmhole Generator]|treasure atlas:Warfronts-BaseMapIcons-Empty-Workshop large link:2024",
 
 		-- Profession Master
 		[70251] = "Shalasar Glimmerdusk|enchanting skill:2825:25|62.42 18.7|\"On top of the building\"|vignette speak currency:2030|Master Enchantress|!{3615911} [rare]Dragon Isles Enchanting Knowledge] (5)|!{4643977} [rare]Artisan's Mettle] (25)",
 		[70253] = "Hua Greenpaw|herbalism skill:2832:25|58.38 50.01||vignette speak currency:2034|Master Herbalist|!{4624731} [rare]Dragon Isles Herbalism Knowledge] (10)|!{4643977} [rare]Artisan's Mettle] (50)",
 		[70256] = "Erden|leatherworking skill:2830:25|82.43 50.64||vignette speak currency:2025|Master Leatherworker|!{4624911} [rare]Dragon Isles Leatherworking Knowledge] (5)|!{4643977} [rare]Artisan's Mettle] (25)",
-		[70252] = "Frizz Buzzcrank|engineering skill:engineering10:25|43.07 77.66||vignette speak currency:2027 link:2024|Master Engineer|!{4624728} [rare]Dragon Isles Engineering Knowledge] (5)|!{4643977} [rare]Artisan's Mettle] (25)",
+		[70252] = "Frizz Buzzcrank|engineering skill:engineering:10:25|43.07 77.66||vignette speak currency:2027 link:2024|Master Engineer|!{4624728} [rare]Dragon Isles Engineering Knowledge] (5)|!{4643977} [rare]Artisan's Mettle] (25)",
 	},
 
 
@@ -853,34 +1199,34 @@ Data.Vignettes = {
 			"Adventurer's Lost Soap Bar|10+ -item:200065 -70864|39.64 84.68|\"In a tub of water\"|treasure item:200065|Contains|!{512902} [Adventurer's Lost Soap Bar]",
 		},
 		[70270] = {
-			"Boomthyr Rocket|engineering skill:engineering10:25 -item:198815 -item:198816,-item:198814,-item:198817|56.02 44.82|\"Pick up the notes and then collect four parts nearby to restore the treasure|treasure atlas:vignetteloot-locked item:201014|[Ash] can be found in the same room as the notes and the rest can be found in the building on the opposite side\"||Required Items|!{133218} [hasitem:198816]Aerospace Grade Draconium]|!{443368} [hasitem:198815]Ash]|!{4497570} [hasitem:198814]Boom Fumes]|!{132781} [hasitem:198817]Durable Crystal]||Rewards|!{511727} [epic]Boomthyr Rocket]",
-			"Boomthyr Rocket|engineering skill:engineering10:25 item:198815 -item:198816,-item:198814,-item:198817|56.02 44.82|\"Pick up the notes and then collect four parts nearby to restore the treasure|treasure atlas:vignetteloot-locked item:201014|The remaining parts can be found in the building on the opposite side of the notes\"||Required Items|!{133218} [hasitem:198816]Aerospace Grade Draconium]|!{443368} [hasitem:198815]Ash]|!{4497570} [hasitem:198814]Boom Fumes]|!{132781} [hasitem:198817]Durable Crystal]||Rewards|!{511727} [epic]Boomthyr Rocket]",
-			"Boomthyr Rocket|engineering skill:engineering10:25 item:198815 item:198816 item:198814 item:198817|56.02 44.82||treasure item:201014|Required Items|!{133218} [hasitem:198816]Aerospace Grade Draconium]|!{443368} [hasitem:198815]Ash]|!{4497570} [hasitem:198814]Boom Fumes]|!{132781} [hasitem:198817]Durable Crystal]||Rewards|!{511727} [epic]Boomthyr Rocket]",
-			"Boomthyr Rocket Parts|engineering skill:engineering10:25 item:198815 -item:198816,-item:198814,-item:198817|57.96 44.49||treasure atlas:questobjective",
+			"Boomthyr Rocket|engineering skill:engineering:10:25 -item:198815 -item:198816,-item:198814,-item:198817|56.02 44.82|\"Pick up the notes and then collect four parts nearby to restore the treasure|treasure atlas:vignetteloot-locked item:201014|[Ash] can be found in the same room as the notes and the rest can be found in the building on the opposite side\"||Required Items|!{133218} [hasitem:198816]Aerospace Grade Draconium]|!{443368} [hasitem:198815]Ash]|!{4497570} [hasitem:198814]Boom Fumes]|!{132781} [hasitem:198817]Durable Crystal]||Rewards|!{511727} [epic]Boomthyr Rocket]",
+			"Boomthyr Rocket|engineering skill:engineering:10:25 item:198815 -item:198816,-item:198814,-item:198817|56.02 44.82|\"Pick up the notes and then collect four parts nearby to restore the treasure|treasure atlas:vignetteloot-locked item:201014|The remaining parts can be found in the building on the opposite side of the notes\"||Required Items|!{133218} [hasitem:198816]Aerospace Grade Draconium]|!{443368} [hasitem:198815]Ash]|!{4497570} [hasitem:198814]Boom Fumes]|!{132781} [hasitem:198817]Durable Crystal]||Rewards|!{511727} [epic]Boomthyr Rocket]",
+			"Boomthyr Rocket|engineering skill:engineering:10:25 item:198815 item:198816 item:198814 item:198817|56.02 44.82||treasure item:201014|Required Items|!{133218} [hasitem:198816]Aerospace Grade Draconium]|!{443368} [hasitem:198815]Ash]|!{4497570} [hasitem:198814]Boom Fumes]|!{132781} [hasitem:198817]Durable Crystal]||Rewards|!{511727} [epic]Boomthyr Rocket]",
+			"Boomthyr Rocket Parts|engineering skill:engineering:10:25 item:198815 -item:198816,-item:198814,-item:198817|57.96 44.49||treasure atlas:questobjective",
 		},
-		[70275] = "Disabled Tesla Coil|engineering skill:engineering10:25|49.11 77.51|\"Clear three [Exposed Wires] after interacting with the coil to unlock it\"|treasure item:198789|Contains|!{133870} [epic]Intact Coil Capacitor]",
-		[70292] = "Closely Guarded Shiny|jewelcrafting skill:jewelcrafting10:25|50.36 45.06|\"Hidden inside a tree trunk\"|treasure item:198687|Contains|!{317243} [epic]Closely Guarded Shiny]",
-		[70273] = "Igneous Gem|jewelcrafting skill:jewelcrafting10:25|33.94 63.67|\"Activate three [Focusing Crystals] nearby to reveal the treasure\"|treasure item:201017|Contains|!{237200} [epic]Igneous Gem]",
-		[70308] = "Poacher's Pack|leatherworking skill:leatherworking10:25|39.36 86.38||treasure item:198711|Contains|!{3056991} [epic]Poacher's Pack]",
-		[70280] = "Spare Djaradin Tools|leatherworking skill:leatherworking10:25|64.37 25.77||treasure item:198667|Contains|!{4615799} [epic]Spare Djaradin Tools]",
-		[70304] = "Itinerant Singed Fabric|tailoring skill:tailoring10:25|25.09 69.73||treasure item:198702|Contains|!{134266} [epic]Itinerant Singed Fabric]",
-		[70302] = "Mysterious Banner|tailoring skill:tailoring10:25|74.74 37.92||treasure item:198699|Contains|!{4624620} [epic]Mysterious Banner]",
-		[70263] = "Forgotten Jewelry Box|jewelcrafting skill:jewelcrafting10:25|31.48 86.61||treasure item:198660|Contains|!{4555596} [epic]Fragmented Key]|!{647735} [epic]Forgotten Jewelry Box]",
-		[70306] = "Pulsing Earth Rune|inscription skill:inscription10:25|67.87 57.95||treasure item:198704|Contains|!{2491064} [epic]Pulsing Earth Rune]",
-		[70320] = "Flashfrozen Scroll|enchanting skill:enchanting10:25|57.46 83.65||treasure item:198798|Contains|!{4549198} [epic]Flashfrozen Scroll]",
+		[70275] = "Disabled Tesla Coil|engineering skill:engineering:10:25|49.11 77.51|\"Clear three [Exposed Wires] after interacting with the coil to unlock it\"|treasure item:198789|Contains|!{133870} [epic]Intact Coil Capacitor]",
+		[70292] = "Closely Guarded Shiny|jewelcrafting skill:jewelcrafting:10:25|50.36 45.06|\"Hidden inside a tree trunk\"|treasure item:198687|Contains|!{317243} [epic]Closely Guarded Shiny]",
+		[70273] = "Igneous Gem|jewelcrafting skill:jewelcrafting:10:25|33.94 63.67|\"Activate three [Focusing Crystals] nearby to reveal the treasure\"|treasure item:201017|Contains|!{237200} [epic]Igneous Gem]",
+		[70308] = "Poacher's Pack|leatherworking skill:leatherworking:10:25|39.36 86.38||treasure item:198711|Contains|!{3056991} [epic]Poacher's Pack]",
+		[70280] = "Spare Djaradin Tools|leatherworking skill:leatherworking:10:25|64.37 25.77||treasure item:198667|Contains|!{4615799} [epic]Spare Djaradin Tools]",
+		[70304] = "Itinerant Singed Fabric|tailoring skill:tailoring:10:25|25.09 69.73||treasure item:198702|Contains|!{134266} [epic]Itinerant Singed Fabric]",
+		[70302] = "Mysterious Banner|tailoring skill:tailoring:10:25|74.74 37.92||treasure item:198699|Contains|!{4624620} [epic]Mysterious Banner]",
+		[70263] = "Forgotten Jewelry Box|jewelcrafting skill:jewelcrafting:10:25|31.48 86.61||treasure item:198660|Contains|!{4555596} [epic]Fragmented Key]|!{647735} [epic]Forgotten Jewelry Box]",
+		[70306] = "Pulsing Earth Rune|inscription skill:inscription:10:25|67.87 57.95||treasure item:198704|Contains|!{2491064} [epic]Pulsing Earth Rune]",
+		[70320] = "Flashfrozen Scroll|enchanting skill:enchanting:10:25|57.46 83.65||treasure item:198798|Contains|!{4549198} [epic]Flashfrozen Scroll]",
 		[70272] = {
-			"Enchanted Debris|enchanting skill:enchanting10:25|59.87 57.09|\"Enchant a broom nearby to clean up the debris\"|treasure item:201012|Contains|!{2451603} [epic]Enchanted Debris]",
-			"Broom|enchanting skill:enchanting10:25|57.49 58.46||treasure atlas:questobjective",
+			"Enchanted Debris|enchanting skill:enchanting:10:25|59.87 57.09|\"Enchant a broom nearby to clean up the debris\"|treasure item:201012|Contains|!{2451603} [epic]Enchanted Debris]",
+			"Broom|enchanting skill:enchanting:10:25|57.49 58.46||treasure atlas:questobjective",
 		},
-		[70283] = "Lava-Infused Seed|enchanting skill:enchanting10:25|67.91 26.78|\"Inside a flower\"|treasure item:198675|Contains|!{4554352} [epic]Lava-Infused Seed]",
-		[70289] = "Well Insulated Mug|alchemy skill:alchemy10:25|25.11 74.11||treasure item:198685|Contains|!{1385153} [epic]Well Insulated Mug]",
-		[70274] = "Frostforged Potion|alchemy skill:alchemy10:25|55.16 81.12||treasure item:198663|Contains|!{134791} [epic]Frostforged Potion]",
-		[70296] = "Singed Chest|blacksmithing skill:blacksmithing10:25|35.45 64.48|\"Kick three ingots into the lava pool and then defeat the [hostile]Hungry Hungry Lava] to reveal the treasure\"|treasure item:201008|Contains|!{576649} [epic]Molten Ingot]",
-		[70232] = "Dim Forge|blacksmithing skill:blacksmithing10:25|56.33 19.52|\"Craft a {4622288} [rare]Primal Molten Alloy] near the [Dim Forge] to reveal the treasure\"|treasure item:198791|Rewards|!{132877} [rare]Glimmer of Blacksmithing Wisdom]",
-		[70230] = "Glimmer of Wisdom|blacksmithing skill:blacksmithing10:25 70232|56.35 19.5|\"Inside the [Slack Tub] in front of the [Dim Forge]\"|treasure item:198791|Contains|!{132877} [rare]Glimmer of Blacksmithing Wisdom]",
-		[70312] = "Curious Ingots|blacksmithing skill:blacksmithing10:25|65.6 25.69||treasure item:201005|Contains|!{133218} [epic]Curious Ingots]",
-		[70246] = "Ancient Monument|blacksmithing skill:blacksmithing10:25|22.25 87.62|\"Defeat the four [neutral]Enchanted Bulwarks] to reveal the treasure\"|treasure item:201007|Contains|!{135418} [epic]Ancient Monument]",
-		[70310] = "Qalashi Weapon Diagram|blacksmithing skill:blacksmithing10:25|34.52 67.14||treasure item:201010|Contains|!{1505957} [epic]Qalashi Weapon Diagram]",
+		[70283] = "Lava-Infused Seed|enchanting skill:enchanting:10:25|67.91 26.78|\"Inside a flower\"|treasure item:198675|Contains|!{4554352} [epic]Lava-Infused Seed]",
+		[70289] = "Well Insulated Mug|alchemy skill:alchemy:10:25|25.11 74.11||treasure item:198685|Contains|!{1385153} [epic]Well Insulated Mug]",
+		[70274] = "Frostforged Potion|alchemy skill:alchemy:10:25|55.16 81.12||treasure item:198663|Contains|!{134791} [epic]Frostforged Potion]",
+		[70296] = "Singed Chest|blacksmithing skill:blacksmithing:10:25|35.45 64.48|\"Kick three ingots into the lava pool and then defeat the [hostile]Hungry Hungry Lava] to reveal the treasure\"|treasure item:201008|Contains|!{576649} [epic]Molten Ingot]",
+		[70232] = "Dim Forge|blacksmithing skill:blacksmithing:10:25|56.33 19.52|\"Craft a {4622288} [rare]Primal Molten Alloy] near the [Dim Forge] to reveal the treasure\"|treasure item:198791|Rewards|!{132877} [rare]Glimmer of Blacksmithing Wisdom]",
+		[70230] = "Glimmer of Wisdom|blacksmithing skill:blacksmithing:10:25 70232|56.35 19.5|\"Inside the [Slack Tub] in front of the [Dim Forge]\"|treasure item:198791|Contains|!{132877} [rare]Glimmer of Blacksmithing Wisdom]",
+		[70312] = "Curious Ingots|blacksmithing skill:blacksmithing:10:25|65.6 25.69||treasure item:201005|Contains|!{133218} [epic]Curious Ingots]",
+		[70246] = "Ancient Monument|blacksmithing skill:blacksmithing:10:25|22.25 87.62|\"Defeat the four [neutral]Enchanted Bulwarks] to reveal the treasure\"|treasure item:201007|Contains|!{135418} [epic]Ancient Monument]",
+		[70310] = "Qalashi Weapon Diagram|blacksmithing skill:blacksmithing:10:25|34.52 67.14||treasure item:201010|Contains|!{1505957} [epic]Qalashi Weapon Diagram]",
 		[70346] = {
 			"Dead Man's Chestplate|10+ cloth|69.3 46.59|\"In the middle section of the tower\"|treasure item:202193|Contains|!{4623197} [rare]Dead Man's Tunic]",
 			"Dead Man's Chestplate|10+ leather|69.3 46.59|\"In the middle section of the tower\"|treasure item:202192|Contains|!{4581056} [rare]Dead Man's Leathers]",
@@ -900,9 +1246,9 @@ Data.Vignettes = {
 		[71204] = "High Peak|10+ research:2164|54.80 74.12||vignette atlas:Warfronts-FieldMapIcons-Empty-Banner-Minimap large|Grants Reputation|!{4687628} [Dragonscale Expedition] (250)",
 
 		-- Signal Transmitter
-		[70573] = "Deactivated Signal Transmitter|engineering skill:engineering10:25 profperk:2827:50930|74.6 25.51|[spell]Wyrmhole Generator]|treasure atlas:Warfronts-BaseMapIcons-Empty-Workshop large",
-		[70574] = "Deactivated Signal Transmitter|engineering skill:engineering10:25 profperk:2827:50930|62.2 78.97|[spell]Wyrmhole Generator]|treasure atlas:Warfronts-BaseMapIcons-Empty-Workshop large|\"Hidden on top of a ledge underneath two tree canopies.\"",
-		[70575] = "Deactivated Signal Transmitter|engineering skill:engineering10:25 profperk:2827:50930|23.43 43.83|[spell]Wyrmhole Generator]|treasure atlas:Warfronts-BaseMapIcons-Empty-Workshop large",
+		[70573] = "Deactivated Signal Transmitter|engineering skill:engineering:10:25 profperk:2827:50930|74.6 25.51|[spell]Wyrmhole Generator]|treasure atlas:Warfronts-BaseMapIcons-Empty-Workshop large",
+		[70574] = "Deactivated Signal Transmitter|engineering skill:engineering:10:25 profperk:2827:50930|62.2 78.97|[spell]Wyrmhole Generator]|treasure atlas:Warfronts-BaseMapIcons-Empty-Workshop large|\"Hidden on top of a ledge underneath two tree canopies.\"",
+		[70575] = "Deactivated Signal Transmitter|engineering skill:engineering:10:25 profperk:2827:50930|23.43 43.83|[spell]Wyrmhole Generator]|treasure atlas:Warfronts-BaseMapIcons-Empty-Workshop large",
 
 		-- Profession Master
 		[70247] = "Grigori Vialtry|alchemy skill:2823:25|60.83 75.9||vignette speak currency:2024|Master Alchemist|!{4624656} [rare]Dragon Isles Alchemy Knowledge] (5)|!{4643977} [rare]Artisan's Mettle] (25)",

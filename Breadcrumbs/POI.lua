@@ -63,7 +63,7 @@ Data.POI = {
 		--"Professions-Crafting-Orders-Icon|Crafting Orders|1+|59.74 55.73",
 
 		-- Item Upgrades
-		--"upgradeitem-32x32|[Item Upgrades]|60+|52.08 42.1||Mythic Aspirations",
+		"upgradeitem-32x32|[Item Upgrades]|60+|48.6 62||Crest Exchange",
 		--"upgradeitem-32x32|[Item Upgrades]|60+|59.98 69.73||Contender's Gate",
 
 		-- Professions
@@ -93,6 +93,9 @@ Data.POI = {
 
 		-- Trading Post
 		-- 48.82 78.03
+
+		-- Vendor
+		"poi-transmogrifier|Andra|item:264882|41.72 66.38|tooltip item:264882|\"Exchange your {6255014} [heirloom]Finery Funds] for an Ensemble of choice here\"",
 	},
 
 
@@ -1069,11 +1072,14 @@ Data.POI = {
 		"TaxiNode_Continent_Horde|Portal to Orgrimmar|horde|28.52 14.02",
 
 		-- Professions
+		"POI/Alchemy|[Alchemy]|10+ alchemy|46.56 45.97",
+		"POI/Blacksmithing|[Blacksmithing]|10+ blacksmithing|48.43 36.8",
 		"POI/Enchanting|[Enchanting]|10+ enchanting|46.85 42.94",
-		"POI/Inscription|[Inscription]|10+ inscription|54.91 45.12",
-		"POI/Mining|[Mining]|10+ mining|46.07 29.41",
 		"POI/Herbalism|[Herbalism]|10+ herbalism alliance|45.4 86",
 		"POI/Herbalism|[Herbalism]|10+ herbalism horde|27.79 15.53",
+		"POI/Inscription|[Inscription]|10+ inscription|54.91 45.12",
+		"POI/Jewelcrafting|[Jewelcrafting]|10+ jewelcrafting|48.08 34.95",
+		"POI/Mining|[Mining]|10+ mining|46.07 29.41",
 	},
 
 
@@ -1083,6 +1089,8 @@ Data.POI = {
 		-- Professions
 		"POI/Engineering|[Engineering]|10+ engineering|16.06 83.15",
 		"POI/Tailoring|[Tailoring]|10+ tailoring|62.66 59.75",
+		"POI/Cooking|[Cooking]|10+ cooking|53.58 51.24",
+		"POI/Fishing|[Fishing]|10+ fishing|58.93 46.91",
 	},
 
 

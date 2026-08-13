@@ -1,4 +1,4 @@
-## Interface: 120000, 120001, 120002
+## Interface: 120100
 ## Title: Breadcrumbs
 ## Version: Alpha 1
 ## Notes: Adds dynamic pins to your World Map

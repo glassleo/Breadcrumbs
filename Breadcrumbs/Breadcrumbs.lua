@@ -31,7 +31,7 @@ local Setting_EnableMailboxesEverywhere = false
 local Setting_EnableUnitTooltips = true
 local Setting_EnableAutomapGravidRepose = true
 -- Debug
-local Setting_Debug_QuestWatcher = true
+local Setting_Debug_QuestWatcher = false
 
 
 -- Constants
@@ -1972,11 +1972,12 @@ end
 
 -- Unit Tooltips
 local function OnTooltipSetUnit(tooltip)
+	if issecrettable(tooltip) then return end
 	if not Setting_EnableUnitTooltips then return end
 
 	local tooltip = tooltip
 	local name, id = tooltip:GetUnit()
-	if not name or not id or not type(name) == "string" then return end
+	if not name or not id or issecretvalue(name) or issecretvalue(id) or not type(name) == "string" then return end
 
 	if C_QuestLog.IsOnQuest(58621) then -- Repeat After Me
 		if name == "Runestone of Rituals" then
@@ -2008,7 +2009,7 @@ local function OnTooltipSetUnit(tooltip)
 	end
 end
 
-TooltipDataProcessor.AddTooltipPostCall(Enum.TooltipDataType.Unit, OnTooltipSetUnit)
+--TooltipDataProcessor.AddTooltipPostCall(Enum.TooltipDataType.Unit, OnTooltipSetUnit)
 
 -- Auto Map Change
 WorldMapFrame:HookScript("OnShow", function(...)
